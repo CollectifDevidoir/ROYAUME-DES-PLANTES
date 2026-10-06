@@ -145,7 +145,20 @@ Demandes ajoutées à cette étape :
 
 ---
 
-## Étape 6 — Mémoire
+## Étape 6 — Mémoire — EN ATTENTE DE TON CHOIX
+
+Simulation (`outils/simulation_memoire.js`) : le vrai code de l'appli (choix de la plante, type d'exercice, niveaux) joue 30 jours × 40 exercices avec un joueur simulé qui apprend et oublie (courbe d'oubli de type FSRS) ; 8 joueurs par variante, mêmes tirages pour toutes. Les chiffres servent à **comparer** les variantes entre elles, pas à prédire un joueur réel.
+
+| Variante | Questions pour acquérir une plante | Plantes acquises en 30 jours | Rétention à +7 jours (écriture) | Réussite en jeu | Rechutes |
+|---|---|---|---|---|---|
+| Actuelle | 8,8 | 72 | 73 % | 77 % | 46 |
+| **A** : niveau 2 → 3 : 3 QCM réussis au lieu de 2, ou 1 exercice difficile + 1 QCM | 9,8 (**+11 %**) | 64 (−12 %) | **80 %** | 79 % | 32 (−31 %) |
+| **A2** : niveau 2 → 3 : 3 QCM réussis au lieu de 2 ; 1 exercice difficile suffit toujours | 9,5 (**+8 %**) | 65 (−10 %) | 78,5 % | 78 % | 37 (−21 %) |
+| Écartée : C, écriture à confirmer au niveau 3 | 10,6 (+20 %) | 63 | 79 % | 79 % | 28 |
+| Écartée : C2, idem seulement après une erreur | 10,5 (+19 %) | 65 | 78 % | 79 % | 27 |
+| Écartée : B, une 1re bonne réponse au hasard ne compte pas | ≈ 0 % | — | — | — | — |
+
+Seul le passage du niveau 2 au niveau 3 change ; niveaux 4 à 6, intervalles, tirage et exercices intacts.
 
 | ID | Tâche | Critère de réussite |
 |---|---|---|
