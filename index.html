@@ -895,6 +895,35 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
 .sh.side{right:0;margin:0;width:auto;border-radius:22px 0 0 0}
 .sh.side.full{max-height:calc(100vh - var(--hh,62px) - 8px)}
 @media (orientation:landscape) and (max-height:520px){#qc.ty{grid-template-areas:"pic opts" "pic q"}#qc.ty #opts{margin-top:0}}
+
+/* ===== Étape 7 : ordinateur (≥ 900 px) et clavier ===== */
+@media (min-width:900px){
+  main{max-width:min(1440px,calc(100vw - 64px))}
+  /* 7.1 / 7.2 : photo à gauche (≤ 50 % de la hauteur), question et réponses à droite */
+  #qc{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(300px,1fr);grid-template-areas:"pic q" "pic opts" "pic fb";grid-template-rows:auto auto 1fr;gap:0 24px;align-content:start;min-height:0}
+  #qc .pic{grid-area:pic;height:clamp(300px,50vh,600px);align-self:start}
+  @supports (height:100svh){#qc .pic{height:clamp(300px,50svh,600px)}}
+  #qc.typing .pic{height:clamp(300px,50vh,600px)}
+  #q{grid-area:q;margin:4px 0 10px}
+  #opts{grid-area:opts;align-self:start}
+  #fb{grid-area:fb}
+  #qc.ty{grid-template-areas:"pic opts" "pic q" "pic fb"}
+  #qc.ty #opts{margin-top:4px}
+  #qc:has(#opts.ph){grid-template-columns:minmax(0,1fr);grid-template-areas:"q" "opts" "fb"}
+  .opts.ph{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:auto}
+  .opts.ph>button{height:auto;aspect-ratio:1}
+  /* 7.3 : correction à côté de la photo */
+  .sh.desk{bottom:auto;margin:0;width:auto;border-radius:18px;border-bottom:1px solid var(--bd);box-shadow:0 18px 40px -16px rgba(10,40,20,.5)}
+  .sh.desk .shf{padding-bottom:8px}
+  /* 7.4 : galerie des détails en grandes vignettes */
+  .dt .gal,#fch .gal,.dt2 .gal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;overflow:visible}
+  .dt .gal img,#fch .gal img,.dt2 .gal img{width:100%;height:auto;aspect-ratio:4/3}
+  /* Herbier et Progrès : largeur de lecture confortable */
+  #herb,#pro{max-width:900px;margin:0 auto}
+}
+/* 7.5 : focus visible partout */
+.pk[data-l]:focus-visible,.lr:focus-visible,.gal img:focus-visible,.car:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.opts>button:focus-visible,#shn:focus-visible,.more:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
 </style>
 </head>
 <body>
@@ -2236,7 +2265,7 @@ function buildCar(s,im,one){
 let firstQ=true;
 const focusCard=()=>{const e=$('qc');if(!e)return;if(firstQ){window.scrollTo(0,0);return}const h=($('top')&&$('top').offsetHeight)||56;document.documentElement.style.setProperty('--hh',h+'px');window.scrollTo(0,Math.max(0,e.getBoundingClientRect().top+(window.pageYOffset||0)-h-4))};
 async function next(){
-  const tk=++nxt;shTok++;$('sh').hidden=true;document.body.classList.remove('hs');hsUpd();if($('fch').open)closeSheet();$('pic').style.height='';
+  const kbd=!!(document.activeElement&&document.activeElement.closest&&document.activeElement.closest('#sh'));const tk=++nxt;shTok++;$('sh').hidden=true;document.body.classList.remove('hs');hsUpd();if($('fch').open)closeSheet();$('pic').style.height='';
   focusCard();
   $('next').hidden=true;$('fb').innerHTML='';$('opts').innerHTML='';$('opts').className='opts';$('pic').hidden=false;$('q').className='';pvSet=null;$('ex').hidden=true;$('qc').hidden=false;$('qc').classList.remove('typing');
   $('pic').className='pic sk';$('pic').textContent='Chargement…';done=false;
@@ -2248,7 +2277,7 @@ async function next(){
   if(pvSet){
     $('pic').hidden=true;$('q').className='pv';$('opts').className='opts ph';
     $('q').innerHTML='Quelle photo montre <span class="pvn">'+esc(cur[0])+'</span> ?';
-    pvSet.forEach((o,i)=>{const b=document.createElement('button'),im=new Image();b.dataset.l=o[0];b.dataset.n=i+1;b.setAttribute('aria-label','Photo '+(i+1));
+    pvSet.forEach((o,i)=>{const b=document.createElement('button'),im=new Image();b.dataset.l=o[0];b.dataset.n=i+1;b.setAttribute('aria-label','Photo '+(i+1));b.setAttribute('aria-keyshortcuts',String(i+1));
       im.referrerPolicy='no-referrer';im.alt='';im.src=cache[o[0]].src;b.append(im);
       const c=document.createElement('span');c.className='cap';c.textContent=o[0];b.append(c);
       $('opts').append(b)});
@@ -2259,12 +2288,14 @@ async function next(){
     $('q-form').onsubmit=e=>{e.preventDefault();if($('q-input').value.trim())answer($('q-input').value.trim())};$('q-input').onfocus=()=>{$('qc').classList.add('typing');kbFit();setTimeout(kbFit,350)};
   const jb=document.createElement('button');jb.type='button';jb.id='jk';jb.className='jk';$('q-form').append(jb);jokerUI();
   }else choices(cur).forEach((o,i)=>{
-    const b=document.createElement('button');b.textContent=o[0];b.dataset.l=o[0];b.dataset.n=i+1;b.style.setProperty('--i',i);
+    const b=document.createElement('button');b.textContent=o[0];b.dataset.l=o[0];b.dataset.n=i+1;b.setAttribute('aria-keyshortcuts',String(i+1));b.style.setProperty('--i',i);
     $('opts').append(b);
   });}
   [$('qc'),$('ex')].forEach(e=>e.style.cssText='');
   $('qc').classList.remove('in');void $('qc').offsetWidth;$('qc').classList.add('in');
   stats();focusCard();
+  // clavier : la main revient sur l'exercice (saisie du nom, ou premier choix si l'on jouait au clavier)
+  const fine=typeof matchMedia==='function'&&matchMedia('(hover:hover) and (pointer:fine)').matches,f=typed&&!pvSet&&fine?$('q-input'):kbd?$('opts').querySelector('button'):null;if(f)f.focus({preventScroll:true});
 }
 function answer(v){
   if(done)return;done=true;acqNow=false;firstQ=false;if(!$('coach').hidden){$('coach').hidden=true;try{localStorage.setItem('qp.coach','1')}catch(e){}}
@@ -2284,6 +2315,7 @@ function answer(v){
     if(b.dataset.l===cur[0])b.classList.add('ok');else if(b.dataset.l===v)b.classList.add('ko')});
   if(good)$('pic').classList.add('pop');$('pic').classList.add('ans');vib(good?15:[30,40,30]);$('opts').classList.add('rv');
   $('next').hidden=false;stats();showSheet(good,w,v);
+  setTimeout(()=>{const n=$('shn');if(n&&!$('sh').hidden)n.focus({preventScroll:true})},60);
   pre=prepare();
 }
 function startReplay(l,lbl,fam){const u=[...new Set(l)];if(l.length>=4&&u.length===2&&l[0]!==l[1])showDiff(u,()=>startReplay0(l,lbl,fam));else startReplay0(l,lbl,fam)}
@@ -2358,7 +2390,7 @@ function detHtml(sp,P,D,two,_tg){
   const SDK={Port:'port',Feuilles:'feuilles','Écorce et rameaux':'ecorce',Fleurs:'fleurs',Fruits:'fruits',Floraison:'floraison',Milieu:'milieu'},sdv=(s,k)=>{const o=SD[s[0]]||{},d=DSC[s[0]]||{};return o[SDK[k]]||d[SDK[k]]||''};
   const GEN={Port:1,Feuilles:2,Floraison:3},val=(s,x,k)=>{const v=sdv(s,k)||rtx(x,k)||(GEN[k]&&(GD[gen(s[0])]||[])[GEN[k]])||'';return k==='Floraison'?mois(v):v};
   const KEYS=['Port','Feuilles','Fleurs','Fruits','Écorce et rameaux','Floraison','Milieu'];
-  const gal=sp.map((s,i)=>{const L=(P[i]||[]).slice(0,6);return L.length?(sp.length>1?`<p class="czt"><em>${s[0]}</em></p>`:'')+'<div class="gal">'+L.map(x=>`<img src="${x.src}" referrerpolicy="no-referrer" loading="lazy" alt="${esc(s[1])}">`).join('')+'</div>':''}).join('');
+  const gal=sp.map((s,i)=>{const L=(P[i]||[]).slice(0,6);return L.length?(sp.length>1?`<p class="czt"><em>${s[0]}</em></p>`:'')+'<div class="gal">'+L.map((x,j)=>`<img src="${x.src}" referrerpolicy="no-referrer" loading="lazy" alt="${esc(s[1])}, photo ${j+1}" tabindex="0" role="button" aria-label="Agrandir : ${esc(s[1])}, photo ${j+1}">`).join('')+'</div>':''}).join('');
   const nt=D.some(x=>x&&x.dl==='en')?'Une partie des descriptions vient de Wikipédia en anglais.':'';
   const src=(extra)=>`<details class="acc src"><summary>Sources et crédits</summary>${sp.map((s,i)=>{const a=cache[s[0]];return `<p><em>${s[0]}</em> : ${a&&a.page?`<a href="${a.page}" target="_blank" rel="noopener">Wikipédia</a>`:'Wikipédia'}${a&&a.inat?` · <a href="https://www.inaturalist.org/taxa/${a.inat.id}" target="_blank" rel="noopener">iNaturalist</a>`:''}<br><small>Photos : ${esc([...new Set((P[i]||[]).slice(0,6).map(x=>x.lic||'Wikimedia Commons'))].join(' ; ')||'–')}</small>${srcBlock(s)}</p>`}).join('')}${extra||''}${nt?`<p><small>${nt}</small></p>`:''}<p><small>Textes de genre et de famille : version bêta, à recouper.</small></p></details>`;
   if(two){const rows=KEYS.map(k=>{const c=sp.map((s,i)=>brief(val(s,D[i],k),110));return c.some(Boolean)?`<tr><th>${k==='Écorce et rameaux'?'Écorce':k}</th>${c.map(x=>`<td>${esc(x)||'–'}</td>`).join('')}</tr>`:''}).join('');
@@ -2456,7 +2488,7 @@ function herbSearch(){
 function herb(){
   const thumb=l=>{const a=cache[l];return a&&a.src||(IC[l]&&IC[l].imgs&&IC[l].imgs[0]&&IC[l].imgs[0].src)||''};
   const own=s=>(st.sp[s[0]]||{b:0}).b>=4,sn=s=>!!st.sp[s[0]];
-  const tile=(s,c)=>{const u=thumb(s[0]);return `<div class="pk ${c}" data-l="${s[0]}" title="${s[0]}">${u?`<img src="${u}" referrerpolicy="no-referrer" loading="lazy" alt="">`:''}<b>${s[1]}</b></div>`};
+  const tile=(s,c)=>{const u=thumb(s[0]);return `<div class="pk ${c}" data-l="${s[0]}" title="${s[0]}" tabindex="0" role="button">${u?`<img src="${u}" referrerpolicy="no-referrer" loading="lazy" alt="">`:''}<b>${s[1]}</b></div>`};
   $('herb').innerHTML=Object.keys(T).filter(k=>k!=='tout').map(k=>{
     const lat=(x,y)=>x[0].localeCompare(y[0],'fr'),a=S.filter(s=>s[2]===k),got=a.filter(own).sort(lat),pr=a.filter(s=>sn(s)&&!own(s)).sort(lat),left=a.length-got.length-pr.length;
     return `<details class="card hc" data-k="${k}"${st.ho[k]?' open':''}><summary><span class="hi">${catIcon(k)}</span><span class="hm"><b>${T[k]}</b><span class="bar"><i style="width:${100*got.length/a.length}%"></i></span></span><span class="hn">${got.length}<small>/${a.length}</small></span></summary><div class="pkg">${got.map(s=>tile(s,'ok')).join('')}${pr.map(s=>tile(s,'pr')).join('')}${left?`<div class="pkn">+ ${left} à découvrir</div>`:''}</div></details>`}).join('');
@@ -2470,7 +2502,7 @@ function pro(){
   const days=[...Array(14)].map((_,i)=>{const d=dstr(Date.now()-(13-i)*864e5),h=st.hist[d]||{n:0,ok:0};return{d,n:h.n,ok:h.ok,r:h.n?Math.round(100*h.ok/h.n):0}});
   const mxd=Math.max(goal(),...days.map(x=>x.n));
   const wk=S.filter(s=>{const p=st.sp[s[0]];return p&&p.e>0&&p.b<4}).map(s=>({s,r:Math.round(100*rate(st.sp[s[0]]))})).sort((a,b)=>a.r-b.r);
-  const row=x=>`<div class="lr" data-sp="${x.s[0]}"><span><em>${x.s[0]}</em><small>${x.s[1]}</small></span><b class="${x.r<60?'lo':''}">${x.r} %</b></div>`;
+  const row=x=>`<div class="lr" data-sp="${x.s[0]}" tabindex="0" role="button"><span><em>${x.s[0]}</em><small>${x.s[1]}</small></span><b class="${x.r<60?'lo':''}">${x.r} %</b></div>`;
   const cf=Object.entries(st.cf).filter(x=>x[1]>=1).sort((a,b)=>b[1]-a[1]).slice(0,3);
   $('pro').innerHTML=
    `<div class="card"><h3 class="hh">Aujourd'hui</h3><p class="big2"><b>${hT.n}</b> / ${goal()} exercices</p><span class="bar"><i style="width:${Math.min(100,100*hT.n/goal())}%"></i></span>${errs.length?`<button class="big" id="pro-errs"><span class="tgi">${TARGET}</span>Rejouer mes erreurs du jour (${errs.length})</button>`:''}</div>`+
@@ -2675,7 +2707,7 @@ function openFamily(f){
   const nx='<button class="fnx" type="button">Suivant '+ico('chev-r','ic-in')+'</button>';
   z.innerHTML=`<section class="fcard f1" style="--h:${famHue(f)}"><span class="tgi">${BULB}</span><small>Famille du jour</small><h2>${f}</h2><p>${frFam(f)}</p>${nx}</section>`+
    `<section class="fcard"><small>Reconnaître la famille</small><h3>${f}</h3>${FX[f]&&FX[f][0]?`<p class="fds">${esc(FX[f][0])}</p>`:''}${FW[f]?`<p class="fwd"><b>≈ ${FW[f]}</b> espèces dans le monde</p>`:''}<p class="frx"><b>Le réflexe</b>${info[1]}</p><dl class="fo"><dt>Feuilles</dt><dd>${info[2]}</dd><dt>Fleurs</dt><dd>${info[3]}</dd><dt>Fruits</dt><dd>${info[4]}</dd></dl>${info[5]?`<p class="fdi"><b>À distinguer</b>${info[5]}</p>`:''}${FX[f]&&FX[f][2]?`<p class="fdi"><b>Usages</b>${esc(FX[f][2])}</p>`:''}${nx}</section>`+
-   `<section class="fcard"><small>Dans le jeu</small><h3>${sp.length} espèces<span>${got} acquise${got>1?'s':''} ${ico('coche','ic-in')}</span></h3><div class="fgrid" id="fam-grid">${sp.map(s=>`<div class="pk${own(s)?' ok':''}" data-l="${s[0]}" title="${s[0]}"><b>${s[1]}</b></div>`).join('')}</div><button class="big" id="fam-go" type="button">S'exercer sur cette famille</button></section>`;
+   `<section class="fcard"><small>Dans le jeu</small><h3>${sp.length} espèces<span>${got} acquise${got>1?'s':''} ${ico('coche','ic-in')}</span></h3><div class="fgrid" id="fam-grid">${sp.map(s=>`<div class="pk${own(s)?' ok':''}" data-l="${s[0]}" title="${s[0]}" tabindex="0" role="button"><b>${s[1]}</b></div>`).join('')}</div><button class="big" id="fam-go" type="button">S'exercer sur cette famille</button></section>`;
   if(d.showModal){if(!d.open)d.showModal()}else d.setAttribute('open','');
   z.scrollLeft=0;famDots(0);
   [...document.querySelectorAll('#fam-grid .pk')].forEach((e,i)=>setTimeout(()=>tileImg(e),i*80));
@@ -2717,8 +2749,15 @@ function shTop(){const H=typeof innerHeight==='number'?innerHeight:800,p=$('pic'
 // Carte d'exercice replacée d'un coup sous l'en-tête (même position que pendant la question)
 function snapQc(){const e=$('qc');if(!e||$('quiz').hidden)return;const h=($('top')&&$('top').offsetHeight)||56;window.scrollTo(0,Math.max(0,e.getBoundingClientRect().top+(window.pageYOffset||0)-h-4))}
 // Téléphone en paysage : la photo est à gauche, la fiche prend la place des réponses à sa droite
-const shSide=()=>typeof matchMedia==='function'&&matchMedia('(orientation:landscape) and (max-height:520px)').matches&&!pvSet&&!$('pic').hidden;
+const shDesk=()=>typeof matchMedia==='function'&&matchMedia('(min-width:900px)').matches&&!pvSet&&!$('pic').hidden;
+const shSide=()=>typeof matchMedia==='function'&&matchMedia('(orientation:landscape) and (max-height:520px)').matches&&!pvSet&&!$('pic').hidden&&!shDesk();
 function fitSh(){const s=$('sh');if(!s)return;
+  const desk=!s.hidden&&shDesk();s.classList.toggle('desk',desk);
+  if(desk){const H=innerHeight,pr=$('pic').getBoundingClientRect(),qr=$('qc').getBoundingClientRect(),hh=(($('top')&&$('top').offsetHeight)||56),full=s.classList.contains('full'),t=Math.round(full?hh+8:pr.top);
+    s.style.left=Math.round(pr.right+24)+'px';s.style.right=Math.round(innerWidth-qr.right+12)+'px';s.style.top=t+'px';
+    if(s.classList.contains('peek')){s.style.maxHeight='';return}
+    s.style.maxHeight='none';const b=$('shb'),need=s.offsetHeight-b.clientHeight+b.scrollHeight;s.style.maxHeight=Math.max(160,Math.min(full?1e4:need+4,H-t-16))+'px';return}
+  s.style.right='';s.style.top='';
   const side=!s.hidden&&shSide();s.classList.toggle('side',side);s.style.left=side?Math.round($('pic').getBoundingClientRect().right+8)+'px':'';
   if(s.hidden||s.classList.contains('peek')||s.classList.contains('full')){s.style.maxHeight='';return}
   const H=typeof innerHeight==='number'?innerHeight:800;
@@ -2753,6 +2792,8 @@ document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest
 $('fcx').onclick=closeSheet;$('fch').onclick=e=>{if(e.target===$('fch'))closeSheet()};
 document.addEventListener('keydown',e=>{
   if(e.key==='Escape')$('zm').hidden=true;
+  if((e.key==='Enter'||e.key===' ')&&e.target&&e.target.matches&&e.target.matches('.pk[data-l],.lr[data-sp],.gal img')){e.preventDefault();e.target.click();return}
+  if(e.key==='Escape'&&!$('sh').hidden&&$('sh').classList.contains('full')&&!document.querySelector('dialog[open]')){setSh('mid');return}
   if($('quiz').hidden)return;
   if(!typed&&!done&&e.key>='1'&&e.key<='4'){const b=$('opts').children[+e.key-1];if(b)b.click()}
   else if(e.key==='Enter'&&done&&!/^(BUTTON|INPUT|SUMMARY|A)$/.test(e.target.tagName)&&!$('fch').open)next();

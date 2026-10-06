@@ -1,6 +1,6 @@
 # Plan de modifications — Le royaume des plantes
 
-Document de pilotage. **Plan validé.** État : **étapes 1 à 6 terminées**, étapes 7 à 10 à faire.
+Document de pilotage. **Plan validé.** État : **étapes 1 à 7 terminées**, étapes 8 à 10 à faire.
 Chaque remarque de ta réponse à l'audit est rattachée à une tâche (section « Traçabilité » en bas) pour que rien ne se perde.
 
 ## Règles de travail
@@ -23,7 +23,7 @@ Chaque remarque de ta réponse à l'audit est rattachée à une tâche (section 
 | 4 | Réglages, aide, frise des niveaux, objectif réglable — **fait** | Moyen | 3 |
 | 5 | Progrès et Herbier — **fait** | Petit | 4 |
 | 6 | Mémoire : ralentir légèrement les niveaux 1 à 3 — **fait (variante A)** | Petit, avec simulation | 4 |
-| 7 | Ordinateur et clavier | Gros | 2, 3 |
+| 7 | Ordinateur et clavier — **fait** | Gros | 2, 3 |
 | 8 | File d'attente des photos et plafond du cache | Moyen | 1 |
 | 9 | Contenu botanique : clés, fiabilisation, sourçage | Très gros, par lots | Peut démarrer dès que tu veux |
 | 10 | Clôture : nettoyage, tests complets, mise à jour de l'audit | Moyen | 1 à 8 |
@@ -168,7 +168,16 @@ Seul le passage du niveau 2 au niveau 3 change ; niveaux 4 à 6, intervalles, ti
 
 ---
 
-## Étape 7 — Ordinateur et clavier
+## Étape 7 — Ordinateur et clavier — TERMINÉE
+
+Résultat (à partir de 900 px de large) :
+- **7.1** : l'appli occupe la largeur de l'écran (jusqu'à 1 440 px) ; photo à gauche, question et réponses à droite ; en écriture, la barre de réponse est à droite de la photo ; les 4 photos s'alignent sur une ligne. Marges de 32 px à 1366 px. Herbier et Progrès gardent une largeur de lecture de 900 px.
+- **7.2** : photo à 50 % de la hauteur de la fenêtre (400 px à 1366×800) ; photo et 4 réponses visibles sans défilement (bas à 648 px).
+- **7.3** : la correction s'affiche dans la colonne de droite, à côté de la photo, qui reste nette ; « Plus de détails » agrandit la fiche jusqu'en haut, fond entièrement flouté (règle C5).
+- **7.4** : dans « Plus de détails », galerie de 4 photos en grandes vignettes (2 × 2, ≈ 220-250 px de large), agrandissables au clic ou avec Entrée. Sur téléphone, la galerie reste comme avant.
+- **7.5** : focus visible sur tous les éléments ; touches 1 à 4 (QCM et 4 photos) ; Entrée valide la saisie ; après la réponse, le focus va sur « Question suivante » (Entrée ou Espace pour continuer) ; à la question suivante, il revient sur la saisie (écriture) ou sur le 1er choix (si l'on jouait au clavier) ; vignettes de l'Herbier, lignes « À revoir » et photos de la galerie atteignables au clavier ; Échap referme la photo agrandie, puis replie les détails ; correction annoncée par `aria-live`.
+
+Contrôle : `outils/controle_clavier_ordi.js` (22 vérifications à 1366×800, parcours complet sans souris). Contrôles téléphone relancés sans régression.
 
 | ID | Tâche | Critère de réussite |
 |---|---|---|
@@ -248,11 +257,11 @@ Seul le passage du niveau 2 au niveau 3 change ; niveaux 4 à 6, intervalles, ti
 | M7 | À corriger — **fait** | 4.5 |
 | M8 | Plus tard | — |
 | M9 | À étudier puis corriger | 8.1 |
-| D1 | À développer | 7.1 |
-| D2 | À modifier | 7.2 |
-| D3 | À modifier | 7.3 |
-| D4 | À modifier | 7.4 |
-| D5 | À modifier | 7.5 |
+| D1 | À développer — **fait** | 7.1 |
+| D2 | À modifier — **fait** | 7.2 |
+| D3 | À modifier — **fait** | 7.3 |
+| D4 | À modifier — **fait** | 7.4 |
+| D5 | À modifier — **fait** | 7.5 |
 | Pédagogie 1 | À faire | 9.1 à 9.4 |
 | Mémoire 2 | À faire — **fait** | 4.2 |
 | Mémoire 3 | À faire — **fait (variante A)** | 6.1 |
@@ -264,8 +273,8 @@ Seul le passage du niveau 2 au niveau 3 change ; niveaux 4 à 6, intervalles, ti
 | T2 | OK : ne pas exporter, conserver au tableur — **fait** | 1.3 |
 | T3 | OK — **fait** | 1.3 bis (vérif. en 10.1) |
 | T4 | OK | 10.2 |
-| T5 | OK (voir D1) | 7.1 |
-| T6 | OK | 7.5 |
+| T5 | OK (voir D1) — **fait** | 7.1 |
+| T6 | OK — **fait** | 7.5 |
 | T7 | Plus tard | — |
 | T8 | OK | 8.2 |
 | T9 | OK — **fait** | 1.4 |

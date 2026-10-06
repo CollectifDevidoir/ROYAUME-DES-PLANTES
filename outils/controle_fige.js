@@ -11,7 +11,7 @@ for(const ty of ['mcq','typed']){
   await p.waitForTimeout(1000);const s0=await st();
   ok(s0.clip.startsWith('path'),ty+' : flou percé autour de la photo');
   await p.mouse.move(W/2,40);await p.mouse.wheel(0,400);await p.waitForTimeout(300);let s=await st();ok(s.y===s0.y&&s.pic===s0.pic,ty+' : molette sur le fond sans effet ('+s0.y+'→'+s.y+')');
-  await p.keyboard.press('PageDown');await p.keyboard.press('Space');await p.waitForTimeout(300);s=await st();ok(s.y===s0.y,ty+' : touches de défilement sans effet');
+  await p.evaluate(()=>document.activeElement&&document.activeElement.blur());await p.keyboard.press('PageDown');await p.keyboard.press('Space');await p.waitForTimeout(300);s=await st();ok(s.y===s0.y,ty+' : touches de défilement sans effet');
   await swipe(W/2,40,300);s=await st();ok(s.y===s0.y&&s.pic===s0.pic,ty+' : glisser sur le haut de l\'écran sans effet');
   await swipe(W-20,200,30);s=await st();ok(s.y===s0.y&&s.pic===s0.pic,ty+' : glisser vers le haut sur la photo sans effet');
   await swipe(W/2,s0.pic+80,s0.pic+80,-150);s=await st();ok(s.y===s0.y&&s.qc==='',ty+' : glissement latéral de la carte sans effet');

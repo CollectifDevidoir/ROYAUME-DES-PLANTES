@@ -9,6 +9,8 @@ async function open(o={}){
   await ctx.route(/^https?:/,r=>{const u=r.request().url();
     if(u.startsWith('https://api.inaturalist.org/v1/taxa?q=')){const q=decodeURIComponent(u.split('q=')[1].split('&')[0]);k++;
       return r.fulfill({contentType:'application/json',body:JSON.stringify({results:[{id:k,name:q,preferred_common_name:'',default_photo:{medium_url:`https://img.test/photos/${k}/medium.svg`,license_code:'cc-by',attribution:'test'}}]})})}
+    const td=u.match(/api\.inaturalist\.org\/v1\/taxa\/(\d+)/);
+    if(td){const id=+td[1];return r.fulfill({contentType:'application/json',body:JSON.stringify({results:[{id,ancestors:[],taxon_photos:[1,2,3,4].map(j=>({photo:{medium_url:`https://img.test/photos/${id*100+j}/medium.svg`,license_code:'cc-by',attribution:'test'}}))}]})})}
     if(u.startsWith('https://api.inaturalist.org/'))return r.fulfill({contentType:'application/json',body:'{"results":[]}'});
     if(u.startsWith('https://img.test/')){const n=+(u.match(/photos\/(\d+)/)||[0,1])[1];return r.fulfill({contentType:'image/svg+xml',body:svg(n)})}
     return r.fulfill({status:404,body:''})});
