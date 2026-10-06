@@ -251,10 +251,11 @@ Le 2e scénario est moins rapide qu'avant : l'ancienne version gardait la photo 
 | 3 | 7 chèvrefeuilles, 7 rosiers, 6 peupliers, 6 hortensias, 6 clématites (32 : genres complets) | fait, validé |
 | 4 | 5 bouleaux, 5 frênes, 5 saules, 5 sorbiers, 5 tilleuls, 5 lavandes | fait, validé |
 | 5 | 5 genévriers, 5 épicéas, 5 groseilliers, 5 géraniums, 5 laîches, 4 magnolias, 4 ormes (33) | fait, validé |
-| 6 | 4 cyprès, 4 fusains, 4 cistes, 4 cotonéasters, 4 campanules, 4 euphorbes, 4 iris, 4 sauges (32 : genres complets) | fait, à valider |
-| 7 | Sedum (4), Abies (4), puis genres de 3 : Aesculus, Alnus, Platanus, Cedrus, Ligustrum, Hedera, Chamaecyparis, Malus, Pyrus, Berberis… | à faire |
+| 6 | 4 cyprès, 4 fusains, 4 cistes, 4 cotonéasters, 4 campanules, 4 euphorbes, 4 iris, 4 sauges (32 : genres complets) | fait, validé |
+| 7 | 4 orpins, 4 sapins, 3 marronniers, 3 aulnes, 3 platanes, 3 cèdres, 3 troènes, 3 lierres, 3 faux-cyprès, 3 pommiers (32 : genres complets) | fait, à valider |
+| 8 | genres de 3 : Pyrus, Berberis, Daphne, Elaeagnus, Erica, Hypericum, Spiraea, Allium, Helleborus, Festuca… | à faire |
 
-Total revu : 199 espèces sur 663. Quand les deux sources prioritaires ne donnaient pas assez de caractères visibles (5 chênes exotiques, cerisier de Yoshino), d'autres sources ont été utilisées ; elles sont citées dans le .csv. Outil : `outils/cles_vers_appli.py` (vérifie les règles et recopie le .csv dans l'appli).
+Total revu : 231 espèces sur 663. Quand les deux sources prioritaires ne donnaient pas assez de caractères visibles (5 chênes exotiques, cerisier de Yoshino, orme de Sibérie, sapin du Colorado), d'autres sources ont été utilisées ; elles sont citées dans le .csv. Outil : `outils/cles_vers_appli.py` (vérifie les règles et recopie le .csv dans l'appli).
 
 **Lot d'essai** : 10 érables (campestre, platanoides, pseudoplatanus, opalus, monspessulanum, negundo, saccharinum, rubrum, palmatum, cappadocicum), intégrés dans l'appli (bloc « Étape 9 » après les données, prioritaire sur les anciennes clés).
 
