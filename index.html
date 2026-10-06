@@ -10,7 +10,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Royaume des plantes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌿%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%233f8f4f' d='M32 4C47 13 54 28 47 43C43 51 37 55 32 56C27 55 21 51 17 43C10 28 17 13 32 4Z'/%3E%3Cpath fill='none' stroke='%23e8f3df' stroke-width='3' stroke-linecap='round' d='M32 14V60M32 30L41 23M32 41L22 33'/%3E%3C/svg%3E">
 <title>Le royaume des plantes</title>
 <meta name="description" content="Plus de 600 arbres, arbustes, vivaces, grimpantes et graminées à découvrir.">
 <meta property="og:title" content="Le royaume des plantes">
@@ -815,6 +815,62 @@ small.fm,.fm{font-size:12px}
 @media (max-width:359px){#chips .cats button{padding:3px 5px;font-size:11.5px}}
 #chips .cats{gap:3px}
 #chips .cats button{padding:3px 4px}
+
+/* ===== Étape 4 : réglages, frise des niveaux ===== */
+.rank .ring{cursor:pointer;-webkit-tap-highlight-color:transparent;position:relative}
+.rank .ring::after{content:'';position:absolute;inset:-4px}
+.rank .ring:focus-visible,.bs button:focus-visible,.lk:focus-visible{outline:3px solid var(--ac2);outline-offset:2px}
+dialog.bs{position:fixed;inset:auto 0 0 0;margin:0 auto;width:min(640px,100vw);max-width:100vw;max-height:min(88vh,720px);padding:0 18px calc(18px + env(safe-area-inset-bottom));border:1px solid var(--bd);border-bottom:0;border-radius:22px 22px 0 0;overflow:auto;overscroll-behavior:contain;box-shadow:0 -12px 32px -12px rgba(10,30,15,.45)}
+dialog.bs[open]{animation:bsUp .28s cubic-bezier(.2,.8,.2,1)}
+@keyframes bsUp{from{transform:translateY(40%);opacity:.4}}
+@media(prefers-reduced-motion:reduce){dialog.bs[open]{animation:none}}
+.bsh{position:sticky;top:0;z-index:1;background:var(--card);display:flex;align-items:center;padding:16px 0 6px}
+.bsg{position:absolute;left:50%;top:6px;width:36px;height:4px;margin-left:-18px;border-radius:3px;background:var(--mu);opacity:.45}
+.bsh h2{flex:1;display:flex;align-items:center;gap:8px;margin:0;outline:0}
+.bsh h2 .tgi{width:26px;height:26px}
+.bsx{flex:none;width:44px;height:44px;margin-right:-10px;border:0;border-radius:50%;background:none;color:var(--mu);cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.bsx .tgi{width:18px;height:18px}
+.stl{margin:16px 0 0;padding-bottom:4px;border-bottom:1px solid var(--bd);font:700 12px system-ui;letter-spacing:.07em;text-transform:uppercase;color:var(--mu)}
+.str{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--bd)}
+.str:last-child{border-bottom:0}
+.str>span{min-width:0}
+.str>span b{display:block;font-weight:500}
+.str>span small{display:block;font-size:12px;color:var(--mu);line-height:1.3}
+.seg{display:flex;gap:6px;flex:none}
+.seg button{min-width:40px;height:36px;padding:0 8px;border:1.5px solid var(--bd);border-radius:99px;background:none;color:var(--fg);font:700 .9rem system-ui;cursor:pointer;position:relative}
+.seg button::after{content:'';position:absolute;inset:-4px -2px}
+.seg button[aria-pressed="true"]{background:var(--ac);border-color:var(--ac);color:var(--card)}
+.sw{flex:none;width:52px;height:30px;border:0;border-radius:99px;background:var(--bd);cursor:pointer;position:relative;transition:background .2s}
+.sw::before{content:'';position:absolute;left:3px;top:3px;width:24px;height:24px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:transform .2s}
+.sw::after{content:'';position:absolute;inset:-7px -4px}
+.sw[aria-checked="true"]{background:var(--ac)}
+.sw[aria-checked="true"]::before{transform:translateX(22px)}
+.bs .mini{flex:none}
+.bs .mini.ko{border-color:var(--ko);color:var(--ko)}
+.bs .mini.ko.full{background:var(--ko);color:var(--card)}
+.stp{padding:0 0 12px;border-bottom:1px solid var(--bd)}
+.stp .row{gap:8px}
+.stp textarea{width:100%;box-sizing:border-box;min-height:88px;margin:4px 0 8px;padding:8px;border:1px solid var(--bd);border-radius:10px;background:var(--bg2);color:var(--fg);font:12px/1.4 ui-monospace,monospace;resize:vertical}
+.stp p{margin:0 0 8px;font-size:.9rem}
+.stm{margin:0 0 8px;font-size:.88rem;font-weight:600}
+.stm.ko{color:var(--ko)}
+.stm.ok{color:var(--ok)}
+.lnk{padding:0;overflow:hidden}
+.lk{display:flex;align-items:center;gap:12px;width:100%;min-height:52px;padding:10px 14px;border:0;border-bottom:1px solid var(--bd);background:none;color:var(--fg);font:600 1rem system-ui;text-align:left;cursor:pointer}
+.lk:last-child{border-bottom:0}
+.lk .tgi{width:24px;height:24px;flex:none}
+.lk .lkc{margin-left:auto;width:18px;height:18px;color:var(--mu)}
+.lvf{margin:8px 0 6px}
+.lvb{display:grid;grid-template-columns:minmax(0,3fr) auto minmax(0,2fr);gap:8px;text-align:center}
+.lvb>div{min-width:0}
+.lvb>div::before{content:'';display:block;height:4px;border-radius:2px;margin-bottom:6px;background:var(--c)}
+.lvb .lv1{--c:var(--ac2)}
+.lvb .lv2{--c:var(--ac)}
+.lvb .lv3{--c:#d4a72c}
+.lvn{display:flex;justify-content:center;gap:4px}
+.lvn i{width:22px;height:22px;border-radius:50%;display:inline-grid;place-content:center;font:700 12px system-ui;font-style:normal;background:var(--bg1);color:var(--mu)}
+.lv2 .lvn i{background:var(--ac);color:var(--card)}
+.lvb small{display:block;margin-top:3px;font:700 12px system-ui;color:var(--fg)}
 </style>
 </head>
 <body>
@@ -827,7 +883,7 @@ small.fm,.fm{font-size:12px}
 <path class="fr" d="M0 800Q30 690 150 650Q90 720 70 800ZM40 800Q110 730 230 730Q150 760 120 800ZM1200 800Q1170 690 1050 650Q1110 720 1130 800ZM1160 800Q1090 730 970 730Q1050 760 1080 800Z"/></svg>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><radialGradient id="gL1" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#e4ff9a"/><stop offset="0.5" stop-color="#8be04a"/><stop offset="1" stop-color="#35b04a"/></radialGradient><radialGradient id="gL2" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#b8f06e"/><stop offset="0.5" stop-color="#4fc24f"/><stop offset="1" stop-color="#1f8f45"/></radialGradient><radialGradient id="gL3" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#6bd77a"/><stop offset="0.5" stop-color="#27a152"/><stop offset="1" stop-color="#0f6b3c"/></radialGradient><radialGradient id="gLm" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#f2ffa8"/><stop offset="0.5" stop-color="#b8ec4e"/><stop offset="1" stop-color="#6ec23a"/></radialGradient><linearGradient id="gBr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5a361c"/><stop offset="0.4" stop-color="#b6804f"/><stop offset="1" stop-color="#4e2f17"/></linearGradient><linearGradient id="gSo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a0703f"/><stop offset="1" stop-color="#53341a"/></linearGradient><radialGradient id="gSd" cx="0.35" cy="0.3" r="0.9"><stop offset="0" stop-color="#ffd28a"/><stop offset="0.55" stop-color="#e8943a"/><stop offset="1" stop-color="#a05a1a"/></radialGradient><radialGradient id="gCp" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#b27b4a"/><stop offset="0.6" stop-color="#7a4a26"/><stop offset="1" stop-color="#4f2d14"/></radialGradient><linearGradient id="gGd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff4b0"/><stop offset="0.5" stop-color="#ffc83d"/><stop offset="1" stop-color="#d58a0a"/></linearGradient><radialGradient id="gT1" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#b0f5e4"/><stop offset="0.5" stop-color="#2fc9b3"/><stop offset="1" stop-color="#0f8c93"/></radialGradient><radialGradient id="gT2" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#80e8d4"/><stop offset="0.5" stop-color="#1fb0a0"/><stop offset="1" stop-color="#0b7480"/></radialGradient><radialGradient id="gT3" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#5ad6c4"/><stop offset="0.5" stop-color="#0f8f8a"/><stop offset="1" stop-color="#0a5568"/></radialGradient><radialGradient id="gO1" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#fff0a0"/><stop offset="0.5" stop-color="#f0c032"/><stop offset="1" stop-color="#b88510"/></radialGradient><radialGradient id="gO2" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#f7d65c"/><stop offset="0.5" stop-color="#d9a21e"/><stop offset="1" stop-color="#946508"/></radialGradient><linearGradient id="gF1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4fc0a0"/><stop offset="1" stop-color="#1f8a6a"/></linearGradient><linearGradient id="gF2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34a888"/><stop offset="1" stop-color="#146a52"/></linearGradient><linearGradient id="gF3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f8a6c"/><stop offset="1" stop-color="#0b4a3c"/></linearGradient><radialGradient id="gN1" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#b4c2ff"/><stop offset="0.5" stop-color="#6a7fe6"/><stop offset="1" stop-color="#3a46b0"/></radialGradient><radialGradient id="gN2" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#8fa0f5"/><stop offset="0.5" stop-color="#4d5fd0"/><stop offset="1" stop-color="#2b3790"/></radialGradient><radialGradient id="gN3" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#6676e0"/><stop offset="0.5" stop-color="#3340a8"/><stop offset="1" stop-color="#1c2470"/></radialGradient><linearGradient id="gMn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffbe6"/><stop offset="1" stop-color="#ffe27a"/></linearGradient><linearGradient id="gPot" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f09a68"/><stop offset="0.5" stop-color="#d5703a"/><stop offset="1" stop-color="#b5532a"/></linearGradient><linearGradient id="gPot2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb286"/><stop offset="1" stop-color="#d9703c"/></linearGradient><radialGradient id="gP1" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ffe3ef"/><stop offset="0.5" stop-color="#ff9cc6"/><stop offset="1" stop-color="#e8579a"/></radialGradient><radialGradient id="gP2" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ffb3d4"/><stop offset="0.5" stop-color="#f0549a"/><stop offset="1" stop-color="#b82a74"/></radialGradient><radialGradient id="gP3" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#f07cb4"/><stop offset="0.5" stop-color="#c93a86"/><stop offset="1" stop-color="#7f1a58"/></radialGradient><radialGradient id="gFr" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ffdbe6"/><stop offset="0.5" stop-color="#ff6f9c"/><stop offset="1" stop-color="#d12f68"/></radialGradient><radialGradient id="gAp" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ff9a8a"/><stop offset="0.5" stop-color="#e8332b"/><stop offset="1" stop-color="#a1130f"/></radialGradient><linearGradient id="gBi" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#dcdcd6"/><stop offset="0.5" stop-color="#ffffff"/><stop offset="1" stop-color="#c9c9c0"/></linearGradient><radialGradient id="gMc" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ff8a7a"/><stop offset="0.55" stop-color="#e03a30"/><stop offset="1" stop-color="#a0160f"/></radialGradient><linearGradient id="gMs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff6e0"/><stop offset="1" stop-color="#e6d2a8"/></linearGradient><radialGradient id="gDw" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ffffff"/><stop offset="0.5" stop-color="#bfe9ff"/><stop offset="1" stop-color="#5fb4ec"/></radialGradient><radialGradient id="gA1" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ffe08a"/><stop offset="0.5" stop-color="#f7a53a"/><stop offset="1" stop-color="#d8661c"/></radialGradient><radialGradient id="gA2" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#f9b04a"/><stop offset="0.5" stop-color="#e0702a"/><stop offset="1" stop-color="#a8401a"/></radialGradient><radialGradient id="gA3" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ee8a34"/><stop offset="0.5" stop-color="#bd4a20"/><stop offset="1" stop-color="#7a2812"/></radialGradient><radialGradient id="gBl" cx="0.4" cy="0.35" r="0.85"><stop offset="0" stop-color="#fffcd6"/><stop offset="0.5" stop-color="#ffe45c"/><stop offset="1" stop-color="#f5b400"/></radialGradient><linearGradient id="gMt" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e3e8ec"/><stop offset="0.5" stop-color="#9aa6b0"/><stop offset="1" stop-color="#6f7b86"/></linearGradient><radialGradient id="gTr" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ff8f8f"/><stop offset="0.6" stop-color="#e8384f"/><stop offset="1" stop-color="#b01530"/></radialGradient><radialGradient id="gTw" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe7ec"/></radialGradient></defs></svg>
 <main>
-<header class="rank" id="top"><div class="medal" id="medal"><span id="mi"></span></div><div class="rm"><div class="rl1"><b id="rn"></b><small id="rc"></small><span class="stk" id="stk" hidden></span></div><div class="bar"><i id="pg" style="width:0"></i></div><small class="rs" id="nx"></small></div><div class="ring" id="ring"><b id="gn">0</b><small>/ 30</small></div><button class="help" id="help" aria-label="Aide : comment ça marche">?</button></header>
+<header class="rank" id="top"><div class="medal" id="medal"><span id="mi"></span></div><div class="rm"><div class="rl1"><b id="rn"></b><small id="rc"></small><span class="stk" id="stk" hidden></span></div><div class="bar"><i id="pg" style="width:0"></i></div><small class="rs" id="nx"></small></div><div class="ring" id="ring" role="button" tabindex="0" aria-label="Objectif du jour : ouvrir les réglages"><b id="gn">0</b><small id="gt">/ 40</small></div><button class="help" id="help" aria-label="Aide : comment ça marche">?</button></header>
 <nav class="tabs"><button data-t="quiz" aria-current="true"><span data-ic="quiz"></span>Quiz</button><button data-t="herb" aria-current="false"><span data-ic="herbier"></span>Herbier</button><button data-t="pro" aria-current="false"><span data-ic="progres"></span>Progrès</button></nav>
 <section id="quiz">
 <div class="trn" id="trn" hidden><div><b id="trl"></b><small id="trs"></small></div><button class="mini" id="trq">Quitter</button></div>
@@ -851,6 +907,7 @@ small.fm,.fm{font-size:12px}
 </div>
 <dialog id="fam" aria-label="Famille du jour"><button class="fdx" id="famx" type="button" aria-label="Fermer" data-ic="close"></button><div class="fdots" id="fdots"><i class="on"></i><i></i><i></i></div><div class="fz" id="fz" tabindex="-1" autofocus></div></dialog>
 <dialog id="dlg"><h2 tabindex="-1">Comment ça marche ?</h2><div id="dbody"></div><button id="dx">Compris</button></dialog>
+<dialog id="set" class="bs" aria-labelledby="set-t"><div class="bsh"><i class="bsg" aria-hidden="true"></i><h2 id="set-t" tabindex="-1"><span data-ic="reglages"></span>Réglages</h2><button class="bsx" id="set-x" type="button" aria-label="Fermer les réglages" data-ic="close"></button></div><div id="set-b"></div></dialog>
 <dialog id="fch" class="fch"><div class="fhd"><b id="fht"></b><button id="fcx" aria-label="Fermer" data-ic="close"></button></div><div id="fcb"></div><div id="fcf"></div></dialog>
 <div class="sh" id="sh" hidden role="region" aria-label="Fiche de l'espèce"><div class="shh"><button class="grip" id="shg" aria-label="Agrandir ou réduire la fiche"><i></i></button><div id="shr" aria-live="polite"></div><button id="shm" aria-label="Réduire la fiche en bandeau" data-ic="chev-d"></button></div><div id="shb"></div><div class="shf"><button class="big" id="shn">Question suivante <span class="ic-in" data-ic="arrow"></span></button></div></div>
 <div id="zm" hidden><img alt=""></div>
@@ -1840,11 +1897,13 @@ Verbenaceae|Verbénacées|Épis de petites fleurs à 5 lobes sur tige carrée (V
 Violaceae|Violacées|Fleur à pétale inférieur éperonné et feuilles en cœur.|En cœur ou en rein, stipulées.|5 pétales dont le pétale inférieur porte un éperon.|Capsule à 3 valves, graines dispersées par les fourmis.|Géraniacées : violettes à fleur éperonnée.
 Vitaceae|Vitacées|Vrilles opposées aux feuilles et petites fleurs vertes en grappes.|Alternes, lobées ou composées.|Minuscules, verdâtres, pétales soudés en capuchon qui tombe.|Baie.|Cucurbitacées : vrilles opposées chez la vigne.`.split('\n').forEach(l=>{const a=l.split('|');FI[a[0]]=a.slice(1)});
 /*@END:FI*/
-const K='quizplantes.v1',INT=[0,0,0,0,864e5,2592e5,6048e5];
+const K='quizplantes.v1',INT=[0,0,0,0,864e5,2592e5,6048e5],GOALS=[20,30,40,60];
 let st={sp:{},day:{},m:{}};
 try{st=JSON.parse(localStorage.getItem(K))||st}catch(e){}
-const fix=()=>{st.m=st.m||{};st.hist=st.hist||{};st.cf=st.cf||{};st.ses=st.ses||[];st.best=st.best||0;st.tm=st.tm||{d:'',l:[]};st.ho=st.ho||{};st.fd=st.fd||{};Object.values(st.sp||{}).forEach(p=>{if(p.b<=3&&p.d>Date.now())p.d=0;else if(p.b>=4&&p.d>Date.now()+INT[p.b])p.d=Date.now()+INT[p.b]})};fix();
+const fix=()=>{st.m=st.m||{};st.hist=st.hist||{};st.cf=st.cf||{};st.ses=st.ses||[];st.best=st.best||0;st.tm=st.tm||{d:'',l:[]};st.ho=st.ho||{};st.fd=st.fd||{};st.set=st.set&&typeof st.set==='object'?st.set:{};if(!GOALS.includes(st.set.goal))st.set.goal=40;if(typeof st.set.vib!=='boolean')st.set.vib=true;Object.values(st.sp||{}).forEach(p=>{if(p.b<=3&&p.d>Date.now())p.d=0;else if(p.b>=4&&p.d>Date.now()+INT[p.b])p.d=Date.now()+INT[p.b]})};fix();
 const save=()=>{try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}};
+// Réglages : objectif quotidien (40 par défaut) et vibration (active par défaut)
+const goal=()=>st.set.goal,vib=v=>{if(st.set.vib&&navigator.vibrate)navigator.vibrate(v)};
 const $=i=>document.getElementById(i),dstr=ms=>{const d=new Date(ms);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')},today=()=>dstr(Date.now());
 const gen=l=>l.split(' ')[0];
 const esc=x=>x.replace(/[<>&"]/g,c=>'&#'+c.charCodeAt(0)+';');
@@ -1861,19 +1920,20 @@ function celNext(){
   const ff=Array.from({length:10},(_,k)=>`<i class="ff" style="left:${8+k*9}%;animation-delay:${(k%5)*.4}s;animation-duration:${3.4+(k%4)*.6}s"></i>`).join('');
   const sp=Array.from({length:6},(_,k)=>`<i style="--r:${k*60}deg"></i>`).join('');
   el.innerHTML='<div class="fl"></div><div class="rays"></div><div class="burst"></div><div class="wave"></div><div class="wave w2"></div><div class="orb">'+sp+'</div><div class="bdg">'+(o.html||'')+'</div><h2>'+esc(o.title)+'</h2><p class="rnm">'+esc(o.sub)+'</p><small>Touche pour continuer</small>'+lv+ff;
-  document.body.append(el);if(navigator.vibrate)navigator.vibrate([40,60,40,60,120]);
+  document.body.append(el);vib([40,60,40,60,120]);
   let gone=false;const x=()=>{if(gone)return;gone=true;el.remove();setTimeout(celNext,250)};el.onclick=x;setTimeout(x,5600)}
 function rankAnim(){const i=rk();celebrate({html:rIcon(i),title:'Nouveau rang !',sub:R[i][1],hu:rankHue(i),n:12+i*3})}
-function goalAnim(){celebrate({html:TROPHY,title:'Objectif atteint !',sub:GOAL+" plantes aujourd'hui",hu:46,n:36})}
+function goalAnim(){celebrate({html:TROPHY,title:'Objectif atteint !',sub:goal()+" exercices aujourd'hui",hu:46,n:36})}
 function toast(m){const e=document.createElement('div');e.className='toast';e.textContent=m;document.body.append(e);setTimeout(()=>e.remove(),3200)}
 function helpHtml(){const cr=rk();return `<p class="hp">Reconnais la plante sur la photo. Après chaque réponse, la fiche te donne les clés pour la retenir.</p>
-<h4>Comment une plante devient « acquise »</h4>
-<ol class="hl"><li><b>Découverte</b> : tu la croises en QCM, plusieurs fois.</li><li><b>Vérification</b> : elle revient en photo à retrouver ou en nom à écrire. Réussis un de ces exercices plus difficiles pour l'acquérir.</li><li><b>Entretien</b> : elle revient de plus en plus rarement. Une erreur la fait redescendre.</li></ol>
+<h4>Comment une plante devient «&nbsp;acquise&nbsp;»</h4>
+<div class="lvf" role="img" aria-label="Niveaux 1 à 3 : apprentissage. Niveau 4 : acquise. Niveaux 5 et 6 : entretien."><div class="lvb" aria-hidden="true"><div class="lv1"><span class="lvn"><i>1</i><i>2</i><i>3</i></span><small>Apprentissage</small></div><div class="lv2"><span class="lvn"><i>4</i></span><small>Acquise</small></div><div class="lv3"><span class="lvn"><i>5</i><i>6</i></span><small>Entretien</small></div></div></div>
+<ul class="hl"><li><b>Niveaux 1 à 3</b> : tu la découvres en QCM, puis elle revient en photo à retrouver ou en nom à écrire.</li><li><b>Niveau 4</b> : réussis un de ces exercices plus difficiles et elle devient «&nbsp;acquise&nbsp;».</li><li><b>Niveaux 5 et 6</b> : elle revient de plus en plus rarement pour l'entretien. Une erreur la fait redescendre.</li></ul>
 <h4>Au quotidien</h4>
-<ul class="hl"><li><b>Classique</b> mélange toutes les plantes ; un thème ne travaille qu'une famille.</li><li>Objectif : 50 plantes par jour. La barre du haut suit ton rang et ton objectif.</li><li>Tes confusions reviennent ensemble.</li><li>Glisse la carte vers la gauche pour passer à la suivante, touche une photo pour l'agrandir.</li><li>Le bandeau violet indique un entraînement : il ne change pas ton niveau.</li></ul>
+<ul class="hl"><li><b>Classique</b> mélange toutes les plantes ; un thème ne travaille qu'une famille.</li><li>Objectif : ${goal()} exercices par jour. La barre du haut suit ton rang, l'anneau suit ton objectif : touche-le pour le changer.</li><li>Tes confusions reviennent ensemble.</li><li>Glisse la carte vers la gauche pour passer à la suivante, touche une photo pour l'agrandir.</li><li>Le bandeau violet indique un entraînement : il ne change pas ton niveau.</li></ul>
 <h4>Les rangs</h4>
 <div class="rl">${R.map((x,i)=>`<div class="rr${i===cr?' cur':''}"><span class="rs2">${rIcon(i)}</span><b>${x[1]}</b><small>${x[0]?'dès '+x[0]+' acquises':'au départ'}</small></div>`).join('')}</div>
-<p class="hp"><small>Ta progression reste sur cet appareil ; l'onglet Progrès permet de la sauvegarder.</small></p>`}
+<p class="hp"><small>Ta progression reste sur cet appareil ; les réglages (en bas de l'onglet Progrès) permettent de la sauvegarder.</small></p>`}
 let cur=null,last=null,done=false,typed=false,curTrain=false,nxt=0,mode=(()=>{try{const m=localStorage.getItem('qp.mode');return m&&T[m]?m:'tout'}catch(e){return'tout'}})(),streak=0,shown={};
 
 // ===== iNaturalist : photos sous licence libre + famille/genre =====
@@ -2194,11 +2254,11 @@ function answer(v){
   if(!curTrain&&good)document.querySelectorAll('.opts>button').forEach(b=>{const L=b.dataset.l;if(!L||L===cur[0])return;const k=[cur[0],L].sort().join('|');if(st.cf[k]){st.cf[k]=+(st.cf[k]-.5).toFixed(1);if(st.cf[k]<=0)delete st.cf[k]}});
   if(!curTrain&&!good&&w){const k=[cur[0],w[0]].sort().join('|');st.cf[k]=(st.cf[k]||0)+1}
   save();last=cur[0];
-  if(rk()>r0)rankAnim(R[rk()][1]);if(!curTrain&&h.n===GOAL)goalAnim();
+  if(rk()>r0)rankAnim(R[rk()][1]);if(!curTrain&&h.n===goal())goalAnim();
   if(typed){$('q-input').disabled=true;$('qc').classList.remove('typing')}
   document.querySelectorAll('.opts>button').forEach(b=>{b.disabled=true;
     if(b.dataset.l===cur[0])b.classList.add('ok');else if(b.dataset.l===v)b.classList.add('ko')});
-  if(good)$('pic').classList.add('pop');$('pic').classList.add('ans');if(navigator.vibrate)navigator.vibrate(good?15:[30,40,30]);$('opts').classList.add('rv');
+  if(good)$('pic').classList.add('pop');$('pic').classList.add('ans');vib(good?15:[30,40,30]);$('opts').classList.add('rv');
   $('next').hidden=false;stats();showSheet(good,w,v);
   pre=prepare();
 }
@@ -2362,7 +2422,7 @@ function stats(){
   $('mi').innerHTML=rIcon(i);$('rn').textContent=r[1];$('rc').textContent=kn+' acquises';$('nx').textContent=nx?'encore '+(nx[0]-kn)+(innerWidth<380?' pour ':' pour devenir ')+nx[1]:'rang maximal';
   $('medal').style.setProperty('--p',p+'%');$('medal').style.setProperty('--hu',rankHue(i));$('pg').style.width=p+'%';
   if(lastKn>=0&&kn>lastKn){const m=$('medal');m.classList.remove('pls');void m.offsetWidth;m.classList.add('pls')}lastKn=kn;
-  {const g=$('gn');if(g.textContent!==String(h.n)){g.textContent=h.n;g.classList.remove('bump');void g.offsetWidth;g.classList.add('bump')}const sk=$('stk');if(streak>=3){sk.hidden=false;sk.innerHTML='<svg viewBox="0 0 16 20" width="10" height="13"><path d="M8 1c1 4 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-5 1-9z" fill="#f08a2d"/></svg>'+streak}else sk.hidden=true}$('ring').style.setProperty('--g',Math.min(100,100*h.n/GOAL)+'%');$('ring').classList.toggle('done',h.n>=GOAL);
+  {const g=$('gn');if(g.textContent!==String(h.n)){g.textContent=h.n;g.classList.remove('bump');void g.offsetWidth;g.classList.add('bump')}const sk=$('stk');if(streak>=3){sk.hidden=false;sk.innerHTML='<svg viewBox="0 0 16 20" width="10" height="13"><path d="M8 1c1 4 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-5 1-9z" fill="#f08a2d"/></svg>'+streak}else sk.hidden=true}$('ring').style.setProperty('--g',Math.min(100,100*h.n/goal())+'%');$('ring').classList.toggle('done',h.n>=goal());$('gt').textContent='/ '+goal();$('ring').setAttribute('aria-label','Objectif du jour : '+h.n+' sur '+goal()+'. Ouvrir les réglages');
   const l=st.tm.d===today()?st.tm.l:[];$('rplay').hidden=!l.length||curTrain;$('rplay').innerHTML='<span class="tgi">'+TARGET+'</span>Rejouer mes erreurs ('+l.length+')';
   $('fday').innerHTML='<span class="tgi">'+BULB+'</span>Famille du jour'+(st.fd.d===today()?'':'<i class="nd"></i>');
 }
@@ -2385,28 +2445,77 @@ function pro(){
   const all=Object.values(st.sp),n=all.reduce((a,p)=>a+p.s,0),ok=all.reduce((a,p)=>a+p.s-p.e,0);
   const hT=st.hist[today()]||{n:0,ok:0},errs=st.tm.d===today()?st.tm.l:[];
   const days=[...Array(14)].map((_,i)=>{const d=dstr(Date.now()-(13-i)*864e5),h=st.hist[d]||{n:0,ok:0};return{d,n:h.n,ok:h.ok,r:h.n?Math.round(100*h.ok/h.n):0}});
-  const mxd=Math.max(GOAL,...days.map(x=>x.n));
+  const mxd=Math.max(goal(),...days.map(x=>x.n));
   const wk=S.filter(s=>{const p=st.sp[s[0]];return p&&p.e>0&&p.b<4}).map(s=>({s,r:Math.round(100*rate(st.sp[s[0]]))})).sort((a,b)=>a.r-b.r);
   const row=x=>`<div class="lr" data-sp="${x.s[0]}"><span><em>${x.s[0]}</em><small>${x.s[1]}</small></span><b class="${x.r<60?'lo':''}">${x.r} %</b></div>`;
   const cf=Object.entries(st.cf).filter(x=>x[1]>=1).sort((a,b)=>b[1]-a[1]).slice(0,3);
   const cats=Object.keys(T).filter(k=>k!=='tout').map(k=>{const a=S.filter(s=>s[2]===k),g=a.filter(s=>(st.sp[s[0]]||{b:0}).b>=4).length;return `<div class="pc"><span>${T[k]}</span><span class="bar"><i style="width:${100*g/a.length}%"></i></span><b>${g}/${a.length}</b></div>`}).join('');
   $('pro').innerHTML=
-   `<div class="card"><h3 class="hh">Aujourd'hui</h3><p class="big2"><b>${hT.n}</b> / ${GOAL} exercices</p><span class="bar"><i style="width:${Math.min(100,100*hT.n/GOAL)}%"></i></span>${errs.length?`<button class="big" id="pro-errs"><span class="tgi">${TARGET}</span>Rejouer mes erreurs du jour (${errs.length})</button>`:''}</div>`+
+   `<div class="card"><h3 class="hh">Aujourd'hui</h3><p class="big2"><b>${hT.n}</b> / ${goal()} exercices</p><span class="bar"><i style="width:${Math.min(100,100*hT.n/goal())}%"></i></span>${errs.length?`<button class="big" id="pro-errs"><span class="tgi">${TARGET}</span>Rejouer mes erreurs du jour (${errs.length})</button>`:''}</div>`+
    `<div class="card"><h3 class="hh">Régularité</h3><div class="kp"><div><b>${n?Math.round(100*ok/n):0} %</b>réussite</div><div><b>${st.best}</b>meilleure série</div></div><div class="hist">${days.map(x=>`<button type="button" class="hb" data-d="${x.d}" aria-pressed="false" aria-label="${x.d} : ${x.n} exercices"><i style="height:${Math.min(100,x.n*100/mxd)}%;background:${x.n?`hsl(${Math.round(x.r*1.25)},72%,${x.r<50?'46%':'40%'})`:'#d9e0d3'};opacity:${x.n?1:.3}"></i></button>`).join('')}</div><p class="hd" id="herb-detail"></p></div>`+
    `<div class="card"><h3 class="hh">Collection</h3>${cats}</div>`+
    `<div class="card"><h3 class="hh">À revoir</h3>${wk.length?wk.slice(0,5).map(row).join('')+(wk.length>5?`<p class="na">+ ${wk.length-5} autres dans ta liste</p>`:'')+'<button class="big" id="pro-review">S\'entraîner sur ces plantes</button>':'<p class="na">Rien à revoir pour l\'instant, continue !</p>'}</div>`+
    (cf.length?`<div class="card"><h3 class="hh">Confusions</h3>${cf.map(([k,c])=>{const [a,b]=k.split('|');return `<div class="cfr"><span><em>${a}</em> ${ico('swap','ic-in')} <em>${b}</em> <small>${Math.round(c)}×</small></span><button data-k="${k}">S'entraîner</button></div>`}).join('')}</div>`:'')+
-   `<details class="card lc"><summary><b>Sauvegarde</b></summary><div class="row"><button class="reset" id="pro-export">Copier</button><button class="reset" id="pro-import">Restaurer</button><button class="reset" id="pro-reset">Effacer</button></div></details>`;
+   `<div class="card lnk"><button class="lk" id="pro-set" type="button">${ico('reglages')}Réglages${ico('chev-r','lkc')}</button><button class="lk" id="pro-help" type="button">${ico('ampoule')}Comment ça marche${ico('chev-r','lkc')}</button></div>`;
   const sel=d=>{const x=days.find(y=>y.d===d);document.querySelectorAll('.hb').forEach(b=>b.setAttribute('aria-pressed',b.dataset.d===d));$('herb-detail').innerHTML='<b>'+new Date(d+'T12:00:00').toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'})+'</b> : '+(x.n?x.n+' exercice'+(x.n>1?'s':'')+' · '+x.ok+' juste'+(x.ok>1?'s':'')+' ('+x.r+' %)':'aucun exercice ce jour-là')};
   $('pro').querySelectorAll('.hb').forEach(b=>b.onclick=()=>sel(b.dataset.d));sel(days[13].d);
   $('pro').querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{const [a,c]=b.dataset.k.split('|');startReplay([a,c,a,c,a,c],a+' et '+c)});
   if($('pro-errs'))$('pro-errs').onclick=()=>startReplay(errs.slice(),'Mes erreurs du jour');
   if($('pro-review'))$('pro-review').onclick=()=>startReplay(wk.slice(0,10).map(x=>x.s[0]),'Plantes à revoir');
-  $('pro-export').onclick=async()=>{const s=JSON.stringify(st);try{await navigator.clipboard.writeText(s);toast('Sauvegarde copiée')}catch(e){prompt('Copie ce texte :',s)}};
-  $('pro-import').onclick=()=>{const s=prompt('Colle ta sauvegarde :');if(!s)return;try{const o=JSON.parse(s);if(!o.sp)throw 0;st=o;fix();save();pro();stats();toast('Progression restaurée')}catch(e){toast('Sauvegarde invalide')}};
-  $('pro-reset').onclick=()=>{if(confirm('Effacer toute la progression sur cet appareil ?')){st={sp:{},day:{},m:{}};fix();save();pro();stats()}};
+  $('pro-set').onclick=openSettings;$('pro-help').onclick=()=>$('help').click();
 }
-const GOAL=30,TB=['quiz','herb','pro'];
+// ===== Réglages (volet ouvert depuis Progrès ou en touchant l'anneau d'objectif) =====
+// Contrôle d'une sauvegarde avant de l'écrire : renvoie un message d'erreur, ou '' si elle est utilisable
+function checkBackup(o){
+  const obj=x=>x!==null&&typeof x==='object'&&!Array.isArray(x),num=x=>typeof x==='number'&&isFinite(x);
+  if(!obj(o))return "Ce texte n'est pas une sauvegarde de l'appli.";
+  if(!obj(o.sp))return 'Sauvegarde incomplète : la progression des plantes est absente.';
+  for(const[k,p]of Object.entries(o.sp)){
+    if(!obj(p)||!Number.isInteger(p.b)||p.b<0||p.b>6||!num(p.s)||p.s<0||!num(p.e)||p.e<0||(p.d!==undefined&&!num(p.d)))return 'Sauvegarde abîmée : données incorrectes pour « '+k.slice(0,40)+' ».';
+  }
+  if(o.hist!==undefined){if(!obj(o.hist))return "Sauvegarde abîmée : l'historique est illisible.";for(const h of Object.values(o.hist))if(!obj(h)||!num(h.n)||!num(h.ok))return "Sauvegarde abîmée : l'historique est illisible."}
+  for(const k of['m','cf','ho','fd','day','set'])if(o[k]!==undefined&&!obj(o[k]))return 'Sauvegarde abîmée : la rubrique « '+k+' » est illisible.';
+  if(o.tm!==undefined&&!(obj(o.tm)&&Array.isArray(o.tm.l)&&o.tm.l.every(x=>typeof x==='string')))return 'Sauvegarde abîmée : la liste des erreurs est illisible.';
+  if(o.ses!==undefined&&!Array.isArray(o.ses))return 'Sauvegarde abîmée : les séances sont illisibles.';
+  for(const k of['best','streak'])if(o[k]!==undefined&&!num(o[k]))return 'Sauvegarde abîmée : la valeur « '+k+' » est illisible.';
+  return '';
+}
+let setPanel='';
+function setHtml(){
+  const g=goal(),v=st.set.vib;
+  const pnl=setPanel==='save'?`<div class="stp"><p>Copie ta progression pour la garder ou la passer sur un autre appareil, ou colle une sauvegarde pour la restaurer.</p><div class="row"><button class="mini" id="set-copy" type="button">Copier</button><button class="mini" id="set-paste" type="button">Restaurer</button></div><div id="set-out"></div></div>`
+   :setPanel==='reset'?`<div class="stp"><p class="stm ko">Effacer toute la progression sur cet appareil ? Tes réglages sont conservés.</p><div class="row"><button class="mini" id="set-no" type="button">Annuler</button><button class="mini ko full" id="set-yes" type="button">Tout effacer</button></div></div>`:'';
+  return `<h3 class="stl">Objectif du jour</h3>
+<div class="str"><span><b id="set-gl">Exercices par jour</b></span><div class="seg" role="group" aria-labelledby="set-gl">${GOALS.map(n=>`<button type="button" data-g="${n}" aria-pressed="${n===g}">${n}</button>`).join('')}</div></div>
+<h3 class="stl">Confort</h3>
+<div class="str"><span><b id="set-vl">Vibration</b><small>Au bon et au mauvais choix</small></span><button class="sw" id="set-vib" type="button" role="switch" aria-checked="${v}" aria-labelledby="set-vl"></button></div>
+<h3 class="stl">Mes données</h3>
+<div class="str"><span><b>Sauvegarde</b><small>Copier ou restaurer ma progression</small></span><button class="mini" id="set-save" type="button" aria-expanded="${setPanel==='save'}">${setPanel==='save'?'Fermer':'Ouvrir'}</button></div>${setPanel==='save'?pnl:''}
+<div class="str"><span><b>Réinitialiser</b><small>Efface toute ma progression</small></span><button class="mini ko" id="set-reset" type="button" aria-expanded="${setPanel==='reset'}">Effacer</button></div>${setPanel==='reset'?pnl:''}`;
+}
+function setRender(focusId){
+  const b=$('set-b');b.innerHTML=setHtml();
+  b.querySelectorAll('[data-g]').forEach(x=>x.onclick=()=>{st.set.goal=+x.dataset.g;save();stats();if(!$('pro').hidden)pro();setRender('');b.querySelector('[data-g="'+x.dataset.g+'"]').focus()});
+  $('set-vib').onclick=()=>{st.set.vib=!st.set.vib;save();vib(15);setRender('set-vib')};
+  $('set-save').onclick=()=>{setPanel=setPanel==='save'?'':'save';setRender('set-save')};
+  $('set-reset').onclick=()=>{setPanel=setPanel==='reset'?'':'reset';setRender(setPanel?'set-no':'set-reset')};
+  if($('set-no'))$('set-no').onclick=()=>{setPanel='';setRender('set-reset')};
+  if($('set-yes'))$('set-yes').onclick=()=>{const keep=st.set;st={sp:{},day:{},m:{},set:keep};fix();save();setPanel='';stats();if(!$('pro').hidden)pro();restart();setRender('set-reset');toast('Progression effacée')};
+  if($('set-copy'))$('set-copy').onclick=async()=>{const s=JSON.stringify(st),o=$('set-out');try{await navigator.clipboard.writeText(s);o.innerHTML='<p class="stm ok">Sauvegarde copiée : colle-la dans une note ou un message.</p>'}catch(e){o.innerHTML='<p class="stm">Copie ce texte :</p><textarea readonly aria-label="Texte de la sauvegarde"></textarea>';const t=o.querySelector('textarea');t.value=s;t.focus();t.select()}};
+  if($('set-paste'))$('set-paste').onclick=()=>{const o=$('set-out');o.innerHTML='<textarea id="set-in" aria-label="Colle ta sauvegarde ici" placeholder="Colle ta sauvegarde ici"></textarea><p class="stm" id="set-msg" role="status"></p><button class="mini" id="set-go" type="button">Restaurer cette sauvegarde</button>';$('set-in').focus();
+    $('set-go').onclick=()=>{const m=$('set-msg'),t=$('set-in').value.trim();let o2;if(!t){m.className='stm ko';m.textContent='Colle d\'abord le texte de ta sauvegarde.';return}
+      try{o2=JSON.parse(t)}catch(e){m.className='stm ko';m.textContent='Ce texte n\'est pas une sauvegarde de l\'appli : il est incomplet ou modifié.';return}
+      const err=checkBackup(o2);if(err){m.className='stm ko';m.textContent=err+' Rien n\'a été modifié.';return}
+      if(!o2.set||typeof o2.set!=='object')o2.set=st.set;st=o2;streak=+st.streak||0;fix();save();setPanel='';stats();if(!$('pro').hidden)pro();restart();setRender('set-save');toast('Progression restaurée')}};
+  if(focusId&&$(focusId))$(focusId).focus();
+}
+function openSettings(){setPanel='';setRender('');const d=$('set');if(d.showModal){if(!d.open)d.showModal()}else d.setAttribute('open','');d.scrollTop=0;$('set-t').focus({preventScroll:true})}
+$('set-x').onclick=()=>$('set').close();
+$('set').onclick=e=>{if(e.target===$('set'))$('set').close()};
+$('ring').onclick=openSettings;
+$('ring').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openSettings()}};
+(()=>{let y0=0;const h=$('set').querySelector('.bsh');h.addEventListener('touchstart',e=>{y0=e.touches[0].clientY},{passive:true});h.addEventListener('touchend',e=>{if(e.changedTouches[0].clientY-y0>50)$('set').close()},{passive:true})})();
+const TB=['quiz','herb','pro'];
 // Famille du jour : une leçon par jour, puis un entraînement limité aux plantes de la famille
 /*@DATA:A généré par outils/export_donnees.py depuis base-donnees-plantes.xlsx ; ne pas modifier à la main*/
 const FW={};`Acanthaceae|4 000
@@ -2620,7 +2729,7 @@ try{if(!localStorage.getItem('qp.coach')&&seenN()===0){$('coach').hidden=false;$
 (()=>{const sp=$('splash');if(!sp)return;
   $('spe').innerHTML=rIcon(rk());
   for(let k=0;k<9;k++)sp.insertAdjacentHTML('beforeend','<i class="sf" style="left:'+(8+k*10)+'%;top:'+(52+k%4*9)+'%;width:'+(4+k%3*2)+'px;height:'+(4+k%3*2)+'px;animation-duration:'+(4+k%4)+'s;animation-delay:'+(k*.7)+'s"></i>');
-  const go=()=>{if(sp.classList.contains('go'))return;sp.classList.add('go');window.scrollTo(0,0);if(navigator.vibrate)navigator.vibrate(12);setTimeout(()=>sp.classList.add('out'),950);setTimeout(()=>sp.remove(),1500)};
+  const go=()=>{if(sp.classList.contains('go'))return;sp.classList.add('go');window.scrollTo(0,0);vib(12);setTimeout(()=>sp.classList.add('out'),950);setTimeout(()=>sp.remove(),1500)};
   sp.onclick=go;document.addEventListener('keydown',e=>{if(e.key==='Enter'&&document.getElementById('splash'))go()})})();
 
 // Hauteur réelle de l'en-tête : sert au calcul du cadre d'exercice (--fh) et au replacement automatique

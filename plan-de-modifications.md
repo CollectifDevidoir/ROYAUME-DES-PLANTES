@@ -1,6 +1,6 @@
 # Plan de modifications — Le royaume des plantes
 
-Document de pilotage. **Plan validé.** État : **étapes 1 et 2 terminées**, étapes 3 à 10 à faire.
+Document de pilotage. **Plan validé.** État : **étapes 1 à 4 terminées**, étapes 5 à 10 à faire.
 Chaque remarque de ta réponse à l'audit est rattachée à une tâche (section « Traçabilité » en bas) pour que rien ne se perde.
 
 ## Règles de travail
@@ -19,8 +19,8 @@ Chaque remarque de ta réponse à l'audit est rattachée à une tâche (section 
 |---|---|---|---|
 | 1 | Socle : bugs et allègement sans effet visible — **fait** | Petit | — |
 | 2 | Écran de jeu sur mobile : proportions, photo nette, zones tactiles — **fait** | Gros | 1 |
-| 3 | Analyse « Réglages / Comment ça marche » + jeu d'illustrations (fin des emoji) | Moyen | 2 |
-| 4 | Réglages, aide, frise des niveaux, objectif réglable | Moyen | 3 |
+| 3 | Analyse « Réglages / Comment ça marche » + jeu d'illustrations (fin des emoji) — **fait** | Moyen | 2 |
+| 4 | Réglages, aide, frise des niveaux, objectif réglable — **fait** | Moyen | 3 |
 | 5 | Progrès et Herbier | Petit | 4 |
 | 6 | Mémoire : ralentir légèrement les niveaux 1 à 3 | Petit, avec simulation | 4 |
 | 7 | Ordinateur et clavier | Gros | 2, 3 |
@@ -64,7 +64,9 @@ Contrôles ajoutés : `outils/controle_ecran_jeu.py` (24 cas), `outils/controle_
 
 ---
 
-## Étape 3 — Analyse « Réglages » + illustrations
+## Étape 3 — Analyse « Réglages » + illustrations — TERMINÉE
+
+Résultat : **option D retenue** (voir `analyse-reglages-aide.md`) : réglages en bas de Progrès et sur l'anneau d'objectif, « ? » inchangé. Icônes dessinées en place ; le dernier emoji (🌿, icône de l'onglet du navigateur) est remplacé par une feuille dessinée : plus aucun emoji dans le fichier.
 
 | ID | Tâche | Livrable |
 |---|---|---|
@@ -88,7 +90,18 @@ Emoji trouvés dans l'interface (inventaire fait) :
 
 ---
 
-## Étape 4 — Réglages et aide
+## Étape 4 — Réglages et aide — TERMINÉE
+
+Résultat :
+- **4.1 / 4.8** : volet « Réglages » présenté comme le volet de correction (poignée, marges, séparations fines), ouvert depuis la ligne « Réglages » en bas de Progrès ou en touchant l'anneau d'objectif (aussi au clavier : Entrée ou Espace). Fermeture par la croix, Échap, un toucher à côté ou un glissement vers le bas. Le « ? » ne bouge pas ; Progrès a une ligne « Comment ça marche » qui ouvre la même aide. Aucun élément ajouté sur l'écran de jeu ; deux gestes au plus pour atteindre un réglage.
+- **4.2** : objectif 20 / 30 / 40 / 60, **40 par défaut**. L'anneau (« / 40 »), la carte « Aujourd'hui », l'échelle de l'historique et la célébration lisent le réglage. Migration : une progression enregistrée sans réglage reçoit 40 et la vibration active, sans rien perdre. Les réglages sont dans la sauvegarde et survivent à la réinitialisation.
+- **4.3** : l'aide affichait « 50 plantes par jour » alors que le code comptait 30 ; elle lit maintenant l'objectif.
+- **4.4** : frise 1-2-3 apprentissage / 4 acquise / 5-6 entretien dans « Comment ça marche », lisible dès 320 px, avec trois lignes d'explication. Aucun niveau affiché en jeu.
+- **4.5** : vibration active par défaut, interrupteur mémorisé ; il s'applique aux trois vibrations de l'appli (réponse, célébration, écran d'accueil).
+- **4.6** : la carte « Sauvegarde » quitte Progrès. Dans le volet : « Sauvegarde » (Copier / Restaurer, dans le volet sans fenêtre du navigateur) et « Réinitialiser » avec confirmation dans le volet.
+- **4.7** : la restauration contrôle la forme des données (plantes, niveaux 0 à 6, compteurs, historique, listes) avant d'écrire ; un texte invalide est refusé avec un message précis et « Rien n'a été modifié ».
+
+Contrôle : `outils/controle_reglages.js` (26 vérifications dans Chromium, à 360×640 ; affichage vérifié à 320, 360 et 390 px, clair et sombre).
 
 | ID | Tâche | Critère de réussite |
 |---|---|---|
@@ -184,12 +197,12 @@ Emoji trouvés dans l'interface (inventaire fait) :
 |---|---|---|
 | U1 | À corriger | 2.1 |
 | U2 | À corriger | 2.6 |
-| U3 | À corriger | 4.4 |
+| U3 | À corriger — **fait** | 4.4 |
 | U4 | À corriger | 5.1 |
-| U5 | À corriger | 4.3 |
+| U5 | À corriger — **fait** | 4.3 |
 | U6 | Ne pas modifier | — |
 | U7 | Ne pas modifier | — |
-| U8 | À corriger (avec analyse) | 3.1, 4.1, 4.8 |
+| U8 | À corriger (avec analyse) — **fait, option D** | 3.1, 4.1, 4.8 |
 | U9 | À corriger — **fait** | 1.2 |
 | M1 | À corriger sans alourdir | 2.4 |
 | M2 | Textes importants seulement — **fait** | 2.5 |
@@ -197,7 +210,7 @@ Emoji trouvés dans l'interface (inventaire fait) :
 | M4 | OK, rien à faire | — |
 | M5 | Ne pas modifier | — |
 | M6 | À corriger | 2.3 |
-| M7 | À corriger | 4.5 |
+| M7 | À corriger — **fait** | 4.5 |
 | M8 | Plus tard | — |
 | M9 | À étudier puis corriger | 8.1 |
 | D1 | À développer | 7.1 |
@@ -206,11 +219,11 @@ Emoji trouvés dans l'interface (inventaire fait) :
 | D4 | À modifier | 7.4 |
 | D5 | À modifier | 7.5 |
 | Pédagogie 1 | À faire | 9.1 à 9.4 |
-| Mémoire 2 | À faire | 4.2 |
+| Mémoire 2 | À faire — **fait** | 4.2 |
 | Mémoire 3 | À faire | 6.1 |
-| Design 1 | À faire | 3.2, 3.3 |
+| Design 1 | À faire — **fait** | 3.2, 3.3 |
 | Design 2 | Aucune action | 3.4 |
-| Design 3 | À faire | 4.6 |
+| Design 3 | À faire — **fait** | 4.6 |
 | Herbier | À faire | 5.2 |
 | T1 | À modifier — **fait** | 1.1 |
 | T2 | OK : ne pas exporter, conserver au tableur — **fait** | 1.3 |
@@ -222,7 +235,7 @@ Emoji trouvés dans l'interface (inventaire fait) :
 | T8 | OK | 8.2 |
 | T9 | OK — **fait** | 1.4 |
 | T10 | OK | 10.3 |
-| T11 | OK | 4.7 |
+| T11 | OK — **fait** | 4.7 |
 | Charge mentale (données à fiabiliser et sourcer) | À faire | 9.5 |
 
 ### Sorties du plan
