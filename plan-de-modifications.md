@@ -227,7 +227,7 @@ Le 2e scénario est moins rapide qu'avant : l'ancienne version gardait la photo 
 
 ---
 
-## Étape 9 — Contenu botanique (long chantier, par lots) — LOT D'ESSAI FAIT, EN ATTENTE DE VALIDATION
+## Étape 9 — Contenu botanique (long chantier, par lots) — EN COURS (règles validées, lots de 30)
 
 **Périmètre retenu** : seulement ce que le jeu affiche et utilise, c'est-à-dire les **clés** (« Ce qu'il faut regarder », les 2 premières clés de l'espèce confondue, les points communs « On les confond : … »). Pas de travail encyclopédique (9.5 mis de côté).
 
@@ -240,6 +240,16 @@ Le 2e scénario est moins rapide qu'avant : l'ancienne version gardait la photo 
 6. Deux espèces proches n'ont pas de clé presque identique.
 
 **Sources** : Tela Botanica et Jardin ! l'Encyclopédie, lues via leurs pages indexées (l'accès direct aux deux sites est bloqué dans l'environnement de travail). Chaque clé revue est listée avec ses liens dans `donnees/cles-revues.csv` (à reporter dans le tableur, colonnes « Clés » et « Sources des clés »). Deux affirmations douteuses d'une source ont été écartées (érable argenté « à feuilles alternes »).
+
+**Avancement** :
+
+| Lot | Espèces | État |
+|---|---|---|
+| Essai | 10 érables | fait, validé |
+| 1 | 6 érables restants, 15 chênes, 9 Prunus (avium, laurocerasus, cerasifera, padus, serrulata, × yedoensis, dulcis, spinosa, lusitanica) | fait, à valider |
+| 2 | 6 Prunus restants, puis Pinus (11), Viburnum, Cornus… | à faire |
+
+Total revu : 40 espèces sur 663. Quand les deux sources prioritaires ne donnaient pas assez de caractères visibles (5 chênes exotiques, cerisier de Yoshino), d'autres sources ont été utilisées ; elles sont citées dans le .csv. Outil : `outils/cles_vers_appli.py` (vérifie les règles et recopie le .csv dans l'appli).
 
 **Lot d'essai** : 10 érables (campestre, platanoides, pseudoplatanus, opalus, monspessulanum, negundo, saccharinum, rubrum, palmatum, cappadocicum), intégrés dans l'appli (bloc « Étape 9 » après les données, prioritaire sur les anciennes clés).
 
