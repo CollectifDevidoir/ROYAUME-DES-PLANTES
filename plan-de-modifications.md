@@ -258,11 +258,11 @@ Le 2e scénario est moins rapide qu'avant : l'ancienne version gardait la photo 
 | 10 | 13 derniers genres de 2 (luzules, pennisetums, bambous, seslérias, nerpruns, lysimaques, onagres, tsugas, genêts, filaires, pistachiers, primevères, tanaisies), les 17 grimpantes restantes, 7 conifères et ginkgo — 50 espèces | fait, validé |
 | 11 | genres d'une espèce : les 47 arbres restants (dont palmiers et 4 conifères), plus buis, laurier-sauce, laurier-rose — 50 espèces | fait, validé |
 | 12 | les 59 arbustes restants (genres d'une espèce) | fait, validé |
-| 13 | les 32 graminées restantes et 18 vivaces (acanthe à boule azurée) — 50 espèces | fait, à valider |
-| 14 | vivaces suivantes (50) | à faire |
+| 13 | les 32 graminées restantes et 18 vivaces (acanthe à boule azurée) — 50 espèces | fait, validé |
+| 14 | 50 vivaces (fleur des elfes à trolle, dont 3 fougères) | fait, à valider |
 | 15 | dernières vivaces (73) | à faire |
 
-Total revu : 540 espèces sur 663. Quand les deux sources prioritaires ne donnaient pas assez de caractères visibles (5 chênes exotiques, cerisier de Yoshino, orme de Sibérie, sapin du Colorado ; houx crénelé : fiche du genre seulement ; catalpa de l'Ouest, lilas du Japon ; schisandra, séquoia géant, pacanier, ptérocaryer, phellodendron, sassafras, stéphanandra : sources scientifiques ; 3 graminées de prairie américaine : guides d'universités et de l'USDA), d'autres sources ont été utilisées ; elles sont citées dans le .csv. Outil : `outils/cles_vers_appli.py` (vérifie les règles et recopie le .csv dans l'appli).
+Total revu : 590 espèces sur 663. Quand les deux sources prioritaires ne donnaient pas assez de caractères visibles (5 chênes exotiques, cerisier de Yoshino, orme de Sibérie, sapin du Colorado ; houx crénelé : fiche du genre seulement ; catalpa de l'Ouest, lilas du Japon ; schisandra, séquoia géant, pacanier, ptérocaryer, phellodendron, sassafras, stéphanandra : sources scientifiques ; 3 graminées de prairie américaine : guides d'universités et de l'USDA), d'autres sources ont été utilisées ; elles sont citées dans le .csv. Outil : `outils/cles_vers_appli.py` (vérifie les règles et recopie le .csv dans l'appli).
 
 **Lot d'essai** : 10 érables (campestre, platanoides, pseudoplatanus, opalus, monspessulanum, negundo, saccharinum, rubrum, palmatum, cappadocicum), intégrés dans l'appli (bloc « Étape 9 » après les données, prioritaire sur les anciennes clés).
 
