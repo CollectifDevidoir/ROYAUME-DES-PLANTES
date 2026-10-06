@@ -246,10 +246,11 @@ Le 2e scénario est moins rapide qu'avant : l'ancienne version gardait la photo 
 | Lot | Espèces | État |
 |---|---|---|
 | Essai | 10 érables | fait, validé |
-| 1 | 6 érables restants, 15 chênes, 9 Prunus (avium, laurocerasus, cerasifera, padus, serrulata, × yedoensis, dulcis, spinosa, lusitanica) | fait, à valider |
-| 2 | 6 Prunus restants, puis Pinus (11), Viburnum, Cornus… | à faire |
+| 1 | 6 érables restants, 15 chênes, 9 Prunus (avium, laurocerasus, cerasifera, padus, serrulata, × yedoensis, dulcis, spinosa, lusitanica) | fait, validé |
+| 2 | 6 Prunus restants, 11 pins, 8 viornes, 7 cornouillers (32 : genre Cornus complet) | fait, à valider |
+| 3 | Lonicera (7), Rosa (7), Populus (6), Hydrangea (6), Clematis (6)… | à faire |
 
-Total revu : 40 espèces sur 663. Quand les deux sources prioritaires ne donnaient pas assez de caractères visibles (5 chênes exotiques, cerisier de Yoshino), d'autres sources ont été utilisées ; elles sont citées dans le .csv. Outil : `outils/cles_vers_appli.py` (vérifie les règles et recopie le .csv dans l'appli).
+Total revu : 72 espèces sur 663. Quand les deux sources prioritaires ne donnaient pas assez de caractères visibles (5 chênes exotiques, cerisier de Yoshino), d'autres sources ont été utilisées ; elles sont citées dans le .csv. Outil : `outils/cles_vers_appli.py` (vérifie les règles et recopie le .csv dans l'appli).
 
 **Lot d'essai** : 10 érables (campestre, platanoides, pseudoplatanus, opalus, monspessulanum, negundo, saccharinum, rubrum, palmatum, cappadocicum), intégrés dans l'appli (bloc « Étape 9 » après les données, prioritaire sur les anciennes clés).
 
