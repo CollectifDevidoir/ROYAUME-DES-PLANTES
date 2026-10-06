@@ -1,6 +1,6 @@
 # Plan de modifications — Le royaume des plantes
 
-Document de pilotage. **Plan validé.** État : **étapes 1 et 2 terminées** (sauf 2.5, en attente de ta validation de la liste), étapes 3 à 10 à faire.
+Document de pilotage. **Plan validé.** État : **étapes 1 et 2 terminées**, étapes 3 à 10 à faire.
 Chaque remarque de ta réponse à l'audit est rattachée à une tâche (section « Traçabilité » en bas) pour que rien ne se perde.
 
 ## Règles de travail
@@ -18,7 +18,7 @@ Chaque remarque de ta réponse à l'audit est rattachée à une tâche (section 
 | Étape | Contenu | Poids | Dépend de |
 |---|---|---|---|
 | 1 | Socle : bugs et allègement sans effet visible — **fait** | Petit | — |
-| 2 | Écran de jeu sur mobile : proportions, photo nette, zones tactiles — **fait, sauf 2.5** | Gros | 1 |
+| 2 | Écran de jeu sur mobile : proportions, photo nette, zones tactiles — **fait** | Gros | 1 |
 | 3 | Analyse « Réglages / Comment ça marche » + jeu d'illustrations (fin des emoji) | Moyen | 2 |
 | 4 | Réglages, aide, frise des niveaux, objectif réglable | Moyen | 3 |
 | 5 | Progrès et Herbier | Petit | 4 |
@@ -47,7 +47,7 @@ Remarques : les anciennes simulations n° 4 et 5 appelaient une fonction supprim
 
 ---
 
-## Étape 2 — Écran de jeu sur mobile — TERMINÉE (sauf 2.5)
+## Étape 2 — Écran de jeu sur mobile — TERMINÉE
 
 | ID | Tâche | Résultat |
 |---|---|---|
@@ -55,7 +55,7 @@ Remarques : les anciennes simulations n° 4 et 5 appelaient une fonction supprim
 | 2.2 | **M3** : photo + 4 options sans défilement sur 640 px. | Vérifié à 360×640 et 375×667 : photo à 38 % de la hauteur, 4 réponses entièrement visibles au-dessus de la barre d'onglets. |
 | 2.3 | **M6** : adaptations d'écran. | Écrans courts (< 700 px de haut) : en-tête et onglets compacts (la ligne « encore N pour devenir… » est masquée) ; paysage téléphone : photo à gauche, réponses à droite ; tablette : le reste de l'espace va entre la photo et la question ; marges d'encoche (zones de sécurité) prises en compte. |
 | 2.4 | **M1** : zones tactiles de 44 px sans alourdir. | Zone réactive agrandie par marges invisibles, dessin inchangé : 97 zones mesurées, toutes ≥ 44 px. Exception : les 14 barres de régularité (22 px de large, U6 non modifié). |
-| 2.5 | **M2** : textes importants à 12 px. | **En attente de ta validation de la liste** (voir message de livraison). |
+| 2.5 | **M2** : textes importants à 12 px. | Liste validée, 8 textes passés à 12 px : catégories, onglets, noms de l'Herbier, valeurs des conditions de culture, « encore N pour devenir… », « N acquises », « toutes les plantes mélangées », ligne de famille de la correction. Correction : la ligne de famille (`<small class="fm">`) restait à 11,5 px, car `small.fm` l'emportait sur `.fm`. Exception voulue : sous 360 px de large, les catégories passent à 11,5 px pour tenir sur une ligne. |
 | 2.6 | **U2** : photo nette en correction. | Le voile est percé autour de la photo (ou de la grille des 4 photos) ; le glissement des photos fonctionne ; le voile redevient entier quand une fiche s'ouvre. |
 
 Correction faite en passant : l'en-tête collant dépassait de 2 px de chaque côté (c'était mon élargissement de l'étape UX précédente), ce qui rendait la page défilable de quelques pixels en largeur. Il est maintenant exactement pleine largeur.
@@ -192,7 +192,7 @@ Emoji trouvés dans l'interface (inventaire fait) :
 | U8 | À corriger (avec analyse) | 3.1, 4.1, 4.8 |
 | U9 | À corriger — **fait** | 1.2 |
 | M1 | À corriger sans alourdir | 2.4 |
-| M2 | Textes importants seulement | 2.5 |
+| M2 | Textes importants seulement — **fait** | 2.5 |
 | M3 | À corriger | 2.2 |
 | M4 | OK, rien à faire | — |
 | M5 | Ne pas modifier | — |
