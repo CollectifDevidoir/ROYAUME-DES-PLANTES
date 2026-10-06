@@ -14,8 +14,12 @@ ok(await p.textContent('#gt')==='/ 40','anneau : objectif 40 par défaut');
 await p.click('#ring');await p.waitForTimeout(400);
 ok(await p.evaluate(()=>$('set').open),"toucher l'anneau ouvre les réglages");
 
-ok((await p.$$eval('#set [data-g]',b=>b.map(x=>x.dataset.g).join(',')))==='10,20,30,40,50,60,70,80,90,100','objectifs proposés : 10 à 100');
-await p.click('[data-g="20"]');
+ok(await p.evaluate(()=>{const r=$('set-g');return r.type==='range'&&r.min==='10'&&r.max==='100'&&r.step==='10'&&r.value==='40'}),'objectif : curseur de 10 à 100 par dizaine, sur 40');
+ok((await p.$$eval('.tks span',b=>b.map(x=>x.textContent).join(',')))==='10,20,30,40,50,60,70,80,90,100','frise graduée de 10 à 100');
+await p.focus('#set-g');await p.keyboard.press('ArrowRight');
+ok((await p.textContent('#gt'))==='/ 50'&&(await p.textContent('#set-gv'))==='50','flèche droite : 50 (anneau et valeur affichée suivent)');
+const bx=await p.$eval('#set-g',e=>{const r=e.getBoundingClientRect();return [r.left,r.width,r.top+r.height/2]});
+await p.mouse.click(bx[0]+14+(bx[1]-28)*(10/90),bx[2]);await p.waitForTimeout(100);
 ok(await p.textContent('#gt')==='/ 20','objectif 20 : anneau mis à jour');
 ok(await p.evaluate(()=>JSON.parse(localStorage.getItem('quizplantes.v1')).set.goal)===20,'objectif mémorisé');
 await p.click('#set-vib');

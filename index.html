@@ -924,6 +924,31 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
 /* 7.5 : focus visible partout */
 .pk[data-l]:focus-visible,.lr:focus-visible,.gal img:focus-visible,.car:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
 .opts>button:focus-visible,#shn:focus-visible,.more:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
+
+/* ===== Réglages : objectif en frise à curseur ===== */
+.str.stg{flex-direction:row;align-items:center;gap:12px;padding-bottom:4px;border-bottom:0}
+.sgv{font:700 1.5rem Georgia,serif;color:var(--ac);min-width:2.2em;text-align:right}
+.sld{--sp:.33;position:relative;padding:4px 0 26px;border-bottom:1px solid var(--bd);margin-bottom:0}
+.sld input{-webkit-appearance:none;appearance:none;display:block;width:100%;height:44px;margin:0;border:0;border-radius:99px;cursor:pointer;background:linear-gradient(to right,var(--ac) 0,var(--ac) calc(14px + var(--sp)*(100% - 28px)),var(--bd) calc(14px + var(--sp)*(100% - 28px)),var(--bd) 100%) center/100% 8px no-repeat}
+.sld input::-webkit-slider-runnable-track{height:8px;background:transparent}
+.sld input::-moz-range-track{height:8px;background:transparent}
+.sld input::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;margin-top:-10px;border-radius:50%;background:var(--ac);border:3px solid var(--card);box-shadow:0 2px 6px rgba(10,40,20,.35)}
+.sld input::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--ac);border:3px solid var(--card);box-shadow:0 2px 6px rgba(10,40,20,.35)}
+.sld input:focus-visible{outline:3px solid var(--ac2);outline-offset:2px;border-radius:12px}
+.tks{position:absolute;left:14px;right:14px;bottom:4px;height:18px;pointer-events:none}
+.tks span{position:absolute;left:calc(var(--i)*100%);transform:translateX(-50%);font:600 12px system-ui;color:var(--mu)}
+.tks span::before{content:'';position:absolute;left:50%;top:-9px;width:2px;height:5px;margin-left:-1px;border-radius:1px;background:var(--bd)}
+.tks span.on{color:var(--ac);font-weight:800}
+/* ===== Écriture : bouton d'indice sur la ligne de saisie ===== */
+#q-form #q-input{order:1}
+#q-form .jk{order:2;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;gap:3px;min-width:54px;min-height:44px;margin:0;padding:0 9px;border:1.5px solid var(--bd);border-radius:12px;background:var(--card);color:var(--fg);font:700 .9rem system-ui}
+#q-form .jk .tgi{width:22px;height:22px}
+#q-form .jk .jkn{font:700 .85rem system-ui;color:var(--mu)}
+#q-form .jk.usd{border-color:var(--ac);background:rgba(47,107,63,.1)}
+#q-form .jk:disabled{opacity:.55}
+#q-form .jk.usd:disabled{opacity:1}
+#q-form>button:not(.jk){order:3}
+#q-form .tyq{order:4}
 </style>
 </head>
 <body>
@@ -2164,7 +2189,7 @@ const jkS=()=>{const d=today();if(!st.jk||st.jk.d!==d)st.jk={d,n:0};return st.jk
 let hintKey='';
 function jokerUI(){const b=$('jk');if(!b)return;const left=()=>5-jkS().n,key=()=>cur[0]+'#'+nxt,used=()=>hintKey===key();
   const lab=()=>{const w=cur[0].split(' ').filter(x=>x!=='×');return w[0][0]+'… '+(w[1]||'?')[0]+'…'};
-  const paint=()=>{b.innerHTML='<span class="jkp"><span class="tgi">'+HINT+'</span>'+(used()?'Indice utilisé':'Indice')+' <small>'+(used()?'reste '+left()+'/5':left()+'/5')+'</small></span>';b.disabled=used()||left()<=0||done};
+  const paint=()=>{const t=used()?'Indice utilisé, encore '+left()+' sur 5 aujourd\'hui':left()>0?'Indice : '+left()+' sur 5 aujourd\'hui':'Plus d\'indice aujourd\'hui';b.innerHTML='<span class="tgi">'+HINT+'</span><b class="jkn">'+left()+'</b>';b.setAttribute('aria-label',t);b.title=t;b.classList.toggle('usd',used());b.disabled=used()||left()<=0||done};
   const showH=()=>{const f=$('q-form');if(!f)return;let h=$('q-hint');if(!h){h=document.createElement('span');h.id='q-hint';f.prepend(h)}h.textContent='Indice · '+lab();if($('q-input'))$('q-input').placeholder=lab()};
   paint();if(used())showH();
   b.onclick=()=>{if(done||used()||left()<=0)return;hintKey=key();jkS().n++;save();showH();paint()}}
@@ -2539,7 +2564,8 @@ function setHtml(){
   const pnl=setPanel==='save'?`<div class="stp"><p>Copie ta progression pour la garder ou la passer sur un autre appareil, ou colle une sauvegarde pour la restaurer.</p><div class="row"><button class="mini" id="set-copy" type="button">Copier</button><button class="mini" id="set-paste" type="button">Restaurer</button></div><div id="set-out"></div></div>`
    :setPanel==='reset'?`<div class="stp"><p class="stm ko">Effacer toute la progression sur cet appareil ? Tes réglages sont conservés.</p><div class="row"><button class="mini" id="set-no" type="button">Annuler</button><button class="mini ko full" id="set-yes" type="button">Tout effacer</button></div></div>`:'';
   return `<h3 class="stl">Objectif du jour</h3>
-<div class="str stg"><span><b id="set-gl">Exercices par jour</b></span><div class="seg" role="group" aria-labelledby="set-gl">${GOALS.map(n=>`<button type="button" data-g="${n}" aria-pressed="${n===g}">${n}</button>`).join('')}</div></div>
+<div class="str stg"><span><b id="set-gl">Exercices par jour</b></span><output class="sgv" id="set-gv" for="set-g">${g}</output></div>
+<div class="sld" style="--sp:${(g-GOALS[0])/(GOALS[GOALS.length-1]-GOALS[0])}"><input type="range" id="set-g" min="${GOALS[0]}" max="${GOALS[GOALS.length-1]}" step="10" value="${g}" aria-labelledby="set-gl" aria-valuetext="${g} exercices par jour"><div class="tks" aria-hidden="true">${GOALS.map((n,i)=>`<span style="--i:${i/(GOALS.length-1)}"${n===g?' class="on"':''}>${n}</span>`).join('')}</div></div>
 <h3 class="stl">Confort</h3>
 <div class="str"><span><b id="set-vl">Vibration</b><small>Au bon et au mauvais choix</small></span><button class="sw" id="set-vib" type="button" role="switch" aria-checked="${v}" aria-labelledby="set-vl"></button></div>
 <h3 class="stl">Mes données</h3>
@@ -2548,7 +2574,8 @@ function setHtml(){
 }
 function setRender(focusId){
   const b=$('set-b');b.innerHTML=setHtml();
-  b.querySelectorAll('[data-g]').forEach(x=>x.onclick=()=>{st.set.goal=+x.dataset.g;save();stats();if(!$('pro').hidden)pro();setRender('');b.querySelector('[data-g="'+x.dataset.g+'"]').focus()});
+  {const r=$('set-g'),sl=b.querySelector('.sld'),upd=()=>{const v=+r.value;st.set.goal=v;$('set-gv').textContent=v;r.setAttribute('aria-valuetext',v+' exercices par jour');sl.style.setProperty('--sp',(v-GOALS[0])/(GOALS[GOALS.length-1]-GOALS[0]));sl.querySelectorAll('.tks span').forEach(t=>t.classList.toggle('on',+t.textContent===v));stats()};
+   r.oninput=upd;r.onchange=()=>{upd();save();if(!$('pro').hidden)pro()}}
   $('set-vib').onclick=()=>{st.set.vib=!st.set.vib;save();vib(15);setRender('set-vib')};
   $('set-save').onclick=()=>{setPanel=setPanel==='save'?'':'save';setRender('set-save')};
   $('set-reset').onclick=()=>{setPanel=setPanel==='reset'?'':'reset';setRender(setPanel?'set-no':'set-reset')};

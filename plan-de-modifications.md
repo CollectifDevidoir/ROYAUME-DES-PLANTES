@@ -189,6 +189,15 @@ Contrôle : `outils/controle_clavier_ordi.js` (22 vérifications à 1366×800, p
 
 ---
 
+## Retouches avant l'étape 8 — FAITES
+
+- **Objectif quotidien** : les 10 boutons sont remplacés par une frise graduée de 10 à 100 avec un curseur qui avance par dizaine (glisser, toucher une graduation, ou flèches du clavier). La valeur s'affiche à droite de « Exercices par jour » ; l'anneau suit en direct, l'objectif est enregistré au relâchement.
+- **Indice (écriture)** : devient un bouton compact (loupe + nombre d'indices restants) sur la ligne de saisie, entre la barre de texte et « Valider ». Libellé complet pour les lecteurs d'écran et au survol (« Indice : 5 sur 5 aujourd'hui »).
+
+Contrôle des réglages mis à jour (30 vérifications) ; autres contrôles relancés sans régression.
+
+---
+
 ## Étape 8 — Photos : file d'attente et cache
 
 | ID | Tâche | Critère de réussite |
