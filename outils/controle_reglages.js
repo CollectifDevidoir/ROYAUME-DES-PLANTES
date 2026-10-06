@@ -14,6 +14,7 @@ ok(await p.textContent('#gt')==='/ 40','anneau : objectif 40 par défaut');
 await p.click('#ring');await p.waitForTimeout(400);
 ok(await p.evaluate(()=>$('set').open),"toucher l'anneau ouvre les réglages");
 
+ok((await p.$$eval('#set [data-g]',b=>b.map(x=>x.dataset.g).join(',')))==='10,20,30,40,50,60,70,80,90,100','objectifs proposés : 10 à 100');
 await p.click('[data-g="20"]');
 ok(await p.textContent('#gt')==='/ 20','objectif 20 : anneau mis à jour');
 ok(await p.evaluate(()=>JSON.parse(localStorage.getItem('quizplantes.v1')).set.goal)===20,'objectif mémorisé');
@@ -32,7 +33,8 @@ await p.click('.tabs button[data-t=pro]');await p.waitForTimeout(400);
 ok(!(await p.$('#pro-export'))&&!(await p.$('#pro-reset')),'Progrès : plus de carte Sauvegarde ni de bouton Effacer');
 ok((await p.textContent('#pro')).includes('/ 20 exercices'),'Progrès : objectif lu');
 await p.evaluate(()=>document.getElementById('pro-set').scrollIntoView());
-await p.click('#pro-help');await p.waitForTimeout(200);ok(await p.evaluate(()=>$('dlg').open),'Progrès > Comment ça marche ouvre l\'aide');await p.click('#dx');
+ok(!(await p.$('#pro-help'))&&!(await p.textContent('#pro')).includes('Comment ça marche'),'Progrès : plus de ligne « Comment ça marche »');
+ok(!(await p.textContent('#pro')).includes('Collection'),'Progrès : plus de carte Collection');
 await p.click('#pro-set');await p.waitForTimeout(300);ok(await p.evaluate(()=>$('set').open),'Progrès > Réglages ouvre le volet');
 // donner un peu de progression
 await p.evaluate(()=>{st.sp['Acer campestre']={b:4,s:5,e:1,d:0};save();stats()});

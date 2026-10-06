@@ -846,6 +846,9 @@ dialog.bs[open]{animation:bsUp .28s cubic-bezier(.2,.8,.2,1)}
 .sw[aria-checked="true"]{background:var(--ac)}
 .sw[aria-checked="true"]::before{transform:translateX(22px)}
 .bs .mini{flex:none}
+.str.stg{flex-direction:column;align-items:stretch;gap:10px}
+.stg .seg{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.stg .seg button{min-width:0;padding:0}
 .bs .mini.ko{border-color:var(--ko);color:var(--ko)}
 .bs .mini.ko.full{background:var(--ko);color:var(--card)}
 .stp{padding:0 0 12px;border-bottom:1px solid var(--bd)}
@@ -1918,7 +1921,7 @@ Verbenaceae|Verbénacées|Épis de petites fleurs à 5 lobes sur tige carrée (V
 Violaceae|Violacées|Fleur à pétale inférieur éperonné et feuilles en cœur.|En cœur ou en rein, stipulées.|5 pétales dont le pétale inférieur porte un éperon.|Capsule à 3 valves, graines dispersées par les fourmis.|Géraniacées : violettes à fleur éperonnée.
 Vitaceae|Vitacées|Vrilles opposées aux feuilles et petites fleurs vertes en grappes.|Alternes, lobées ou composées.|Minuscules, verdâtres, pétales soudés en capuchon qui tombe.|Baie.|Cucurbitacées : vrilles opposées chez la vigne.`.split('\n').forEach(l=>{const a=l.split('|');FI[a[0]]=a.slice(1)});
 /*@END:FI*/
-const K='quizplantes.v1',INT=[0,0,0,0,864e5,2592e5,6048e5],GOALS=[20,30,40,60];
+const K='quizplantes.v1',INT=[0,0,0,0,864e5,2592e5,6048e5],GOALS=[10,20,30,40,50,60,70,80,90,100];
 let st={sp:{},day:{},m:{}};
 try{st=JSON.parse(localStorage.getItem(K))||st}catch(e){}
 const fix=()=>{st.m=st.m||{};st.hist=st.hist||{};st.cf=st.cf||{};st.ses=st.ses||[];st.best=st.best||0;st.tm=st.tm||{d:'',l:[]};st.ho=st.ho||{};st.fd=st.fd||{};st.set=st.set&&typeof st.set==='object'?st.set:{};if(!GOALS.includes(st.set.goal))st.set.goal=40;if(typeof st.set.vib!=='boolean')st.set.vib=true;Object.values(st.sp||{}).forEach(p=>{if(p.b<=3&&p.d>Date.now())p.d=0;else if(p.b>=4&&p.d>Date.now()+INT[p.b])p.d=Date.now()+INT[p.b]})};fix();
@@ -2455,7 +2458,7 @@ function herb(){
   const own=s=>(st.sp[s[0]]||{b:0}).b>=4,sn=s=>!!st.sp[s[0]];
   const tile=(s,c)=>{const u=thumb(s[0]);return `<div class="pk ${c}" data-l="${s[0]}" title="${s[0]}">${u?`<img src="${u}" referrerpolicy="no-referrer" loading="lazy" alt="">`:''}<b>${s[1]}</b></div>`};
   $('herb').innerHTML=Object.keys(T).filter(k=>k!=='tout').map(k=>{
-    const a=S.filter(s=>s[2]===k),got=a.filter(own),pr=a.filter(s=>sn(s)&&!own(s)),left=a.length-got.length-pr.length;
+    const lat=(x,y)=>x[0].localeCompare(y[0],'fr'),a=S.filter(s=>s[2]===k),got=a.filter(own).sort(lat),pr=a.filter(s=>sn(s)&&!own(s)).sort(lat),left=a.length-got.length-pr.length;
     return `<details class="card hc" data-k="${k}"${st.ho[k]?' open':''}><summary><span class="hi">${catIcon(k)}</span><span class="hm"><b>${T[k]}</b><span class="bar"><i style="width:${100*got.length/a.length}%"></i></span></span><span class="hn">${got.length}<small>/${a.length}</small></span></summary><div class="pkg">${got.map(s=>tile(s,'ok')).join('')}${pr.map(s=>tile(s,'pr')).join('')}${left?`<div class="pkn">+ ${left} à découvrir</div>`:''}</div></details>`}).join('');
   const load=d=>[...d.querySelectorAll('.pk[data-l]')].filter(e=>!e.querySelector('img')).slice(0,24).forEach(async e=>{const s=S.find(x=>x[0]===e.dataset.l),im=s&&await getImg(s);if(im&&!e.querySelector('img')){const i=new Image();i.referrerPolicy='no-referrer';i.src=im.src;e.prepend(i)}});
   $('herb').querySelectorAll('.hc').forEach(d=>d.addEventListener('toggle',()=>{st.ho[d.dataset.k]=d.open;save();if(d.open)load(d)}));
@@ -2469,20 +2472,18 @@ function pro(){
   const wk=S.filter(s=>{const p=st.sp[s[0]];return p&&p.e>0&&p.b<4}).map(s=>({s,r:Math.round(100*rate(st.sp[s[0]]))})).sort((a,b)=>a.r-b.r);
   const row=x=>`<div class="lr" data-sp="${x.s[0]}"><span><em>${x.s[0]}</em><small>${x.s[1]}</small></span><b class="${x.r<60?'lo':''}">${x.r} %</b></div>`;
   const cf=Object.entries(st.cf).filter(x=>x[1]>=1).sort((a,b)=>b[1]-a[1]).slice(0,3);
-  const cats=Object.keys(T).filter(k=>k!=='tout').map(k=>{const a=S.filter(s=>s[2]===k),g=a.filter(s=>(st.sp[s[0]]||{b:0}).b>=4).length;return `<div class="pc"><span>${T[k]}</span><span class="bar"><i style="width:${100*g/a.length}%"></i></span><b>${g}/${a.length}</b></div>`}).join('');
   $('pro').innerHTML=
    `<div class="card"><h3 class="hh">Aujourd'hui</h3><p class="big2"><b>${hT.n}</b> / ${goal()} exercices</p><span class="bar"><i style="width:${Math.min(100,100*hT.n/goal())}%"></i></span>${errs.length?`<button class="big" id="pro-errs"><span class="tgi">${TARGET}</span>Rejouer mes erreurs du jour (${errs.length})</button>`:''}</div>`+
    `<div class="card"><h3 class="hh">Régularité</h3><div class="kp"><div><b>${n?Math.round(100*ok/n):0} %</b>réussite</div><div><b>${st.best}</b>meilleure série</div></div><div class="hist">${days.map(x=>`<button type="button" class="hb" data-d="${x.d}" aria-pressed="false" aria-label="${x.d} : ${x.n} exercices"><i style="height:${Math.min(100,x.n*100/mxd)}%;background:${x.n?`hsl(${Math.round(x.r*1.25)},72%,${x.r<50?'46%':'40%'})`:'#d9e0d3'};opacity:${x.n?1:.3}"></i></button>`).join('')}</div><p class="hd" id="herb-detail"></p></div>`+
-   `<div class="card"><h3 class="hh">Collection</h3>${cats}</div>`+
    `<div class="card"><h3 class="hh">À revoir</h3>${wk.length?wk.slice(0,5).map(row).join('')+(wk.length>5?`<p class="na">+ ${wk.length-5} autres dans ta liste</p>`:'')+'<button class="big" id="pro-review">S\'entraîner sur ces plantes</button>':'<p class="na">Rien à revoir pour l\'instant, continue !</p>'}</div>`+
    (cf.length?`<div class="card"><h3 class="hh">Confusions</h3>${cf.map(([k,c])=>{const [a,b]=k.split('|');return `<div class="cfr"><span><em>${a}</em> ${ico('swap','ic-in')} <em>${b}</em> <small>${Math.round(c)}×</small></span><button data-k="${k}">S'entraîner</button></div>`}).join('')}</div>`:'')+
-   `<div class="card lnk"><button class="lk" id="pro-set" type="button">${ico('reglages')}Réglages${ico('chev-r','lkc')}</button><button class="lk" id="pro-help" type="button">${ico('ampoule')}Comment ça marche${ico('chev-r','lkc')}</button></div>`;
+   `<div class="card lnk"><button class="lk" id="pro-set" type="button">${ico('reglages')}Réglages${ico('chev-r','lkc')}</button></div>`;
   const sel=d=>{const x=days.find(y=>y.d===d);document.querySelectorAll('.hb').forEach(b=>b.setAttribute('aria-pressed',b.dataset.d===d));$('herb-detail').innerHTML='<b>'+new Date(d+'T12:00:00').toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'})+'</b> : '+(x.n?x.n+' exercice'+(x.n>1?'s':'')+' · '+x.ok+' juste'+(x.ok>1?'s':'')+' ('+x.r+' %)':'aucun exercice ce jour-là')};
   $('pro').querySelectorAll('.hb').forEach(b=>b.onclick=()=>sel(b.dataset.d));sel(days[13].d);
   $('pro').querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{const [a,c]=b.dataset.k.split('|');startReplay([a,c,a,c,a,c],a+' et '+c)});
   if($('pro-errs'))$('pro-errs').onclick=()=>startReplay(errs.slice(),'Mes erreurs du jour');
   if($('pro-review'))$('pro-review').onclick=()=>startReplay(wk.slice(0,10).map(x=>x.s[0]),'Plantes à revoir');
-  $('pro-set').onclick=openSettings;$('pro-help').onclick=()=>$('help').click();
+  $('pro-set').onclick=openSettings;
 }
 // ===== Réglages (volet ouvert depuis Progrès ou en touchant l'anneau d'objectif) =====
 // Contrôle d'une sauvegarde avant de l'écrire : renvoie un message d'erreur, ou '' si elle est utilisable
@@ -2506,7 +2507,7 @@ function setHtml(){
   const pnl=setPanel==='save'?`<div class="stp"><p>Copie ta progression pour la garder ou la passer sur un autre appareil, ou colle une sauvegarde pour la restaurer.</p><div class="row"><button class="mini" id="set-copy" type="button">Copier</button><button class="mini" id="set-paste" type="button">Restaurer</button></div><div id="set-out"></div></div>`
    :setPanel==='reset'?`<div class="stp"><p class="stm ko">Effacer toute la progression sur cet appareil ? Tes réglages sont conservés.</p><div class="row"><button class="mini" id="set-no" type="button">Annuler</button><button class="mini ko full" id="set-yes" type="button">Tout effacer</button></div></div>`:'';
   return `<h3 class="stl">Objectif du jour</h3>
-<div class="str"><span><b id="set-gl">Exercices par jour</b></span><div class="seg" role="group" aria-labelledby="set-gl">${GOALS.map(n=>`<button type="button" data-g="${n}" aria-pressed="${n===g}">${n}</button>`).join('')}</div></div>
+<div class="str stg"><span><b id="set-gl">Exercices par jour</b></span><div class="seg" role="group" aria-labelledby="set-gl">${GOALS.map(n=>`<button type="button" data-g="${n}" aria-pressed="${n===g}">${n}</button>`).join('')}</div></div>
 <h3 class="stl">Confort</h3>
 <div class="str"><span><b id="set-vl">Vibration</b><small>Au bon et au mauvais choix</small></span><button class="sw" id="set-vib" type="button" role="switch" aria-checked="${v}" aria-labelledby="set-vl"></button></div>
 <h3 class="stl">Mes données</h3>

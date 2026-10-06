@@ -1,6 +1,6 @@
 # Plan de modifications — Le royaume des plantes
 
-Document de pilotage. **Plan validé.** État : **étapes 1 à 4 terminées**, étapes 5 à 10 à faire.
+Document de pilotage. **Plan validé.** État : **étapes 1 à 5 terminées**, étapes 6 à 10 à faire.
 Chaque remarque de ta réponse à l'audit est rattachée à une tâche (section « Traçabilité » en bas) pour que rien ne se perde.
 
 ## Règles de travail
@@ -21,7 +21,7 @@ Chaque remarque de ta réponse à l'audit est rattachée à une tâche (section 
 | 2 | Écran de jeu sur mobile : proportions, photo nette, zones tactiles — **fait** | Gros | 1 |
 | 3 | Analyse « Réglages / Comment ça marche » + jeu d'illustrations (fin des emoji) — **fait** | Moyen | 2 |
 | 4 | Réglages, aide, frise des niveaux, objectif réglable — **fait** | Moyen | 3 |
-| 5 | Progrès et Herbier | Petit | 4 |
+| 5 | Progrès et Herbier — **fait** | Petit | 4 |
 | 6 | Mémoire : ralentir légèrement les niveaux 1 à 3 | Petit, avec simulation | 4 |
 | 7 | Ordinateur et clavier | Gros | 2, 3 |
 | 8 | File d'attente des photos et plafond du cache | Moyen | 1 |
@@ -130,7 +130,13 @@ Contrôles : `outils/controle_fige.js` (29 vérifications ; échoue sur l'ancien
 
 ---
 
-## Étape 5 — Progrès et Herbier
+## Étape 5 — Progrès et Herbier — TERMINÉE
+
+Résultat : carte « Collection » retirée de Progrès ; dans chaque catégorie de l'Herbier, les acquises d'abord puis les non acquises, chacune par ordre alphabétique du nom latin (nom vernaculaire toujours sur l'image, disposition et pastille « + N à découvrir » inchangées). Contrôle : `outils/controle_herbier.js`.
+
+Demandes ajoutées à cette étape :
+- **Objectif quotidien** : choix de 10 à 100 par pas de 10 (40 par défaut), en deux lignes de cinq dans le volet Réglages. Un objectif enregistré hors de cette liste repasse à 40.
+- **Progrès** : la ligne « Comment ça marche » est retirée ; l'aide reste sur le « ? » de l'en-tête. Seule la ligne « Réglages » reste en bas de Progrès.
 
 | ID | Tâche | Critère de réussite |
 |---|---|---|
@@ -212,7 +218,7 @@ Contrôles : `outils/controle_fige.js` (29 vérifications ; échoue sur l'ancien
 | U1 | À corriger | 2.1 |
 | U2 | À corriger | 2.6 |
 | U3 | À corriger — **fait** | 4.4 |
-| U4 | À corriger | 5.1 |
+| U4 | À corriger — **fait** | 5.1 |
 | U5 | À corriger — **fait** | 4.3 |
 | U6 | Ne pas modifier | — |
 | U7 | Ne pas modifier | — |
@@ -238,7 +244,7 @@ Contrôles : `outils/controle_fige.js` (29 vérifications ; échoue sur l'ancien
 | Design 1 | À faire — **fait** | 3.2, 3.3 |
 | Design 2 | Aucune action | 3.4 |
 | Design 3 | À faire — **fait** | 4.6 |
-| Herbier | À faire | 5.2 |
+| Herbier | À faire — **fait** | 5.2 |
 | T1 | À modifier — **fait** | 1.1 |
 | T2 | OK : ne pas exporter, conserver au tableur — **fait** | 1.3 |
 | T3 | OK — **fait** | 1.3 bis (vérif. en 10.1) |
