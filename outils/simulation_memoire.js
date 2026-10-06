@@ -5,11 +5,9 @@ const {chromium}=require('playwright');const path=require('path');
 const JOURS=+process.argv[2]||30,GRAINES=+process.argv[3]||8,PAR_JOUR=40;
 // Variantes : remplacements dans la fonction srs() de l'appli
 const VARIANTES={
-  actuelle:[],
-  A_palier2:[["if(p.c>=2){p.b=3;p.c=0}","if(p.c>=3){p.b=3;p.c=0}"]],
-  A2_palier2_QCM:[["if(b0===2){p.c+=fmt==='mcq'?1:2;if(p.c>=2){p.b=3;p.c=0}}","if(b0===2){p.c+=fmt==='mcq'?1:3;if(p.c>=3){p.b=3;p.c=0}}"]],
-  C2_ecriture_si_erreur:[["if(fmt==='typed'){p.b=4;p.c=0;acqNow=true}else{p.c+=fmt==='pv'?1:.5;","if(fmt==='typed'&&(p.c>0||p.e===0)){p.b=4;p.c=0;acqNow=true}else{p.c+=fmt==='typed'?1:fmt==='pv'?1:.5;"]],
-  C_ecriture:[["if(fmt==='typed'){p.b=4;p.c=0;acqNow=true}else{p.c+=fmt==='pv'?1:.5;","if(fmt==='typed'&&p.c>0){p.b=4;p.c=0;acqNow=true}else{p.c+=fmt==='typed'?1:fmt==='pv'?1:.5;"]],
+  actuelle:[], // variante A retenue à l'étape 6 : niveau 2 → 3 en 3 QCM, ou 1 exercice difficile + 1 QCM
+  avant_etape6:[["if(p.c>=3){p.b=3;p.c=0}","if(p.c>=2){p.b=3;p.c=0}"]],
+  A2_palier2_QCM:[["if(b0===2){p.c+=fmt==='mcq'?1:2;if(p.c>=3)","if(b0===2){p.c+=fmt==='mcq'?1:3;if(p.c>=3)"]],
 };
 const SIM=function(o){
   // hasard reproductible

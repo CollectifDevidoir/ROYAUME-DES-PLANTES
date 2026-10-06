@@ -1,6 +1,6 @@
 # Plan de modifications — Le royaume des plantes
 
-Document de pilotage. **Plan validé.** État : **étapes 1 à 5 terminées**, étapes 6 à 10 à faire.
+Document de pilotage. **Plan validé.** État : **étapes 1 à 6 terminées**, étapes 7 à 10 à faire.
 Chaque remarque de ta réponse à l'audit est rattachée à une tâche (section « Traçabilité » en bas) pour que rien ne se perde.
 
 ## Règles de travail
@@ -22,7 +22,7 @@ Chaque remarque de ta réponse à l'audit est rattachée à une tâche (section 
 | 3 | Analyse « Réglages / Comment ça marche » + jeu d'illustrations (fin des emoji) — **fait** | Moyen | 2 |
 | 4 | Réglages, aide, frise des niveaux, objectif réglable — **fait** | Moyen | 3 |
 | 5 | Progrès et Herbier — **fait** | Petit | 4 |
-| 6 | Mémoire : ralentir légèrement les niveaux 1 à 3 | Petit, avec simulation | 4 |
+| 6 | Mémoire : ralentir légèrement les niveaux 1 à 3 — **fait (variante A)** | Petit, avec simulation | 4 |
 | 7 | Ordinateur et clavier | Gros | 2, 3 |
 | 8 | File d'attente des photos et plafond du cache | Moyen | 1 |
 | 9 | Contenu botanique : clés, fiabilisation, sourçage | Très gros, par lots | Peut démarrer dès que tu veux |
@@ -145,7 +145,7 @@ Demandes ajoutées à cette étape :
 
 ---
 
-## Étape 6 — Mémoire — EN ATTENTE DE TON CHOIX
+## Étape 6 — Mémoire — TERMINÉE (variante A)
 
 Simulation (`outils/simulation_memoire.js`) : le vrai code de l'appli (choix de la plante, type d'exercice, niveaux) joue 30 jours × 40 exercices avec un joueur simulé qui apprend et oublie (courbe d'oubli de type FSRS) ; 8 joueurs par variante, mêmes tirages pour toutes. Les chiffres servent à **comparer** les variantes entre elles, pas à prédire un joueur réel.
 
@@ -159,6 +159,8 @@ Simulation (`outils/simulation_memoire.js`) : le vrai code de l'appli (choix de 
 | Écartée : B, une 1re bonne réponse au hasard ne compte pas | ≈ 0 % | — | — | — | — |
 
 Seul le passage du niveau 2 au niveau 3 change ; niveaux 4 à 6, intervalles, tirage et exercices intacts.
+
+**Choix : variante A, intégrée.** Sans erreur, une plante est croisée une fois de plus avant le niveau 3 : 3 QCM au lieu de 2, ou 1 exercice difficile + 1 QCM au lieu d'1 exercice difficile. Contrôle : `outils/controle_niveaux.js` (6 vérifications).
 
 | ID | Tâche | Critère de réussite |
 |---|---|---|
@@ -253,7 +255,7 @@ Seul le passage du niveau 2 au niveau 3 change ; niveaux 4 à 6, intervalles, ti
 | D5 | À modifier | 7.5 |
 | Pédagogie 1 | À faire | 9.1 à 9.4 |
 | Mémoire 2 | À faire — **fait** | 4.2 |
-| Mémoire 3 | À faire | 6.1 |
+| Mémoire 3 | À faire — **fait (variante A)** | 6.1 |
 | Design 1 | À faire — **fait** | 3.2, 3.3 |
 | Design 2 | Aucune action | 3.4 |
 | Design 3 | À faire — **fait** | 4.6 |

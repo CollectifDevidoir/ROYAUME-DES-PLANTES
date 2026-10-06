@@ -2085,7 +2085,7 @@ function srs(p,good,fmt){
   if(good){
     p.l=now;
     if(b0===1){p.b=2;p.c=0}
-    else if(b0===2){p.c+=fmt==='mcq'?1:2;if(p.c>=2){p.b=3;p.c=0}}
+    else if(b0===2){p.c+=fmt==='mcq'?1:2;if(p.c>=3){p.b=3;p.c=0}}   // niveau 2 → 3 : 3 QCM réussis, ou 1 exercice difficile + 1 QCM (étape 6, variante A)
     else if(b0===3){if(fmt==='typed'){p.b=4;p.c=0;acqNow=true}else{p.c+=fmt==='pv'?1:.5;if(p.c>=3){p.b=4;p.c=0;acqNow=true}}}   // acquise : surtout en écrivant le nom latin (3 photos ou 6 QCM réussis en secours)
     else if(now>=p.d&&(fmt==='typed'||(fmt==='pv'&&b0>=5))){p.b=Math.min(b0+1,6);p.c=0}     // entretien : écriture du nom latin une fois le délai écoulé
   }else{p.e++;p.c=0;p.b=b0>=4?3:1}
