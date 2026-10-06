@@ -1,6 +1,6 @@
 # Plan de modifications — Le royaume des plantes
 
-Document de pilotage. **Plan validé.** État : **étapes 1 à 7 terminées**, étapes 8 à 10 à faire.
+Document de pilotage. **Plan validé.** État : **étapes 1 à 8 terminées**, étapes 9 et 10 à faire.
 Chaque remarque de ta réponse à l'audit est rattachée à une tâche (section « Traçabilité » en bas) pour que rien ne se perde.
 
 ## Règles de travail
@@ -24,7 +24,7 @@ Chaque remarque de ta réponse à l'audit est rattachée à une tâche (section 
 | 5 | Progrès et Herbier — **fait** | Petit | 4 |
 | 6 | Mémoire : ralentir légèrement les niveaux 1 à 3 — **fait (variante A)** | Petit, avec simulation | 4 |
 | 7 | Ordinateur et clavier — **fait** | Gros | 2, 3 |
-| 8 | File d'attente des photos et plafond du cache | Moyen | 1 |
+| 8 | File d'attente des photos et plafond du cache — **fait** | Moyen | 1 |
 | 9 | Contenu botanique : clés, fiabilisation, sourçage | Très gros, par lots | Peut démarrer dès que tu veux |
 | 10 | Clôture : nettoyage, tests complets, mise à jour de l'audit | Moyen | 1 à 8 |
 
@@ -198,7 +198,27 @@ Contrôle des réglages mis à jour (30 vérifications) ; autres contrôles rela
 
 ---
 
-## Étape 8 — Photos : file d'attente et cache
+## Étape 8 — Photos : file d'attente et cache — TERMINÉE
+
+**Étude (avant)** : une seule file « premier arrivé, premier servi », environ 55 requêtes/min ; les photos d'organes et les détails pouvaient passer devant la photo attendue ; refus du service → pause fixe de 60 s, la plante sans photo Wikipédia était écartée, d'où des écrans « Aucune image » ; cache sans plafond.
+
+**Ce qui est en place** :
+- **File à priorités** : 0 = photo d'une question, 1 = détails d'une plante, 2 = photos d'organes ; au plus 44 requêtes par minute (limite du service : 60) et 2 à la fois.
+- **Abandon des demandes inutiles** : les photos d'organes d'une plante qu'on a quittée et le feuillage d'une fiche refermée ne sont pas envoyés.
+- **Pause intelligente** : sur refus (429), la file est vidée et l'appli attend la durée demandée par le service, sinon 15 s, puis 30 s, 1 min, 2 min, 5 min si les refus continuent (une seule requête d'essai à la reprise) ; rythme réduit à 35/min pendant 5 min.
+- **Pendant une pause** : les plantes dont la photo est déjà connue passent d'abord ; une plante sans photo n'est plus écartée pour la session ; si aucune photo n'est possible, un message « courte pause, reprise dans N s » remplace l'écran « Aucune image » et la question revient seule.
+- **Wikipédia en secours** : si iNaturalist tarde plus de 4 s, la photo de Wikipédia s'affiche ; la photo iNaturalist est récupérée en arrière-plan pour la suite.
+- **8.2 — cache plafonné** : 300 espèces et 600 Ko au plus ; les espèces utilisées le moins récemment sortent d'abord.
+
+**Mesures** (`outils/mesure_photos.js`, jeu très rapide, iNaturalist simulé avec sa limite de 60/min) :
+
+| Scénario | Avant : questions · pic req/min · attente moy./max · « Aucune image » | Après |
+|---|---|---|
+| Usage normal, 3 min | 66 · 55 · 1,2 s / 12,3 s · 0 | **88 · 45 · 0,5 s / 11 s · 0** |
+| Service bloqué 30 s, Wikipédia disponible, 2 min | 70 · 43 · 0,2 s / 4,5 s · 0 | 45 · 36 · 0,6 s / 10 s · 0 |
+| Service bloqué 30 s, sans Wikipédia, 2 min | 22 · 55 · 1,1 s / 5,6 s · **42** | 32 · 36 · 2,4 s / 42 s · **0** |
+
+Le 2e scénario est moins rapide qu'avant : l'ancienne version gardait la photo Wikipédia pour toute la session, la nouvelle retourne chercher la photo iNaturalist après la pause. Contrôles : `outils/controle_cache.js` (6 vérifications), `outils/mesure_photos.js`.
 
 | ID | Tâche | Critère de réussite |
 |---|---|---|
@@ -265,7 +285,7 @@ Contrôle des réglages mis à jour (30 vérifications) ; autres contrôles rela
 | M6 | À corriger | 2.3 |
 | M7 | À corriger — **fait** | 4.5 |
 | M8 | Plus tard | — |
-| M9 | À étudier puis corriger | 8.1 |
+| M9 | À étudier puis corriger — **fait** | 8.1 |
 | D1 | À développer — **fait** | 7.1 |
 | D2 | À modifier — **fait** | 7.2 |
 | D3 | À modifier — **fait** | 7.3 |
@@ -285,7 +305,7 @@ Contrôle des réglages mis à jour (30 vérifications) ; autres contrôles rela
 | T5 | OK (voir D1) — **fait** | 7.1 |
 | T6 | OK — **fait** | 7.5 |
 | T7 | Plus tard | — |
-| T8 | OK | 8.2 |
+| T8 | OK — **fait** | 8.2 |
 | T9 | OK — **fait** | 1.4 |
 | T10 | OK | 10.3 |
 | T11 | OK — **fait** | 4.7 |

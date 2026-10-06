@@ -2015,34 +2015,46 @@ function helpHtml(){const cr=rk();return `<p class="hp">Reconnais la plante sur 
 let cur=null,last=null,done=false,typed=false,curTrain=false,nxt=0,mode=(()=>{try{const m=localStorage.getItem('qp.mode');return m&&T[m]?m:'tout'}catch(e){return'tout'}})(),streak=0,shown={};
 
 // ===== iNaturalist : photos sous licence libre + famille/genre =====
-// API publique, sans clé. On limite à ~55 requêtes/min (consigne d'iNaturalist : 60 max) et on met tout en cache 30 jours.
+// API publique, sans clé. File d'attente à priorités, 45 requêtes/min au plus (consigne d'iNaturalist : 60 max), cache de 30 jours plafonné.
 const IK='quizplantes.inat.v1',ITTL=30*864e5,ILIC='cc0,cc-by,cc-by-sa,cc-by-nc,cc-by-nc-sa'; // retire les « nc » si l'app devient commerciale
 const ORG=[['Feuillage',21],['Fleurs',13],['Fruits',14]]; // annotation iNaturalist « Plant Phenology » (terme 12) : 21 = sans floraison, 13 = en fleur, 14 = en fruit
-let IC={},iq=0,iOff=0;try{IC=JSON.parse(localStorage.getItem(IK))||{}}catch(e){}
-const isave=()=>{try{localStorage.setItem(IK,JSON.stringify(IC))}catch(e){try{IC={};localStorage.removeItem(IK)}catch(_){}}};
-let iqHi=0;
-async function inat(path,low){
-  if(low){let w=0;while(iqHi>0&&w<40){await new Promise(r=>setTimeout(r,200));w++}}else iqHi++;
-  try{
-    const at=Math.max(Date.now(),iq);iq=at+1100;
-    if(at>Date.now())await new Promise(r=>setTimeout(r,at-Date.now()));
-    const r=await fetch('https://api.inaturalist.org/v1/'+path);
-    if(r.status===429)iOff=Date.now()+6e4;
-    if(!r.ok)throw new Error(r.status);
-    return await r.json();
-  }finally{if(!low)iqHi--}
+let IC={},iOff=0;try{IC=JSON.parse(localStorage.getItem(IK))||{}}catch(e){}
+// Cache plafonné : 300 espèces et 600 Ko au plus ; les espèces utilisées le moins récemment sortent d'abord
+const ICMAX=300,ICOCT=6e5,icOld=()=>Object.keys(IC).sort((a,b)=>((IC[a]&&(IC[a].u||IC[a].t))||0)-((IC[b]&&(IC[b].u||IC[b].t))||0));
+const isave=()=>{try{let k=icOld();k.slice(0,Math.max(0,k.length-ICMAX)).forEach(x=>delete IC[x]);
+  let j=JSON.stringify(IC);if(j.length>ICOCT){k=icOld();while(j.length>ICOCT&&k.length){k.splice(0,10).forEach(x=>delete IC[x]);j=JSON.stringify(IC)}}
+  localStorage.setItem(IK,j)}catch(e){try{IC={};localStorage.removeItem(IK)}catch(_){}}};
+// File d'attente des requêtes : priorité 0 = photo d'une question, 1 = détails d'une plante, 2 = photos d'organes.
+// 44 requêtes par minute au plus, 2 à la fois ; une demande devenue inutile (keep() faux) est abandonnée avant d'être envoyée.
+// Refus du service (429) : la file est vidée (les compléments seront redemandés plus tard) et pause de la durée demandée, sinon 15 s,
+// puis 30 s, 1 min, 2 min, 5 min si les refus continuent (une seule requête d'essai à la reprise) ; après un refus, rythme réduit à 35/min pendant 5 min.
+const IQ={q:[],h:[],run:0,slow:0,tm:0,n:0,tot:0,k:0},IPAUSE=[15,30,60,120,300];
+function inat(path,pri,keep){return new Promise((res,rej)=>{IQ.q.push({path,pri:pri||0,keep,res,rej,n:++IQ.n});ipump()})}
+function ipump(){
+  clearTimeout(IQ.tm);const now=Date.now();
+  IQ.q=IQ.q.filter(j=>{const why=j.keep&&!j.keep()?'annulée':now<iOff?'pause':'';if(why)j.rej(new Error(why));return !why});
+  if(!IQ.q.length)return;
+  if(now<iOff){IQ.tm=setTimeout(ipump,iOff-now+50);return}
+  const lim=now<IQ.slow?35:44,gap=6e4/lim*.8;IQ.h=IQ.h.filter(t=>now-t<6e4);const last=IQ.h[IQ.h.length-1]||0;
+  if(IQ.run>=(IQ.k?1:2))return;
+  if(IQ.h.length>=lim||now-last<gap){IQ.tm=setTimeout(ipump,Math.max(50,IQ.h.length>=lim?IQ.h[0]+6e4-now:gap-(now-last)));return}
+  IQ.q.sort((a,b)=>a.pri-b.pri||a.n-b.n);const j=IQ.q.shift();IQ.h.push(now);IQ.run++;IQ.tot++;
+  fetch('https://api.inaturalist.org/v1/'+j.path).then(r=>{
+    if(r.status===429){const ra=+r.headers.get('Retry-After');iOff=Date.now()+(ra>0?Math.min(ra,600):IPAUSE[Math.min(IQ.k,IPAUSE.length-1)])*1e3;IQ.k++;IQ.slow=iOff+3e5;throw new Error('429')}
+    IQ.k=0;if(!r.ok)throw new Error(r.status);return r.json()}).then(j.res,j.rej).finally(()=>{IQ.run--;ipump()});
+  if(IQ.q.length)IQ.tm=setTimeout(ipump,gap);
 }
 const big=u=>u?u.replace(/\/(square|small|medium|large|original)\.(\w+)(\?.*)?$/,'/large.$2'):u;
 const pid=u=>((u||'').match(/photos\/(\d+)\//)||[])[1]||u;
-async function inatTaxon(s){
+async function inatTaxon(s,pri){
   const l=s[0],c=IC[l];
-  if(c&&Date.now()-c.t<ITTL)return c;
+  if(c&&Date.now()-c.t<ITTL){c.u=Date.now();return c}
   if(Date.now()<iOff)return null;
-  const j=await inat('taxa?q='+encodeURIComponent(l.replace(/×/g,' '))+'&per_page=10&locale=fr');
+  const j=await inat('taxa?q='+encodeURIComponent(l.replace(/×/g,' '))+'&per_page=10&locale=fr',pri||0);
   const r=(j.results||[]).find(x=>norm(x.name)===norm(l)||norm(x.matched_term||'')===norm(l));
   const dp=r&&r.default_photo;
   if(!r||!dp||!dp.license_code)return null; // pas de photo réutilisable : on laisse le repli Wikipédia
-  return IC[l]={t:Date.now(),id:r.id,cn:r.preferred_common_name||'',imgs:[{src:big(dp.medium_url||dp.url),label:'',page:'https://www.inaturalist.org/taxa/'+r.id,lic:dp.attribution||'iNaturalist'}]};
+  return IC[l]={t:Date.now(),u:Date.now(),id:r.id,cn:r.preferred_common_name||'',imgs:[{src:big(dp.medium_url||dp.url),label:'',page:'https://www.inaturalist.org/taxa/'+r.id,lic:dp.attribution||'iNaturalist'}]};
 }
 async function wikiSum(l){
   let best=null;
@@ -2058,11 +2070,19 @@ async function wikiSum(l){
   }
   return best;
 }
+const fromInat=(it,wk)=>({src:it.imgs[0].src,page:wk&&wk.page,ex:(wk&&wk.ex)||'',lg:wk&&wk.lg,t:wk&&wk.t,inat:it});
+// Photo provisoire (Wikipédia) : la photo iNaturalist est redemandée en arrière-plan, sans faire attendre l'affichage
+function upgrade(s,c){if(c.rf||Date.now()<iOff)return;c.rf=1;inatTaxon(s,2).then(it=>{if(it&&it.imgs[0]&&cache[s[0]]===c)cache[s[0]]=fromInat(it,c)}).catch(()=>{}).finally(()=>{c.rf=0})}
 async function getImg(s){
-  const l=s[0];if(cache[l]!==undefined)return cache[l];
+  const l=s[0],c0=cache[l];if(c0!==undefined){if(c0&&c0.tmp)upgrade(s,c0);return c0}
   if(s[3])return cache[l]={src:s[3],page:s[3],ex:''};
-  const[it,wk]=await Promise.all([inatTaxon(s).catch(()=>null),wikiSum(l)]);
-  if(it&&it.imgs[0])return cache[l]={src:it.imgs[0].src,page:wk&&wk.page,ex:(wk&&wk.ex)||'',lg:wk&&wk.lg,t:wk&&wk.t,inat:it};
+  // iNaturalist d'abord ; s'il tarde plus de 4 s (file chargée ou service en pause), la photo de Wikipédia sert en attendant
+  const itP=inatTaxon(s).catch(()=>null),wkP=wikiSum(l);
+  let it=await Promise.race([itP,new Promise(r=>setTimeout(()=>r(0),4000))]);
+  if(it===0){const wk=await wkP;if(wk&&wk.src){const c=cache[l]=Object.assign({},wk,{tmp:1,rf:1});itP.then(x=>{if(x&&x.imgs[0]&&cache[l]===c)cache[l]=fromInat(x,wk)}).finally(()=>{c.rf=0});return c}it=await itP}
+  const wk=await wkP;
+  if(it&&it.imgs[0])return cache[l]=fromInat(it,wk);
+  if(!it&&Date.now()<iOff)return wk&&wk.src?(cache[l]=Object.assign({},wk,{tmp:1})):null; // service en pause : provisoire, réessayé ensuite
   return cache[l]=wk&&wk.src?wk:null;
 }
 // Détail du taxon : famille, genre, photos complémentaires (1 requête, en tâche de fond)
@@ -2207,7 +2227,7 @@ async function photoSet(s,im){
   for(const x of cand){
     if(out.length>=3)break;
     const xi=await getImg(x);
-    if(!xi){bad.add(x[0]);continue}
+    if(!xi){if(Date.now()>=iOff)bad.add(x[0]);continue}
     if(!used.has(pid(xi.src))&&await loadable(xi.src)){used.add(pid(xi.src));out.push(x)}
   }
   return out.length===3?sh([s,...out]):null;
@@ -2220,10 +2240,13 @@ async function altImg(s,im){
   const n=shown[s[0]]=(shown[s[0]]||0)+1;
   return{src:U[(n-1)%U.length].src,page:im.page};
 }
+const knownImg=s=>!!((cache[s[0]]&&cache[s[0]].src)||(IC[s[0]]&&IC[s[0]].imgs&&IC[s[0]].imgs.length));
 async function prepare(){
-  for(let i=0;i<8;i++){
-    const rp=!!(replay&&replay.length),s=pick();let ty=false,pv=false;if(!rp){const e=exType(s);ty=e==='typed';pv=e==='pv'}let im=await getImg(s);
-    if(!im){bad.add(organ?s[0]+organ:s[0]);continue}
+  for(let i=0,w=0;i<8;){
+    const rp=!!(replay&&replay.length),s=pick();
+    if(!rp&&w<30&&Date.now()<iOff&&!knownImg(s)){w++;continue}
+    i++;let ty=false,pv=false;if(!rp){const e=exType(s);ty=e==='typed';pv=e==='pv'}let im=await getImg(s);
+    if(!im){if(Date.now()>=iOff)bad.add(organ?s[0]+organ:s[0]);continue}
     if((rp||sess.has(s[0]))&&!pv)im=await altImg(s,im);
     if(pv){const set=await Promise.race([photoSet(s,im),new Promise(r=>setTimeout(()=>r(null),3500))]);if(set)return{s,typed:false,pv:set,im,train:rp}}
     const pl=new Image();pl.referrerPolicy='no-referrer';pl.src=im.src;
@@ -2242,7 +2265,7 @@ async function media(s,cb){
     it.done=it.done||{};
     for(const[lb,v]of ORG){
       if(it.done[v]||cur!==s||Date.now()<iOff)continue;
-      const j=await inat(`observations?taxon_id=${it.id}&term_id=12&term_value_id=${v}&quality_grade=research&photo_license=${ILIC}&photos=true&order_by=votes&order=desc&per_page=6&locale=fr`,1);
+      const j=await inat(`observations?taxon_id=${it.id}&term_id=12&term_value_id=${v}&quality_grade=research&photo_license=${ILIC}&photos=true&order_by=votes&order=desc&per_page=6&locale=fr`,2,()=>cur===s);
       for(const o of j.results||[]){
         const p=(o.photos||[])[0];
         if(p&&p.url&&!it.imgs.some(y=>pid(y.src)===pid(p.url))){add({src:big(p.url),label:lb,page:o.uri||('https://www.inaturalist.org/observations/'+o.id),lic:p.attribution||'iNaturalist'});break}
@@ -2296,6 +2319,7 @@ async function next(){
   $('pic').className='pic sk';$('pic').textContent='Chargement…';done=false;
   const q=await(pre||prepare());
   if(tk!==nxt)return;pre=null;
+  if(!q&&Date.now()<iOff){const w=()=>{const e=$('q-wait');if(e)e.textContent=Math.max(1,Math.ceil((iOff-Date.now())/1e3))};$('pic').innerHTML='<div style="padding:16px;text-align:center" role="status"><p>Le service de photos demande une courte pause.<br>Reprise dans <b id="q-wait"></b> s…</p></div>';w();const iv=setInterval(()=>{if(tk!==nxt||!$('q-wait')){clearInterval(iv);return}w()},1e3);setTimeout(()=>{clearInterval(iv);if(tk===nxt)next()},iOff-Date.now()+400);return}
   if(!q){$('pic').innerHTML='<div style="padding:16px"><p>Aucune image chargée. Vérifie la connexion.</p><button class="big" id="q-retry">Réessayer</button></div>';$('q-retry').onclick=()=>{bad.clear();next()};return}
   cur=q.s;typed=q.typed;curTrain=!!q.train;pvSet=q.pv||null;$('qc').classList.toggle('ty',!!typed&&!pvSet);if(typed&&!pvSet)firstQ=false;
   if(wasTrain&&!curTrain){toast('Entraînement terminé');famFocus=null}wasTrain=curTrain;if(curTrain)trN=Math.min(trN+1,trTot);trUI();
@@ -2460,7 +2484,7 @@ async function leafImg(s){
   const a=cache[s[0]];if(!a)return null;
   const list=a.inat?a.inat.imgs:(a.imgs||[]);let f=list.find(x=>/Feuill/.test(x.label||''));if(f)return f;
   if(a.inat&&Date.now()>=iOff){
-    try{const j=await inat(`observations?taxon_id=${a.inat.id}&term_id=12&term_value_id=21&quality_grade=research&photo_license=${ILIC}&photos=true&order_by=votes&order=desc&per_page=3&locale=fr`,1);
+    try{const j=await inat(`observations?taxon_id=${a.inat.id}&term_id=12&term_value_id=21&quality_grade=research&photo_license=${ILIC}&photos=true&order_by=votes&order=desc&per_page=3&locale=fr`,2,()=>!$('sh').hidden);
       const o=(j.results||[]).find(o=>o.photos&&o.photos[0]&&o.photos[0].url);
       if(o){f={src:big(o.photos[0].url),label:'Feuillage',page:o.uri,lic:o.photos[0].attribution||'iNaturalist'};a.inat.imgs.push(f);return f}}catch(e){}}
   if(!a.inat){const L=await wpMedia(s);return L.find(x=>/Feuill/.test(x.label||''))||null}
