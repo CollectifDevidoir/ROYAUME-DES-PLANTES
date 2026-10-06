@@ -1,6 +1,6 @@
 # Plan de modifications — Le royaume des plantes
 
-Document de pilotage. **Plan validé.** État : **étapes 1 à 8 terminées**, étapes 9 et 10 à faire.
+Document de pilotage. **Plan validé.** État : **étapes 1 à 9 terminées** (dernier lot de l'étape 9 à valider), étape 10 à faire.
 Chaque remarque de ta réponse à l'audit est rattachée à une tâche (section « Traçabilité » en bas) pour que rien ne se perde.
 
 ## Règles de travail
@@ -25,7 +25,7 @@ Chaque remarque de ta réponse à l'audit est rattachée à une tâche (section 
 | 6 | Mémoire : ralentir légèrement les niveaux 1 à 3 — **fait (variante A)** | Petit, avec simulation | 4 |
 | 7 | Ordinateur et clavier — **fait** | Gros | 2, 3 |
 | 8 | File d'attente des photos et plafond du cache — **fait** | Moyen | 1 |
-| 9 | Contenu botanique : clés, fiabilisation, sourçage | Très gros, par lots | Peut démarrer dès que tu veux |
+| 9 | Contenu botanique : clés, fiabilisation, sourçage — **fait** | Très gros, par lots | Peut démarrer dès que tu veux |
 | 10 | Clôture : nettoyage, tests complets, mise à jour de l'audit | Moyen | 1 à 8 |
 
 Ordre choisi : la mise en page mobile (2) vient avant tout le reste parce qu'elle détermine l'espace disponible ; les illustrations (3) arrivent avant les réglages (4) pour dessiner l'engrenage et les nouvelles icônes une seule fois ; l'ordinateur (7) vient après les icônes pour ne tester les tailles qu'une fois.
@@ -227,7 +227,7 @@ Le 2e scénario est moins rapide qu'avant : l'ancienne version gardait la photo 
 
 ---
 
-## Étape 9 — Contenu botanique (long chantier, par lots) — EN COURS (règles validées, lots de 30)
+## Étape 9 — Contenu botanique (long chantier, par lots) — TERMINÉE (663 espèces, 15 lots ; dernier lot à valider)
 
 **Périmètre retenu** : seulement ce que le jeu affiche et utilise, c'est-à-dire les **clés** (« Ce qu'il faut regarder », les 2 premières clés de l'espèce confondue, les points communs « On les confond : … »). Pas de travail encyclopédique (9.5 mis de côté).
 
@@ -259,10 +259,10 @@ Le 2e scénario est moins rapide qu'avant : l'ancienne version gardait la photo 
 | 11 | genres d'une espèce : les 47 arbres restants (dont palmiers et 4 conifères), plus buis, laurier-sauce, laurier-rose — 50 espèces | fait, validé |
 | 12 | les 59 arbustes restants (genres d'une espèce) | fait, validé |
 | 13 | les 32 graminées restantes et 18 vivaces (acanthe à boule azurée) — 50 espèces | fait, validé |
-| 14 | 50 vivaces (fleur des elfes à trolle, dont 3 fougères) | fait, à valider |
-| 15 | dernières vivaces (73) | à faire |
+| 14 | 50 vivaces (fleur des elfes à trolle, dont 3 fougères) | fait, validé |
+| 15 | les 73 dernières vivaces (bulbes, aquatiques, 6 fougères, plantes sauvages) | fait, à valider |
 
-Total revu : 590 espèces sur 663. Quand les deux sources prioritaires ne donnaient pas assez de caractères visibles (5 chênes exotiques, cerisier de Yoshino, orme de Sibérie, sapin du Colorado ; houx crénelé : fiche du genre seulement ; catalpa de l'Ouest, lilas du Japon ; schisandra, séquoia géant, pacanier, ptérocaryer, phellodendron, sassafras, stéphanandra : sources scientifiques ; 3 graminées de prairie américaine : guides d'universités et de l'USDA), d'autres sources ont été utilisées ; elles sont citées dans le .csv. Outil : `outils/cles_vers_appli.py` (vérifie les règles et recopie le .csv dans l'appli).
+Total revu : **663 espèces sur 663 — étape 9 terminée.** Quand les deux sources prioritaires ne donnaient pas assez de caractères visibles (5 chênes exotiques, cerisier de Yoshino, orme de Sibérie, sapin du Colorado ; houx crénelé : fiche du genre seulement ; catalpa de l'Ouest, lilas du Japon ; schisandra, séquoia géant, pacanier, ptérocaryer, phellodendron, sassafras, stéphanandra : sources scientifiques ; 3 graminées de prairie américaine : guides d'universités et de l'USDA), d'autres sources ont été utilisées ; elles sont citées dans le .csv. Outil : `outils/cles_vers_appli.py` (vérifie les règles et recopie le .csv dans l'appli).
 
 **Lot d'essai** : 10 érables (campestre, platanoides, pseudoplatanus, opalus, monspessulanum, negundo, saccharinum, rubrum, palmatum, cappadocicum), intégrés dans l'appli (bloc « Étape 9 » après les données, prioritaire sur les anciennes clés).
 
