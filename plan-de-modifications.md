@@ -227,7 +227,21 @@ Le 2e scénario est moins rapide qu'avant : l'ancienne version gardait la photo 
 
 ---
 
-## Étape 9 — Contenu botanique (long chantier, par lots)
+## Étape 9 — Contenu botanique (long chantier, par lots) — LOT D'ESSAI FAIT, EN ATTENTE DE VALIDATION
+
+**Périmètre retenu** : seulement ce que le jeu affiche et utilise, c'est-à-dire les **clés** (« Ce qu'il faut regarder », les 2 premières clés de l'espèce confondue, les points communs « On les confond : … »). Pas de travail encyclopédique (9.5 mis de côté).
+
+**Règles de rédaction proposées (9.1)** :
+1. 3 à 5 clés, de 55 caractères au plus.
+2. **Visibles sur une photo** : forme et bord des feuilles, écorce, rameaux, fleurs, fruits, port. Pas d'habitat, de toxicité, d'odeur, de sève, de vitesse de croissance.
+3. **La 1re clé sépare l'espèce de ses cousines du jeu** (même genre) ; les suivantes la séparent des autres genres qui lui ressemblent.
+4. **Pas de mot générique isolé** (« persistant », « feuilles opposées »…) ; s'il discrimine vraiment, il est précisé : « feuilles opposées (le platane : alternes) ».
+5. Concret et chiffré quand c'est possible (nombre de lobes, taille, couleur, angle des samares).
+6. Deux espèces proches n'ont pas de clé presque identique.
+
+**Sources** : Tela Botanica et Jardin ! l'Encyclopédie, lues via leurs pages indexées (l'accès direct aux deux sites est bloqué dans l'environnement de travail). Chaque clé revue est listée avec ses liens dans `donnees/cles-revues.csv` (à reporter dans le tableur, colonnes « Clés » et « Sources des clés »). Deux affirmations douteuses d'une source ont été écartées (érable argenté « à feuilles alternes »).
+
+**Lot d'essai** : 10 érables (campestre, platanoides, pseudoplatanus, opalus, monspessulanum, negundo, saccharinum, rubrum, palmatum, cappadocicum), intégrés dans l'appli (bloc « Étape 9 » après les données, prioritaire sur les anciennes clés).
 
 | ID | Tâche | Critère de réussite |
 |---|---|---|
