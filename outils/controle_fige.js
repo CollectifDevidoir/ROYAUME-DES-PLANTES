@@ -4,7 +4,8 @@ const ok=(c,m)=>console.log((c?'OK   ':'ÉCHEC ')+m);
 const W=+process.argv[2]||360,H=+process.argv[3]||640;
 (async()=>{const {b,p}=await open({w:W,h:H,touch:true,file:process.env.F});
 const st=()=>p.evaluate(()=>({y:scrollY,pic:Math.round($('pic').getBoundingClientRect().top),clip:$('veil').style.clipPath.slice(0,30),qc:$('qc').style.transform}));
-const swipe=async(x,y0,y1,dx=0)=>{const c=await p.context().newCDPSession(p);await c.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y:y0}]});for(let k=1;k<=8;k++){await c.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:x+dx*k/8,y:y0+(y1-y0)*k/8}]});await p.waitForTimeout(16)}await c.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await p.waitForTimeout(500)};
+// n pas de 16 ms : 8 par défaut (geste vif), davantage pour un défilement lent comme au doigt
+const swipe=async(x,y0,y1,dx=0,n=8)=>{const c=await p.context().newCDPSession(p);await c.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y:y0}]});for(let k=1;k<=n;k++){await c.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:x+dx*k/n,y:y0+(y1-y0)*k/n}]});await p.waitForTimeout(16)}await c.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await p.waitForTimeout(500)};
 for(const ty of ['mcq','typed']){
   await lance(p,ty);
   if(ty==='typed'){await p.tap('#q-input');await p.fill('#q-input','Abcd efgh');await p.press('#q-input','Enter')}else await p.tap('#opts button');
@@ -17,7 +18,9 @@ for(const ty of ['mcq','typed']){
   await swipe(W/2,s0.pic+80,s0.pic+80,-150);s=await st();ok(s.y===s0.y&&s.qc==='',ty+' : glissement latéral de la carte sans effet');
   const sb=await p.evaluate(()=>{const b=$('shb');return [b.scrollHeight>b.clientHeight,b.scrollTop]});
   const shTop=await p.evaluate(()=>Math.round($('sh').getBoundingClientRect().top));
-  await swipe(W/2,shTop+200,shTop+60);const sb2=await p.evaluate(()=>$('shb').scrollTop);s=await st();
+  // la fiche finit de charger ses photos (comparaison) avant le geste : sinon la mise en page bouge pendant le défilement
+  await p.waitForFunction(()=>[...document.querySelectorAll('#sh img')].every(i=>i.complete),null,{timeout:10000}).catch(()=>{});await p.waitForTimeout(300);
+  await swipe(W/2,shTop+200,shTop+60,0,24);const sb2=await p.evaluate(()=>$('shb').scrollTop);s=await st();
   ok(s.y===s0.y&&(!sb[0]||sb2>sb[1]),ty+' : la fiche défile ('+sb[1]+'→'+sb2+'), pas le fond');
   ok(s.clip===s0.clip,ty+' : le trou du flou reste aligné');
   await p.tap('#sh-more');await p.waitForTimeout(500);s=await st();ok(s.clip==='',ty+' : « Plus de détails » : fond entièrement flouté');

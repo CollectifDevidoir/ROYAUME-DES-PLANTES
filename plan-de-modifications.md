@@ -1,6 +1,6 @@
 # Plan de modifications — Le royaume des plantes
 
-Document de pilotage. **Plan validé.** État : **étapes 1 à 9 terminées** (dernier lot de l'étape 9 à valider), étape 10 à faire.
+Document de pilotage. **Plan validé.** État : **les 10 étapes sont terminées.** Bilan : `rapport-de-cloture.md`.
 Chaque remarque de ta réponse à l'audit est rattachée à une tâche (section « Traçabilité » en bas) pour que rien ne se perde.
 
 ## Règles de travail
@@ -26,7 +26,7 @@ Chaque remarque de ta réponse à l'audit est rattachée à une tâche (section 
 | 7 | Ordinateur et clavier — **fait** | Gros | 2, 3 |
 | 8 | File d'attente des photos et plafond du cache — **fait** | Moyen | 1 |
 | 9 | Contenu botanique : clés, fiabilisation, sourçage — **fait** | Très gros, par lots | Peut démarrer dès que tu veux |
-| 10 | Clôture : nettoyage, tests complets, mise à jour de l'audit | Moyen | 1 à 8 |
+| 10 | Clôture : nettoyage, tests complets, mise à jour de l'audit — **fait** | Moyen | 1 à 8 |
 
 Ordre choisi : la mise en page mobile (2) vient avant tout le reste parce qu'elle détermine l'espace disponible ; les illustrations (3) arrivent avant les réglages (4) pour dessiner l'engrenage et les nouvelles icônes une seule fois ; l'ordinateur (7) vient après les icônes pour ne tester les tailles qu'une fois.
 
@@ -227,7 +227,7 @@ Le 2e scénario est moins rapide qu'avant : l'ancienne version gardait la photo 
 
 ---
 
-## Étape 9 — Contenu botanique (long chantier, par lots) — TERMINÉE (663 espèces, 15 lots ; dernier lot à valider)
+## Étape 9 — Contenu botanique (long chantier, par lots) — TERMINÉE (663 espèces, 15 lots)
 
 **Périmètre retenu** : seulement ce que le jeu affiche et utilise, c'est-à-dire les **clés** (« Ce qu'il faut regarder », les 2 premières clés de l'espèce confondue, les points communs « On les confond : … »). Pas de travail encyclopédique (9.5 mis de côté).
 
@@ -260,7 +260,7 @@ Le 2e scénario est moins rapide qu'avant : l'ancienne version gardait la photo 
 | 12 | les 59 arbustes restants (genres d'une espèce) | fait, validé |
 | 13 | les 32 graminées restantes et 18 vivaces (acanthe à boule azurée) — 50 espèces | fait, validé |
 | 14 | 50 vivaces (fleur des elfes à trolle, dont 3 fougères) | fait, validé |
-| 15 | les 73 dernières vivaces (bulbes, aquatiques, 6 fougères, plantes sauvages) | fait, à valider |
+| 15 | les 73 dernières vivaces (bulbes, aquatiques, 6 fougères, plantes sauvages) | fait, validé |
 
 Total revu : **663 espèces sur 663 — étape 9 terminée.** Quand les deux sources prioritaires ne donnaient pas assez de caractères visibles (5 chênes exotiques, cerisier de Yoshino, orme de Sibérie, sapin du Colorado ; houx crénelé : fiche du genre seulement ; catalpa de l'Ouest, lilas du Japon ; schisandra, séquoia géant, pacanier, ptérocaryer, phellodendron, sassafras, stéphanandra : sources scientifiques ; 3 graminées de prairie américaine : guides d'universités et de l'USDA), d'autres sources ont été utilisées ; elles sont citées dans le .csv. Outil : `outils/cles_vers_appli.py` (vérifie les règles et recopie le .csv dans l'appli).
 
@@ -276,15 +276,15 @@ Total revu : **663 espèces sur 663 — étape 9 terminée.** Quand les deux sou
 
 ---
 
-## Étape 10 — Clôture
+## Étape 10 — Clôture — TERMINÉE
 
-| ID | Tâche | Critère de réussite |
+| ID | Tâche | Résultat |
 |---|---|---|
-| 10.1 | **T3** : déjà traitée en 1.3 bis. Vérification finale seulement. | 0 doublon. |
-| 10.2 | **T4** : retirer les classes CSS devenues inutiles et la constante inutilisée. | Mesure avant/après. |
-| 10.3 | **T10** : nettoyage structuré du code (regroupement des constantes, retrait des anciennes logiques). | Aucune simulation ne casse ; fichier plus court. |
-| 10.4 | Passage complet : simulations, tests navigateur sur les tailles d'écran de référence (360×640, 375×667, 390×844, 412×915, 768×1024, 1366×800, 1920×1080). | Rapport de recette. |
-| 10.5 | Mise à jour du rapport d'audit : « avant / après ». | Document final. |
+| 10.1 | **T3** : vérification finale. | 71 fiches sourcées + 592 descriptions = 663 espèces, **0 doublon**, 0 donnée orpheline, 0 espèce sans clés. |
+| 10.2 | **T4** : CSS inutile et constante inutilisée. | 27 classes jamais utilisées (77 sélecteurs) et 3 animations orphelines retirées, constante `ORD` retirée. CSS : **71,8 → 67,2 Ko**. Outil : `outils/nettoie_css.py`. |
+| 10.3 | **T10** : anciennes logiques. | Anciennes clés (663, en 5 blocs), champs `cles` des fiches sourcées (71) et table `ADD` retirés : `Q` contient directement les clés revues, **strictement identiques** à l'affichage. `outils/cles_vers_appli.py` régénère `Q`. Appli : **854 → 771 Ko**, 3 559 → 2 828 lignes. Les constantes restées dans le code sont à côté de leur seul usage : non déplacées, volontairement. |
+| 10.4 | Recette complète. | `outils/recette.js` : **133 contrôles OK sur 133**, 7 tailles × 9 écrans, 0 erreur JavaScript ; captures identiques au pixel près avant/après nettoyage (sauf l'animation de l'Aide). Tous les contrôles existants relancés : OK. Test instable de `controle_fige` (déjà présent avant) rendu fiable : 0 échec sur 12. |
+| 10.5 | Rapport « avant / après ». | `rapport-de-cloture.md` (le rapport d'audit d'origine n'est pas dans le dépôt). |
 
 ---
 
@@ -305,8 +305,8 @@ Total revu : **663 espèces sur 663 — étape 9 terminée.** Quand les deux sou
 
 | Remarque | Décision | Tâche |
 |---|---|---|
-| U1 | À corriger | 2.1 |
-| U2 | À corriger | 2.6 |
+| U1 | À corriger — **fait** | 2.1 |
+| U2 | À corriger — **fait** | 2.6 |
 | U3 | À corriger — **fait** | 4.4 |
 | U4 | À corriger — **fait** | 5.1 |
 | U5 | À corriger — **fait** | 4.3 |
@@ -314,12 +314,12 @@ Total revu : **663 espèces sur 663 — étape 9 terminée.** Quand les deux sou
 | U7 | Ne pas modifier | — |
 | U8 | À corriger (avec analyse) — **fait, option D** | 3.1, 4.1, 4.8 |
 | U9 | À corriger — **fait** | 1.2 |
-| M1 | À corriger sans alourdir | 2.4 |
+| M1 | À corriger sans alourdir — **fait** | 2.4 |
 | M2 | Textes importants seulement — **fait** | 2.5 |
-| M3 | À corriger | 2.2 |
+| M3 | À corriger — **fait** | 2.2 |
 | M4 | OK, rien à faire | — |
 | M5 | Ne pas modifier | — |
-| M6 | À corriger | 2.3 |
+| M6 | À corriger — **fait** | 2.3 |
 | M7 | À corriger — **fait** | 4.5 |
 | M8 | Plus tard | — |
 | M9 | À étudier puis corriger — **fait** | 8.1 |
@@ -328,7 +328,7 @@ Total revu : **663 espèces sur 663 — étape 9 terminée.** Quand les deux sou
 | D3 | À modifier — **fait** | 7.3 |
 | D4 | À modifier — **fait** | 7.4 |
 | D5 | À modifier — **fait** | 7.5 |
-| Pédagogie 1 | À faire | 9.1 à 9.4 |
+| Pédagogie 1 | À faire — **fait** | 9.1 à 9.4 |
 | Mémoire 2 | À faire — **fait** | 4.2 |
 | Mémoire 3 | À faire — **fait (variante A)** | 6.1 |
 | Design 1 | À faire — **fait** | 3.2, 3.3 |
@@ -337,16 +337,16 @@ Total revu : **663 espèces sur 663 — étape 9 terminée.** Quand les deux sou
 | Herbier | À faire — **fait** | 5.2 |
 | T1 | À modifier — **fait** | 1.1 |
 | T2 | OK : ne pas exporter, conserver au tableur — **fait** | 1.3 |
-| T3 | OK — **fait** | 1.3 bis (vérif. en 10.1) |
-| T4 | OK | 10.2 |
+| T3 | OK — **fait** | 1.3 bis, vérifié en 10.1 |
+| T4 | OK — **fait** | 10.2 |
 | T5 | OK (voir D1) — **fait** | 7.1 |
 | T6 | OK — **fait** | 7.5 |
 | T7 | Plus tard | — |
 | T8 | OK — **fait** | 8.2 |
 | T9 | OK — **fait** | 1.4 |
-| T10 | OK | 10.3 |
+| T10 | OK — **fait** | 10.3 |
 | T11 | OK — **fait** | 4.7 |
-| Charge mentale (données à fiabiliser et sourcer) | À faire | 9.5 |
+| Charge mentale (données à fiabiliser et sourcer) | À faire — **fait** | 9.5 |
 
 ### Sorties du plan
 
