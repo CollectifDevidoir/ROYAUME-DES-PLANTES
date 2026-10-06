@@ -256,11 +256,12 @@ Le 2e scénario est moins rapide qu'avant : l'ancienne version gardait la photo 
 | 8 | 12 genres de 3 (poiriers, épines-vinettes, daphnés, chalefs, bruyères, millepertuis, spirées, aulx, hellébores, fétuques, myrtilliers, œillets) et 7 genres de 2 (micocouliers, gainiers, noyers, noisetiers, aubépines, sureaux, houx) — 50 espèces | fait, validé |
 | 9 | 25 genres de 2 : glycines, miscanthus, stipes, achillées, catalpas, figuiers, mélèzes, mûriers, thuyas, camélias, deutzias, mahonias, pittosporums, rhododendrons, lilas, digitales, pivoines, verveines, véroniques, pervenches, jasmins, vignes vierges, vignes, élymes, joncs — 50 espèces | fait, validé |
 | 10 | 13 derniers genres de 2 (luzules, pennisetums, bambous, seslérias, nerpruns, lysimaques, onagres, tsugas, genêts, filaires, pistachiers, primevères, tanaisies), les 17 grimpantes restantes, 7 conifères et ginkgo — 50 espèces | fait, validé |
-| 11 | genres d'une espèce : les 47 arbres restants (dont palmiers et 4 conifères), plus buis, laurier-sauce, laurier-rose — 50 espèces | fait, à valider |
-| 12 | arbustes restants (59) | à faire |
-| 13 et suivants | graminées (32), vivaces (141) | à faire |
+| 11 | genres d'une espèce : les 47 arbres restants (dont palmiers et 4 conifères), plus buis, laurier-sauce, laurier-rose — 50 espèces | fait, validé |
+| 12 | les 59 arbustes restants (genres d'une espèce) | fait, à valider |
+| 13 | graminées (32) et premières vivaces (18) — 50 espèces | à faire |
+| 14 à 16 | vivaces restantes (123) | à faire |
 
-Total revu : 431 espèces sur 663. Quand les deux sources prioritaires ne donnaient pas assez de caractères visibles (5 chênes exotiques, cerisier de Yoshino, orme de Sibérie, sapin du Colorado ; houx crénelé : fiche du genre seulement ; catalpa de l'Ouest, lilas du Japon ; schisandra, séquoia géant, pacanier, ptérocaryer, phellodendron, sassafras : sources scientifiques), d'autres sources ont été utilisées ; elles sont citées dans le .csv. Outil : `outils/cles_vers_appli.py` (vérifie les règles et recopie le .csv dans l'appli).
+Total revu : 490 espèces sur 663. Quand les deux sources prioritaires ne donnaient pas assez de caractères visibles (5 chênes exotiques, cerisier de Yoshino, orme de Sibérie, sapin du Colorado ; houx crénelé : fiche du genre seulement ; catalpa de l'Ouest, lilas du Japon ; schisandra, séquoia géant, pacanier, ptérocaryer, phellodendron, sassafras, stéphanandra : sources scientifiques), d'autres sources ont été utilisées ; elles sont citées dans le .csv. Outil : `outils/cles_vers_appli.py` (vérifie les règles et recopie le .csv dans l'appli).
 
 **Lot d'essai** : 10 érables (campestre, platanoides, pseudoplatanus, opalus, monspessulanum, negundo, saccharinum, rubrum, palmatum, cappadocicum), intégrés dans l'appli (bloc « Étape 9 » après les données, prioritaire sur les anciennes clés).
 
