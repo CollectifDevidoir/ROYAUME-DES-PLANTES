@@ -871,6 +871,27 @@ dialog.bs[open]{animation:bsUp .28s cubic-bezier(.2,.8,.2,1)}
 .lvn i{width:22px;height:22px;border-radius:50%;display:inline-grid;place-content:center;font:700 12px system-ui;font-style:normal;background:var(--bg1);color:var(--mu)}
 .lv2 .lvn i{background:var(--ac);color:var(--card)}
 .lvb small{display:block;margin-top:3px;font:700 12px system-ui;color:var(--fg)}
+
+/* ===== Fiche de réponse : fond figé, photo jamais recouverte, flou ===== */
+/* La fiche descend jusqu'en bas de l'écran ; les onglets se retirent tant qu'elle est affichée */
+.sh{bottom:0}
+.shf{padding-bottom:calc(8px + env(safe-area-inset-bottom))}
+.tabs{transition:transform .25s ease,opacity .2s,visibility 0s}
+body.sho .tabs{transform:translate(-50%,calc(100% + 30px));opacity:0;visibility:hidden;pointer-events:none;transition:transform .25s ease,opacity .2s,visibility 0s .25s}
+.sh.full{max-height:calc(100vh - var(--hh,62px) - 8px)}
+@supports (height:100svh){.sh.full{max-height:calc(100svh - var(--hh,62px) - 8px)}}
+/* Fiche dépliée : rien ne bouge en fond */
+html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
+/* Écriture du nom latin : barre de réponse juste sous la photo, consigne en dessous */
+#qc.ty #opts{order:1;margin-top:10px}
+#qc.ty #q{display:none}
+#qc.ty #opts{flex:none}
+#q-form .tyq{flex:0 0 100%;margin:2px 2px 0;font:italic 1rem Georgia,serif;color:var(--mu)}
+#qc.ty #q-form{margin-top:0}
+#qc.typing .pic{height:var(--picH)}
+.sh.side{right:0;margin:0;width:auto;border-radius:22px 0 0 0}
+.sh.side.full{max-height:calc(100vh - var(--hh,62px) - 8px)}
+@media (orientation:landscape) and (max-height:520px){#qc.ty{grid-template-areas:"pic opts" "pic q"}#qc.ty #opts{margin-top:0}}
 </style>
 </head>
 <body>
@@ -2212,14 +2233,14 @@ function buildCar(s,im,one){
 let firstQ=true;
 const focusCard=()=>{const e=$('qc');if(!e)return;if(firstQ){window.scrollTo(0,0);return}const h=($('top')&&$('top').offsetHeight)||56;document.documentElement.style.setProperty('--hh',h+'px');window.scrollTo(0,Math.max(0,e.getBoundingClientRect().top+(window.pageYOffset||0)-h-4))};
 async function next(){
-  const tk=++nxt;shTok++;$('sh').hidden=true;document.body.classList.remove('hs');if($('fch').open)closeSheet();
+  const tk=++nxt;shTok++;$('sh').hidden=true;document.body.classList.remove('hs');hsUpd();if($('fch').open)closeSheet();$('pic').style.height='';
   focusCard();
   $('next').hidden=true;$('fb').innerHTML='';$('opts').innerHTML='';$('opts').className='opts';$('pic').hidden=false;$('q').className='';pvSet=null;$('ex').hidden=true;$('qc').hidden=false;$('qc').classList.remove('typing');
   $('pic').className='pic sk';$('pic').textContent='Chargement…';done=false;
   const q=await(pre||prepare());
   if(tk!==nxt)return;pre=null;
   if(!q){$('pic').innerHTML='<div style="padding:16px"><p>Aucune image chargée. Vérifie la connexion.</p><button class="big" id="q-retry">Réessayer</button></div>';$('q-retry').onclick=()=>{bad.clear();next()};return}
-  cur=q.s;typed=q.typed;curTrain=!!q.train;pvSet=q.pv||null;
+  cur=q.s;typed=q.typed;curTrain=!!q.train;pvSet=q.pv||null;$('qc').classList.toggle('ty',!!typed&&!pvSet);if(typed&&!pvSet)firstQ=false;
   if(wasTrain&&!curTrain){toast('Entraînement terminé');famFocus=null}wasTrain=curTrain;if(curTrain)trN=Math.min(trN+1,trTot);trUI();
   if(pvSet){
     $('pic').hidden=true;$('q').className='pv';$('opts').className='opts ph';
@@ -2231,8 +2252,8 @@ async function next(){
   }else{buildCar(q.s,q.im,false);
   $('q').textContent=typed?'Écris le nom latin complet (genre + espèce)':'Quelle est cette plante ?';
   if(typed){
-    $('opts').innerHTML='<form id="q-form"><input id="q-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Touche ici pour écrire (Genus species)" aria-label="Nom latin"><button>Valider</button></form>';
-    $('q-form').onsubmit=e=>{e.preventDefault();if($('q-input').value.trim())answer($('q-input').value.trim())};$('q-input').onfocus=()=>{$('qc').classList.add('typing');setTimeout(()=>$('qc').scrollIntoView({block:'start',behavior:'smooth'}),250)};
+    $('opts').innerHTML='<form id="q-form"><input id="q-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Touche ici pour écrire (Genus species)" aria-label="Nom latin"><button>Valider</button><p class="tyq" id="q-ty">Écris le nom latin complet (genre + espèce)</p></form>';
+    $('q-form').onsubmit=e=>{e.preventDefault();if($('q-input').value.trim())answer($('q-input').value.trim())};$('q-input').onfocus=()=>{$('qc').classList.add('typing');kbFit();setTimeout(kbFit,350)};
   const jb=document.createElement('button');jb.type='button';jb.id='jk';jb.className='jk';$('q-form').append(jb);jokerUI();
   }else choices(cur).forEach((o,i)=>{
     const b=document.createElement('button');b.textContent=o[0];b.dataset.l=o[0];b.dataset.n=i+1;b.style.setProperty('--i',i);
@@ -2255,7 +2276,7 @@ function answer(v){
   if(!curTrain&&!good&&w){const k=[cur[0],w[0]].sort().join('|');st.cf[k]=(st.cf[k]||0)+1}
   save();last=cur[0];
   if(rk()>r0)rankAnim(R[rk()][1]);if(!curTrain&&h.n===goal())goalAnim();
-  if(typed){$('q-input').disabled=true;$('qc').classList.remove('typing')}
+  if(typed){$('q-input').blur();$('q-input').disabled=true;$('qc').classList.remove('typing');$('pic').style.height=''}
   document.querySelectorAll('.opts>button').forEach(b=>{b.disabled=true;
     if(b.dataset.l===cur[0])b.classList.add('ok');else if(b.dataset.l===v)b.classList.add('ko')});
   if(good)$('pic').classList.add('pop');$('pic').classList.add('ans');vib(good?15:[30,40,30]);$('opts').classList.add('rv');
@@ -2393,7 +2414,7 @@ function whyHtml(c,w){
 // Volet de correction : l'essentiel en quelques secondes, le détail à la demande
 async function showSheet(good,w,v){
   const c=cur,two=!good&&w&&w[0]!==c[0],sp=two?[c,w]:[c],sh=$('sh'),tk=++shTok,typo=typed&&good&&norm(v)!==norm(c[0]);
-  sh.hidden=false;sh.className='sh'+(two?' er':'')+(SHS==='peek'?' peek':'');setSh(SHS==='peek'?'peek':'mid');
+  if(SHS!=='peek')snapQc();sh.hidden=false;sh.className='sh'+(two?' er':'')+(SHS==='peek'?' peek':'');setSh(SHS==='peek'?'peek':'mid');
   const nc=two?cfPair(c[0],w[0]):0;
   $('shr').innerHTML=`<span class="v ${good?'y'+(typo?' ty':''):'n'}">${good?(typo?'Presque':'Juste'):'Raté'}</span> <b>${c[1]}</b> <em>${c[0]}</em>${famTag(c)}`+(acqNow?' <span class="acq">'+ico('etincelle','ic-in')+' Acquise</span>':(!curTrain&&st.sp[c[0]]&&st.sp[c[0]].b>=4?' <span class="acq2">Acquise '+ico('coche','ic-in')+'</span>':''))+(curTrain?' <small class="trt">'+ico('target','ic-in')+' entraînement</small>':'');
   let cp;
@@ -2407,7 +2428,6 @@ async function showSheet(good,w,v){
   $('shb').scrollTop=0;fitSh();setTimeout(fitSh,350);
   if(window.ResizeObserver){if(shRO)shRO.disconnect();shRO=new ResizeObserver(fitSh);const c0=document.querySelector('#shb .cp');if(c0)shRO.observe(c0)}
   $('sh-more').onclick=()=>setSh(shS()==='full'?'mid':'full');
-  if(SHS!=='peek')setTimeout(()=>{const e=$('qc');if(e&&e.scrollIntoView)e.scrollIntoView({behavior:'smooth',block:'start'})},80);
   if(two){
     Promise.all([getImg(c),getImg(w)]).then(([a,b])=>{if(tk!==shTok)return;if(a)setPh(c,a.src);if(b)setPh(w,b.src)}).catch(()=>{});
     Promise.all([leafImg(c),leafImg(w)]).then(([a,b])=>{if(tk!==shTok||!a||!b)return;setPh(c,a.src,a.label||'Feuillage');setPh(w,b.src,b.label||'Feuillage')}).catch(()=>{});
@@ -2685,11 +2705,31 @@ document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>tabTo(b.datas
 $('next').onclick=next;
 let SHS=(()=>{try{return localStorage.getItem('qp.shs')||'mid'}catch(e){return'mid'}})();
 const shS=()=>{const s=$('sh');return s.classList.contains('full')?'full':s.classList.contains('peek')?'peek':'mid'};
-const hsUpd=()=>document.body.classList.toggle('hs',!$('sh').hidden&&!$('sh').classList.contains('off')&&shS()!=='peek');
-function setSh(v){const s=$('sh');s.classList.toggle('peek',v==='peek');s.classList.toggle('full',v==='full');if(v!=='full'){SHS=v;try{localStorage.setItem('qp.shs',v)}catch(e){}}
+const hsUpd=()=>{const on=!$('sh').hidden&&!$('sh').classList.contains('off');document.body.classList.toggle('sho',on);document.body.classList.toggle('hs',on&&shS()!=='peek');try{veilSoon()}catch(e){}};
+function setSh(v){const s=$('sh');if(v!=='peek'&&shS()==='peek'&&!s.hidden)snapQc();s.classList.toggle('peek',v==='peek');s.classList.toggle('full',v==='full');if(v!=='full'){SHS=v;try{localStorage.setItem('qp.shs',v)}catch(e){}}
   $('shm').innerHTML=ico(v==='peek'?'chev-u':'chev-d');const m=$('sh-more');if(m)m.innerHTML=moreLbl(v==='full');hsUpd();fitSh()}
 let shRO=null;
-function fitSh(){const s=$('sh');if(!s||s.hidden||s.classList.contains('peek')||s.classList.contains('full')){if(s)s.style.maxHeight='';return}s.style.maxHeight='none';const b=$('shb'),need=s.offsetHeight-b.clientHeight+b.scrollHeight;s.style.maxHeight=Math.min(need+4,Math.round((typeof innerHeight==='number'?innerHeight:800)*.88))+'px'}
+// Haut le plus élevé permis pour la fiche : sous la photo en QCM et en écriture ; ailleurs (4 photos), presque tout l'écran
+function shTop(){const H=typeof innerHeight==='number'?innerHeight:800,p=$('pic');
+  if(!pvSet&&p&&!p.hidden&&p.getClientRects().length){const lim=Math.round(p.getBoundingClientRect().bottom)+8;if(H-lim>=180)return lim}
+  return Math.round(H*.12)}
+// Carte d'exercice replacée d'un coup sous l'en-tête (même position que pendant la question)
+function snapQc(){const e=$('qc');if(!e||$('quiz').hidden)return;const h=($('top')&&$('top').offsetHeight)||56;window.scrollTo(0,Math.max(0,e.getBoundingClientRect().top+(window.pageYOffset||0)-h-4))}
+// Téléphone en paysage : la photo est à gauche, la fiche prend la place des réponses à sa droite
+const shSide=()=>typeof matchMedia==='function'&&matchMedia('(orientation:landscape) and (max-height:520px)').matches&&!pvSet&&!$('pic').hidden;
+function fitSh(){const s=$('sh');if(!s)return;
+  const side=!s.hidden&&shSide();s.classList.toggle('side',side);s.style.left=side?Math.round($('pic').getBoundingClientRect().right+8)+'px':'';
+  if(s.hidden||s.classList.contains('peek')||s.classList.contains('full')){s.style.maxHeight='';return}
+  const H=typeof innerHeight==='number'?innerHeight:800;
+  if(side){s.style.maxHeight=(H-(($('top')&&$('top').offsetHeight)||56)-8)+'px';return}
+  s.style.maxHeight='none';const b=$('shb'),need=s.offsetHeight-b.clientHeight+b.scrollHeight;s.style.maxHeight=Math.max(120,Math.min(need+4,H-shTop()))+'px'}
+// Clavier ouvert (écriture) : si la barre de réponse passe sous le clavier, la photo rétrécit par le bas, sans rien faire défiler
+function kbFit(){const q=$('qc'),p=$('pic'),i=$('q-input'),vv=window.visualViewport;if(!q||!q.classList.contains('typing')||!i||!vv)return;
+  p.style.height='';const over=i.getBoundingClientRect().bottom+8-(vv.offsetTop+vv.height);if(over>0)p.style.height=Math.max(110,p.offsetHeight-over)+'px'}
+if(window.visualViewport)visualViewport.addEventListener('resize',kbFit);
+if(typeof addEventListener==='function')addEventListener('resize',()=>{const s=$('sh');if(s&&!s.hidden&&document.body.classList.contains('hs')){snapQc();fitSh()}});
+// Fiche dépliée : seuls le défilement des photos, le contenu de la fiche et les fenêtres ouvertes bougent
+document.addEventListener('touchmove',e=>{if(!document.body.classList.contains('hs'))return;const t=e.target;if(t&&t.closest&&t.closest('#shb,.car,dialog,#zm,.rku'))return;if(e.cancelable)e.preventDefault()},{passive:false});
 $('shn').onclick=next;
 // Réponse = la case sur laquelle le doigt (ou la souris) s'est posé, même si la page a bougé avant le relâchement
 let dn=null;
@@ -2718,7 +2758,7 @@ document.addEventListener('keydown',e=>{
 });
 (()=>{ // glissement : la carte suit le doigt, un geste franc passe à la question suivante
   let x0=0,y0=0,dx=0,on=false;const q=$('quiz'),els=()=>[$('qc')];
-  q.addEventListener('touchstart',e=>{on=done&&!e.target.closest('.pic,input,a,button,.xt,#sh');if(!on)return;x0=e.touches[0].clientX;y0=e.touches[0].clientY;dx=0;els().forEach(el=>el.style.transition='none')},{passive:true});
+  q.addEventListener('touchstart',e=>{on=done&&!document.body.classList.contains('hs')&&!e.target.closest('.pic,input,a,button,.xt,#sh');if(!on)return;x0=e.touches[0].clientX;y0=e.touches[0].clientY;dx=0;els().forEach(el=>el.style.transition='none')},{passive:true});
   q.addEventListener('touchmove',e=>{if(!on)return;dx=e.touches[0].clientX-x0;const dy=e.touches[0].clientY-y0;if(Math.abs(dx)<12||Math.abs(dy)>Math.abs(dx)*1.4)return;const a=Math.min(1,Math.abs(dx)/120);els().forEach(el=>{el.style.transform=`translateX(${dx}px) rotate(${dx/40}deg)`;el.style.opacity=1-a*.5;el.style.boxShadow=`0 0 0 ${(a*6).toFixed(1)}px var(--ac)`})},{passive:true});
   q.addEventListener('touchend',()=>{if(!on)return;on=false;const go=Math.abs(dx)>90;
     els().forEach(el=>{el.style.transition='transform .22s ease,opacity .22s ease,box-shadow .22s';if(go){el.style.transform=`translateX(${dx>0?120:-120}%) rotate(${dx>0?12:-12}deg)`;el.style.opacity=0}else{el.style.transform='';el.style.opacity='';el.style.boxShadow=''}});
@@ -2742,8 +2782,8 @@ if(canListen){addEventListener('resize',measureHH);addEventListener('orientation
 let veilRaf=0;
 function veilHole(){
   const v=$('veil');if(!v)return;
-  const on=document.body.classList.contains('hs')&&!document.querySelector('dialog[open]');
-  const el=$('opts').classList.contains('ph')?$('opts'):$('pic');
+  const on=document.body.classList.contains('hs')&&!document.querySelector('dialog[open]')&&!$('sh').classList.contains('full')&&!$('opts').classList.contains('ph');
+  const el=$('pic');
   if(!on||!el||el.hidden||!el.offsetParent){v.style.clipPath='';return}
   const r=el.getBoundingClientRect(),W=innerWidth,H=innerHeight;
   if(r.bottom<=0||r.top>=H||r.width<2){v.style.clipPath='';return}
@@ -2751,7 +2791,7 @@ function veilHole(){
   v.style.clipPath="path(evenodd,'M0 0H"+W+"V"+H+"H0Z M"+f(x+k)+" "+f(y)+"H"+f(x+w-k)+"Q"+f(x+w)+" "+f(y)+" "+f(x+w)+" "+f(y+k)+"V"+f(y+h-k)+"Q"+f(x+w)+" "+f(y+h)+" "+f(x+w-k)+" "+f(y+h)+"H"+f(x+k)+"Q"+f(x)+" "+f(y+h)+" "+f(x)+" "+f(y+h-k)+"V"+f(y+k)+"Q"+f(x)+" "+f(y)+" "+f(x+k)+" "+f(y)+"Z')";
 }
 const veilSoon=()=>{if(!veilRaf)veilRaf=requestAnimationFrame(()=>{veilRaf=0;veilHole()})};
-if(canListen&&typeof MutationObserver==='function'){const mo=new MutationObserver(veilSoon);mo.observe(document.body,{attributes:true,attributeFilter:['class']});document.querySelectorAll('dialog').forEach(d=>mo.observe(d,{attributes:true,attributeFilter:['open']}));
+if(canListen&&typeof MutationObserver==='function'){const mo=new MutationObserver(veilSoon);mo.observe(document.body,{attributes:true,attributeFilter:['class']});mo.observe($('sh'),{attributes:true,attributeFilter:['class','style','hidden']});document.querySelectorAll('dialog').forEach(d=>mo.observe(d,{attributes:true,attributeFilter:['open']}));
   addEventListener('scroll',veilSoon,{passive:true});addEventListener('resize',veilSoon);addEventListener('orientationchange',veilSoon)}
 streak=+st.streak||0;stats();
 </script>

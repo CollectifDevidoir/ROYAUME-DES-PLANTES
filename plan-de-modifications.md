@@ -116,6 +116,20 @@ Contrôle : `outils/controle_reglages.js` (26 vérifications dans Chromium, à 3
 
 ---
 
+## Corrections avant l'étape 5 (retours sur les étapes 2 et 4) — FAITES
+
+| N° | Demande | Résultat |
+|---|---|---|
+| C1 | Rien ne bouge en fond tant que la fiche est dépliée, hormis le défilement des photos. | Page figée (molette, touches, doigt) ; restent possibles le défilement des photos, celui du contenu de la fiche et les fenêtres ouvertes. Le glissement de la carte vers la question suivante est désactivé fiche dépliée. Fiche réduite en bandeau : le fond redevient libre. Le trou du flou ne se décale plus. |
+| C2 | Photo toujours au même endroit en QCM et en écriture, jamais recouverte ; fiche jusqu'en bas de l'écran ; onglets de retour à « Question suivante ». | La fiche ne monte jamais au-dessus du bas de la photo (elle défile à l'intérieur) et descend jusqu'en bas de l'écran ; les onglets se retirent tant qu'elle est affichée. La carte est replacée sous l'en-tête d'un coup au moment de la réponse. En écriture, la photo ne bouge plus avant, pendant ni après la réponse. Téléphone en paysage : la fiche prend la place des réponses, à droite de la photo. |
+| C3 | Écriture : barre de réponse juste sous la photo, consigne en dessous ; écran figé à l'ouverture du clavier. | Ordre : photo, barre de réponse, consigne, indice. Plus de défilement automatique au toucher de la barre ; si le clavier la cacherait, la photo raccourcit par le bas (son haut ne bouge pas). |
+| C4 | 4 photos : tout l'arrière-plan reste flouté à l'apparition de la fiche. | Fait. |
+| C5 | Fond entièrement flouté à l'ouverture des détails des fiches. | « Plus de détails » ferme le trou du flou ; les fenêtres de fiche étaient déjà entièrement floutées. |
+
+Contrôles : `outils/controle_fige.js` (29 vérifications ; échoue sur l'ancienne version), `outils/controle_clavier.js` (clavier simulé, 4 tailles d'écran), avec un banc d'essai qui simule iNaturalist et les photos (`outils/banc_essai.js`, `outils/lance_exercice.js`).
+
+---
+
 ## Étape 5 — Progrès et Herbier
 
 | ID | Tâche | Critère de réussite |
