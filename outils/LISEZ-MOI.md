@@ -19,6 +19,8 @@ Le réseau n'est pas nécessaire : `banc_essai.js` simule iNaturalist et génèr
 | `controle_noir.js [fichier] [dossier]` | Aucune zone noire en haut de l'écran (décor), 10 formats, clair et sombre. |
 | `controle_saisie.js [largeur hauteur]` | Joker (initiales dans le champ) et validation d'une réponse vide. |
 | `controle_regularite.js [largeur hauteur]` | Graphique de régularité : ligne de l'objectif et initiales des jours. |
+| `controle_categories.js [dossier]` | Ligne de tuiles des catégories : une ligne, aucun libellé coupé, tuile active, icônes sur ordinateur (7 tailles). Variable `F` : autre fichier HTML. |
+| `controle_confusion.js [fichier]` | Mode confusion : duel des deux espèces (photos côte à côte, médaillon centré), puis points à comparer, puis exercice. |
 | `simulation_memoire.js [jours] [graines]` | Simulation de progression avec le vrai code de l'appli (étape 6). |
 
 Fichiers d'appui : `banc_essai.js` (ouverture de l'appli avec un faux iNaturalist ; option `seed` pour figer le hasard) et `lance_exercice.js` (affiche un exercice d'un type donné).

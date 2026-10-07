@@ -435,7 +435,6 @@ dialog .hp{margin:0 0 6px;font-size:.95rem}
 .hdl .tdy{color:var(--ac);font-weight:800}
 .hd{margin:8px 0 0;font-size:.9rem;min-height:1.3em}
 #chips{display:block}
-#chips .cats button span{font-size:1.15rem;line-height:1.2}
 .mini{min-height:36px}
 #q:empty{display:none}
 
@@ -506,9 +505,6 @@ small.fm{color:var(--mu);font-size:.72rem}
 #chips .call small{font:400 .72rem system-ui;opacity:.8}
 #chips .call:active{transform:scale(.99)}
 #chips .call[aria-pressed=true]{background:linear-gradient(135deg,#4d9a5a,#2f6b3f);border-color:transparent;color:#fff;box-shadow:0 8px 18px -8px rgba(30,90,50,.7)}
-#chips .cats{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin:8px 0 0}
-#chips .cats button{min-height:30px;padding:3px 1px;font:500 .68rem system-ui;border:1px solid var(--bd);border-radius:99px;background:transparent;color:var(--mu);cursor:pointer}
-#chips .cats button[aria-pressed=true]{background:rgba(47,107,63,.14);border-color:var(--ac);color:var(--ac);font-weight:700}
 .acts{display:flex;gap:8px;margin-top:8px}
 .act{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:7px 8px;border:0;border-radius:12px;background:rgba(47,107,63,.09);color:var(--fg);font:600 .76rem system-ui;cursor:pointer;position:relative}
 .act[hidden]{display:none}
@@ -702,9 +698,8 @@ main{padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env
  .tabs{padding:2px}.tabs button span{font-size:1rem}
 }
 /* zones tactiles de 44 px sans changer le dessin : la zone réactive dépasse le bouton */
-#chips .cats button,.help,.act,.mini,.reset,.fnx,.grip,.hb{position:relative}
+.help,.act,.mini,.reset,.fnx,.grip,.hb{position:relative}
 .help{position:absolute}
-#chips .cats button::after{content:'';position:absolute;inset:-7px 0}
 .help::after{content:'';position:absolute;inset:-9px}
 .act::after{content:'';position:absolute;inset:-5px 0}
 .mini::after,.reset::after{content:'';position:absolute;inset:-4px 0}
@@ -731,7 +726,6 @@ main{overflow-x:clip}
 #shm::after{content:'';position:absolute;inset:-7px}
 .acts{margin-top:12px}
 .mini::after{inset:-6px 0}
-#chips .cats button::after{inset:-8px 0}
 .acts{margin-top:14px}
 /*@ICONS-CSS*/
 .ri .wa{fill:url(#gWa)}.ri .gl{fill:url(#gGl)}.ri .fl{fill:url(#gFl)}.ri .ws{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round}.ri .gs{fill:none;stroke:#7aa0a6;stroke-linecap:round;stroke-linejoin:round}.ri .sf{fill:none;stroke:#5aa6e0;stroke-linecap:round;stroke-linejoin:round}.ri .vn{fill:none;stroke:#fff;stroke-opacity:.45;stroke-linecap:round}.ri .tx{fill:none;stroke:#b8b09c;stroke-linecap:round}.ri .wh{fill:#fff}.tgi .gi{width:100%;height:100%;display:block;fill:none;stroke:currentColor;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
@@ -755,9 +749,34 @@ main{overflow-x:clip}
 .c1 .ci{display:block;line-height:0}
 .c1 .ci .tgi{width:28px;height:28px}
 .more{display:inline-flex;align-items:center;justify-content:center;gap:2px}
+/* ===== Catégories (lot 2, option B) : tuiles rectangulaires de style carte, une seule ligne ;
+   la tuile active reprend le vert du bouton « Classique » ===== */
+#chips .cats{display:flex;gap:5px;margin:10px 0 0}
+#chips .cats button{position:relative;flex:1 1 auto;min-width:0;min-height:36px;display:flex;align-items:center;justify-content:center;gap:6px;padding:0 6px;border:1px solid var(--bd);border-radius:10px;background:var(--card);color:var(--fg);font:600 12px system-ui;white-space:nowrap;box-shadow:0 1px 2px rgba(20,40,26,.07);cursor:pointer;transition:background .2s,transform .12s}
+#chips .cats button::after{content:'';position:absolute;inset:-4px 0}
+#chips .cats button:active{transform:scale(.97)}
+#chips .cats button[aria-pressed=true]{background:linear-gradient(135deg,#4d9a5a,#2f6b3f);border-color:transparent;color:#fff;box-shadow:0 6px 14px -8px rgba(30,90,50,.8)}
+#chips .cats .cti{display:none;width:20px;height:20px;flex:none}
+#chips .cats .cti svg{width:100%;height:100%}
+@media (max-width:379px){#chips .cats{gap:4px}#chips .cats button{padding:0 3px;font-size:11px}}
+@media (min-width:700px){#chips .cats .cti{display:block}#chips .cats button{min-height:40px;font-size:13px}}
+/* ===== Mode confusion (lot 2, point 5) : le duel des deux espèces, avant les critères ===== */
+.duel{position:relative;container-type:inline-size;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin:4px 0 14px}
+.dlc{margin:0;display:flex;flex-direction:column;gap:7px;min-width:0}
+.dlc img,.dlph{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;background:var(--bg1);box-shadow:0 2px 8px -4px rgba(20,40,26,.4)}
+.dlc figcaption{display:flex;flex-direction:column;gap:1px;line-height:1.2}
+.dlc b{font:700 .98rem system-ui;color:var(--fg)}
+.dlc em{font:italic .95rem Georgia,serif;color:var(--mu)}
+/* médaillon centré entre les deux photos, à mi-hauteur des photos (largeur d'une photo = (100cqw - 12px) / 2) */
+.dlv{position:absolute;left:50%;top:calc((100cqw - 12px) / 2 * .375);transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:3px;pointer-events:none}
+.dlv .tgi{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--card);border:1.5px solid var(--bd);box-shadow:0 2px 8px -3px rgba(20,40,26,.5)}
+.dlv .tgi svg{width:20px;height:20px}
+.dlv small{position:absolute;top:100%;margin-top:3px;padding:1px 7px;border-radius:8px;background:var(--card);font:700 11px system-ui;color:var(--ko);white-space:nowrap;box-shadow:0 1px 4px -2px rgba(20,40,26,.5)}
+/* sous le duel, les colonnes de critères ne répètent pas les noms */
+.duel~.cmp2>div>b,.duel~.cmp2>div>br,.duel~.cmp2>div>em{display:none}
+.duel~.cmp2{column-gap:12px}
+@media (min-width:900px) and (pointer:fine){.fch{width:min(720px,92vw);margin:auto;border-radius:20px;max-height:86vh}}
 /* ===== M2 : textes importants à 12 px (validés) ===== */
-#chips .cats{display:flex;justify-content:space-between;gap:4px}
-#chips .cats button{flex:0 1 auto;padding:3px 8px;font-size:12px;white-space:nowrap}
 .tabs button{font-size:12px}
 .pk b{font-size:12px;line-height:1.15;padding:3px 4px}
 .c1 .cv{font-size:12px}
@@ -765,9 +784,6 @@ main{overflow-x:clip}
 .rank .rl1 small,#rc{font-size:12px}
 #chips .call small{font-size:12px}
 small.fm,.fm{font-size:12px}
-@media (max-width:359px){#chips .cats button{padding:3px 5px;font-size:11.5px}}
-#chips .cats{gap:3px}
-#chips .cats button{padding:3px 4px}
 
 /* ===== Étape 4 : réglages, frise des niveaux ===== */
 .rank .ring{cursor:pointer;-webkit-tap-highlight-color:transparent;position:relative}
@@ -2410,12 +2426,15 @@ function detHtml(sp,P,D,two,_tg){
 async function openSheet(c,w,o){
   o=o||{};const tk=++shTok,d=$('fch'),two=!!(w&&w[0]!==c[0]),sp=two?[c,w]:[c];
   $('fht').textContent=two?'Ne plus confondre':'Fiche de la plante';
-  $('fcb').innerHTML='<p class="ld">Chargement…</p>';
+  // duel : les deux espèces côte à côte, affichées tout de suite (photos dès qu'elles arrivent)
+  const duel=PL=>{const n=Math.round(cfPair(c[0],w[0])),card=(s,i)=>{const src=(PL&&PL[i]&&PL[i][0]&&PL[i][0].src)||(cache[s[0]]&&cache[s[0]].src)||'';return `<figure class="dlc">${src?`<img src="${src}" referrerpolicy="no-referrer" alt="${esc(s[1])}">`:'<span class="dlph" aria-hidden="true"></span>'}<figcaption><b>${s[1]}</b><em>${s[0]}</em></figcaption></figure>`};
+    return `<div class="duel" role="group" aria-label="${esc(c[1])} ou ${esc(w[1])}">${card(c,0)}<div class="dlv" aria-hidden="true">${ico('swap')}${n?`<small>confondues ${n}×</small>`:''}</div>${card(w,1)}</div>`};
+  $('fcb').innerHTML=(two?duel(null):'')+'<p class="ld">Chargement…</p>';
   $('fcf').innerHTML=o.go?'<button class="big" id="fch-go" type="button">S\'entraîner à les distinguer</button>':'';
   if(d.showModal){if(!d.open)d.showModal()}else d.setAttribute('open','');
   if(o.go)$('fch-go').onclick=()=>{closeSheet();o.go()};
   const{P,D}=await sheetData(sp);if(tk!==shTok)return;
-  $('fcb').innerHTML=(two?'':idHtml(c,P[0]))+cmpHtml(sp,false)+'<button class="more" id="fch-more" type="button">'+moreLbl(false)+'</button><div class="dt2" id="fch-dt" hidden>'+detHtml(sp,P,D,two,false)+'</div>';$('fcb').scrollTop=0;
+  $('fcb').innerHTML=(two?duel(P):idHtml(c,P[0]))+cmpHtml(sp,false)+'<button class="more" id="fch-more" type="button">'+moreLbl(false)+'</button><div class="dt2" id="fch-dt" hidden>'+detHtml(sp,P,D,two,false)+'</div>';$('fcb').scrollTop=0;
   $('fch-more').onclick=()=>{const d=$('fch-dt');d.hidden=!d.hidden;$('fch-more').innerHTML=moreLbl(!d.hidden)};
 }
 // Fiche après réponse : volet bas, à mi-écran, avec l'essentiel ; « plus de détails » l'agrandit sur place
@@ -2724,7 +2743,7 @@ function chips(){
   const pick=k=>{mode=k;firstQ=true;try{localStorage.setItem('qp.mode',k)}catch(e){}restart()};
   const a=$('cAll');a.innerHTML='Classique<small>toutes les plantes mélangées</small>';a.setAttribute('aria-pressed',mode==='tout');a.onclick=()=>pick('tout');
   const g=$('cats');g.innerHTML='';
-  for(const k in T){if(k==='tout')continue;const b=document.createElement('button');b.setAttribute('aria-pressed',k===mode);b.textContent=T[k];b.onclick=()=>pick(k);g.append(b)}
+  for(const k in T){if(k==='tout')continue;const b=document.createElement('button');b.setAttribute('aria-pressed',k===mode);b.innerHTML='<span class="cti" aria-hidden="true">'+catIcon(k)+'</span>'+T[k];b.onclick=()=>pick(k);g.append(b)}
 }
 function tabTo(t){
   document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-current',x.dataset.t===t));

@@ -158,6 +158,15 @@ Règles inchangées : une étape à la fois, validation avant la suivante, contr
 
 Non-régression : recette 133/133 et les 7 contrôles existants OK. Captures téléphone avant/après : les seules différences sont la bande du haut (canopée) et le graphique de Progrès.
 
+## Étape B — points 3, 5 — FAITE
+
+| Point | Résultat | Contrôle |
+|---|---|---|
+| 3. Catégories | Option B : une seule ligne de tuiles rectangulaires (coins de 10 px, fond carte, ombre légère). La tuile active a un dégradé vert et un texte blanc. Sur ordinateur (≥ 700 px), chaque tuile montre aussi l'icône de sa catégorie. Les zones tactiles restent à 44 px. L'ancien CSS des pastilles (grille, bulles, règles M2) est retiré. | `outils/controle_categories.js` : 7 tailles de 320 à 2560 px. Une ligne, aucun libellé coupé, tuile active lisible, icônes sur ordinateur. |
+| 5. Mode confusion | La fiche s'ouvre sur un **duel** : les deux photos côte à côte, à taille égale, avec les noms français et latins dessous. Un médaillon ⇄ au centre affiche « confondues N× ». Le duel apparaît tout de suite (les noms d'abord, les photos dès qu'elles arrivent). Viennent ensuite les « Points à comparer », alignés sous chaque photo, puis le bouton d'exercice. Sur ordinateur, la fiche devient une fenêtre centrée de 720 px. | `outils/controle_confusion.js` : 5 tailles, médaillon centré à 0 px près, ordre duel → points → exercice, pas de débordement. |
+
+Non-régression : recette 133/133 et tous les contrôles existants OK. Captures téléphone avant/après : seules la ligne des catégories (et la mise en page qui la suit, à 4 px près) et la fiche de confusion changent.
+
 ## Ordre proposé
 
 | Étape | Contenu | Pourquoi cet ordre |
