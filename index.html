@@ -122,7 +122,7 @@ dialog p{margin:0 0 4px;font-size:.9rem}
 .col button,.cfr button{font:600 .95rem system-ui;padding:11px;border:0;border-radius:12px;background:var(--ac);color:var(--card);cursor:pointer}
 .col button:last-child{background:none;color:var(--ac);border:1.5px solid var(--ac)}
 .kp{display:flex;gap:8px;text-align:center;margin-bottom:12px}
-.kp div{flex:1;font-size:.75rem;color:var(--mu);background:var(--bg1);border-radius:12px;padding:10px 4px}
+.kp div{flex:1;min-width:0;line-height:1.3;font-size:.75rem;color:var(--mu);background:var(--bg1);border-radius:12px;padding:10px 4px}
 .kp b{display:block;font:700 1.5rem Georgia,serif;color:var(--ac)}
 .hist{display:flex;align-items:flex-end;gap:3px;height:80px}
 .hist div{flex:1;height:100%;display:flex;align-items:flex-end;background:var(--bg1);border-radius:4px}
@@ -893,11 +893,28 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
 .prm svg{width:52px;height:52px}
 .prf h2{margin:0;font:700 1.5rem Georgia,serif}
 .prf .prh p{margin:0;color:var(--ac);font-weight:600}
-.prs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:12px}
-.prs>div{display:flex;flex-direction:column;align-items:center;gap:1px;padding:8px 4px;border-radius:12px;background:var(--bg2);text-align:center}
-.prs b{display:flex;align-items:center;gap:3px;font:700 1.35rem Georgia,serif;color:var(--fg)}
-.prs small{font:600 12px system-ui;color:var(--mu)}
-.prs .tgi{width:22px;height:22px;margin:0}
+/* Échelle des rangs : atteints en couleur, actuel cerclé, à venir estompés */
+.rgs{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:2px;margin:14px 0 0;padding:0;list-style:none}
+.rgs li{display:grid;place-items:center;aspect-ratio:1;border-radius:50%}
+.rgs .tgi{width:88%;height:88%;margin:0}
+.rgs .fut .tgi{opacity:.3;filter:grayscale(1)}
+.rgs .ici{background:var(--bg2);box-shadow:0 0 0 2px var(--ac)}
+.rgn{margin:10px 0 0}.rgn b{color:var(--fg)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* Dans le volet, les blocs du profil ne sont plus des cartes mais des sections */
+#ami .card{background:none;border:0;border-radius:0;box-shadow:none;padding:0;margin:0;-webkit-backdrop-filter:none;backdrop-filter:none}
+#ami .card+.card{margin-top:16px;padding-top:14px;border-top:1px solid var(--bd)}
+#ami{padding-top:4px}
+/* Logo de rang de l'en-tête : il ouvre le profil */
+.rank .medal{position:relative;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.rank .medal:focus-visible{outline:3px solid var(--ac2);outline-offset:2px}
+.mdb{position:absolute;right:-3px;bottom:-3px;width:19px;height:19px;border-radius:50%;background:var(--ac);border:2px solid var(--card);display:grid;place-items:center;pointer-events:none}
+.mdb svg{width:11px;height:11px;fill:var(--card)}
+.medal.nv .mdb{animation:mdb 1.6s ease-in-out 1s 4}
+@keyframes mdb{50%{transform:scale(1.3)}}
+@media(prefers-reduced-motion:reduce){.medal.nv .mdb{animation:none}}
+.kp b .tgi{display:inline-block;width:.8em;height:.8em;margin-right:2px;vertical-align:-.05em}
+.lk>span:not(.tgi){display:flex;flex-direction:column;min-width:0}.lk small{font:500 12px system-ui;color:var(--mu)}
 .sbf{display:flex;flex-direction:column;gap:10px;margin-top:10px}
 .sbf label{display:flex;flex-direction:column;gap:4px;font:600 .85rem system-ui;color:var(--mu)}
 .sbf input{width:100%;min-height:44px;padding:10px 12px;border-radius:12px;border:1.5px solid var(--bd);background:#fff;color:#14281a;font:1rem system-ui}
@@ -963,8 +980,8 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
 <rect y="520" width="1200" height="280" fill="url(#mg)"/>
 <path class="fr" d="M11 766Q33.7 774.6 51.9 758.6Q29.2 750 11 766ZM11 766Q8.7 741.9 -13.7 732.5Q-11.4 756.7 11 766ZM17.6 750.4Q38.5 759.8 56.6 745.7Q35.7 736.3 17.6 750.4ZM17.6 750.4Q16.8 727.4 -3.7 717.3Q-3 740.2 17.6 750.4ZM24.9 735.7Q43.9 745.9 61.9 733.9Q42.8 723.7 24.9 735.7ZM24.9 735.7Q25.6 714.1 6.9 703.2Q6.1 724.9 24.9 735.7ZM32.8 722.1Q50.1 733 67.7 722.9Q50.5 712.1 32.8 722.1ZM32.8 722.1Q35 701.9 18.2 690.5Q16 710.7 32.8 722.1ZM41.5 709.6Q56.8 720.9 74 712.8Q58.7 701.4 41.5 709.6ZM41.5 709.6Q45 690.9 30.2 679Q26.7 697.7 41.5 709.6ZM50.9 698Q64.3 709.7 80.9 703.5Q67.5 691.8 50.9 698ZM50.9 698Q55.6 680.9 42.7 668.8Q38 685.9 50.9 698ZM61 687.5Q72.4 699.4 88.2 694.9Q76.8 683.1 61 687.5ZM61 687.5Q66.7 672.1 55.7 659.9Q50.1 675.3 61 687.5ZM71.8 678.1Q81.3 689.8 96.2 687Q86.7 675.2 71.8 678.1ZM71.8 678.1Q78.2 664.4 69.1 652.3Q62.7 666 71.8 678.1ZM83.3 669.7Q91 681.1 104.8 679.7Q97.1 668.2 83.3 669.7ZM83.3 669.7Q90.2 657.7 82.9 645.9Q76 657.9 83.3 669.7ZM95.5 662.2Q101.6 673.2 114.1 673Q108 662.1 95.5 662.2ZM95.5 662.2Q102.7 652 97 640.8Q89.8 651.1 95.5 662.2ZM108.4 655.9Q113 666.1 124.2 666.9Q119.6 656.7 108.4 655.9ZM108.4 655.9Q115.6 647.3 111.4 636.9Q104.2 645.5 108.4 655.9ZM122 650.5Q125.3 659.9 135.1 661.4Q131.8 652 122 650.5ZM122 650.5Q129 643.5 126 634Q119.1 641.1 122 650.5ZM136.3 646.2Q138.5 654.6 146.9 656.5Q144.7 648.2 136.3 646.2ZM136.3 646.2Q142.8 640.6 140.9 632.2Q134.4 637.8 136.3 646.2ZM151.3 643Q152.6 650.2 159.6 652.4Q158.3 645.2 151.3 643ZM151.3 643Q157.2 638.6 156.1 631.4Q150.2 635.7 151.3 643ZM-3 800Q40 650 175 640Q44 654 3 800ZM52.2 777.9Q62.7 789.7 78.1 785.9Q67.5 774.2 52.2 777.9ZM52.2 777.9Q58.1 763.3 48 751.2Q42 765.8 52.2 777.9ZM67.1 765.8Q76 777.5 90.5 775.2Q81.6 763.4 67.1 765.8ZM67.1 765.8Q73.7 752.6 65.2 740.6Q58.6 753.8 67.1 765.8ZM82.4 755.3Q89.7 766.8 103.3 765.8Q96 754.3 82.4 755.3ZM82.4 755.3Q89.6 743.7 82.7 731.9Q75.6 743.5 82.4 755.3ZM98.3 746.3Q104 757.5 116.6 757.7Q110.8 746.6 98.3 746.3ZM98.3 746.3Q105.8 736.3 100.5 724.9Q93 735 98.3 746.3ZM114.6 739Q118.9 749.7 130.3 751Q126 740.3 114.6 739ZM114.6 739Q122.3 730.5 118.4 719.7Q110.7 728.2 114.6 739ZM131.4 733.3Q134.3 743.3 144.5 745.4Q141.6 735.5 131.4 733.3ZM131.4 733.3Q139.1 726.3 136.5 716.2Q128.8 723.3 131.4 733.3ZM148.7 729.3Q150.4 738.4 159.4 741.2Q157.6 732 148.7 729.3ZM148.7 729.3Q156.1 723.7 154.7 714.4Q147.2 720 148.7 729.3ZM166.4 726.8Q167.2 735 174.9 738.1Q174.1 729.9 166.4 726.8ZM166.4 726.8Q173.5 722.5 172.9 714.2Q165.9 718.6 166.4 726.8ZM184.7 725.9Q184.7 733.1 191.1 736.4Q191 729.2 184.7 725.9ZM184.7 725.9Q191.1 722.7 191.3 715.6Q184.9 718.8 184.7 725.9ZM203.4 726.7Q202.9 732.7 208.1 736Q208.5 729.9 203.4 726.7ZM203.4 726.7Q209 724.4 209.7 718.4Q204.1 720.6 203.4 726.7ZM222.6 729Q221.8 734 225.8 737Q226.6 732 222.6 729ZM222.6 729Q227.3 727.6 228.3 722.7Q223.5 724.1 222.6 729ZM27 800Q120 700 250 735Q124 704 33 800ZM1189 766Q1211.4 756.7 1213.7 732.5Q1191.3 741.9 1189 766ZM1189 766Q1170.8 750 1148.1 758.6Q1166.3 774.6 1189 766ZM1182.4 750.4Q1203 740.2 1203.7 717.3Q1183.2 727.4 1182.4 750.4ZM1182.4 750.4Q1164.3 736.3 1143.4 745.7Q1161.5 759.8 1182.4 750.4ZM1175.1 735.7Q1193.9 724.9 1193.1 703.2Q1174.4 714.1 1175.1 735.7ZM1175.1 735.7Q1157.2 723.7 1138.1 733.9Q1156.1 745.9 1175.1 735.7ZM1167.2 722.1Q1184 710.7 1181.8 690.5Q1165 701.9 1167.2 722.1ZM1167.2 722.1Q1149.5 712.1 1132.3 722.9Q1149.9 733 1167.2 722.1ZM1158.5 709.6Q1173.3 697.7 1169.8 679Q1155 690.9 1158.5 709.6ZM1158.5 709.6Q1141.3 701.4 1126 712.8Q1143.2 720.9 1158.5 709.6ZM1149.1 698Q1162 685.9 1157.3 668.8Q1144.4 680.9 1149.1 698ZM1149.1 698Q1132.5 691.8 1119.1 703.5Q1135.7 709.7 1149.1 698ZM1139 687.5Q1149.9 675.3 1144.3 659.9Q1133.3 672.1 1139 687.5ZM1139 687.5Q1123.2 683.1 1111.8 694.9Q1127.6 699.4 1139 687.5ZM1128.2 678.1Q1137.3 666 1130.9 652.3Q1121.8 664.4 1128.2 678.1ZM1128.2 678.1Q1113.3 675.2 1103.8 687Q1118.7 689.8 1128.2 678.1ZM1116.7 669.7Q1124 657.9 1117.1 645.9Q1109.8 657.7 1116.7 669.7ZM1116.7 669.7Q1102.9 668.2 1095.2 679.7Q1109 681.1 1116.7 669.7ZM1104.5 662.2Q1110.2 651.1 1103 640.8Q1097.3 652 1104.5 662.2ZM1104.5 662.2Q1092 662.1 1085.9 673Q1098.4 673.2 1104.5 662.2ZM1091.6 655.9Q1095.8 645.5 1088.6 636.9Q1084.4 647.3 1091.6 655.9ZM1091.6 655.9Q1080.4 656.7 1075.8 666.9Q1087 666.1 1091.6 655.9ZM1078 650.5Q1080.9 641.1 1074 634Q1071 643.5 1078 650.5ZM1078 650.5Q1068.2 652 1064.9 661.4Q1074.7 659.9 1078 650.5ZM1063.7 646.2Q1065.6 637.8 1059.1 632.2Q1057.2 640.6 1063.7 646.2ZM1063.7 646.2Q1055.3 648.2 1053.1 656.5Q1061.5 654.6 1063.7 646.2ZM1048.7 643Q1049.8 635.7 1043.9 631.4Q1042.8 638.6 1048.7 643ZM1048.7 643Q1041.7 645.2 1040.4 652.4Q1047.4 650.2 1048.7 643ZM1197 800Q1160 650 1025 640Q1164 654 1203 800ZM1147.8 777.9Q1158 765.8 1152 751.2Q1141.9 763.3 1147.8 777.9ZM1147.8 777.9Q1132.5 774.2 1121.9 785.9Q1137.3 789.7 1147.8 777.9ZM1132.9 765.8Q1141.4 753.8 1134.8 740.6Q1126.3 752.6 1132.9 765.8ZM1132.9 765.8Q1118.4 763.4 1109.5 775.2Q1124 777.5 1132.9 765.8ZM1117.6 755.3Q1124.4 743.5 1117.3 731.9Q1110.4 743.7 1117.6 755.3ZM1117.6 755.3Q1104 754.3 1096.7 765.8Q1110.3 766.8 1117.6 755.3ZM1101.7 746.3Q1107 735 1099.5 724.9Q1094.2 736.3 1101.7 746.3ZM1101.7 746.3Q1089.2 746.6 1083.4 757.7Q1096 757.5 1101.7 746.3ZM1085.4 739Q1089.3 728.2 1081.6 719.7Q1077.7 730.5 1085.4 739ZM1085.4 739Q1074 740.3 1069.7 751Q1081.1 749.7 1085.4 739ZM1068.6 733.3Q1071.2 723.3 1063.5 716.2Q1060.9 726.3 1068.6 733.3ZM1068.6 733.3Q1058.4 735.5 1055.5 745.4Q1065.7 743.3 1068.6 733.3ZM1051.3 729.3Q1052.8 720 1045.3 714.4Q1043.9 723.7 1051.3 729.3ZM1051.3 729.3Q1042.4 732 1040.6 741.2Q1049.6 738.4 1051.3 729.3ZM1033.6 726.8Q1034.1 718.6 1027.1 714.2Q1026.5 722.5 1033.6 726.8ZM1033.6 726.8Q1025.9 729.9 1025.1 738.1Q1032.8 735 1033.6 726.8ZM1015.3 725.9Q1015.1 718.8 1008.7 715.6Q1008.9 722.7 1015.3 725.9ZM1015.3 725.9Q1009 729.2 1008.9 736.4Q1015.3 733.1 1015.3 725.9ZM996.6 726.7Q995.9 720.6 990.3 718.4Q991 724.4 996.6 726.7ZM996.6 726.7Q991.5 729.9 991.9 736Q997.1 732.7 996.6 726.7ZM977.4 729Q976.5 724.1 971.7 722.7Q972.7 727.6 977.4 729ZM977.4 729Q973.4 732 974.2 737Q978.2 734 977.4 729ZM1167 800Q1080 700 950 735Q1084 704 1173 800ZM448.9 788.3Q457.9 785.4 459.6 776.1Q450.5 779 448.9 788.3ZM448.9 788.3Q442.3 781.5 433.1 784.1Q439.7 790.9 448.9 788.3ZM445.2 777.1Q453 774 454 765.6Q446.1 768.7 445.2 777.1ZM445.2 777.1Q438.9 771.4 430.9 774.2Q437.2 779.9 445.2 777.1ZM440.9 766.6Q447.7 763.4 448 756Q441.3 759.2 440.9 766.6ZM440.9 766.6Q435.1 761.9 428.3 764.9Q434.1 769.5 440.9 766.6ZM436.2 756.7Q441.8 753.6 441.7 747.2Q436 750.3 436.2 756.7ZM436.2 756.7Q430.9 753.1 425.2 756Q430.4 759.7 436.2 756.7ZM430.9 747.5Q435.4 744.5 434.9 739.1Q430.4 742.1 430.9 747.5ZM430.9 747.5Q426.2 744.7 421.6 747.6Q426.2 750.3 430.9 747.5ZM425 738.9Q428.5 736.2 427.8 731.9Q424.3 734.6 425 738.9ZM425 738.9Q421.1 737 417.5 739.5Q421.5 741.5 425 738.9ZM418.7 731Q421.2 728.7 420.3 725.4Q417.8 727.7 418.7 731ZM418.7 731Q415.5 729.7 413 731.9Q416.1 733.2 418.7 731ZM449 800Q440 750 410 722Q444 754 455 800ZM466.1 788.8Q474.5 792.1 481.3 786.3Q473 783 466.1 788.8ZM466.1 788.8Q465.5 779.9 457.3 776.3Q457.9 785.2 466.1 788.8ZM470.9 778.2Q478.1 781.7 484.6 777Q477.4 773.5 470.9 778.2ZM470.9 778.2Q470.9 770.2 463.9 766.5Q463.9 774.5 470.9 778.2ZM476.4 768.3Q482.4 771.9 488.4 768.2Q482.4 764.6 476.4 768.3ZM476.4 768.3Q476.9 761.3 471 757.5Q470.4 764.6 476.4 768.3ZM482.4 759.1Q487.4 762.6 492.8 759.9Q487.8 756.4 482.4 759.1ZM482.4 759.1Q483.4 753.1 478.5 749.5Q477.6 755.5 482.4 759.1ZM489.1 750.7Q493 753.9 497.7 752Q493.8 748.7 489.1 750.7ZM489.1 750.7Q490.3 745.7 486.5 742.3Q485.3 747.2 489.1 750.7ZM496.4 742.9Q499.3 745.8 503.3 744.6Q500.3 741.7 496.4 742.9ZM496.4 742.9Q497.7 739 494.9 735.9Q493.6 739.8 496.4 742.9ZM504.3 735.8Q506.3 738.3 509.4 737.6Q507.4 735.2 504.3 735.8ZM504.3 735.8Q505.6 732.9 503.6 730.4Q502.3 733.3 504.3 735.8ZM459 800Q478 752 515 728Q482 756 465 800ZM751.2 788.8Q760.3 791.5 766.9 784.8Q757.9 782 751.2 788.8ZM751.2 788.8Q749.6 779.4 740.7 776.3Q742.2 785.7 751.2 788.8ZM755 778Q762.9 781 769.2 775.4Q761.3 772.4 755 778ZM755 778Q754.2 769.6 746.3 766.3Q747.1 774.7 755 778ZM759.3 767.8Q766.1 770.9 772 766.4Q765.3 763.3 759.3 767.8ZM759.3 767.8Q759.2 760.4 752.5 757Q752.7 764.5 759.3 767.8ZM764.3 758.2Q769.9 761.3 775.3 757.8Q769.7 754.7 764.3 758.2ZM764.3 758.2Q764.6 751.8 759.1 748.5Q758.8 754.9 764.3 758.2ZM769.9 749.2Q774.4 752.2 779.1 749.6Q774.6 746.6 769.9 749.2ZM769.9 749.2Q770.6 743.8 766.1 740.7Q765.5 746.1 769.9 749.2ZM776 740.8Q779.5 743.5 783.5 741.7Q780 739 776 740.8ZM776 740.8Q776.9 736.5 773.6 733.7Q772.7 738 776 740.8ZM782.8 732.9Q785.3 735.2 788.4 734.1Q785.9 731.8 782.8 732.9ZM782.8 732.9Q783.7 729.7 781.3 727.3Q780.4 730.6 782.8 732.9ZM745 800Q760 752 792 724Q764 756 751 800ZM733.9 790.2Q741.5 786.5 741.9 778.1Q734.3 781.8 733.9 790.2ZM733.9 790.2Q727.3 785 719.6 788.3Q726.2 793.6 733.9 790.2ZM728.5 779.3Q734.9 775.6 734.7 768.3Q728.3 771.9 728.5 779.3ZM728.5 779.3Q722.4 775.2 715.9 778.6Q722 782.8 728.5 779.3ZM722.5 769.2Q727.7 765.6 727 759.3Q721.8 762.9 722.5 769.2ZM722.5 769.2Q717 766.1 711.7 769.5Q717.2 772.6 722.5 769.2ZM715.8 759.9Q719.9 756.5 718.8 751.4Q714.8 754.7 715.8 759.9ZM715.8 759.9Q711 757.7 706.8 760.9Q711.6 763.1 715.8 759.9ZM708.5 751.3Q711.5 748.3 710.3 744.3Q707.3 747.2 708.5 751.3ZM708.5 751.3Q704.5 749.9 701.4 752.7Q705.4 754.1 708.5 751.3ZM700.5 743.5Q702.6 741.1 701.4 738.1Q699.4 740.5 700.5 743.5ZM700.5 743.5Q697.5 742.7 695.3 745Q698.4 745.8 700.5 743.5ZM735 800Q722 758 690 735Q726 762 741 800Z"/></svg>
 <main>
-<header class="rank" id="top"><div class="medal" id="medal"><span id="mi"></span></div><div class="rm"><div class="rl1"><b id="rn"></b><small id="rc"></small><span class="stk" id="stk" hidden></span></div><div class="bar"><i id="pg" style="width:0"></i></div><small class="rs" id="nx"></small></div><div class="ring" id="ring" role="button" tabindex="0" aria-label="Objectif du jour : ouvrir les réglages"><b id="gn">0</b><small id="gt">/ 40</small></div><button class="help" id="help" aria-label="Aide : comment ça marche">?</button></header>
-<nav class="tabs"><button data-t="quiz" aria-current="true"><span data-ic="quiz"></span>Quiz</button><button data-t="herb" aria-current="false"><span data-ic="herbier"></span>Herbier</button><button data-t="pro" aria-current="false"><span data-ic="progres"></span>Progrès</button><button data-t="ami" aria-current="false"><span data-ic="profil"></span>Profil</button></nav>
+<header class="rank" id="top"><div class="medal" id="medal" role="button" tabindex="0" aria-label="Mon profil et mes amis" aria-haspopup="dialog"><span id="mi"></span><i class="mdb" aria-hidden="true"><svg viewBox="0 0 16 16"><circle cx="8" cy="5.4" r="3.1"/><path d="M2.4 14.2C2.4 10.9 4.9 9 8 9S13.6 10.9 13.6 14.2Z"/></svg></i></div><div class="rm"><div class="rl1"><b id="rn"></b><small id="rc"></small><span class="stk" id="stk" hidden></span></div><div class="bar"><i id="pg" style="width:0"></i></div><small class="rs" id="nx"></small></div><div class="ring" id="ring" role="button" tabindex="0" aria-label="Objectif du jour : ouvrir les réglages"><b id="gn">0</b><small id="gt">/ 40</small></div><button class="help" id="help" aria-label="Aide : comment ça marche">?</button></header>
+<nav class="tabs"><button data-t="quiz" aria-current="true"><span data-ic="quiz"></span>Quiz</button><button data-t="herb" aria-current="false"><span data-ic="herbier"></span>Herbier</button><button data-t="pro" aria-current="false"><span data-ic="progres"></span>Progrès</button></nav>
 <section id="quiz">
 <div class="trn" id="trn" hidden><div><b id="trl"></b><small id="trs"></small></div><button class="mini" id="trq">Quitter</button></div>
 <div id="chips"><button class="call" id="cAll"></button><div class="cats" id="cats"></div><div class="acts"><button class="act" id="fday"></button><button class="act" id="rplay" hidden></button></div></div>
@@ -975,7 +992,6 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
 </section>
 <section id="herb" hidden></section>
 <section id="pro" hidden></section>
-<section id="ami" hidden></section>
 </main>
 <div id="veil" aria-hidden="true"></div>
 <div id="splash" role="dialog" aria-label="Le royaume des plantes">
@@ -989,6 +1005,7 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
 <dialog id="fam" aria-label="Famille du jour"><button class="fdx" id="famx" type="button" aria-label="Fermer" data-ic="close"></button><div class="fdots" id="fdots"><i class="on"></i><i></i><i></i></div><div class="fz" id="fz" tabindex="-1" autofocus></div></dialog>
 <dialog id="dlg"><h2 tabindex="-1">Comment ça marche ?</h2><div id="dbody"></div><button id="dx">Compris</button></dialog>
 <dialog id="set" class="bs" aria-labelledby="set-t"><div class="bsh"><i class="bsg" aria-hidden="true"></i><h2 id="set-t" tabindex="-1"><span data-ic="reglages"></span>Réglages</h2><button class="bsx" id="set-x" type="button" aria-label="Fermer les réglages" data-ic="close"></button></div><div id="set-b"></div></dialog>
+<dialog id="prf" class="bs" aria-labelledby="prf-t"><div class="bsh"><i class="bsg" aria-hidden="true"></i><h2 id="prf-t" tabindex="-1"><span data-ic="profil"></span>Mon profil</h2><button class="bsx" id="prf-x" type="button" aria-label="Fermer le profil" data-ic="close"></button></div><div id="ami"></div></dialog>
 <dialog id="fch" class="fch"><div class="fhd"><b id="fht"></b><button id="fcx" aria-label="Fermer" data-ic="close"></button></div><div id="fcb"></div><div id="fcf"></div></dialog>
 <div class="sh" id="sh" hidden role="region" aria-label="Fiche de l'espèce"><div class="shh"><button class="grip" id="shg" aria-label="Agrandir ou réduire la fiche"><i></i></button><div id="shr" aria-live="polite"></div><button id="shm" aria-label="Réduire la fiche en bandeau" data-ic="chev-d"></button></div><div id="shb"></div><div class="shf"><button class="big" id="shn">Question suivante <span class="ic-in" data-ic="arrow"></span></button></div></div>
 <div id="zm" hidden><img alt=""></div>
@@ -2542,7 +2559,7 @@ function herb(){
   herbSearch();$('herb').querySelectorAll('.hc[open]').forEach(load);
 }
 function pro(){
-  const all=Object.values(st.sp),n=all.reduce((a,p)=>a+p.s,0),ok=all.reduce((a,p)=>a+p.s-p.e,0);
+  const bl=monBilan();
   const hT=st.hist[today()]||{n:0,ok:0},errs=st.tm.d===today()?st.tm.l:[];
   const days=[...Array(14)].map((_,i)=>{const d=dstr(Date.now()-(13-i)*864e5),h=st.hist[d]||{n:0,ok:0};return{d,n:h.n,ok:h.ok,r:h.n?Math.round(100*h.ok/h.n):0}});
   const mxd=Math.max(goal(),...days.map(x=>x.n));
@@ -2551,16 +2568,16 @@ function pro(){
   const cf=Object.entries(st.cf).filter(x=>x[1]>=1).sort((a,b)=>b[1]-a[1]).slice(0,3);
   $('pro').innerHTML=
    `<div class="card"><h3 class="hh">Aujourd'hui</h3><p class="big2"><b>${hT.n}</b> / ${goal()} exercices</p><span class="bar"><i style="width:${Math.min(100,100*hT.n/goal())}%"></i></span>${errs.length?`<button class="big" id="pro-errs"><span class="tgi">${TARGET}</span>Rejouer mes erreurs du jour (${errs.length})</button>`:''}</div>`+
-   `<div class="card"><h3 class="hh">Régularité</h3><div class="kp"><div><b>${n?Math.round(100*ok/n):0} %</b>réussite</div><div><b>${st.best}</b>meilleure série</div></div><div class="hist" style="--gl:${Math.min(100,goal()*100/mxd)}%">${days.map(x=>`<button type="button" class="hb" data-d="${x.d}" aria-pressed="false" aria-label="${x.d} : ${x.n} exercices"><i style="height:${Math.min(100,x.n*100/mxd)}%;background:${x.n?`hsl(${Math.round(x.r*1.25)},72%,${x.r<50?'46%':'40%'})`:'#d9e0d3'};opacity:${x.n?1:.3}"></i></button>`).join('')}<span class="hgl" aria-hidden="true"><small>objectif ${goal()}</small></span></div><div class="hdl" aria-hidden="true">${days.map((x,i)=>`<span${i===13?' class="tdy"':''}>${'DLMMJVS'[new Date(x.d+'T12:00:00').getDay()]}</span>`).join('')}</div><p class="hd" id="herb-detail"></p></div>`+
+   `<div class="card"><h3 class="hh">Régularité</h3><div class="kp"><div><b>${bl.reussite} %</b>réussite sur 14 jours</div><div><b><span class="tgi">${ICO.flamme}</span>${bl.serie}</b>jour${bl.serie>1?'s':''} de suite</div><div><b>${st.best}</b>record de bonnes réponses</div></div><div class="hist" style="--gl:${Math.min(100,goal()*100/mxd)}%">${days.map(x=>`<button type="button" class="hb" data-d="${x.d}" aria-pressed="false" aria-label="${x.d} : ${x.n} exercices"><i style="height:${Math.min(100,x.n*100/mxd)}%;background:${x.n?`hsl(${Math.round(x.r*1.25)},72%,${x.r<50?'46%':'40%'})`:'#d9e0d3'};opacity:${x.n?1:.3}"></i></button>`).join('')}<span class="hgl" aria-hidden="true"><small>objectif ${goal()}</small></span></div><div class="hdl" aria-hidden="true">${days.map((x,i)=>`<span${i===13?' class="tdy"':''}>${'DLMMJVS'[new Date(x.d+'T12:00:00').getDay()]}</span>`).join('')}</div><p class="hd" id="herb-detail"></p></div>`+
    `<div class="card"><h3 class="hh">À revoir</h3>${wk.length?wk.slice(0,5).map(row).join('')+(wk.length>5?`<p class="na">+ ${wk.length-5} autres dans ta liste</p>`:'')+'<button class="big" id="pro-review">S\'entraîner sur ces plantes</button>':'<p class="na">Rien à revoir pour l\'instant, continue !</p>'}</div>`+
    (cf.length?`<div class="card"><h3 class="hh">Confusions</h3>${cf.map(([k,c])=>{const [a,b]=k.split('|');return `<div class="cfr"><span><em>${a}</em> ${ico('swap','ic-in')} <em>${b}</em> <small>${Math.round(c)}×</small></span><button data-k="${k}">S'entraîner</button></div>`}).join('')}</div>`:'')+
-   `<div class="card lnk"><button class="lk" id="pro-set" type="button">${ico('reglages')}Réglages${ico('chev-r','lkc')}</button></div>`;
+   `<div class="card lnk"><button class="lk" id="pro-prf" type="button"><span class="tgi">${rIcon(rk())}</span><span>Mon profil et mes amis<small>Rangs, code ami, tableau du jour</small></span>${ico('chev-r','lkc')}</button><button class="lk" id="pro-set" type="button">${ico('reglages')}Réglages${ico('chev-r','lkc')}</button></div>`;
   const sel=d=>{const x=days.find(y=>y.d===d);document.querySelectorAll('.hb').forEach(b=>b.setAttribute('aria-pressed',b.dataset.d===d));$('herb-detail').innerHTML='<b>'+new Date(d+'T12:00:00').toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'})+'</b> : '+(x.n?x.n+' exercice'+(x.n>1?'s':'')+' · '+x.ok+' juste'+(x.ok>1?'s':'')+' ('+x.r+' %)':'aucun exercice ce jour-là')};
   $('pro').querySelectorAll('.hb').forEach(b=>b.onclick=()=>sel(b.dataset.d));sel(days[13].d);
   $('pro').querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{const [a,c]=b.dataset.k.split('|');startReplay([a,c,a,c,a,c],a+' et '+c)});
   if($('pro-errs'))$('pro-errs').onclick=()=>startReplay(errs.slice(),'Mes erreurs du jour');
   if($('pro-review'))$('pro-review').onclick=()=>startReplay(wk.slice(0,10).map(x=>x.s[0]),'Plantes à revoir');
-  $('pro-set').onclick=openSettings;
+  $('pro-set').onclick=openSettings;$('pro-prf').onclick=openProfil;
 }
 // ===== Réglages (volet ouvert depuis Progrès ou en touchant l'anneau d'objectif) =====
 // Contrôle d'une sauvegarde avant de l'écrire : renvoie un message d'erreur, ou '' si elle est utilisable
@@ -2614,8 +2631,17 @@ $('set-x').onclick=()=>$('set').close();
 $('set').onclick=e=>{if(e.target===$('set'))$('set').close()};
 $('ring').onclick=openSettings;
 $('ring').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openSettings()}};
-(()=>{let y0=0;const h=$('set').querySelector('.bsh');h.addEventListener('touchstart',e=>{y0=e.touches[0].clientY},{passive:true});h.addEventListener('touchend',e=>{if(e.changedTouches[0].clientY-y0>50)$('set').close()},{passive:true})})();
-const TB=['quiz','herb','pro','ami'];
+// Profil : volet ouvert en touchant le logo de rang (en-tête) ou depuis Progrès
+function openProfil(){const d=$('prf');ami();if(d.showModal){if(!d.open)d.showModal()}else d.setAttribute('open','');d.scrollTop=0;$('prf-t').focus({preventScroll:true});
+  if($('medal').classList.contains('nv')){$('medal').classList.remove('nv');try{localStorage.setItem('qp.prf','1')}catch(e){}}}
+$('prf-x').onclick=()=>$('prf').close();
+$('prf').onclick=e=>{if(e.target===$('prf'))$('prf').close()};
+$('medal').onclick=openProfil;
+$('medal').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openProfil()}};
+// tant que le profil n'a jamais été ouvert, la pastille du logo de rang pulse doucement
+try{if(!localStorage.getItem('qp.prf'))$('medal').classList.add('nv')}catch(e){}
+for(const id of ['set','prf'])(()=>{let y0=0;const h=$(id).querySelector('.bsh');h.addEventListener('touchstart',e=>{y0=e.touches[0].clientY},{passive:true});h.addEventListener('touchend',e=>{if(e.changedTouches[0].clientY-y0>50)$(id).close()},{passive:true})})();
+const TB=['quiz','herb','pro'];
 // Famille du jour : une leçon par jour, puis un entraînement limité aux plantes de la famille
 /*@DATA:A généré par outils/export_donnees.py depuis base-donnees-plantes.xlsx ; ne pas modifier à la main*/
 const FW={};`Acanthaceae|4 000
@@ -2779,7 +2805,7 @@ function tabTo(t){
   document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-current',x.dataset.t===t));
   TB.forEach(id=>$(id).hidden=id!==t);
   curTab=t;stickUI();window.scrollTo(0,0);$('sh').classList.toggle('off',t!=='quiz');hsUpd();
-  if(t==='herb')herb();if(t==='pro')pro();if(t==='ami')ami();
+  if(t==='herb')herb();if(t==='pro')pro();
 }
 document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>tabTo(b.dataset.t));
 $('next').onclick=next;
@@ -2827,7 +2853,7 @@ async function sbConnecte(){
     const dist=await sbRpc('lire_progression');
     if(dist&&dist.sp){st=fusion(st,dist);fix();try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}stats();if(curTab==='herb')herb()}
     await sbEnvoi()}}catch(e){sbMsg=sbErr(e);sbP=undefined}}   // undefined : profil inconnu (réseau), à ne pas confondre avec null (pas encore de pseudo)
-  if(curTab==='ami')ami();
+  if($('prf').open)ami();
 }
 // Envoi : chiffres du jour + sauvegarde de la progression (quelques secondes après la dernière réponse)
 async function sbEnvoi(){
@@ -2842,8 +2868,10 @@ const sbLien=()=>/^https?:$/.test(location.protocol);
 // Onglet Profil
 async function ami(){
   const el=$('ami'),b=monBilan(),r=R[b.rang],nom=sbP?esc(sbP.pseudo):'Moi';
+  const nx=R[b.rang+1],kn=b.acquises;
   let h=`<div class="card prf"><div class="prh"><span class="prm">${rIcon(b.rang)}</span><div><h2>${nom}</h2><p>${r[1]}</p></div></div>
-<div class="prs"><div><b>${b.acquises}</b><small>espèce${b.acquises>1?'s':''} acquise${b.acquises>1?'s':''}</small></div><div><b>${b.reussite} %</b><small>de réussite</small></div><div><b><span class="tgi">${ICO.flamme}</span>${b.serie}</b><small>jour${b.serie>1?'s':''} de suite</small></div></div></div>`;
+<ol class="rgs" aria-label="Les 12 rangs">${R.map((x,i)=>`<li class="${i<b.rang?'pas':i===b.rang?'ici':'fut'}" title="${x[1]} : ${x[0]} espèce${x[0]>1?'s':''}"><span class="tgi">${rIcon(i)}</span><span class="vh">${x[1]}, ${x[0]} espèce${x[0]>1?'s':''}${i===b.rang?' (rang actuel)':i<b.rang?' (atteint)':''}</span></li>`).join('')}</ol>
+<p class="na rgn">${nx?`Prochain rang : <b>${nx[1]}</b> à ${nx[0]} espèces acquises (tu en as ${kn}).`:'Tu as atteint le rang le plus élevé.'} Une espèce est acquise quand elle atteint le niveau 4 (bouton « ? » pour le détail).</p></div>`;
   const msg=(sbMsg?`<p class="stm ko" role="alert">${esc(sbMsg)}</p>`:'')+(sbOk?`<p class="stm ok" role="status">${esc(sbOk)}</p>`:'');
   if(SB_KEY&&sbSecret(SB_KEY)){el.innerHTML=h+'<div class="card"><h3 class="hh">Amis</h3><p class="stm ko">La clé collée dans index.html est la clé secrète de Supabase : elle ne doit jamais être dans l\'appli. Remplace-la par la clé publique (« publishable »), puis régénère la clé secrète dans Supabase.</p></div>';return}
   if(!sbOn()){el.innerHTML=h+'<div class="card"><h3 class="hh">Amis</h3><p class="na">Les comptes et le tableau des amis ne sont pas encore activés sur cette version de l\'appli.</p></div>';return}

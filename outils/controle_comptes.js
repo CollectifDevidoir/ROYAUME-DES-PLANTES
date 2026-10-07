@@ -25,7 +25,7 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   const A=await appareil();
   ok(!A.j.length,'au démarrage sans session : aucune requête vers Supabase');
   await lance(A.p,'mcq');await A.p.click('#opts button');await A.p.waitForTimeout(500);await A.p.click('#shn');await A.p.waitForTimeout(400);
-  await A.p.click('.tabs button[data-t=ami]');ok(await att(A.p,()=>!!document.querySelector('#sb-f')),'onglet Profil : formulaire de connexion');await T(A.p,'1-connexion');
+  await A.p.click('#medal');ok(await att(A.p,()=>!!document.querySelector('#sb-f')),'profil (logo de rang) : formulaire de connexion');await T(A.p,'1-connexion');
   // formulaire incomplet : rien n'est envoyé (sans e-mail, Supabase répondait « Anonymous sign-ins are disabled »)
   const n0=A.j.length;await A.p.click('#sb-up');ok(await att(A.p,()=>/Indique ton adresse e-mail/.test($('ami').innerText)),'« Créer un compte » sans e-mail : « Indique ton adresse e-mail »');
   await A.p.fill('#sb-mail','antoine@test');await A.p.click('#sb-up');ok(await att(A.p,()=>/Adresse e-mail invalide/.test($('ami').innerText)),'adresse incomplète : « Adresse e-mail invalide »');
@@ -39,11 +39,12 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   await A.p.fill('#sb-ps','Antoine');await A.p.click('#sb-pf button');
   ok(await att(A.p,()=>/RPL-[A-Z0-9]{5}/.test($('ami').innerText)),'profil créé avec un code ami');
   const codeA=await A.p.evaluate(()=>$('sb-code').textContent);
-  ok(/Antoine/.test(await txt(A.p))&&/1\s*\n?\s*jour de suite/.test(await txt(A.p)),'profil : pseudo, rang, bilan et jours de suite');
+  ok(/Antoine/.test(await txt(A.p))&&/Prochain rang/.test(await txt(A.p))&&await A.p.evaluate(()=>document.querySelectorAll('#ami .rgs li').length===12),'profil : pseudo, rang et échelle des 12 rangs');
+  ok(await A.p.evaluate(()=>{pro();return /1\s*\n?\s*jour de suite/.test($('pro').innerText)}),'Progrès : jours de suite (les chiffres ne sont plus répétés dans le profil)');
   ok(A.j.some(x=>x.includes('rpc/publier'))&&A.j.some(x=>x.includes('rpc/sauver_progression')),'chiffres et progression envoyés au compte');
   // ---- Coline : second appareil
   const B=await appareil();for(let i=0;i<2;i++){await lance(B.p,'mcq');await B.p.click('#opts button');await B.p.waitForTimeout(400);await B.p.click('#shn');await B.p.waitForTimeout(400)}
-  await B.p.click('.tabs button[data-t=ami]');await att(B.p,()=>!!document.querySelector('#sb-f'));
+  await B.p.click('#medal');await att(B.p,()=>!!document.querySelector('#sb-f'));
   await B.p.fill('#sb-mail','coline@test.fr');await B.p.fill('#sb-mdp','secret456');await B.p.click('#sb-up');await att(B.p,()=>!!document.querySelector('#sb-pf'));
   await B.p.fill('#sb-ps','Antoine');await B.p.click('#sb-pf button');ok(await att(B.p,()=>/déjà pris/.test($('ami').innerText)),'pseudo déjà pris : message clair');
   await B.p.fill('#sb-ps','Coline');await B.p.click('#sb-pf button');await att(B.p,()=>!!document.querySelector('#sb-af'));
@@ -59,13 +60,13 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   await A.p.click('#sb-maj');ok(await att(A.p,()=>/Coline/.test($('ami').innerText)),'Antoine voit Coline (amitié réciproque)');
   // ---- Antoine sur un nouvel appareil : sa progression revient
   const kA=await A.p.evaluate(()=>Object.keys(st.sp).length);
-  const C=await appareil(1440,900);await C.p.click('.tabs button[data-t=ami]');await att(C.p,()=>!!document.querySelector('#sb-f'));
+  const C=await appareil(1440,900);await C.p.click('#medal');await att(C.p,()=>!!document.querySelector('#sb-f'));
   await C.p.fill('#sb-mail','antoine@test.fr');await C.p.fill('#sb-mdp','secret123');await C.p.click('#sb-in');
   ok(await att(C.p,()=>!!document.querySelector('#sb-code')),'connexion sur un nouvel appareil');
   ok(await C.p.evaluate(k=>Object.keys(st.sp).length===k&&(st.hist[today()]||{}).n===1,kA),'nouvel appareil : la progression du compte est reprise ('+kA+' plante(s), 1 exercice)');await T(C.p,'4-ordinateur');
   // la session est gardée : rechargement
   await C.p.reload();await C.p.waitForTimeout(600);await C.p.evaluate(()=>{const s=$('splash');if(s)s.click()});await C.p.waitForTimeout(1600);
-  await C.p.click('.tabs button[data-t=ami]');ok(await att(C.p,()=>!!document.querySelector('#sb-code'),null,15000),'session gardée après rechargement');
+  await C.p.click('#medal');ok(await att(C.p,()=>!!document.querySelector('#sb-code'),null,15000),'session gardée après rechargement');
   // réseau coupé ou projet Supabase en pause : message clair, pas de demande de pseudo, puis reprise
   await C.p.route(URL_SB+'/rest/**',r=>r.abort());await C.p.evaluate(()=>sbConnecte());
   ok(await att(C.p,()=>/Le serveur des comptes ne répond pas/.test($('ami').innerText)&&!document.querySelector('#sb-pf')&&!!document.querySelector('#sb-re')),'réseau coupé : « Le serveur des comptes ne répond pas… » et bouton Réessayer');
@@ -81,13 +82,13 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   const D=await appareil(390,844,copie('tableau',`https://supabase.com/dashboard/project/${ID}/settings/api-keys`,'cle-anon-test'),URL_D);
   const versTdb=[];D.p.on('request',q=>{if(q.url().startsWith('https://supabase.com/'))versTdb.push(q.url())});
   ok(await D.p.evaluate(u=>SBU===u,URL_D),'adresse du tableau de bord corrigée en '+URL_D);
-  await D.p.click('.tabs button[data-t=ami]');await att(D.p,()=>!!document.querySelector('#sb-f'));
+  await D.p.click('#medal');await att(D.p,()=>!!document.querySelector('#sb-f'));
   await D.p.fill('#sb-mail','antoine@test.fr');await D.p.fill('#sb-mdp','secret123');await D.p.click('#sb-in');
   ok(await att(D.p,()=>!!document.querySelector('#sb-code'))&&D.j.length>0&&!versTdb.length,'adresse corrigée : connexion réussie, aucune requête vers supabase.com');
   // ---- clé secrète collée par erreur : refusée, rien n'est chargé ni envoyé
   const E=await appareil(390,844,copie('secret',URL_SB,'sb_secret_abc123'));
   const sorties=[];E.p.on('request',q=>{if(/jsdelivr|supabase\.co/.test(q.url()))sorties.push(q.url())});
-  await E.p.click('.tabs button[data-t=ami]');
+  await E.p.click('#medal');
   ok(await att(E.p,()=>/clé secrète/.test($('ami').innerText)&&!document.querySelector('#sb-f')),'clé secrète : message d\'alerte, pas de formulaire de connexion');
   await E.p.waitForTimeout(500);ok(!E.j.length&&!sorties.length,'clé secrète : ni bibliothèque chargée ni requête vers Supabase');
   const jwt=r=>'eyJhbGciOiJIUzI1NiJ9.'+Buffer.from(JSON.stringify({role:r})).toString('base64url')+'.sig';
@@ -99,11 +100,11 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   await L.p.addInitScript(()=>{try{localStorage.setItem('qp.coach','1')}catch(e){}});   // try : about:blank n'a pas de localStorage
   await L.p.route(SITE+'**',r=>r.fulfill({status:200,contentType:'text/html; charset=utf-8',body:fs.readFileSync(F,'utf8')}));await brancher(L.p,db,URL_SB,jl);
   const ouvre=async u=>{await L.p.goto(u);await L.p.waitForTimeout(400);await L.p.evaluate(()=>{const s=$('splash');if(s)s.click()});await L.p.waitForTimeout(1700)};
-  await ouvre(SITE);await L.p.click('.tabs button[data-t=ami]');
+  await ouvre(SITE);await L.p.click('#medal');
   ok(await att(L.p,()=>!!document.querySelector('#sb-otp')),'appli en ligne (https) : bouton « lien par e-mail » proposé');
   await L.p.fill('#sb-mail','lea@test.fr');await L.p.click('#sb-otp');
   ok(await att(L.p,()=>/Lien envoyé/.test($('ami').innerText))&&jl.includes('lien:lea@test.fr')&&(jl.lien||'').startsWith(SITE+'#'),'lien demandé : « Lien envoyé », il renvoie vers l\'adresse de l\'appli');
-  await L.p.goto('about:blank');await ouvre(jl.lien);await L.p.click('.tabs button[data-t=ami]');
+  await L.p.goto('about:blank');await ouvre(jl.lien);await L.p.click('#medal');
   ok(await att(L.p,()=>!!document.querySelector('#sb-pf'),null,15000),'lien ouvert : connectée, choix du pseudo');
   ok(await L.p.evaluate(()=>!/access_token/.test(location.href)),'le jeton est retiré de la barre d\'adresse');
   await L.p.fill('#sb-ps','Lea');await L.p.click('#sb-pf button');ok(await att(L.p,()=>!!document.querySelector('#sb-code')),'compte créé par le lien : profil et code ami');
