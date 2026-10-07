@@ -37,6 +37,17 @@ Un ami s'ajoute avec son **code ami** (par exemple `RPL-K7Q2M`). L'amitié est r
    - le lien de connexion par e-mail n'est pas proposé. La connexion par mot de passe fonctionne.
 7. **Mettre l'appli en ligne** : voir la section suivante. Ensuite, réactive « Confirm email » si tu le souhaites, et renseigne l'adresse publiée à l'étape 4.
 
+## Personnaliser l'e-mail de confirmation
+
+Le texte de l'e-mail envoyé à la création d'un compte ne se trouve pas dans l'appli : il se règle dans Supabase. Le modèle prêt à l'emploi est `supabase/e-mails/confirmation.html`.
+
+1. Dans Supabase : **Authentication > Emails > Templates**, choisis **Confirm signup**.
+2. « Subject » (objet) : `Confirme ton adresse e-mail 🌿`
+3. Dans « Message body », onglet **Source**, remplace tout le contenu par celui de `supabase/e-mails/confirmation.html`, puis **Save changes**.
+4. Garde tel quel `{{ .ConfirmationURL }}` : Supabase le remplace par le lien de confirmation de chaque compte.
+
+Pour vérifier, crée un compte de test avec une autre adresse : l'e-mail reçu doit afficher le nouveau texte et le bouton « Confirmer mon adresse e-mail ».
+
 ## Mettre l'appli en ligne et recevoir les mises à jour
 
 Je travaille sur la branche `claude/improve-html-app-e7b6o4` du dépôt. Le plus simple est de publier l'appli **directement depuis cette branche** : chaque modification que je pousse est alors en ligne une minute plus tard, sans rien faire. Ta configuration Supabase étant dans `index.html` sur cette branche, elle est conservée à chaque mise à jour.

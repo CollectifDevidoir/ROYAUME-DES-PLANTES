@@ -261,7 +261,9 @@ SPLASH={'l1':SP_L1,'l2':SP_L2,'l3':SP_L3}
 out={'ICO':I,'CI':CI,'RI':RI,'TROPHY':TROPHY,'BULB':BULB,'TARGET':TARGET,'HINT':HINT}
 tout=json.dumps(out)
 uf=sorted(set(re.findall(r'class=\\?"f(\w\d)',tout)));us=sorted(set(re.findall(r'class=\\?"s(\w\d)',tout)))
-CSS=('.ri{width:100%;height:100%;display:block}.ri .sh{fill:#000;opacity:.12}@media(prefers-color-scheme:dark){.ri .sh{opacity:.3}}'
+# icônes au trait (croix, chevrons, flèches) : leur règle vit ici pour ne plus être effacée à la réécriture
+CSS=('.tgi .gi{width:100%;height:100%;display:block;fill:none;stroke:currentColor;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}'
+     +'.ri{width:100%;height:100%;display:block}.ri .sh{fill:#000;opacity:.12}@media(prefers-color-scheme:dark){.ri .sh{opacity:.3}}'
      +','.join(f'.ri .s{k}' for k in us)+',.ri .kok,.ri .kko{fill:none;stroke-linecap:round;stroke-linejoin:round}.ri .kok{stroke:var(--ok)}.ri .kko{stroke:var(--ko)}'
      # sur un fond vert plein (onglet actif, tuile active), l'icône se pose sur une pastille claire
      +'.tabs button[aria-current=true] .tgi,#chips .cats button[aria-pressed=true] .cti{background:#fbfdf9;border-radius:50%;padding:2px;box-shadow:0 1px 3px rgba(10,40,20,.25)}'

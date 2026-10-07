@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- Modèle « Confirm signup » à coller dans Supabase : Authentication > Emails > Templates > Confirm signup (onglet Source).
+     Objet conseillé : Confirme ton adresse e-mail 🌿
+     {{ .ConfirmationURL }} est remplacé par Supabase par le lien de confirmation. Mode d'emploi : supabase/LISEZ-MOI.md -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Confirme ton adresse e-mail</title>
+</head>
+<body style="margin:0;padding:0;background:#eaf2df;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eaf2df;">
+  <tr>
+    <td align="center" style="padding:32px 16px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:520px;background:#fbfdf9;border:1px solid #c9dbc4;border-radius:20px;">
+        <tr>
+          <td style="padding:32px 28px 8px;font-family:Georgia,'Times New Roman',serif;font-size:24px;line-height:1.3;font-weight:bold;color:#2f6b3f;">
+            Le royaume des plantes
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:12px 28px 0;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.55;color:#14281a;">
+            <p style="margin:0 0 14px;">Bonjour,</p>
+            <p style="margin:0 0 14px;">Bienvenue dans Le royaume des plantes 🌿</p>
+            <p style="margin:0 0 22px;">Pour confirmer ton adresse e-mail et accéder à ton compte, il te suffit de cliquer sur le bouton ci-dessous.</p>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="padding:0 28px 24px;">
+            <a href="{{ .ConfirmationURL }}" style="display:inline-block;padding:14px 26px;border-radius:12px;background:#2f6b3f;color:#ffffff;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:bold;text-decoration:none;">Confirmer mon adresse e-mail</a>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 28px 28px;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.55;color:#14281a;">
+            <p style="margin:0 0 14px;">Une petite étape avant de repartir explorer les plantes, reconnaître les bonnes feuilles et faire progresser ton herbier.</p>
+            <p style="margin:0 0 22px;">À très vite dans le royaume 🌱</p>
+            <p style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:17px;font-weight:bold;color:#2f6b3f;">Le royaume des plantes</p>
+            <p style="margin:2px 0 0;font-size:14px;color:#5b6d5f;">imaginé par Dévidoir</p>
+          </td>
+        </tr>
+      </table>
+      <p style="max-width:520px;margin:16px auto 0;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#5b6d5f;">Si le bouton ne fonctionne pas, copie ce lien dans ton navigateur :<br><a href="{{ .ConfirmationURL }}" style="color:#2f6b3f;word-break:break-all;">{{ .ConfirmationURL }}</a><br>Tu n'as pas créé de compte ? Ignore simplement cet e-mail.</p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
