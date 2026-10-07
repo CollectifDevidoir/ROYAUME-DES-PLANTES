@@ -21,6 +21,8 @@ async function open(o={}){
   else await p.addInitScript(()=>{localStorage.setItem('qp.coach','1')});
   await p.goto('file://'+path.resolve(o.file||path.resolve(__dirname,'..','index.html')));await p.waitForTimeout(400);
   await p.evaluate(()=>{const s=document.getElementById('splash');if(s)s.click()});await p.waitForTimeout(1700);
+  // par défaut, un habitué : au tout premier lancement, l'appli masque le choix des modes jusqu'à la première réponse (o.fresh pour le garder)
+  if(!o.fresh)await p.evaluate(()=>{if(document.body.classList.contains('fresh')){document.body.classList.remove('fresh');const q=document.getElementById('q');if(q&&/^Bienvenue/.test(q.textContent))q.textContent='Quelle est cette plante ?'}});
   return {b,ctx,p};
 }
 module.exports={open};
