@@ -217,6 +217,32 @@ FR=(fronde(0,800,175,640,40,650,14,46)+fronde(30,800,250,735,120,700,11,30)+fron
     +fronde(1170,800,950,735,1080,700,11,30)+fronde(452,800,410,722,440,750,7,18)+fronde(462,800,515,728,478,752,7,17)
     +fronde(748,800,792,724,760,752,7,18)+fronde(738,800,690,735,722,758,6,16))
 DECOR={'tf':TF,'tn':TN,'fr':FR}
+# ---------- Page d'ouverture (#splash) : trois plans en parallaxe, 1200×800 ancrés en bas ----------
+# Sur téléphone (portrait), seule la bande centrale x ≈ 415–785 est visible : le cadrage s'y concentre.
+def lisiere(y0,seed=3):
+    """Ligne d'horizon de forêt lointaine : houppiers ronds et quelques sapins."""
+    import random;R=random.Random(seed);x=0;d=f'M0 800V{y0}'
+    while x<1200:
+        if R.random()<.28:
+            w=R.uniform(26,40);h=R.uniform(70,110);d+=f'L{f(x+w*.5)} {f(y0-h)}L{f(x+w)} {y0}';x+=w
+        else:
+            w=R.uniform(50,90);h=R.uniform(40,75);d+=f'C{f(x)} {f(y0-h)} {f(x+w)} {f(y0-h)} {f(x+w)} {y0}';x+=w
+    return d+'V800Z'
+def voute(y0,n=26,seed=5):
+    """Canopée feuillue en haut : grappes festonnées qui retombent inégalement."""
+    import random;R=random.Random(seed);w=1200/n;d=f'M0 0H1200V{y0}'
+    for i in range(n):
+        x=1200-i*w;d+=f'Q{f(x-w/2)} {f(y0+R.uniform(22,34))} {f(x-w)} {f(y0+R.uniform(-8,10))}'
+    return d+'Z'
+SP_L1=f'<path d="{lisiere(600)}"/><path opacity=".7" d="{lisiere(640,9)}"/>'
+SP_L2=(''.join(f'<path d="{tronc(x,w,l,1.6,0)}"/>' for x,w,l in [(130,16,-6),(300,12,5),(455,14,-4),(745,15,5),(900,12,-5),(1075,17,6)])
+       +f'<path d="{voute(78,34,5)}"/><path opacity=".55" d="{voute(108,44,8)}"/>')
+SP_L3=(''.join(f'<path d="{tronc(x,w,l,1.5,-10)}"/>' for x,w,l in [(25,46,-8),(398,30,6),(803,32,-7),(1178,48,8)])
+       +'<path d="'+fronde(415,800,560,640,440,660,13,44)+fronde(440,800,600,730,500,715,10,28)+fronde(785,800,640,640,760,660,13,44)
+       +fronde(760,800,600,730,700,715,10,28)+fronde(0,800,200,620,40,640,14,52)+fronde(1200,800,1000,620,1160,640,14,52)
+       +fronde(70,800,300,730,170,700,11,32)+fronde(1130,800,900,730,1030,700,11,32)+'"/>')
+SPLASH={'l1':SP_L1,'l2':SP_L2,'l3':SP_L3}
+
 
 out={'ICO':I,'CI':CI,'RI':RI,'TROPHY':TROPHY,'BULB':BULB,'TARGET':TARGET,'HINT':HINT}
 tout=json.dumps(out)
@@ -261,4 +287,7 @@ if '--ecrire' in sys.argv:
     s=re.sub(r'(<g class="tf" opacity="[.\d]+">).*?(</g>)',lambda m:m.group(1)+TF+m.group(2),s,count=1,flags=re.S)
     s=re.sub(r'(<g class="tn" opacity="[.\d]+">).*?(</g>)',lambda m:m.group(1)+TN+m.group(2),s,count=1,flags=re.S)
     s=re.sub(r'<path class="fr" d="[^"]*"/>',lambda m:'<path class="fr" d="'+FR+'"/>',s,count=1)
+    for k,v in SPLASH.items():
+        s=re.sub(r'<svg class="ly '+k+r'" viewBox="[^"]*" preserveAspectRatio="[^"]*" aria-hidden="true">(<g [^>]*>).*?</g></svg>',
+                 lambda m:'<svg class="ly '+k+'" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMax slice" aria-hidden="true">'+m.group(1)+v+'</g></svg>',s,count=1,flags=re.S)
     open(P,'w',encoding='utf-8').write(s);print('index.html mis à jour')
