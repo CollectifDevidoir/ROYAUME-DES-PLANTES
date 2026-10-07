@@ -2372,7 +2372,9 @@ async function next(){
   $('q').textContent=typed?'Écris le nom latin complet (genre + espèce)':'Quelle est cette plante ?';
   if(typed){
     $('opts').innerHTML='<form id="q-form"><span class="qiw"><input id="q-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Touche ici pour écrire (Genus species)" aria-label="Nom latin"><b class="qini" id="q-ini" hidden></b></span><button>Valider</button><p class="tyq" id="q-ty">Écris le nom latin complet (genre + espèce)</p></form>';
-    const qT0=Date.now();$('q-form').onsubmit=e=>{e.preventDefault();const v=$('q-input').value.trim();if(v||Date.now()-qT0>=1000)answer(v)};$('q-input').onfocus=()=>{$('qc').classList.add('typing');kbFit();setTimeout(kbFit,350)};
+    $('q-form').onsubmit=e=>{e.preventDefault();answer($('q-input').value.trim())};   // champ vide : correction immédiate
+    $('q-input').onkeydown=e=>{if(e.key==='Enter'&&e.repeat)e.preventDefault()};   // Entrée maintenue (venue de « Suivant ») : pas de validation involontaire
+    $('q-input').onfocus=()=>{$('qc').classList.add('typing');kbFit();setTimeout(kbFit,350)};
   const jb=document.createElement('button');jb.type='button';jb.id='jk';jb.className='jk';$('q-form').append(jb);jokerUI();
   }else choices(cur).forEach((o,i)=>{
     const b=document.createElement('button');b.textContent=o[0];b.dataset.l=o[0];b.dataset.n=i+1;b.setAttribute('aria-keyshortcuts',String(i+1));b.style.setProperty('--i',i);
@@ -2397,7 +2399,7 @@ function answer(v){
   if(!curTrain&&!good&&w){const k=[cur[0],w[0]].sort().join('|');st.cf[k]=(st.cf[k]||0)+1}
   save();last=cur[0];
   if(rk()>r0)rankAnim(R[rk()][1]);if(!curTrain&&h.n===goal())goalAnim();
-  if(typed){$('q-input').blur();$('q-input').disabled=true;$('qc').classList.remove('typing');$('pic').style.height=''}
+  if(typed){$('q-input').blur();$('q-input').disabled=true;if($('jk'))$('jk').disabled=true;$('qc').classList.remove('typing');$('pic').style.height=''}
   document.querySelectorAll('.opts>button').forEach(b=>{b.disabled=true;
     if(b.dataset.l===cur[0])b.classList.add('ok');else if(b.dataset.l===v)b.classList.add('ko')});
   if(good)$('pic').classList.add('pop');$('pic').classList.add('ans');vib(good?15:[30,40,30]);$('opts').classList.add('rv');

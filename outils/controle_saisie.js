@@ -22,13 +22,21 @@ await p.fill('#q-input','');ok(await p.evaluate(()=>!$('q-ini').hidden),'initial
 // --- réponse vide ---
 ok(await lance(p,'typed'),'nouvel exercice de saisie');
 const n0=await p.evaluate(()=>(st.hist[today()]||{n:0}).n);
-await p.press('#q-input','Enter');await p.waitForTimeout(100);
-ok(await p.evaluate(()=>!done),'réponse vide dans la 1re seconde : ignorée (garde-fou du double « Entrée »)');
-await p.waitForTimeout(1000);await p.press('#q-input','Enter');await p.waitForTimeout(500);
+await p.evaluate(()=>{const e=new KeyboardEvent('keydown',{key:'Enter',repeat:true,bubbles:true,cancelable:true});$('q-input').dispatchEvent(e);window.__rep=e.defaultPrevented});
+ok(await p.evaluate(()=>window.__rep&&!done),'Entrée maintenue (répétition) : ignorée, pas de validation involontaire');
+await p.click('#q-form button:not(#jk)');await p.waitForTimeout(400);   // « Valider » tout de suite, champ vide
 const e=await p.evaluate(n0=>({done,n:(st.hist[today()]||{n:0}).n,ok:(st.hist[today()]||{ok:0}).ok,sh:!$('sh').hidden,err:st.tm.l.includes(cur[0])}),n0);
-ok(e.done&&e.n===n0+1,'réponse vide après 1 s : acceptée et comptée');
+ok(e.done&&e.n===n0+1,'champ vide + « Valider » tout de suite : correction immédiate, réponse comptée');
 ok(e.err,'traitée comme une erreur (dans « erreurs du jour »)');
 ok(e.sh,'la fiche de correction s’ouvre');
 ok(await p.evaluate(()=>/Pas de réponse/.test($('sh').textContent)&&!/« »/.test($('sh').textContent)),'message adapté : « Pas de réponse », pas « « » n’est pas dans la liste »');
+// --- juste, presque, raté ---
+const essai=async t=>{await lance(p,'typed');const nm=await p.evaluate(()=>cur[0]);await p.fill('#q-input',t(nm));await p.click('#q-form button:not(#jk)');await p.waitForTimeout(400);
+  return p.evaluate(()=>{const v=document.querySelector('#shr .v');return{txt:v.textContent,cls:v.className,bg:getComputedStyle(v).backgroundColor,col:getComputedStyle(v).color,b:st.sp[cur[0]].b,tm:st.tm.l.includes(cur[0])}})};
+const J=await essai(n=>n),P=await essai(n=>n.slice(0,-2)+n.slice(-1)),X=await essai(()=>'Rosa nimportequoi');
+ok(J.txt==='Juste'&&!J.tm,'nom exact : « Juste »');
+ok(P.txt==='Presque'&&!P.tm,'une lettre oubliée : « Presque », compté juste (pas dans les erreurs du jour)');
+ok(P.bg!==J.bg||P.col!==J.col,'« Presque » se distingue visuellement de « Juste » ('+P.bg+' / '+J.bg+')');
+ok(X.txt==='Raté'&&X.tm,'nom faux : « Raté », dans les erreurs du jour');
 ok(p.errs.length===0,'aucune erreur JavaScript '+JSON.stringify(p.errs));
 await b.close();console.log(ech?ech+' ÉCHEC(S)':'SAISIE : tout est OK');process.exit(ech?1:0)})();
