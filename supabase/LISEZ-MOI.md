@@ -41,12 +41,32 @@ Un ami s'ajoute avec son **code ami** (par exemple `RPL-K7Q2M`). L'amitié est r
 
 Le texte de l'e-mail envoyé à la création d'un compte ne se trouve pas dans l'appli : il se règle dans Supabase. Le modèle prêt à l'emploi est `supabase/e-mails/confirmation.html`.
 
-1. Dans Supabase : **Authentication > Emails > Templates**, choisis **Confirm signup**.
+**Sur un projet gratuit récent, Supabase ne laisse modifier ce texte qu'avec son propre serveur d'envoi (SMTP)** : c'est le bouton « Set up SMTP » affiché sur la page des modèles. Sans lui, l'e-mail par défaut de Supabase (en anglais) continue de fonctionner. Un serveur d'envoi a deux autres avantages : l'e-mail part au nom du royaume, et on n'est plus limité à 2 e-mails par heure.
+
+### 1. Choisir un serveur d'envoi (gratuit)
+
+| Solution | Pour qui | Réglages à reporter dans Supabase |
+|---|---|---|
+| **Gmail** avec un « mot de passe d'application » | Le plus simple sans nom de domaine. Crée de préférence une adresse dédiée (par exemple `royaumedesplantes@gmail.com`). Jusqu'à 500 e-mails par jour. | Hôte `smtp.gmail.com`, port `465`, identifiant : l'adresse Gmail, mot de passe : le mot de passe d'application (16 caractères) |
+| **Brevo** ou **Resend** | Si le collectif a un nom de domaine (par exemple `devidoir.fr`) : l'e-mail part de `bonjour@devidoir.fr`, avec la meilleure délivrabilité. | Hôte, port, identifiant et mot de passe indiqués par le service, après la vérification du domaine |
+
+Pour Gmail : sur le compte Google, active la **validation en deux étapes**, puis crée un mot de passe sur la page **Mots de passe des applications** (myaccount.google.com/apppasswords). Ce n'est pas le mot de passe habituel du compte. Ne le mets jamais dans le dépôt : il ne va que dans Supabase.
+
+### 2. Brancher le serveur dans Supabase
+
+1. **Authentication > Emails**, onglet **SMTP Settings**, active **Enable custom SMTP**.
+2. « Sender email » : l'adresse d'envoi (celle de Gmail, ou celle du domaine). « Sender name » : `Le royaume des plantes`.
+3. Reporte l'hôte, le port, l'identifiant et le mot de passe du tableau ci-dessus, puis **Save changes**.
+4. Facultatif : **Authentication > Rate Limits** permet de relever le nombre d'e-mails autorisés par heure.
+
+### 3. Coller le modèle
+
+1. **Authentication > Emails**, onglet **Templates**, choisis **Confirm signup**.
 2. « Subject » (objet) : `Confirme ton adresse e-mail 🌿`
 3. Dans « Message body », onglet **Source**, remplace tout le contenu par celui de `supabase/e-mails/confirmation.html`, puis **Save changes**.
 4. Garde tel quel `{{ .ConfirmationURL }}` : Supabase le remplace par le lien de confirmation de chaque compte.
 
-Pour vérifier, crée un compte de test avec une autre adresse : l'e-mail reçu doit afficher le nouveau texte et le bouton « Confirmer mon adresse e-mail ».
+Pour vérifier, crée un compte de test avec une autre adresse : l'e-mail reçu doit afficher le nouveau texte et le bouton « Confirmer mon adresse e-mail ». S'il arrive dans les indésirables, c'est le plus souvent l'adresse d'envoi : une adresse sur un nom de domaine vérifié (Brevo, Resend) règle ce problème.
 
 ## Mettre l'appli en ligne et recevoir les mises à jour
 
@@ -73,7 +93,7 @@ La clé publique peut figurer dans le fichier : elle est faite pour ça. La séc
 
 - Largement suffisant pour un groupe d'amis : 50 000 utilisateurs actifs par mois et 500 Mo de base. Une progression pèse quelques dizaines de Ko.
 - **Un projet gratuit se met en pause après une semaine sans aucune activité.** Il se réactive d'un clic depuis le tableau de bord Supabase. Pendant la pause, l'appli continue de marcher hors compte. L'onglet Profil affiche alors « Le serveur des comptes ne répond pas… » avec un bouton Réessayer.
-- Les e-mails d'authentification du service intégré sont limités à quelques envois par heure. C'est suffisant entre amis. Au-delà, on peut brancher son propre serveur d'e-mails (Authentication > Emails > SMTP).
+- Les e-mails d'authentification du service intégré sont limités à quelques envois par heure. C'est suffisant entre amis. Au-delà, on branche son propre serveur d'e-mails : voir « Personnaliser l'e-mail de confirmation ».
 
 ## Fonctionnement côté appli
 
