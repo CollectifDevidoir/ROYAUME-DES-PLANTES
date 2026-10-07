@@ -3,6 +3,7 @@
 Tous les scripts Node s'appuient sur Playwright et Chromium. Lancement depuis la racine du dépôt, par exemple :
 `NODE_PATH=$(npm root -g) node outils/recette.js`.
 Le réseau n'est pas nécessaire : `banc_essai.js` simule iNaturalist et génère des photos.
+Les contrôles des comptes demandent en plus `npm i -g @electric-sql/pglite @supabase/supabase-js` (voir `supabase/LISEZ-MOI.md`).
 
 ## Recette et contrôles
 
@@ -23,6 +24,8 @@ Le réseau n'est pas nécessaire : `banc_essai.js` simule iNaturalist et génèr
 | `controle_confusion.js [fichier]` | Mode confusion : duel des deux espèces (photos côte à côte, médaillon centré), puis points à comparer, puis exercice. |
 | `controle_illustrations.js [fichier]` | Illustrations : affichage, aucune ombre portée ni dégradé, au moins une forme contrastée à 3:1 sur son fond réel (clair et sombre, téléphone et ordinateur), rangs variés. |
 | `controle_ordinateur.js [fichier]` | Version ordinateur (souris) : colonne de 1 120 px, QCM et saisie centrés face à la photo, Herbier et Progrès sur 2 colonnes, Réglages et Famille du jour en fenêtres centrées ; le téléphone garde ses volets. |
+| `controle_supabase_sql.js` | Comptes : exécute `supabase/schema.sql` sur une vraie base PostgreSQL embarquée (PGlite) ; parcours complet et règles de sécurité. |
+| `controle_comptes.js [fichier] [dossier]` | Comptes de bout en bout : vraie bibliothèque supabase-js, faux Supabase local (`supabase/faux_supabase.js`), deux appareils, amis, tableau du jour, reprise de la progression. |
 | `simulation_memoire.js [jours] [graines]` | Simulation de progression avec le vrai code de l'appli (étape 6). |
 
 Fichiers d'appui : `banc_essai.js` (ouverture de l'appli avec un faux iNaturalist ; option `seed` pour figer le hasard) et `lance_exercice.js` (affiche un exercice d'un type donné).
