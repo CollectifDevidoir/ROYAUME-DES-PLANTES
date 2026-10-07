@@ -2920,8 +2920,8 @@ async function ami(){
       if(sbMsg){ami();return}
       sbBusy=true;try{await fn(m,p)}catch(e){sbMsg=sbErr(e)}sbBusy=false;if(!sbU||sbMsg||sbOk)ami()};
     $('sb-f').onsubmit=e=>{e.preventDefault();go(async(m,p)=>{const {error}=await sb.auth.signInWithPassword({email:m,password:p});if(error)throw error})};
-    $('sb-up').onclick=()=>go(async(m,p)=>{const {data,error}=await sb.auth.signUp({email:m,password:p,options:sbLien()?{emailRedirectTo:location.origin+location.pathname}:{}});if(error)throw error;if(!data.session)sbOk='Compte créé : confirme ton adresse avec le lien reçu par e-mail, puis connecte-toi.'});
-    if($('sb-otp'))$('sb-otp').onclick=()=>go(async m=>{const {error}=await sb.auth.signInWithOtp({email:m,options:{emailRedirectTo:location.origin+location.pathname}});if(error)throw error;sbOk='Lien envoyé : ouvre-le depuis ta boîte mail sur cet appareil.'},false);
+    $('sb-up').onclick=()=>go(async(m,p)=>{const {data,error}=await sb.auth.signUp({email:m,password:p,options:sbLien()?{emailRedirectTo:location.origin+location.pathname}:{}});if(error)throw error;if(!data.session)sbOk='Compte créé : confirme ton adresse avec le lien reçu par e-mail (pense à regarder dans les indésirables), puis connecte-toi.'});
+    if($('sb-otp'))$('sb-otp').onclick=()=>go(async m=>{const {error}=await sb.auth.signInWithOtp({email:m,options:{emailRedirectTo:location.origin+location.pathname}});if(error)throw error;sbOk='Lien envoyé : ouvre-le depuis ta boîte mail sur cet appareil (regarde aussi dans les indésirables).'},false);
     return;
   }
   if(sbP===undefined){el.innerHTML=h+`<div class="card"><h3 class="hh">Mon compte</h3>${msg}<div class="row"><button class="mini" id="sb-re" type="button">Réessayer</button><button class="mini" id="sb-out" type="button">Se déconnecter</button></div></div>`;

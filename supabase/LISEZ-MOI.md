@@ -66,7 +66,15 @@ Pour Gmail : sur le compte Google, active la **validation en deux étapes**, pui
 3. Dans « Message body », onglet **Source**, remplace tout le contenu par celui de `supabase/e-mails/confirmation.html` (du `<!doctype html>` au `</html>` final), puis **Save changes**.
 4. Garde tel quel `{{ .ConfirmationURL }}` : Supabase le remplace par le lien de confirmation de chaque compte.
 
-Pour vérifier, crée un compte de test avec une autre adresse : l'e-mail reçu doit afficher le nouveau texte et le bouton « Confirmer mon adresse e-mail ». S'il arrive dans les indésirables, c'est le plus souvent l'adresse d'envoi : une adresse sur un nom de domaine vérifié (Brevo, Resend) règle ce problème.
+Pour vérifier, crée un compte de test avec une autre adresse : l'e-mail reçu doit afficher le nouveau texte et le bouton « Confirmer mon adresse e-mail ».
+
+### Si l'e-mail arrive dans les indésirables
+
+C'est courant avec une adresse Gmail toute neuve qui envoie des e-mails automatiques contenant un lien. L'appli rappelle de regarder dans les indésirables après la création d'un compte.
+
+- **Tout de suite** : chaque destinataire peut cliquer sur « Non, ce n'est pas du spam » et ajouter l'adresse d'envoi à ses contacts. Les e-mails suivants arrivent alors dans la boîte de réception.
+- **Avec le temps** : la réputation d'une adresse neuve s'améliore à mesure qu'elle envoie des e-mails qui sont ouverts et non signalés.
+- **Solution durable** : envoyer depuis une adresse sur un nom de domaine du collectif (par exemple `bonjour@devidoir.fr`) avec Brevo ou Resend, qui guident pour déclarer le domaine (enregistrements SPF, DKIM et DMARC). C'est ce qui donne la meilleure délivrabilité.
 
 ## Mettre l'appli en ligne et recevoir les mises à jour
 
