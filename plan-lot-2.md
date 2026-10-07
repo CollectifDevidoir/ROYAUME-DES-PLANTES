@@ -167,6 +167,41 @@ Non-régression : recette 133/133 et les 7 contrôles existants OK. Captures té
 
 Non-régression : recette 133/133 et tous les contrôles existants OK. Captures téléphone avant/après : seules la ligne des catégories (et la mise en page qui la suit, à 4 px près) et la fiche de confusion changent.
 
+## Étape C — point 6 — FAITE
+
+**Style.** Trait d'encre sépia et 2 à 3 aplats de pigments légèrement décalés du trait, comme à la main. Plus de dégradé brillant, de reflet ni d'ombre portée. Les 39 dégradés des anciennes icônes sont retirés.
+
+**Couleurs.** Une palette commune de 17 pigments naturels : mousse, pousse, pin, lichen, écorce, bois clair, ocre, or, terre cuite, baie, prune, rose, eau, glace, papier, pierre, bleu crépuscule. Chaque illustration en prend quelques-uns, si bien qu'elles ne se ressemblent plus tout en gardant le même trait. Comme convenu, ce n'est pas une teinte imposée par famille : c'est une variété réfléchie.
+
+**Rangs : les saisons.** Graine (gland ocre) → Germe et Pousse (vert tendre sur terre rousse) → Jeune plant (pot en terre cuite) → Arbrisseau (baies) → Jeune arbre → Arbre (vert pin) → Grand chêne (mousse et glands) → Bosquet (trois arbres d'automne) → Forêt (sapins pin et lichen) → Gardien de la forêt (vieil arbre sous une lune prune, sans visage) → Maître du royaume (chêne doré couronné).
+
+**Remplacements.**
+
+| Avant | Après |
+|---|---|
+| Trophée | Couronne de laurier, avec un gland et un ruban |
+| Ampoule (Famille du jour) | Étiquette d'herbier |
+| Cible (erreurs du jour) | Boussole |
+| Loupe jaune | Loupe de naturaliste sur une feuille |
+| Histogramme (Progrès) | Rondelle de bois et ses cernes |
+| Éprouvette (pH) | Tube à essai aux deux couleurs |
+| Engrenage | Engrenage en bois avec une feuille |
+
+Les chevrons, la croix et la coche restent de simples tracés.
+
+**Mode sombre.** L'encre devient crème. Sur un fond vert plein (onglet actif, tuile active) et sur la carte claire de la Famille du jour, elle s'inverse pour rester lisible.
+
+**Décor.** Troncs effilés, légèrement penchés, évasés au pied. Vraies frondes de fougère aux coins, et deux petites touffes au centre, visibles aussi sur téléphone. Même canopée festonnée qu'à l'étape A.
+
+**Outils.**
+- `outils/illustrations.py --ecrire` régénère toutes les illustrations, leur CSS et le décor.
+- `outils/controle_illustrations.js` vérifie :
+  - chaque illustration s'affiche, sans ombre ni dégradé ;
+  - le contraste de l'encre avec son fond réel est d'au moins 3:1, en clair et en sombre, sur téléphone et sur ordinateur (minimum mesuré : 3,5:1, tuile active sur ordinateur) ;
+  - les rangs utilisent des pigments variés.
+
+**Poids.** `index.html` passe de 775 Ko à 788 Ko (+1,6 %) : les tracés à la main et les fougères sont un peu plus longs que les anciens dégradés. Aucun effet mesurable sur la fluidité : le décor reste un SVG fixe.
+
 ## Ordre proposé
 
 | Étape | Contenu | Pourquoi cet ordre |
