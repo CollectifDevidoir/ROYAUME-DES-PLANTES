@@ -417,8 +417,7 @@ main>section:not([hidden]){animation:tin .28s ease-out}
 @keyframes tin{from{opacity:0;transform:translateY(6px)}}
 .acq{animation:acq .7s cubic-bezier(.2,1.6,.4,1)}
 @keyframes acq{from{transform:scale(.2);opacity:0}}
-.coach{display:flex;align-items:center;gap:10px;margin:0 0 8px;padding:10px 12px;border-radius:14px;background:rgba(47,107,63,.13);font-size:.85rem}
-.coach p{margin:0;flex:1}
+body.fresh #chips{display:none}
 .hc>summary .hi svg{width:36px;height:36px;display:block}
 .hc>summary .hi{width:36px;height:36px;flex:none}
 @media(prefers-reduced-motion:reduce){.opts>button,main>section:not([hidden]),.acq,.bump,.pic.sk{animation:none}.ring,.medal{transition:none}.sl img{transition:none}}
@@ -1013,7 +1012,6 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
 <section id="quiz">
 <div class="trn" id="trn" hidden><div><b id="trl"></b><small id="trs"></small></div><button class="mini" id="trq">Quitter</button></div>
 <div id="chips"><button class="call" id="cAll"></button><div class="cats" id="cats"></div><div class="acts"><button class="act" id="fday"></button><button class="act" id="rplay" hidden></button></div></div>
-<div class="coach" id="coach" hidden><p><b>Bienvenue !</b> Choisis le nom de la plante. Après chaque réponse, la fiche te donne les clés pour la retenir, et tu montes de rang en « acquérant » des plantes.</p><button class="mini" id="cok">Compris</button></div>
 <div class="card" id="qc"><div class="pic" id="pic"></div><div id="q"></div><div class="opts" id="opts"></div><div id="fb" aria-live="polite"></div></div>
 <div class="card" id="ex" hidden></div>
 <button id="next" hidden>Question suivante <span class="ic-in" data-ic="arrow"></span></button>
@@ -2338,7 +2336,7 @@ function buildCar(s,im,one){
   const car=p.querySelector('.car');let n=0;const seenK=new Set();
   const dots=()=>{const k=car.children.length;p.querySelector('.dots').innerHTML=k>1?Array.from({length:k},(_,j)=>`<i${j===Math.round(car.scrollLeft/car.clientWidth)?' class="on"':''}></i>`).join(''):'';p.classList.toggle('one',k<2)};
   const add=x=>{const kk=pid(x.src);if(seenK.has(kk))return;seenK.add(kk);const f=n===0,d=document.createElement('div'),i=new Image();d.className='sl';i.alt='Photo du végétal à identifier';i.referrerPolicy='no-referrer';i.decoding='async';i.onload=()=>d.classList.add('ld');setTimeout(()=>d.classList.add('ld'),4000);i.src=x.src;if(!f)i.loading='lazy';
-    i.onerror=()=>{if(f){bad.add(s[0]);next()}else{d.remove();dots()}};d.append(i);
+    i.onerror=()=>{if(f&&cur===s&&!done){bad.add(s[0]);next()}else if(!f){d.remove();dots()}};   // photo principale perdue après la réponse : on ne coupe pas la correctiond.append(i);
     if(x.label){const b=document.createElement('span');b.className='lb';b.textContent=x.label;d.append(b)}
     if(x.page&&x.lic){const c=document.createElement('a');c.className='cr';c.href=x.page;c.target='_blank';c.rel='noopener';c.textContent='©';c.title=x.lic;d.append(c)}
     car.append(d);n++};
@@ -2355,7 +2353,8 @@ async function next(){
   focusCard();
   $('next').hidden=true;$('fb').innerHTML='';$('opts').innerHTML='';$('opts').className='opts';$('pic').hidden=false;$('q').className='';pvSet=null;$('ex').hidden=true;$('qc').hidden=false;$('qc').classList.remove('typing');
   $('pic').className='pic sk';$('pic').textContent='Chargement…';done=false;
-  const q=await(pre||prepare());
+  const slow=setTimeout(()=>{if(tk===nxt&&$('pic').classList.contains('sk'))$('pic').textContent='Chargement de la photo… la connexion semble lente.'},5000);
+  const q=await(pre||prepare());clearTimeout(slow);
   if(tk!==nxt)return;pre=null;
   if(!q&&Date.now()<iOff){const w=()=>{const e=$('q-wait');if(e)e.textContent=Math.max(1,Math.ceil((iOff-Date.now())/1e3))};$('pic').innerHTML='<div style="padding:16px;text-align:center" role="status"><p>Le service de photos demande une courte pause.<br>Reprise dans <b id="q-wait"></b> s…</p></div>';w();const iv=setInterval(()=>{if(tk!==nxt||!$('q-wait')){clearInterval(iv);return}w()},1e3);setTimeout(()=>{clearInterval(iv);if(tk===nxt)next()},iOff-Date.now()+400);return}
   if(!q){$('pic').innerHTML='<div style="padding:16px"><p>Aucune image chargée. Vérifie la connexion.</p><button class="big" id="q-retry">Réessayer</button></div>';$('q-retry').onclick=()=>{bad.clear();next()};return}
@@ -2369,7 +2368,7 @@ async function next(){
       const c=document.createElement('span');c.className='cap';c.textContent=o[0];b.append(c);
       $('opts').append(b)});
   }else{buildCar(q.s,q.im,false);
-  $('q').textContent=typed?'Écris le nom latin complet (genre + espèce)':'Quelle est cette plante ?';
+  $('q').textContent=typed?'Écris le nom latin complet (genre + espèce)':document.body.classList.contains('fresh')?'Bienvenue ! Quelle est cette plante ?':'Quelle est cette plante ?';
   if(typed){
     $('opts').innerHTML='<form id="q-form"><span class="qiw"><input id="q-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Touche ici pour écrire (Genus species)" aria-label="Nom latin"><b class="qini" id="q-ini" hidden></b></span><button>Valider</button><p class="tyq" id="q-ty">Écris le nom latin complet (genre + espèce)</p></form>';
     $('q-form').onsubmit=e=>{e.preventDefault();answer($('q-input').value.trim())};   // champ vide : correction immédiate
@@ -2387,7 +2386,7 @@ async function next(){
   const fine=typeof matchMedia==='function'&&matchMedia('(hover:hover) and (pointer:fine)').matches,f=typed&&!pvSet&&fine?$('q-input'):kbd?$('opts').querySelector('button'):null;if(f)f.focus({preventScroll:true});
 }
 function answer(v){
-  if(done)return;done=true;acqNow=false;firstQ=false;if(!$('coach').hidden){$('coach').hidden=true;try{localStorage.setItem('qp.coach','1')}catch(e){}}
+  if(done)return;done=true;acqNow=false;firstQ=false;document.body.classList.remove('fresh');
   const w=S.find(s=>typed?norm(s[0])===norm(v):s[0]===v);
   const good=typed?near(norm(v),norm(cur[0])):v===cur[0];
   const r0=rk(),p=st.sp[cur[0]]||(st.sp[cur[0]]={b:1,s:0,e:0,d:0});
@@ -3054,7 +3053,8 @@ document.addEventListener('keydown',e=>{
     if(go)setTimeout(next,200)});
 })();
 chips();stats();next();
-try{if(!localStorage.getItem('qp.coach')&&seenN()===0){$('coach').hidden=false;$('cok').onclick=()=>{$('coach').hidden=true;try{localStorage.setItem('qp.coach','1')}catch(e){}}}}catch(e){}
+// tout premier lancement : la première plante passe avant tout ; l'accueil tient dans la question, les modes apparaissent après la première réponse
+if(seenN()===0)document.body.classList.add('fresh');
 (()=>{const sp=$('splash');if(!sp)return;
   $('spe').innerHTML=rIcon(rk());
   for(let k=0;k<9;k++)sp.insertAdjacentHTML('beforeend','<i class="sf" style="left:'+(8+k*10)+'%;top:'+(52+k%4*9)+'%;width:'+(4+k%3*2)+'px;height:'+(4+k%3*2)+'px;animation-duration:'+(4+k%4)+'s;animation-delay:'+(k*.7)+'s"></i>');
