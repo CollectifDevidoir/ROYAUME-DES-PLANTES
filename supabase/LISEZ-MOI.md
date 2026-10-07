@@ -28,21 +28,43 @@ Un ami s'ajoute avec son **code ami** (par exemple `RPL-K7Q2M`). L'amitié est r
 3. **Régler la connexion par e-mail.** Dans **Authentication > Sign In / Providers**, le fournisseur **Email** est activé par défaut.
    - « Confirm email » activé : chaque nouveau compte doit cliquer sur un lien reçu par e-mail. C'est plus sûr, et c'est le réglage conseillé si l'appli est en ligne.
    - Désactivé : le compte est utilisable tout de suite. C'est pratique entre amis, ou si l'appli est ouverte en fichier local.
-4. **Indiquer l'adresse de l'appli.** Dans **Authentication > URL Configuration**, mets dans « Site URL » l'adresse où l'appli est publiée, par exemple `https://antoinestager-cell.github.io/royaume-/`. Ajoute la même adresse dans « Redirect URLs ». Les liens reçus par e-mail renvoient vers cette adresse.
-5. **Brancher l'appli.** Dans **Project Settings > API** (ou **API Keys**), copie l'**URL du projet** et la **clé publique**. C'est la clé « anon » ou « publishable », jamais la clé « service_role » ou « secret ». Colle-les dans `index.html`, sur la ligne :
-   ```js
-   const SB_URL='',SB_KEY='';
-   ```
-   par exemple : `const SB_URL='https://abcdefgh.supabase.co',SB_KEY='eyJhbGciOi…';`
-6. **Publier l'appli en https**, par exemple avec GitHub Pages sur ce dépôt.
-   - Ouverte en fichier local, l'appli permet la connexion par mot de passe, mais pas le lien par e-mail : le bouton est alors masqué.
+4. **Indiquer l'adresse de l'appli.** Dans **Authentication > URL Configuration**, mets dans « Site URL » l'adresse où l'appli est publiée, par exemple `https://antoinestager-cell.github.io/ROYAUME-DES-PLANTES/` (voir « Mettre l'appli en ligne »). Ajoute la même adresse dans « Redirect URLs ». Les liens reçus par e-mail renvoient vers cette adresse.
+5. **Brancher l'appli.** C'est fait pour ton projet : `index.html` contient l'adresse `https://hcbzkpsxqxhmqcblfsnm.supabase.co` et ta clé publique (`sb_publishable_…`).
+   - L'adresse à utiliser est **l'URL du projet**, de la forme `https://<identifiant>.supabase.co`. On la trouve dans **Project Settings > Data API** (ou en haut de **Project Settings > API Keys**). Ce n'est **pas** l'adresse de la page du tableau de bord affichée dans la barre du navigateur (`https://supabase.com/dashboard/project/…`). Si elle est collée par erreur, l'appli la corrige d'elle-même.
+   - La clé est la clé **publique** (« publishable » ou « anon »), jamais la clé **secrète** (« secret » ou « service_role »). Si une clé secrète est collée, l'appli la refuse et n'envoie rien.
+6. **Tant que l'appli n'est pas en ligne** (ouverte en fichier sur ton ordinateur ou ton téléphone) :
+   - désactive « Confirm email » (étape 3), sinon le lien de confirmation renverrait vers une adresse qui n'existe pas encore ;
+   - le lien de connexion par e-mail n'est pas proposé. La connexion par mot de passe fonctionne.
+7. **Mettre l'appli en ligne** : voir la section suivante. Ensuite, réactive « Confirm email » si tu le souhaites, et renseigne l'adresse publiée à l'étape 4.
+
+## Mettre l'appli en ligne et recevoir les mises à jour
+
+Je travaille sur la branche `claude/improve-html-app-e7b6o4` du dépôt. Le plus simple est de publier l'appli **directement depuis cette branche** : chaque modification que je pousse est alors en ligne une minute plus tard, sans rien faire. Ta configuration Supabase étant dans `index.html` sur cette branche, elle est conservée à chaque mise à jour.
+
+Ton dépôt est **privé**. Deux possibilités gratuites :
+
+**A. Rendre le dépôt public + GitHub Pages** (le plus simple)
+1. Sur GitHub, dans le dépôt : **Settings > General**, tout en bas « Danger Zone » > **Change visibility** > Public. Le dépôt ne contient rien de secret : la clé Supabase est publique par conception.
+2. **Settings > Pages** > « Build and deployment » > Source : **Deploy from a branch** > Branch : `claude/improve-html-app-e7b6o4`, dossier `/ (root)` > **Save**.
+3. Une à deux minutes plus tard, l'appli est en ligne à l'adresse `https://antoinestager-cell.github.io/ROYAUME-DES-PLANTES/`. Elle s'affiche en haut de la page Settings > Pages.
+
+**B. Garder le dépôt privé + Cloudflare Pages** (ou Netlify)
+1. Crée un compte gratuit sur [pages.cloudflare.com](https://pages.cloudflare.com), puis **Create a project > Connect to Git**, et autorise l'accès au dépôt `ROYAUME-DES-PLANTES`.
+2. « Production branch » : `claude/improve-html-app-e7b6o4`. Pas de commande de construction (« Framework preset » : None). Dossier de sortie : `/`.
+3. L'appli est en ligne à une adresse du type `https://royaume-des-plantes.pages.dev`. Elle se met à jour à chaque modification poussée.
+
+Dans les deux cas, reporte l'adresse obtenue dans Supabase : **Authentication > URL Configuration** > « Site URL » et « Redirect URLs ».
+
+Sur téléphone, ouvre l'adresse puis « Ajouter à l'écran d'accueil » : l'appli s'ouvre alors comme une application.
+
+**Si tu modifies toi-même un fichier sur GitHub**, dis-le-moi au début de notre échange suivant. Je repars toujours de la dernière version du dépôt, mais une modification faite pendant que je travaille peut entrer en conflit avec la mienne.
 
 La clé publique peut figurer dans le fichier : elle est faite pour ça. La sécurité vient de la base, où toutes les règles sont dans `schema.sql`.
 
 ## Bon à savoir sur le plan gratuit
 
 - Largement suffisant pour un groupe d'amis : 50 000 utilisateurs actifs par mois et 500 Mo de base. Une progression pèse quelques dizaines de Ko.
-- **Un projet gratuit se met en pause après une semaine sans aucune activité.** Il se réactive d'un clic depuis le tableau de bord Supabase. Pendant la pause, l'appli continue de marcher hors compte. L'onglet Profil affiche alors « Pas de connexion pour l'instant ».
+- **Un projet gratuit se met en pause après une semaine sans aucune activité.** Il se réactive d'un clic depuis le tableau de bord Supabase. Pendant la pause, l'appli continue de marcher hors compte. L'onglet Profil affiche alors « Le serveur des comptes ne répond pas… » avec un bouton Réessayer.
 - Les e-mails d'authentification du service intégré sont limités à quelques envois par heure. C'est suffisant entre amis. Au-delà, on peut brancher son propre serveur d'e-mails (Authentication > Emails > SMTP).
 
 ## Fonctionnement côté appli
@@ -65,7 +87,8 @@ La connexion par Google, Apple, etc. (OAuth) pourra s'ajouter plus tard. Elle de
   - suppression du compte avec toutes ses données.
 - `outils/controle_comptes.js` fait le test de bout en bout dans le navigateur, avec la **vraie bibliothèque supabase-js**. Elle parle à un faux Supabase (`outils/supabase/faux_supabase.js`) adossé à la même base PGlite. Il couvre :
   - deux appareils : création de compte, pseudo, ajout d'un ami, tableau du jour ;
-  - messages d'erreur, reprise de la progression sur un nouvel appareil, session gardée au rechargement ;
+  - messages d'erreur, reprise de la progression sur un nouvel appareil, session gardée au rechargement, lien de connexion par e-mail (l'appli y est servie à une adresse https simulée) ;
+  - réseau coupé, adresse du tableau de bord collée par erreur, clé secrète refusée ;
   - déconnexion et suppression du compte.
 
 Ils demandent `@electric-sql/pglite` et `@supabase/supabase-js`, installés comme Playwright :

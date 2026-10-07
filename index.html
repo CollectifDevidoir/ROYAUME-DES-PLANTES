@@ -2786,20 +2786,24 @@ $('next').onclick=next;
 /* ===== Comptes (Supabase) : profil, amis et tableau du jour. Mise en route : supabase/LISEZ-MOI.md ===== */
 // Pour activer les comptes, coller ici l'URL du projet et sa clé « anon » (Supabase > Project Settings > API).
 // La clé « anon » est publique par conception : la sécurité vient des règles de la base (supabase/schema.sql).
-const SB_URL='https://supabase.com/dashboard/project/hcbzkpsxqxhmqcblfsnm/settings/api-keys',SB_KEY='sb_publishable_rtqaluMAanjewYK2bvJ3Xw_zMampeYI';
+const SB_URL='https://hcbzkpsxqxhmqcblfsnm.supabase.co',SB_KEY='sb_publishable_rtqaluMAanjewYK2bvJ3Xw_zMampeYI';
 const SB_LIB='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.js',SB_SRI='sha384-BWcjm9OdFth9TbhCxZPdm+gAOUMAzQy9nmTs12ioXdCcbVnJaPMn+fMUoQCLt60R';
 var sb=null,sbU=null,sbP=null,sbTab=null,sbT=null,sbLd=null,sbMsg='',sbOk='',sbBusy=false,sbSync=0;
-const sbOn=()=>!!(SB_URL&&SB_KEY);
+// Adresse du projet : on accepte aussi, par erreur, l'adresse d'une page du tableau de bord Supabase
+const sbNorm=u=>{u=(u||'').trim();const m=u.match(/supabase\.com\/dashboard\/project\/([a-z0-9]{20})/);return m?'https://'+m[1]+'.supabase.co':u.replace(/\/(rest|auth)\/v1.*$/,'').replace(/\/+$/,'')};
+// Jamais de clé secrète dans l'appli : elle donnerait tous les droits sur la base à n'importe quel visiteur
+const sbSecret=k=>/^sb_secret_/.test(k)||(()=>{try{return JSON.parse(atob(k.split('.')[1].replace(/-/g,'+').replace(/_/g,'/'))).role==='service_role'}catch(e){return false}})();
+const SBU=sbNorm(SB_URL),sbOn=()=>!!(SBU&&SB_KEY&&!sbSecret(SB_KEY));
 // La bibliothèque n'est chargée que si les comptes servent : onglet Profil ouvert, session enregistrée ou retour d'un lien de connexion.
 function sbLib(){
   if(sbLd)return sbLd;
-  sbLd=new Promise((ok,ko)=>{const s=document.createElement('script');s.src=SB_LIB;s.integrity=SB_SRI;s.crossOrigin='anonymous';s.onload=ok;s.onerror=()=>{sbLd=null;s.remove();ko(new Error('HORS_LIGNE'))};document.head.append(s)})
-   .then(()=>{sb=supabase.createClient(SB_URL,SB_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true,storageKey:'qp.sb'}});
+  sbLd=new Promise((ok,ko)=>{const s=document.createElement('script');s.src=SB_LIB;s.integrity=SB_SRI;s.crossOrigin='anonymous';s.onload=ok;s.onerror=()=>{sbLd=null;s.remove();ko(new Error('MODULE'))};document.head.append(s)})
+   .then(()=>{sb=supabase.createClient(SBU,SB_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true,storageKey:'qp.sb'}});
      // pas d'appel à Supabase directement dans ce rappel (recommandation de la bibliothèque) : on le diffère
      sb.auth.onAuthStateChange((ev,s)=>{const u=s&&s.user||null,chg=(u&&u.id)!==(sbU&&sbU.id);sbU=u;if(chg)setTimeout(sbConnecte,0)});return sb});
   return sbLd;
 }
-const SB_ERR={PSEUDO_PRIS:'Ce pseudo est déjà pris.',PSEUDO_INVALIDE:'Pseudo : 2 à 20 caractères (lettres, chiffres, point, tiret, soulignement).',CODE_INCONNU:'Aucun ami avec ce code.',SOI_MEME:'C\'est ton propre code !',TROP_D_ESSAIS:'Trop d\'essais : réessaie dans une heure.',HORS_LIGNE:'Pas de connexion pour l\'instant.',SANS_PROFIL:'Choisis d\'abord ton pseudo.',
+const SB_ERR={PSEUDO_PRIS:'Ce pseudo est déjà pris.',PSEUDO_INVALIDE:'Pseudo : 2 à 20 caractères (lettres, chiffres, point, tiret, soulignement).',CODE_INCONNU:'Aucun ami avec ce code.',SOI_MEME:'C\'est ton propre code !',TROP_D_ESSAIS:'Trop d\'essais : réessaie dans une heure.',HORS_LIGNE:'Le serveur des comptes ne répond pas. Vérifie ta connexion internet ; si elle marche, le projet Supabase est peut-être en pause (à relancer depuis le tableau de bord Supabase) ou son adresse est incorrecte.',MODULE:'Le module de connexion n\'a pas pu être chargé : vérifie ta connexion internet.','Invalid API key':'Clé Supabase refusée : vérifie la clé publique (« publishable ») dans index.html.','No API key':'Clé Supabase absente : vérifie index.html.',SANS_PROFIL:'Choisis d\'abord ton pseudo.',
   'Invalid login credentials':'E-mail ou mot de passe incorrect.','already registered':'Un compte existe déjà avec cet e-mail : connecte-toi.','at least 6':'Mot de passe : 6 caractères au moins.','not confirmed':'Confirme d\'abord ton adresse avec le lien reçu par e-mail.','rate limit':'Trop de demandes : réessaie dans quelques minutes.','valid email':'Adresse e-mail invalide.'};
 const sbErr=e=>{const m=(e&&(e.message||e.msg))||String(e);for(const k in SB_ERR)if(m.includes(k))return SB_ERR[k];return /fetch|network|load failed/i.test(m)?SB_ERR.HORS_LIGNE:'Une erreur est survenue ('+m+').'};
 async function sbRpc(f,a){const {data,error}=await sb.rpc(f,a||{});if(error)throw error;return data}
@@ -2841,6 +2845,7 @@ async function ami(){
   let h=`<div class="card prf"><div class="prh"><span class="prm">${rIcon(b.rang)}</span><div><h2>${nom}</h2><p>${r[1]}</p></div></div>
 <div class="prs"><div><b>${b.acquises}</b><small>espèce${b.acquises>1?'s':''} acquise${b.acquises>1?'s':''}</small></div><div><b>${b.reussite} %</b><small>de réussite</small></div><div><b><span class="tgi">${ICO.flamme}</span>${b.serie}</b><small>jour${b.serie>1?'s':''} de suite</small></div></div></div>`;
   const msg=(sbMsg?`<p class="stm ko" role="alert">${esc(sbMsg)}</p>`:'')+(sbOk?`<p class="stm ok" role="status">${esc(sbOk)}</p>`:'');
+  if(SB_KEY&&sbSecret(SB_KEY)){el.innerHTML=h+'<div class="card"><h3 class="hh">Amis</h3><p class="stm ko">La clé collée dans index.html est la clé secrète de Supabase : elle ne doit jamais être dans l\'appli. Remplace-la par la clé publique (« publishable »), puis régénère la clé secrète dans Supabase.</p></div>';return}
   if(!sbOn()){el.innerHTML=h+'<div class="card"><h3 class="hh">Amis</h3><p class="na">Les comptes et le tableau des amis ne sont pas encore activés sur cette version de l\'appli.</p></div>';return}
   if(!sb){el.innerHTML=h+'<div class="card"><p class="na">Connexion au compte…</p></div>';try{await sbLib();const {data}=await sb.auth.getSession();sbU=data.session&&data.session.user||null;await sbConnecte()}catch(e){sbMsg=sbErr(e);sbLd=null;el.innerHTML=h+`<div class="card"><h3 class="hh">Mon compte</h3><p class="stm ko">${esc(sbMsg)}</p><button class="mini" id="sb-re" type="button">Réessayer</button></div>`;$('sb-re').onclick=()=>{sbMsg='';ami()}}return}
   if(!sbU){
