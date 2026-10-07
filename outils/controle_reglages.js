@@ -62,6 +62,10 @@ const small=await p.evaluate(()=>[...document.querySelectorAll('#set button')].m
 console.log(JSON.stringify(small));
 // clavier sur l'anneau
 await p.keyboard.press('Escape');await p.focus('#ring');await p.keyboard.press('Enter');await p.waitForTimeout(200);ok(await p.evaluate(()=>$('set').open),'Entrée sur l\'anneau ouvre les réglages');
+// confidentialité : section discrète dans « Mes données »
+await p.evaluate(()=>openSettings());await p.waitForTimeout(300);await p.click('#set-priv');await p.waitForTimeout(200);
+ok(await p.evaluate(()=>{const t=$('set').textContent;return /Sur cet appareil/.test(t)&&/jamais ton e-mail/.test(t)&&/Supprimer mon compte/.test(t)}),'Confidentialité & données : ce qui est gardé, pourquoi, et comment tout effacer');
+await p.click('#set-priv');ok(await p.evaluate(()=>!/Sur cet appareil/.test($('set').textContent)),'Confidentialité & données : se referme');await p.evaluate(()=>$('set').close());
 // migration : ancien état sans réglages
 await p.evaluate(()=>localStorage.setItem('quizplantes.v1',JSON.stringify({sp:{'Acer campestre':{b:4,s:5,e:1,d:0}},hist:{},m:{}})));await p.reload();await p.waitForTimeout(500);
 ok(await p.evaluate(()=>st.set.goal===40&&st.set.vib===true&&known()===1),'ancienne progression : objectif 40 et vibration ajoutés, progression intacte');

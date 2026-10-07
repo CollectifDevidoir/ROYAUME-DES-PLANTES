@@ -766,6 +766,7 @@ dialog.bs[open]{animation:bsUp .28s cubic-bezier(.2,.8,.2,1)}
 .bs .mini.ko{border-color:var(--ko);color:var(--ko)}
 .bs .mini.ko.full{background:var(--ko);color:var(--card)}
 .stp{padding:0 0 12px;border-bottom:1px solid var(--bd)}
+.prv p{margin:0 0 8px;font-size:.88rem;line-height:1.45}.prv p:last-child{margin:0}
 .stp .row{gap:8px}
 .stp textarea{width:100%;box-sizing:border-box;min-height:88px;margin:4px 0 8px;padding:8px;border:1px solid var(--bd);border-radius:10px;background:var(--bg2);color:var(--fg);font:12px/1.4 ui-monospace,monospace;resize:vertical}
 .stp p{margin:0 0 8px;font-size:.9rem}
@@ -2634,22 +2635,28 @@ let setPanel='';
 function setHtml(){
   const g=goal(),v=st.set.vib;
   const pnl=setPanel==='save'?`<div class="stp"><p>Copie ta progression pour la garder ou la passer sur un autre appareil, ou colle une sauvegarde pour la restaurer.</p><div class="row"><button class="mini" id="set-copy" type="button">Copier</button><button class="mini" id="set-paste" type="button">Restaurer</button></div><div id="set-out"></div></div>`
+   :setPanel==='priv'?`<div class="stp prv"><p><b>Sur cet appareil</b> : ta progression (plantes vues, niveaux, erreurs, jours joués) et tes réglages. Elle sert seulement à choisir les plantes à revoir et à suivre tes progrès.</p>
+<p><b>Avec un compte</b> (facultatif) : ton e-mail pour te connecter, ton pseudo, ton code ami, une copie de ta progression et tes chiffres du jour. Tes amis voient ton pseudo, ton rang et ces chiffres, jamais ton e-mail.</p>
+<p><b>Photos</b> : elles viennent d'iNaturalist et de Wikipédia, qui reçoivent seulement la demande d'image. Pas de publicité, pas de mesure d'audience, rien n'est revendu.</p>
+<p><b>Tout effacer</b> : « Réinitialiser » ci-dessous vide cet appareil ; « Supprimer mon compte », dans ton profil, efface le compte, le pseudo, les amitiés et la sauvegarde en ligne.</p></div>`
    :setPanel==='reset'?`<div class="stp"><p class="stm ko">${sbU&&sbP?'Effacer toute ta progression, sur cet appareil et dans ton compte ? Tes réglages et tes amis sont conservés.':'Effacer toute la progression sur cet appareil ? Tes réglages sont conservés.'}</p><div class="row"><button class="mini" id="set-no" type="button">Annuler</button><button class="mini ko full" id="set-yes" type="button">Tout effacer</button></div></div>`:'';
   return `<h3 class="stl">Objectif du jour</h3>
 <div class="str stg"><span><b id="set-gl">Exercices par jour</b></span><output class="sgv" id="set-gv" for="set-g">${g}</output></div>
 <div class="sld" style="--sp:${(g-GOALS[0])/(GOALS[GOALS.length-1]-GOALS[0])}"><input type="range" id="set-g" min="${GOALS[0]}" max="${GOALS[GOALS.length-1]}" step="10" value="${g}" aria-labelledby="set-gl" aria-valuetext="${g} exercices par jour"><div class="tks" aria-hidden="true">${GOALS.map((n,i)=>`<span style="--i:${i/(GOALS.length-1)}"${n===g?' class="on"':''}>${n}</span>`).join('')}</div></div>
-<h3 class="stl">Confort</h3>
-<div class="str"><span><b id="set-vl">Vibration</b><small>Au bon et au mauvais choix</small></span><button class="sw" id="set-vib" type="button" role="switch" aria-checked="${v}" aria-labelledby="set-vl"></button></div>
+${'vibrate' in navigator?`<h3 class="stl">Confort</h3>
+<div class="str"><span><b id="set-vl">Vibration</b><small>Au bon et au mauvais choix</small></span><button class="sw" id="set-vib" type="button" role="switch" aria-checked="${v}" aria-labelledby="set-vl"></button></div>`:''}
 <h3 class="stl">Mes données</h3>
 <div class="str"><span><b>Sauvegarde</b><small>Copier ou restaurer ma progression</small></span><button class="mini" id="set-save" type="button" aria-expanded="${setPanel==='save'}">${setPanel==='save'?'Fermer':'Ouvrir'}</button></div>${setPanel==='save'?pnl:''}
+<div class="str"><span><b>Confidentialité &amp; données</b><small>Ce qui est gardé, et pourquoi</small></span><button class="mini" id="set-priv" type="button" aria-expanded="${setPanel==='priv'}">${setPanel==='priv'?'Fermer':'Lire'}</button></div>${setPanel==='priv'?pnl:''}
 <div class="str"><span><b>Réinitialiser</b><small>Efface toute ma progression</small></span><button class="mini ko" id="set-reset" type="button" aria-expanded="${setPanel==='reset'}">Effacer</button></div>${setPanel==='reset'?pnl:''}`;
 }
 function setRender(focusId){
   const b=$('set-b');b.innerHTML=setHtml();
   {const r=$('set-g'),sl=b.querySelector('.sld'),upd=()=>{const v=+r.value;st.set.goal=v;$('set-gv').textContent=v;r.setAttribute('aria-valuetext',v+' exercices par jour');sl.style.setProperty('--sp',(v-GOALS[0])/(GOALS[GOALS.length-1]-GOALS[0]));sl.querySelectorAll('.tks span').forEach(t=>t.classList.toggle('on',+t.textContent===v));stats();if(!$('pro').hidden)pro()};
    r.oninput=upd;r.onchange=()=>{upd();save();if(!$('pro').hidden)pro()}}
-  $('set-vib').onclick=()=>{st.set.vib=!st.set.vib;save();vib(15);setRender('set-vib')};
+  if($('set-vib'))$('set-vib').onclick=()=>{st.set.vib=!st.set.vib;save();vib(15);setRender('set-vib')};
   $('set-save').onclick=()=>{setPanel=setPanel==='save'?'':'save';setRender('set-save')};
+  $('set-priv').onclick=()=>{setPanel=setPanel==='priv'?'':'priv';setRender('set-priv')};
   $('set-reset').onclick=()=>{setPanel=setPanel==='reset'?'':'reset';setRender(setPanel?'set-no':'set-reset')};
   if($('set-no'))$('set-no').onclick=()=>{setPanel='';setRender('set-reset')};
   if($('set-yes'))$('set-yes').onclick=()=>{const keep=st.set;st={sp:{},day:{},m:{},set:keep};fix();if(sbU&&sbP)sbRaz=true;save();setPanel='';stats();if(!$('pro').hidden)pro();restart();setRender('set-reset');toast('Progression effacée')};
