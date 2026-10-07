@@ -110,7 +110,9 @@ La clé publique peut figurer dans le fichier : elle est faite pour ça. La séc
 | Moment | Ce qui se passe |
 |---|---|
 | Première connexion sur un appareil | La progression du compte et celle de l'appareil sont **fusionnées**, sans rien perdre : pour chaque plante, la fiche la plus travaillée ; pour chaque jour, le plus rempli. |
-| Après chaque réponse | 4 secondes après la dernière réponse, l'appli envoie les chiffres du jour et sauvegarde la progression. Elle le fait aussi quand on quitte l'appli. |
+| Après chaque réponse | 4 secondes après la dernière réponse, l'appli relit la sauvegarde du compte, y fusionne la progression de l'appareil (rien de ce qu'un autre appareil a appris n'est perdu), puis envoie les chiffres du jour et la sauvegarde. Elle le fait aussi quand on quitte l'appli. |
+| Réinitialiser (Réglages), connecté | Vide l'appareil et la sauvegarde du compte. |
+| Se déconnecter | Seulement sur cet appareil ; la progression y reste. |
 | Onglet Profil | Tableau du jour : moi et mes amis, du plus actif au moins actif. Bouton « Actualiser ». |
 | « Supprimer mon compte » | Efface le compte, le pseudo, les amitiés et la sauvegarde en ligne. La progression reste sur l'appareil. |
 
@@ -127,7 +129,8 @@ La connexion par Google, Apple, etc. (OAuth) pourra s'ajouter plus tard. Elle de
   - deux appareils : création de compte, pseudo, ajout d'un ami, tableau du jour ;
   - messages d'erreur, reprise de la progression sur un nouvel appareil, session gardée au rechargement, lien de connexion par e-mail (l'appli y est servie à une adresse https simulée) ;
   - réseau coupé, adresse du tableau de bord collée par erreur, clé secrète refusée ;
-  - déconnexion et suppression du compte.
+  - même compte sur plusieurs appareils : chacun apprend de son côté, rien n'est écrasé, un 3e appareil retrouve tout ; progression faite avant de créer le compte gardée ;
+  - réinitialisation en étant connecté (le compte est aussi vidé), déconnexion de cet appareil seulement, suppression du compte.
 
 Ils demandent `@electric-sql/pglite` et `@supabase/supabase-js`, installés comme Playwright :
 `npm i -g @electric-sql/pglite @supabase/supabase-js`.
