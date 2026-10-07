@@ -1,31 +1,44 @@
-"""Lot 2, étape C : illustrations « carnet naturaliste ».
-Trait d'encre sépia (classe k, couleur var(--ink), claire en mode sombre) et aplats de pigments
-légèrement décalés du trait, comme à la main. Ni dégradé, ni reflet, ni ombre portée.
-Les couleurs varient d'une illustration à l'autre, et les rangs suivent les saisons
-(printemps → été → automne → crépuscule doré).
+"""Lot 2, étape C (version 2) : illustrations « vignettes ludiques ».
+Formes pleines et arrondies, couleurs franches. Le volume vient de deux tons (un dessous plus foncé,
+légèrement décalé) et d'un petit reflet clair. Ni trait d'encre, ni dégradé, ni filtre.
+Les rangs suivent les saisons (printemps → été → automne → nuit étoilée → or).
 Usage : python3 outils/illustrations.py --ecrire          remplace les illustrations, leur CSS et le décor dans index.html
         python3 outils/illustrations.py --json fichier    écrit les dessins dans un fichier JSON (aperçu)"""
 import json,math,re,sys,os
 
-# Pigments (classes CSS .ri .cX) : un nom court par couleur
-PAL={'mo':'#7fa456','fe':'#a9c97a','pi':'#4f8a73','li':'#8cbcae',
-     'ba':'#8d6040','wo':'#d9ae7c','oc':'#dba643','go':'#ecc85f','ru':'#c86d45',
-     'be':'#b44b62','pl':'#8c6aa8','ro':'#e3a0a4','wa':'#7fb3d5','ic':'#cfe5ef',
-     'pa':'#f3e8cf','st':'#a9a69c','du':'#5d6f9e'}
+# Palette : une teinte = 3 ou 4 tons (1 clair, 2 base, 3 ombre, 4 ombre profonde)
+PAL={'g1':'#b4e67f','g2':'#72c24c','g3':'#459c3c','g4':'#2c7433',
+     't1':'#86e0c4','t2':'#33b48f','t3':'#1f8a6d','t4':'#14614f',
+     'b1':'#c99263','b2':'#9c653a','b3':'#734529',
+     'w1':'#ffe6b5','w2':'#f6c67c','w3':'#d99a4f',
+     'y1':'#fff3a8','y2':'#ffcf3d','y3':'#ef9f1c',
+     'o1':'#ffb684','o2':'#f27c46','o3':'#c8552c',
+     'r1':'#ffa3b5','r2':'#f0466b','r3':'#c22a50',
+     'p1':'#ffd6e6','p2':'#ff92bb','p3':'#e2628f',
+     'v1':'#dcc2ff','v2':'#ab7ce9','v3':'#7c52c4',
+     'u1':'#c8ecff','u2':'#4db3f2','u3':'#2a83cc',
+     'n2':'#4256a6','n3':'#2e3b7e',
+     'c1':'#fffaf0','c2':'#f6e7c4','c3':'#dfc591',
+     's1':'#dcd8d0','s2':'#b3ada2','s3':'#8d877c',
+     'd1':'#bd8a5c','d2':'#93613c','d3':'#6c4428'}
 def f(x): return ('%.1f'%x).rstrip('0').rstrip('.')
-def W(d,c,dx=1.3,dy=1.1): return f'<path class="c{c}" transform="translate({f(dx)} {f(dy)})" d="{d}"/>'
-def K(d,w=2.6,cls='k'): return f'<path class="{cls}" stroke-width="{f(w)}" d="{d}"/>'
-def B(d,c,w=2.6,dx=1.3,dy=1.1): return W(d,c,dx,dy)+K(d,w)
+def F(d,c,tr=''): return f'<path class="f{c}"{" transform=%s" % chr(34)+tr+chr(34) if tr else ""} d="{d}"/>'
+def S(d,c,w): return f'<path class="s{c}" stroke-width="{f(w)}" d="{d}"/>'
+def dep(d,c,cd,dx=1.4,dy=1.8): return F(d,cd,f'translate({f(dx)} {f(dy)})')+F(d,c)
+def Sdep(d,c,cd,w,dx=1,dy=1.4): return f'<path class="s{cd}" stroke-width="{f(w)}" transform="translate({f(dx)} {f(dy)})" d="{d}"/>'+S(d,c,w)
 def circ(cx,cy,r): return f'M{f(cx-r)} {f(cy)}A{f(r)} {f(r)} 0 1 0 {f(cx+r)} {f(cy)}A{f(r)} {f(r)} 0 1 0 {f(cx-r)} {f(cy)}Z'
 def ell(cx,cy,rx,ry): return f'M{f(cx-rx)} {f(cy)}A{f(rx)} {f(ry)} 0 1 0 {f(cx+rx)} {f(cy)}A{f(rx)} {f(ry)} 0 1 0 {f(cx-rx)} {f(cy)}Z'
 def g(body,x,y,a=0,s=1): return f'<g transform="translate({f(x)} {f(y)}) rotate({f(a)}){"" if s==1 else " scale("+f(s)+")"}">{body}</g>'
+def shadow(cx=32,cy=58.5,rx=18,ry=2.8): return f'<ellipse class="sh" cx="{f(cx)}" cy="{f(cy)}" rx="{f(rx)}" ry="{f(ry)}"/>'
+def svg(body): return '<svg class="ri" viewBox="0 0 64 64" aria-hidden="true">'+body+'</svg>'
 def leafd(l,w): return f'M0 0C{f(w)} {f(-l*.28)} {f(w*.75)} {f(-l*.78)} 0 {f(-l)}C{f(-w*.75)} {f(-l*.78)} {f(-w)} {f(-l*.28)} 0 0Z'
-def leaf(x,y,a,l,w,c,iw=2.2,rib=True):
-    d=leafd(l,w);b=W(d,c,1,.9)+K(d,iw)
-    if rib: b+=K(f'M0 -1L0 {f(-l*.7)}',iw*.6)
+def halfd(l,w): return f'M0 0C{f(w)} {f(-l*.28)} {f(w*.75)} {f(-l*.78)} 0 {f(-l)}Z'
+def leaf(x,y,a,l,w,c='g2',cd='g3',rib='g1'):
+    b=F(leafd(l,w),c)+F(halfd(l,w),cd)
+    if rib: b+=S(f'M0 {f(-l*.12)}L0 {f(-l*.7)}',rib,max(1,w*.22))
     return g(b,x,y,a)
 def bumps(cx,cy,rx,ry,n,amp=.2,a0=-90,jit=None):
-    """Contour festonné (houppier, buisson) : n lobes autour d'une ellipse."""
+    """Contour festonné : n lobes autour d'une ellipse."""
     pts=[];jit=jit or [1]*n
     for i in range(n):
         t=math.radians(a0+360*i/n);pts.append((cx+rx*math.cos(t),cy+ry*math.sin(t)))
@@ -35,122 +48,141 @@ def bumps(cx,cy,rx,ry,n,amp=.2,a0=-90,jit=None):
         qx,qy=cx+rx*k*math.cos(t),cy+ry*k*math.sin(t);p=pts[(i+1)%n]
         d+=f'Q{f(qx)} {f(qy)} {f(p[0])} {f(p[1])}'
     return d+'Z'
-def ground(x1=14,x2=50,y=57.5): return K(f'M{x1} {y}C{f((x1+x2)/2-6)} {f(y-1.6)} {f((x1+x2)/2+6)} {f(y-1.6)} {x2} {y}',2.2)
-def svg(body): return '<svg class="ri" viewBox="0 0 64 64" aria-hidden="true">'+body+'</svg>'
-def trunk(x,yb,yt,wb,wt,c='ba',w=2.4):
-    d=f'M{f(x-wb)} {yb}C{f(x-wb*.6)} {f((yb+yt)/2)} {f(x-wt)} {f(yt+4)} {f(x-wt)} {yt}L{f(x+wt)} {yt}C{f(x+wt)} {f(yt+4)} {f(x+wb*.6)} {f((yb+yt)/2)} {f(x+wb)} {yb}Z'
-    return B(d,c,w,1,.8)
+def crown_blob(cx,cy,rx,ry,n,c1,c2,c3,jit=None,amp=.13,a0=-90,spots=True):
+    """Houppier en volume : ombre en bas à droite, base, reflet en haut à gauche."""
+    b=F(bumps(cx,cy,rx,ry,n,amp,a0,jit),c3)
+    b+=F(bumps(cx-1.4,cy-2.2,rx-2.2,ry-2.6,n,amp,a0,jit),c2)
+    if spots:
+        b+=F(bumps(cx-rx*.38,cy-ry*.36,rx*.3,ry*.26,6,.16),c1)
+    return b
+def trunk(x,yb,yt,wb,wt,c='b2',cd='b3'):
+    d=f'M{f(x-wb)} {yb}C{f(x-wb*.55)} {f((yb+yt)/2)} {f(x-wt)} {f(yt+4)} {f(x-wt)} {yt}L{f(x+wt)} {yt}C{f(x+wt)} {f(yt+4)} {f(x+wb*.55)} {f((yb+yt)/2)} {f(x+wb)} {yb}Z'
+    half=f'M{x} {yt}L{f(x+wt)} {yt}C{f(x+wt)} {f(yt+4)} {f(x+wb*.55)} {f((yb+yt)/2)} {f(x+wb)} {yb}L{f(x+wb*.25)} {yb}C{f(x+wb*.2)} {f((yb+yt)/2)} {f(x+wt*.3)} {f(yt+4)} {x} {yt}Z'
+    return F(d,c)+F(half,cd)
+def star(cx,cy,r,q):
+    return f'M{f(cx)} {f(cy-r)}Q{f(cx+q)} {f(cy-q)} {f(cx+r)} {f(cy)}Q{f(cx+q)} {f(cy+q)} {f(cx)} {f(cy+r)}Q{f(cx-q)} {f(cy+q)} {f(cx-r)} {f(cy)}Q{f(cx-q)} {f(cy-q)} {f(cx)} {f(cy-r)}Z'
+def star5(cx,cy,R,r):
+    p=[]
+    for i in range(10):
+        a=math.radians(-90+36*i);rr=R if i%2==0 else r;p.append(f'{f(cx+rr*math.cos(a))} {f(cy+rr*math.sin(a))}')
+    return 'M'+'L'.join(p)+'Z'
+def berry(x,y,r=2.8,c='r2',cd='r3',cl='r1'):
+    return F(circ(x,y,r),cd)+F(circ(x-.4,y-.5,r*.82),c)+F(circ(x-r*.35,y-r*.4,r*.28),cl)
 
 I={}
 # ---------- Icônes ----------
 OAK="M32 7C36 7 37.5 11.5 35.5 14.5C39.5 13 43.5 15.5 42 19.5C41 21.5 39 21.5 38 22.5C42.5 22 46 25 44 28.5C42.5 30.5 40 30 39 31C43.5 31.5 46 35 43 38C41 39.5 39 39 38 39.5C40 42 40 45.5 37 46.5C35.5 47 34 47 33.5 48.5V57H30.5V48.5C30 47 28.5 47 27 46.5C24 45.5 24 42 26 39.5C25 39 23 39.5 21 38C18 35 20.5 31.5 25 31C24 30 21.5 30.5 20 28.5C18 25 21.5 22 26 22.5C25 21.5 23 21.5 22 19.5C20.5 15.5 24.5 13 28.5 14.5C26.5 11.5 28 7 32 7Z"
-I['quiz']=svg(B(OAK,'mo')+K('M32 13V50M32 23L37 20.5M32 23L27 20.5M32 32L38.5 29.5M32 32L25.5 29.5M32 41L36.5 38.5M32 41L27.5 38.5',1.7))
-cover="M5 22C16 17 26 18 32 23C38 18 48 17 59 22V54C48 50 38 51 32 55C26 51 16 50 5 54Z"
-book="M8 19C18 15 26 16 32 20C38 16 46 15 56 19V50C46 46 38 47 32 51C26 47 18 46 8 50Z"
-I['herbier']=svg(W(cover,'pi',0,0)+K(cover,2.2)+B(book,'pa')+K('M32 20V51',2)+K('M13 25.5L26 27M13 31L25 32.3M13 36.5L23 37.6',1.6,'k kl')
-  +leaf(44,43,38,19,6.5,'mo',2,True))
-I['progres']=svg(B(circ(32,33,22),'ba')+W(circ(32,33,17.5),'wo',0,0)+K(circ(32,33,17.5),1.8)
-  +K('M31.5 21.5C38 21 43.5 26.5 43.5 33C43.5 40 38 44.5 31.5 44.5C25 44.5 20.5 39.5 20.5 33.5C20.5 27 25 22 31.5 21.5Z',1.4,'k kl')
-  +K('M31 27C35 27 37.5 30 37.5 33C37.5 36.5 35 39 31.5 39C28 39 26 36.5 26 33.5C26 30 28 27.5 31 27Z',1.4,'k kl')
-  +K('M38 38L46 46',1.7)+leaf(46,13,42,14,5.2,'fe',2,False)+K('M43 14C44 11 46 10 48 9',2))
-rays=''.join(K(f'M{f(32+17*math.cos(math.radians(a)))} {f(32+17*math.sin(math.radians(a)))}L{f(32+(25 if i%2==0 else 22)*math.cos(math.radians(a)))} {f(32+(25 if i%2==0 else 22)*math.sin(math.radians(a)))}',2.8) for i,a in enumerate(range(0,360,45)))
-I['soleil']=svg(W(circ(32,32,12.5),'go',1.2,1)+K(circ(32,32,12.5),2.6)+rays)
-clod="M5 57C9 44 20 37 32 37C44 37 55 44 59 57Z"
-I['sol']=svg(B(clod,'ru')+K('M12 47C22 44.5 42 44.5 52 47M8 52.5C22 50 42 50 56 52.5',1.6,'k kl')+B(ell(42,50,5,3.2),'st',2)+B(ell(20,47.5,3,2),'st',1.8)
-  +K('M31 37C30.5 29 31 24 32 18',2.4)+leaf(31.5,26,-58,13,4.8,'fe',2,False)+leaf(32,22,52,12,4.6,'mo',2,False))
-drop="M32 7C38 17 48 28 48 39C48 48.5 41 56 32 56C23 56 16 48.5 16 39C16 28 26 17 32 7Z"
-I['eau']=svg(B(drop,'wa')+K('M23 39C23 44.5 26.5 48.5 31 49.5',2,'k kl'))
-tube="M24 6H40V50C40 55 36.5 58 32 58C27.5 58 24 55 24 50Z"
-I['ph']=svg(W('M24 30H40V50C40 55 36.5 58 32 58C27.5 58 24 55 24 50Z','wa',0,0)+W('M24 30H40V39H24Z','ro',0,0)
-  +W('M24 39H40V45H24Z','pl',0,0)+K(tube,2.6)+B('M22 6H42V12H22Z','ru',2.2,0,0)+K('M24 30H40',1.6,'k kl'))
+OAKR="M32 7C36 7 37.5 11.5 35.5 14.5C39.5 13 43.5 15.5 42 19.5C41 21.5 39 21.5 38 22.5C42.5 22 46 25 44 28.5C42.5 30.5 40 30 39 31C43.5 31.5 46 35 43 38C41 39.5 39 39 38 39.5C40 42 40 45.5 37 46.5C35.5 47 34 47 33.5 48.5V57H32Z"
+I['quiz']=svg(shadow(32,59,12,2.2)+'<g transform="translate(32 0) scale(1.2 1) translate(-32 0)">'+F(OAK,'g2')+F(OAKR,'g3')+S('M32 13V52M32 23L37 20.5M32 23L27 20.5M32 32L38.5 29.5M32 32L25.5 29.5M32 41L36.5 38.5M32 41L27.5 38.5','g1',1.8)+F(ell(26,17,2.2,3.6),'g1')+'</g>')
+cover="M5 21C16 16 26 17 32 22C38 17 48 16 59 21V53C48 49 38 50 32 54C26 50 16 49 5 53Z"
+pl="M8 18C18 14 26 15 32 19V50C26 46 18 45 8 49Z";pr="M56 18C46 14 38 15 32 19V50C38 46 46 45 56 49Z"
+I['herbier']=svg(shadow(32,58.5,24,2.4)+dep(cover,'t2','t4',0,2)+F(pl,'c1')+F(pr,'c1')+F('M32 19C34 17.5 36 16.6 38 16.2V47C36 47.4 34 48.3 32 50Z','c2')+F('M32 19C30 17.5 28 16.6 26 16.2V47C28 47.4 30 48.3 32 50Z','c2')
+  +S('M13 25L24 25.6M13 30.5L23 31M13 36L21 36.4','c3',2)+leaf(44,43,36,20,7,'g2','g3','g1')+F('M30 49H34V60L32 58L30 60Z','r2'))
+I['progres']=svg(shadow(32,59,20,2.6)+dep(circ(32,33,22),'b2','b3',0,2.4)+F(circ(32,33,18),'w2')+F(circ(31.4,32.4,16.6),'w1')
+  +S(circ(31.5,33,12),'w3',1.8)+S(circ(31,33.2,7.4),'w3',1.8)+F(circ(30.8,33.4,2.6),'w3')+S('M37 37L44 45','w3',2)
+  +S('M44 13C45 9 47 7 50 6','g3',2.4)+leaf(48,10,44,13,5,'g2','g3',None))
+rays=''
+for i,a in enumerate(range(0,360,45)):
+    r=math.radians(a);l=24 if i%2==0 else 21.5
+    p=lambda R,da:(32+R*math.cos(r+da),32+R*math.sin(r+da))
+    a1,a2,t=p(16,-.2),p(16,.2),p(l,0)
+    rays+=F(f'M{f(a1[0])} {f(a1[1])}L{f(t[0])} {f(t[1])}L{f(a2[0])} {f(a2[1])}Z','y3')
+I['soleil']=svg(rays+dep(circ(32,32,13.5),'y2','y3',1,1.4)+F(circ(28,27.5,4),'y1'))
+mound="M5 56C9 43 20 36 32 36C44 36 55 43 59 56Z"
+I['sol']=svg(dep(mound,'d2','d3',0,2)+F('M8.5 48C18 45 46 45 55.5 48C56.5 50 57.3 52 58 54C46 51 18 51 6 54C6.7 52 7.5 50 8.5 48Z','d1')
+  +F(ell(43,51,4.6,3),'s2')+F(ell(42.4,50.3,3.4,2),'s1')+F(ell(20,43,2.6,1.8),'s2')
+  +S('M32 37C31.5 30 32 25 33 19','g3',2.6)+leaf(32,27,-58,14,5.4,'g2','g3',None)+leaf(32.6,22,54,13,5,'g1','g2',None))
+drop="M32 6C38 16 48 27 48 39C48 48.5 41 56 32 56C23 56 16 48.5 16 39C16 27 26 16 32 6Z"
+I['eau']=svg(shadow(32,59.5,12,2)+dep(drop,'u2','u3',1.4,1.4)+F('M23.5 37C23 43 26 48 31 49.5C27 49.5 21 45 21.5 38.5C21.6 37 23.4 36 23.5 37Z','u1')+F(circ(26,30,2),'u1'))
+tube="M23 7H41V49C41 54.5 37 58 32 58C27 58 23 54.5 23 49Z"
+I['ph']=svg(shadow(32,59.5,10,2)+dep(tube,'u1','s2',1,1.2)+F('M25.5 30H38.5V49C38.5 53 35.5 55.5 32 55.5C28.5 55.5 25.5 53 25.5 49Z','v2')
+  +F('M25.5 30H38.5V38H25.5Z','r2')+F('M25.5 46H38.5V49C38.5 53 35.5 55.5 32 55.5C28.5 55.5 25.5 53 25.5 49Z','u2')
+  +F('M27 12H29.5V46H27Z','c1')+dep('M20.5 4.5H43.5V11.5H20.5Z','b1','b3',0,1.6))
 fl=''
 for a in range(0,360,60):
     r=math.radians(a-90);ux,uy=math.cos(r),math.sin(r)
-    fl+=K(f'M32 32L{f(32+21*ux)} {f(32+21*uy)}',2.8)
-    for t,s in ((12,6),):
-        px,py=32+t*ux,32+t*uy
-        for sg in (1,-1):
-            r2=r+sg*math.radians(42);fl+=K(f'M{f(px)} {f(py)}L{f(px+s*math.cos(r2))} {f(py+s*math.sin(r2))}',2.4)
-I['froid']=svg(re.sub(r'class="k" stroke-width="[\d.]+"','class="kwa" stroke-width="7"',fl)+fl+B(circ(32,32,3.4),'wa',2,0,0))
-I['coche']=svg(K('M14 33L27 46L50 19',7,'k kok'))
-I['croix']=svg(K('M18 18L46 46M46 18L18 46',7,'k kko'))
-star=lambda cx,cy,r,q: f'M{cx} {f(cy-r)}C{f(cx+q)} {f(cy-q)} {f(cx+q)} {f(cy-q)} {f(cx+r)} {cy}C{f(cx+q)} {f(cy+q)} {f(cx+q)} {f(cy+q)} {cx} {f(cy+r)}C{f(cx-q)} {f(cy+q)} {f(cx-q)} {f(cy+q)} {f(cx-r)} {cy}C{f(cx-q)} {f(cy-q)} {f(cx-q)} {f(cy-q)} {cx} {f(cy-r)}Z'
-I['etincelle']=svg(B(star(28,34,22,4.5),'go',3)+B(star(50,13,9,2.2),'oc',2.6))
+    fl+=f'M32 32L{f(32+22*ux)} {f(32+22*uy)}'
+    px,py=32+13*ux,32+13*uy
+    for sg in (1,-1):
+        r2=r+sg*math.radians(45);fl+=f'M{f(px)} {f(py)}L{f(px+7*math.cos(r2))} {f(py+7*math.sin(r2))}'
+I['froid']=svg(Sdep(fl,'u2','u3',5.2)+dep(star(32,32,7,1.6),'u1','u3',.6,.9))
+I['coche']=svg('<path class="kok" stroke-width="8" d="M14 33L27 46L50 19"/>')
+I['croix']=svg('<path class="kko" stroke-width="8" d="M18 18L46 46M46 18L18 46"/>')
+I['etincelle']=svg(dep(star(27,35,23,4.6),'y2','y3',1.2,1.6)+F(star(24.5,30.5,7,1.6),'y1')+dep(star(50,13,10,2.4),'p2','p3',.8,1))
 def gear(cx,cy,ro,ri,n):
     pts=[]
     for i in range(n*4):
         a=math.radians(-90+360*i/(n*4)-360/(n*8));r=ro if i%4 in (1,2) else ri
         pts.append((cx+r*math.cos(a),cy+r*math.sin(a)))
     return 'M'+'L'.join(f'{f(x)} {f(y)}' for x,y in pts)+'Z'
-I['reglages']=svg(B(gear(31,34,23,17.5,8),'wo',2.6)+B(circ(31,34,7),'pa',2.4)+leaf(46,15,40,15,5.5,'mo',2,False))
+I['reglages']=svg(shadow(31,59,18,2.4)+dep(gear(31,34,23,17.5,8),'w2','w3',0,2.2)+F(circ(29.5,32,13),'w1')+dep(circ(31,34,7.5),'t2','t3',0,1.2)+F(circ(29.5,32.5,2.4),'t1')
+  +S('M44 17C46 13 48 11 51 10','g3',2.4)+leaf(49,13,46,13,5,'g2','g3',None))
 
-# ---------- Trophée → couronne de laurier ; ampoule → étiquette ; cible → boussole ; loupe ----------
-lau=K('M27 53C15 47 9.5 34 15 19',2.4)+K('M37 53C49 47 54.5 34 49 19',2.4)
-for i,(x,y,a) in enumerate([(17.5,46,-118),(13,38,-100),(12,29,-80),(14.5,21,-62)]):
-    lau+=leaf(x,y,a,11,4.2,'mo' if i%2==0 else 'pi',1.9,False)
-    lau+=leaf(64-x,y,-a,11,4.2,'pi' if i%2==0 else 'mo',1.9,False)
-for x,y,a in [(21,49.5,-155),(14.5,42,-140)]:
-    lau+=leaf(x,y,a+180,9,3.6,'fe',1.8,False)+leaf(64-x,y,-(a+180),9,3.6,'fe',1.8,False)
-TROPHY=svg(lau+B('M23 51C28 48.5 36 48.5 41 51L38.5 59L32 55.5L25.5 59Z','be',2.4)+B('M0 0C-2.6 0 -3.6 3.6 -2.4 6C-1.2 8.4 1.2 8.4 2.4 6C3.6 3.6 2.6 0 0 0Z','oc',2,.5,.5).join(['<g transform="translate(32 26)">','</g>'])+B('M27 27C27 22.5 29.5 20.5 32 20.5C34.5 20.5 37 22.5 37 27Z','ba',2,0,0))
+# ---------- Trophée → couronne de laurier et médaille ; ampoule → étiquette ; cible → boussole ; loupe ----------
+lau=S('M28 54C15 49 9 35 14.5 18','g4',2.6)+S('M36 54C49 49 55 35 49.5 18','g4',2.6)
+for i,(x,y,a) in enumerate([(19,50,-130),(13.5,42.5,-112),(11.5,33.5,-92),(12.5,25,-74),(15,18,-56)]):
+    lau+=leaf(x,y,a,11.5,4.6,'g2' if i%2 else 'g3','g4' if i%2 else 'g4',None)+leaf(64-x,y,-a,11.5,4.6,'g3' if i%2 else 'g2','g4',None)
+TROPHY=svg(lau+dep('M25.5 41H38.5L41 56L32 51.5L23 56Z','r2','r3',0,1.4)+dep(circ(32,32,11.5),'y2','y3',0,1.8)+F(circ(32,32,8),'y3')+F(star5(32,32.6,6.4,2.7),'y1'))
 tag="M10 20L42 12L55 23L58 47L16 55Z"
-BULB=svg(K('M49 21C53 13 59 10 61 5',2.2)+B(tag,'pa')+B(circ(48.5,22.5,3),'ru',2,0,0)
-  +leaf(20,49,62,15,5.4,'mo',2,True)+K('M30 34L49 31M31 40.5L50 37.7',1.8,'k kl'))
-TARGET=svg(B(circ(32,35,24),'oc',2.6)+W(circ(32,35,18),'pa',0,0)+K(circ(32,35,18),2)
-  +B('M32 9V4.5M28.5 6.5H35.5','oc',2.4,0,0)+W('M32 18L37.5 35H26.5Z','ru',0,0)+W('M32 52L37.5 35H26.5Z','du',0,0)
-  +K('M32 18L37.5 35L32 52L26.5 35Z',2.4)+K('M26.5 35H37.5',1.6)
-  +K('M32 19.5V22M32 48V50.5M15.5 35H18M46 35H48.5',1.8,'k kl'))
-HINT=svg(K('M41 41L55 55',9,'k khd')+K('M41.5 41.5L54.5 54.5',5,'kba')+B(circ(27,27,19),'oc',2.6)+W(circ(27,27,14),'ic',0,0)+K(circ(27,27,14),2)
-  +leaf(23,35,38,17,6,'mo',2,True))
+BULB=svg(shadow(34,59,19,2.2)+S('M49 21C52 13 57 10 60 5','o2',2.4)+dep(tag,'c1','c3',1,2)+F('M42 12L55 23L52.5 24.5L41 15Z','c2')+dep(circ(48.5,22.5,3.4),'o2','o3',.4,.6)+F(circ(48.5,22.5,1.5),'c1')
+  +leaf(20,49,62,16,6,'g2','g3','g1')+S('M30 34L49 31M31 40.5L50 37.7','c3',2.2))
+TARGET=svg(shadow(32,60,17,2.2)+dep(circ(32,35,24),'y2','y3',0,2)+F(circ(32,35,18.5),'c1')+F('M32 16.5A18.5 18.5 0 0 1 50.5 35H46A14 14 0 0 0 32 21Z','c2')
+  +dep('M27.5 5.5H36.5V11H27.5Z','y2','y3',0,1)+F('M32 18.5L38 35H26Z','r2')+F('M32 18.5L38 35H32Z','r3')+F('M32 51.5L38 35H26Z','n2')+F('M32 51.5L38 35H32Z','n3')
+  +F(circ(32,35,3),'y3')+F(circ(31.4,34.4,1.4),'y1')+S('M32 19V21.5M32 48.5V51M15.5 35H18M46 35H48.5','s2',2))
+HINT=svg(shadow(36,60,16,2)+Sdep('M42 42L54.5 54.5','b2','b3',8,0,1.4)+S('M44 44L50 50','b1',3)+dep(circ(27,27,19.5),'y2','y3',0,1.8)+F(circ(27,27,15),'u1')
+  +leaf(22,35,36,18,6.6,'g2','g3','g1')+F('M16 22C17 17 21 13.5 26 12.5C22 15.5 19.5 19 19 23.5C18.6 25 15.8 24.5 16 22Z','c1'))
 
 # ---------- Catégories ----------
 CI={}
-can=bumps(32,26,19,15.5,9,.13,jit=[1,.8,1.1,.9,1,1.2,.8,1,.9])
-CI['arbre']=ground(12,52)+trunk(32,57,34,6,3.4)+K('M31 44L24 36M33.5 41L40 35',2.2)+B(can,'mo')+K('M24 22C26 18 30 16 34 16',1.6,'k kl')
-sh=bumps(32,42,23,13,10,.12,a0=-100,jit=[1,1.1,.9,1,1.2,.9,1,1,.8,1.1])
-CI['arbuste']=ground(8,56)+B(sh,'pi')+''.join(B(circ(x,y,2.8),'be',1.8,.5,.5) for x,y in [(20,38),(25,44),(36,36),(42,45),(46,38),(30,48)])
-CI['vivace']=ground(18,46)+K('M32 57C31 48 33 40 32 32',2.6)+leaf(31.5,49,-62,13,5,'mo',2,False)+leaf(32,45,58,12,4.6,'fe',2,False)+''.join(
-  g(B('M0 0C4 -3 5 -9 0 -13C-5 -9 -4 -3 0 0Z','ro',2,.8,.8),32,22,a) for a in range(0,360,60))+B(circ(32,22,4.2),'oc',2.2,0,0)
-CI['grimpante']=K('M20 58V8',5.4)+K('M20 58V8',2.6,'kba')+K('M20 54C30 50 33 44 25 40C17 36 20 29 30 27C40 25 38 18 30 15',2.4)\
-  +leaf(29,49.5,70,11,4.6,'mo',1.9,False)+leaf(21,35,-70,11,4.6,'pi',1.9,False)+leaf(34,26,64,11,4.6,'mo',1.9,False)\
-  +''.join(g(B('M0 0C3 -2.5 3.5 -7 0 -10C-3.5 -7 -3 -2.5 0 0Z','pl',1.8,.6,.6),44,39,a) for a in range(0,360,72))+B(circ(44,39,2.6),'go',1.6,0,0)
-gr=''
-for x0,x1,y1,c in [(26,10,22,0),(29,18,12,0),(32,33,6,0),(35,46,11,0),(38,55,20,0)]:
-    gr+=K(f'M{x0} 57C{x0} 44 {f((x0+x1)/2)} {f(y1+10)} {x1} {y1}',2.4)
-for x,y,a in [(18,14,-30),(33,7,0),(46,13,28)]:
-    gr+=g(B('M0 0C2.6 -3 2.6 -9 0 -12C-2.6 -9 -2.6 -3 0 0Z','go',1.9,.6,.6),x,y+10,a)
-CI['graminée']=ground(16,48)+gr
+CI['arbre']=shadow(32,58.5,17,2.6)+trunk(32,57,34,6.2,3.6)+S('M31.5 45L25 38M33.5 42.5L39.5 37','b3',2.4)+crown_blob(32,25,19.5,16,9,'g1','g2','g3',jit=[1,.8,1.1,.9,1,1.2,.8,1,.9])
+CI['arbuste']=shadow(32,58,23,2.6)+crown_blob(32,41,23,14,10,'g1','t2','t3',jit=[1,1.1,.9,1,1.2,.9,1,1,.8,1.1],a0=-100)+''.join(berry(x,y,3) for x,y in [(20,40),(26,47),(37,37),(43,46),(47,39),(32,49)])
+pet=lambda c,cd,cl: F('M0 0C5 -3 6.5 -10.5 0 -15C-6.5 -10.5 -5 -3 0 0Z',cd)+F('M0 -1C3.6 -3.4 4.6 -9.6 0 -13.4C-4.6 -9.6 -3.6 -3.4 0 -1Z',c)
+CI['vivace']=shadow(32,59,9,2)+S('M32 58C31 49 33 41 32 32','g3',3)+leaf(31.5,51,-60,13,5.2,'g2','g3',None)+leaf(32,46,58,12,4.8,'g2','g3',None)+''.join(
+  g(pet('p2','p3','p1'),32,22,a) for a in range(0,360,60))+dep(circ(32,22,5),'y2','y3',.6,.8)+F(circ(30.6,20.6,1.6),'y1')
+CI['grimpante']=shadow(26,59,14,2.2)+dep('M18 58V7.5C18 6.4 18.9 5.5 20 5.5C21.1 5.5 22 6.4 22 7.5V58Z','b1','b3',1,0)+S('M20 54C31 50 34 43 25 39C16 35 20 28 30 26C41 24 39 17 30 14','g3',2.8)\
+  +leaf(29,49.5,70,12,5,'g2','g3',None)+leaf(21,35,-70,12,5,'t2','t3',None)+leaf(35,25,62,12,5,'g2','g3',None)\
+  +''.join(g(F('M0 0C3.4 -2.8 4 -8 0 -11C-4 -8 -3.4 -2.8 0 0Z','v3')+F('M0 -.8C2.6 -2.8 3 -7.2 0 -9.6C-3 -7.2 -2.6 -2.8 0 -.8Z','v2'),45,40,a) for a in range(0,360,72))+F(circ(45,40,2.8),'y2')
+gr=shadow(32,58.5,16,2.2)
+for x0,x1,y1,c in [(25,9,24,'g3'),(28.5,17,13,'g2'),(32,33,7,'g3'),(35.5,47,12,'g2'),(39,56,22,'g3')]:
+    gr+=F(f'M{f(x0-2.4)} 58C{f(x0-2.4)} 45 {f((x0+x1)/2-1)} {f(y1+10)} {x1} {y1}C{f((x0+x1)/2+1.4)} {f(y1+11)} {f(x0+2.4)} 46 {f(x0+2.4)} 58Z',c)
+for x,y,a in [(17,23,-28),(33,17,0),(47,22,26)]:
+    gr+=g(dep('M0 0C3 -3.4 3 -10 0 -13.5C-3 -10 -3 -3.4 0 0Z','y2','y3',.8,.8)+S('M0 -3V-10','y1',1.2),x,y,a)
+CI['graminée']=gr
 
-# ---------- Rangs (printemps → été → automne → crépuscule doré) ----------
+# ---------- Rangs (printemps → été → automne → nuit → or) ----------
 RI=[]
-acorn="M20 27C20 42 25 54 32 57C39 54 44 42 44 27Z"
-RI.append(B(acorn,'oc')+B('M16 28C16 18 23 13 32 13C41 13 48 18 48 28C40 31 24 31 16 28Z','ba')+K('M21 21L43 21M19.5 25.5L44.5 25.5',1.5,'k kl')+K('M32 13C32 9 34 6 38 5',2.6))
-mound="M10 57C15 49 49 49 54 57Z"
-RI.append(B(mound,'ru')+K('M32 52C32 46 31.5 41 32 36',2.6)+leaf(32,37,-62,14,6,'fe',2.1,False)+leaf(32,37,62,14,6,'fe',2.1,False))
-RI.append(B(mound,'ru')+K('M32 52C31 43 33 33 34 22',2.6)+leaf(32.5,42,-60,17,6.5,'mo',2.1,True)+leaf(33.5,33,60,15,6,'fe',2.1,True)+leaf(34,23,6,12,5,'fe',2.1,False))
+acorn="M20 28C20 43 25 54 32 57C39 54 44 43 44 28Z"
+RI.append(shadow(32,59.5,11,2)+dep(acorn,'w2','w3',1.4,1)+F('M24 31C24 42 27 50 31 53C26 51 22.5 43 22.5 32Z','w1')
+  +dep('M15.5 29C15.5 18.5 23 13 32 13C41 13 48.5 18.5 48.5 29C40 32.5 24 32.5 15.5 29Z','b2','b3',0,1.6)+''.join(F(circ(x,y,1.3),'b1') for x,y in [(23,20),(29,18),(35,18),(41,20),(26,25),(32,24),(38,25)])
+  +S('M32 13C32 9 34 6 38 5','b3',3))
+mound="M7 58C9 47 22 44 32 44C42 44 55 47 57 58Z"
+MT=F('M12.5 50C18 46.5 26 45.6 32 45.6C38 45.6 46 46.5 51.5 50C44 48.6 38 48.2 32 48.2C26 48.2 20 48.6 12.5 50Z','d1')
+RI.append(dep(mound,'d2','d3',0,1.4)+MT+S('M32 50C32 45 31.5 41 32 36','g3',3)+leaf(32,37,-62,15,6.4,'g1','g2',None)+leaf(32,37,62,15,6.4,'g2','g3',None))
+RI.append(dep(mound,'d2','d3',0,1.4)+MT+S('M32 52C31 43 33 33 34 22','g3',3)+leaf(32.5,42,-60,17,7,'g2','g3','g1')+leaf(33.5,33,60,15,6.4,'g1','g2',None)+leaf(34,23.5,8,12,5.2,'g1','g2',None))
 pot="M19 41H45L41 58H23Z"
-RI.append(K('M32 41C32 32 31.5 24 32 13',2.6)+leaf(32,36,-56,14,5.6,'mo',2,False)+leaf(32,36,56,14,5.6,'fe',2,False)+leaf(32,27,-48,12,5,'fe',2,False)+leaf(32,27,48,12,5,'mo',2,False)+leaf(32,15,0,10,4.4,'fe',2,False)
-  +B(pot,'ru')+B('M16.5 37H47.5V43H16.5Z','ru',2.4,0,0))
-RI.append(ground(10,54)+K('M28 57L24 44M36 57L40 44M32 57V46',2.4)+B(bumps(32,36,20,13,9,.14,jit=[1,.9,1.1,1,.8,1.2,1,.9,1]),'mo')
-  +''.join(B(circ(x,y,2.6),'be',1.7,.4,.4) for x,y in [(22,34),(30,30),(40,35),(35,41),(25,41)]))
-RI.append(ground(18,46)+trunk(32,57,32,3.2,2)+K('M32 44L37 39',1.9)+B(bumps(32,22,11.5,15,8,.13),'fe')+K('M27 17C28 13 30 11 33 10',1.5,'k kl'))
-RI.append(ground(12,52)+trunk(32,57,36,5.5,3.2)+K('M31 46L25 39M33.5 43L39 38',2.1)+B(bumps(32,25,20,17,10,.12,jit=[1,.9,1.1,1,.8,1.2,1,.9,1,1.1]),'pi')
-  +K('M23 22C25 17 29 14 34 14',1.6,'k kl'))
-oak=bumps(32,26,25,15,12,.12,a0=-95,jit=[1,1.2,.8,1,1.1,.9,1,1.2,.9,1,.8,1.1])
-RI.append(ground(8,56)+trunk(32,57,35,7.5,4.5)+K('M30 45L19 36M34 43L46 35',2.4)+B(oak,'mo')+K('M18 25C20 19 25 16 30 15M38 30C42 29 46 27 48 23',1.6,'k kl')
-  +''.join(B('M0 0C-2.2 0 -3 3 -2 5C-1 7 1 7 2 5C3 3 2.2 0 0 0Z','oc',1.6,.4,.4).join([f'<g transform="translate({x} {y})">','</g>']) for x,y in [(20,31),(44,33)]))
-RI.append(ground(4,60)+trunk(16,57,38,3.6,2.2)+B(bumps(16,30,10,11,8,.13),'oc')+trunk(48,57,38,3.6,2.2)+B(bumps(48,30,10,11,8,.13),'ru')
-  +trunk(32,57,34,4.5,2.8)+B(bumps(32,24,13,14,9,.13),'mo'))
-def fir(x,yb,h,w,c):
+RI.append(shadow(32,59.5,13,2)+S('M32 41C32 32 31.5 24 32 13','g3',2.8)+leaf(32,36,-56,15,6,'g2','g3',None)+leaf(32,36,56,15,6,'g1','g2',None)+leaf(32,27,-48,12.5,5.2,'g1','g2',None)+leaf(32,27,48,12.5,5.2,'g2','g3',None)+leaf(32,15,0,10,4.6,'g1','g2',None)
+  +dep(pot,'o2','o3',0,1.2)+F('M36 41H45L41 58H34Z','o3')+dep('M16 36.5H48V43.5H16Z','o2','o3',0,1.2)+F('M16 36.5H48V38.5H16Z','o1'))
+RI.append(shadow(32,58.5,20,2.6)+S('M28 57L25 46M36 57L39 46M32 57V48','b2',2.8)+crown_blob(32,37,20,13,9,'g1','g2','g3',jit=[1,.9,1.1,1,.8,1.2,1,.9,1])
+  +''.join(g(''.join(F('M0 0C1.6 -1 2 -3.6 0 -5C-2 -3.6 -1.6 -1 0 0Z','p2').join(['<g transform="rotate(%d)">'%a,'</g>']) for a in range(0,360,72))+F(circ(0,0,1.3),'y2'),x,y) for x,y in [(22,34),(31,29),(41,34),(35,42),(25,42)]))
+RI.append(shadow(32,58.5,11,2.2)+trunk(32,57,32,3.4,2.1)+S('M32 44L37.5 39','b3',2)+crown_blob(32,22,12.5,15.5,8,'g1','g1','g2',spots=False)+F(ell(28,17,3,5),'c1'))
+RI.append(shadow(32,58.5,18,2.6)+trunk(32,57,36,5.8,3.4)+S('M31 46L25 39M33.5 43L39 38','b3',2.2)+crown_blob(32,25,20.5,17,10,'g1','g2','g3',jit=[1,.9,1.1,1,.8,1.2,1,.9,1,1.1])
+  +''.join(berry(x,y,2.8) for x,y in [(22,30),(41,23),(36,33),(27,21)]))
+RI.append(shadow(32,58.5,24,2.8)+trunk(32,57,35,8,4.6)+S('M30 45L19 36M34 43L46 35','b3',2.8)+crown_blob(32,25,26,16,12,'g2','g3','g4',jit=[1,1.2,.8,1,1.1,.9,1,1.2,.9,1,.8,1.1],a0=-95)
+  +''.join(g(dep('M-2.4 0C-2.4 4 -1.2 6.2 0 6.8C1.2 6.2 2.4 4 2.4 0Z','w2','w3',.4,.4)+F('M-3 .5C-3 -2 3 -2 3 .5Z','b2'),x,y) for x,y in [(19,29),(44,31),(33,33)]))
+RI.append(shadow(32,58.5,28,2.6)+trunk(14,57,40,3.6,2.2)+crown_blob(14,31,10,11,8,'y1','y2','y3')+trunk(50,57,40,3.6,2.2)+crown_blob(50,31,10,11,8,'o1','o2','o3')
+  +trunk(32,57,35,4.6,2.8)+crown_blob(32,24,13,14,9,'g1','g2','g3'))
+def fir(x,yb,h,w,c,cd):
     d=f'M{x} {f(yb-h)}L{f(x+w*.55)} {f(yb-h*.62)}L{f(x+w*.3)} {f(yb-h*.62)}L{f(x+w*.8)} {f(yb-h*.3)}L{f(x+w*.45)} {f(yb-h*.3)}L{f(x+w)} {f(yb-6)}L{f(x-w)} {f(yb-6)}L{f(x-w*.45)} {f(yb-h*.3)}L{f(x-w*.8)} {f(yb-h*.3)}L{f(x-w*.3)} {f(yb-h*.62)}L{f(x-w*.55)} {f(yb-h*.62)}Z'
-    return K(f'M{x} {yb}V{f(yb-7)}',2.4)+B(d,c,2.3,1,.9)
-RI.append(ground(4,60)+fir(15,57,36,10,'li')+fir(49,57,38,10.5,'pi')+fir(32,57,48,13,'pi')+fir(23,58,26,8,'mo')+fir(42,58,24,7.5,'li'))
-RI.append(W(circ(46,16,11),'pl',0,0)+W(circ(50,13,8.5),'pa',0,0)+K(circ(46,16,11),1.8,'k kl')+ground(6,58)+trunk(30,57,32,9,5)+K('M30 49C28 46 28 42 30 40C32 42 32 46 30 49Z',1.8)
-  +K('M27 41L17 33M33 38L42 31',2.4)+B(bumps(29,24,21,14,11,.14,a0=-80,jit=[1,1.1,.8,1.2,1,.9,1,1.1,.9,1,1]),'pi')
-  +g(B('M0 0C3 -4 3 -11 0 -14C-3 -11 -3 -4 0 0Z','fe',1.8,.6,.6),12,58,-40)+g(B('M0 0C3 -4 3 -11 0 -14C-3 -11 -3 -4 0 0Z','mo',1.8,.6,.6),47,58,38))
-crown="M21 9L25 13L28.5 5.5L32 11.5L35.5 5.5L39 13L43 9L41.5 17H22.5Z"
-RI.append(ground(6,58)+trunk(32,57,38,7.5,4.5)+K('M30 47L20 39M34 45L45 37',2.4)+B(bumps(32,33,24,12,12,.12,a0=-95,jit=[1,1.2,.8,1,1.1,.9,1,1.2,.9,1,.8,1.1]),'oc')
-  +K('M17 33C19 28 24 25 29 24',1.6,'k kl')+B(crown,'go',2.3))
-
+    half=f'M{x} {f(yb-h)}L{f(x+w*.55)} {f(yb-h*.62)}L{f(x+w*.3)} {f(yb-h*.62)}L{f(x+w*.8)} {f(yb-h*.3)}L{f(x+w*.45)} {f(yb-h*.3)}L{f(x+w)} {f(yb-6)}L{x} {f(yb-6)}Z'
+    return F(f'M{f(x-1.6)} {yb}V{f(yb-7)}H{f(x+1.6)}V{yb}Z','b2')+F(d,c)+F(half,cd)
+RI.append(shadow(32,58.5,28,2.6)+fir(15,58,34,10,'t2','t3')+fir(49,58,36,10.5,'t2','t3')+fir(32,58,48,13,'g3','g4')+fir(23,59,24,7.5,'t1','t2')+fir(42,59,23,7.5,'g2','g3'))
+RI.append(F(circ(32,30,26),'n2')+F('M58 30A26 26 0 0 1 6 30A26 24 0 0 0 58 30Z','n3')+F('M47 9A9 9 0 1 0 55 21A7 7 0 1 1 47 9Z','y1')+''.join(F(star(x,y,r,r*.25),'y2') for x,y,r in [(14,14,3),(22,8,2),(40,10,2.2)])
+  +shadow(32,58.5,24,2.6)+trunk(30,57,33,8.5,5)+S('M27.5 42L18 34M33 39L42 32','b3',2.6)+crown_blob(29,25,19,12.5,11,'t1','t2','t3',jit=[1,1.1,.8,1.2,1,.9,1,1.1,.9,1,1],a0=-80)
+  +''.join(F(circ(x,y,1.5),'y2') for x,y in [(12,45),(50,40),(46,50)]))
+crown="M20 13L25 17.5L28.5 8L32 15L35.5 8L39 17.5L44 13L42 22H22Z"
+RI.append(F(star(11,14,4,1),'y2')+F(star(54,20,3,.8),'y2')+shadow(32,58.5,24,2.8)+trunk(32,57,40,7.5,4.6)+S('M30 49L20 41M34 47L45 39','b3',2.6)
+  +crown_blob(32,33,24,12,12,'y1','y2','y3',jit=[1,1.2,.8,1,1.1,.9,1,1.2,.9,1,.8,1.1],a0=-95)+''.join(berry(x,y,2.3,'o2','o3','o1') for x,y in [(20,36),(40,30),(44,38)])
+  +dep(crown,'y2','y3',0,1.4)+F(circ(32,18,1.8),'r2')+F(circ(24.5,19.2,1.3),'u2')+F(circ(39.5,19.2,1.3),'u2'))
 # ---------- Décor de fond (#bg, 1200×800, ancré en bas) ----------
 def tronc(x,w,lean=0,flare=1.6,top=-10,br=None,rx=None):
     """Tronc effilé, légèrement penché, avec empattement au pied et départs de branches."""
@@ -186,20 +218,18 @@ FR=(fronde(0,800,175,640,40,650,14,46)+fronde(30,800,250,735,120,700,11,30)+fron
     +fronde(748,800,792,724,760,752,7,18)+fronde(738,800,690,735,722,758,6,16))
 DECOR={'tf':TF,'tn':TN,'fr':FR}
 
-out={'ICO':I,'CI':CI,'RI':[r for r in RI],'TROPHY':TROPHY,'BULB':BULB,'TARGET':TARGET,'HINT':HINT,'PAL':PAL}
-CSS=('.ri{width:100%;height:100%;display:block;--ink:#3a2c20;--inkl:#7b6a55}'
-     '@media(prefers-color-scheme:dark){.ri{--ink:#efe3c8;--inkl:#b9aa90}}'
-     '.ri .k{fill:none;stroke:var(--ink);stroke-linecap:round;stroke-linejoin:round}'
-     '.ri .kl{stroke:var(--inkl)}.ri .kok{stroke:var(--ok)}.ri .kko{stroke:var(--ko)}.ri .kba{fill:none;stroke:#9c7350;stroke-linecap:round}.ri .kwa{fill:none;stroke:#a9d0e6;stroke-linecap:round}'
-     +''.join(f'.ri .c{k}{{fill:{v}}}' for k,v in PAL.items())
-     # sur un fond vert plein (onglet actif, tuile active), l'encre s'inverse pour rester lisible
-     +'.tabs button[aria-current=true] .ri{--ink:#fbf3df;--inkl:#e6dcc4}#chips .cats button[aria-pressed=true] .ri{--ink:#fff;--inkl:#eef3ea}'
-     +'@media(prefers-color-scheme:dark){.tabs button[aria-current=true] .ri,.fcard .ri{--ink:#3a2c20;--inkl:#7b6a55}}')
+out={'ICO':I,'CI':CI,'RI':RI,'TROPHY':TROPHY,'BULB':BULB,'TARGET':TARGET,'HINT':HINT}
+tout=json.dumps(out)
+uf=sorted(set(re.findall(r'class=\\?"f(\w\d)',tout)));us=sorted(set(re.findall(r'class=\\?"s(\w\d)',tout)))
+CSS=('.ri{width:100%;height:100%;display:block}.ri .sh{fill:#000;opacity:.12}@media(prefers-color-scheme:dark){.ri .sh{opacity:.3}}'
+     +','.join(f'.ri .s{k}' for k in us)+',.ri .kok,.ri .kko{fill:none;stroke-linecap:round;stroke-linejoin:round}.ri .kok{stroke:var(--ok)}.ri .kko{stroke:var(--ko)}'
+     # sur un fond vert plein (onglet actif, tuile active), l'icône se pose sur une pastille claire
+     +'.tabs button[aria-current=true] .tgi,#chips .cats button[aria-pressed=true] .cti{background:#fbfdf9;border-radius:50%;padding:2px;box-shadow:0 1px 3px rgba(10,40,20,.25)}'
+     +''.join(f'.ri .f{k}{{fill:{PAL[k]}}}' for k in uf)+''.join(f'.ri .s{k}{{stroke:{PAL[k]}}}' for k in us))
 out['CSS']=CSS
 D=os.path.dirname(os.path.abspath(__file__))
 if '--json' in sys.argv: json.dump(out,open(sys.argv[sys.argv.index('--json')+1],'w'),ensure_ascii=False)
-print(len(I),'icônes,',len(CI),'catégories,',len(RI),'rangs')
-
+print(len(I),'icônes,',len(CI),'catégories,',len(RI),'rangs ;',len(uf)+len(us),'couleurs')
 # ---------- Écriture dans index.html ----------
 if '--ecrire' in sys.argv:
     P=os.path.join(D,'..','index.html');s=open(P,encoding='utf-8').read()

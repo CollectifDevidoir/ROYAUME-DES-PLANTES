@@ -1,4 +1,4 @@
-// Lot 2, point 3 : tuiles de catégories — une seule ligne, aucun nom tronqué, tuile active en vert, de 320 à 2560 px.
+// Lot 2, point 3 : tuiles de catégories — une seule ligne, aucun nom tronqué, tuile active en vert, illustration dans chaque tuile (au-dessus du nom sur téléphone), de 320 à 2560 px.
 // Usage : node outils/controle_categories.js [dossier_captures]   (variable F = autre fichier html)
 const {chromium}=require('playwright');const {open}=require('./banc_essai.js');
 let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};const DOS=process.argv[2];
@@ -13,7 +13,7 @@ for(const [w,h] of [[320,568],[360,640],[390,844],[768,1024],[1024,700],[1440,78
   ok(r.n===5&&r.ligne&&r.bord,`${w}×${h} : 5 tuiles sur une seule ligne, dans l'écran`);
   ok(r.trop.length===0,`${w}×${h} : aucun nom tronqué ${r.trop.length?JSON.stringify(r.trop):''}`);
   ok(r.act,`${w}×${h} : tuile active en vert (comme « Classique »)`);
-  ok(r.ico===(w>=700),`${w}×${h} : illustration ${w>=700?'affichée':'masquée'} (hauteur ${r.h} px)`);
+  ok(r.ico,`${w}×${h} : illustration affichée (hauteur ${r.h} px)`);
   if(DOS)await p.screenshot({path:`${DOS}/cats-${w}.png`,clip:{x:0,y:0,width:w,height:Math.min(h,w<700?280:240)}});
   ok(p.errs.length===0,`${w}×${h} : aucune erreur JavaScript`);await ctx.close()}
 await b.close();console.log(ech?ech+' ÉCHEC(S)':'CATÉGORIES : tout est OK');process.exit(ech?1:0)})();

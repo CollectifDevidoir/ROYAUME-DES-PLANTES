@@ -167,40 +167,43 @@ Non-régression : recette 133/133 et les 7 contrôles existants OK. Captures té
 
 Non-régression : recette 133/133 et tous les contrôles existants OK. Captures téléphone avant/après : seules la ligne des catégories (et la mise en page qui la suit, à 4 px près) et la fiche de confusion changent.
 
-## Étape C — point 6 — FAITE
+## Étape C — point 6 — FAITE (version 2)
 
-**Style.** Trait d'encre sépia et 2 à 3 aplats de pigments légèrement décalés du trait, comme à la main. Plus de dégradé brillant, de reflet ni d'ombre portée. Les 39 dégradés des anciennes icônes sont retirés.
+**Retour du 7 octobre sur la version 1.** Le style « carnet naturaliste », avec son trait d'encre sépia et ses aplats décalés, faisait brouillon : l'appli avait perdu son côté ludique et fini. Il est abandonné.
 
-**Couleurs.** Une palette commune de 17 pigments naturels : mousse, pousse, pin, lichen, écorce, bois clair, ocre, or, terre cuite, baie, prune, rose, eau, glace, papier, pierre, bleu crépuscule. Chaque illustration en prend quelques-uns, si bien qu'elles ne se ressemblent plus tout en gardant le même trait. Comme convenu, ce n'est pas une teinte imposée par famille : c'est une variété réfléchie.
+**Version 2 : vignettes ludiques.**
+- Formes pleines et arrondies, couleurs franches, sans trait d'encre.
+- Le volume vient de deux tons, un dessous plus foncé légèrement décalé, plus un petit reflet clair. Une ombre douce au sol.
+- Ni dégradé, ni filtre d'ombre portée : le rendu reste net à 20 px et léger.
+- Palette de 13 teintes (vert, vert d'eau, écorce, bois, or, orange, rouge, rose, violet, bleu, nuit, papier, pierre) en 3 à 4 tons chacune. Chaque illustration prend ses propres couleurs, avec un rendu commun.
+- Mode sombre : aucune adaptation nécessaire, les couleurs pleines ressortent sur les deux fonds.
 
-**Rangs : les saisons.** Graine (gland ocre) → Germe et Pousse (vert tendre sur terre rousse) → Jeune plant (pot en terre cuite) → Arbrisseau (baies) → Jeune arbre → Arbre (vert pin) → Grand chêne (mousse et glands) → Bosquet (trois arbres d'automne) → Forêt (sapins pin et lichen) → Gardien de la forêt (vieil arbre sous une lune prune, sans visage) → Maître du royaume (chêne doré couronné).
+**Rangs : les saisons.** Gland doré → germe et pousse sur une butte de terre → plant en pot de terre cuite → arbrisseau en fleurs roses → jeune arbre vert tendre → arbre aux fruits rouges → grand chêne et ses glands → bosquet d'automne (or, vert, orange) → forêt de sapins → Gardien sous un ciel de nuit étoilé avec la lune et des lucioles → Maître du royaume, arbre doré couronné.
 
-**Remplacements.**
+**Remplacements conservés.**
 
 | Avant | Après |
 |---|---|
-| Trophée | Couronne de laurier, avec un gland et un ruban |
+| Trophée | Couronne de laurier et médaille étoilée |
 | Ampoule (Famille du jour) | Étiquette d'herbier |
 | Cible (erreurs du jour) | Boussole |
-| Loupe jaune | Loupe de naturaliste sur une feuille |
-| Histogramme (Progrès) | Rondelle de bois et ses cernes |
-| Éprouvette (pH) | Tube à essai aux deux couleurs |
-| Engrenage | Engrenage en bois avec une feuille |
+| Histogramme (Progrès) | Rondelle de bois |
+| Loupe | Loupe sur une feuille |
 
-Les chevrons, la croix et la coche restent de simples tracés.
+**Catégories sur téléphone.** Chaque tuile montre maintenant son illustration au-dessus du nom (avant : seulement sur ordinateur). La ligne tient de 320 à 2560 px, et l'écran de jeu tient toujours sans défilement en 360×640.
 
-**Mode sombre.** L'encre devient crème. Sur un fond vert plein (onglet actif, tuile active) et sur la carte claire de la Famille du jour, elle s'inverse pour rester lisible.
+**Fonds verts pleins.** Sur l'onglet actif et sur la tuile active, l'illustration se pose sur une petite pastille claire, comme un badge, pour ne pas se fondre dans le vert.
 
-**Décor.** Troncs effilés, légèrement penchés, évasés au pied. Vraies frondes de fougère aux coins, et deux petites touffes au centre, visibles aussi sur téléphone. Même canopée festonnée qu'à l'étape A.
+**Décor.** Troncs effilés évasés au pied, frondes de fougère (inchangé depuis la version 1).
 
 **Outils.**
-- `outils/illustrations.py --ecrire` régénère toutes les illustrations, leur CSS et le décor.
+- `outils/illustrations.py --ecrire` régénère les illustrations, leur CSS et le décor.
 - `outils/controle_illustrations.js` vérifie :
-  - chaque illustration s'affiche, sans ombre ni dégradé ;
-  - le contraste de l'encre avec son fond réel est d'au moins 3:1, en clair et en sombre, sur téléphone et sur ordinateur (minimum mesuré : 3,5:1, tuile active sur ordinateur) ;
-  - les rangs utilisent des pigments variés.
+  - chaque illustration s'affiche, sans ombre portée ni dégradé ;
+  - chaque icône a au moins une forme qui contraste à 3:1 ou plus avec son fond réel, en clair et en sombre, sur téléphone et sur ordinateur. Ce contrôle a détecté le vert sur vert de l'onglet actif, d'où la pastille ;
+  - les rangs ont au moins 6 couleurs dominantes différentes : il y en a 7.
 
-**Poids.** `index.html` passe de 775 Ko à 788 Ko (+1,6 %) : les tracés à la main et les fougères sont un peu plus longs que les anciens dégradés. Aucun effet mesurable sur la fluidité : le décor reste un SVG fixe.
+**Poids.** `index.html` passe de 775 Ko à 790 Ko (+1,9 %), sans effet sur la fluidité.
 
 ## Ordre proposé
 
