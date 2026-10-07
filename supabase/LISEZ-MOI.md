@@ -63,7 +63,7 @@ Pour Gmail : sur le compte Google, active la **validation en deux étapes**, pui
 
 1. **Authentication > Emails**, onglet **Templates**, choisis **Confirm signup**.
 2. « Subject » (objet) : `Confirme ton adresse e-mail 🌿`
-3. Dans « Message body », onglet **Source**, remplace tout le contenu par celui de `supabase/e-mails/confirmation.html`, puis **Save changes**.
+3. Dans « Message body », onglet **Source**, remplace tout le contenu par celui de `supabase/e-mails/confirmation.html` (du `<!doctype html>` au `</html>` final), puis **Save changes**.
 4. Garde tel quel `{{ .ConfirmationURL }}` : Supabase le remplace par le lien de confirmation de chaque compte.
 
 Pour vérifier, crée un compte de test avec une autre adresse : l'e-mail reçu doit afficher le nouveau texte et le bouton « Confirmer mon adresse e-mail ». S'il arrive dans les indésirables, c'est le plus souvent l'adresse d'envoi : une adresse sur un nom de domaine vérifié (Brevo, Resend) règle ce problème.
