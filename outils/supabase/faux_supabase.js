@@ -55,7 +55,14 @@ async function brancher(page,db,url,journal=[]){
       const id=(corps.refresh_token||'').slice(2),ex=(await db.query('select * from auth.users where id::text=$1',[id])).rows[0];
       return ex?js(200,session(ex)):js(400,{code:400,error_code:'refresh_token_not_found',msg:'Invalid Refresh Token'});
     }
-    if(u.pathname==='/auth/v1/otp'){journal.push('lien:'+corps.email);return js(200,{})}
+    // lien de connexion par e-mail : le compte est créé au besoin ; le lien « reçu » est noté dans journal.lien
+    if(u.pathname==='/auth/v1/otp'){
+      let ex=(await db.query('select * from auth.users where email=$1',[corps.email])).rows[0];
+      if(!ex){ex={id:crypto.randomUUID(),email:corps.email};await db.query('insert into auth.users(id,email) values($1,$2)',[ex.id,ex.email])}
+      const s=session(ex);journal.push('lien:'+corps.email);
+      journal.lien=(u.searchParams.get('redirect_to')||'')+'#access_token='+s.access_token+'&refresh_token='+s.refresh_token+'&expires_in=3600&expires_at='+s.expires_at+'&token_type=bearer&type=magiclink';
+      return js(200,{});
+    }
     if(u.pathname==='/auth/v1/logout')return r.fulfill({status:204,headers:cors});
     if(u.pathname==='/auth/v1/user'){const id=sub(q.headers()['authorization']),ex=id&&(await db.query('select * from auth.users where id=$1',[id])).rows[0];return ex?js(200,session(ex).user):js(401,{code:401,msg:'invalid JWT'})}
     const m=u.pathname.match(/^\/rest\/v1\/rpc\/(\w+)$/);
