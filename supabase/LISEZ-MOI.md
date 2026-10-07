@@ -28,7 +28,7 @@ Un ami s'ajoute avec son **code ami** (par exemple `RPL-K7Q2M`). L'amitié est r
 3. **Régler la connexion par e-mail.** Dans **Authentication > Sign In / Providers**, le fournisseur **Email** est activé par défaut.
    - « Confirm email » activé : chaque nouveau compte doit cliquer sur un lien reçu par e-mail. C'est plus sûr, et c'est le réglage conseillé si l'appli est en ligne.
    - Désactivé : le compte est utilisable tout de suite. C'est pratique entre amis, ou si l'appli est ouverte en fichier local.
-4. **Indiquer l'adresse de l'appli.** Dans **Authentication > URL Configuration**, mets dans « Site URL » l'adresse où l'appli est publiée, par exemple `https://antoinestager-cell.github.io/ROYAUME-DES-PLANTES/` (voir « Mettre l'appli en ligne »). Ajoute la même adresse dans « Redirect URLs ». Les liens reçus par e-mail renvoient vers cette adresse.
+4. **Indiquer l'adresse de l'appli.** Dans **Authentication > URL Configuration**, mets dans « Site URL » l'adresse où l'appli est publiée, `https://collectifdevidoir.github.io/ROYAUME-DES-PLANTES/` (voir « Mettre l'appli en ligne »). Ajoute la même adresse dans « Redirect URLs ». Les liens reçus par e-mail renvoient vers cette adresse.
 5. **Brancher l'appli.** C'est fait pour ton projet : `index.html` contient l'adresse `https://hcbzkpsxqxhmqcblfsnm.supabase.co` et ta clé publique (`sb_publishable_…`).
    - L'adresse à utiliser est **l'URL du projet**, de la forme `https://<identifiant>.supabase.co`. On la trouve dans **Project Settings > Data API** (ou en haut de **Project Settings > API Keys**). Ce n'est **pas** l'adresse de la page du tableau de bord affichée dans la barre du navigateur (`https://supabase.com/dashboard/project/…`). Si elle est collée par erreur, l'appli la corrige d'elle-même.
    - La clé est la clé **publique** (« publishable » ou « anon »), jamais la clé **secrète** (« secret » ou « service_role »). Si une clé secrète est collée, l'appli la refuse et n'envoie rien.
@@ -41,19 +41,16 @@ Un ami s'ajoute avec son **code ami** (par exemple `RPL-K7Q2M`). L'amitié est r
 
 Je travaille sur la branche `claude/improve-html-app-e7b6o4` du dépôt. Le plus simple est de publier l'appli **directement depuis cette branche** : chaque modification que je pousse est alors en ligne une minute plus tard, sans rien faire. Ta configuration Supabase étant dans `index.html` sur cette branche, elle est conservée à chaque mise à jour.
 
-Ton dépôt est **privé**. Deux possibilités gratuites :
+Le dépôt est **public** et appartient à l'organisation GitHub **collectifdevidoir** (il a été transféré depuis le compte `antoinestager-cell`). Il ne contient rien de secret : la clé Supabase est publique par conception.
 
-**A. Rendre le dépôt public + GitHub Pages** (le plus simple)
-1. Sur GitHub, dans le dépôt : **Settings > General**, tout en bas « Danger Zone » > **Change visibility** > Public. Le dépôt ne contient rien de secret : la clé Supabase est publique par conception.
-2. **Settings > Pages** > « Build and deployment » > Source : **Deploy from a branch** > Branch : `claude/improve-html-app-e7b6o4`, dossier `/ (root)` > **Save**.
-3. Une à deux minutes plus tard, l'appli est en ligne à l'adresse `https://antoinestager-cell.github.io/ROYAUME-DES-PLANTES/`. Elle s'affiche en haut de la page Settings > Pages.
+L'appli est publiée par **GitHub Pages** à l'adresse **`https://collectifdevidoir.github.io/ROYAUME-DES-PLANTES/`**.
 
-**B. Garder le dépôt privé + Cloudflare Pages** (ou Netlify)
-1. Crée un compte gratuit sur [pages.cloudflare.com](https://pages.cloudflare.com), puis **Create a project > Connect to Git**, et autorise l'accès au dépôt `ROYAUME-DES-PLANTES`.
-2. « Production branch » : `claude/improve-html-app-e7b6o4`. Pas de commande de construction (« Framework preset » : None). Dossier de sortie : `/`.
-3. L'appli est en ligne à une adresse du type `https://royaume-des-plantes.pages.dev`. Elle se met à jour à chaque modification poussée.
+Réglage en place, à vérifier si l'appli n'est plus en ligne :
+1. Sur GitHub, dans le dépôt `collectifdevidoir/ROYAUME-DES-PLANTES` : **Settings > Pages**.
+2. « Build and deployment » > Source : **Deploy from a branch** > Branch : `claude/improve-html-app-e7b6o4`, dossier `/ (root)` > **Save**.
+3. Une à deux minutes après chaque modification poussée, la nouvelle version est en ligne. L'adresse s'affiche en haut de la page Settings > Pages.
 
-Dans les deux cas, reporte l'adresse obtenue dans Supabase : **Authentication > URL Configuration** > « Site URL » et « Redirect URLs ».
+Les anciennes adresses en `antoinestager-cell.github.io` ne fonctionnent plus. Dans Supabase, **Authentication > URL Configuration**, « Site URL » et « Redirect URLs » doivent contenir la nouvelle adresse, sinon les liens reçus par e-mail renvoient vers une page introuvable.
 
 Sur téléphone, ouvre l'adresse puis « Ajouter à l'écran d'accueil » : l'appli s'ouvre alors comme une application.
 
