@@ -23,6 +23,8 @@ body{margin:0;min-height:100vh;color:var(--fg);font:16px/1.5 system-ui,sans-seri
 html{-webkit-text-size-adjust:100%;background:var(--bg1)}
 #bg{position:fixed;top:0;right:0;bottom:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
 .tf,.tn{fill:var(--t1)}
+/* canopée du décor (haut de l'écran) : feuillage en transparence, jamais noir */
+.cn1{fill:var(--t2);opacity:.22}.cn2{fill:var(--t2);opacity:.3}
 .fr{fill:var(--t2);opacity:.55}
 .ray{animation:sway 14s ease-in-out infinite alternate}
 @keyframes sway{from{opacity:calc(var(--ry)*.5)}to{opacity:var(--ry)}}
@@ -424,6 +426,13 @@ dialog .hp{margin:0 0 6px;font-size:.95rem}
 .rr small{margin-left:auto;color:var(--mu);font-size:.75rem}
 .hist .hb{flex:1;height:100%;display:flex;align-items:flex-end;background:var(--bg1);border:0;border-radius:4px;padding:0;cursor:pointer}
 .hb[aria-pressed=true]{outline:2px solid var(--ac);outline-offset:1px}
+/* régularité : ligne repère de l'objectif quotidien (réglage goal()) et initiales des jours */
+.hist{position:relative}
+.hgl{position:absolute;left:0;right:0;bottom:calc(var(--gl) - 1px);border-top:2px dashed var(--ac);opacity:.85;pointer-events:none}
+.hgl small{position:absolute;left:0;bottom:3px;padding:0 5px;border-radius:5px;background:var(--card);color:var(--ac);font:700 11px system-ui;white-space:nowrap}
+.hdl{display:flex;gap:3px;margin:5px 0 2px}
+.hdl span{flex:1;text-align:center;font:600 11px system-ui;color:var(--mu)}
+.hdl .tdy{color:var(--ac);font-weight:800}
 .hd{margin:8px 0 0;font-size:.9rem;min-height:1.3em}
 #chips{display:block}
 #chips .cats button span{font-size:1.15rem;line-height:1.2}
@@ -649,7 +658,6 @@ body:not(.nostick) .rank::after{content:'';position:absolute;left:0;right:0;top:
 .sh.full .ec.wr,.sh.full .diff{display:none}
 .sh.full .erw{grid-template-columns:1fr}
 #q-form{position:relative;margin-top:12px}
-#q-hint{position:absolute;left:12px;top:-10px;z-index:2;background:var(--ac);color:#fff;font:700 .72rem system-ui;letter-spacing:.02em;padding:2px 9px;border-radius:9px;pointer-events:none}
 .erw .cph{aspect-ratio:auto;height:96px}
 .erw .cph img{width:100%;height:100%;object-fit:cover}
 
@@ -885,7 +893,11 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
 .tks span::before{content:'';position:absolute;left:50%;top:-9px;width:2px;height:5px;margin-left:-1px;border-radius:1px;background:var(--bd)}
 .tks span.on{color:var(--ac);font-weight:800}
 /* ===== Écriture : bouton d'indice sur la ligne de saisie ===== */
-#q-form #q-input{order:1}
+#q-form .qiw{order:1;flex:1;min-width:0;position:relative;display:flex}
+#q-form .qiw #q-input{flex:1;width:100%}
+/* joker : initiales du genre et de l'espèce, fixées à droite dans le champ, visibles même pendant la saisie */
+.qini{position:absolute;right:8px;top:50%;transform:translateY(-50%);padding:3px 8px;border-radius:8px;background:#e2ecdc;color:#2f6b3f;font:italic 700 1rem Georgia,serif;letter-spacing:.03em;white-space:nowrap;pointer-events:none}
+#q-form.hint #q-input{padding-right:72px}
 #q-form .jk{order:2;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;gap:3px;min-width:54px;min-height:44px;margin:0;padding:0 9px;border:1.5px solid var(--bd);border-radius:12px;background:var(--card);color:var(--fg);font:700 .9rem system-ui}
 #q-form .jk .tgi{width:22px;height:22px}
 #q-form .jk .jkn{font:700 .85rem system-ui;color:var(--mu)}
@@ -901,7 +913,7 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
 <g class="ray"><polygon points="140,0 230,0 520,800 330,800" fill="url(#rg)"/><polygon points="420,0 480,0 760,800 640,800" fill="url(#rg)"/><polygon points="760,0 840,0 1100,800 930,800" fill="url(#rg)"/></g>
 <g class="tf" opacity=".2"><rect x="60" width="26" height="800"/><rect x="330" width="18" height="800"/><rect x="610" width="22" height="800"/><rect x="880" width="16" height="800"/><rect x="1070" width="24" height="800"/></g>
 <g class="tn" opacity=".38"><rect x="-20" width="70" height="800" rx="20"/><rect x="1150" width="80" height="800" rx="20"/><rect x="200" width="34" height="800" rx="12" opacity=".6"/><rect x="960" width="38" height="800" rx="12" opacity=".6"/></g>
-<path class="czr" d="M0 0H1200V50Q1120 120 1030 70T860 80T690 60T520 90T350 60T170 100T0 70Z"/>
+<g class="cnp"><path class="cn1" d="M0 0H1200V70Q1158 101 1115 75Q1080 101 1044 66Q1010 90 975 55Q929 81 883 57Q838 100 793 58Q753 122 713 84Q664 117 614 85Q579 106 545 63Q508 90 470 64Q414 100 357 73Q306 103 254 72Q219 85 184 61Q132 97 79 64Q39 97 0 64Z"/><path class="cn2" d="M0 0H1200V38Q1164 61 1127 32Q1095 73 1062 47Q1027 71 992 49Q968 68 944 44Q919 52 895 27Q861 70 827 40Q789 65 751 43Q718 64 685 37Q648 70 611 37Q576 61 542 43Q509 80 475 46Q448 66 421 42Q399 55 377 30Q353 62 329 44Q305 57 281 35Q243 55 205 37Q173 78 141 46Q103 58 66 36Q37 81 9 49Q4 52 0 32Z"/></g>
 <rect y="520" width="1200" height="280" fill="url(#mg)"/>
 <path class="fr" d="M0 800Q30 690 150 650Q90 720 70 800ZM40 800Q110 730 230 730Q150 760 120 800ZM1200 800Q1170 690 1050 650Q1110 720 1130 800ZM1160 800Q1090 730 970 730Q1050 760 1080 800Z"/></svg>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><radialGradient id="gL1" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#e4ff9a"/><stop offset="0.5" stop-color="#8be04a"/><stop offset="1" stop-color="#35b04a"/></radialGradient><radialGradient id="gL2" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#b8f06e"/><stop offset="0.5" stop-color="#4fc24f"/><stop offset="1" stop-color="#1f8f45"/></radialGradient><radialGradient id="gL3" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#6bd77a"/><stop offset="0.5" stop-color="#27a152"/><stop offset="1" stop-color="#0f6b3c"/></radialGradient><radialGradient id="gLm" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#f2ffa8"/><stop offset="0.5" stop-color="#b8ec4e"/><stop offset="1" stop-color="#6ec23a"/></radialGradient><linearGradient id="gBr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5a361c"/><stop offset="0.4" stop-color="#b6804f"/><stop offset="1" stop-color="#4e2f17"/></linearGradient><linearGradient id="gSo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a0703f"/><stop offset="1" stop-color="#53341a"/></linearGradient><radialGradient id="gSd" cx="0.35" cy="0.3" r="0.9"><stop offset="0" stop-color="#ffd28a"/><stop offset="0.55" stop-color="#e8943a"/><stop offset="1" stop-color="#a05a1a"/></radialGradient><radialGradient id="gCp" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#b27b4a"/><stop offset="0.6" stop-color="#7a4a26"/><stop offset="1" stop-color="#4f2d14"/></radialGradient><linearGradient id="gGd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff4b0"/><stop offset="0.5" stop-color="#ffc83d"/><stop offset="1" stop-color="#d58a0a"/></linearGradient><radialGradient id="gT1" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#b0f5e4"/><stop offset="0.5" stop-color="#2fc9b3"/><stop offset="1" stop-color="#0f8c93"/></radialGradient><radialGradient id="gT2" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#80e8d4"/><stop offset="0.5" stop-color="#1fb0a0"/><stop offset="1" stop-color="#0b7480"/></radialGradient><radialGradient id="gT3" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#5ad6c4"/><stop offset="0.5" stop-color="#0f8f8a"/><stop offset="1" stop-color="#0a5568"/></radialGradient><radialGradient id="gO1" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#fff0a0"/><stop offset="0.5" stop-color="#f0c032"/><stop offset="1" stop-color="#b88510"/></radialGradient><radialGradient id="gO2" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#f7d65c"/><stop offset="0.5" stop-color="#d9a21e"/><stop offset="1" stop-color="#946508"/></radialGradient><linearGradient id="gF1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4fc0a0"/><stop offset="1" stop-color="#1f8a6a"/></linearGradient><linearGradient id="gF2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34a888"/><stop offset="1" stop-color="#146a52"/></linearGradient><linearGradient id="gF3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f8a6c"/><stop offset="1" stop-color="#0b4a3c"/></linearGradient><radialGradient id="gN1" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#b4c2ff"/><stop offset="0.5" stop-color="#6a7fe6"/><stop offset="1" stop-color="#3a46b0"/></radialGradient><radialGradient id="gN2" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#8fa0f5"/><stop offset="0.5" stop-color="#4d5fd0"/><stop offset="1" stop-color="#2b3790"/></radialGradient><radialGradient id="gN3" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#6676e0"/><stop offset="0.5" stop-color="#3340a8"/><stop offset="1" stop-color="#1c2470"/></radialGradient><linearGradient id="gMn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffbe6"/><stop offset="1" stop-color="#ffe27a"/></linearGradient><linearGradient id="gPot" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f09a68"/><stop offset="0.5" stop-color="#d5703a"/><stop offset="1" stop-color="#b5532a"/></linearGradient><linearGradient id="gPot2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb286"/><stop offset="1" stop-color="#d9703c"/></linearGradient><radialGradient id="gP1" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ffe3ef"/><stop offset="0.5" stop-color="#ff9cc6"/><stop offset="1" stop-color="#e8579a"/></radialGradient><radialGradient id="gP2" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ffb3d4"/><stop offset="0.5" stop-color="#f0549a"/><stop offset="1" stop-color="#b82a74"/></radialGradient><radialGradient id="gP3" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#f07cb4"/><stop offset="0.5" stop-color="#c93a86"/><stop offset="1" stop-color="#7f1a58"/></radialGradient><radialGradient id="gFr" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ffdbe6"/><stop offset="0.5" stop-color="#ff6f9c"/><stop offset="1" stop-color="#d12f68"/></radialGradient><radialGradient id="gAp" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ff9a8a"/><stop offset="0.5" stop-color="#e8332b"/><stop offset="1" stop-color="#a1130f"/></radialGradient><linearGradient id="gBi" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#dcdcd6"/><stop offset="0.5" stop-color="#ffffff"/><stop offset="1" stop-color="#c9c9c0"/></linearGradient><radialGradient id="gMc" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ff8a7a"/><stop offset="0.55" stop-color="#e03a30"/><stop offset="1" stop-color="#a0160f"/></radialGradient><linearGradient id="gMs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff6e0"/><stop offset="1" stop-color="#e6d2a8"/></linearGradient><radialGradient id="gDw" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ffffff"/><stop offset="0.5" stop-color="#bfe9ff"/><stop offset="1" stop-color="#5fb4ec"/></radialGradient><radialGradient id="gA1" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ffe08a"/><stop offset="0.5" stop-color="#f7a53a"/><stop offset="1" stop-color="#d8661c"/></radialGradient><radialGradient id="gA2" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#f9b04a"/><stop offset="0.5" stop-color="#e0702a"/><stop offset="1" stop-color="#a8401a"/></radialGradient><radialGradient id="gA3" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ee8a34"/><stop offset="0.5" stop-color="#bd4a20"/><stop offset="1" stop-color="#7a2812"/></radialGradient><radialGradient id="gBl" cx="0.4" cy="0.35" r="0.85"><stop offset="0" stop-color="#fffcd6"/><stop offset="0.5" stop-color="#ffe45c"/><stop offset="1" stop-color="#f5b400"/></radialGradient><linearGradient id="gMt" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e3e8ec"/><stop offset="0.5" stop-color="#9aa6b0"/><stop offset="1" stop-color="#6f7b86"/></linearGradient><radialGradient id="gTr" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ff8f8f"/><stop offset="0.6" stop-color="#e8384f"/><stop offset="1" stop-color="#b01530"/></radialGradient><radialGradient id="gTw" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe7ec"/></radialGradient></defs></svg>
@@ -2144,9 +2156,9 @@ const HINT='<svg class="ri" viewBox="0 0 64 64" aria-hidden="true"><path class="
 const jkS=()=>{const d=today();if(!st.jk||st.jk.d!==d)st.jk={d,n:0};return st.jk};
 let hintKey='';
 function jokerUI(){const b=$('jk');if(!b)return;const left=()=>5-jkS().n,key=()=>cur[0]+'#'+nxt,used=()=>hintKey===key();
-  const lab=()=>{const w=cur[0].split(' ').filter(x=>x!=='×');return w[0][0]+'… '+(w[1]||'?')[0]+'…'};
+  const lab=()=>cur[0].split(' ').map(x=>x==='×'?'×':x[0]+'.').join(' ');
   const paint=()=>{const t=used()?'Indice utilisé, encore '+left()+' sur 5 aujourd\'hui':left()>0?'Indice : '+left()+' sur 5 aujourd\'hui':'Plus d\'indice aujourd\'hui';b.innerHTML='<span class="tgi">'+HINT+'</span><b class="jkn">'+left()+'</b>';b.setAttribute('aria-label',t);b.title=t;b.classList.toggle('usd',used());b.disabled=used()||left()<=0||done};
-  const showH=()=>{const f=$('q-form');if(!f)return;let h=$('q-hint');if(!h){h=document.createElement('span');h.id='q-hint';f.prepend(h)}h.textContent='Indice · '+lab();if($('q-input'))$('q-input').placeholder=lab()};
+  const showH=()=>{const h=$('q-ini');if(!h)return;h.textContent=lab();h.hidden=false;h.setAttribute('aria-label','Initiales : '+lab());$('q-form').classList.add('hint')};
   paint();if(used())showH();
   b.onclick=()=>{if(done||used()||left()<=0)return;hintKey=key();jkS().n++;save();showH();paint()}}
 const loadable=src=>new Promise(r=>{const i=new Image();i.referrerPolicy='no-referrer';i.onload=()=>r(true);i.onerror=()=>r(false);setTimeout(()=>r(false),7000);i.src=src});
@@ -2269,8 +2281,8 @@ async function next(){
   }else{buildCar(q.s,q.im,false);
   $('q').textContent=typed?'Écris le nom latin complet (genre + espèce)':'Quelle est cette plante ?';
   if(typed){
-    $('opts').innerHTML='<form id="q-form"><input id="q-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Touche ici pour écrire (Genus species)" aria-label="Nom latin"><button>Valider</button><p class="tyq" id="q-ty">Écris le nom latin complet (genre + espèce)</p></form>';
-    $('q-form').onsubmit=e=>{e.preventDefault();if($('q-input').value.trim())answer($('q-input').value.trim())};$('q-input').onfocus=()=>{$('qc').classList.add('typing');kbFit();setTimeout(kbFit,350)};
+    $('opts').innerHTML='<form id="q-form"><span class="qiw"><input id="q-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Touche ici pour écrire (Genus species)" aria-label="Nom latin"><b class="qini" id="q-ini" hidden></b></span><button>Valider</button><p class="tyq" id="q-ty">Écris le nom latin complet (genre + espèce)</p></form>';
+    const qT0=Date.now();$('q-form').onsubmit=e=>{e.preventDefault();const v=$('q-input').value.trim();if(v||Date.now()-qT0>=1000)answer(v)};$('q-input').onfocus=()=>{$('qc').classList.add('typing');kbFit();setTimeout(kbFit,350)};
   const jb=document.createElement('button');jb.type='button';jb.id='jk';jb.className='jk';$('q-form').append(jb);jokerUI();
   }else choices(cur).forEach((o,i)=>{
     const b=document.createElement('button');b.textContent=o[0];b.dataset.l=o[0];b.dataset.n=i+1;b.setAttribute('aria-keyshortcuts',String(i+1));b.style.setProperty('--i',i);
@@ -2442,7 +2454,7 @@ async function showSheet(good,w,v){
     const pk=Object.keys(C).find(k=>{const a=k.split('|');return a.includes(c[0])&&a.includes(w[0])}),y=whyHtml(c,w),rec=nc>=2?` · confondues ${Math.round(nc)} fois`:'';
     const dtx=pk?brief(C[pk],240):('<b>'+w[1]+'</b> : '+esc(q3(w).slice(0,2).join(' ; ')));
     cp=`<p class="lab">Ce qu'il faut regarder</p><div class="erw">${col(c,true)}${col(w,false)}</div><div class="diff"><p class="lab">Pour ne pas les confondre</p><p>${pk?esc(dtx):dtx}</p>${y||rec?`<p class="dwhy">${y?'On les confond : '+esc(y):''}${rec}</p>`:''}</div>`;
-  }else cp=(!good&&!w?`<div class="key"><b>« ${esc(v)} » n'est pas dans la liste</b></div>`:'')+'<p class="lab">Ce qu\'il faut regarder</p>'+qli(q3(c),true);
+  }else cp=(!good&&!w?`<div class="key"><b>${v?`« ${esc(v)} » n'est pas dans la liste`:'Pas de réponse : voici comment la reconnaître'}</b></div>`:'')+'<p class="lab">Ce qu\'il faut regarder</p>'+qli(q3(c),true);
   $('shb').innerHTML=`<div class="cp">${cp}</div><button class="more" id="sh-more">${moreLbl(false)}</button><div class="dt" id="sh-dt"><p class="ld">Chargement…</p></div>`;
   $('shb').scrollTop=0;fitSh();setTimeout(fitSh,350);
   if(window.ResizeObserver){if(shRO)shRO.disconnect();shRO=new ResizeObserver(fitSh);const c0=document.querySelector('#shb .cp');if(c0)shRO.observe(c0)}
@@ -2490,7 +2502,7 @@ function pro(){
   const cf=Object.entries(st.cf).filter(x=>x[1]>=1).sort((a,b)=>b[1]-a[1]).slice(0,3);
   $('pro').innerHTML=
    `<div class="card"><h3 class="hh">Aujourd'hui</h3><p class="big2"><b>${hT.n}</b> / ${goal()} exercices</p><span class="bar"><i style="width:${Math.min(100,100*hT.n/goal())}%"></i></span>${errs.length?`<button class="big" id="pro-errs"><span class="tgi">${TARGET}</span>Rejouer mes erreurs du jour (${errs.length})</button>`:''}</div>`+
-   `<div class="card"><h3 class="hh">Régularité</h3><div class="kp"><div><b>${n?Math.round(100*ok/n):0} %</b>réussite</div><div><b>${st.best}</b>meilleure série</div></div><div class="hist">${days.map(x=>`<button type="button" class="hb" data-d="${x.d}" aria-pressed="false" aria-label="${x.d} : ${x.n} exercices"><i style="height:${Math.min(100,x.n*100/mxd)}%;background:${x.n?`hsl(${Math.round(x.r*1.25)},72%,${x.r<50?'46%':'40%'})`:'#d9e0d3'};opacity:${x.n?1:.3}"></i></button>`).join('')}</div><p class="hd" id="herb-detail"></p></div>`+
+   `<div class="card"><h3 class="hh">Régularité</h3><div class="kp"><div><b>${n?Math.round(100*ok/n):0} %</b>réussite</div><div><b>${st.best}</b>meilleure série</div></div><div class="hist" style="--gl:${Math.min(100,goal()*100/mxd)}%">${days.map(x=>`<button type="button" class="hb" data-d="${x.d}" aria-pressed="false" aria-label="${x.d} : ${x.n} exercices"><i style="height:${Math.min(100,x.n*100/mxd)}%;background:${x.n?`hsl(${Math.round(x.r*1.25)},72%,${x.r<50?'46%':'40%'})`:'#d9e0d3'};opacity:${x.n?1:.3}"></i></button>`).join('')}<span class="hgl" aria-hidden="true"><small>objectif ${goal()}</small></span></div><div class="hdl" aria-hidden="true">${days.map((x,i)=>`<span${i===13?' class="tdy"':''}>${'DLMMJVS'[new Date(x.d+'T12:00:00').getDay()]}</span>`).join('')}</div><p class="hd" id="herb-detail"></p></div>`+
    `<div class="card"><h3 class="hh">À revoir</h3>${wk.length?wk.slice(0,5).map(row).join('')+(wk.length>5?`<p class="na">+ ${wk.length-5} autres dans ta liste</p>`:'')+'<button class="big" id="pro-review">S\'entraîner sur ces plantes</button>':'<p class="na">Rien à revoir pour l\'instant, continue !</p>'}</div>`+
    (cf.length?`<div class="card"><h3 class="hh">Confusions</h3>${cf.map(([k,c])=>{const [a,b]=k.split('|');return `<div class="cfr"><span><em>${a}</em> ${ico('swap','ic-in')} <em>${b}</em> <small>${Math.round(c)}×</small></span><button data-k="${k}">S'entraîner</button></div>`}).join('')}</div>`:'')+
    `<div class="card lnk"><button class="lk" id="pro-set" type="button">${ico('reglages')}Réglages${ico('chev-r','lkc')}</button></div>`;
@@ -2533,7 +2545,7 @@ function setHtml(){
 }
 function setRender(focusId){
   const b=$('set-b');b.innerHTML=setHtml();
-  {const r=$('set-g'),sl=b.querySelector('.sld'),upd=()=>{const v=+r.value;st.set.goal=v;$('set-gv').textContent=v;r.setAttribute('aria-valuetext',v+' exercices par jour');sl.style.setProperty('--sp',(v-GOALS[0])/(GOALS[GOALS.length-1]-GOALS[0]));sl.querySelectorAll('.tks span').forEach(t=>t.classList.toggle('on',+t.textContent===v));stats()};
+  {const r=$('set-g'),sl=b.querySelector('.sld'),upd=()=>{const v=+r.value;st.set.goal=v;$('set-gv').textContent=v;r.setAttribute('aria-valuetext',v+' exercices par jour');sl.style.setProperty('--sp',(v-GOALS[0])/(GOALS[GOALS.length-1]-GOALS[0]));sl.querySelectorAll('.tks span').forEach(t=>t.classList.toggle('on',+t.textContent===v));stats();if(!$('pro').hidden)pro()};
    r.oninput=upd;r.onchange=()=>{upd();save();if(!$('pro').hidden)pro()}}
   $('set-vib').onclick=()=>{st.set.vib=!st.set.vib;save();vib(15);setRender('set-vib')};
   $('set-save').onclick=()=>{setPanel=setPanel==='save'?'':'save';setRender('set-save')};

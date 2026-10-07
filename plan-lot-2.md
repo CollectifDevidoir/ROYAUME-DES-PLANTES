@@ -147,6 +147,17 @@ Règles inchangées : une étape à la fois, validation avant la suivante, contr
 
 ---
 
+## Étape A — points 8, 2, 1, 4 — FAITE
+
+| Point | Résultat | Contrôle |
+|---|---|---|
+| 8. Motifs noirs | La canopée du décor a une couleur : deux couches de feuillage vert transparent, à bord festonné. Elle porte un nom de classe propre (`cn1`, `cn2`), sans conflit. | `outils/controle_noir.js` : 10 formats × clair/sombre × 2 écrans. **Avant : 33 échecs sur 40. Après : 0.** La tache était aussi visible en 1366×800, en haut à gauche. |
+| 2. Réponse vide | Acceptée et comptée comme une erreur normale. Ignorée pendant la 1re seconde (garde-fou du double « Entrée »). La correction dit « Pas de réponse : voici comment la reconnaître » au lieu de « « » n'est pas dans la liste ». | `outils/controle_saisie.js` |
+| 1. Joker | Bandeau séparé supprimé. Initiales « Q. r. » (« P. × h. » pour un hybride) fixées à droite **dans** le champ, visibles pendant la saisie. Le texte tapé s'arrête avant elles. Couleurs fixes, lisibles aussi en mode sombre (le champ reste blanc). | `outils/controle_saisie.js` (360×640 et 1440×780) |
+| 4. Régularité | Ligne pointillée « objectif N » à la hauteur exacte de `goal()`. Elle suit le curseur des Réglages en direct. Initiales L M M J V S D sous les 14 barres, aujourd'hui en gras. | `outils/controle_regularite.js` : écart de 0 px, objectif 40 → 70 → 10 |
+
+Non-régression : recette 133/133 et les 7 contrôles existants OK. Captures téléphone avant/après : les seules différences sont la bande du haut (canopée) et le graphique de Progrès.
+
 ## Ordre proposé
 
 | Étape | Contenu | Pourquoi cet ordre |
@@ -156,7 +167,14 @@ Règles inchangées : une étape à la fois, validation avant la suivante, contr
 | C | 6 | Le plus long ; dessiné une seule fois aux bonnes tailles. |
 | D | 7 | En dernier, pour vérifier l'ordinateur avec le rendu final de tout le reste. |
 
-## Décisions à prendre
+## Décisions prises (7 octobre)
+
+1. Catégories : **option B**.
+2. Illustrations : direction validée, **en moins enfantin et plus coloré**. Chaque famille d'illustrations (et chaque rang) reçoit sa propre teinte, pour que les icônes ne se ressemblent plus, tout en gardant le même trait et le même univers.
+3. Garde-fou d'une seconde : validé.
+4. Ordre A → B → C → D : validé.
+
+## Décisions à prendre (état initial)
 
 1. Catégories : **option A ou B** ? (B recommandée)
 2. Illustrations : la direction « carnet naturaliste » te convient-elle, ainsi que les remplacements (laurier, étiquette, boussole, rondelle de bois) ?
