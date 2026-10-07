@@ -104,15 +104,43 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   ok(await att(L.p,()=>!!document.querySelector('#sb-otp')),'appli en ligne (https) : bouton « lien par e-mail » proposé');
   await L.p.fill('#sb-mail','lea@test.fr');await L.p.click('#sb-otp');
   ok(await att(L.p,()=>/Lien envoyé/.test($('ami').innerText))&&jl.includes('lien:lea@test.fr')&&(jl.lien||'').startsWith(SITE+'#'),'lien demandé : « Lien envoyé », il renvoie vers l\'adresse de l\'appli');
-  await L.p.goto('about:blank');await ouvre(jl.lien);await L.p.click('#medal');
-  ok(await att(L.p,()=>!!document.querySelector('#sb-pf'),null,15000),'lien ouvert : connectée, choix du pseudo');
+  await L.p.goto('about:blank');await ouvre(jl.lien);
+  ok(await att(L.p,()=>$('prf').open&&!!document.querySelector('#sb-pf'),null,15000),'lien ouvert : connectée, le profil s\'ouvre seul sur le choix du pseudo');
   ok(await L.p.evaluate(()=>!/access_token/.test(location.href)),'le jeton est retiré de la barre d\'adresse');
   await L.p.fill('#sb-ps','Lea');await L.p.click('#sb-pf button');ok(await att(L.p,()=>!!document.querySelector('#sb-code')),'compte créé par le lien : profil et code ami');
   // e-mail de confirmation d'un nouveau compte : il doit ramener à l'adresse de l'appli (sinon : page 404)
   await L.p.click('#sb-out');await att(L.p,()=>!!document.querySelector('#sb-f'));
   await L.p.fill('#sb-mail','zoe@test.fr');await L.p.fill('#sb-mdp','secret789');await L.p.click('#sb-up');await att(L.p,()=>!!document.querySelector('#sb-pf'));
   ok(jl.some(x=>x.startsWith('/auth/v1/signup')&&new URLSearchParams(x.split('?')[1]).get('redirect_to')===SITE),'création de compte : le lien de confirmation ramène à l\'adresse de l\'appli');
-  for(const [n,o] of [['Antoine',A],['Coline',B],['nouvel appareil',C],['adresse corrigée',D],['clé secrète',E],['lien par e-mail',L]])ok(o.p.errs.length===0,n+' : aucune erreur JavaScript '+(o.p.errs.length?JSON.stringify(o.p.errs.slice(0,2)):''));
+  // ---- même compte sur deux appareils : chacun apprend de son côté, rien n'est écrasé ; un 3e appareil retrouve tout
+  const cnx=async(o,m,mdp,ps)=>{await o.p.click('#medal');await att(o.p,()=>!!document.querySelector('#sb-f'));await o.p.fill('#sb-mail',m);await o.p.fill('#sb-mdp',mdp);
+    await o.p.click(ps?'#sb-up':'#sb-in');if(ps){await att(o.p,()=>!!document.querySelector('#sb-pf'));await o.p.fill('#sb-ps',ps);await o.p.click('#sb-pf button')}
+    return att(o.p,()=>!!document.querySelector('#sb-code'),null,15000)};
+  const P1=await appareil(),P2=await appareil();
+  // P1 a commencé sans compte : 3 plantes acquises, puis il crée son compte
+  const sp=await P1.p.evaluate(()=>{const n=[S[0][0],S[1][0],S[2][0],S[3][0],S[4][0]];n.slice(0,3).forEach(k=>st.sp[k]={b:4,s:6,e:0,d:0});save();return n});
+  ok(await cnx(P1,'multi@test.fr','secret999','Multi'),'progression locale puis création de compte : profil prêt');
+  ok(await P1.p.evaluate(n=>n.slice(0,3).every(k=>st.sp[k]&&st.sp[k].b===4),sp),'création du compte : les 3 espèces acquises avant le compte sont gardées');
+  ok(await cnx(P2,'multi@test.fr','secret999'),'même compte sur un 2e appareil');
+  ok(await P2.p.evaluate(n=>n.slice(0,3).every(k=>st.sp[k]&&st.sp[k].b===4),sp),'2e appareil : il retrouve les 3 espèces');
+  await P1.p.evaluate(async n=>{st.sp[n[3]]={b:4,s:5,e:0,d:0};save();await sbEnvoi()},sp);
+  await P2.p.evaluate(async n=>{st.sp[n[4]]={b:4,s:5,e:0,d:0};save();await sbEnvoi()},sp);   // P2 n'avait pas vu la 4e : elle ne doit pas disparaître du compte
+  const P3=await appareil(1440,900);ok(await cnx(P3,'multi@test.fr','secret999'),'même compte sur un 3e appareil');
+  ok(await P3.p.evaluate(n=>n.every(k=>st.sp[k]&&st.sp[k].b===4),sp),'3e appareil : les 5 espèces apprises sur les deux autres sont toutes là (aucun écrasement)');
+  ok(await P2.p.evaluate(n=>!!st.sp[n[3]],sp),'2e appareil : il a récupéré l\'espèce apprise sur le 1er au moment d\'enregistrer');
+  // Réinitialiser en étant connecté : le message le dit, et le compte est vidé aussi (sinon la fusion ferait tout revenir)
+  await P2.p.evaluate(()=>{$('prf').close();openSettings()});await P2.p.click('#set-reset');
+  ok(/dans ton compte/.test(await P2.p.textContent('#set')),'Réinitialiser (connecté) : le message précise que le compte est aussi vidé');
+  await P2.p.click('#set-yes');await P2.p.evaluate(()=>sbEnvoi());
+  ok(await P2.p.evaluate(async()=>{const d=await sbRpc('lire_progression');return Object.keys(st.sp).length===0&&d&&Object.keys(d.sp||{}).length===0}),'Réinitialiser (connecté) : appareil et compte vides, rien ne revient');
+  // déconnexion : seulement cet appareil
+  await P2.p.evaluate(()=>{$('set').close();openProfil()});await att(P2.p,()=>!!document.querySelector('#sb-out'));
+  await P2.p.click('#sb-out');ok(await att(P2.p,()=>!!document.querySelector('#sb-f')),'déconnexion du 2e appareil : formulaire');
+  ok(P2.j.some(x=>/\/auth\/v1\/logout\?scope=local/.test(x)),'déconnexion : seulement sur cet appareil (les autres restent connectés)');
+  // suppression : message clair, plus rien de connecté
+  P3.p.once('dialog',d=>d.accept());await P3.p.click('#sb-del');
+  ok(await att(P3.p,()=>/Compte supprimé/.test($('ami').innerText)&&!!document.querySelector('#sb-f')&&!sbU&&!sbP),'suppression : « Compte supprimé », formulaire, état remis à zéro');
+  for(const [n,o] of [['Antoine',A],['Coline',B],['nouvel appareil',C],['adresse corrigée',D],['clé secrète',E],['lien par e-mail',L],['appareil 1',P1],['appareil 2',P2],['appareil 3',P3]])ok(o.p.errs.length===0,n+' : aucune erreur JavaScript '+(o.p.errs.length?JSON.stringify(o.p.errs.slice(0,2)):''));
   ok(await A.p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'390 px : pas de défilement horizontal');
   await b.close();for(const n of ['comptes','tableau','secret'])fs.unlinkSync(path.join(os.tmpdir(),'royaume-'+n+'.html'));
   console.log(ech?ech+' ÉCHEC(S)':'COMPTES : tout est OK');process.exit(ech?1:0);

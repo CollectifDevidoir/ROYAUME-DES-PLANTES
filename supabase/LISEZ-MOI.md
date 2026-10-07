@@ -66,6 +66,8 @@ Pour Gmail : sur le compte Google, active la **validation en deux étapes**, pui
 3. Dans « Message body », onglet **Source**, remplace tout le contenu par celui de `supabase/e-mails/confirmation.html` (du `<!doctype html>` au `</html>` final), puis **Save changes**.
 4. Garde tel quel `{{ .ConfirmationURL }}` : Supabase le remplace par le lien de confirmation de chaque compte.
 
+**Lien de connexion** (sert aussi en cas de mot de passe oublié) : même démarche avec le modèle **Magic Link**, le fichier `supabase/e-mails/lien-connexion.html` et l'objet `Ton lien pour entrer dans le royaume 🌿`.
+
 Pour vérifier, crée un compte de test avec une autre adresse : l'e-mail reçu doit afficher le nouveau texte et le bouton « Confirmer mon adresse e-mail ».
 
 ### Si l'e-mail arrive dans les indésirables

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Ton lien de connexion</title>
+</head>
+<body style="margin:0;padding:0;background:#eaf2df;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eaf2df;">
+  <tr>
+    <td align="center" style="padding:32px 16px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:520px;background:#fbfdf9;border:1px solid #c9dbc4;border-radius:20px;">
+        <tr>
+          <td style="padding:32px 28px 8px;font-family:Georgia,'Times New Roman',serif;font-size:24px;line-height:1.3;font-weight:bold;color:#2f6b3f;">
+            Le royaume des plantes
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:12px 28px 0;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.55;color:#14281a;">
+            <p style="margin:0 0 14px;">Bonjour jeune botaniste,</p>
+            <p style="margin:0 0 22px;">Voici ton lien pour entrer dans le royaume, sans mot de passe. Ouvre-le sur l'appareil où tu veux jouer :</p>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="padding:0 28px 24px;">
+            <a href="{{ .ConfirmationURL }}" style="display:inline-block;padding:14px 26px;border-radius:12px;background:#2f6b3f;color:#ffffff;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-weight:bold;text-decoration:none;">Me connecter</a>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 28px 28px;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.55;color:#14281a;">
+            <p style="margin:0 0 14px;">Ce lien ne sert qu'une fois et expire au bout d'une heure.</p>
+            <p style="margin:0 0 22px;">Hâte de te voir la tête dans les feuillages 🌿</p>
+            <p style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:17px;font-weight:bold;color:#2f6b3f;">Le royaume des plantes</p>
+            <p style="margin:2px 0 0;font-size:14px;color:#5b6d5f;">imaginé par Dévidoir</p>
+          </td>
+        </tr>
+      </table>
+      <p style="max-width:520px;margin:16px auto 0;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#5b6d5f;">Si le bouton ne fonctionne pas, copie ce lien dans ton navigateur :<br><a href="{{ .ConfirmationURL }}" style="color:#2f6b3f;word-break:break-all;">{{ .ConfirmationURL }}</a><br>Tu n'as rien demandé ? Ignore simplement cet e-mail : personne ne peut se connecter sans ce lien.</p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

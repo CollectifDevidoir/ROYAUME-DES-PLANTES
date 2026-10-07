@@ -2632,7 +2632,7 @@ let setPanel='';
 function setHtml(){
   const g=goal(),v=st.set.vib;
   const pnl=setPanel==='save'?`<div class="stp"><p>Copie ta progression pour la garder ou la passer sur un autre appareil, ou colle une sauvegarde pour la restaurer.</p><div class="row"><button class="mini" id="set-copy" type="button">Copier</button><button class="mini" id="set-paste" type="button">Restaurer</button></div><div id="set-out"></div></div>`
-   :setPanel==='reset'?`<div class="stp"><p class="stm ko">Effacer toute la progression sur cet appareil ? Tes réglages sont conservés.</p><div class="row"><button class="mini" id="set-no" type="button">Annuler</button><button class="mini ko full" id="set-yes" type="button">Tout effacer</button></div></div>`:'';
+   :setPanel==='reset'?`<div class="stp"><p class="stm ko">${sbU&&sbP?'Effacer toute ta progression, sur cet appareil et dans ton compte ? Tes réglages et tes amis sont conservés.':'Effacer toute la progression sur cet appareil ? Tes réglages sont conservés.'}</p><div class="row"><button class="mini" id="set-no" type="button">Annuler</button><button class="mini ko full" id="set-yes" type="button">Tout effacer</button></div></div>`:'';
   return `<h3 class="stl">Objectif du jour</h3>
 <div class="str stg"><span><b id="set-gl">Exercices par jour</b></span><output class="sgv" id="set-gv" for="set-g">${g}</output></div>
 <div class="sld" style="--sp:${(g-GOALS[0])/(GOALS[GOALS.length-1]-GOALS[0])}"><input type="range" id="set-g" min="${GOALS[0]}" max="${GOALS[GOALS.length-1]}" step="10" value="${g}" aria-labelledby="set-gl" aria-valuetext="${g} exercices par jour"><div class="tks" aria-hidden="true">${GOALS.map((n,i)=>`<span style="--i:${i/(GOALS.length-1)}"${n===g?' class="on"':''}>${n}</span>`).join('')}</div></div>
@@ -2650,7 +2650,7 @@ function setRender(focusId){
   $('set-save').onclick=()=>{setPanel=setPanel==='save'?'':'save';setRender('set-save')};
   $('set-reset').onclick=()=>{setPanel=setPanel==='reset'?'':'reset';setRender(setPanel?'set-no':'set-reset')};
   if($('set-no'))$('set-no').onclick=()=>{setPanel='';setRender('set-reset')};
-  if($('set-yes'))$('set-yes').onclick=()=>{const keep=st.set;st={sp:{},day:{},m:{},set:keep};fix();save();setPanel='';stats();if(!$('pro').hidden)pro();restart();setRender('set-reset');toast('Progression effacée')};
+  if($('set-yes'))$('set-yes').onclick=()=>{const keep=st.set;st={sp:{},day:{},m:{},set:keep};fix();if(sbU&&sbP)sbRaz=true;save();setPanel='';stats();if(!$('pro').hidden)pro();restart();setRender('set-reset');toast('Progression effacée')};
   if($('set-copy'))$('set-copy').onclick=async()=>{const s=JSON.stringify(st),o=$('set-out');try{await navigator.clipboard.writeText(s);o.innerHTML='<p class="stm ok">Sauvegarde copiée : colle-la dans une note ou un message.</p>'}catch(e){o.innerHTML='<p class="stm">Copie ce texte :</p><textarea readonly aria-label="Texte de la sauvegarde"></textarea>';const t=o.querySelector('textarea');t.value=s;t.focus();t.select()}};
   if($('set-paste'))$('set-paste').onclick=()=>{const o=$('set-out');o.innerHTML='<textarea id="set-in" aria-label="Colle ta sauvegarde ici" placeholder="Colle ta sauvegarde ici"></textarea><p class="stm" id="set-msg" role="status"></p><button class="mini" id="set-go" type="button">Restaurer cette sauvegarde</button>';$('set-in').focus();
     $('set-go').onclick=()=>{const m=$('set-msg'),t=$('set-in').value.trim();let o2;if(!t){m.className='stm ko';m.textContent='Colle d\'abord le texte de ta sauvegarde.';return}
@@ -2880,20 +2880,37 @@ function fusion(a,b){
   for(const k in b.cf||{})r.cf[k]=Math.max(r.cf[k]||0,b.cf[k]||0);
   r.best=Math.max(r.best||0,b.best||0);return r;
 }
-async function sbConnecte(){
-  sbMsg='';sbP=null;sbTab=null;
-  if(sbU){try{sbP=await sbRpc('mon_profil');if(sbP){
-    const dist=await sbRpc('lire_progression');
-    if(dist&&dist.sp){st=fusion(st,dist);fix();try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}stats();if(curTab==='herb')herb()}
-    await sbEnvoi()}}catch(e){sbMsg=sbErr(e);sbP=undefined}}   // undefined : profil inconnu (réseau), à ne pas confondre avec null (pas encore de pseudo)
-  if($('prf').open)ami();
-}
+// Fusion de la progression du compte dans celle de l'appareil ; renvoie true si quelque chose a changé
+function sbFusionne(dist){if(!dist||!dist.sp)return false;const m=fusion(st,dist);if(JSON.stringify(m)===JSON.stringify(st))return false;
+  st=m;fix();try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}stats();return true}
+// Connexion au compte : une seule à la fois pour un même utilisateur (l'ouverture du profil et l'événement
+// de session peuvent la demander en même temps) ; le profil n'est remplacé qu'une fois connu.
+let sbCx=null,sbCxU=null;
+function sbConnecte(){const uid=sbU&&sbU.id||null;if(sbCx&&sbCxU===uid)return sbCx;sbCxU=uid;
+  const run=(async()=>{await null;sbMsg='';sbTab=null;let p=null;
+    if(uid){try{p=await sbRpc('mon_profil');if(p&&sbFusionne(await sbRpc('lire_progression'))&&curTab==='herb')herb()}
+      catch(e){sbMsg=sbErr(e);p=undefined}}   // undefined : profil inconnu (réseau), à ne pas confondre avec null (pas encore de pseudo)
+    if((sbU&&sbU.id||null)!==uid)return;   // l'utilisateur a changé entre-temps : une autre connexion prend le relais
+    sbP=p;if(p)await sbEnvoi();
+    if(sbCx===run)sbCx=null;
+    if($('prf').open)ami();
+    else if(uid&&p===null&&sbRetour){sbRetour=false;openProfil()}   // retour d'un lien reçu par e-mail : choisir son pseudo
+  })();
+  sbCx=run;run.finally(()=>{if(sbCx===run)sbCx=null});return run}
 // Envoi : chiffres du jour + sauvegarde de la progression (quelques secondes après la dernière réponse)
+// Avant d'écrire, on relit la sauvegarde du compte et on la fusionne : ce qu'un autre appareil a appris entre-temps
+// n'est jamais écrasé. Exception : juste après « Réinitialiser » (sbRaz), l'appareil fait foi et vide aussi le compte.
+let sbEnv=null,sbEnc=false,sbRaz=false;
 async function sbEnvoi(){
   clearTimeout(sbT);sbT=null;if(!sb||!sbU||!sbP)return;
-  const b=monBilan();
-  try{await sbRpc('publier',{p_jour:today(),p_exercices:b.ex,p_justes:b.justes,p_nouvelles:b.nouvelles,p_rang:b.rang,p_acquises:b.acquises,p_reussite:b.reussite,p_serie:b.serie});
-    await sbRpc('sauver_progression',{p_donnees:st});sbSync=Date.now();Object.assign(sbP,{rang:b.rang,acquises:b.acquises,reussite:b.reussite,serie:b.serie})}catch(e){}
+  if(sbEnv){sbEnc=true;return sbEnv}
+  sbEnv=(async()=>{try{
+    if(!sbRaz)sbFusionne(await sbRpc('lire_progression'));
+    const b=monBilan(),raz=sbRaz;
+    await sbRpc('publier',{p_jour:today(),p_exercices:b.ex,p_justes:b.justes,p_nouvelles:b.nouvelles,p_rang:b.rang,p_acquises:b.acquises,p_reussite:b.reussite,p_serie:b.serie});
+    await sbRpc('sauver_progression',{p_donnees:st});if(raz)sbRaz=false;sbSync=Date.now();if(sbP)Object.assign(sbP,{rang:b.rang,acquises:b.acquises,reussite:b.reussite,serie:b.serie})}catch(e){}})();
+  try{await sbEnv}finally{sbEnv=null}
+  if(sbEnc){sbEnc=false;return sbEnvoi()}
 }
 function sbDirty(){if(sbU&&sbP){clearTimeout(sbT);sbT=setTimeout(sbEnvoi,4000)}}
 document.addEventListener('visibilitychange',()=>{if(document.hidden&&sbT)sbEnvoi()});
@@ -2909,10 +2926,12 @@ async function ami(){
   if(SB_KEY&&sbSecret(SB_KEY)){el.innerHTML=h+'<div class="card"><h3 class="hh hhi">'+ico('profil')+'Amis</h3><p class="stm ko">La clé collée dans index.html est la clé secrète de Supabase : elle ne doit jamais être dans l\'appli. Remplace-la par la clé publique (« publishable »), puis régénère la clé secrète dans Supabase.</p></div>';return}
   if(!sbOn()){el.innerHTML=h+'<div class="card"><h3 class="hh hhi">'+ico('profil')+'Amis</h3><p class="na">Les comptes et le tableau des amis ne sont pas encore activés sur cette version de l\'appli.</p></div>';return}
   if(!sb){el.innerHTML=h+'<div class="card"><p class="na">Connexion au compte…</p></div>';try{await sbLib();const {data}=await sb.auth.getSession();sbU=data.session&&data.session.user||null;await sbConnecte()}catch(e){sbMsg=sbErr(e);sbLd=null;el.innerHTML=h+`<div class="card"><h3 class="hh">Mon compte</h3><p class="stm ko">${esc(sbMsg)}</p><button class="mini" id="sb-re" type="button">Réessayer</button></div>`;$('sb-re').onclick=()=>{sbMsg='';ami()}}return}
+  if(sbU&&sbCx){el.innerHTML=h+'<div class="card"><p class="na">Connexion au compte…</p></div>';return}
+  if(!sbU&&!sbBusy){let ss=null;try{ss=(await sb.auth.getSession()).data.session}catch(e){}if(ss&&ss.user&&!sbU){sbU=ss.user;el.innerHTML=h+'<div class="card"><p class="na">Connexion au compte…</p></div>';sbConnecte();return}}
   if(!sbU){
     h+=`<div class="card"><h3 class="hh">Mon compte</h3><p class="na">Facultatif : un compte sauvegarde ta progression et te permet de comparer ta journée avec tes amis.</p>
 <form id="sb-f" class="sbf" novalidate><label>E-mail<input id="sb-mail" type="email" autocomplete="email" required value="${esc(sbMail)}"></label><label>Mot de passe<input id="sb-mdp" type="password" autocomplete="current-password" minlength="6"></label>${msg}
-<div class="row"><button class="big" id="sb-in" type="submit">Se connecter</button><button class="mini" id="sb-up" type="button">Créer un compte</button></div>${sbLien()?'<button class="lnkb" id="sb-otp" type="button">Recevoir plutôt un lien de connexion par e-mail</button>':''}</form></div>`;
+<div class="row"><button class="big" id="sb-in" type="submit">Se connecter</button><button class="mini" id="sb-up" type="button">Créer un compte</button></div>${sbLien()?'<button class="lnkb" id="sb-otp" type="button">Mot de passe oublié ? Recevoir un lien de connexion par e-mail</button>':''}</form></div>`;
     el.innerHTML=h;
     // vérifié avant l'envoi : sans e-mail, Supabase croirait à une demande de compte anonyme ; l'adresse tapée est gardée
     const go=async(fn,mdp=true)=>{if(sbBusy)return;sbMsg='';sbOk='';const m=$('sb-mail').value.trim(),p=$('sb-mdp').value;sbMail=m;
@@ -2920,7 +2939,7 @@ async function ami(){
       if(sbMsg){ami();return}
       sbBusy=true;try{await fn(m,p)}catch(e){sbMsg=sbErr(e)}sbBusy=false;if(!sbU||sbMsg||sbOk)ami()};
     $('sb-f').onsubmit=e=>{e.preventDefault();go(async(m,p)=>{const {error}=await sb.auth.signInWithPassword({email:m,password:p});if(error)throw error})};
-    $('sb-up').onclick=()=>go(async(m,p)=>{const {data,error}=await sb.auth.signUp({email:m,password:p,options:sbLien()?{emailRedirectTo:location.origin+location.pathname}:{}});if(error)throw error;if(!data.session)sbOk='Compte créé : confirme ton adresse avec le lien reçu par e-mail (pense à regarder dans les indésirables), puis connecte-toi.'});
+    $('sb-up').onclick=()=>go(async(m,p)=>{const {data,error}=await sb.auth.signUp({email:m,password:p,options:sbLien()?{emailRedirectTo:location.origin+location.pathname}:{}});if(error)throw error;if(data.user&&Array.isArray(data.user.identities)&&!data.user.identities.length)throw new Error('already registered');if(!data.session)sbOk='Compte créé : confirme ton adresse avec le lien reçu par e-mail (pense à regarder dans les indésirables), puis connecte-toi.'});
     if($('sb-otp'))$('sb-otp').onclick=()=>go(async m=>{const {error}=await sb.auth.signInWithOtp({email:m,options:{emailRedirectTo:location.origin+location.pathname}});if(error)throw error;sbOk='Lien envoyé : ouvre-le depuis ta boîte mail sur cet appareil (regarde aussi dans les indésirables).'},false);
     return;
   }
@@ -2945,13 +2964,23 @@ ${amis.length?`<details class="gam"><summary>Gérer mes amis (${amis.length})</s
   $('sb-af').onsubmit=async e=>{e.preventDefault();sbMsg='';sbOk='';try{const x=await sbRpc('ajouter_ami',{p_code:$('sb-ac').value});if(x.erreur)throw new Error(x.erreur);sbOk=x.pseudo+' fait maintenant partie de tes amis.';sbTab=null}catch(x){sbMsg=sbErr(x)}ami()};
   el.querySelectorAll('[data-rm]').forEach(bt=>bt.onclick=async()=>{if(!confirm('Retirer '+bt.dataset.rm+' de tes amis ?'))return;try{await sbRpc('retirer_ami',{p_pseudo:bt.dataset.rm})}catch(e){sbMsg=sbErr(e)}sbTab=null;ami()});
   $('sb-out').onclick=sbSortie;
-  $('sb-del').onclick=async()=>{if(!confirm('Supprimer ton compte, ton pseudo et ta sauvegarde en ligne ? Ta progression reste sur cet appareil.'))return;try{await sbRpc('supprimer_compte');await sb.auth.signOut({scope:'local'})}catch(e){sbMsg=sbErr(e)}sbU=null;sbP=null;ami()};
+  $('sb-del').onclick=async()=>{if(!confirm('Supprimer ton compte, ton pseudo et ta sauvegarde en ligne ? Ta progression reste sur cet appareil.'))return;
+    clearTimeout(sbT);sbT=null;try{await sbRpc('supprimer_compte')}catch(e){sbMsg=sbErr(e);ami();return}
+    try{await sb.auth.signOut({scope:'local'})}catch(e){}sbVide();sbOk='Compte supprimé. Ta progression reste sur cet appareil.';ami()};
   sbMsg='';sbOk='';
 }
-async function sbSortie(){if(sbT)await sbEnvoi();try{await sb.auth.signOut()}catch(e){}sbU=null;sbP=null;sbTab=null;sbMsg='';sbOk='';ami()}
+function sbVide(){clearTimeout(sbT);sbT=null;sbU=null;sbP=null;sbTab=null;sbSync=0;sbRaz=false;sbMsg='';sbOk=''}
+// Déconnexion de cet appareil seulement (les autres appareils restent connectés) ; la progression reste sur l'appareil
+async function sbSortie(){if(sbT)await sbEnvoi();try{await sb.auth.signOut({scope:'local'})}catch(e){}sbVide();ami()}
 // Au démarrage : seulement si une session est enregistrée ou si l'on revient d'un lien de connexion
+var sbRetour=false;
 if(sbOn()){let ses=false;try{ses=!!localStorage.getItem('qp.sb')}catch(e){}
-  if(ses||/access_token=|[?&]code=/.test(location.hash+location.search))(window.requestIdleCallback||setTimeout)(()=>sbLib().then(async()=>{const {data}=await sb.auth.getSession();sbU=data.session&&data.session.user||null;await sbConnecte()}).catch(()=>{}))}
+  sbRetour=/access_token=|[?&]code=/.test(location.hash+location.search);
+  // lien expiré ou déjà utilisé : Supabase revient avec #error=… ; on l'explique dans le profil et on nettoie l'adresse
+  const er=new URLSearchParams((location.hash||'').slice(1)+'&'+(location.search||'').slice(1));
+  if(er.get('error')||er.get('error_code')){sbMsg=/expired|invalid/i.test(er.get('error_code')+' '+er.get('error_description'))?'Ce lien a expiré ou a déjà servi. Connecte-toi avec ton mot de passe, ou demande un nouveau lien.':'La connexion par le lien n\'a pas abouti. Réessaie depuis le profil.';
+    try{history.replaceState(null,'',location.pathname)}catch(e){}setTimeout(()=>openProfil(),300)}
+  if(ses||sbRetour)(window.requestIdleCallback?f=>requestIdleCallback(f,{timeout:1500}):setTimeout)(()=>sbLib().then(async()=>{const {data}=await sb.auth.getSession();sbU=data.session&&data.session.user||null;await sbConnecte()}).catch(()=>{}))}
 let SHS=(()=>{try{return localStorage.getItem('qp.shs')||'mid'}catch(e){return'mid'}})();
 const shS=()=>{const s=$('sh');return s.classList.contains('full')?'full':s.classList.contains('peek')?'peek':'mid'};
 const hsUpd=()=>{const on=!$('sh').hidden&&!$('sh').classList.contains('off');document.body.classList.toggle('sho',on);document.body.classList.toggle('hs',on&&shS()!=='peek');try{veilSoon()}catch(e){}};
