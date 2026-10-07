@@ -818,7 +818,7 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
 @media (orientation:landscape) and (max-height:520px){#qc.ty{grid-template-areas:"pic opts" "pic q"}#qc.ty #opts{margin-top:0}}
 
 /* ===== Étape 7 : ordinateur (≥ 900 px) et clavier ===== */
-@media (min-width:900px){
+@media (min-width:900px),(min-width:760px) and (pointer:fine){
   main{max-width:min(1440px,calc(100vw - 64px))}
   /* 7.1 / 7.2 : photo à gauche (≤ 50 % de la hauteur), question et réponses à droite */
   #qc{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(300px,1fr);grid-template-areas:"pic q" "pic opts" "pic fb";grid-template-rows:auto auto 1fr;gap:0 24px;align-content:start;min-height:0}
@@ -842,6 +842,51 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
   /* Herbier et Progrès : largeur de lecture confortable */
   #herb,#pro{max-width:900px;margin:0 auto}
 }
+/* ===== Lot 2, étape D : version ordinateur (souris, à partir de 760 px) ===== */
+@media (min-width:760px) and (pointer:fine){
+  /* colonne commune de 1 120 px au plus : en-tête, menus et onglets alignés */
+  main{max-width:min(1120px,calc(100vw - 64px))}
+  .rank{margin-left:0;margin-right:0;border:1px solid var(--bd);border-top:0;border-radius:0 0 20px 20px}
+  #herb,#pro{max-width:none}
+  /* QCM et saisie : question en titre, réponses plus hautes, le tout centré face à la photo */
+  #qc{grid-template-rows:minmax(0,1fr) auto auto auto minmax(0,1fr);grid-template-areas:"pic ." "pic q" "pic opts" "pic fb" "pic .";align-content:stretch;gap:0 28px}
+  #qc.ty{grid-template-areas:"pic ." "pic opts" "pic q" "pic fb" "pic ."}
+  #qc.ty{grid-template-columns:minmax(0,1.3fr) minmax(340px,1fr)}
+  #qc.ty #opts{min-height:0}
+  #qc:has(#opts.ph){grid-template-rows:auto auto auto}
+  #q:not(.pv){margin:0 0 14px;font:700 1.45rem/1.25 Georgia,serif;color:var(--fg)}
+  #opts:not(.ph)>button{min-height:clamp(50px,7vh,60px);font-size:1.1rem}
+  #qc .pic{height:clamp(300px,50vh,600px);align-self:center}
+  #qc.typing .pic{height:clamp(300px,50vh,600px)}
+  @supports (height:100svh){#qc .pic,#qc.typing .pic{height:clamp(300px,50svh,600px)}}
+  /* Herbier : grandes vignettes */
+  .pkg{grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:8px}
+  .pk b{font-size:.8rem}
+  /* Réglages : fenêtre centrée au lieu d'un volet qui monte du bas */
+  dialog.bs{inset:0;margin:auto;width:min(560px,92vw);max-height:min(86vh,760px);border-bottom:1px solid var(--bd);border-radius:22px}
+  dialog.bs .bsg{display:none}
+  dialog.bs[open]{animation:dpop .22s ease-out}
+  /* Famille du jour : carte centrée de taille bornée */
+  #fam{inset:0;margin:auto;width:min(600px,92vw);height:min(780px,90vh);padding:0}
+  #fam .fdx{top:14px;right:14px}
+  #fam .fdots{top:24px}
+}
+@media (min-width:1200px) and (pointer:fine){
+  /* Herbier : catégories sur 2 colonnes, recherche sur toute la largeur */
+  #herb{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:start}
+  #herb>.card{margin:0}
+  #herb>.card:first-child{grid-column:1/-1}
+  /* Progrès : 2 colonnes, Régularité à droite sur deux rangées */
+  #pro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:14px;align-items:start}
+  #pro>.card{margin:0}
+  #pro>.card:nth-child(2){grid-column:2;grid-row:1/span 2}
+  #pro>.lnk{grid-column:1/-1}
+}
+@keyframes dpop{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){dialog.bs[open]{animation:none}}
+/* Tablette en portrait : la photo peut occuper jusqu'à la moitié de l'écran (plus de trou sous la photo) */
+@media (min-width:600px){:root{--picH:clamp(150px,calc(var(--fh) - 2*var(--cp) - var(--qH) - var(--optsH) - 8px),50vh)}}
+@supports (height:100svh){@media (min-width:600px){:root{--picH:clamp(150px,calc(var(--fh) - 2*var(--cp) - var(--qH) - var(--optsH) - 8px),50svh)}}}
 /* 7.5 : focus visible partout */
 .pk[data-l]:focus-visible,.lr:focus-visible,.gal img:focus-visible,.car:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
 .opts>button:focus-visible,#shn:focus-visible,.more:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
@@ -2241,7 +2286,7 @@ async function next(){
   if(wasTrain&&!curTrain){toast('Entraînement terminé');famFocus=null}wasTrain=curTrain;if(curTrain)trN=Math.min(trN+1,trTot);trUI();
   if(pvSet){
     $('pic').hidden=true;$('q').className='pv';$('opts').className='opts ph';
-    $('q').innerHTML='Quelle photo montre <span class="pvn">'+esc(cur[0])+'</span> ?';
+    $('q').innerHTML='Quelle photo montre <span class="pvn">'+esc(cur[0])+'&nbsp;?</span>';
     pvSet.forEach((o,i)=>{const b=document.createElement('button'),im=new Image();b.dataset.l=o[0];b.dataset.n=i+1;b.setAttribute('aria-label','Photo '+(i+1));b.setAttribute('aria-keyshortcuts',String(i+1));
       im.referrerPolicy='no-referrer';im.alt='';im.src=cache[o[0]].src;b.append(im);
       const c=document.createElement('span');c.className='cap';c.textContent=o[0];b.append(c);

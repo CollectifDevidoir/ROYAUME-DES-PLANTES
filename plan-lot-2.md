@@ -205,6 +205,48 @@ Non-régression : recette 133/133 et tous les contrôles existants OK. Captures 
 
 **Poids.** `index.html` passe de 775 Ko à 790 Ko (+1,9 %), sans effet sur la fluidité.
 
+## Page d'ouverture — FAITE
+
+Même langage que le fond d'accueil, sur les trois plans de la parallaxe d'entrée :
+- au loin, une lisière de houppiers ronds et de sapins ;
+- au milieu, des troncs effilés sous une canopée feuillue à deux épaisseurs ;
+- devant, de grands troncs évasés au pied et des frondes de fougère.
+
+Le dessin passe d'un cadre portrait (400×800, agrandi environ 3,6 fois sur ordinateur, d'où des formes géantes) à un cadre large ancré en bas (1200×800). Sur téléphone, la bande centrale garde le cadrage d'avant : deux troncs encadrent le titre et les fougères sont au pied du bouton. L'animation d'entrée ne change pas. Aperçu : `maquettes/p-ouverture.png` (avant en haut, après en bas).
+
+## Étape D — point 7 — FAITE
+
+Règles réservées à l'ordinateur (souris, à partir de 760 px de large). Le téléphone et la tablette tactile ne changent pas, à deux corrections communes près, voulues (voir plus bas).
+
+| Constat | Correction |
+|---|---|
+| 1. Largeurs incohérentes | Colonne commune de 1 120 px au plus. L'en-tête s'aligne sur les cartes, avec des coins arrondis en bas. |
+| 3. QCM collé en haut | Question en titre (Georgia 1,45 rem). Réponses plus hautes (50 à 60 px selon la hauteur d'écran). Photo (toujours 50 % de la hauteur au plus, règle de l'étape 7) et bloc question-réponses centrés l'un face à l'autre (0 px d'écart). |
+| 4. Saisie seule en haut | Champ centré face à la photo (2 px d'écart). La colonne fait au moins 340 px, pour que le champ ne soit pas tronqué. |
+| 5. « ? » orphelin | Le « ? » reste collé au nom de la plante, aussi sur téléphone. |
+| 6. Herbier | Vignettes de 104 px au moins (environ 120 px), catégories sur 2 colonnes dès 1 200 px, recherche sur toute la largeur. |
+| 7. Progrès | 2 colonnes dès 1 200 px : Aujourd'hui et À revoir à gauche, Régularité à droite, Réglages en bas sur toute la largeur. |
+| 8. Volets | Réglages : fenêtre centrée de 560 px qui apparaît en fondu. Famille du jour : carte centrée de 600 × 780 px au plus. L'Aide était déjà une fenêtre centrée. |
+| 9. Fenêtre 860×900 | Elle reçoit la mise en page ordinateur (photo à gauche, réponses à droite) : plus de trou sous la photo, et les réponses ne passent plus sous la barre d'onglets. |
+
+**Corrections communes, voulues.**
+- Tablette en portrait : la photo peut prendre jusqu'à 50 % de la hauteur, contre 38 % avant. Cela supprime le trou sous la photo, aussi visible en 768×1024.
+- Le « ? » des 4 photos (point 5).
+
+**Contrôle.** `outils/controle_ordinateur.js`, sur 4 formats (860×900, 1280×650, 1440×900, 1920×1080), vérifie :
+- la largeur de la colonne et l'alignement de l'en-tête ;
+- le centrage du QCM et de la saisie face à la photo, la hauteur des réponses et l'absence de recouvrement par la barre d'onglets ;
+- le « ? » sur la ligne du nom ;
+- le nombre de colonnes de l'Herbier et de Progrès, et la taille des vignettes ;
+- le centrage et la taille des fenêtres ;
+- l'absence de défilement horizontal et d'erreur JavaScript.
+
+Il vérifie aussi que le téléphone garde le volet Réglages en bas d'écran et l'en-tête de bord à bord.
+
+**Non-régression visuelle.** J'ai comparé au pixel près les captures avant et après, sur les 7 tailles de la recette. Sur téléphone (360 à 412 px), seul l'écran 4 photos change (le « ? »). Réglages et Aide ne diffèrent que par le flou de l'écran situé derrière. En 768×1024, seule la hauteur de photo change.
+
+Aperçus : `maquettes/p-ordi-avant.png` et `maquettes/p-ordi-apres.png` (1440×900 : QCM, saisie, 4 photos, Herbier, Progrès, Réglages).
+
 ## Ordre proposé
 
 | Étape | Contenu | Pourquoi cet ordre |

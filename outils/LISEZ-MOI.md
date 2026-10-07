@@ -22,6 +22,7 @@ Le réseau n'est pas nécessaire : `banc_essai.js` simule iNaturalist et génèr
 | `controle_categories.js [dossier]` | Ligne de tuiles des catégories : une ligne, aucun libellé coupé, tuile active, illustration dans chaque tuile (7 tailles). Variable `F` : autre fichier HTML. |
 | `controle_confusion.js [fichier]` | Mode confusion : duel des deux espèces (photos côte à côte, médaillon centré), puis points à comparer, puis exercice. |
 | `controle_illustrations.js [fichier]` | Illustrations : affichage, aucune ombre portée ni dégradé, au moins une forme contrastée à 3:1 sur son fond réel (clair et sombre, téléphone et ordinateur), rangs variés. |
+| `controle_ordinateur.js [fichier]` | Version ordinateur (souris) : colonne de 1 120 px, QCM et saisie centrés face à la photo, Herbier et Progrès sur 2 colonnes, Réglages et Famille du jour en fenêtres centrées ; le téléphone garde ses volets. |
 | `simulation_memoire.js [jours] [graines]` | Simulation de progression avec le vrai code de l'appli (étape 6). |
 
 Fichiers d'appui : `banc_essai.js` (ouverture de l'appli avec un faux iNaturalist ; option `seed` pour figer le hasard) et `lance_exercice.js` (affiche un exercice d'un type donné).
@@ -31,5 +32,5 @@ Fichiers d'appui : `banc_essai.js` (ouverture de l'appli avec un faux iNaturalis
 | Outil | Rôle |
 |---|---|
 | `cles_vers_appli.py` | Vérifie les clés de `donnees/cles-revues.csv` (3 à 5 clés, 55 caractères au plus, source présente) et régénère la table `Q` de `index.html`. |
-| `illustrations.py [--ecrire] [--json fichier]` | Dessine les illustrations « vignettes ludiques » (icônes, catégories, rangs, décor) et leur CSS. Avec `--ecrire`, les remplace dans `index.html`. |
+| `illustrations.py [--ecrire] [--json fichier]` | Dessine les illustrations « vignettes ludiques » (icônes, catégories, rangs), le décor de fond et la page d'ouverture et leur CSS. Avec `--ecrire`, les remplace dans `index.html`. |
 | `nettoie_css.py [--ecrire]` | Repère les classes CSS que l'appli n'utilise plus et les retire avec `--ecrire`. Sans option, il affiche seulement ce qu'il retirerait. |
