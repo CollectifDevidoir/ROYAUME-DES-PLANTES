@@ -2337,7 +2337,8 @@ function buildCar(s,im,one){
   const car=p.querySelector('.car');let n=0;const seenK=new Set();
   const dots=()=>{const k=car.children.length;p.querySelector('.dots').innerHTML=k>1?Array.from({length:k},(_,j)=>`<i${j===Math.round(car.scrollLeft/car.clientWidth)?' class="on"':''}></i>`).join(''):'';p.classList.toggle('one',k<2)};
   const add=x=>{const kk=pid(x.src);if(seenK.has(kk))return;seenK.add(kk);const f=n===0,d=document.createElement('div'),i=new Image();d.className='sl';i.alt='Photo du végétal à identifier';i.referrerPolicy='no-referrer';i.decoding='async';i.onload=()=>d.classList.add('ld');setTimeout(()=>d.classList.add('ld'),4000);i.src=x.src;if(!f)i.loading='lazy';
-    i.onerror=()=>{if(f&&cur===s&&!done){bad.add(s[0]);next()}else if(!f){d.remove();dots()}};   // photo principale perdue après la réponse : on ne coupe pas la correctiond.append(i);
+    // photo principale perdue après la réponse : on ne coupe pas la correction
+    i.onerror=()=>{if(f&&cur===s&&!done){bad.add(s[0]);next()}else if(!f){d.remove();dots()}};d.append(i);
     if(x.label){const b=document.createElement('span');b.className='lb';b.textContent=x.label;d.append(b)}
     if(x.page&&x.lic){const c=document.createElement('a');c.className='cr';c.href=x.page;c.target='_blank';c.rel='noopener';c.textContent='©';c.title=x.lic;d.append(c)}
     car.append(d);n++};
