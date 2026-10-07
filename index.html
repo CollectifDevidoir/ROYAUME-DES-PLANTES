@@ -2786,7 +2786,7 @@ $('next').onclick=next;
 /* ===== Comptes (Supabase) : profil, amis et tableau du jour. Mise en route : supabase/LISEZ-MOI.md ===== */
 // Pour activer les comptes, coller ici l'URL du projet et sa clé « anon » (Supabase > Project Settings > API).
 // La clé « anon » est publique par conception : la sécurité vient des règles de la base (supabase/schema.sql).
-const SB_URL='',SB_KEY='';
+const SB_URL='https://supabase.com/dashboard/project/hcbzkpsxqxhmqcblfsnm/settings/api-keys',SB_KEY='sb_publishable_rtqaluMAanjewYK2bvJ3Xw_zMampeYI';
 const SB_LIB='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.js',SB_SRI='sha384-BWcjm9OdFth9TbhCxZPdm+gAOUMAzQy9nmTs12ioXdCcbVnJaPMn+fMUoQCLt60R';
 var sb=null,sbU=null,sbP=null,sbTab=null,sbT=null,sbLd=null,sbMsg='',sbOk='',sbBusy=false,sbSync=0;
 const sbOn=()=>!!(SB_URL&&SB_KEY);
