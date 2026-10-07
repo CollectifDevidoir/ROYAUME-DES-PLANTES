@@ -107,6 +107,10 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   ok(await att(L.p,()=>!!document.querySelector('#sb-pf'),null,15000),'lien ouvert : connectée, choix du pseudo');
   ok(await L.p.evaluate(()=>!/access_token/.test(location.href)),'le jeton est retiré de la barre d\'adresse');
   await L.p.fill('#sb-ps','Lea');await L.p.click('#sb-pf button');ok(await att(L.p,()=>!!document.querySelector('#sb-code')),'compte créé par le lien : profil et code ami');
+  // e-mail de confirmation d'un nouveau compte : il doit ramener à l'adresse de l'appli (sinon : page 404)
+  await L.p.click('#sb-out');await att(L.p,()=>!!document.querySelector('#sb-f'));
+  await L.p.fill('#sb-mail','zoe@test.fr');await L.p.fill('#sb-mdp','secret789');await L.p.click('#sb-up');await att(L.p,()=>!!document.querySelector('#sb-pf'));
+  ok(jl.some(x=>x.startsWith('/auth/v1/signup')&&new URLSearchParams(x.split('?')[1]).get('redirect_to')===SITE),'création de compte : le lien de confirmation ramène à l\'adresse de l\'appli');
   for(const [n,o] of [['Antoine',A],['Coline',B],['nouvel appareil',C],['adresse corrigée',D],['clé secrète',E],['lien par e-mail',L]])ok(o.p.errs.length===0,n+' : aucune erreur JavaScript '+(o.p.errs.length?JSON.stringify(o.p.errs.slice(0,2)):''));
   ok(await A.p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'390 px : pas de défilement horizontal');
   await b.close();for(const n of ['comptes','tableau','secret'])fs.unlinkSync(path.join(os.tmpdir(),'royaume-'+n+'.html'));
