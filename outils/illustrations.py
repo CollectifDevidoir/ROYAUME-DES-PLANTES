@@ -142,8 +142,10 @@ HINT=svg(shadow(36,60,16,2)+Sdep('M42 42L54.5 54.5','b2','b3',8,0,1.4)+S('M44 44
 # ---------- Catégories ----------
 CI={}
 CI['arbre']=shadow(32,58.5,17,2.6)+trunk(32,57,34,6.2,3.6)+S('M31.5 45L25 38M33.5 42.5L39.5 37','b3',2.4)+crown_blob(32,25,19.5,16,9,'g1','g2','g3',jit=[1,.8,1.1,.9,1,1.2,.8,1,.9])
-# Arbuste : dôme rond posé sur trois tiges courtes, trois baies (lisible à 24 px)
-CI['arbuste']=shadow(32,58.5,19,2.6)+S('M28 57L26.5 49M32 57V48M36 57L37.5 49','b2',2.6)+crown_blob(32,35,21,16,9,'g1','t2','t3',jit=[1,1.1,.9,1,1.15,.9,1,1.05,.9],a0=-90)+''.join(berry(x,y,2.8) for x,y in [(24,37),(38,31),(36,43)])
+# Arbuste : trois touffes rondes serrées au ras du sol, mêmes verts que l'arbre, sans baies ni taches
+CI['arbuste']=(shadow(32,58.5,22,2.6)+S('M27 57L25.5 51M32 57V50M37 57L38.5 51','b2',2.6)
+  +crown_blob(19.5,43,11,10.5,7,'g1','g2','g3',spots=False)+crown_blob(44.5,43,11,10.5,7,'g1','g2','g3',spots=False)
+  +crown_blob(32,35,15,15,8,'g1','g2','g3',jit=[1,1.1,.9,1,1.1,.9,1,1.05]))
 pet=lambda c,cd,cl: F('M0 0C5 -3 6.5 -10.5 0 -15C-6.5 -10.5 -5 -3 0 0Z',cd)+F('M0 -1C3.6 -3.4 4.6 -9.6 0 -13.4C-4.6 -9.6 -3.6 -3.4 0 -1Z',c)
 CI['vivace']=shadow(32,59,9,2)+S('M32 58C31 49 33 41 32 32','g3',3)+leaf(31.5,51,-60,13,5.2,'g2','g3',None)+leaf(32,46,58,12,4.8,'g2','g3',None)+''.join(
   g(pet('p2','p3','p1'),32,22,a) for a in range(0,360,60))+dep(circ(32,22,5),'y2','y3',.6,.8)+F(circ(30.6,20.6,1.6),'y1')
@@ -181,8 +183,8 @@ RI.append(shadow(32,58.5,20,2.6)+S('M28 57L25 46M36 57L39 46M32 57V48','b2',2.8)
 RI.append(shadow(32,58.5,11,2.2)+trunk(32,57,32,3.4,2.1)+S('M32 44L37.5 39','b3',2)+crown_blob(32,22,12.5,15.5,8,'g1','g1','g2',spots=False)+F(ell(28,17,3,5),'c1'))
 RI.append(shadow(32,58.5,18,2.6)+trunk(32,57,36,5.8,3.4)+S('M31 46L25 39M33.5 43L39 38','b3',2.2)+crown_blob(32,25,20.5,17,10,'g1','g2','g3',jit=[1,.9,1.1,1,.8,1.2,1,.9,1,1.1])
   +''.join(berry(x,y,2.8) for x,y in [(22,30),(41,23),(36,33),(27,21)]))
-RI.append(shadow(32,58.5,24,2.8)+trunk(32,57,35,8,4.6)+S('M30 45L19 36M34 43L46 35','b3',2.8)+crown_blob(32,25,26,16,12,'g2','g3','g4',jit=[1,1.2,.8,1,1.1,.9,1,1.2,.9,1,.8,1.1],a0=-95)
-  +''.join(g(dep('M-2.4 0C-2.4 4 -1.2 6.2 0 6.8C1.2 6.2 2.4 4 2.4 0Z','w2','w3',.4,.4)+F('M-3 .5C-3 -2 3 -2 3 .5Z','b2'),x,y) for x,y in [(19,29),(44,31),(33,33)]))
+# Grand chêne : large couronne d'automne (orangé, reflet clair), tronc puissant, sans glands
+RI.append(shadow(32,58.5,24,2.8)+trunk(32,57,35,8,4.6)+S('M30 45L19 36M34 43L46 35','b3',2.8)+crown_blob(32,25,26,16,12,'w1','o2','o3',jit=[1,1.2,.8,1,1.1,.9,1,1.2,.9,1,.8,1.1],a0=-95))
 RI.append(shadow(32,58.5,28,2.6)+trunk(14,57,40,3.6,2.2)+crown_blob(14,31,10,11,8,'y1','y2','y3')+trunk(50,57,40,3.6,2.2)+crown_blob(50,31,10,11,8,'o1','o2','o3')
   +trunk(32,57,35,4.6,2.8)+crown_blob(32,24,13,14,9,'g1','g2','g3'))
 def fir(x,yb,h,w,c,cd):
