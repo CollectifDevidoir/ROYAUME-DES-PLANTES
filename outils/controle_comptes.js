@@ -26,8 +26,14 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   ok(!A.j.length,'au démarrage sans session : aucune requête vers Supabase');
   await lance(A.p,'mcq');await A.p.click('#opts button');await A.p.waitForTimeout(500);await A.p.click('#shn');await A.p.waitForTimeout(400);
   await A.p.click('.tabs button[data-t=ami]');ok(await att(A.p,()=>!!document.querySelector('#sb-f')),'onglet Profil : formulaire de connexion');await T(A.p,'1-connexion');
-  await A.p.fill('#sb-mail','antoine@test.fr');await A.p.fill('#sb-mdp','mauvais');await A.p.click('#sb-in');
+  // formulaire incomplet : rien n'est envoyé (sans e-mail, Supabase répondait « Anonymous sign-ins are disabled »)
+  const n0=A.j.length;await A.p.click('#sb-up');ok(await att(A.p,()=>/Indique ton adresse e-mail/.test($('ami').innerText)),'« Créer un compte » sans e-mail : « Indique ton adresse e-mail »');
+  await A.p.fill('#sb-mail','antoine@test');await A.p.click('#sb-up');ok(await att(A.p,()=>/Adresse e-mail invalide/.test($('ami').innerText)),'adresse incomplète : « Adresse e-mail invalide »');
+  await A.p.fill('#sb-mail','antoine@test.fr');await A.p.fill('#sb-mdp','12345');await A.p.click('#sb-up');ok(await att(A.p,()=>/6 caractères/.test($('ami').innerText)),'mot de passe trop court : message clair');
+  ok(A.j.length===n0,'formulaire incomplet : aucune requête envoyée à Supabase');
+  await A.p.fill('#sb-mdp','mauvais');await A.p.click('#sb-in');
   ok(await att(A.p,()=>/incorrect/.test($('ami').innerText)),'mauvais identifiants : « E-mail ou mot de passe incorrect »');
+  ok(await A.p.evaluate(()=>$('sb-mail').value==='antoine@test.fr'),'après une erreur, l\'adresse tapée reste dans la case');
   await A.p.fill('#sb-mail','antoine@test.fr');await A.p.fill('#sb-mdp','secret123');await A.p.click('#sb-up');
   ok(await att(A.p,()=>!!document.querySelector('#sb-pf')),'compte créé : choix du pseudo');await T(A.p,'2-pseudo');
   await A.p.fill('#sb-ps','Antoine');await A.p.click('#sb-pf button');
