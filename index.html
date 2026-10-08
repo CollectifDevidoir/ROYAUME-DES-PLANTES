@@ -868,6 +868,8 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
   /* colonne commune de 1 120 px au plus : en-tête, menus et onglets alignés */
   main{max-width:min(1120px,calc(100vw - 64px))}
   .rank{margin-left:0;margin-right:0;border:1px solid var(--bd);border-top:0;border-radius:0 0 20px 20px}
+  /* en-tête arrondi : pas de fondu rectangulaire dessous (il dépassait des coins en bande blanche) */
+  body:not(.nostick) .rank::after{display:none}
   #herb,#pro{max-width:none}
   /* QCM et saisie : question en titre, réponses plus hautes, le tout centré face à la photo */
   #qc{grid-template-rows:minmax(0,1fr) auto auto auto minmax(0,1fr);grid-template-areas:"pic ." "pic q" "pic opts" "pic fb" "pic .";align-content:stretch;gap:0 28px}
@@ -2641,7 +2643,7 @@ function stats(){
 }
 function herbSearch(){
   $('herb').insertAdjacentHTML('afterbegin','<div class="card"><input id="herb-search" type="search" placeholder="Chercher une plante : nom latin ou commun" autocomplete="off" aria-label="Chercher une plante"><div id="herb-results"></div></div>');
-  $('herb-search').oninput=()=>{const q=norm($('herb-search').value);$('herb-results').innerHTML=q.length<2?'':(S.filter(s=>norm(s[0]).includes(q)||norm(s[1]).includes(q)).slice(0,10).map(s=>`<button class="sr" data-sp="${s[0]}"><em>${s[0]}</em><span>${s[1]}</span></button>`).join('')||'<p class="na">Aucun résultat.</p>')};
+  $('herb-search').oninput=()=>{const q=norm($('herb-search').value);$('herb-results').innerHTML=q.length<2?'':(S.filter(s=>norm(s[0]).includes(q)||norm(s[1]).includes(q)).slice(0,10).map(s=>`<button class="sr" data-sp="${s[0]}"><em>${s[0]}</em><span>${s[1]}</span></button>`).join('')||'<p class="na">Aucune plante de ce nom dans l\'herbier.</p>')};
 }
 function herb(){
   const thumb=l=>{const a=cache[l];return a&&a.src||(IC[l]&&IC[l].imgs&&IC[l].imgs[0]&&IC[l].imgs[0].src)||''};
@@ -2665,7 +2667,7 @@ function pro(){
   $('pro').innerHTML=
    `<div class="card"><h3 class="hh">Aujourd'hui</h3><p class="big2"><b>${hT.n}</b> / ${goal()} exercices</p><span class="bar"><i style="width:${Math.min(100,100*hT.n/goal())}%"></i></span>${errs.length?`<button class="big" id="pro-errs"><span class="tgi">${TARGET}</span>Rejouer mes erreurs du jour (${errs.length})</button>`:''}</div>`+
    `<div class="card rgl"><h3 class="hh">Régularité<small>14 derniers jours</small></h3><div class="kp"><div><b>${bl.reussite} %</b><span>réussite</span></div><div><b><span class="tgi">${ICO.flamme}</span>${bl.serie}</b><span>jour${bl.serie>1?'s':''} de suite</span></div><div title="Plus longue suite de bonnes réponses"><b>${st.best}</b><span>série record</span></div></div><div class="hist" style="--gl:${Math.min(100,goal()*100/mxd)}%">${days.map(x=>`<button type="button" class="hb" data-d="${x.d}" aria-pressed="false" aria-label="${x.d} : ${x.n} exercices"><i style="height:${Math.min(100,x.n*100/mxd)}%;background:${x.n?`hsl(${Math.round(x.r*1.25)},72%,${x.r<50?'46%':'40%'})`:'#d9e0d3'};opacity:${x.n?1:.3}"></i></button>`).join('')}<span class="hgl" aria-hidden="true"><small>objectif ${goal()}</small></span></div><div class="hdl" aria-hidden="true">${days.map((x,i)=>`<span${i===13?' class="tdy"':''}>${'DLMMJVS'[new Date(x.d+'T12:00:00').getDay()]}</span>`).join('')}</div><p class="hd" id="herb-detail"></p></div>`+
-   `<div class="card"><h3 class="hh">À revoir</h3>${wk.length?wk.slice(0,5).map(row).join('')+(wk.length>5?`<p class="na">+ ${wk.length-5} autres dans ta liste</p>`:'')+'<button class="big" id="pro-review">S\'entraîner sur ces plantes</button>':'<p class="na">Rien à revoir pour l\'instant, continue !</p>'}</div>`+
+   `<div class="card"><h3 class="hh">À revoir</h3>${wk.length?wk.slice(0,5).map(row).join('')+(wk.length>5?`<p class="na">+ ${wk.length-5} autres dans ta liste</p>`:'')+'<button class="big" id="pro-review">S\'entraîner sur ces plantes</button>':'<p class="na">Rien à revoir pour l\'instant : ton herbier tient bon.</p>'}</div>`+
    (cf.length?`<div class="card"><h3 class="hh">Confusions</h3>${cf.map(([k,c])=>{const [a,b]=k.split('|');return `<div class="cfr"><span><em>${a}</em> ${ico('swap','ic-in')} <em>${b}</em> <small>${Math.round(c)}×</small></span><button data-k="${k}">S'entraîner</button></div>`}).join('')}</div>`:'')+
    `<div class="pl2"><div class="card lnk"><button class="lk" id="pro-prf" type="button"><span class="tgi">${rIcon(rk())}</span>Profil &amp; Amis${ico('chev-r','lkc')}</button></div><div class="card lnk"><button class="lk" id="pro-set" type="button">${ico('reglages')}Réglages${ico('chev-r','lkc')}</button></div></div>`;
   const sel=d=>{const x=days.find(y=>y.d===d);document.querySelectorAll('.hb').forEach(b=>b.setAttribute('aria-pressed',b.dataset.d===d));$('herb-detail').innerHTML='<b>'+(d===today()?"Aujourd'hui":new Date(d+'T12:00:00').toLocaleDateString('fr-FR',{weekday:'short',day:'numeric',month:'short'}))+'</b> · '+(x.n?x.n+' exercice'+(x.n>1?'s':'')+' · '+x.r+' % de réussite':'aucun exercice')};
