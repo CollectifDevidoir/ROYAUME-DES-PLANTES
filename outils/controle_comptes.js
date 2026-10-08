@@ -26,15 +26,19 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   ok(!A.j.length,'au démarrage sans session : aucune requête vers Supabase');
   await lance(A.p,'mcq');await A.p.click('#opts button');await A.p.waitForTimeout(500);await A.p.click('#shn');await A.p.waitForTimeout(400);
   await A.p.click('#medal');ok(await att(A.p,()=>!!document.querySelector('#sb-f')),'profil (logo de rang) : formulaire de connexion');await T(A.p,'1-connexion');
+  ok(await A.p.evaluate(()=>$('sb-tup').getAttribute('aria-selected')==='true'&&$('sb-go').textContent==='Créer mon compte'),'nouveau venu : onglet « Créer un compte » choisi, bouton « Créer mon compte »');
+  await A.p.fill('#sb-mail','essai@test.fr');await A.p.click('#sb-tin');
+  ok(await A.p.evaluate(()=>$('sb-go').textContent==='Se connecter'&&$('sb-mail').value==='essai@test.fr'&&$('sb-mdp').autocomplete==='current-password'),'« J\'ai déjà un compte » : bouton « Se connecter », l\'adresse tapée reste');
+  await A.p.fill('#sb-mail','');
   // formulaire incomplet : rien n'est envoyé (sans e-mail, Supabase répondait « Anonymous sign-ins are disabled »)
-  const n0=A.j.length;await A.p.click('#sb-up');ok(await att(A.p,()=>/Indique ton adresse e-mail/.test($('ami').innerText)),'« Créer un compte » sans e-mail : « Indique ton adresse e-mail »');
-  await A.p.fill('#sb-mail','antoine@test');await A.p.click('#sb-up');ok(await att(A.p,()=>/Adresse e-mail invalide/.test($('ami').innerText)),'adresse incomplète : « Adresse e-mail invalide »');
-  await A.p.fill('#sb-mail','antoine@test.fr');await A.p.fill('#sb-mdp','12345');await A.p.click('#sb-up');ok(await att(A.p,()=>/6 caractères/.test($('ami').innerText)),'mot de passe trop court : message clair');
+  const n0=A.j.length;await A.p.click('#sb-tup');await A.p.click('#sb-go');ok(await att(A.p,()=>/Indique ton adresse e-mail/.test($('ami').innerText)),'« Créer un compte » sans e-mail : « Indique ton adresse e-mail »');
+  await A.p.fill('#sb-mail','antoine@test');await A.p.click('#sb-tup');await A.p.click('#sb-go');ok(await att(A.p,()=>/Adresse e-mail invalide/.test($('ami').innerText)),'adresse incomplète : « Adresse e-mail invalide »');
+  await A.p.fill('#sb-mail','antoine@test.fr');await A.p.fill('#sb-mdp','12345');await A.p.click('#sb-tup');await A.p.click('#sb-go');ok(await att(A.p,()=>/6 caractères/.test($('ami').innerText)),'mot de passe trop court : message clair');
   ok(A.j.length===n0,'formulaire incomplet : aucune requête envoyée à Supabase');
-  await A.p.fill('#sb-mdp','mauvais');await A.p.click('#sb-in');
+  await A.p.fill('#sb-mdp','mauvais');await A.p.click('#sb-tin');await A.p.click('#sb-go');
   ok(await att(A.p,()=>/incorrect/.test($('ami').innerText)),'mauvais identifiants : « E-mail ou mot de passe incorrect »');
   ok(await A.p.evaluate(()=>$('sb-mail').value==='antoine@test.fr'),'après une erreur, l\'adresse tapée reste dans la case');
-  await A.p.fill('#sb-mail','antoine@test.fr');await A.p.fill('#sb-mdp','secret123');await A.p.click('#sb-up');
+  await A.p.fill('#sb-mail','antoine@test.fr');await A.p.fill('#sb-mdp','secret123');await A.p.click('#sb-tup');await A.p.click('#sb-go');
   ok(await att(A.p,()=>!!document.querySelector('#sb-pf')),'compte créé : choix du pseudo');await T(A.p,'2-pseudo');
   await A.p.fill('#sb-ps','Antoine');await A.p.click('#sb-pf button');
   ok(await att(A.p,()=>/RPL-[A-Z0-9]{5}/.test($('ami').innerText)),'profil créé avec un code ami');
@@ -45,7 +49,7 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   // ---- Coline : second appareil
   const B=await appareil();for(let i=0;i<2;i++){await lance(B.p,'mcq');await B.p.click('#opts button');await B.p.waitForTimeout(400);await B.p.click('#shn');await B.p.waitForTimeout(400)}
   await B.p.click('#medal');await att(B.p,()=>!!document.querySelector('#sb-f'));
-  await B.p.fill('#sb-mail','coline@test.fr');await B.p.fill('#sb-mdp','secret456');await B.p.click('#sb-up');await att(B.p,()=>!!document.querySelector('#sb-pf'));
+  await B.p.fill('#sb-mail','coline@test.fr');await B.p.fill('#sb-mdp','secret456');await B.p.click('#sb-tup');await B.p.click('#sb-go');await att(B.p,()=>!!document.querySelector('#sb-pf'));
   await B.p.fill('#sb-ps','Antoine');await B.p.click('#sb-pf button');ok(await att(B.p,()=>/déjà pris/.test($('ami').innerText)),'pseudo déjà pris : message clair');
   await B.p.fill('#sb-ps','Coline');await B.p.click('#sb-pf button');await att(B.p,()=>!!document.querySelector('#sb-af'));
   const codeB=await B.p.evaluate(()=>$('sb-code').textContent);
@@ -61,7 +65,7 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   // ---- Antoine sur un nouvel appareil : sa progression revient
   const kA=await A.p.evaluate(()=>Object.keys(st.sp).length);
   const C=await appareil(1440,900);await C.p.click('#medal');await att(C.p,()=>!!document.querySelector('#sb-f'));
-  await C.p.fill('#sb-mail','antoine@test.fr');await C.p.fill('#sb-mdp','secret123');await C.p.click('#sb-in');
+  await C.p.fill('#sb-mail','antoine@test.fr');await C.p.fill('#sb-mdp','secret123');await C.p.click('#sb-tin');await C.p.click('#sb-go');
   ok(await att(C.p,()=>!!document.querySelector('#sb-code')),'connexion sur un nouvel appareil');
   ok(await C.p.evaluate(k=>Object.keys(st.sp).length===k&&(st.hist[today()]||{}).n===1,kA),'nouvel appareil : la progression du compte est reprise ('+kA+' plante(s), 1 exercice)');await T(C.p,'4-ordinateur');
   // la session est gardée : rechargement
@@ -83,7 +87,7 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   const versTdb=[];D.p.on('request',q=>{if(q.url().startsWith('https://supabase.com/'))versTdb.push(q.url())});
   ok(await D.p.evaluate(u=>SBU===u,URL_D),'adresse du tableau de bord corrigée en '+URL_D);
   await D.p.click('#medal');await att(D.p,()=>!!document.querySelector('#sb-f'));
-  await D.p.fill('#sb-mail','antoine@test.fr');await D.p.fill('#sb-mdp','secret123');await D.p.click('#sb-in');
+  await D.p.fill('#sb-mail','antoine@test.fr');await D.p.fill('#sb-mdp','secret123');await D.p.click('#sb-tin');await D.p.click('#sb-go');
   ok(await att(D.p,()=>!!document.querySelector('#sb-code'))&&D.j.length>0&&!versTdb.length,'adresse corrigée : connexion réussie, aucune requête vers supabase.com');
   // ---- clé secrète collée par erreur : refusée, rien n'est chargé ni envoyé
   const E=await appareil(390,844,copie('secret',URL_SB,'sb_secret_abc123'));
@@ -102,7 +106,7 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   const ouvre=async u=>{await L.p.goto(u);await L.p.waitForTimeout(400);await L.p.evaluate(()=>{const s=$('splash');if(s)s.click()});await L.p.waitForTimeout(1700)};
   await ouvre(SITE);await L.p.click('#medal');
   ok(await att(L.p,()=>!!document.querySelector('#sb-otp')),'appli en ligne (https) : bouton « lien par e-mail » proposé');
-  await L.p.fill('#sb-mail','lea@test.fr');await L.p.click('#sb-otp');
+  await L.p.fill('#sb-mail','lea@test.fr');await L.p.click('#sb-tin');ok(await L.p.isVisible('#sb-otp'),'« J\'ai déjà un compte » : lien « Mot de passe oublié ? » visible');await L.p.click('#sb-otp');
   ok(await att(L.p,()=>/Lien envoyé/.test($('ami').innerText))&&jl.includes('lien:lea@test.fr')&&(jl.lien||'').startsWith(SITE+'#'),'lien demandé : « Lien envoyé », il renvoie vers l\'adresse de l\'appli');
   await L.p.goto('about:blank');await ouvre(jl.lien);
   ok(await att(L.p,()=>$('prf').open&&!!document.querySelector('#sb-pf'),null,15000),'lien ouvert : connectée, le profil s\'ouvre seul sur le choix du pseudo');
@@ -110,11 +114,11 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   await L.p.fill('#sb-ps','Lea');await L.p.click('#sb-pf button');ok(await att(L.p,()=>!!document.querySelector('#sb-code')),'compte créé par le lien : profil et code ami');
   // e-mail de confirmation d'un nouveau compte : il doit ramener à l'adresse de l'appli (sinon : page 404)
   await L.p.click('#sb-out');await att(L.p,()=>!!document.querySelector('#sb-f'));
-  await L.p.fill('#sb-mail','zoe@test.fr');await L.p.fill('#sb-mdp','secret789');await L.p.click('#sb-up');await att(L.p,()=>!!document.querySelector('#sb-pf'));
+  await L.p.fill('#sb-mail','zoe@test.fr');await L.p.fill('#sb-mdp','secret789');await L.p.click('#sb-tup');await L.p.click('#sb-go');await att(L.p,()=>!!document.querySelector('#sb-pf'));
   ok(jl.some(x=>x.startsWith('/auth/v1/signup')&&new URLSearchParams(x.split('?')[1]).get('redirect_to')===SITE),'création de compte : le lien de confirmation ramène à l\'adresse de l\'appli');
   // ---- même compte sur deux appareils : chacun apprend de son côté, rien n'est écrasé ; un 3e appareil retrouve tout
   const cnx=async(o,m,mdp,ps)=>{await o.p.click('#medal');await att(o.p,()=>!!document.querySelector('#sb-f'));await o.p.fill('#sb-mail',m);await o.p.fill('#sb-mdp',mdp);
-    await o.p.click(ps?'#sb-up':'#sb-in');if(ps){await att(o.p,()=>!!document.querySelector('#sb-pf'));await o.p.fill('#sb-ps',ps);await o.p.click('#sb-pf button')}
+    await o.p.click(ps?'#sb-tup':'#sb-tin');await o.p.click('#sb-go');if(ps){await att(o.p,()=>!!document.querySelector('#sb-pf'));await o.p.fill('#sb-ps',ps);await o.p.click('#sb-pf button')}
     return att(o.p,()=>!!document.querySelector('#sb-code'),null,15000)};
   const P1=await appareil(),P2=await appareil();
   // P1 a commencé sans compte : 3 plantes acquises, puis il crée son compte
