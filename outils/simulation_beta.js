@@ -12,6 +12,7 @@ const W=+process.argv[2]||360,H=+process.argv[3]||640;
   let rates=0,justes=0,fiches=0,suivant=0,photos=0;
   for(let i=0;i<10;i++){
     if(!(await prete())){ok(false,`plante ${i+1} : pas d'exercice prêt`);break}
+    await p.waitForFunction(()=>pvSet?[...document.querySelectorAll('#opts img')].every(i=>i.complete):(()=>{const i=document.querySelector('#pic .sl img');return i&&i.complete})(),null,{timeout:8000}).catch(()=>{});   // le temps que la photo arrive
     const vu=await p.evaluate(()=>{if(pvSet)return [...document.querySelectorAll('#opts img')].every(i=>i.complete&&i.naturalWidth>0);const i=document.querySelector('#pic .sl img');return !!i&&i.complete&&i.naturalWidth>0&&i.getBoundingClientRect().height>100});
     if(vu)photos++;
     // il se trompe une fois sur deux ; en saisie, il ne connaît pas le nom et valide le champ vide ; « quelle photo ? » : même principe
