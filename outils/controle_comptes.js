@@ -62,6 +62,15 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   ok(await B.p.evaluate(()=>document.querySelector('.tbm tr.moi td').innerText.trim()==='Coline'),'ma ligne est mise en avant');await T(B.p,'3-tableau');
   // ---- Antoine voit Coline après actualisation
   await A.p.click('#sb-maj');ok(await att(A.p,()=>/Coline/.test($('ami').innerText)),'Antoine voit Coline (amitié réciproque)');
+  // ---- Coline change de pseudo : pseudo pris refusé, annuler ne change rien, puis nouveau pseudo visible par son ami
+  await B.p.click('#sb-pe');await B.p.fill('#sb-ps2','antoine');await B.p.click('#sb-pf2 button[type=submit]');
+  ok(await att(B.p,()=>/déjà pris/.test($('ami').innerText)&&!!$('sb-ps2')),'changer de pseudo : pseudo déjà pris (casse ignorée) refusé, le champ reste ouvert');
+  await B.p.click('#sb-pa');ok(await att(B.p,()=>$('sb-pn')&&$('sb-pn').textContent==='Coline'),'changer de pseudo : « Annuler » garde l\'ancien');
+  await B.p.click('#sb-pe');await B.p.fill('#sb-ps2','x');await B.p.click('#sb-pf2 button[type=submit]');ok(await att(B.p,()=>/2 à 20/.test($('ami').innerText)),'changer de pseudo : trop court refusé');
+  await B.p.fill('#sb-ps2','Coline_B');await B.p.click('#sb-pf2 button[type=submit]');
+  ok(await att(B.p,()=>$('sb-pn')&&$('sb-pn').textContent==='Coline_B'&&document.querySelector('.tbm tr.moi td').innerText.trim()==='Coline_B'),'changer de pseudo : nouveau pseudo affiché dans le compte et le tableau');
+  await A.p.click('#sb-maj');ok(await att(A.p,()=>/Coline_B/.test($('ami').innerText)),'l\'ami voit le nouveau pseudo, l\'amitié est gardée');
+  await B.p.click('#sb-pe');await B.p.fill('#sb-ps2','Coline');await B.p.click('#sb-pf2 button[type=submit]');await att(B.p,()=>$('sb-pn')&&$('sb-pn').textContent==='Coline');await A.p.click('#sb-maj');await att(A.p,()=>/Coline\b/.test($('ami').innerText));
   // ---- Antoine sur un nouvel appareil : sa progression revient
   const kA=await A.p.evaluate(()=>Object.keys(st.sp).length);
   const C=await appareil(1440,900);await C.p.click('#medal');await att(C.p,()=>!!document.querySelector('#sb-f'));
