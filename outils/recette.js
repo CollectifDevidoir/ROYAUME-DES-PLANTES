@@ -25,8 +25,8 @@ for(const [w,h] of TAILLES){
   await cap('accueil');await pasDeDebord('accueil');
   ok(await lance(p,'mcq'),tag+' QCM affiché');await cap('qcm');await pasDeDebord('QCM');await visible('#opts button','QCM, première réponse');
   await p.click('#opts button');await p.waitForTimeout(700);await cap('correction');await pasDeDebord('correction');
-  ok(await p.evaluate(()=>{const f=$('sh');return !!f&&/regarder/i.test(f.textContent)&&f.querySelectorAll('li').length>=3}),tag+' fiche de correction avec les 3 clés');
-  await visible('#shn','correction, bouton « Question suivante »');
+  ok(await p.evaluate(()=>{const f=$('sh');return !!f&&/À retenir/i.test(f.textContent)&&f.querySelectorAll('li').length>=3}),tag+' fiche de correction avec les 3 clés');
+  await visible('#shn','correction, bouton « Plante suivante »');
   ok(await lance(p,'typed'),tag+' saisie affichée');await cap('saisie');await pasDeDebord('saisie');await visible('#q-input','saisie, champ de réponse');
   ok(await lance(p,'pv'),tag+' 4 photos affichées');await cap('4photos');await pasDeDebord('4 photos');
   await p.click('.tabs button[data-t=herb]');await cap('herbier');await pasDeDebord('herbier');await visible('#herb-search','herbier, recherche');

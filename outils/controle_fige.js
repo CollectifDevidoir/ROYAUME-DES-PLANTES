@@ -29,7 +29,7 @@ for(const ty of ['mcq','typed']){
   const r=await p.evaluate(()=>[Math.round($('pic').getBoundingClientRect().bottom),Math.round($('sh').getBoundingClientRect().top),Math.round($('sh').getBoundingClientRect().bottom),innerHeight]);
   ok(r[1]>=r[0]&&r[2]===r[3],ty+' : fiche sous la photo et jusqu\'en bas '+JSON.stringify(r));
   await p.tap('#shn');await p.waitForTimeout(600);
-  ok(await p.evaluate(()=>getComputedStyle(document.querySelector('.tabs')).visibility==='visible'&&!document.body.classList.contains('hs')),ty+' : « Question suivante » : onglets de retour, fond libre');
+  ok(await p.evaluate(()=>getComputedStyle(document.querySelector('.tabs')).visibility==='visible'&&!document.body.classList.contains('hs')),ty+' : « Plante suivante » : onglets de retour, fond libre');
 }
 await lance(p,'pv');await p.tap('#opts button');await p.waitForTimeout(1000);
 let s=await st();ok(s.clip===''&&await p.evaluate(()=>getComputedStyle($('veil')).opacity==='1'),'4 photos : fond entièrement flouté');

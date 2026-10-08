@@ -30,7 +30,7 @@ const W=+process.argv[2]||360,H=+process.argv[3]||640;
   ok(photos===10,`la photo de la plante est bien affichée à chaque question (${photos}/10)`);
   ok(rates>0&&justes>0,`10 plantes : ${justes} justes, ${rates} ratées`);
   ok(fiches===10,`chaque correction montre le nom et au moins 3 clés (${fiches}/10)`);
-  ok(suivant===10,`« Question suivante » visible et assez grand à chaque fois (${suivant}/10)`);
+  ok(suivant===10,`« Plante suivante » visible et assez grand à chaque fois (${suivant}/10)`);
   ok(await p.evaluate(()=>getComputedStyle($('chips')).display!=='none'),'après la première plante : les modes sont proposés');
   const n=await p.evaluate(()=>(st.hist[today()]||{n:0}).n);ok(n===10,`10 exercices comptés (${n})`);
   ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'pas de défilement horizontal');

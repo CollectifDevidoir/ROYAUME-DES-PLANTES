@@ -891,6 +891,26 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
   #fam{inset:0;margin:auto;width:min(600px,92vw);height:min(780px,90vh);padding:0}
   #fam .fdx{top:14px;right:14px}
   #fam .fdots{top:24px}
+  /* Finition ordinateur : correction en fiche de naturaliste (nom, puis nom latin et famille), sans poignée tactile */
+  .sh.desk .grip{display:none}
+  .sh.desk .shh{padding:12px 12px 2px 16px;align-items:flex-start}
+  .sh.desk #shr{display:flex;flex-wrap:wrap;align-items:center;gap:3px 10px}
+  .sh.desk #shr b{font:700 1.35rem/1.2 Georgia,serif;letter-spacing:.005em}
+  .sh.desk #shr .sl2{order:9;flex-basis:100%;font-size:.95rem}
+  .sh.desk #shr .sl2 em{font:italic 1.02rem Georgia,serif}
+  /* menus du quiz un peu moins hauts : la photo et les réponses gagnent la place */
+  #chips .call{min-height:48px}
+  /* survol : un léger relief, jamais de saut */
+  .opts>button,#chips .cats button,#chips .call,.act,#shn{transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease,background-color .15s ease}
+  .opts>button:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 6px 14px -10px rgba(20,60,30,.55)}
+  .opts>button:active:not(:disabled){transform:translateY(0);box-shadow:none}
+  #chips .cats button:hover:not([aria-pressed=true]),#chips .call:hover:not([aria-pressed=true]){border-color:var(--ac)}
+  #chips .cats button:hover{transform:translateY(-1px)}
+  .act:hover{background:rgba(47,107,63,.15)}
+  #shn:hover{filter:brightness(1.08)}
+}
+@media (min-width:760px) and (pointer:fine) and (prefers-reduced-motion:reduce){
+  .opts>button:hover:not(:disabled),#chips .cats button:hover{transform:none}
 }
 @media (min-width:1200px) and (pointer:fine){
   /* Herbier : catégories sur 2 colonnes, recherche sur toute la largeur */
@@ -1047,7 +1067,7 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
 <div id="chips"><button class="call" id="cAll"></button><div class="cats" id="cats"></div><div class="acts"><button class="act" id="fday"></button><button class="act" id="rplay" hidden></button></div></div>
 <div class="card" id="qc"><div class="pic" id="pic"></div><div id="q"></div><div class="opts" id="opts"></div><div id="fb" aria-live="polite"></div></div>
 <div class="card" id="ex" hidden></div>
-<button id="next" hidden>Question suivante <span class="ic-in" data-ic="arrow"></span></button>
+<button id="next" hidden>Plante suivante <span class="ic-in" data-ic="arrow"></span></button>
 </section>
 <section id="herb" hidden></section>
 <section id="pro" hidden></section>
@@ -1066,7 +1086,7 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
 <dialog id="set" class="bs" aria-labelledby="set-t"><div class="bsh"><i class="bsg" aria-hidden="true"></i><h2 id="set-t" tabindex="-1"><span data-ic="reglages"></span>Réglages</h2><button class="bsx" id="set-x" type="button" aria-label="Fermer les réglages" data-ic="close"></button></div><div id="set-b"></div></dialog>
 <dialog id="prf" class="bs" aria-labelledby="prf-t"><div class="bsh"><i class="bsg" aria-hidden="true"></i><h2 id="prf-t" class="vh" tabindex="-1">Mon profil</h2><button class="bsx" id="prf-x" type="button" aria-label="Fermer le profil" data-ic="close"></button></div><div id="ami"></div></dialog>
 <dialog id="fch" class="fch"><div class="fhd"><i class="bsg" aria-hidden="true"></i><b id="fht"></b><button id="fcx" aria-label="Fermer" data-ic="close"></button></div><div id="fcb"></div><div id="fcf"></div></dialog>
-<div class="sh" id="sh" hidden role="region" aria-label="Fiche de l'espèce"><div class="shh"><button class="grip" id="shg" aria-label="Agrandir ou réduire la fiche"><i></i></button><div id="shr" aria-live="polite"></div><button id="shm" aria-label="Réduire la fiche en bandeau" data-ic="chev-d"></button></div><div id="shb"></div><div class="shf"><button class="big" id="shn">Question suivante <span class="ic-in" data-ic="arrow"></span></button></div></div>
+<div class="sh" id="sh" hidden role="region" aria-label="Fiche de l'espèce"><div class="shh"><button class="grip" id="shg" aria-label="Agrandir ou réduire la fiche"><i></i></button><div id="shr" aria-live="polite"></div><button id="shm" aria-label="Réduire la fiche en bandeau" data-ic="chev-d"></button></div><div id="shb"></div><div class="shf"><button class="big" id="shn">Plante suivante <span class="ic-in" data-ic="arrow"></span></button></div></div>
 <div id="zm" hidden><button class="zmx" type="button" aria-label="Fermer la photo" data-ic="close"></button><img alt=""></div>
 <script>
 // Liste des espèces : [nom latin, nom commun, type]
@@ -2067,13 +2087,14 @@ function celNext(){
   const lv=Array.from({length:n},(_,k)=>`<i class="cf" style="--a:${k*(360/n)}deg;--d:${100+Math.random()*130}px;--c:${['#78bb62','#3f7f45','#b9dfae','#f2c14e','#8b5e3c'][k%5]};animation-delay:${.3+(k%5)*.07}s"></i>`).join('');
   const ff=Array.from({length:10},(_,k)=>`<i class="ff" style="left:${8+k*9}%;animation-delay:${(k%5)*.4}s;animation-duration:${3.4+(k%4)*.6}s"></i>`).join('');
   const sp=Array.from({length:6},(_,k)=>`<i style="--r:${k*60}deg"></i>`).join('');
-  el.innerHTML='<div class="fl"></div><div class="rays"></div><div class="burst"></div><div class="wave"></div><div class="wave w2"></div><div class="orb">'+sp+'</div><div class="bdg">'+(o.html||'')+'</div><h2>'+esc(o.title)+'</h2><p class="rnm">'+esc(o.sub)+'</p><small>Touche pour continuer</small>'+lv+ff;
+  el.innerHTML='<div class="fl"></div><div class="rays"></div><div class="burst"></div><div class="wave"></div><div class="wave w2"></div><div class="orb">'+sp+'</div><div class="bdg">'+(o.html||'')+'</div><h2>'+esc(o.title)+'</h2><p class="rnm">'+esc(o.sub)+'</p><small>'+(sourisFine()?'Clique':'Touche')+' pour continuer</small>'+lv+ff;
   document.body.append(el);vib([40,60,40,60,120]);
   let gone=false;const x=()=>{if(gone)return;gone=true;el.remove();setTimeout(celNext,250)};el.onclick=x;setTimeout(x,5600)}
 function rankAnim(){const i=rk();celebrate({html:rIcon(i),title:'Nouveau rang !',sub:R[i][1],hu:rankHue(i),n:12+i*3})}
 function goalAnim(){celebrate({html:TROPHY,title:'Objectif atteint !',sub:goal()+" exercices aujourd'hui",hu:46,n:36})}
 function toast(m){const e=document.createElement('div');e.className='toast';e.textContent=m;document.body.append(e);setTimeout(()=>e.remove(),3200)}
-function helpHtml(){const cr=rk();return `<p class="hp">Reconnais la plante, réponds, puis lis la correction : elle te donne les clés pour la retenir.</p>
+const sourisFine=()=>typeof matchMedia==='function'&&matchMedia('(hover:hover) and (pointer:fine)').matches;
+function helpHtml(){const cr=rk(),fn=sourisFine();return `<p class="hp">Reconnais la plante, réponds, puis lis la correction : elle te donne les clés pour la retenir.</p>
 <ol class="hst" aria-label="Le principe"><li><span class="tgi">${ICO.quiz}</span><b>Regarde</b><small>la photo</small></li><li><span class="tgi">${TARGET}</span><b>Réponds</b><small>4 choix ou le nom</small></li><li><span class="tgi">${HINT}</span><b>Retiens</b><small>les clés de la correction</small></li></ol>
 <h4>Comment une plante devient «&nbsp;acquise&nbsp;»</h4>
 <div class="lvf" role="img" aria-label="Niveaux 1 à 3 : apprentissage. Niveau 4 : acquise. Niveaux 5 et 6 : entretien."><div class="lvb" aria-hidden="true"><div class="lv1"><span class="lvn"><i>1</i><i>2</i><i>3</i></span><small>Apprentissage</small></div><div class="lv2"><span class="lvn"><i>4</i></span><small>Acquise</small></div><div class="lv3"><span class="lvn"><i>5</i><i>6</i></span><small>Entretien</small></div></div></div>
@@ -2082,9 +2103,9 @@ function helpHtml(){const cr=rk();return `<p class="hp">Reconnais la plante, ré
 <p class="hp hsm">Chaque plante acquise te rapproche du rang suivant.</p>
 <ol class="hrg" aria-label="Les 12 rangs">${R.map((x,i)=>`<li class="${i<cr?'pas':i===cr?'ici':''}"${i===cr?' aria-current="true"':''}><span class="tgi">${rIcon(i)}</span><b>${x[1]}</b><small>${x[0]?x[0]+' acquises':'au départ'}</small></li>`).join('')}</ol>
 <h4>Bon à savoir</h4>
-<ul class="htp"><li><span class="hti">${goal()}</span><span>Objectif : ${goal()} exercices par jour. Touche l'anneau en haut pour le changer.</span></li>
+<ul class="htp"><li><span class="hti">${goal()}</span><span>Objectif : ${goal()} exercices par jour. ${fn?'Clique sur':'Touche'} l'anneau en haut pour le changer.</span></li>
 <li><span class="hti">${ico('swap')}</span><span>Deux plantes que tu confonds reviennent ensemble, pour apprendre à les distinguer.</span></li>
-<li><span class="hti">${ico('arrow')}</span><span>Glisse la carte vers la gauche pour passer à la suivante ; touche une photo pour l'agrandir.</span></li>
+<li><span class="hti">${ico('arrow')}</span><span>${fn?'Au clavier : 1, 2, 3, 4 pour répondre, Entrée pour la plante suivante. Clique sur une photo pour l\'agrandir.':'Glisse la carte vers la gauche pour passer à la suivante ; touche une photo pour l\'agrandir.'}</span></li>
 <li><span class="hti hvi"></span><span>Bandeau violet : entraînement. Il ne change pas ton niveau.</span></li></ul>
 <p class="hp hsm">Ta progression reste sur cet appareil. Un compte (logo de rang, en haut à gauche) la garde aussi en ligne.</p>`}
 let cur=null,last=null,done=false,typed=false,curTrain=false,nxt=0,mode=(()=>{try{const m=localStorage.getItem('qp.mode');return m&&T[m]?m:'tout'}catch(e){return'tout'}})(),streak=0,shown={};
@@ -2411,7 +2432,7 @@ async function next(){
   }else{buildCar(q.s,q.im,false);
   $('q').textContent=typed?'Écris le nom latin complet (genre + espèce)':document.body.classList.contains('fresh')?'Bienvenue ! Quelle est cette plante ?':'Quelle est cette plante ?';
   if(typed){
-    $('opts').innerHTML='<form id="q-form"><span class="qiw"><input id="q-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Touche ici pour écrire (Genus species)" aria-label="Nom latin"><b class="qini" id="q-ini" hidden></b></span><button>Valider</button><p class="tyq" id="q-ty">Écris le nom latin complet (genre + espèce)</p></form>';
+    $('opts').innerHTML='<form id="q-form"><span class="qiw"><input id="q-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="'+(sourisFine()?'Genre espèce':'Touche ici pour écrire (Genus species)')+'" aria-label="Nom latin"><b class="qini" id="q-ini" hidden></b></span><button>Valider</button><p class="tyq" id="q-ty">Écris le nom latin complet (genre + espèce)</p></form>';
     $('q-form').onsubmit=e=>{e.preventDefault();answer($('q-input').value.trim())};   // champ vide : correction immédiate
     $('q-input').onkeydown=e=>{if(e.key==='Enter'&&e.repeat)e.preventDefault()};   // Entrée maintenue (venue de « Suivant ») : pas de validation involontaire
     $('q-input').onfocus=()=>{$('qc').classList.add('typing');kbFit();setTimeout(kbFit,350)};
@@ -2500,7 +2521,7 @@ async function sheetData(sp){const[P,D]=await Promise.all([Promise.all(sp.map(sp
 const q3=s=>Q[s[0]]?Q[s[0]].split(' ; '):[];
 const qli=(a,big)=>big?'<ol class="qkn">'+a.map(x=>'<li><span>'+x+'</span></li>').join('')+'</ol>':'<ul class="qk">'+a.map(x=>'<li>'+x+'</li>').join('')+'</ul>';
 function cmpHtml(sp,tags){
-  if(sp.length===1)return '<p class="lab">Ce qu\'il faut regarder</p>'+qli(q3(sp[0]),true);
+  if(sp.length===1)return '<p class="lab">À retenir</p>'+qli(q3(sp[0]),true);
   return '<p class="lab">Points à comparer</p>'+`<div class="cmp2">${sp.map((s,i)=>`<div><b>${tags?ico(i?'croix':'coche','ic-in')+' ':''}${s[1]}</b><br><em>${s[0]}</em>${qli(q3(s))}</div>`).join('')}</div>`}
 const srcLinks=z=>z.split(' ; ').map(q=>{const m=q.match(/^(.*?) : (https?:\/\/\S+)$/);return m?`<a href="${m[2]}" target="_blank" rel="noopener">${esc(m[1])}</a>`:esc(q)}).join(' · ');
 const srcBlock=s=>{const o=SD[s[0]];return o?(o.statut?`<br><small>${esc(o.statut)}</small>`:'')+(o.sources?`<br><small>Sources botaniques : ${srcLinks(o.sources)}</small>`:''):''};
@@ -2582,14 +2603,14 @@ async function showSheet(good,w,v){
   const c=cur,two=!good&&w&&w[0]!==c[0],sp=two?[c,w]:[c],sh=$('sh'),tk=++shTok,typo=typed&&good&&norm(v)!==norm(c[0]);
   if(SHS!=='peek')snapQc();sh.hidden=false;sh.className='sh'+(two?' er':'')+(SHS==='peek'?' peek':'');setSh(SHS==='peek'?'peek':'mid');
   const nc=two?cfPair(c[0],w[0]):0;
-  $('shr').innerHTML=`<span class="v ${good?'y'+(typo?' ty':''):'n'}">${good?(typo?'Presque':'Juste'):'Raté'}</span> <b>${c[1]}</b> <em>${c[0]}</em>${famTag(c)}`+(acqNow?' <span class="acq">'+ico('etincelle','ic-in')+' Acquise</span>':(!curTrain&&st.sp[c[0]]&&st.sp[c[0]].b>=4?' <span class="acq2">Acquise '+ico('coche','ic-in')+'</span>':''))+(curTrain?' <small class="trt">'+ico('target','ic-in')+' entraînement</small>':'');
+  $('shr').innerHTML=`<span class="v ${good?'y'+(typo?' ty':''):'n'}">${good?(typo?'Presque':'Juste'):'Raté'}</span> <b>${c[1]}</b> <span class="sl2"><em>${c[0]}</em>${famTag(c)}</span>`+(acqNow?' <span class="acq">'+ico('etincelle','ic-in')+' Acquise</span>':(!curTrain&&st.sp[c[0]]&&st.sp[c[0]].b>=4?' <span class="acq2">Acquise '+ico('coche','ic-in')+'</span>':''))+(curTrain?' <small class="trt">'+ico('target','ic-in')+' entraînement</small>':'');
   let cp;
   if(two){
     const col=(s,ok)=>`<div class="ec ${ok?'ok':'wr'}"><div class="cph" data-s="${esc(s[0])}">${phImg(s)}<span class="tg ${ok?'ok':'ko'}">${ok?'Bonne réponse':'Ta réponse'}</span></div><b>${s[1]}</b><em>${s[0]}</em>${qli(q3(s),true)}</div>`;
     const pk=Object.keys(C).find(k=>{const a=k.split('|');return a.includes(c[0])&&a.includes(w[0])}),y=whyHtml(c,w),rec=nc>=2?` · confondues ${Math.round(nc)} fois`:'';
-    const dtx=pk?brief(C[pk],240):('<b>'+w[1]+'</b> : '+esc(q3(w).slice(0,2).join(' ; ')));
-    cp=`<p class="lab">Ce qu'il faut regarder</p><div class="erw">${col(c,true)}${col(w,false)}</div><div class="diff"><p class="lab">Pour ne pas les confondre</p><p>${pk?esc(dtx):dtx}</p>${y||rec?`<p class="dwhy">${y?'On les confond : '+esc(y):''}${rec}</p>`:''}</div>`;
-  }else cp=(!good&&!w?`<div class="key"><b>${v?`« ${esc(v)} » n'est pas dans la liste`:'Pas de réponse : voici comment la reconnaître'}</b></div>`:'')+'<p class="lab">Ce qu\'il faut regarder</p>'+qli(q3(c),true);
+    const dw=y||rec?`<p class="dwhy">${y?'On les confond : '+esc(y):''}${rec}</p>`:'';
+    cp=`<p class="lab">À retenir</p><div class="erw">${col(c,true)}${col(w,false)}</div>${pk?`<div class="diff"><p class="lab">Pour ne pas les confondre</p><p>${esc(brief(C[pk],240))}</p>${dw}</div>`:dw?`<div class="diff">${dw}</div>`:''}`;
+  }else cp=(!good&&!w?`<div class="key"><b>${v?`« ${esc(v)} » n'est pas dans la liste`:'Pas de réponse : voici comment la reconnaître'}</b></div>`:'')+'<p class="lab">À retenir</p>'+qli(q3(c),true);
   $('shb').innerHTML=`<div class="cp">${cp}</div><button class="more" id="sh-more">${moreLbl(false)}</button><div class="dt" id="sh-dt"><p class="ld">Chargement…</p></div>`;
   $('shb').scrollTop=0;fitSh();setTimeout(fitSh,350);
   if(window.ResizeObserver){if(shRO)shRO.disconnect();shRO=new ResizeObserver(fitSh);const c0=document.querySelector('#shb .cp');if(c0)shRO.observe(c0)}
