@@ -5,13 +5,15 @@
 const {open}=require('./banc_essai.js');
 let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
 const W=+process.argv[2]||360,H=+process.argv[3]||640;
-(async()=>{const {b,p}=await open({w:W,h:H,touch:true,fresh:true});
+(async()=>{const {b,p}=await open({w:W,h:H,touch:true,fresh:true,file:process.env.F});
   const prete=()=>p.waitForFunction(()=>(pvSet||!$('pic').classList.contains('sk'))&&(document.querySelectorAll('#opts button').length>=4||!!$('q-input'))&&!done,null,{timeout:20000}).then(()=>true).catch(()=>false);
   ok(await prete(),'ouverture : une plante et ses réponses');
   ok(await p.evaluate(()=>/^Bienvenue/.test($('q').textContent)),'le débutant sait quoi faire : « Bienvenue ! Quelle est cette plante ? »');
-  let rates=0,justes=0,fiches=0,suivant=0;
+  let rates=0,justes=0,fiches=0,suivant=0,photos=0;
   for(let i=0;i<10;i++){
     if(!(await prete())){ok(false,`plante ${i+1} : pas d'exercice prêt`);break}
+    const vu=await p.evaluate(()=>{if(pvSet)return [...document.querySelectorAll('#opts img')].every(i=>i.complete&&i.naturalWidth>0);const i=document.querySelector('#pic .sl img');return !!i&&i.complete&&i.naturalWidth>0&&i.getBoundingClientRect().height>100});
+    if(vu)photos++;
     // il se trompe une fois sur deux ; en saisie, il ne connaît pas le nom et valide le champ vide ; « quelle photo ? » : même principe
     const ty=await p.evaluate(()=>!!$('q-input'));
     if(ty)await p.click('#q-form button:not(#jk)');
@@ -24,6 +26,7 @@ const W=+process.argv[2]||360,H=+process.argv[3]||640;
     if(r.cles>=3&&r.nom)fiches++;if(r.suiv)suivant++;
     await p.click('#shn');await p.waitForTimeout(300);
   }
+  ok(photos===10,`la photo de la plante est bien affichée à chaque question (${photos}/10)`);
   ok(rates>0&&justes>0,`10 plantes : ${justes} justes, ${rates} ratées`);
   ok(fiches===10,`chaque correction montre le nom et au moins 3 clés (${fiches}/10)`);
   ok(suivant===10,`« Question suivante » visible et assez grand à chaque fois (${suivant}/10)`);
