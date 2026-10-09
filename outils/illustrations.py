@@ -212,18 +212,27 @@ def tronc(x,w,lean=0,flare=1.6,top=-10,br=None,rx=None):
         d+=f'M{f(xx)} {y}Q{f(xx+sd*l*.6)} {f(y-l*.35)} {f(xx+sd*l)} {f(y-l*.9)}L{f(xx+sd*(l-6))} {f(y-l*.95)}Q{f(xx+sd*l*.45)} {f(y-l*.25)} {f(xx)} {f(y+w*.9)}Z'
     return d
 def fronde(x0,y0,x1,y1,cx,cy,n,L,side=(1,-1)):
-    """Fronde de fougère : rachis courbe et folioles qui raccourcissent vers la pointe."""
+    """Fronde de fougère : rachis courbe et folioles qui raccourcissent vers la pointe.
+    Tous les tracés tournent dans le même sens (sinon les chevauchements foliole/rachis se creusent en trous clairs)
+    et le rachis s'arrête juste après la dernière foliole (plus de pointe fine qui dépasse)."""
     d=''
     def pt(t): return ((1-t)**2*x0+2*(1-t)*t*cx+t*t*x1,(1-t)**2*y0+2*(1-t)*t*cy+t*t*y1)
+    def aire(P): return sum(P[k][0]*P[(k+1)%len(P)][1]-P[(k+1)%len(P)][0]*P[k][1] for k in range(len(P)))
+    sens=None
     for i in range(n):
         t=.12+.85*i/n;px,py=pt(t);qx,qy=pt(min(1,t+.02))
         a=math.atan2(qy-py,qx-px);l=L*(1-t*.8)
         for sg in side:
             b=a+sg*math.radians(58);ex,ey=px+l*math.cos(b),py+l*math.sin(b)
             nx,ny=-math.sin(b)*l*.3,math.cos(b)*l*.3
-            d+=f'M{f(px)} {f(py)}Q{f((px+ex)/2+nx)} {f((py+ey)/2+ny)} {f(ex)} {f(ey)}Q{f((px+ex)/2-nx)} {f((py+ey)/2-ny)} {f(px)} {f(py)}Z'
-    # rachis
-    d+=f'M{f(x0-3)} {y0}Q{f(cx)} {f(cy)} {f(x1)} {f(y1)}Q{f(cx+4)} {f(cy+4)} {f(x0+3)} {y0}Z'
+            c1=((px+ex)/2+nx,(py+ey)/2+ny);c2=((px+ex)/2-nx,(py+ey)/2-ny)
+            if sens is None:sens=aire([(px,py),c1,(ex,ey),c2])>0
+            d+=f'M{f(px)} {f(py)}Q{f(c1[0])} {f(c1[1])} {f(ex)} {f(ey)}Q{f(c2[0])} {f(c2[1])} {f(px)} {f(py)}Z'
+    # rachis : courbe coupée juste après la dernière foliole (découpage de la courbe de Bézier en t1)
+    t1=min(1,.12+.85*(n-1)/n+.012);ex,ey=pt(t1);kx,ky=x0+t1*(cx-x0),y0+t1*(cy-y0)
+    R=[(x0-3,y0),(kx,ky),(ex,ey),(kx+4,ky+4),(x0+3,y0)]
+    if (aire(R)>0)!=sens:R=R[::-1]
+    d+=f'M{f(R[0][0])} {f(R[0][1])}Q{f(R[1][0])} {f(R[1][1])} {f(R[2][0])} {f(R[2][1])}Q{f(R[3][0])} {f(R[3][1])} {f(R[4][0])} {f(R[4][1])}Z'
     return d
 TF=''.join(f'<path d="{tronc(x,w,l,1.5,-10,br)}"/>' for x,w,l,br in [
   (73,12,6,[]),(339,8,-5,[]),(621,10,4,[]),(888,8,-4,[]),(1082,11,5,[])])
