@@ -470,7 +470,7 @@ small.fm{color:var(--mu);font-size:.72rem}
 #chips .call{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:58px;padding:8px 18px;border-radius:16px;border:2px solid var(--bd);background:var(--card);color:var(--fg);font:700 1.15rem Georgia,serif;cursor:pointer;transition:background .2s,transform .12s}
 #chips .call small{font:400 .72rem system-ui;opacity:.8}
 #chips .call:active{transform:scale(.99)}
-#chips .call[aria-pressed=true]{background:linear-gradient(135deg,#4d9a5a,#2f6b3f);border-color:transparent;color:#fff;box-shadow:0 8px 18px -8px rgba(30,90,50,.7)}
+#chips .call[aria-pressed=true]{background:linear-gradient(135deg,#4d9a5a,#2f6b3f) border-box;border-color:transparent;color:#fff;box-shadow:0 8px 18px -8px rgba(30,90,50,.7)}
 .acts{display:flex;gap:8px;margin-top:8px}
 .act{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:7px 8px;border:0;border-radius:12px;background:rgba(47,107,63,.09);color:var(--fg);font:600 .76rem system-ui;cursor:pointer;position:relative}
 .act[hidden]{display:none}
@@ -735,7 +735,7 @@ main{overflow-x:clip}
 #chips .cats button{position:relative;flex:1 1 auto;min-width:0;min-height:36px;display:flex;align-items:center;justify-content:center;gap:6px;padding:0 6px;border:1px solid var(--bd);border-radius:10px;background:var(--card);color:var(--fg);font:600 12px system-ui;white-space:nowrap;box-shadow:0 1px 2px rgba(20,40,26,.07);cursor:pointer;transition:background .2s,transform .12s}
 #chips .cats button::after{content:'';position:absolute;inset:-4px 0}
 #chips .cats button:active{transform:scale(.97)}
-#chips .cats button[aria-pressed=true]{background:linear-gradient(135deg,#4d9a5a,#2f6b3f);border-color:transparent;color:#fff;box-shadow:0 6px 14px -8px rgba(30,90,50,.8)}
+#chips .cats button[aria-pressed=true]{background:linear-gradient(135deg,#4d9a5a,#2f6b3f) border-box;border-color:transparent;color:#fff;box-shadow:0 6px 14px -8px rgba(30,90,50,.8)}
 #chips .cats .cti{display:none;width:20px;height:20px;flex:none}
 #chips .cats .cti svg{width:100%;height:100%}
 @media (max-width:379px){#chips .cats{gap:4px}#chips .cats button{padding:0 3px;font-size:11px}}
@@ -928,10 +928,15 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
   #herb{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:start}
   #herb>.card{margin:0}
   #herb>.card:first-child{grid-column:1/-1}
+  #herb>.hcol{display:flex;flex-direction:column;gap:14px;min-width:0}
+  #herb>.hcol>.card{margin:0}
   /* Progrès : 2 colonnes, Régularité à droite sur deux rangées */
   #pro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:14px;align-items:start}
   #pro>.card{margin:0}
   #pro>.card:nth-child(2){grid-column:2;grid-row:1/span 2}
+  /* deux colonnes indépendantes : Aujourd'hui + À revoir | Régularité + Confusions (voir proCols) */
+  #pro>.hcol{display:flex;flex-direction:column;gap:14px;min-width:0}
+  #pro>.hcol>.card{margin:0}
   #pro>.pl2{grid-column:1/-1}
 }
 /* Ordinateur : barre de défilement intégrée (fine, aux couleurs de l'appli, décollée des coins arrondis des volets) */
@@ -2694,13 +2699,25 @@ function herbSearch(){
   $('herb').insertAdjacentHTML('afterbegin','<div class="card"><input id="herb-search" type="search" placeholder="Chercher une plante : nom latin ou commun" autocomplete="off" aria-label="Chercher une plante"><div id="herb-results"></div></div>');
   $('herb-search').oninput=()=>{const q=norm($('herb-search').value);$('herb-results').innerHTML=q.length<2?'':(S.filter(s=>norm(s[0]).includes(q)||norm(s[1]).includes(q)).slice(0,10).map(s=>`<button class="sr" data-sp="${s[0]}"><em>${s[0]}</em><span>${s[1]}</span></button>`).join('')||'<p class="na">Aucune plante de ce nom dans l\'herbier.</p>')};
 }
+const herbMQ=matchMedia('(min-width:1200px) and (pointer:fine)');
+// Progrès sur ordinateur large : Aujourd'hui et À revoir à gauche, Régularité et Confusions à droite, sans trou
+function proCols(){
+  const el=$('pro');if(!herbMQ.matches||!el)return;const q=c=>el.querySelector(':scope>.'+c);
+  const A=[q('pa'),q('pv')].filter(Boolean),B=[q('rgl'),q('pcf')].filter(Boolean);if(!A.length&&!B.length)return;
+  const c1=document.createElement('div'),c2=document.createElement('div');c1.className=c2.className='hcol';
+  A.forEach(x=>c1.append(x));B.forEach(x=>c2.append(x));el.prepend(c1,c2);
+}
+herbMQ.addEventListener('change',()=>{if(!$('pro').hidden)pro()});
+herbMQ.addEventListener('change',()=>{if(!$('herb').hidden)herb()});
 function herb(){
   const thumb=l=>{const a=cache[l];return a&&a.src||(IC[l]&&IC[l].imgs&&IC[l].imgs[0]&&IC[l].imgs[0].src)||''};
   const own=s=>(st.sp[s[0]]||{b:0}).b>=4,sn=s=>!!st.sp[s[0]];
   const tile=(s,c)=>{const u=thumb(s[0]);return `<div class="pk ${c}" data-l="${s[0]}" title="${s[0]}" tabindex="0" role="button">${u?`<img src="${u}" referrerpolicy="no-referrer" loading="lazy" alt="">`:''}<b>${s[1]}</b></div>`};
-  $('herb').innerHTML=Object.keys(T).filter(k=>k!=='tout').map(k=>{
+  const cats=Object.keys(T).filter(k=>k!=='tout').map(k=>{
     const lat=(x,y)=>x[0].localeCompare(y[0],'fr'),a=S.filter(s=>s[2]===k),got=a.filter(own).sort(lat),pr=a.filter(s=>sn(s)&&!own(s)).sort(lat),left=a.length-got.length-pr.length;
-    return `<details class="card hc" data-k="${k}"${st.ho[k]?' open':''}><summary><span class="hi">${catIcon(k)}</span><span class="hm"><b>${T[k]}</b><span class="bar"><i style="width:${100*got.length/a.length}%"></i></span></span><span class="hn">${got.length}<small>/${a.length}</small></span></summary><div class="pkg">${got.map(s=>tile(s,'ok')).join('')}${pr.map(s=>tile(s,'pr')).join('')}${left?`<div class="pkn">+ ${left} à découvrir</div>`:''}</div></details>`}).join('');
+    return `<details class="card hc" data-k="${k}"${st.ho[k]?' open':''}><summary><span class="hi">${catIcon(k)}</span><span class="hm"><b>${T[k]}</b><span class="bar"><i style="width:${100*got.length/a.length}%"></i></span></span><span class="hn">${got.length}<small>/${a.length}</small></span></summary><div class="pkg">${got.map(s=>tile(s,'ok')).join('')}${pr.map(s=>tile(s,'pr')).join('')}${left?`<div class="pkn">+ ${left} à découvrir</div>`:''}</div></details>`});
+  // ordinateur large : deux colonnes indépendantes (ouvrir une catégorie ne creuse pas de trou dans l'autre colonne)
+  $('herb').innerHTML=herbMQ.matches?`<div class="hcol">${cats.filter((_,i)=>i%2===0).join('')}</div><div class="hcol">${cats.filter((_,i)=>i%2).join('')}</div>`:cats.join('');
   const load=d=>[...d.querySelectorAll('.pk[data-l]')].filter(e=>!e.querySelector('img')).slice(0,24).forEach(async e=>{const s=S.find(x=>x[0]===e.dataset.l),im=s&&await getImg(s);if(im&&!e.querySelector('img')){const i=new Image();i.referrerPolicy='no-referrer';i.src=im.src;e.prepend(i)}});
   $('herb').querySelectorAll('.hc').forEach(d=>d.addEventListener('toggle',()=>{st.ho[d.dataset.k]=d.open;save();if(d.open)load(d)}));
   herbSearch();$('herb').querySelectorAll('.hc[open]').forEach(load);
@@ -2714,10 +2731,10 @@ function pro(){
   const row=x=>`<div class="lr" data-sp="${x.s[0]}" tabindex="0" role="button"><span><em>${x.s[0]}</em><small>${x.s[1]}</small></span><b class="${x.r<60?'lo':''}">${x.r} %</b></div>`;
   const cf=Object.entries(st.cf).filter(x=>x[1]>=1).sort((a,b)=>b[1]-a[1]).slice(0,3);
   $('pro').innerHTML=
-   `<div class="card"><h3 class="hh">Aujourd'hui</h3><p class="big2"><b>${hT.n}</b> / ${goal()} exercices</p><span class="bar"><i style="width:${Math.min(100,100*hT.n/goal())}%"></i></span>${errs.length?`<button class="big" id="pro-errs"><span class="tgi">${TARGET}</span>Rejouer mes erreurs du jour (${errs.length})</button>`:''}</div>`+
+   `<div class="card pa"><h3 class="hh">Aujourd'hui</h3><p class="big2"><b>${hT.n}</b> / ${goal()} exercices</p><span class="bar"><i style="width:${Math.min(100,100*hT.n/goal())}%"></i></span>${errs.length?`<button class="big" id="pro-errs"><span class="tgi">${TARGET}</span>Rejouer mes erreurs du jour (${errs.length})</button>`:''}</div>`+
    `<div class="card rgl"><h3 class="hh">Régularité<small>14 derniers jours</small></h3><div class="kp"><div><b>${bl.reussite} %</b><span>réussite</span></div><div><b><span class="tgi">${ICO.flamme}</span>${bl.serie}</b><span>jour${bl.serie>1?'s':''} de suite</span></div><div title="Plus longue suite de bonnes réponses"><b>${st.best}</b><span>série record</span></div></div><div class="hist" style="--gl:${Math.min(100,goal()*100/mxd)}%">${days.map(x=>`<button type="button" class="hb" data-d="${x.d}" aria-pressed="false" aria-label="${x.d} : ${x.n} exercices"><i style="height:${Math.min(100,x.n*100/mxd)}%;background:${x.n?`hsl(${Math.round(x.r*1.25)},72%,${x.r<50?'46%':'40%'})`:'#d9e0d3'};opacity:${x.n?1:.3}"></i></button>`).join('')}<span class="hgl" aria-hidden="true"><small>objectif ${goal()}</small></span></div><div class="hdl" aria-hidden="true">${days.map((x,i)=>`<span${i===13?' class="tdy"':''}>${'DLMMJVS'[new Date(x.d+'T12:00:00').getDay()]}</span>`).join('')}</div><p class="hd" id="herb-detail"></p></div>`+
-   `<div class="card"><h3 class="hh">À revoir</h3>${wk.length?wk.slice(0,5).map(row).join('')+(wk.length>5?`<p class="na">+ ${wk.length-5} autres dans ta liste</p>`:'')+'<button class="big" id="pro-review">S\'entraîner sur ces plantes</button>':'<p class="na">Rien à revoir pour l\'instant : ton herbier tient bon.</p>'}</div>`+
-   (cf.length?`<div class="card"><h3 class="hh">Confusions</h3>${cf.map(([k,c])=>{const [a,b]=k.split('|');return `<div class="cfr"><span><em>${a}</em> ${ico('swap','ic-in')} <em>${b}</em> <small>${Math.round(c)}×</small></span><button data-k="${k}">S'entraîner</button></div>`}).join('')}</div>`:'')+
+   `<div class="card pv"><h3 class="hh">À revoir</h3>${wk.length?wk.slice(0,5).map(row).join('')+(wk.length>5?`<p class="na">+ ${wk.length-5} autres dans ta liste</p>`:'')+'<button class="big" id="pro-review">S\'entraîner sur ces plantes</button>':'<p class="na">Rien à revoir pour l\'instant : ton herbier tient bon.</p>'}</div>`+
+   (cf.length?`<div class="card pcf"><h3 class="hh">Confusions</h3>${cf.map(([k,c])=>{const [a,b]=k.split('|');return `<div class="cfr"><span><em>${a}</em> ${ico('swap','ic-in')} <em>${b}</em> <small>${Math.round(c)}×</small></span><button data-k="${k}">S'entraîner</button></div>`}).join('')}</div>`:'')+
    `<div class="pl2"><div class="card lnk"><button class="lk" id="pro-prf" type="button"><span class="tgi">${rIcon(rk())}</span>Profil &amp; Amis${ico('chev-r','lkc')}</button></div><div class="card lnk"><button class="lk" id="pro-set" type="button">${ico('reglages')}Réglages${ico('chev-r','lkc')}</button></div></div>`;
   const sel=d=>{const x=days.find(y=>y.d===d);document.querySelectorAll('.hb').forEach(b=>b.setAttribute('aria-pressed',b.dataset.d===d));$('herb-detail').innerHTML='<b>'+(d===today()?"Aujourd'hui":new Date(d+'T12:00:00').toLocaleDateString('fr-FR',{weekday:'short',day:'numeric',month:'short'}))+'</b> · '+(x.n?x.n+' exercice'+(x.n>1?'s':'')+' · '+x.r+' % de réussite':'aucun exercice')};
   $('pro').querySelectorAll('.hb').forEach(b=>b.onclick=()=>sel(b.dataset.d));sel(days[13].d);
@@ -2725,6 +2742,7 @@ function pro(){
   if($('pro-errs'))$('pro-errs').onclick=()=>startReplay(errs.slice(),'Mes erreurs du jour');
   if($('pro-review'))$('pro-review').onclick=()=>startReplay(wk.slice(0,10).map(x=>x.s[0]),'Plantes à revoir');
   $('pro-set').onclick=openSettings;$('pro-prf').onclick=openProfil;
+  proCols();
 }
 // ===== Réglages (volet ouvert depuis Progrès ou en touchant l'anneau d'objectif) =====
 // Contrôle d'une sauvegarde avant de l'écrire : renvoie un message d'erreur, ou '' si elle est utilisable
@@ -2746,11 +2764,10 @@ let setPanel='';
 function setHtml(){
   const g=goal(),v=st.set.vib;
   const pnl=setPanel==='save'?`<div class="stp"><p>Copie ta progression pour la garder ou la passer sur un autre appareil, ou colle une sauvegarde pour la restaurer.</p><div class="row"><button class="mini" id="set-copy" type="button">Copier</button><button class="mini" id="set-paste" type="button">Restaurer</button></div><div id="set-out"></div></div>`
-   :setPanel==='priv'?`<div class="stp prv"><p><b>Sur cet appareil</b> : ta progression (plantes vues, niveaux, erreurs, jours joués) et tes réglages. Elle sert seulement à choisir les plantes à revoir et à suivre tes progrès.</p>
-<p><b>Avec un compte</b> (facultatif) : ton e-mail pour te connecter, ton pseudo, ton code ami, une copie de ta progression et tes chiffres du jour. Tes amis voient ton pseudo, ton rang et ces chiffres, jamais ton e-mail.</p>
-<p><b>Fréquentation</b> : à l'ouverture de l'appli, un numéro tiré au hasard pour cet appareil et la date sont comptés, pour savoir combien de personnes l'utilisent. Ni adresse IP, ni nom, ni cookie.</p>
-<p><b>Photos</b> : elles viennent d'iNaturalist et de Wikipédia, qui reçoivent seulement la demande d'image. Pas de publicité, pas de pistage, rien n'est revendu.</p>
-<p><b>Tout effacer</b> : « Réinitialiser » ci-dessous vide cet appareil ; « Supprimer mon compte », dans ton profil, efface le compte, le pseudo, les amitiés et la sauvegarde en ligne.</p></div>`
+   :setPanel==='priv'?`<div class="stp prv"><p><b>Sur cet appareil</b> : ta progression et tes réglages, qui servent à choisir les plantes à revoir.</p>
+<p><b>Avec un compte</b> (facultatif) : ta progression est aussi sauvegardée en ligne. Tes amis voient ton pseudo et tes chiffres du jour, jamais ton e-mail.</p>
+<p><b>Version bêta</b> : quelques statistiques d'utilisation, anonymes, nous aident à améliorer l'appli. Rien de personnel.</p>
+<p><b>Tout effacer</b> : « Réinitialiser » ci-dessous, ou « Supprimer mon compte » dans ton profil. Pas de publicité, rien n'est revendu.</p></div>`
    :setPanel==='reset'?`<div class="stp"><p class="stm ko">${sbU&&sbP?'Effacer toute ta progression, sur cet appareil et dans ton compte ? Tes réglages et tes amis sont conservés.':'Effacer toute la progression sur cet appareil ? Tes réglages sont conservés.'}</p><div class="row"><button class="mini" id="set-no" type="button">Annuler</button><button class="mini ko full" id="set-yes" type="button">Tout effacer</button></div></div>`:'';
   return `<h3 class="stl">Objectif du jour</h3>
 <div class="str stg"><span><b id="set-gl">Exercices par jour</b></span><output class="sgv" id="set-gv" for="set-g">${g}</output></div>
@@ -3019,7 +3036,7 @@ function sbLib(){
   return sbLd;
 }
 const SB_ERR={'Anonymous sign-ins':'Indique ton adresse e-mail.','Error sending':'L\'e-mail n\'a pas pu être envoyé. Réessaie dans quelques minutes ; si le problème continue, préviens l\'équipe du royaume.',PSEUDO_PRIS:'Ce pseudo est déjà pris.',PSEUDO_INVALIDE:'Pseudo : 2 à 20 caractères (lettres, chiffres, point, tiret, soulignement).',CODE_INCONNU:'Aucun ami avec ce code.',SOI_MEME:'C\'est ton propre code !',TROP_D_ESSAIS:'Trop d\'essais : réessaie dans une heure.',HORS_LIGNE:'Le serveur des comptes ne répond pas. Vérifie ta connexion internet ; si elle marche, le projet Supabase est peut-être en pause (à relancer depuis le tableau de bord Supabase) ou son adresse est incorrecte.',MODULE:'Le module de connexion n\'a pas pu être chargé : vérifie ta connexion internet.','Invalid API key':'Clé Supabase refusée : vérifie la clé publique (« publishable ») dans index.html.','No API key':'Clé Supabase absente : vérifie index.html.',SANS_PROFIL:'Choisis d\'abord ton pseudo.',
-  'Invalid login credentials':'E-mail ou mot de passe incorrect.','already registered':'Un compte existe déjà avec cet e-mail : connecte-toi.','at least 6':'Mot de passe : 6 caractères au moins.','not confirmed':'Confirme d\'abord ton adresse avec le lien reçu par e-mail.','rate limit':'Trop de demandes : réessaie dans quelques minutes.','valid email':'Adresse e-mail invalide.'};
+  'Invalid login credentials':'E-mail ou mot de passe incorrect.','already registered':'Un compte existe déjà avec cet e-mail : connecte-toi.','at least 6':'Mot de passe : 8 caractères au moins, dont un caractère spécial.','at least 8':'Mot de passe : 8 caractères au moins, dont un caractère spécial.','should contain':'Mot de passe : 8 caractères au moins, dont un caractère spécial.','not confirmed':'Confirme d\'abord ton adresse avec le lien reçu par e-mail.','rate limit':'Trop de demandes : réessaie dans quelques minutes.','valid email':'Adresse e-mail invalide.'};
 const sbErr=e=>{const m=(e&&(e.message||e.msg))||String(e);for(const k in SB_ERR)if(m.includes(k))return SB_ERR[k];return /fetch|network|load failed/i.test(m)?SB_ERR.HORS_LIGNE:(console.warn('Supabase :',m),'Une erreur est survenue. Réessaie dans un instant ; si elle revient, préviens l\'équipe du royaume.')};
 async function sbRpc(f,a){const {data,error}=await sb.rpc(f,a||{});if(error)throw error;return data}
 // Mon bilan, calculé sur l'appareil : rang, plantes acquises, réussite sur 14 jours, jours de suite, chiffres du jour
@@ -3090,7 +3107,7 @@ async function ami(){
     // d'abord choisir : créer un compte ou se connecter ; puis les champs ; un seul bouton, dont le texte suit le choix
     h+=`<div class="card"><h3 class="hh">Mon compte</h3><p class="na">Facultatif : un compte sauvegarde ta progression et te permet de comparer ta journée avec tes amis.</p>
 <div class="sbt" role="tablist" aria-label="Compte"><button id="sb-tup" type="button" role="tab">Créer un compte</button><button id="sb-tin" type="button" role="tab">J'ai déjà un compte</button></div>
-<form id="sb-f" class="sbf" novalidate><label>E-mail<input id="sb-mail" type="email" inputmode="email" autocomplete="email" required value="${esc(sbMail)}"></label><label><span>Mot de passe <small id="sb-mh">6 caractères au moins</small></span><input id="sb-mdp" type="password" minlength="6"></label>${msg}
+<form id="sb-f" class="sbf" novalidate><label>E-mail<input id="sb-mail" type="email" inputmode="email" autocomplete="email" required value="${esc(sbMail)}"></label><label><span>Mot de passe <small id="sb-mh">8 caractères au moins, dont un spécial (! ? @ # …)</small></span><input id="sb-mdp" type="password" minlength="6"></label>${msg}
 <button class="big" id="sb-go" type="submit"></button><p class="na sbh" id="sb-ce">Tu recevras un e-mail pour confirmer ton adresse (regarde aussi dans les indésirables).</p>${sbLien()?'<button class="lnkb" id="sb-otp" type="button">Mot de passe oublié ? Recevoir un lien de connexion par e-mail</button>':''}</form></div>`;
     el.innerHTML=h;
     const mode=m=>{sbMode=m;const up=m==='up';try{localStorage.setItem('qp.sbm',m)}catch(e){}
@@ -3101,7 +3118,7 @@ async function ami(){
     $('sb-tup').onclick=()=>{mode('up');$('sb-mail').focus()};$('sb-tin').onclick=()=>{mode('in');$('sb-mail').focus()};
     // vérifié avant l'envoi : sans e-mail, Supabase croirait à une demande de compte anonyme ; l'adresse tapée est gardée
     const go=async(fn,mdp=true)=>{if(sbBusy)return;sbMsg='';sbOk='';const m=$('sb-mail').value.trim(),p=$('sb-mdp').value;sbMail=m;
-      if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m))sbMsg=m?'Adresse e-mail invalide.':'Indique ton adresse e-mail.';else if(mdp&&p.length<6)sbMsg='Mot de passe : 6 caractères au moins.';
+      if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m))sbMsg=m?'Adresse e-mail invalide.':'Indique ton adresse e-mail.';else if(mdp&&sbMode==='up'&&!(p.length>=8&&/[^A-Za-z0-9]/.test(p)))sbMsg='Mot de passe : 8 caractères au moins, dont un caractère spécial (! ? @ # …).';else if(mdp&&!p)sbMsg='Indique ton mot de passe.';
       if(sbMsg){ami();return}
       sbBusy=true;$('sb-go').disabled=true;try{await fn(m,p)}catch(e){sbMsg=sbErr(e)}sbBusy=false;if(!sbU||sbMsg||sbOk)ami()};
     const entrer=()=>go(async(m,p)=>{const {error}=await sb.auth.signInWithPassword({email:m,password:p});if(error)throw error});
@@ -3114,7 +3131,7 @@ async function ami(){
   if(sbP===undefined){el.innerHTML=h+`<div class="card"><h3 class="hh">Mon compte</h3>${msg}<div class="row"><button class="mini" id="sb-re" type="button">Réessayer</button><button class="mini" id="sb-out" type="button">Se déconnecter</button></div></div>`;
     $('sb-re').onclick=()=>{$('sb-re').disabled=true;sbConnecte()};$('sb-out').onclick=sbSortie;return}
   if(!sbP){
-    el.innerHTML=h+`<div class="card"><h3 class="hh">Choisis ton pseudo</h3><p class="na">C'est le nom que verront tes amis.</p><form id="sb-pf" class="sbf"><label>Pseudo<input id="sb-ps" maxlength="20" autocomplete="nickname" placeholder="Antoine"></label>${msg}<button class="big" type="submit">Valider</button></form><button class="lnkb" id="sb-out" type="button">Se déconnecter</button></div>`;
+    el.innerHTML=h+`<div class="card"><h3 class="hh">Choisis ton pseudo</h3><p class="na">C'est le nom que verront tes amis.</p><form id="sb-pf" class="sbf"><label>Pseudo<input id="sb-ps" maxlength="20" autocomplete="nickname" placeholder="Le Botaniste…"></label>${msg}<button class="big" type="submit">Valider</button></form><button class="lnkb" id="sb-out" type="button">Se déconnecter</button></div>`;
     $('sb-pf').onsubmit=async e=>{e.preventDefault();sbMsg='';try{sbP=await sbRpc('choisir_pseudo',{p_pseudo:$('sb-ps').value});await sbEnvoi()}catch(x){sbMsg=sbErr(x)}ami()};
     $('sb-out').onclick=sbSortie;return;
   }
