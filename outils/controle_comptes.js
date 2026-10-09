@@ -82,6 +82,7 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   // la session est gardée : rechargement
   await C.p.reload();await C.p.waitForTimeout(600);await C.p.evaluate(()=>{const s=$('splash');if(s)s.click()});await C.p.waitForTimeout(1600);
   await C.p.click('#medal');ok(await att(C.p,()=>!!document.querySelector('#sb-code'),null,15000),'session gardée après rechargement');
+  await C.p.waitForTimeout(3300);ok((await db.query('select bool_or(compte) c from public.visites')).rows[0].c===true,'visite comptée « avec compte » quand une session est enregistrée sur l\'appareil');
   // réseau coupé ou projet Supabase en pause : message clair, pas de demande de pseudo, puis reprise
   await C.p.route(URL_SB+'/rest/**',r=>r.abort());await C.p.evaluate(()=>sbConnecte());
   ok(await att(C.p,()=>/Le serveur des comptes ne répond pas/.test($('ami').innerText)&&!document.querySelector('#sb-pf')&&!!document.querySelector('#sb-re')),'réseau coupé : « Le serveur des comptes ne répond pas… » et bouton Réessayer');

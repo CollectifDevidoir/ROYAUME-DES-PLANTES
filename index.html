@@ -3003,7 +3003,7 @@ let vuA=0;
 function compterVisite(){
   if(!sbOn()||Date.now()-vuA<18e5)return;vuA=Date.now();
   let id='';try{id=localStorage.getItem('qp.app')||'';if(!/^[0-9a-f-]{36}$/.test(id)){id=crypto.randomUUID();localStorage.setItem('qp.app',id)}}catch(e){return}
-  let compte=false;try{compte=Object.keys(localStorage).some(k=>/^sb-.+-auth-token$/.test(k))}catch(e){}
+  let compte=false;try{compte=!!localStorage.getItem('qp.sb')}catch(e){}   // session du compte (storageKey de createClient)
   fetch(SBU+'/rest/v1/rpc/compter_visite',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json',apikey:SB_KEY,Authorization:'Bearer '+SB_KEY},
     body:JSON.stringify({p_appareil:id,p_jour:today(),p_compte:compte})}).catch(()=>{});
 }
