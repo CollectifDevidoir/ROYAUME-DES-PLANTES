@@ -1,0 +1,35 @@
+# Construit donnees/photos.json (photos iNaturalist déjà choisies pour chaque espèce) et le publie avec l'appli.
+# Lancement à la main : onglet « Actions » du dépôt > « Index des photos » > « Run workflow ».
+# Puis automatiquement le 1er de chaque mois.
+name: Index des photos
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 3 1 * *'
+permissions:
+  contents: write
+concurrency:
+  group: index-photos
+  cancel-in-progress: false
+jobs:
+  photos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/improve-html-app-e7b6o4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Construire l'index (1 requête par seconde, environ 1 h)
+        run: node outils/construire_photos.js
+      - name: Publier
+        run: |
+          git config user.name "Index des photos"
+          git config user.email "actions@github.com"
+          git add donnees/photos.json
+          git diff --cached --quiet && { echo "Rien de nouveau"; exit 0; }
+          git commit -m "Index des photos : mise à jour du $(date +%Y-%m-%d)"
+          git pull --rebase origin claude/improve-html-app-e7b6o4
+          git push origin HEAD:claude/improve-html-app-e7b6o4

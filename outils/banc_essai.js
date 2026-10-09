@@ -15,6 +15,7 @@ async function open(o={}){
     if(u.startsWith('https://img.test/')){const n=+(u.match(/photos\/(\d+)/)||[0,1])[1];return r.fulfill({contentType:'image/svg+xml',body:svg(n)})}
     return r.fulfill({status:404,body:''})});
   const p=await ctx.newPage();p.errs=[];p.on('pageerror',e=>p.errs.push(e.message));
+  if(o.avant)await o.avant(p);   // préparation facultative avant le chargement (ex. index des photos factice)
   // graine fixe facultative : même tirage à chaque passage (comparaison de captures)
   if(o.seed)await p.addInitScript(()=>{let x=12345;Math.random=()=>{x=(x*1103515245+12345)%2147483648;return x/2147483648}});
   if(o.state)await p.addInitScript(s=>{if(!sessionStorage.getItem('init')){localStorage.setItem('quizplantes.v1',s);localStorage.setItem('qp.coach','1');sessionStorage.setItem('init','1')}},o.state);
