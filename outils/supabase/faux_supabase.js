@@ -39,6 +39,8 @@ async function brancher(page,db,url,journal=[]){
     if(q.method()==='OPTIONS')return r.fulfill({status:204,headers:cors});
     const js=(s,o)=>r.fulfill({status:s,headers:{...cors,'content-type':'application/json'},body:o===undefined?'':JSON.stringify(o)});
     let corps={};try{corps=JSON.parse(q.postData()||'{}')}catch(e){}
+    // réglages publics du projet (lus par l'appli pour savoir si l'e-mail de confirmation est exigé)
+    if(u.pathname==='/auth/v1/settings')return js(200,{disable_signup:false,mailer_autoconfirm:!!journal.autoconfirm});
     // la mesure d'audience et les statistiques de jeu anonymes sont comptées à part : le journal ne garde que le trafic lié au compte
     if(u.pathname==='/rest/v1/rpc/compter_visite')journal.visites=(journal.visites||0)+1;
     else if(u.pathname==='/rest/v1/rpc/envoyer_jeu')journal.jeu=(journal.jeu||0)+1;else journal.push(u.pathname+u.search);

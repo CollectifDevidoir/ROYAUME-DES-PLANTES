@@ -3123,6 +3123,8 @@ async function sbEnvoi(){
 function sbDirty(){if(sbU&&sbP){clearTimeout(sbT);sbT=setTimeout(sbEnvoi,Math.max(4000,sbSync+3e4-Date.now()))}}
 document.addEventListener('visibilitychange',()=>{if(document.hidden&&sbT)sbEnvoi()});
 const sbLien=()=>/^https?:$/.test(location.protocol);
+// confirmation par e-mail exigée ? (réglage « Confirm email » du projet, lu une fois) : sinon la phrase « Tu recevras un e-mail » est cachée
+let sbAuto=null;const sbAutoP=()=>sbAuto!==null?Promise.resolve(sbAuto):fetch(SBU+'/auth/v1/settings',{headers:{apikey:SB_KEY}}).then(r=>r.ok?r.json():{}).then(j=>sbAuto=j.mailer_autoconfirm===true).catch(()=>false);
 // Onglet Profil
 async function ami(){
   const el=$('ami'),b=monBilan(),r=R[b.rang],nom=sbP?esc(sbP.pseudo):'Moi';
@@ -3146,8 +3148,8 @@ async function ami(){
     const mode=m=>{sbMode=m;const up=m==='up';try{localStorage.setItem('qp.sbm',m)}catch(e){}
       $('sb-tup').setAttribute('aria-selected',up);$('sb-tin').setAttribute('aria-selected',!up);
       $('sb-go').textContent=up?'Créer mon compte':'Se connecter';$('sb-mdp').autocomplete=up?'new-password':'current-password';
-      $('sb-mh').hidden=!up;$('sb-ce').hidden=!up;if($('sb-otp'))$('sb-otp').hidden=up};
-    mode(sbMode);
+      $('sb-mh').hidden=!up;$('sb-ce').hidden=!up||sbAuto===true;if($('sb-otp'))$('sb-otp').hidden=up};
+    mode(sbMode);sbAutoP().then(()=>{if($('sb-ce'))$('sb-ce').hidden=sbMode!=='up'||sbAuto===true});
     $('sb-tup').onclick=()=>{mode('up');$('sb-mail').focus()};$('sb-tin').onclick=()=>{mode('in');$('sb-mail').focus()};
     // vérifié avant l'envoi : sans e-mail, Supabase croirait à une demande de compte anonyme ; l'adresse tapée est gardée
     const go=async(fn,mdp=true)=>{if(sbBusy)return;sbMsg='';sbOk='';const m=$('sb-mail').value.trim(),p=$('sb-mdp').value;sbMail=m;
