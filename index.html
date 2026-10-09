@@ -2748,7 +2748,8 @@ function setHtml(){
   const pnl=setPanel==='save'?`<div class="stp"><p>Copie ta progression pour la garder ou la passer sur un autre appareil, ou colle une sauvegarde pour la restaurer.</p><div class="row"><button class="mini" id="set-copy" type="button">Copier</button><button class="mini" id="set-paste" type="button">Restaurer</button></div><div id="set-out"></div></div>`
    :setPanel==='priv'?`<div class="stp prv"><p><b>Sur cet appareil</b> : ta progression (plantes vues, niveaux, erreurs, jours joués) et tes réglages. Elle sert seulement à choisir les plantes à revoir et à suivre tes progrès.</p>
 <p><b>Avec un compte</b> (facultatif) : ton e-mail pour te connecter, ton pseudo, ton code ami, une copie de ta progression et tes chiffres du jour. Tes amis voient ton pseudo, ton rang et ces chiffres, jamais ton e-mail.</p>
-<p><b>Photos</b> : elles viennent d'iNaturalist et de Wikipédia, qui reçoivent seulement la demande d'image. Pas de publicité, pas de mesure d'audience, rien n'est revendu.</p>
+<p><b>Fréquentation</b> : à l'ouverture de l'appli, un numéro tiré au hasard pour cet appareil et la date sont comptés, pour savoir combien de personnes l'utilisent. Ni adresse IP, ni nom, ni cookie.</p>
+<p><b>Photos</b> : elles viennent d'iNaturalist et de Wikipédia, qui reçoivent seulement la demande d'image. Pas de publicité, pas de pistage, rien n'est revendu.</p>
 <p><b>Tout effacer</b> : « Réinitialiser » ci-dessous vide cet appareil ; « Supprimer mon compte », dans ton profil, efface le compte, le pseudo, les amitiés et la sauvegarde en ligne.</p></div>`
    :setPanel==='reset'?`<div class="stp"><p class="stm ko">${sbU&&sbP?'Effacer toute ta progression, sur cet appareil et dans ton compte ? Tes réglages et tes amis sont conservés.':'Effacer toute la progression sur cet appareil ? Tes réglages sont conservés.'}</p><div class="row"><button class="mini" id="set-no" type="button">Annuler</button><button class="mini ko full" id="set-yes" type="button">Tout effacer</button></div></div>`:'';
   return `<h3 class="stl">Objectif du jour</h3>
@@ -2996,6 +2997,18 @@ const sbNorm=u=>{u=(u||'').trim();const m=u.match(/supabase\.com\/dashboard\/pro
 // Jamais de clé secrète dans l'appli : elle donnerait tous les droits sur la base à n'importe quel visiteur
 const sbSecret=k=>/^sb_secret_/.test(k)||(()=>{try{return JSON.parse(atob(k.split('.')[1].replace(/-/g,'+').replace(/_/g,'/'))).role==='service_role'}catch(e){return false}})();
 const SBU=sbNorm(SB_URL),sbOn=()=>!!(SBU&&SB_KEY&&!sbSecret(SB_KEY));
+// Mesure d'audience anonyme (supabase/schema.sql, « visites ») : à chaque ouverture de l'appli, et au retour après
+// 30 min ou plus, un identifiant d'appareil tiré au hasard + le jour + « a un compte ». Ni IP, ni nom, ni cookie.
+let vuA=0;
+function compterVisite(){
+  if(!sbOn()||Date.now()-vuA<18e5)return;vuA=Date.now();
+  let id='';try{id=localStorage.getItem('qp.app')||'';if(!/^[0-9a-f-]{36}$/.test(id)){id=crypto.randomUUID();localStorage.setItem('qp.app',id)}}catch(e){return}
+  let compte=false;try{compte=Object.keys(localStorage).some(k=>/^sb-.+-auth-token$/.test(k))}catch(e){}
+  fetch(SBU+'/rest/v1/rpc/compter_visite',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json',apikey:SB_KEY,Authorization:'Bearer '+SB_KEY},
+    body:JSON.stringify({p_appareil:id,p_jour:today(),p_compte:compte})}).catch(()=>{});
+}
+setTimeout(compterVisite,3000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)compterVisite()});
 // La bibliothèque n'est chargée que si les comptes servent : onglet Profil ouvert, session enregistrée ou retour d'un lien de connexion.
 function sbLib(){
   if(sbLd)return sbLd;

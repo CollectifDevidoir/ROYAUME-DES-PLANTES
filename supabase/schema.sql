@@ -53,6 +53,16 @@ create table if not exists public.essais_ami (
   quand   timestamptz not null default now()
 );
 create index if not exists essais_ami_user on public.essais_ami (user_id, quand);
+
+-- Visites (mesure d'audience anonyme) : un identifiant d'appareil tiré au hasard par l'appli, le jour,
+-- le nombre d'ouvertures et si l'appareil a un compte. Ni adresse IP, ni nom, ni e-mail.
+create table if not exists public.visites (
+  jour        date    not null,
+  appareil    uuid    not null,
+  ouvertures  int     not null default 1 check (ouvertures between 1 and 500),
+  compte      boolean not null default false,
+  primary key (jour, appareil)
+);
 create index if not exists amities_ami on public.amities (ami_id);
 
 -- Aucune lecture ni écriture directe : seules les fonctions y accèdent.
@@ -61,7 +71,8 @@ alter table public.amities      enable row level security;
 alter table public.jours        enable row level security;
 alter table public.progressions enable row level security;
 alter table public.essais_ami   enable row level security;
-revoke all on public.profils, public.amities, public.jours, public.progressions, public.essais_ami from anon, authenticated;
+alter table public.visites      enable row level security;
+revoke all on public.profils, public.amities, public.jours, public.progressions, public.essais_ami, public.visites from anon, authenticated;
 
 -- ---------- Outils internes ----------
 create or replace function public._moi() returns uuid
@@ -196,11 +207,31 @@ begin
   delete from auth.users where id = _moi();
 end $$;
 
+-- ---------- Visites ----------
+-- Compte une ouverture de l'appli (visiteur avec ou sans compte). Jour accepté : hier, aujourd'hui ou demain
+-- (fuseaux horaires) ; 500 ouvertures au plus par appareil et par jour.
+create or replace function public.compter_visite(p_appareil uuid, p_jour date, p_compte boolean) returns void
+language plpgsql volatile security definer set search_path = public as $$
+begin
+  if p_appareil is null or p_jour is null or p_jour not between current_date - 1 and current_date + 1 then return; end if;
+  insert into visites (jour, appareil, compte) values (p_jour, p_appareil, coalesce(p_compte, false))
+  on conflict (jour, appareil) do update
+    set ouvertures = least(visites.ouvertures + 1, 500), compte = visites.compte or excluded.compte;
+end $$;
+
+-- Statistiques, à lire dans Supabase (SQL Editor) : « select * from visites_par_jour; »
+create or replace view public.visites_par_jour with (security_invoker = true) as
+  select jour, count(*) as appareils, sum(ouvertures) as ouvertures, count(*) filter (where compte) as avec_compte
+  from public.visites group by jour order by jour desc;
+revoke all on public.visites_par_jour from public, anon, authenticated;
+
 -- ---------- Droits : seules les fonctions publiques, et seulement une fois connecté ----------
 revoke all on function public._moi(), public._nouveau_code(), public._profil_json(profils) from public, anon, authenticated;
 revoke all on function public.mon_profil(), public.choisir_pseudo(text), public.publier(date, int, int, int, int, int, int, int),
   public.ajouter_ami(text), public.retirer_ami(text), public.tableau(date), public.sauver_progression(jsonb),
   public.lire_progression(), public.supprimer_compte() from public, anon;
+revoke all on function public.compter_visite(uuid, date, boolean) from public;
+grant execute on function public.compter_visite(uuid, date, boolean) to anon, authenticated;
 grant execute on function public.mon_profil(), public.choisir_pseudo(text), public.publier(date, int, int, int, int, int, int, int),
   public.ajouter_ami(text), public.retirer_ami(text), public.tableau(date), public.sauver_progression(jsonb),
   public.lire_progression(), public.supprimer_compte() to authenticated;

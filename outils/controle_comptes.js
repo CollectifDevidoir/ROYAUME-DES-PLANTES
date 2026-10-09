@@ -23,7 +23,9 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   const txt=p=>p.evaluate(()=>$('ami').innerText);
   // ---- Antoine : premier appareil
   const A=await appareil();
-  ok(!A.j.length,'au démarrage sans session : aucune requête vers Supabase');
+  ok(!A.j.length,'au démarrage sans session : aucune requête liée au compte');
+  await A.p.waitForTimeout(3300);
+  ok(A.j.visites===1&&(await db.query('select count(*)::int n, bool_or(compte) c from public.visites')).rows[0].n===1,'visite anonyme comptée une fois (appareil tiré au hasard, sans compte)');
   await lance(A.p,'mcq');await A.p.click('#opts button');await A.p.waitForTimeout(500);await A.p.click('#shn');await A.p.waitForTimeout(400);
   await A.p.click('#medal');ok(await att(A.p,()=>!!document.querySelector('#sb-f')),'profil (logo de rang) : formulaire de connexion');await T(A.p,'1-connexion');
   ok(await A.p.evaluate(()=>$('sb-tup').getAttribute('aria-selected')==='true'&&$('sb-go').textContent==='Créer mon compte'),'nouveau venu : onglet « Créer un compte » choisi, bouton « Créer mon compte »');

@@ -136,3 +136,16 @@ Ils demandent `@electric-sql/pglite` et `@supabase/supabase-js`, installés comm
 `npm i -g @electric-sql/pglite @supabase/supabase-js`.
 
 **Version de la bibliothèque.** L'appli charge `supabase-js` 2.117.3 depuis jsDelivr, avec une empreinte d'intégrité (SRI) : le navigateur refuse un fichier modifié. Pour changer de version, il faut mettre à jour `SB_LIB` et `SB_SRI` ensemble.
+
+## Fréquentation (mesure d'audience anonyme)
+
+L'appli compte chaque ouverture (et chaque retour après 30 min ou plus) : un identifiant d'appareil tiré au hasard,
+le jour, et si l'appareil a un compte. Ni adresse IP, ni nom, ni cookie. Table `visites`, illisible depuis l'appli.
+
+Pour voir les chiffres : Supabase > SQL Editor > New query, puis
+
+```sql
+select * from visites_par_jour;              -- par jour : appareils différents, ouvertures, appareils avec compte
+select count(distinct appareil) from visites; -- appareils différents depuis le début
+select count(distinct appareil) from visites where jour >= current_date - 6;  -- sur les 7 derniers jours
+```

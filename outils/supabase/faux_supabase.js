@@ -39,7 +39,8 @@ async function brancher(page,db,url,journal=[]){
     if(q.method()==='OPTIONS')return r.fulfill({status:204,headers:cors});
     const js=(s,o)=>r.fulfill({status:s,headers:{...cors,'content-type':'application/json'},body:o===undefined?'':JSON.stringify(o)});
     let corps={};try{corps=JSON.parse(q.postData()||'{}')}catch(e){}
-    journal.push(u.pathname+u.search);
+    // la mesure d'audience anonyme est comptée à part : le journal ne garde que le trafic lié au compte
+    if(u.pathname==='/rest/v1/rpc/compter_visite')journal.visites=(journal.visites||0)+1;else journal.push(u.pathname+u.search);
     if(u.pathname==='/auth/v1/signup'){
       const ex=(await db.query('select * from auth.users where email=$1',[corps.email])).rows[0];
       if(ex)return js(422,{code:422,error_code:'user_already_exists',msg:'User already registered'});

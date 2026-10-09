@@ -55,5 +55,14 @@ const refus=async(p,m,motif)=>{try{await p;ok(false,m+' (accepté à tort)')}cat
   await f('coline','select supprimer_compte()');
   ok((await db.query('select count(*)::int n from auth.users where id=$1',[U.coline])).rows[0].n===0&&(await db.query('select count(*)::int n from public.profils where id=$1',[U.coline])).rows[0].n===0,'compte supprimé avec toutes ses données');
   ok((await r('antoine','select tableau(current_date) r')).length===1,'Coline a disparu du tableau d\'Antoine');
+  // visites anonymes : un visiteur sans compte peut compter son ouverture, mais ne lit rien
+  const A1=require('crypto').randomUUID(),A2=require('crypto').randomUUID();
+  await comme(db,null,'select compter_visite($1,current_date,false)',[A1]);await comme(db,null,'select compter_visite($1,current_date,false)',[A1]);
+  await comme(db,U.antoine,'select compter_visite($1,current_date,true)',[A2]);
+  await comme(db,null,"select compter_visite($1,current_date - 30,false)",[A2]);
+  const v=(await db.query('select * from public.visites_par_jour')).rows;
+  ok(v.length===1&&+v[0].appareils===2&&+v[0].ouvertures===3&&+v[0].avec_compte===1,'visites : 2 appareils, 3 ouvertures, 1 avec compte (jour trop ancien ignoré) '+JSON.stringify(v));
+  await refus(comme(db,null,'select * from public.visites'),'visites : un visiteur ne lit pas la table','permission denied');
+  await refus(comme(db,U.antoine,'select * from public.visites_par_jour'),'visites : un compte ne lit pas les statistiques','permission denied');
   console.log(ech?ech+' ÉCHEC(S)':'SUPABASE (SQL) : tout est OK');process.exit(ech?1:0);
 })().catch(e=>{console.error(e);process.exit(1)});
