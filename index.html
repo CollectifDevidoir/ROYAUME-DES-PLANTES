@@ -2175,9 +2175,9 @@ const big=u=>u?u.replace(/\/(square|small|medium|large|original)\.(\w+)(\?.*)?$/
 const pid=u=>((u||'').match(/photos\/(\d+)\//)||[])[1]||u;
 // Index des photos (donnees/photos.json, construit chaque mois par outils/construire_photos.js) : photos déjà choisies,
 // famille et genre ; l'API iNaturalist n'est plus interrogée pour ces espèces (un groupe sur un même wifi ne la sature pas)
-let PHX=null;
+let PHX=null,PHS=new Set();   // PHS : espèces sans aucune photo libre (repli direct sur Wikipédia)
 const phxP=(window.PHOTOS_TEST?Promise.resolve(window.PHOTOS_TEST):location.protocol==='file:'?Promise.resolve(null):fetch('donnees/photos.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).catch(()=>null))
-  .then(j=>{PHX=j&&j.especes||null;return PHX});
+  .then(j=>{PHX=j&&j.especes||null;PHS=new Set(j&&j.sans||[]);return PHX});
 const phxPret=()=>Promise.race([phxP,new Promise(r=>setTimeout(r,2500))]).then(()=>PHX);
 const phxUrl=u=>/^\d+\.\w+$/.test(u)?'https://inaturalist-open-data.s3.amazonaws.com/photos/'+u.replace('.','/large.'):big(u);
 function phxEntree(l){
@@ -2188,7 +2188,7 @@ function phxEntree(l){
 async function inatTaxon(s,pri){
   const l=s[0],c=IC[l];
   if(c&&Date.now()-c.t<ITTL){c.u=Date.now();return c}
-  if(await phxPret()){const x=phxEntree(l);if(x){IC[l]=x;return x}}
+  if(await phxPret()){const x=phxEntree(l);if(x){IC[l]=x;return x}if(PHS.has(l))return null}
   if(Date.now()<iOff)return null;
   const j=await inat('taxa?q='+encodeURIComponent(l.replace(/×/g,' '))+'&per_page=10&locale=fr',pri||0);
   const r=(j.results||[]).find(x=>norm(x.name)===norm(l)||norm(x.matched_term||'')===norm(l));

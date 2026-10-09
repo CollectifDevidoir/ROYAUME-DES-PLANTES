@@ -25,32 +25,36 @@ async function api(p){
   throw new Error('trop d\'échecs');
 }
 // photo compacte : « identifiant.extension » pour le dépôt ouvert d'iNaturalist, sinon l'adresse complète
-const pc=u=>{const m=String(u).match(/^https:\/\/inaturalist-open-data\.s3\.amazonaws\.com\/photos\/(\d+)\/\w+\.(\w+)/);return m?m[1]+'.'+m[2]:u};
+const pc=u=>{const m=String(u).match(/^https:\/\/inaturalist-open-data\.s3\.amazonaws\.com\/photos\/(\d+)\/\w+\.(\w+)$/);return m?m[1]+'.'+m[2]:u};
 async function espece(l){
   const j=await api('taxa?q='+encodeURIComponent(l.replace(/×/g,' '))+'&per_page=10&locale=fr');
   const r=(j.results||[]).find(x=>norm(x.name)===norm(l)||norm(x.matched_term)===norm(l));
-  const dp=r&&r.default_photo;if(!r||!dp||!dp.license_code)return null;
-  const P=[[pc(dp.medium_url||dp.url),'',0,dp.attribution||'']],vu=new Set([String(dp.id)]);
+  if(!r)return null;
   const t=((await api('taxa/'+r.id+'?locale=fr')).results||[])[0]||{};
+  // photo principale : celle du taxon si elle est sous licence libre, sinon la première photo libre du taxon
+  const lib=[r.default_photo,...(t.taxon_photos||[]).map(x=>x.photo)].filter(p=>p&&p.license_code&&(p.medium_url||p.url));
+  const P=[],vu=new Set();if(lib[0]){const dp=lib[0];P.push([pc(dp.medium_url||dp.url),'',0,dp.attribution||'']);vu.add(String(dp.id))}
   const A=t.ancestors||[],fa=A.find(x=>x.rank==='family')||{},ge=A.find(x=>x.rank==='genus')||{};
   for(const[lb,v]of ORG){
     const o=((await api(`observations?taxon_id=${r.id}&term_id=12&term_value_id=${v}&quality_grade=research&photo_license=${ILIC}&photos=true&order_by=votes&order=desc&per_page=6&locale=fr`)).results||[])
       .find(o=>o.photos&&o.photos[0]&&o.photos[0].url&&!vu.has(String(o.photos[0].id)));
     if(o){const p=o.photos[0];vu.add(String(p.id));P.push([pc(p.url),lb,o.id,p.attribution||''])}
   }
+  if(!P.length)return null;
+  if(P[0][1]){P.unshift([P[0][0],'',P[0][2],P[0][3]])}   // pas de photo du taxon : la première photo d'organe sert de photo principale
   const ext=(t.taxon_photos||[]).map(x=>x.photo).filter(p=>p&&p.license_code&&!vu.has(String(p.id))).slice(0,4)
     .map(p=>[pc(p.medium_url||p.url),'Photo',0,p.attribution||'']);
   return[r.id,t.preferred_common_name||r.preferred_common_name||'',fa.name||'',fa.preferred_common_name||'',ge.name||'',P.concat(ext)];
 }
 (async()=>{
   const ancien=fs.existsSync(SORTIE)?JSON.parse(fs.readFileSync(SORTIE,'utf8')).especes||{}:{};
-  const L=S.filter(s=>!s[3]).slice(0,+process.argv[2]||S.length),out={};let ok=0,garde=0,rien=0;
+  const L=S.filter(s=>!s[3]).slice(0,+process.argv[2]||S.length),out={},sans=[];let ok=0,garde=0,rien=0;
   for(const[i,s]of L.entries()){
-    try{const e=await espece(s[0]);if(e){out[s[0]]=e;ok++}else rien++}
+    try{const e=await espece(s[0]);if(e){out[s[0]]=e;ok++}else{rien++;sans.push(s[0])}}
     catch(e){if(ancien[s[0]]){out[s[0]]=ancien[s[0]];garde++}else rien++;console.log('échec',s[0],e.message)}
     if(i%25===24)console.log(`${i+1}/${L.length} espèces, ${n} requêtes`);
   }
   if(ok<L.length*.8&&Object.keys(ancien).length){console.log(`seulement ${ok} espèces à jour : fichier précédent conservé`);process.exit(1)}
-  fs.writeFileSync(SORTIE,JSON.stringify({date:new Date().toISOString().slice(0,10),especes:out}));
+  fs.writeFileSync(SORTIE,JSON.stringify({date:new Date().toISOString().slice(0,10),especes:out,sans}));
   console.log(`${ok} espèces à jour, ${garde} reprises du fichier précédent, ${rien} sans photo libre ; ${n} requêtes ; ${(fs.statSync(SORTIE).size/1024).toFixed(0)} Ko`);
 })();
