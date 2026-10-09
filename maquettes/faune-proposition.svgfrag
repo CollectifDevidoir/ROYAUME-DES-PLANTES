@@ -1,0 +1,51 @@
+<g class="faune">
+ <!-- 1. Chouette hulotte endormie dans une loge du tronc -->
+ <g transform="translate(979 318)">
+  <path d="M-12 19C-15 6-14-9-7-16C-1-21 7-19 11-13C15-5 14 8 11 19Z" fill="var(--t1)" opacity=".42"/>
+  <path d="M-8 19C-10 10-9 1-7-4C-5-9-2-11 1-11C4-11 7-8 8-4C10 1 10 10 8 19Z" fill="var(--t1)" opacity=".42"/>
+  <path d="M-5.6-3.2Q-3.6-1.6-1.6-3.2M1.6-3.2Q3.6-1.6 5.6-3.2" fill="none" stroke="var(--bg2)" stroke-width="1" stroke-linecap="round" opacity=".7"/>
+  <path d="M-.9-1.2L0 1.4 .9-1.2Z" fill="var(--bg2)" opacity=".45"/>
+  <path d="M-4 6Q0 8 4 6M-4.5 10Q0 12 4.5 10" fill="none" stroke="var(--bg2)" stroke-width=".7" opacity=".25"/>
+ </g>
+ <!-- 2. Renard qui guette derrière le tronc, la queue posée de l'autre côté -->
+ <g transform="translate(629 787)">
+  <path d="M0 0C3-5 8-8 13-9L15-17 18-9.5 20-15.5 21.5-8.6C25-7.6 28-5.6 33-4.4C30-1.4 26 .4 21 .8C14 1.6 7 1.4 0 1.2Z" fill="#7d6247" opacity=".3"/>
+  <circle cx="22" cy="-5.2" r=".9" fill="var(--t1)" opacity=".55"/>
+  <path d="M-16 4C-24 1-34 2-42 8C-38 11-30 11-24 9C-20 8-17 6-16 5Z" fill="#7d6247" opacity=".3"/>
+  <path d="M-42 8C-40 6.4-37.6 6.2-35.6 7-37.6 9.2-40 9.4-42 8Z" fill="var(--bg2)" opacity=".55"/>
+ </g>
+ <!-- 3. Coccinelle qui remonte le rachis de la fronde -->
+ <g transform="translate(80.5 668) rotate(-34)">
+  <ellipse cx="0" cy="0" rx="4" ry="3.1" fill="#a8574a" opacity=".8"/>
+  <path d="M3.4-2A3 3 0 0 1 3.4 2L5.3 1.3A1.8 1.8 0 0 0 5.3-1.3Z" fill="var(--t1)" opacity=".75"/>
+  <path d="M0-3.1V3.1" stroke="var(--t1)" stroke-width=".55" opacity=".5"/>
+  <circle cx="-1.6" cy="-1.2" r=".65" fill="var(--t1)" opacity=".6"/><circle cx="1.5" cy="1.3" r=".65" fill="var(--t1)" opacity=".6"/>
+ </g>
+ <!-- 4. Escargot au pied d'un tronc -->
+ <g transform="translate(352 795)" fill="var(--t1)" opacity=".3">
+  <path d="M-10 0C-10-7-4-11 2-10C7-9 9-4 7 0Z"/><path d="M-13 0H11C13 0 15-2 15-4L17-9 16-3C16 0 14 1 11 1H-13Z"/>
+  <path d="M-1-6A3 3 0 1 1 2-3" fill="none" stroke="var(--bg2)" stroke-width="1" opacity=".55"/>
+ </g>
+ <!-- 5. Écureuil assis au pied d'un tronc, queue en panache -->
+ <g transform="translate(902 797)" fill="var(--t1)" opacity=".36">
+  <path d="M-3 0C-14-1-19-13-15-23C-12-31-3-34 2-28C-4-27-8-22-7-15C-6-9-2-5 2-3Z"/>
+  <path d="M0 0C-2-6-1-12 3-15C5-17 8-17 10-15L11-19.5 12.2-14.6C14-13 15-10.4 14-8.2C13-6.4 11.4-6 10.2-5.4C11-3.4 11 0 9 1Z"/>
+  <circle cx="11.4" cy="-11.6" r=".8" fill="var(--bg2)" opacity=".8"/>
+ </g>
+ <!-- 6. Mésange posée sur une petite branche morte -->
+ <g transform="translate(896 432)">
+  <path d="M-4 1.6C6 0 16-1.6 26-3.4" fill="none" stroke="var(--t1)" stroke-width="1.6" stroke-linecap="round" opacity=".2"/>
+  <path d="M8-1.2C8-6.2 11.6-9.4 15.6-9.4C18.4-9.4 20.2-7.6 20.8-5.8L23.6-5.6 20.8-4.2C20.4-1.4 18.4.8 15 1.2L9.2 1.8 3.4 4.6 6.4 1C7.4.4 8 -.2 8-1.2Z" fill="var(--t1)" opacity=".34"/>
+  <path d="M14 1.4 13.4 3.4M16.4 1.2 16.6 3" stroke="var(--t1)" stroke-width=".6" opacity=".34"/>
+ </g>
+ <!-- 7. Papillon dans un rayon de lumière -->
+ <g transform="translate(520 360) rotate(-12)" fill="#fff" opacity=".55">
+  <path d="M0 0C-3-6-9-8-10-4C-11 0-6 2 0 0Z"/><path d="M0 0C3-6 9-8 10-4C11 0 6 2 0 0Z"/>
+  <path d="M0 0C-2 3-6 5-7 3C-7 1-4 0 0 0Z"/><path d="M0 0C2 3 6 5 7 3C7 1 4 0 0 0Z"/>
+ </g>
+ <!-- 8. Toile d'araignée accrochée entre deux frondes -->
+ <g transform="translate(1110 716)" fill="none" stroke="var(--t1)" stroke-width=".5" opacity=".22">
+  <path d="M0 0L-16-12M0 0L4-18M0 0L18-8M0 0L14 12M0 0L-14 10"/>
+  <path d="M-6-4.5Q-2-7 1.5-7Q5-6 7-3Q7 1 5.5 4.5Q0 5.5-5.3 3.8Q-7.5 0-6-4.5Z M-11-8.2Q-4-12.5 2.8-12.5Q9-10 12.5-5.5Q12.5 2 9.6 8.2Q0 9.6-9.8 7Q-12.5 0-11-8.2Z"/>
+ </g>
+</g>
