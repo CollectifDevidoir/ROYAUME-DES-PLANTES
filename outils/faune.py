@@ -1,7 +1,7 @@
 """Petite faune du décor de fond (proposition) et fougères réparties sans symétrie.
 Tout est en silhouettes, dans les teintes et transparences du sous-bois ; coordonnées du décor (1200 × 800).
-Trois calques : FOND (renard, derrière un tronc lointain, masqué par lui), ARBRES (niche de chouette,
-écureuil, sur les troncs proches), DEVANT (coccinelles sur les frondes, papillons, toile)."""
+Trois calques : FOND (toile tendue entre deux troncs), ARBRES (niche de chouette, écureuil, sur les troncs
+proches), DEVANT (coccinelles sur les frondes, papillons)."""
 import math,sys,os
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 import io,contextlib
@@ -15,16 +15,11 @@ def qpt(x0,y0,x1,y1,cx,cy,t):
 FRONDES=[(0,800,190,628,40,640,15,50),(26,800,268,722,128,690,12,32),(-12,800,92,688,8,720,9,26),      # gauche
          (1200,800,1070,694,1172,702,11,34),(1184,800,1012,752,1100,736,9,24),                            # droite, plus basse
          (458,800,416,706,444,744,8,22),(470,800,548,714,494,744,9,25),(464,800,482,744,466,772,5,13),    # centre-gauche (téléphone)
-         (756,800,706,750,742,770,6,15)]                                                                  # centre-droit, seule
+         (756,800,706,750,742,770,6,15),                                                                  # centre-droit, seule
+         (150,800,214,744,170,770,7,16),(300,800,262,752,292,772,6,14),                                   # sol, à gauche
+         (612,800,574,748,600,772,7,17),(628,800,662,758,640,778,5,12),                                   # pied du tronc central
+         (900,800,932,752,908,772,6,14),(1040,800,990,756,1025,776,6,15)]                                 # sol, à droite
 FR=''.join(fronde(*a) for a in FRONDES)
-# ---------- Renard : ombre qui passe derrière un tronc lointain (x=621), la tête qui dépasse
-RENARD=('M-30-14C-24-19-8-21 6-19.5C13-19 18-20.5 22-24L23.6-31.5 26.4-25.6 29-30.6 29.8-23.6C32.4-22 35.6-20.2 40.6-18.8'
-        'C37.6-16.2 33.6-15.4 29.6-15.6C27.6-12.6 24.6-10.8 21-10.2L22.4-4 21.4 0H19.2L19.4-4 17.4-8.8C9-7.6 0-7.4-10-8.6'
-        'L-11.6-4.4-10.8 0H-13L-13.6-4.4-16-9.4C-21-10.4-25.6-11.6-29-12.6Z'
-        'M-29-13C-37-15-47-12-56-4C-51-1.6-43-2.4-37-6C-33.6-8-31-10.4-29-11.6Z')
-FOND=(f'<mask id="m-renard" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="800"><rect width="1200" height="800" fill="#fff"/>'
-      f'<path d="{tronc(621,10,4,1.5,-10,[])}" fill="#000"/></mask>'
-      f'<g mask="url(#m-renard)"><path transform="translate(603 797)" d="{RENARD}" fill="var(--t1)" opacity=".17"/></g>')
 # ---------- Niche de chouette, creusée dans le tronc proche x=979 (axe ≈ 976 à cette hauteur, demi-largeur ≈ 13)
 CHOUETTE=('<g transform="translate(976.5 322)">'
   '<path d="M-7.5 9C-9.4 2-8.8-6-4.6-10C-2-12.4 2.4-12.4 5-10C8.8-6 9.4 2 7.5 9C6 13-6 13-7.5 9Z" fill="var(--t1)" opacity=".42"/>'
@@ -32,12 +27,13 @@ CHOUETTE=('<g transform="translate(976.5 322)">'
   '<path d="M-3.4-1.6Q-2.2-.7-1-1.6M1-1.6Q2.2-.7 3.4-1.6" fill="none" stroke="var(--bg2)" stroke-width=".7" stroke-linecap="round" opacity=".7"/>'
   '<path d="M-.6-.6L0 1 .6-.6Z" fill="var(--bg2)" opacity=".45"/></g>')
 # ---------- Écureuil agrippé à la verticale au tronc proche x=217 (bord droit ≈ 231 à cette hauteur), tête vers le haut
-ECUREUIL=('<g transform="translate(230 578) scale(.95)" fill="var(--t1)" opacity=".36">'
-  '<path d="M8.4-4C16-2 23-7 24-16C25-23 21-28 16-27C14-26.6 13-25 13.6-23.6C17-23 19-19 18-14C17-9 13-7.4 9-8Z"/>'
-  '<path d="M1.6-21.6C-.4-16-.4-8 1-3C2.6 1 8 1 9.6-3C11.2-8 10.4-16.6 7.8-21.6Z"/>'
-  '<path d="M2.4-21C.8-23.6.8-28.2 2.6-31.4C4-30.6 5.8-30 7.2-29.4L8.8-32.8 8.9-28.4C9.7-26.8 9.5-23.4 7.6-21Z"/>'
-  '<circle cx="4.4" cy="-27.8" r=".75" fill="var(--bg2)"/>'
-  '<path d="M1.6-19.4-1.8-21.2M1.2-16.4-1.8-16M1.4-3.6-1.8-2.4M2-1.2-1 1.2" stroke="var(--t1)" stroke-width="1.5" stroke-linecap="round"/></g>')
+ECUREUIL=('<g transform="translate(230.5 592) scale(.85)" fill="var(--t1)" opacity=".36">'
+  '<path d="M11-4C16-2 21-4 23-9Q25.6-10 25.2-13Q27.2-15 26-18Q27-21 24.8-23Q25-26 22.4-27.2Q21.2-30 18.4-29.6Q17-31.6 14.6-30.4'
+  'C15.8-28 16.4-25.4 16.2-22.6C17.6-19.6 17.8-16 16.6-12.6C15.6-9.6 13.4-7.4 11-7Z"/>'
+  '<path d="M2.5-30C1-26 .4-20 .8-14C1.2-8 2.4-4 5-2.8C8-1.6 11.4-3 12.8-6.4C14.2-10 13.6-15 12-19.6C10.6-23.6 9.4-27.4 8.4-30.4C6.6-31.8 4-31.8 2.5-30Z"/>'
+  '<path d="M2.6-30.2C1.4-31.6 1-34 1.4-36.2C1.6-37.4 2-38.6 2.6-39.8C3.8-39.4 5.2-38.9 6.4-38.4C6.9-39.9 7.9-40.8 9-40.7C9.6-39.6 9.6-38.2 9.1-37C10.1-35.2 9.9-32.5 8.6-30.6C6.6-29.6 4.4-29.6 2.6-30.2Z"/>'
+  '<circle cx="4.7" cy="-35.6" r=".6" fill="var(--bg2)"/>'
+  '<path d="M2.4-27C1.2-27.8-.2-28.4-1.2-28.6M1.8-24.4C.6-24.2-.6-23.8-1.4-23.2M2.4-5.4C1-5-.2-4.2-1-3.4M3.6-3C2.4-2.2 1.2-1.2.4-.2" fill="none" stroke="var(--t1)" stroke-width="1.2" stroke-linecap="round"/></g>')
 # ---------- Coccinelles posées sur un rachis (position et sens calculés sur la courbe de la fronde)
 def cocci(i,t,dec=2.4,s=1):
     a=FRONDES[i];(x,y),ang=qpt(*a[:6],t);n=math.radians(ang-90);x+=dec*math.cos(n);y+=dec*math.sin(n)
@@ -50,13 +46,29 @@ COCCINELLES=cocci(0,.55)+cocci(6,.62,2.2,.9)+cocci(3,.42,2.4,.95)+cocci(1,.78,2,
 def papillon(x,y,a,s): return (f'<g transform="translate({x} {y}) rotate({a}) scale({s})" fill="#fff" opacity=".55">'
   '<path d="M0 0C-3-6-9-8-10-4C-11 0-6 2 0 0Z"/><path d="M0 0C3-6 9-8 10-4C11 0 6 2 0 0Z"/>'
   '<path d="M0 0C-2 3-6 5-7 3C-7 1-4 0 0 0Z"/><path d="M0 0C2 3 6 5 7 3C7 1 4 0 0 0Z"/></g>')
-PAPILLONS=papillon(520,362,-12,1)+papillon(845,262,16,.7)
-# ---------- Toile accrochée entre les deux frondes de droite
-TOILE=('<g transform="translate(1104 742)" fill="none" stroke="var(--t1)" stroke-width=".5" opacity=".2">'
-  '<path d="M0 0L-14-10M0 0L3-16M0 0L16-7M0 0L12 10M0 0L-12 8"/>'
-  '<path d="M-5.2-3.8Q-1.8-6 1.3-6Q4.4-5.2 6.2-2.6Q6.2 .9 4.8 3.9Q0 4.8-4.6 3.2Q-6.5 0-5.2-3.8Z'
-  'M-9.6-7Q-3.5-10.8 2.4-10.8Q7.8-8.6 10.8-4.8Q10.8 1.7 8.3 7.1Q0 8.3-8.5 6Q-10.8 0-9.6-7Z"/></g>')
+PAPILLONS=(papillon(520,362,-12,1)+papillon(845,262,16,.7)+papillon(452,612,8,.6)+papillon(688,468,-20,.55)
+           +papillon(1012,524,12,.6)+papillon(152,418,-8,.7))
+# ---------- Toile : grande, tendue entre le tronc proche x=217 (bord droit ≈ 232) et le tronc lointain x=339 (bord gauche ≈ 330)
+def toile(cx,cy,R,n=11,tours=6,g=232,dr=330):
+    import random;h=random.Random(7)
+    A=[math.radians(-90+360*k/n+h.uniform(-9,9)) for k in range(n)];L=[R*h.uniform(.86,1.04) for _ in A]
+    P=lambda k,r:(cx+r*math.cos(A[k%n]),cy+r*math.sin(A[k%n]))
+    d=''.join(f'M{f(cx)} {f(cy)}L{f(P(k,L[k])[0])} {f(P(k,L[k])[1])}' for k in range(n))       # rayons
+    for t in range(1,tours+1):                                                               # spirale, fils un peu détendus
+        q=t/tours*.94
+        for k in range(n):
+            a=P(k,L[k]*q);b=P(k+1,L[(k+1)%n]*q);m=((a[0]+b[0])/2,(a[1]+b[1])/2);c=(m[0]+(cx-m[0])*.07,m[1]+(cy-m[1])*.07)
+            d+=f'M{f(a[0])} {f(a[1])}Q{f(c[0])} {f(c[1])} {f(b[0])} {f(b[1])}'
+    # amarres : des rayons extérieurs jusqu'aux deux troncs, et un fil qui remonte
+    for k in range(n):
+        x,y=P(k,L[k])
+        if x<cx-R*.55:d+=f'M{f(x)} {f(y)}L{g} {f(y+(y-cy)*.25)}'
+        elif x>cx+R*.55:d+=f'M{f(x)} {f(y)}L{dr} {f(y+(y-cy)*.25)}'
+    top=min(range(n),key=lambda k:P(k,L[k])[1]);x,y=P(top,L[top]);d+=f'M{f(x)} {f(y)}L{f(x+4)} {f(y-60)}'
+    return f'<path d="{d}" fill="none" stroke="var(--t1)" stroke-width=".42" stroke-linecap="round" opacity=".26"/>'
+TOILE=toile(281,336,36)
+FOND=TOILE
 ARBRES=CHOUETTE+ECUREUIL
-DEVANT=COCCINELLES+PAPILLONS+TOILE
+DEVANT=COCCINELLES+PAPILLONS
 if __name__=='__main__':
     import json;json.dump({'FR':FR,'FOND':FOND,'ARBRES':ARBRES,'DEVANT':DEVANT},open(sys.argv[1],'w'))
