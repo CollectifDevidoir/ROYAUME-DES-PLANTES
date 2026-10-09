@@ -594,6 +594,11 @@ body:not(.nostick) .rank::after{content:'';position:absolute;left:0;right:0;top:
 .qkn li:first-child{border-top:0}
 .qkn li:nth-child(2){animation-delay:.05s}.qkn li:nth-child(3){animation-delay:.1s}.qkn li:nth-child(4){animation-delay:.15s}.qkn li:nth-child(5){animation-delay:.2s}
 .qkn li::before{content:counter(q);flex:none;width:19px;height:19px;border-radius:50%;background:rgba(47,107,63,.13);color:var(--ac);font:700 .7rem/19px system-ui;text-align:center;transform:translateY(-1px)}
+.mnm{display:flex;gap:9px;align-items:flex-start;margin:10px 0 4px;padding:8px 11px;border-radius:12px;background:var(--bg1);font-size:.85rem;line-height:1.35}
+.mnm .tgi{width:22px;height:22px;flex:none;margin-top:1px}
+.mnm b{display:block;font:italic 600 .98rem/1.3 Georgia,serif;color:var(--fg)}
+.mnm small{display:block;margin-top:2px;color:var(--mu);font-size:.78rem}
+.mnm a{color:var(--ac)}
 .diff{margin:8px 0 4px;padding-top:8px;border-top:1px solid var(--bd)}
 .diff p{margin:2px 0;font-size:.9rem;line-height:1.4;color:var(--fg)}
 .diff .lab{margin-bottom:3px}
@@ -2522,9 +2527,13 @@ const closeSheet=()=>{const d=$('fch');d.close?d.close():d.removeAttribute('open
 async function sheetData(sp){const[P,D]=await Promise.all([Promise.all(sp.map(spPhotos)),Promise.all(sp.map(descr))]);return{P,D}}
 const q3=s=>Q[s[0]]?Q[s[0]].split(' ; '):[];
 const qli=(a,big)=>big?'<ol class="qkn">'+a.map(x=>'<li><span>'+x+'</span></li>').join('')+'</ol>':'<ul class="qk">'+a.map(x=>'<li>'+x+'</li>').join('')+'</ul>';
+// Moyens mnémotechniques sourcés : [espèces, formule, explication, source]. Données : donnees/mnemotechniques.csv
+const MN=[];
+const mnOf=(a,b)=>MN.find(m=>m[0].includes(a)&&(!b||m[0].includes(b)))||null;
+const mnHtml=m=>m?`<p class="mnm"><span class="tgi">${HINT}</span><span><b>« ${esc(m[1])} »</b><small>${esc(m[2])}${m[3]?` · <a href="${esc(m[3])}" target="_blank" rel="noopener">source</a>`:''}</small></span></p>`:'';
 function cmpHtml(sp,tags){
-  if(sp.length===1)return '<p class="lab">À retenir</p>'+qli(q3(sp[0]),true);
-  return '<p class="lab">Points à comparer</p>'+`<div class="cmp2">${sp.map((s,i)=>`<div><b>${tags?ico(i?'croix':'coche','ic-in')+' ':''}${s[1]}</b><br><em>${s[0]}</em>${qli(q3(s))}</div>`).join('')}</div>`}
+  if(sp.length===1)return '<p class="lab">À retenir</p>'+qli(q3(sp[0]),true)+mnHtml(mnOf(sp[0][0]));
+  return '<p class="lab">Points à comparer</p>'+`<div class="cmp2">${sp.map((s,i)=>`<div><b>${tags?ico(i?'croix':'coche','ic-in')+' ':''}${s[1]}</b><br><em>${s[0]}</em>${qli(q3(s))}</div>`).join('')}</div>`+mnHtml(mnOf(sp[0][0],sp[1][0]))}
 const srcLinks=z=>z.split(' ; ').map(q=>{const m=q.match(/^(.*?) : (https?:\/\/\S+)$/);return m?`<a href="${m[2]}" target="_blank" rel="noopener">${esc(m[1])}</a>`:esc(q)}).join(' · ');
 const srcBlock=s=>{const o=SD[s[0]];return o?(o.statut?`<br><small>${esc(o.statut)}</small>`:'')+(o.sources?`<br><small>Sources botaniques : ${srcLinks(o.sources)}</small>`:''):''};
 const EXM={'Soleil':[2],'Soleil à mi-ombre':[1,2],'Mi-ombre':[1],'Mi-ombre à ombre':[0,1],'Ombre':[0]},HUM={'Sec':[0],'Sec à frais':[0,1],'Frais':[1],'Frais à humide':[1,2],'Humide':[2],'Aquatique':[3]},PHM={'Acide':[0],'Acide à neutre':[0,1],'Neutre':[1],'Neutre à alcalin':[1,2],'Tous pH':[0,1,2]};
@@ -2611,8 +2620,8 @@ async function showSheet(good,w,v){
     const col=(s,ok)=>`<div class="ec ${ok?'ok':'wr'}"><div class="cph" data-s="${esc(s[0])}">${phImg(s)}<span class="tg ${ok?'ok':'ko'}">${ok?'Bonne réponse':'Ta réponse'}</span></div><b>${s[1]}</b><em>${s[0]}</em>${qli(q3(s),true)}</div>`;
     const pk=Object.keys(C).find(k=>{const a=k.split('|');return a.includes(c[0])&&a.includes(w[0])}),y=whyHtml(c,w),rec=nc>=2?` · confondues ${Math.round(nc)} fois`:'';
     const dw=y||rec?`<p class="dwhy">${y?'On les confond : '+esc(y):''}${rec}</p>`:'';
-    cp=`<p class="lab">À retenir</p><div class="erw">${col(c,true)}${col(w,false)}</div>${pk?`<div class="diff"><p class="lab">Pour ne pas les confondre</p><p>${esc(brief(C[pk],240))}</p>${dw}</div>`:dw?`<div class="diff">${dw}</div>`:''}`;
-  }else cp=(!good&&!w?`<div class="key"><b>${v?`« ${esc(v)} » n'est pas dans la liste`:'Pas de réponse : voici comment la reconnaître'}</b></div>`:'')+'<p class="lab">À retenir</p>'+qli(q3(c),true);
+    cp=`<p class="lab">À retenir</p><div class="erw">${col(c,true)}${col(w,false)}</div>${pk?`<div class="diff"><p class="lab">Pour ne pas les confondre</p><p>${esc(brief(C[pk],240))}</p>${dw}</div>`:dw?`<div class="diff">${dw}</div>`:''}`+mnHtml(mnOf(c[0],w[0])||mnOf(c[0]));
+  }else cp=(!good&&!w?`<div class="key"><b>${v?`« ${esc(v)} » n'est pas dans la liste`:'Pas de réponse : voici comment la reconnaître'}</b></div>`:'')+'<p class="lab">À retenir</p>'+qli(q3(c),true)+mnHtml(mnOf(c[0]));
   $('shb').innerHTML=`<div class="cp">${cp}</div><button class="more" id="sh-more">${moreLbl(false)}</button><div class="dt" id="sh-dt"><p class="ld">Chargement…</p></div>`;
   $('shb').scrollTop=0;fitSh();setTimeout(fitSh,350);
   if(window.ResizeObserver){if(shRO)shRO.disconnect();shRO=new ResizeObserver(fitSh);const c0=document.querySelector('#shb .cp');if(c0)shRO.observe(c0)}
