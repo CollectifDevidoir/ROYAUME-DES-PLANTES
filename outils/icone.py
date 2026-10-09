@@ -40,5 +40,13 @@ def art(s=1):
 <path d="{canopy}" fill="url(#om)"/>
 <path d="{light}" fill="url(#or)" clip-path="url(#c)"/>
 </g></svg>'''
+def onglet():  # icône d'onglet du navigateur : l'arbre seul, en aplats, tronc élargi pour rester lisible à 16 px
+    canopy=bumps(256,250,106,84,11,.085,-90,J);light=bumps(245,230,97,73,11,.085,-90,J)
+    trunk='M220 408C235 394 240 374 240 348L240 322L272 322L272 348C272 374 277 394 292 408Z'
+    tsh='M256 322L272 322L272 348C272 374 277 394 292 408L266 408C262 386 258 356 256 322Z'
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="122 140 268 268" width="64" height="64">
+<defs><clipPath id="c"><path d="{canopy}"/></clipPath></defs>
+<path d="{trunk}" fill="#8a5a36"/><path d="{tsh}" fill="#6c4428"/>
+<path d="{canopy}" fill="#d48f2c"/><path d="{light}" fill="#f2bd47" clip-path="url(#c)"/></svg>'''
 D=sys.argv[1] if len(sys.argv)>1 else 'icones'
-open(D+'/icone.svg','w').write(art(1));open(D+'/icone-masquable.svg','w').write(art(.82))   # puis export PNG 512, 192, 180 (iPhone)
+open(D+'/favicon.svg','w').write(onglet());open(D+'/icone.svg','w').write(art(1));open(D+'/icone-masquable.svg','w').write(art(.82))   # puis export PNG 512, 192, 180 (iPhone)

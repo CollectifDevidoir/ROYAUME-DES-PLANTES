@@ -10,7 +10,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Royaume des plantes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%233f8f4f' d='M32 4C47 13 54 28 47 43C43 51 37 55 32 56C27 55 21 51 17 43C10 28 17 13 32 4Z'/%3E%3Cpath fill='none' stroke='%23e8f3df' stroke-width='3' stroke-linecap='round' d='M32 14V60M32 30L41 23M32 41L22 33'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="icones/favicon.svg?v=1">
+<link rel="icon" type="image/png" sizes="32x32" href="icones/favicon-32.png?v=1">
 <title>Le royaume des plantes</title>
 <!-- icône d'écran d'accueil : l'arbre doré du royaume dans une trouée de forêt, dessiné par outils/icone.py, voir icones/ -->
 <link rel="manifest" href="manifest.webmanifest?v=2">
@@ -932,6 +933,19 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
   #pro>.card{margin:0}
   #pro>.card:nth-child(2){grid-column:2;grid-row:1/span 2}
   #pro>.pl2{grid-column:1/-1}
+}
+/* Ordinateur : barre de défilement intégrée (fine, aux couleurs de l'appli, décollée des coins arrondis des volets) */
+@media (pointer:fine){
+  ::-webkit-scrollbar{width:12px;height:12px}
+  ::-webkit-scrollbar-track{background:transparent;margin:22px 0}
+  ::-webkit-scrollbar-thumb{background:rgba(47,107,63,.28);border-radius:12px;border:4px solid transparent;background-clip:padding-box}
+  ::-webkit-scrollbar-thumb:hover{background-color:rgba(47,107,63,.5)}
+  ::-webkit-scrollbar-corner{background:transparent}
+  @supports not selector(::-webkit-scrollbar){html,dialog,dialog *,.sh *{scrollbar-width:thin;scrollbar-color:rgba(47,107,63,.35) transparent}}
+}
+@media (pointer:fine) and (prefers-color-scheme:dark){
+  ::-webkit-scrollbar-thumb{background-color:rgba(200,230,200,.22)}
+  ::-webkit-scrollbar-thumb:hover{background-color:rgba(200,230,200,.4)}
 }
 @keyframes dpop{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){dialog.bs[open]{animation:none}}
@@ -3017,6 +3031,7 @@ function sbConnecte(){const uid=sbU&&sbU.id||null;if(sbCx&&sbCxU===uid)return sb
 // Envoi : chiffres du jour + sauvegarde de la progression (quelques secondes après la dernière réponse)
 // Avant d'écrire, on relit la sauvegarde du compte et on la fusionne : ce qu'un autre appareil a appris entre-temps
 // n'est jamais écrasé. Exception : juste après « Réinitialiser » (sbRaz), l'appareil fait foi et vide aussi le compte.
+// Charge : au plus un envoi toutes les 30 s, et tout de suite quand on quitte l'appli (relecture avant chaque écriture : jamais d'écrasement)
 let sbEnv=null,sbEnc=false,sbRaz=false;
 async function sbEnvoi(){
   clearTimeout(sbT);sbT=null;if(!sb||!sbU||!sbP)return;
@@ -3029,7 +3044,7 @@ async function sbEnvoi(){
   try{await sbEnv}finally{sbEnv=null}
   if(sbEnc){sbEnc=false;return sbEnvoi()}
 }
-function sbDirty(){if(sbU&&sbP){clearTimeout(sbT);sbT=setTimeout(sbEnvoi,4000)}}
+function sbDirty(){if(sbU&&sbP){clearTimeout(sbT);sbT=setTimeout(sbEnvoi,Math.max(4000,sbSync+3e4-Date.now()))}}
 document.addEventListener('visibilitychange',()=>{if(document.hidden&&sbT)sbEnvoi()});
 const sbLien=()=>/^https?:$/.test(location.protocol);
 // Onglet Profil
