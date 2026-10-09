@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+<defs>
+<clipPath id="c"><path d="M256.0 166.0Q290.9 155.7 313.3 179.3Q347.7 187.0 352.4 215.1Q380.5 235.8 360.9 262.0Q368.0 290.5 336.1 305.0Q323.1 332.7 285.9 330.6Q256.0 350.4 226.1 330.6Q189.9 331.5 175.9 305.0Q143.2 290.8 151.1 262.0Q131.5 235.8 159.6 215.1Q163.6 186.6 198.7 179.3Q221.1 155.7 256.0 166.0Z"/></clipPath><clipPath id="a"><path d="M104 640V258A152 152 0 0 1 408 258V640Z"/></clipPath>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d6c45"/><stop offset="1" stop-color="#173f28"/></linearGradient>
+<radialGradient id="glo" cx="256" cy="250" r="230" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f6e7a6" stop-opacity=".32"/><stop offset="1" stop-color="#f6e7a6" stop-opacity="0"/></radialGradient>
+<linearGradient id="ar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbf3d6"/><stop offset="1" stop-color="#e3edd3"/></linearGradient>
+<radialGradient id="halo" cx="252" cy="236" r="170" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff9d9"/><stop offset=".5" stop-color="#fdeaa6" stop-opacity=".9"/><stop offset="1" stop-color="#fdeeb4" stop-opacity="0"/></radialGradient>
+<linearGradient id="hi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4f9159"/><stop offset="1" stop-color="#2f6b3f"/></linearGradient>
+<linearGradient id="or" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" stop-color="#f9d266"/><stop offset="1" stop-color="#eaaa3c"/></linearGradient>
+<linearGradient id="om" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9962f"/><stop offset="1" stop-color="#b9741f"/></linearGradient>
+<linearGradient id="tr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#94613a"/><stop offset=".55" stop-color="#7a4f2e"/><stop offset=".56" stop-color="#5f3c1f"/><stop offset="1" stop-color="#5a381c"/></linearGradient>
+<radialGradient id="sh" cx="256" cy="404" r="80" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 404) scale(1 .12) translate(0 -404)"><stop offset="0" stop-color="#1f4a2c" stop-opacity=".7"/><stop offset="1" stop-color="#1f4a2c" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="512" height="512" fill="url(#bg)"/>
+<g transform="translate(256 262) scale(1) translate(-256 -262)">
+<circle cx="256" cy="250" r="230" fill="url(#glo)"/>
+<path d="M104 418V258A152 152 0 0 1 408 258V418Z" fill="url(#ar)"/>
+<g clip-path="url(#a)"><circle cx="252" cy="236" r="170" fill="url(#halo)"/></g>
+<path d="M104 640V404Q256 374 408 404V640Z" fill="url(#hi)"/><ellipse cx="256" cy="404" rx="80" ry="10" fill="url(#sh)"/>
+<path d="M228 404C240 390 245 370 245 346L245 322L267 322L267 346C267 370 272 390 284 404Z" fill="url(#tr)"/>
+<path d="M256.0 166.0Q290.9 155.7 313.3 179.3Q347.7 187.0 352.4 215.1Q380.5 235.8 360.9 262.0Q368.0 290.5 336.1 305.0Q323.1 332.7 285.9 330.6Q256.0 350.4 226.1 330.6Q189.9 331.5 175.9 305.0Q143.2 290.8 151.1 262.0Q131.5 235.8 159.6 215.1Q163.6 186.6 198.7 179.3Q221.1 155.7 256.0 166.0Z" fill="url(#om)"/>
+<path d="M245.0 157.0Q277.0 148.0 297.4 168.6Q328.9 175.3 333.2 199.7Q359.0 217.7 341.0 240.4Q347.5 265.2 318.3 277.8Q306.4 301.9 272.3 300.0Q245.0 317.3 217.7 300.0Q184.5 300.8 171.7 277.8Q141.8 265.5 149.0 240.4Q131.0 217.7 156.8 199.7Q160.5 174.9 192.6 168.6Q213.0 148.0 245.0 157.0Z" fill="url(#or)" clip-path="url(#c)"/>
+</g></svg>

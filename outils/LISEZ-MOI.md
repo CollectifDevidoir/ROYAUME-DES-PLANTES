@@ -36,4 +36,5 @@ Fichiers d'appui : `banc_essai.js` (ouverture de l'appli avec un faux iNaturalis
 |---|---|
 | `cles_vers_appli.py` | Vérifie les clés de `donnees/cles-revues.csv` (3 à 5 clés, 55 caractères au plus, source présente) et régénère la table `Q` de `index.html`. |
 | `illustrations.py [--ecrire] [--json fichier]` | Dessine les illustrations « vignettes ludiques » (icônes, catégories, rangs), le décor de fond et la page d'ouverture et leur CSS. Avec `--ecrire`, les remplace dans `index.html`. |
+| `icone.py [dossier]` | Dessine l'icône d'écran d'accueil (arbre doré dans une trouée de forêt, halo de lumière) : `icones/icone.svg` et `icone-masquable.svg` (motif réduit pour les masques ronds d'Android). Les PNG de `icones/` (512, 192 et 180 pour l'iPhone) en sont exportés ; changer `?v=` dans `index.html` et `manifest.webmanifest` après un nouvel export. |
 | `nettoie_css.py [--ecrire]` | Repère les classes CSS que l'appli n'utilise plus et les retire avec `--ecrire`. Sans option, il affiche seulement ce qu'il retirerait. |
