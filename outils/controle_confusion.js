@@ -30,6 +30,11 @@ for(const [w,h,t] of [[360,640,true],[390,844,true],[768,1024,true],[1440,900,fa
   ok(r&&r.cx<2&&r.cy<2,tag+' médaillon centré entre les photos ('+(r&&r.cx.toFixed(1))+' / '+(r&&r.cy.toFixed(1))+' px)');
   ok(r&&r.avant&&r.go,tag+' ordre : duel, puis points à comparer, puis exercice');
   ok(r&&r.deb&&r.dlg,tag+' pas de débordement');
+  // moyen mnémotechnique : seulement dans « Pour ne pas les confondre », quand on a confondu les deux espèces concernées
+  {const mn=await p.evaluate(()=>{const t=(a,w,g)=>{cur=S.find(s=>s[0]===a);showSheet(g,w?S.find(s=>s[0]===w):null,'');return [!!document.querySelector('#shb .mnm'),!!document.querySelector('#shb .diff .mnm')]};
+      const r=[t('Carpinus betulus','Fagus sylvatica',false),t('Fagus sylvatica','Carpinus betulus',false),t('Carpinus betulus',null,true),t('Picea abies','Picea omorika',false),t('Picea abies','Abies alba',false)];$('sh').hidden=true;return r});
+    ok(mn[0].join()==='true,true'&&mn[1].join()==='true,true'&&mn[4].join()==='true,true',tag+' moyen mnémotechnique dans « Pour ne pas les confondre » (charme/hêtre, épicéa/sapin)');
+    ok(mn[2].join()==='false,false'&&mn[3].join()==='false,false',tag+' pas de moyen mnémotechnique hors de la paire concernée (bonne réponse, deux épicéas)')}
   ok(p.errs.length===0,tag+' aucune erreur JavaScript '+(p.errs.length?JSON.stringify(p.errs.slice(0,2)):''));
   await ctx.close();
 }

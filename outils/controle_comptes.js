@@ -63,7 +63,7 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   // ---- Antoine voit Coline après actualisation
   await A.p.click('#sb-maj');ok(await att(A.p,()=>/Coline/.test($('ami').innerText)),'Antoine voit Coline (amitié réciproque)');
   // ---- Coline change de pseudo : pseudo pris refusé, annuler ne change rien, puis nouveau pseudo visible par son ami
-  await B.p.click('#sb-pe');await B.p.fill('#sb-ps2','antoine');await B.p.click('#sb-pf2 button[type=submit]');
+  await B.p.evaluate(()=>$('sb-pn').scrollIntoView({block:'center'}));await T(B.p,'3b-pseudo');await B.p.click('#sb-pe');await T(B.p,'3c-pseudo-modif');await B.p.fill('#sb-ps2','antoine');await B.p.click('#sb-pf2 button[type=submit]');
   ok(await att(B.p,()=>/déjà pris/.test($('ami').innerText)&&!!$('sb-ps2')),'changer de pseudo : pseudo déjà pris (casse ignorée) refusé, le champ reste ouvert');
   await B.p.click('#sb-pa');ok(await att(B.p,()=>$('sb-pn')&&$('sb-pn').textContent==='Coline'),'changer de pseudo : « Annuler » garde l\'ancien');
   await B.p.click('#sb-pe');await B.p.fill('#sb-ps2','x');await B.p.click('#sb-pf2 button[type=submit]');ok(await att(B.p,()=>/2 à 20/.test($('ami').innerText)),'changer de pseudo : trop court refusé');
