@@ -64,5 +64,23 @@ const refus=async(p,m,motif)=>{try{await p;ok(false,m+' (accepté à tort)')}cat
   ok(v.length===1&&+v[0].appareils===2&&+v[0].ouvertures===3&&+v[0].avec_compte===1,'visites : 2 appareils, 3 ouvertures, 1 avec compte (jour trop ancien ignoré) '+JSON.stringify(v));
   await refus(comme(db,null,'select * from public.visites'),'visites : un visiteur ne lit pas la table','permission denied');
   await refus(comme(db,U.antoine,'select * from public.visites_par_jour'),'visites : un compte ne lit pas les statistiques','permission denied');
+  // statistiques de jeu anonymes : envoi par paquets, valeurs vérifiées, tableaux récap illisibles depuis l'appli
+  const L=(o)=>Object.assign({j:new Date().toISOString().slice(0,10),h:10,e:'Carpinus betulus',c:'arbre',x:'qcm',o:'plante',m:'classique',v:3,ok:1,a:0,s:24},o);
+  await comme(db,null,'select envoyer_jeu($1,$2::jsonb,$3::jsonb)',[A1,JSON.stringify([L(),L({e:'Fagus sylvatica',v:2,ok:2,a:1,s:9999}),L({x:'pirate'}),L({e:'<script>'}),L({j:'2001-01-01'})]),JSON.stringify([{j:L().j,e:'Carpinus betulus',r:'Fagus sylvatica',n:2},{j:L().j,e:'Carpinus betulus',r:'Carpinus betulus',n:1}])]);
+  await comme(db,U.antoine,'select envoyer_jeu($1,$2::jsonb,$3::jsonb)',[A2,JSON.stringify([L({v:1,ok:0,x:'saisie',o:'feuillage',m:'erreurs'})]),JSON.stringify([{j:L().j,e:'Carpinus betulus',r:'Fagus sylvatica',n:1}])]);
+  await comme(db,null,'select envoyer_jeu($1,$2::jsonb,$3::jsonb)',[A1,JSON.stringify([L({v:1,ok:1})]),'[]']);
+  const jj=(await db.query('select * from public.jeu_par_jour')).rows[0];
+  ok(+jj.joueurs===2&&+jj.exercices===7&&+jj.justes===4&&+jj.fautes===3&&+jj.plantes_acquises===1,'jeu : 2 joueurs, 7 exercices, 4 justes (lignes invalides ignorées) '+JSON.stringify(jj));
+  ok(+(await db.query("select secondes from public.jeu where espece='Fagus sylvatica'")).rows[0].secondes===240,'jeu : temps de réponse plafonné (2 min par exercice)');
+  const ev=(await db.query('select * from public.especes_vues')).rows;
+  ok(ev[0].espece==='Carpinus betulus'&&+ev[0].vues===5&&+ev[0].reussite===40&&+ev[0].joueurs===2,'jeu : plantes les plus vues '+JSON.stringify(ev[0]));
+  const cf=(await db.query('select * from public.confusions')).rows;
+  ok(cf.length===1&&+cf[0].fois===3&&+cf[0].joueurs===2,'jeu : confusions (une plante n\'est pas confondue avec elle-même) '+JSON.stringify(cf));
+  const pe=(await db.query("select * from public.par_exercice where critere='1 exercice' order by valeur")).rows;
+  ok(pe.length===2&&pe[0].valeur==='qcm'&&+pe[0].exercices===6,'jeu : réussite par type d\'exercice');
+  ok((await db.query('select * from public.par_heure')).rows.length===1,'jeu : exercices par heure');
+  await refus(comme(db,null,'select envoyer_jeu($1,$2::jsonb,$3::jsonb)',[A1,JSON.stringify(Array(401).fill(L())),'[]']).then(async()=>{if(+(await db.query('select sum(vues) n from public.jeu')).rows[0].n!==7)throw new Error('trop gros paquet ignoré');throw new Error('ignoré')}),'jeu : paquet de plus de 400 lignes','ignoré');
+  for(const tb of ['jeu','jeu_confusions','jeu_par_jour','especes_vues','especes_ratees','confusions','par_exercice','par_heure'])await refus(comme(db,null,`select * from public.${tb}`),'jeu : un visiteur ne lit pas '+tb,'permission denied');
+  await refus(comme(db,U.antoine,'select * from public.especes_vues'),'jeu : un compte ne lit pas les statistiques','permission denied');
   console.log(ech?ech+' ÉCHEC(S)':'SUPABASE (SQL) : tout est OK');process.exit(ech?1:0);
 })().catch(e=>{console.error(e);process.exit(1)});

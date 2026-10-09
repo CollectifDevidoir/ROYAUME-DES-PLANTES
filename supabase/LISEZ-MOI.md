@@ -149,3 +149,41 @@ select * from visites_par_jour;              -- par jour : appareils différents
 select count(distinct appareil) from visites; -- appareils différents depuis le début
 select count(distinct appareil) from visites where jour >= current_date - 6;  -- sur les 7 derniers jours
 ```
+
+## Statistiques de jeu (anonymes)
+
+Chaque réponse du quiz alimente des compteurs, avec le même identifiant d'appareil tiré au hasard que les visites.
+On garde le jour, l'heure, la plante, son type, le type d'exercice (`qcm`, `saisie`, `photos`), l'organe photographié
+(`plante`, `feuillage`, `fleurs`, `fruits`, `autre`, `photos`), le mode (`classique`, une catégorie, `famille`, `erreurs`,
+`revoir`, `paire`), puis les réponses justes, les plantes acquises et le temps de réponse (2 min au plus par exercice).
+On garde aussi la plante répondue à la place en cas d'erreur. L'appli envoie le tout par paquets : 30 s après une
+réponse, et quand on quitte la page. Hors ligne, le paquet attend sur l'appareil. Tables `jeu` et `jeu_confusions`,
+illisibles depuis l'appli.
+
+Tableaux récap : Supabase > SQL Editor > New query, puis
+
+```sql
+select * from jeu_par_jour;      -- par jour : joueurs, exercices, justes, fautes, réussite %, exercices par joueur, plantes acquises, temps moyen
+select * from especes_vues;      -- plantes les plus montrées, avec leur réussite et le nombre de joueurs
+select * from especes_ratees;    -- plantes les plus difficiles (10 vues au moins), de la moins réussie à la plus réussie
+select * from confusions;        -- plante montrée → plante répondue à la place, nombre de fois et de joueurs
+select * from par_exercice;      -- réussite par type d'exercice, organe photographié, mode et catégorie de plante
+select * from par_heure;         -- à quelle heure on joue
+```
+
+Pour une période précise, par exemple le jour d'un atelier, filtre directement les tables :
+
+```sql
+-- plantes vues le 15 octobre 2026
+select espece, sum(vues) vues, round(100.0 * sum(justes) / sum(vues)) reussite, count(distinct appareil) joueurs
+from jeu where jour = '2026-10-15' group by espece order by vues desc;
+
+-- confusions de la semaine
+select espece, reponse, sum(fois) fois from jeu_confusions
+where jour >= current_date - 6 group by espece, reponse order by fois desc;
+
+-- exercices par heure pendant l'atelier
+select heure, sum(vues) exercices, count(distinct appareil) joueurs from jeu where jour = '2026-10-15' group by heure order by heure;
+```
+
+Le résultat d'une requête peut être exporté en CSV (bouton d'export au-dessus du résultat) pour l'ouvrir dans un tableur.

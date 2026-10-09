@@ -63,6 +63,33 @@ create table if not exists public.visites (
   compte      boolean not null default false,
   primary key (jour, appareil)
 );
+-- Statistiques de jeu (anonymes) : même identifiant d'appareil tiré au hasard que pour les visites.
+-- Une ligne par jour, heure, appareil, plante, type d'exercice, organe photographié et mode, avec des compteurs.
+create table if not exists public.jeu (
+  jour      date     not null,
+  heure     smallint not null check (heure between 0 and 23),
+  appareil  uuid     not null,
+  espece    text     not null,
+  categorie text     not null,
+  exercice  text     not null,   -- qcm, saisie, photos
+  organe    text     not null,   -- plante, feuillage, fleurs, fruits, autre, photos
+  mode      text     not null,   -- classique, arbre, arbuste…, famille, erreurs, revoir, paire
+  vues      int      not null default 0,
+  justes    int      not null default 0,
+  acquises  int      not null default 0,
+  secondes  int      not null default 0,
+  primary key (jour, heure, appareil, espece, exercice, organe, mode)
+);
+-- Confusions : plante montrée, plante répondue à la place.
+create table if not exists public.jeu_confusions (
+  jour      date not null,
+  appareil  uuid not null,
+  espece    text not null,
+  reponse   text not null,
+  fois      int  not null default 0,
+  primary key (jour, appareil, espece, reponse)
+);
+create index if not exists jeu_appareil on public.jeu (appareil, jour);
 create index if not exists amities_ami on public.amities (ami_id);
 
 -- Aucune lecture ni écriture directe : seules les fonctions y accèdent.
@@ -72,7 +99,10 @@ alter table public.jours        enable row level security;
 alter table public.progressions enable row level security;
 alter table public.essais_ami   enable row level security;
 alter table public.visites      enable row level security;
-revoke all on public.profils, public.amities, public.jours, public.progressions, public.essais_ami, public.visites from anon, authenticated;
+alter table public.jeu          enable row level security;
+alter table public.jeu_confusions enable row level security;
+revoke all on public.profils, public.amities, public.jours, public.progressions, public.essais_ami, public.visites,
+  public.jeu, public.jeu_confusions from anon, authenticated;
 
 -- ---------- Outils internes ----------
 create or replace function public._moi() returns uuid
@@ -225,6 +255,73 @@ create or replace view public.visites_par_jour with (security_invoker = true) as
   from public.visites group by jour order by jour desc;
 revoke all on public.visites_par_jour from public, anon, authenticated;
 
+-- ---------- Statistiques de jeu ----------
+-- Reçoit un paquet de compteurs déjà regroupés par l'appli (400 lignes au plus par envoi).
+-- Jours acceptés : la semaine passée (paquets gardés hors ligne) ; valeurs vérifiées ; plafonds par ligne et par appareil.
+create or replace function public.envoyer_jeu(p_appareil uuid, p_jeu jsonb, p_confusions jsonb) returns void
+language plpgsql volatile security definer set search_path = public as $$
+declare
+  nom constant text := '^[A-Z][a-z]+( [a-z×-]+){0,3}$';
+begin
+  if p_appareil is null then return; end if;
+  if (select count(*) from jeu where appareil = p_appareil and jour >= current_date - 1) > 4000 then return; end if;
+  if jsonb_typeof(p_jeu) = 'array' and jsonb_array_length(p_jeu) <= 400 then
+    insert into jeu (jour, heure, appareil, espece, categorie, exercice, organe, mode, vues, justes, acquises, secondes)
+    select x.j, x.h, p_appareil, x.e, min(x.c), x.x, x.o, x.m,
+           least(sum(x.v), 500), least(sum(greatest(x.ok, 0)), sum(x.v), 500),
+           least(sum(greatest(x.a, 0)), sum(x.v)), least(sum(greatest(x.s, 0)), sum(x.v) * 120)
+    from jsonb_to_recordset(p_jeu) as x(j date, h int, e text, c text, x text, o text, m text, v int, ok int, a int, s int)
+    where x.j between current_date - 7 and current_date + 1 and x.h between 0 and 23 and x.v between 1 and 500
+      and x.e ~ nom and length(x.e) <= 60
+      and x.c in ('arbre', 'conifère', 'arbuste', 'grimpante', 'graminée', 'vivace')
+      and x.x in ('qcm', 'saisie', 'photos')
+      and x.o in ('plante', 'feuillage', 'fleurs', 'fruits', 'autre', 'photos')
+      and x.m in ('classique', 'arbre', 'arbuste', 'vivace', 'grimpante', 'graminée', 'famille', 'erreurs', 'revoir', 'paire')
+    group by x.j, x.h, x.e, x.x, x.o, x.m
+    on conflict (jour, heure, appareil, espece, exercice, organe, mode) do update
+      set vues = least(jeu.vues + excluded.vues, 5000), justes = least(jeu.justes + excluded.justes, 5000),
+          acquises = least(jeu.acquises + excluded.acquises, 5000), secondes = least(jeu.secondes + excluded.secondes, 600000);
+  end if;
+  if jsonb_typeof(p_confusions) = 'array' and jsonb_array_length(p_confusions) <= 400 then
+    insert into jeu_confusions (jour, appareil, espece, reponse, fois)
+    select x.j, p_appareil, x.e, x.r, least(sum(x.n), 500)
+    from jsonb_to_recordset(p_confusions) as x(j date, e text, r text, n int)
+    where x.j between current_date - 7 and current_date + 1 and x.n between 1 and 500
+      and x.e ~ nom and x.r ~ nom and length(x.e) <= 60 and length(x.r) <= 60 and x.e <> x.r
+    group by x.j, x.e, x.r
+    on conflict (jour, appareil, espece, reponse) do update set fois = least(jeu_confusions.fois + excluded.fois, 5000);
+  end if;
+end $$;
+
+-- Tableaux récap, à lire dans Supabase (SQL Editor), par exemple « select * from jeu_par_jour; ».
+-- Exercices du quiz et des entraînements confondus ; « réussite » en pour cent.
+create or replace view public.jeu_par_jour with (security_invoker = true) as
+  select jour, count(distinct appareil) as joueurs, sum(vues) as exercices, sum(justes) as justes, sum(vues) - sum(justes) as fautes,
+         round(100.0 * sum(justes) / nullif(sum(vues), 0)) as reussite,
+         round(1.0 * sum(vues) / nullif(count(distinct appareil), 0), 1) as exos_par_joueur,
+         sum(acquises) as plantes_acquises, round(1.0 * sum(secondes) / nullif(sum(vues), 0), 1) as secondes_par_exo
+  from public.jeu group by jour order by jour desc;
+create or replace view public.especes_vues with (security_invoker = true) as
+  select espece, min(categorie) as categorie, sum(vues) as vues, sum(justes) as justes, sum(vues) - sum(justes) as fautes,
+         round(100.0 * sum(justes) / nullif(sum(vues), 0)) as reussite, count(distinct appareil) as joueurs
+  from public.jeu group by espece order by vues desc, espece;
+create or replace view public.especes_ratees with (security_invoker = true) as
+  select * from public.especes_vues where vues >= 10 order by reussite, vues desc;
+create or replace view public.confusions with (security_invoker = true) as
+  select espece as plante_montree, reponse as reponse_donnee, sum(fois) as fois, count(distinct appareil) as joueurs
+  from public.jeu_confusions group by espece, reponse order by fois desc, espece;
+create or replace view public.par_exercice with (security_invoker = true) as
+  select v.critere, v.valeur, sum(j.vues) as exercices, round(100.0 * sum(j.justes) / nullif(sum(j.vues), 0)) as reussite,
+         round(1.0 * sum(j.secondes) / nullif(sum(j.vues), 0), 1) as secondes_par_exo, count(distinct j.appareil) as joueurs
+  from public.jeu j
+  cross join lateral (values ('1 exercice', j.exercice), ('2 organe', j.organe), ('3 mode', j.mode), ('4 catégorie', j.categorie)) as v(critere, valeur)
+  group by v.critere, v.valeur order by v.critere, exercices desc;
+create or replace view public.par_heure with (security_invoker = true) as
+  select heure, sum(vues) as exercices, round(100.0 * sum(justes) / nullif(sum(vues), 0)) as reussite, count(distinct appareil) as joueurs
+  from public.jeu group by heure order by heure;
+revoke all on public.jeu_par_jour, public.especes_vues, public.especes_ratees, public.confusions, public.par_exercice, public.par_heure
+  from public, anon, authenticated;
+
 -- ---------- Droits : seules les fonctions publiques, et seulement une fois connecté ----------
 revoke all on function public._moi(), public._nouveau_code(), public._profil_json(profils) from public, anon, authenticated;
 revoke all on function public.mon_profil(), public.choisir_pseudo(text), public.publier(date, int, int, int, int, int, int, int),
@@ -232,6 +329,8 @@ revoke all on function public.mon_profil(), public.choisir_pseudo(text), public.
   public.lire_progression(), public.supprimer_compte() from public, anon;
 revoke all on function public.compter_visite(uuid, date, boolean) from public;
 grant execute on function public.compter_visite(uuid, date, boolean) to anon, authenticated;
+revoke all on function public.envoyer_jeu(uuid, jsonb, jsonb) from public;
+grant execute on function public.envoyer_jeu(uuid, jsonb, jsonb) to anon, authenticated;
 grant execute on function public.mon_profil(), public.choisir_pseudo(text), public.publier(date, int, int, int, int, int, int, int),
   public.ajouter_ami(text), public.retirer_ami(text), public.tableau(date), public.sauver_progression(jsonb),
   public.lire_progression(), public.supprimer_compte() to authenticated;

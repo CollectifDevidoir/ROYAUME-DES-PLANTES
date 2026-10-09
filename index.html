@@ -2385,7 +2385,7 @@ async function altImg(s,im){
   const sn=new Set(),U=L.filter(x=>x&&x.src&&!sn.has(pid(x.src))&&sn.add(pid(x.src)));
   if(U.length<2)return im;
   const n=shown[s[0]]=(shown[s[0]]||0)+1;
-  return{src:U[(n-1)%U.length].src,page:im.page};
+  const u=U[(n-1)%U.length];return{src:u.src,page:im.page,label:u.label||''};
 }
 const knownImg=s=>!!((cache[s[0]]&&cache[s[0]].src)||(IC[s[0]]&&IC[s[0]].imgs&&IC[s[0]].imgs.length));
 async function prepare(){
@@ -2471,7 +2471,7 @@ async function next(){
   if(tk!==nxt)return;pre=null;
   if(!q&&Date.now()<iOff){const w=()=>{const e=$('q-wait');if(e)e.textContent=Math.max(1,Math.ceil((iOff-Date.now())/1e3))};$('pic').innerHTML='<div style="padding:16px;text-align:center" role="status"><p>Le service de photos demande une courte pause.<br>Reprise dans <b id="q-wait"></b> s…</p></div>';w();const iv=setInterval(()=>{if(tk!==nxt||!$('q-wait')){clearInterval(iv);return}w()},1e3);setTimeout(()=>{clearInterval(iv);if(tk===nxt)next()},iOff-Date.now()+400);return}
   if(!q){$('pic').innerHTML='<div style="padding:16px"><p>Aucune image chargée. Vérifie la connexion.</p><button class="big" id="q-retry">Réessayer</button></div>';$('q-retry').onclick=()=>{bad.clear();next()};return}
-  cur=q.s;typed=q.typed;curTrain=!!q.train;pvSet=q.pv||null;$('qc').classList.toggle('ty',!!typed&&!pvSet);if(typed&&!pvSet)firstQ=false;
+  cur=q.s;typed=q.typed;curTrain=!!q.train;pvSet=q.pv||null;jeuQ={t:Date.now(),o:pvSet?'photos':!q.im.label?'plante':JEU_ORG[q.im.label]||'autre'};$('qc').classList.toggle('ty',!!typed&&!pvSet);if(typed&&!pvSet)firstQ=false;
   if(wasTrain&&!curTrain){toast('Entraînement terminé');famFocus=null}wasTrain=curTrain;if(curTrain)trN=Math.min(trN+1,trTot);trUI();
   if(pvSet){
     $('pic').hidden=true;$('q').className='pv';$('opts').className='opts ph';
@@ -2504,6 +2504,7 @@ function answer(v){
   const good=typed?near(norm(v),norm(cur[0])):v===cur[0];
   const r0=rk(),p=st.sp[cur[0]]||(st.sp[cur[0]]={b:1,s:0,e:0,d:0});
   if(!curTrain)srs(p,good,pvSet?'pv':typed?'typed':'mcq');
+  jeuNote(good,w);
   const dk=today(),h=st.hist[dk]||(st.hist[dk]={n:0,ok:0});if(!curTrain){h.n++;if(good)h.ok++;if(acqNow)h.na=(h.na||0)+1;qN++;if(acqNow&&Math.random()<.7&&!soon.some(x=>x.n===cur[0]))soon.push({n:cur[0],q:qN+10+Math.floor(Math.random()*13)});recent.push(cur[0]);if(recent.length>8)recent.shift();sess.add(cur[0]);if((p.s===1||!good)&&!soon.some(x=>x.n===cur[0]))soon.push({n:cur[0],q:qN+(good?3:4)+Math.floor(Math.random()*3)})}
   const tm=st.tm.d===dk?st.tm:(st.tm={d:dk,l:[]});if(!curTrain&&!good&&!tm.l.includes(cur[0]))tm.l.push(cur[0]);if(curTrain&&good){const k=tm.l.indexOf(cur[0]);if(k>=0)tm.l.splice(k,1)}
   if(!curTrain){streak=good?streak+1:0;st.streak=streak;st.best=Math.max(st.best,streak)}
@@ -3017,15 +3018,47 @@ const SBU=sbNorm(SB_URL),sbOn=()=>!!(SBU&&SB_KEY&&!sbSecret(SB_KEY));
 // Mesure d'audience anonyme (supabase/schema.sql, « visites ») : à chaque ouverture de l'appli, et au retour après
 // 30 min ou plus, un identifiant d'appareil tiré au hasard + le jour + « a un compte ». Ni IP, ni nom, ni cookie.
 let vuA=0;
+function appId(){try{let id=localStorage.getItem('qp.app')||'';if(!/^[0-9a-f-]{36}$/.test(id)){id=crypto.randomUUID();localStorage.setItem('qp.app',id)}return id}catch(e){return''}}
 function compterVisite(){
   if(!sbOn()||Date.now()-vuA<18e5)return;vuA=Date.now();
-  let id='';try{id=localStorage.getItem('qp.app')||'';if(!/^[0-9a-f-]{36}$/.test(id)){id=crypto.randomUUID();localStorage.setItem('qp.app',id)}}catch(e){return}
+  const id=appId();if(!id)return;
   let compte=false;try{compte=!!localStorage.getItem('qp.sb')}catch(e){}   // session du compte (storageKey de createClient)
   fetch(SBU+'/rest/v1/rpc/compter_visite',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json',apikey:SB_KEY,Authorization:'Bearer '+SB_KEY},
     body:JSON.stringify({p_appareil:id,p_jour:today(),p_compte:compte})}).catch(()=>{});
 }
 setTimeout(compterVisite,3000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)compterVisite()});
+// Statistiques de jeu anonymes (supabase/schema.sql, « jeu ») : même identifiant d'appareil. Chaque réponse ajoute aux
+// compteurs du jour (heure, plante, exercice, organe, mode ; justes, plantes acquises, temps) et aux confusions,
+// gardés sur l'appareil et envoyés par paquets : 30 s après la première réponse non envoyée, et quand la page est quittée.
+let jeuQ=null,jeuT=0,jeuEnv=0;
+const JEU_ORG={Feuillage:'feuillage',Fleurs:'fleurs',Fruits:'fruits'};
+function jeuLire(){try{const o=JSON.parse(localStorage.getItem('qp.jeu')||'{}');return{l:o.l||{},c:o.c||{}}}catch(e){return{l:{},c:{}}}}
+function jeuEcrire(b){try{if(Object.keys(b.l).length||Object.keys(b.c).length)localStorage.setItem('qp.jeu',JSON.stringify(b));else localStorage.removeItem('qp.jeu')}catch(e){}}
+function jeuNote(good,w){
+  if(!sbOn()||!jeuQ||!cur)return;
+  const j=today(),h=new Date().getHours(),x=pvSet?'photos':typed?'saisie':'qcm';
+  const m=curTrain?(famFocus?'famille':trLbl==='Mes erreurs du jour'?'erreurs':trLbl==='Plantes à revoir'?'revoir':'paire'):mode==='tout'?'classique':mode;
+  const b=jeuLire(),k=[j,h,cur[0],x,jeuQ.o,m].join('|'),e=b.l[k]||(b.l[k]={c:cur[2],v:0,ok:0,a:0,s:0});
+  e.v++;if(good)e.ok++;if(acqNow)e.a++;e.s+=Math.max(0,Math.min(120,Math.round((Date.now()-jeuQ.t)/1e3)));
+  if(!good&&w&&w[0]!==cur[0]){const kc=[j,cur[0],w[0]].join('|');b.c[kc]=(b.c[kc]||0)+1}
+  jeuQ=null;jeuEcrire(b);if(!jeuT)jeuT=setTimeout(jeuEnvoi,Math.max(3e4,jeuEnv+3e4-Date.now()));
+}
+// remet sur l'appareil un paquet dont l'envoi a échoué (réseau coupé) : il repartira au prochain envoi
+function jeuRemettre(L,C){const b=jeuLire();for(const k in L){const e=b.l[k];if(e){e.v+=L[k].v;e.ok+=L[k].ok;e.a+=L[k].a;e.s+=L[k].s}else b.l[k]=L[k]}for(const k in C)b.c[k]=(b.c[k]||0)+C[k];jeuEcrire(b)}
+function jeuEnvoi(){
+  clearTimeout(jeuT);jeuT=0;if(!sbOn())return;const id=appId();if(!id)return;
+  const b=jeuLire(),K=Object.keys(b.l).slice(0,400),KC=Object.keys(b.c).slice(0,400);if(!K.length&&!KC.length)return;
+  const L={},C={};K.forEach(k=>{L[k]=b.l[k];delete b.l[k]});KC.forEach(k=>{C[k]=b.c[k];delete b.c[k]});jeuEcrire(b);jeuEnv=Date.now();
+  const pj=K.map(k=>{const[j,h,e,x,o,m]=k.split('|'),v=L[k];return{j,h:+h,e,c:v.c,x,o,m,v:v.v,ok:v.ok,a:v.a,s:v.s}});
+  const pc=KC.map(k=>{const[j,e,r]=k.split('|');return{j,e,r,n:C[k]}});
+  fetch(SBU+'/rest/v1/rpc/envoyer_jeu',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json',apikey:SB_KEY,Authorization:'Bearer '+SB_KEY},
+    body:JSON.stringify({p_appareil:id,p_jeu:pj,p_confusions:pc})})
+    .then(r=>{if(r.status>=500||r.status===429)throw 0;if(Object.keys(jeuLire().l).length&&!jeuT)jeuT=setTimeout(jeuEnvoi,3e4)})   // refus 4xx : paquet abandonné
+    .catch(()=>jeuRemettre(L,C));
+}
+setTimeout(jeuEnvoi,5000);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)jeuEnvoi()});
 // La bibliothèque n'est chargée que si les comptes servent : onglet Profil ouvert, session enregistrée ou retour d'un lien de connexion.
 function sbLib(){
   if(sbLd)return sbLd;
