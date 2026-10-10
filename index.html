@@ -15,7 +15,7 @@
 <title>Le royaume des plantes</title>
 <!-- icône d'écran d'accueil : l'arbre doré du royaume dans une trouée de forêt, dessiné par outils/icone.py, voir icones/ -->
 <link rel="manifest" href="manifest.webmanifest?v=2">
-<link rel="apple-touch-icon" href="icones/apple-touch-icon.png?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="icones/icone-iphone-180.png">
 <meta name="description" content="Plus de 600 arbres, arbustes, vivaces, grimpantes et graminées à découvrir.">
 <meta property="og:title" content="Le royaume des plantes">
 <meta property="og:description" content="Plus de 600 arbres, arbustes, vivaces, grimpantes et graminées à découvrir.">
@@ -3144,6 +3144,23 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden&&sbT)sbEnvo
 const sbLien=()=>/^https?:$/.test(location.protocol);
 // confirmation par e-mail exigée ? (réglage « Confirm email » du projet, lu une fois) : sinon la phrase « Tu recevras un e-mail » est cachée
 let sbAuto=null;const sbAutoP=()=>sbAuto!==null?Promise.resolve(sbAuto):fetch(SBU+'/auth/v1/settings',{headers:{apikey:SB_KEY}}).then(r=>r.ok?r.json():{}).then(j=>sbAuto=j.mailer_autoconfirm===true).catch(()=>false);
+// Carte du classement (aujourd'hui, semaine, mois) : seule elle est redessinée quand on change de période
+async function sbCl(){
+  // classement : aujourd'hui, cette semaine (depuis lundi), ce mois-ci (depuis le 1er)
+  if(!sbTab)sbTab={};const per=sbPer,deb=per==='s'?dstr(Date.now()-((new Date().getDay()+6)%7)*864e5):per==='m'?today().slice(0,8)+'01':today();
+  if(!sbTab[per]){try{sbTab[per]=per==='j'?await sbRpc('tableau',{p_jour:today()}):await sbRpc('tableau_periode',{p_debut:deb,p_fin:today()})}
+    catch(e){sbTab[per]=per==='j'?[]:null;if(per!=='j'&&!sbTab.j){try{sbTab.j=await sbRpc('tableau',{p_jour:today()})}catch(x){}}if(per==='j')sbMsg=sbErr(e)}}
+  const tb=sbTab[per]||[],amis=(sbTab.j||tb).filter(x=>!x.moi),pj=per!=='j'&&!sbTab[per];
+  const PER=[['j','Aujourd\'hui'],['s','Cette semaine'],['m','Ce mois-ci']],lg=per!=='j';
+  return {amis,h:`<div class="card" id="sb-cl"><h3 class="hh">Classement</h3><div class="sbt s3" role="tablist" aria-label="Période">${PER.map(([k,t])=>`<button type="button" role="tab" data-per="${k}" aria-selected="${k===per}">${t}</button>`).join('')}</div>
+${pj?'<p class="na">Classement de la période indisponible pour l\'instant : réessaie dans un moment.</p>':`<table class="tbm"><thead><tr><th>${amis.length?'Ami':'Toi'}</th><th>Exercices</th><th>Réussite</th><th>Nouvelles<span class="vh"> plantes</span></th>${lg?'<th>Jours</th>':''}</tr></thead><tbody>${tb.map(x=>`<tr${x.moi?' class="moi"':''}><td><span class="tbn"><span class="tgi">${rIcon(x.rang)}</span>${esc(x.pseudo)}</span></td><td>${x.exercices}</td><td>${x.exercices?Math.round(100*x.justes/x.exercices)+' %':'–'}</td><td>${x.nouvelles}</td>${lg?`<td>${x.jours||0}</td>`:''}</tr>`).join('')}</tbody></table>`}
+${amis.length?'':'<p class="na tbv">Ajoute un ami avec son code pour comparer vos progrès.</p>'}<button class="lnkb" id="sb-maj" type="button">Actualiser</button></div>`};
+}
+function sbClLie(){
+  $('sb-maj').onclick=async()=>{sbMsg='';sbOk='';await sbEnvoi();sbTab=null;ami()};
+  document.querySelectorAll('#sb-cl [data-per]').forEach(bt=>bt.onclick=async()=>{if(bt.dataset.per===sbPer)return;sbPer=bt.dataset.per;try{localStorage.setItem('qp.per',sbPer)}catch(e){}
+    document.querySelectorAll('#sb-cl [data-per]').forEach(x=>x.setAttribute('aria-selected',x===bt));const c=await sbCl();if($('sb-cl')){$('sb-cl').outerHTML=c.h;sbClLie()}});
+}
 // Onglet Profil
 async function ami(){
   const el=$('ami'),b=monBilan(),r=R[b.rang],cx=!!(sbU&&sbP);
@@ -3190,24 +3207,15 @@ async function ami(){
     $('sb-pf').onsubmit=async e=>{e.preventDefault();sbMsg='';try{sbP=await sbRpc('choisir_pseudo',{p_pseudo:$('sb-ps').value});await sbEnvoi()}catch(x){sbMsg=sbErr(x)}ami()};
     $('sb-out').onclick=sbSortie;return;
   }
-  // classement : aujourd'hui, cette semaine (depuis lundi), ce mois-ci (depuis le 1er)
-  if(!sbTab)sbTab={};const per=sbPer,deb=per==='s'?dstr(Date.now()-((new Date().getDay()+6)%7)*864e5):per==='m'?today().slice(0,8)+'01':today();
-  if(!sbTab[per]){try{sbTab[per]=per==='j'?await sbRpc('tableau',{p_jour:today()}):await sbRpc('tableau_periode',{p_debut:deb,p_fin:today()})}
-    catch(e){sbTab[per]=per==='j'?[]:null;if(per!=='j'&&!sbTab.j){try{sbTab.j=await sbRpc('tableau',{p_jour:today()})}catch(x){}}if(per==='j')sbMsg=sbErr(e)}}
-  const tb=sbTab[per]||[],amis=(sbTab.j||tb).filter(x=>!x.moi),pj=per!=='j'&&!sbTab[per];
-  const PER=[['j','Aujourd\'hui'],['s','Cette semaine'],['m','Ce mois-ci']],lg=per!=='j';
-  h+=`<div class="card"><h3 class="hh">Classement</h3><div class="sbt s3" role="tablist" aria-label="Période">${PER.map(([k,t])=>`<button type="button" role="tab" data-per="${k}" aria-selected="${k===per}">${t}</button>`).join('')}</div>
-${pj?'<p class="na">Les totaux de la semaine et du mois arrivent bientôt.</p>':`<table class="tbm"><thead><tr><th>${amis.length?'Ami':'Toi'}</th><th>Exercices</th><th>Réussite</th><th>Nouvelles<span class="vh"> plantes</span></th>${lg?'<th>Jours</th>':''}</tr></thead><tbody>${tb.map(x=>`<tr${x.moi?' class="moi"':''}><td><span class="tbn"><span class="tgi">${rIcon(x.rang)}</span>${esc(x.pseudo)}</span></td><td>${x.exercices}</td><td>${x.exercices?Math.round(100*x.justes/x.exercices)+' %':'–'}</td><td>${x.nouvelles}</td>${lg?`<td>${x.jours||0}</td>`:''}</tr>`).join('')}</tbody></table>`}
-${amis.length?'':'<p class="na tbv">Ajoute un ami avec son code pour comparer vos progrès.</p>'}<button class="lnkb" id="sb-maj" type="button">Actualiser</button></div>
+  const cl=await sbCl(),amis=cl.amis;h+=cl.h+`
 <div class="card"><h3 class="hh hhi">${ico('profil')}Amis</h3><div class="cda"><span>Mon code ami</span><b id="sb-code">${esc(sbP.code_ami)}</b><button class="mini" id="sb-cp" type="button">Copier</button></div>
 <form id="sb-af" class="sbf sbi"><label><span class="vh">Code de ton ami</span><input id="sb-ac" placeholder="Code d'un ami : RPL-…" autocomplete="off" autocapitalize="characters" aria-label="Code de ton ami"></label><button class="big" type="submit">Ajouter</button></form>${msg}
 ${amis.length?`<details class="gam"><summary>Gérer mes amis (${amis.length})</summary>${amis.map(x=>`<div class="gar"><span>${esc(x.pseudo)}</span><button class="mini ko" data-rm="${esc(x.pseudo)}" type="button">Retirer</button></div>`).join('')}</details>`:''}</div>
 <div class="card sbc"><p class="na">${esc(sbU.email||'')}${sbSync?' · progression sauvegardée':''}</p><p class="sbl"><button class="lnkb" id="sb-out" type="button">Se déconnecter</button><span aria-hidden="true">·</span><button class="lnkb ko" id="sb-del" type="button">Supprimer mon compte</button></p></div>`;
   el.innerHTML=h;
-  $('sb-maj').onclick=async()=>{sbMsg='';sbOk='';await sbEnvoi();sbTab=null;ami()};
+  sbClLie();
   $('sb-cp').onclick=async()=>{try{await navigator.clipboard.writeText(sbP.code_ami);toast('Code ami copié')}catch(e){const r=document.createRange();r.selectNodeContents($('sb-code'));getSelection().removeAllRanges();getSelection().addRange(r)}};
   $('sb-af').onsubmit=async e=>{e.preventDefault();sbMsg='';sbOk='';try{const x=await sbRpc('ajouter_ami',{p_code:$('sb-ac').value});if(x.erreur)throw new Error(x.erreur);sbOk=x.pseudo+' fait maintenant partie de tes amis.';sbTab=null}catch(x){sbMsg=sbErr(x)}ami()};
-  el.querySelectorAll('[data-per]').forEach(bt=>bt.onclick=()=>{sbPer=bt.dataset.per;try{localStorage.setItem('qp.per',sbPer)}catch(e){}ami()});
   el.querySelectorAll('[data-rm]').forEach(bt=>bt.onclick=async()=>{if(!confirm('Retirer '+bt.dataset.rm+' de tes amis ?'))return;try{await sbRpc('retirer_ami',{p_pseudo:bt.dataset.rm})}catch(e){sbMsg=sbErr(e)}sbTab=null;ami()});
   $('sb-out').onclick=sbSortie;
   // changer de pseudo : même règle qu'au premier choix (2 à 20 caractères, unique), vérifiée par le serveur
