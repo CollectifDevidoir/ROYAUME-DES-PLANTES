@@ -63,6 +63,9 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   const lignes=await B.p.evaluate(()=>[...document.querySelectorAll('.tbm tbody tr')].map(r=>[...r.cells].map(c=>c.innerText.trim())));
   ok(lignes[0][0]==='Coline'&&lignes[0][1]==='2'&&lignes[1][0]==='Antoine'&&lignes[1][1]==='1','tableau du jour : Coline 2 exercices, Antoine 1, du plus actif au moins actif');
   ok(await B.p.evaluate(()=>document.querySelector('.tbm tr.moi td').innerText.trim()==='Coline'),'ma ligne est mise en avant');await T(B.p,'3-tableau');
+  await B.p.click('[data-per="s"]');ok(await att(B.p,()=>[...document.querySelectorAll('.tbm th')].some(x=>x.textContent==='Jours')&&document.querySelectorAll('.tbm tbody tr').length===2&&document.querySelector('[data-per="s"]').getAttribute('aria-selected')==='true'),'classement « Cette semaine » : mêmes amis, colonne des jours joués');await T(B.p,'3s-semaine');
+  await B.p.click('[data-per="m"]');ok(await att(B.p,()=>document.querySelector('[data-per="m"]').getAttribute('aria-selected')==='true'&&document.querySelectorAll('.tbm tbody tr').length===2),'classement « Ce mois-ci »');
+  await B.p.click('[data-per="j"]');ok(await att(B.p,()=>!/Jours/.test(document.querySelector('.tbm thead').textContent)),'retour à « Aujourd\'hui »');
   // ---- Antoine voit Coline après actualisation
   await A.p.click('#sb-maj');ok(await att(A.p,()=>/Coline/.test($('ami').innerText)),'Antoine voit Coline (amitié réciproque)');
   // ---- Coline change de pseudo : pseudo pris refusé, annuler ne change rien, puis nouveau pseudo visible par son ami

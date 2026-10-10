@@ -37,6 +37,12 @@ const refus=async(p,m,motif)=>{try{await p;ok(false,m+' (accepté à tort)')}cat
   ok((await r('intrus','select tableau(current_date) r')).length===0,'sans profil : tableau vide');
   ok((await r('coline',`select ajouter_ami('${pc.code_ami}') r`)).erreur==='SOI_MEME','s\'ajouter soi-même : refusé');
   ok((await r('coline',"select ajouter_ami('RPL-ZZZZZ') r")).erreur==='CODE_INCONNU','code inconnu : refusé');
+  // périodes : rattrapage des jours passés et totaux de la semaine
+  await f('paul','select publier_jours($1::jsonb)',[JSON.stringify([{j:'2001-01-01',n:99,ok:99},{j:new Date(Date.now()-2*864e5).toISOString().slice(0,10),n:12,ok:9},{j:new Date(Date.now()-864e5).toISOString().slice(0,10),n:5,ok:50,na:2}])]);
+  const tp=await r('paul','select tableau_periode(current_date - 6, current_date) r');
+  const mp=tp.find(x=>x.moi);ok(mp.exercices===27+12+5&&mp.justes===19+9+5&&mp.nouvelles===2+2&&mp.jours===3,'semaine de Paul : 3 jours joués, totaux additionnés, justes plafonnés, jour trop ancien ignoré '+JSON.stringify(mp));
+  ok(tp.length===2&&tp.some(x=>x.pseudo==='Antoine_R'&&x.exercices===38),'semaine : Paul voit Antoine (ami)');
+  await refus(comme(db,U.paul,'select tableau_periode(current_date - 100, current_date) r'),'période de plus de 62 jours','PERIODE_INVALIDE');
   await f('antoine',"select retirer_ami('Paul')");
   ok((await r('paul','select tableau(current_date) r')).length===1,'ami retiré des deux côtés');
   // sécurité : aucun accès direct aux tables

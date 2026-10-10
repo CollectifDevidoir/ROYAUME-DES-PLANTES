@@ -217,6 +217,40 @@ begin
   ), '[]'::json);
 end $$;
 
+-- Tableau sur une période (cette semaine, ce mois-ci) : totaux de chacun, et nombre de jours joués. 62 jours au plus.
+create or replace function public.tableau_periode(p_debut date, p_fin date) returns json
+language plpgsql stable security definer set search_path = public as $$
+begin
+  if p_debut is null or p_fin is null or p_fin < p_debut or p_fin - p_debut > 62 then raise exception 'PERIODE_INVALIDE'; end if;
+  return coalesce((
+    select json_agg(json_build_object('pseudo', p.pseudo, 'moi', p.id = _moi(), 'rang', p.rang,
+      'acquises', p.acquises, 'reussite', p.reussite, 'serie', p.serie,
+      'exercices', coalesce(t.exercices, 0), 'justes', coalesce(t.justes, 0), 'nouvelles', coalesce(t.nouvelles, 0), 'jours', coalesce(t.jours, 0))
+      order by coalesce(t.exercices, 0) desc, p.pseudo)
+    from profils p
+    left join lateral (select sum(j.exercices)::int exercices, sum(j.justes)::int justes, sum(j.nouvelles)::int nouvelles,
+                              count(*) filter (where j.exercices > 0)::int jours
+                       from jours j where j.user_id = p.id and j.jour between p_debut and p_fin) t on true
+    where p.id = _moi() or p.id in (select ami_id from amities where user_id = _moi())
+  ), '[]'::json);
+end $$;
+
+-- Rattrapage des jours passés (joués hors ligne, ou sur un autre appareil) : les 35 derniers jours au plus,
+-- d'après l'historique de la progression ; « publier » ne garde que le jour même.
+create or replace function public.publier_jours(p_jours jsonb) returns void
+language plpgsql volatile security definer set search_path = public as $$
+begin
+  if not exists (select 1 from profils where id = _moi()) then raise exception 'SANS_PROFIL'; end if;
+  if jsonb_typeof(p_jours) <> 'array' or jsonb_array_length(p_jours) > 40 then return; end if;
+  insert into jours (user_id, jour, exercices, justes, nouvelles)
+  select _moi(), x.j, greatest(0, least(max(x.n), 5000)), greatest(0, least(max(coalesce(x.ok, 0)), max(x.n), 5000)), greatest(0, least(max(coalesce(x.na, 0)), 5000))
+  from jsonb_to_recordset(p_jours) as x(j date, n int, ok int, na int)
+  where x.j between current_date - 35 and current_date + 1 and x.n is not null
+  group by x.j
+  on conflict (user_id, jour) do update set exercices = greatest(jours.exercices, excluded.exercices),
+    justes = greatest(jours.justes, excluded.justes), nouvelles = greatest(jours.nouvelles, excluded.nouvelles);
+end $$;
+
 -- ---------- Sauvegarde de la progression ----------
 create or replace function public.sauver_progression(p_donnees jsonb) returns void
 language plpgsql volatile security definer set search_path = public as $$
@@ -325,12 +359,12 @@ revoke all on public.jeu_par_jour, public.especes_vues, public.especes_ratees, p
 -- ---------- Droits : seules les fonctions publiques, et seulement une fois connecté ----------
 revoke all on function public._moi(), public._nouveau_code(), public._profil_json(profils) from public, anon, authenticated;
 revoke all on function public.mon_profil(), public.choisir_pseudo(text), public.publier(date, int, int, int, int, int, int, int),
-  public.ajouter_ami(text), public.retirer_ami(text), public.tableau(date), public.sauver_progression(jsonb),
+  public.ajouter_ami(text), public.retirer_ami(text), public.tableau(date), public.tableau_periode(date, date), public.publier_jours(jsonb), public.sauver_progression(jsonb),
   public.lire_progression(), public.supprimer_compte() from public, anon;
 revoke all on function public.compter_visite(uuid, date, boolean) from public;
 grant execute on function public.compter_visite(uuid, date, boolean) to anon, authenticated;
 revoke all on function public.envoyer_jeu(uuid, jsonb, jsonb) from public;
 grant execute on function public.envoyer_jeu(uuid, jsonb, jsonb) to anon, authenticated;
 grant execute on function public.mon_profil(), public.choisir_pseudo(text), public.publier(date, int, int, int, int, int, int, int),
-  public.ajouter_ami(text), public.retirer_ami(text), public.tableau(date), public.sauver_progression(jsonb),
+  public.ajouter_ami(text), public.retirer_ami(text), public.tableau(date), public.tableau_periode(date, date), public.publier_jours(jsonb), public.sauver_progression(jsonb),
   public.lire_progression(), public.supprimer_compte() to authenticated;

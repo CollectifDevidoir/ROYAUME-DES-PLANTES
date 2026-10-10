@@ -1002,8 +1002,8 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
 }
 .mdb{position:absolute;right:-3px;bottom:-3px;width:19px;height:19px;border-radius:50%;background:var(--ac);border:2px solid var(--card);display:grid;place-items:center;pointer-events:none}
 .mdb svg{width:11px;height:11px;fill:var(--card)}
-.medal.nv .mdb{animation:mdb 1.6s ease-in-out 1s 4}
-@keyframes mdb{50%{transform:scale(1.3)}}
+.medal.nv .mdb{animation:mdb 1.6s ease-in-out 1s 5}
+@keyframes mdb{50%{transform:scale(1.4);box-shadow:0 0 0 4px rgba(126,200,140,.35),0 0 10px 2px rgba(126,200,140,.45)}}
 @media(prefers-reduced-motion:reduce){.medal.nv .mdb{animation:none}}
 .kp b .tgi{display:inline-block;width:.8em;height:.8em;margin-right:2px;vertical-align:-.05em}
 .pl2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-bottom:12px}.pl2>.card{margin:0}
@@ -1026,6 +1026,13 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
 .sbf .row .big{flex:1}
 .sbt{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:12px 0 2px;padding:4px;border-radius:14px;background:var(--bg2)}
 .sbt button{min-height:42px;border:0;border-radius:11px;background:none;color:var(--mu);font:600 .9rem system-ui;cursor:pointer}
+.sbt.s3{grid-template-columns:repeat(3,1fr);margin:6px 0 10px}.sbt.s3 button{min-height:38px;font-size:.84rem}
+.sbi{flex-direction:row;align-items:stretch;gap:8px}.sbi label{flex:1;min-width:0}.sbi .big{flex:none;width:auto;padding:0 18px;margin:0}
+.tbv{margin:10px 0 0;text-align:center}
+#ami .card.sbc{margin-top:22px;padding-top:12px;text-align:center}#ami .sbc .na{margin:0;font-size:.82rem}
+.sbl{display:flex;justify-content:center;align-items:center;gap:6px;margin:2px 0 0;color:var(--mu)}.sbl .lnkb{margin:0;font-size:.82rem;font-weight:500;color:var(--mu)}.sbl .lnkb.ko{color:var(--ko)}
+.prf .prh>div{flex:1;min-width:0;padding-right:36px}.prh form.psl input{max-width:none;font:700 1.15rem Georgia,serif}.sbi+.stm{margin:8px 0 0}
+.prh .psl{margin:0}.prh .psl #sb-pn{font:inherit}.prh h2 .psl{display:inline-flex}
 .sbt button[aria-selected=true]{background:var(--card);color:var(--ac);box-shadow:0 1px 4px rgba(10,40,20,.18)}
 .sbf label>span{display:flex;align-items:baseline;gap:6px}.sbf label small{font-weight:500;color:var(--mu)}
 #sb-go{width:100%}.sbh{margin:-2px 0 0;font-size:.82rem}
@@ -2805,13 +2812,13 @@ $('ring').onclick=openSettings;
 $('ring').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openSettings()}};
 // Profil : volet ouvert en touchant le logo de rang (en-tête) ou depuis Progrès
 function openProfil(){const d=$('prf');ami();if(d.showModal){if(!d.open)d.showModal()}else d.setAttribute('open','');d.scrollTop=0;$('prf-t').focus({preventScroll:true});
-  if($('medal').classList.contains('nv')){$('medal').classList.remove('nv');try{localStorage.setItem('qp.prf','1')}catch(e){}}}
+  if($('medal').classList.contains('nv')){$('medal').classList.remove('nv');try{localStorage.setItem('qp.prf',today())}catch(e){}}}
 $('prf-x').onclick=()=>$('prf').close();
 $('prf').onclick=e=>{if(e.target===$('prf'))$('prf').close()};
 $('medal').onclick=openProfil;
 $('medal').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openProfil()}};
-// tant que le profil n'a jamais été ouvert, la pastille du logo de rang pulse doucement
-try{if(!localStorage.getItem('qp.prf'))$('medal').classList.add('nv')}catch(e){}
+// sans compte : à la première ouverture de chaque jour, la pastille du logo de rang scintille (jusqu'à l'ouverture du profil)
+try{if(!localStorage.getItem('qp.sb')&&localStorage.getItem('qp.prf')!==today())$('medal').classList.add('nv')}catch(e){}
 // Même geste pour tous les volets : on glisse vers le bas pour fermer, depuis n'importe où quand le contenu est en haut.
 // Le volet suit le doigt ; relâché assez bas (ou d'un geste vif), il se ferme, sinon il revient en place.
 function swipeClose(d,close,scrollEl){let y0=null,x0=0,t0=0,dy=0,on=false;
@@ -3009,7 +3016,7 @@ $('next').onclick=next;
 const SB_URL='https://hcbzkpsxqxhmqcblfsnm.supabase.co',SB_KEY='sb_publishable_rtqaluMAanjewYK2bvJ3Xw_zMampeYI';
 const SB_LIB='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.js',SB_SRI='sha384-BWcjm9OdFth9TbhCxZPdm+gAOUMAzQy9nmTs12ioXdCcbVnJaPMn+fMUoQCLt60R';
 var sbMode=(()=>{try{return localStorage.getItem('qp.sbm')||'up'}catch(e){return'up'}})();
-var sbPe=false,sbPm='',sb=null,sbU=null,sbP=null,sbTab=null,sbT=null,sbLd=null,sbMsg='',sbOk='',sbBusy=false,sbSync=0,sbMail='';
+var sbPer=(()=>{try{const v=localStorage.getItem('qp.per');return /^[jsm]$/.test(v)?v:'j'}catch(e){return'j'}})(),sbPe=false,sbPm='',sb=null,sbU=null,sbP=null,sbTab=null,sbT=null,sbLd=null,sbMsg='',sbOk='',sbBusy=false,sbSync=0,sbMail='';
 // Adresse du projet : on accepte aussi, par erreur, l'adresse d'une page du tableau de bord Supabase
 const sbNorm=u=>{u=(u||'').trim();const m=u.match(/supabase\.com\/dashboard\/project\/([a-z0-9]{20})/);return m?'https://'+m[1]+'.supabase.co':u.replace(/\/(rest|auth)\/v1.*$/,'').replace(/\/+$/,'')};
 // Jamais de clé secrète dans l'appli : elle donnerait tous les droits sur la base à n'importe quel visiteur
@@ -3108,7 +3115,7 @@ function sbConnecte(){const uid=sbU&&sbU.id||null;if(sbCx&&sbCxU===uid)return sb
 // Avant d'écrire, on relit la sauvegarde du compte et on la fusionne : ce qu'un autre appareil a appris entre-temps
 // n'est jamais écrasé. Exception : juste après « Réinitialiser » (sbRaz), l'appareil fait foi et vide aussi le compte.
 // Charge : au plus un envoi toutes les 30 s, et tout de suite quand on quitte l'appli (relecture avant chaque écriture : jamais d'écrasement)
-let sbEnv=null,sbEnc=false,sbRaz=false;
+let sbEnv=null,sbEnc=false,sbRaz=false,sbJk='';
 async function sbEnvoi(){
   clearTimeout(sbT);sbT=null;if(!sb||!sbU||!sbP)return;
   if(sbEnv){sbEnc=true;return sbEnv}
@@ -3116,6 +3123,9 @@ async function sbEnvoi(){
     if(!sbRaz)sbFusionne(await sbRpc('lire_progression'));
     const b=monBilan(),raz=sbRaz;
     await sbRpc('publier',{p_jour:today(),p_exercices:b.ex,p_justes:b.justes,p_nouvelles:b.nouvelles,p_rang:b.rang,p_acquises:b.acquises,p_reussite:b.reussite,p_serie:b.serie});
+    // jours passés (35 derniers) : pour les totaux de la semaine et du mois ; renvoyés seulement s'ils ont changé
+    const pj=Object.keys(st.hist).filter(d=>d<today()&&d>=dstr(Date.now()-35*864e5)&&st.hist[d].n>0).sort().map(d=>({j:d,n:st.hist[d].n,ok:st.hist[d].ok||0,na:st.hist[d].na||0})),pk=JSON.stringify(pj);
+    if(pj.length&&pk!==sbJk){try{await sbRpc('publier_jours',{p_jours:pj});sbJk=pk;sbTab=null}catch(e){}}
     await sbRpc('sauver_progression',{p_donnees:st});if(raz)sbRaz=false;sbSync=Date.now();if(sbP)Object.assign(sbP,{rang:b.rang,acquises:b.acquises,reussite:b.reussite,serie:b.serie})}catch(e){}})();
   try{await sbEnv}finally{sbEnv=null}
   if(sbEnc){sbEnc=false;return sbEnvoi()}
@@ -3127,9 +3137,10 @@ const sbLien=()=>/^https?:$/.test(location.protocol);
 let sbAuto=null;const sbAutoP=()=>sbAuto!==null?Promise.resolve(sbAuto):fetch(SBU+'/auth/v1/settings',{headers:{apikey:SB_KEY}}).then(r=>r.ok?r.json():{}).then(j=>sbAuto=j.mailer_autoconfirm===true).catch(()=>false);
 // Onglet Profil
 async function ami(){
-  const el=$('ami'),b=monBilan(),r=R[b.rang],nom=sbP?esc(sbP.pseudo):'Moi';
+  const el=$('ami'),b=monBilan(),r=R[b.rang],cx=!!(sbU&&sbP);
+  const nom=!cx?'Moi':sbPe?`<form id="sb-pf2" class="psl"><input id="sb-ps2" maxlength="20" autocomplete="nickname" aria-label="Nouveau pseudo" value="${esc(sbP.pseudo)}"><button class="pen ok" type="submit" aria-label="Enregistrer le pseudo">${ico('coche')}</button><button class="pen" id="sb-pa" type="button" aria-label="Annuler">${ico('close')}</button></form>`:`<span class="psl"><span id="sb-pn">${esc(sbP.pseudo)}</span><button class="pen" id="sb-pe" type="button" aria-label="Changer de pseudo" title="Changer de pseudo">${ico('crayon')}</button></span>`;
   const nx=R[b.rang+1],kn=b.acquises;
-  let h=`<div class="card prf"><div class="prh"><span class="prm">${rIcon(b.rang)}</span><div><h2>${nom}</h2><p>${r[1]}</p></div></div>
+  let h=`<div class="card prf"><div class="prh"><span class="prm">${rIcon(b.rang)}</span><div>${cx&&sbPe?nom:`<h2>${nom}</h2>`}${cx&&sbPe&&sbPm?`<p class="stm ko" role="alert">${esc(sbPm)}</p>`:''}<p>${r[1]}</p></div></div>
 <ol class="rgs" aria-label="Les 12 rangs">${R.map((x,i)=>`<li class="${i<b.rang?'pas':i===b.rang?'ici':'fut'}" title="${x[1]} : ${x[0]} espèce${x[0]>1?'s':''}"><span class="tgi">${rIcon(i)}</span><span class="vh">${x[1]}, ${x[0]} espèce${x[0]>1?'s':''}${i===b.rang?' (rang actuel)':i<b.rang?' (atteint)':''}</span></li>`).join('')}</ol>
 <p class="na rgn">${nx?`Prochain rang : <b>${nx[1]}</b> à ${nx[0]} espèces acquises (tu en as ${kn}).`:'Tu as atteint le rang le plus élevé.'}</p></div>`;
   const msg=(sbMsg?`<p class="stm ko" role="alert">${esc(sbMsg)}</p>`:'')+(sbOk?`<p class="stm ok" role="status">${esc(sbOk)}</p>`:'');
@@ -3170,18 +3181,24 @@ async function ami(){
     $('sb-pf').onsubmit=async e=>{e.preventDefault();sbMsg='';try{sbP=await sbRpc('choisir_pseudo',{p_pseudo:$('sb-ps').value});await sbEnvoi()}catch(x){sbMsg=sbErr(x)}ami()};
     $('sb-out').onclick=sbSortie;return;
   }
-  if(!sbTab){try{sbTab=await sbRpc('tableau',{p_jour:today()})}catch(e){sbTab=[];sbMsg=sbErr(e)}}
-  const amis=sbTab.filter(x=>!x.moi);
-  h+=`<div class="card"><h3 class="hh">Aujourd'hui</h3>${amis.length?`<table class="tbm"><thead><tr><th>Ami</th><th>Exercices</th><th>Réussite</th><th>Nouvelles plantes</th></tr></thead><tbody>${sbTab.map(x=>`<tr${x.moi?' class="moi"':''}><td><span class="tbn"><span class="tgi">${rIcon(x.rang)}</span>${esc(x.pseudo)}</span></td><td>${x.exercices}</td><td>${x.exercices?Math.round(100*x.justes/x.exercices)+' %':'–'}</td><td>${x.nouvelles}</td></tr>`).join('')}</tbody></table>`:'<p class="na">Ajoute un ami avec son code pour comparer vos journées.</p>'}
-<button class="lnkb" id="sb-maj" type="button">Actualiser</button></div>
+  // classement : aujourd'hui, cette semaine (depuis lundi), ce mois-ci (depuis le 1er)
+  if(!sbTab)sbTab={};const per=sbPer,deb=per==='s'?dstr(Date.now()-((new Date().getDay()+6)%7)*864e5):per==='m'?today().slice(0,8)+'01':today();
+  if(!sbTab[per]){try{sbTab[per]=per==='j'?await sbRpc('tableau',{p_jour:today()}):await sbRpc('tableau_periode',{p_debut:deb,p_fin:today()})}
+    catch(e){sbTab[per]=per==='j'?[]:null;if(per!=='j'&&!sbTab.j){try{sbTab.j=await sbRpc('tableau',{p_jour:today()})}catch(x){}}if(per==='j')sbMsg=sbErr(e)}}
+  const tb=sbTab[per]||[],amis=(sbTab.j||tb).filter(x=>!x.moi),pj=per!=='j'&&!sbTab[per];
+  const PER=[['j','Aujourd\'hui'],['s','Cette semaine'],['m','Ce mois-ci']],lg=per!=='j';
+  h+=`<div class="card"><h3 class="hh">Classement</h3><div class="sbt s3" role="tablist" aria-label="Période">${PER.map(([k,t])=>`<button type="button" role="tab" data-per="${k}" aria-selected="${k===per}">${t}</button>`).join('')}</div>
+${pj?'<p class="na">Les totaux de la semaine et du mois arrivent bientôt.</p>':`<table class="tbm"><thead><tr><th>${amis.length?'Ami':'Toi'}</th><th>Exercices</th><th>Réussite</th><th>Nouvelles<span class="vh"> plantes</span></th>${lg?'<th>Jours</th>':''}</tr></thead><tbody>${tb.map(x=>`<tr${x.moi?' class="moi"':''}><td><span class="tbn"><span class="tgi">${rIcon(x.rang)}</span>${esc(x.pseudo)}</span></td><td>${x.exercices}</td><td>${x.exercices?Math.round(100*x.justes/x.exercices)+' %':'–'}</td><td>${x.nouvelles}</td>${lg?`<td>${x.jours||0}</td>`:''}</tr>`).join('')}</tbody></table>`}
+${amis.length?'':'<p class="na tbv">Ajoute un ami avec son code pour comparer vos progrès.</p>'}<button class="lnkb" id="sb-maj" type="button">Actualiser</button></div>
 <div class="card"><h3 class="hh hhi">${ico('profil')}Amis</h3><div class="cda"><span>Mon code ami</span><b id="sb-code">${esc(sbP.code_ami)}</b><button class="mini" id="sb-cp" type="button">Copier</button></div>
-<form id="sb-af" class="sbf"><label>Code de ton ami<input id="sb-ac" placeholder="RPL-XXXXX" autocomplete="off" autocapitalize="characters"></label>${msg}<button class="big" type="submit">Ajouter</button></form>
+<form id="sb-af" class="sbf sbi"><label><span class="vh">Code de ton ami</span><input id="sb-ac" placeholder="Code d'un ami : RPL-…" autocomplete="off" autocapitalize="characters" aria-label="Code de ton ami"></label><button class="big" type="submit">Ajouter</button></form>${msg}
 ${amis.length?`<details class="gam"><summary>Gérer mes amis (${amis.length})</summary>${amis.map(x=>`<div class="gar"><span>${esc(x.pseudo)}</span><button class="mini ko" data-rm="${esc(x.pseudo)}" type="button">Retirer</button></div>`).join('')}</details>`:''}</div>
-<div class="card"><h3 class="hh">Mon compte</h3>${sbPe?`<form id="sb-pf2" class="psl"><input id="sb-ps2" maxlength="20" autocomplete="nickname" aria-label="Nouveau pseudo" value="${esc(sbP.pseudo)}"><button class="pen ok" type="submit" aria-label="Enregistrer le pseudo">${ico('coche')}</button><button class="pen" id="sb-pa" type="button" aria-label="Annuler">${ico('close')}</button></form>${sbPm?`<p class="stm ko" role="alert">${esc(sbPm)}</p>`:''}`:`<p class="psl"><b id="sb-pn">${esc(sbP.pseudo)}</b><button class="pen" id="sb-pe" type="button" aria-label="Changer de pseudo" title="Changer de pseudo">${ico('crayon')}</button></p>`}<p class="na">${esc(sbU.email||'')}${sbSync?' · progression sauvegardée':''}</p><div class="row"><button class="mini" id="sb-out" type="button">Se déconnecter</button><button class="mini ko" id="sb-del" type="button">Supprimer mon compte</button></div></div>`;
+<div class="card sbc"><p class="na">${esc(sbU.email||'')}${sbSync?' · progression sauvegardée':''}</p><p class="sbl"><button class="lnkb" id="sb-out" type="button">Se déconnecter</button><span aria-hidden="true">·</span><button class="lnkb ko" id="sb-del" type="button">Supprimer mon compte</button></p></div>`;
   el.innerHTML=h;
   $('sb-maj').onclick=async()=>{sbMsg='';sbOk='';await sbEnvoi();sbTab=null;ami()};
   $('sb-cp').onclick=async()=>{try{await navigator.clipboard.writeText(sbP.code_ami);toast('Code ami copié')}catch(e){const r=document.createRange();r.selectNodeContents($('sb-code'));getSelection().removeAllRanges();getSelection().addRange(r)}};
   $('sb-af').onsubmit=async e=>{e.preventDefault();sbMsg='';sbOk='';try{const x=await sbRpc('ajouter_ami',{p_code:$('sb-ac').value});if(x.erreur)throw new Error(x.erreur);sbOk=x.pseudo+' fait maintenant partie de tes amis.';sbTab=null}catch(x){sbMsg=sbErr(x)}ami()};
+  el.querySelectorAll('[data-per]').forEach(bt=>bt.onclick=()=>{sbPer=bt.dataset.per;try{localStorage.setItem('qp.per',sbPer)}catch(e){}ami()});
   el.querySelectorAll('[data-rm]').forEach(bt=>bt.onclick=async()=>{if(!confirm('Retirer '+bt.dataset.rm+' de tes amis ?'))return;try{await sbRpc('retirer_ami',{p_pseudo:bt.dataset.rm})}catch(e){sbMsg=sbErr(e)}sbTab=null;ami()});
   $('sb-out').onclick=sbSortie;
   // changer de pseudo : même règle qu'au premier choix (2 à 20 caractères, unique), vérifiée par le serveur
