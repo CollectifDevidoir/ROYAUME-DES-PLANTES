@@ -18,6 +18,17 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   ok(/img\.test\/photos\/90\d\/large\.svg/.test(r.src||''),'la photo vient de l\'index (taille « large ») '+r.src);
   ok(r.ic>0,`espèces chargées depuis l'index : ${r.ic}`);
   ok(q.errs.length===0,'aucune erreur JavaScript '+JSON.stringify(q.errs));await c3.close();
+  // espèce sans photo d'organe dans l'index : le carrousel montre quand même les autres photos du taxon ;
+  // une ancienne entrée du cache (ix 1, sans ces photos) est reconstruite
+  const {p:u,ctx:c5}=await open({browser:b,w:390,h:844,touch:true,file:process.env.F,avant:async pg=>{
+    await pg.addInitScript(()=>{const P=[['https://img.test/photos/911/medium.svg','',0,'(c) Test'],['https://img.test/photos/912/medium.svg','Photo',0,'(c) Test'],['https://img.test/photos/913/medium.svg','Photo',0,'(c) Test'],['https://img.test/photos/914/medium.svg','Photo',0,'(c) Test']];
+      window.PHOTOS_TEST={especes:new Proxy({},{get:(o,l)=>typeof l==='string'&&/ /.test(l)?[9100,'nom','Famillaceae','Famille','Genre',P]:undefined})};
+      const v={};v['Quercus robur']={t:Date.now(),u:Date.now(),id:9100,ix:1,det:1,full:1,done:{21:1,13:1,14:1},imgs:[{src:'https://img.test/photos/911/large.svg',label:''}],ext:[]};localStorage.setItem('quizplantes.inat.v1',JSON.stringify(v))})}});
+  await lance(u,'mcq');await u.waitForTimeout(1200);
+  const n=await u.evaluate(()=>document.querySelectorAll('#pic .car .sl').length);
+  ok(n===4,'espèce sans photo d\'organe : 4 photos dans le carrousel (et pas 1) : '+n);
+  const vieux=await u.evaluate(async()=>{const it=await inatTaxon(S.find(s=>s[0]==='Quercus robur'));return it&&it.ix===2&&it.imgs.length===4});
+  ok(vieux,'ancienne entrée du cache : reconstruite avec toutes les photos');await c5.close();
   // sans index : comportement d'avant (l'API est interrogée)
   const {p:s,ctx:c4}=await open({browser:b,w:390,h:844,touch:true,file:process.env.F});const api2=[];s.on('request',r=>{if(r.url().startsWith('https://api.inaturalist.org/'))api2.push(1)});
   await lance(s,'mcq');await s.waitForTimeout(1500);ok(api2.length>0||await s.evaluate(()=>Object.keys(IC).length>0),'sans index : photos demandées à iNaturalist comme avant');

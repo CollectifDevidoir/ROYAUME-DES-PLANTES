@@ -2195,11 +2195,13 @@ const phxUrl=u=>/^\d+\.\w+$/.test(u)?'https://inaturalist-open-data.s3.amazonaws
 function phxEntree(l){
   const e=PHX&&PHX[l];if(!e)return null;const[id,cn,fam,famcn,gen,P]=e,now=Date.now();
   const ph=P.map(([u,lb,o,lic])=>({src:phxUrl(u),label:lb,page:o?'https://www.inaturalist.org/observations/'+o:'https://www.inaturalist.org/taxa/'+id,lic:lic||'iNaturalist'}));
-  return{t:now,u:now,id,cn,fam,famcn,gen,ix:1,det:1,full:1,done:Object.fromEntries(ORG.map(x=>[x[1],1])),imgs:ph.filter(x=>x.label!=='Photo'),ext:ph.filter(x=>x.label==='Photo')};
+  // carrousel : photo principale, organes, puis les autres photos du taxon (comme sans l'index : sinon une seule photo pour les espèces sans photo d'organe)
+  const ext=ph.filter(x=>x.label==='Photo');
+  return{t:now,u:now,id,cn,fam,famcn,gen,ix:2,det:1,full:1,done:Object.fromEntries(ORG.map(x=>[x[1],1])),imgs:ph.filter(x=>x.label!=='Photo').concat(ext.slice(0,5)),ext};
 }
 async function inatTaxon(s,pri){
   const l=s[0],c=IC[l];
-  if(c&&Date.now()-c.t<ITTL){c.u=Date.now();return c}
+  if(c&&Date.now()-c.t<ITTL&&c.ix!==1){c.u=Date.now();return c}   // ix 1 : ancienne entrée de l'index, sans les autres photos
   if(await phxPret()){const x=phxEntree(l);if(x){IC[l]=x;return x}if(PHS.has(l))return null}
   if(Date.now()<iOff)return null;
   const j=await inat('taxa?q='+encodeURIComponent(l.replace(/×/g,' '))+'&per_page=10&locale=fr',pri||0);

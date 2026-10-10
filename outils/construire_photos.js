@@ -44,6 +44,11 @@ async function espece(l){
   if(P[0][1]){P.unshift([P[0][0],'',P[0][2],P[0][3]])}   // pas de photo du taxon : la première photo d'organe sert de photo principale
   const ext=(t.taxon_photos||[]).map(x=>x.photo).filter(p=>p&&p.license_code&&!vu.has(String(p.id))).slice(0,4)
     .map(p=>[pc(p.medium_url||p.url),'Photo',0,p.attribution||'']);
+  // peu de photos (ni organes ni photos du taxon) : les observations les plus appréciées complètent le carrousel
+  if(P.length+ext.length<4){
+    const obs=((await api(`observations?taxon_id=${r.id}&quality_grade=research&photo_license=${ILIC}&photos=true&order_by=votes&order=desc&per_page=10&locale=fr`)).results||[]);
+    for(const o of obs){const p=o.photos&&o.photos[0];if(!p||!p.url||vu.has(String(p.id)))continue;vu.add(String(p.id));ext.push([pc(p.url),'Photo',o.id,p.attribution||'']);if(P.length+ext.length>=6)break}
+  }
   return[r.id,t.preferred_common_name||r.preferred_common_name||'',fa.name||'',fa.preferred_common_name||'',ge.name||'',P.concat(ext)];
 }
 (async()=>{
