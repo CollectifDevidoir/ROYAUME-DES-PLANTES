@@ -3091,8 +3091,15 @@ function fusion(a,b){
   for(const k in b.sp||{}){const x=r.sp[k],y=b.sp[k];if(!x||(y.s||0)>(x.s||0)||((y.s||0)===(x.s||0)&&(y.b||0)>(x.b||0)))r.sp[k]=y}
   for(const d in b.hist||{}){const x=r.hist[d],y=b.hist[d];if(!x||(y.n||0)>(x.n||0))r.hist[d]=y}
   for(const k in b.cf||{})r.cf[k]=Math.max(r.cf[k]||0,b.cf[k]||0);
+  // jokers du jour : le plus grand nombre utilisé (5 par jour, tous appareils et onglets confondus)
+  if(b.jk&&b.jk.d){const x=r.jk;if(!x||!x.d||x.d<b.jk.d)r.jk={d:b.jk.d,n:b.jk.n||0};else if(x.d===b.jk.d)r.jk={d:x.d,n:Math.max(x.n||0,b.jk.n||0)}}
   r.best=Math.max(r.best||0,b.best||0);return r;
 }
+// Autre onglet, ou appli de l'écran d'accueil restée ouverte à côté : on reprend ce qu'il a enregistré avant de continuer,
+// sinon son état ancien (jokers à 5, plantes apprises entre-temps) écraserait le nôtre au prochain enregistrement
+function relire(){try{const o=JSON.parse(localStorage.getItem(K));if(!o||!o.sp)return;const m=fusion(st,o);if(JSON.stringify(m)===JSON.stringify(st))return;st=m;fix();stats();jokerUI()}catch(e){}}
+addEventListener('storage',e=>{if(e.key===K)relire()});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)relire()});
 // Fusion de la progression du compte dans celle de l'appareil ; renvoie true si quelque chose a changé
 function sbFusionne(dist){if(!dist||!dist.sp)return false;const m=fusion(st,dist);if(JSON.stringify(m)===JSON.stringify(st))return false;
   st=m;fix();try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}stats();return true}
