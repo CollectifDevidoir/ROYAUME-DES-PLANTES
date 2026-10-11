@@ -1,4 +1,4 @@
-// Modes de jeu : « Classique » garde sa taille et s'ouvre en menu déroulant (Classique + 5 catégories) ;
+// Modes de jeu : « Classique » garde sa taille et s'ouvre en menu déroulant (Classique en tête, puis 5 catégories en tuiles) ;
 // Famille du jour et « Rejouer mes erreurs » restent visibles à côté. De 320 à 2560 px.
 // Usage : node outils/controle_categories.js [dossier_captures]   (variable F = autre fichier html)
 const {chromium}=require('playwright');const {open}=require('./banc_essai.js');
@@ -10,9 +10,9 @@ for(const [w,h] of [[320,568],[360,640],[390,844],[768,1024],[1024,700],[1440,78
   ok(ferme,`${w}×${h} : menu fermé au départ, Famille du jour visible`);
   await p.click('#cAll');await p.waitForTimeout(250);
   const r=await p.evaluate(()=>{const bs=[...document.querySelectorAll('#cats button')],R=bs.map(x=>x.getBoundingClientRect());
-    return{n:bs.length,vis:getComputedStyle($('cats')).display!=='none',trop:bs.filter(x=>x.scrollWidth>x.clientWidth+1).map(x=>x.textContent),bord:R.every(x=>x.right<=innerWidth&&x.left>=0),ico:bs.every(x=>x.querySelector('.cti svg'))}});
+    return{n:bs.length,vis:getComputedStyle($('cats')).display!=='none',trop:bs.filter(x=>x.scrollWidth>x.clientWidth+1).map(x=>x.textContent),bord:R.every(x=>x.right<=innerWidth&&x.left>=0),ico:bs.filter(x=>!x.classList.contains('cpr')).every(x=>x.querySelector('.cti svg'))&&!bs[0].querySelector('.cti')}});
   ok(r.vis&&r.n===6&&r.bord,`${w}×${h} : menu ouvert, Classique + 5 catégories dans l'écran`);
-  ok(r.trop.length===0&&r.ico,`${w}×${h} : aucun nom tronqué, une illustration par mode`);
+  ok(r.trop.length===0&&r.ico,`${w}×${h} : aucun nom tronqué, une illustration par catégorie, aucune pour Classique`);
   if(DOS)await p.screenshot({path:`${DOS}/modes-${w}.png`});
   await p.evaluate(()=>document.querySelectorAll('#cats button')[2].click());await p.waitForTimeout(500);
   const s=await p.evaluate(()=>({mode,txt:$('cAll').textContent,ferme:getComputedStyle($('cats')).display==='none'}));

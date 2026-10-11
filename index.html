@@ -1133,23 +1133,28 @@ html:not(.kb) #shn:focus-visible,html:not(.kb) .bsx:focus-visible,html:not(.kb) 
 #chips .call .cdv{flex:none;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.18);display:inline-flex;align-items:center;justify-content:center;transition:transform .2s}
 #chips .call .cdv .tgi{width:16px;height:16px}
 #chips.ouv .call .cdv{transform:rotate(180deg)}
-#chips .cats{display:none!important;position:absolute;left:0;right:0;z-index:40;flex-direction:column;gap:2px!important;margin:0!important;padding:6px;border-radius:18px;background:var(--card);border:1px solid var(--bd);box-shadow:0 18px 40px -12px rgba(10,40,20,.45)}
+#chips .cats{display:none!important;position:absolute;left:0;right:0;z-index:40;flex-wrap:wrap;gap:6px!important;margin:0!important;padding:8px;border-radius:18px;background:var(--card);border:1px solid var(--bd);box-shadow:0 18px 40px -12px rgba(10,40,20,.45)}
 #chips.ouv .cats{display:flex!important;animation:fi .16s ease-out}
-#chips .cats button{flex:none!important;flex-direction:row!important;justify-content:flex-start!important;gap:12px!important;min-height:52px!important;padding:6px 12px!important;border:0!important;border-radius:12px!important;background:none!important;color:var(--fg)!important;box-shadow:none!important;font:700 15px var(--fx)!important;text-align:left;white-space:normal!important}
+#chips .cats button{position:relative;flex:1 1 calc(33.33% - 6px)!important;min-width:0;flex-direction:column!important;justify-content:flex-start!important;align-items:center;gap:3px!important;min-height:0!important;padding:10px 6px 9px!important;border:1px solid var(--bd)!important;border-radius:14px!important;background:var(--bg1)!important;color:var(--fg)!important;box-shadow:none!important;font:700 14px var(--fx)!important;white-space:nowrap!important}
 #chips .cats button::after{display:none}
-#chips .cats button:hover,#chips .cats button:focus-visible{background:var(--bg2)!important}
-#chips .cats button[aria-pressed=true]{background:rgba(47,107,63,.1)!important;color:var(--ac)!important}
-#chips .cats .cti{display:block!important;width:30px!important;height:30px!important}
-#chips .cats .cn{flex:1;display:flex;flex-direction:column;line-height:1.2}
-#chips .cats .cn small{font:400 12.5px var(--fx);color:var(--mu)}
-#chips .cats .tgi{width:18px;height:18px;color:var(--ac)}
+#chips .cats button small{font:400 12px var(--fx);color:var(--mu);font-variant-numeric:tabular-nums}
+#chips .cats .cti{display:block!important;width:34px!important;height:34px!important;margin-bottom:2px}
+#chips .cats .cbr{display:block;width:70%;height:4px;border-radius:2px;background:var(--bd);overflow:hidden;margin-top:3px}
+#chips .cats .cbr i{display:block;height:100%;background:var(--ac)}
+#chips .cats button.cpr{flex:1 1 100%!important;flex-direction:row!important;align-items:center;gap:10px!important;padding:12px 14px!important;text-align:left;font:600 18px var(--ft)!important;white-space:normal!important}
+#chips .cats .cpr .cn{flex:1;display:flex;flex-direction:column;line-height:1.2}
+#chips .cats .cpr small{font:400 12.5px var(--fx);margin-top:2px}
+#chips .cats .cpr .tgi{width:18px;height:18px;color:var(--ac)}
+#chips .cats button:hover,#chips .cats button:focus-visible{border-color:var(--ac)!important}
+#chips .cats button[aria-pressed=true]{background:rgba(47,107,63,.1)!important;border-color:var(--ac)!important;color:var(--ac)!important}
+#chips .cats .cct{flex:1 1 100%;margin:6px 4px 0;font:700 11px var(--fx);letter-spacing:.09em;text-transform:uppercase;color:var(--mu)}
 @media (min-width:760px){#chips .cats{right:auto;width:420px}}
 /* ===== Volets : un seul système de titres, d'intitulés, de croix et de marges ===== */
 .bsh h2,#fht,.prf h2{font:600 1.55rem/1.15 var(--ft)!important;font-style:normal!important;color:var(--fg)!important;letter-spacing:-.005em}
 .bsh h2 .tgi{width:28px;height:28px}
 .fhd{font:600 1.3rem var(--ft)!important;padding:16px 16px 12px 20px}
 .prf .prh p{font:700 .95rem var(--fx)!important;color:var(--ac)!important}
-.stl,.lab,.diff p.lab,dialog h4{font:700 11.5px var(--fx)!important;letter-spacing:.09em!important;text-transform:uppercase;color:var(--mu)!important}
+.stl,.lab,.diff p.lab{font:700 11.5px var(--fx)!important;letter-spacing:.09em!important;text-transform:uppercase;color:var(--mu)!important}
 .hh,.bs h3:not(.stl){font:600 1.2rem/1.2 var(--ft)!important;color:var(--fg)!important}
 .hh.hhi{display:flex;align-items:center;gap:8px}
 .bsx,#fcx,.fhd button,.fdx{width:40px!important;height:40px!important;margin-right:0!important;border:0!important;border-radius:50%!important;background:var(--bg2)!important;color:var(--fg)!important;box-shadow:none!important}
@@ -1159,6 +1164,20 @@ html:not(.kb) #shn:focus-visible,html:not(.kb) .bsx:focus-visible,html:not(.kb) 
 .qkn li span::first-letter,.qk li::first-letter,.erw li::first-letter{text-transform:uppercase}
 dialog .hp{font-size:1rem;line-height:1.5}
 .sbf label>span{flex-wrap:wrap;column-gap:8px}
+
+/* ===== Relecture : hiérarchie des volets ===== */
+dialog h4{font:600 1.2rem/1.2 var(--ft)!important;color:var(--fg)!important;margin:22px 0 8px!important;text-transform:none}
+#dbody>h4:first-of-type{margin-top:18px!important}
+.sbf label small{font:400 12.5px var(--fx)!important;color:var(--mu)}
+#shr .v{font-size:.8rem;padding:2px 9px;vertical-align:.18em;margin-right:4px}
+#shr b{font:600 1.32rem/1.15 var(--ft);letter-spacing:-.005em}
+#shr .sl2{margin-top:2px}
+#shr .sl2 em{font:italic 1.02rem var(--ft)}
+#shr .fm{font-size:.85rem}
+#shr .acq,#shr .acq2{margin-top:6px}
+.prf .prh h2{font-size:1.7rem!important}
+.rgn{font-size:.92rem}
+.hp{color:var(--fg)}
 /* ===== Famille du jour : flèches sur ordinateur ===== */
 .fav{display:none}
 /* grand écran tactile (tablette, ordinateur tactile) : même carte centrée qu'à la souris */
@@ -2204,7 +2223,7 @@ let celQ=[],celOn=false;
 const COX='<span class="cox" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="13.5" rx="6.6" ry="7" fill="#d9614e"/><path d="M12 6.6v13.8M5.6 12h12.8" stroke="#1c2a22" stroke-width="1.1" fill="none"/><circle cx="9" cy="11" r="1.1" fill="#1c2a22"/><circle cx="15" cy="11" r="1.1" fill="#1c2a22"/><circle cx="8.6" cy="16" r="1.2" fill="#1c2a22"/><circle cx="15.4" cy="16" r="1.2" fill="#1c2a22"/><path d="M8.5 7.5a3.5 3.2 0 0 1 7 0z" fill="#1c2a22"/><path d="M10 5l-1.4-2M14 5l1.4-2" stroke="#1c2a22" stroke-width="1.1" stroke-linecap="round"/></svg></span>';
 // petite volée de feuilles qui s'envole d'un élément (bonne réponse, objectif atteint)
 // contour de focus des boutons ouverts par programme : seulement si l'on se sert du clavier
-addEventListener('keydown',e=>{if(!/^(Shift|Control|Alt|Meta)$/.test(e.key))document.documentElement.classList.add('kb')},true);addEventListener('pointerdown',()=>document.documentElement.classList.remove('kb'),true);
+addEventListener('keydown',e=>{if(/^(Shift|Control|Alt|Meta)$/.test(e.key)||(e.target&&e.target.closest&&e.target.closest('input,textarea'))&&e.key!=='Tab')return;document.documentElement.classList.add('kb')},true);addEventListener('pointerdown',()=>document.documentElement.classList.remove('kb'),true);
 function envol(el){if(!el||matchMedia('(prefers-reduced-motion:reduce)').matches)return;const r=el.getBoundingClientRect(),w=document.createElement('div');w.className='envol';w.style.left=(r.left+r.width*.75)+'px';w.style.top=(r.top+r.height/2)+'px';
   for(let k=0;k<7;k++){const i=document.createElement('i');i.style.setProperty('--x',(Math.random()*90-45)+'px');i.style.setProperty('--y',(-40-Math.random()*60)+'px');i.style.setProperty('--r',(Math.random()*360)+'deg');i.style.animationDelay=(k*25)+'ms';i.style.background=['#9cc484','#e7b54e','#5e9150'][k%3];w.append(i)}
   document.body.append(w);setTimeout(()=>w.remove(),1100)}
@@ -2611,7 +2630,6 @@ function answer(v){
   if(typed){$('q-input').blur();$('q-input').disabled=true;if($('jk'))$('jk').disabled=true;$('qc').classList.remove('typing');$('pic').style.height=''}
   document.querySelectorAll('.opts>button').forEach(b=>{b.disabled=true;
     if(b.dataset.l===cur[0])b.classList.add('ok');else if(b.dataset.l===v)b.classList.add('ko')});
-  if(good)envol(document.querySelector('.opts>button.ok')||$('q-form')||$('pic'));
   if(good)$('pic').classList.add('pop');$('pic').classList.add('ans');vib(good?15:[30,40,30]);$('opts').classList.add('rv');
   $('next').hidden=false;stats();showSheet(good,w,v);
   setTimeout(()=>{const n=$('shn');if(n&&!$('sh').hidden)n.focus({preventScroll:true})},60);
@@ -3109,9 +3127,12 @@ function chips(){
   const ferme=()=>{ch.classList.remove('ouv');a.setAttribute('aria-expanded','false')};
   a.onclick=e=>{e.stopPropagation();const o=!ch.classList.contains('ouv');ch.classList.toggle('ouv',o);a.setAttribute('aria-expanded',o);g.style.top=(a.offsetTop+a.offsetHeight+6)+'px';if(o&&document.documentElement.classList.contains('kb')){const b=g.querySelector('[aria-pressed=true]');b&&b.focus({preventScroll:true})}};
   g.innerHTML='';g.setAttribute('role','listbox');g.setAttribute('aria-label','Mode de jeu');
+  const pc=k=>{const a=S.filter(s=>s[2]===k);return Math.round(100*a.filter(own).length/a.length)};
   for(const k in T){const b=document.createElement('button');b.type='button';b.setAttribute('role','option');b.setAttribute('aria-pressed',k===mode);b.setAttribute('aria-selected',k===mode);
-    b.innerHTML='<span class="cti" aria-hidden="true">'+(k==='tout'?ico('quiz'):catIcon(k))+'</span><span class="cn">'+nom(k)+'<small>'+(k==='tout'?'toutes les plantes mélangées':cpt(k)+' acquises')+'</small></span>'+(k===mode?ico('coche','ic-in'):'');
-    b.onclick=e=>{e.stopPropagation();ferme();if(k!==mode)pick(k)};g.append(b)}
+    if(k==='tout'){b.className='cpr';b.innerHTML='<span class="cn">Classique<small>toutes les plantes mélangées · '+cpt('tout')+' acquises</small></span>'+(k===mode?ico('coche','ic-in'):'')}
+    else b.innerHTML='<span class="cti" aria-hidden="true">'+catIcon(k)+'</span><b>'+T[k]+'</b><small>'+cpt(k)+'</small><i class="cbr"><i style="width:'+Math.max(3,pc(k))+'%"></i></i>';
+    b.onclick=e=>{e.stopPropagation();ferme();if(k!==mode)pick(k)};g.append(b);
+    if(k==='tout'){const t=document.createElement('p');t.className='cct';t.textContent='Ou une seule catégorie';g.append(t)}}
   if(!chips.lie){chips.lie=1;document.addEventListener('click',e=>{if(!e.target.closest('#chips'))ferme()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&ch.classList.contains('ouv')){ferme();a.focus()}})}
 }
 function tabTo(t){
