@@ -34,7 +34,7 @@ for(const cs of ['light','dark'])for(const [w,h] of [[390,844],[1440,900]]){
   const voir=async n=>{const r=await p.evaluate(contraste);const m=r.length?Math.min(...r.map(x=>x[0])):0;const pire=r.find(x=>x[0]===m);
     ok(r.length&&m>=3,`${tag} ${n} : ${r.length} icônes, contraste minimal ${m.toFixed(1)}:1${pire?' ('+pire[1]+')':''}`)};
   await voir('accueil');
-  await p.evaluate(()=>{const b=document.querySelector('#chips .cats button');b&&b.click()});await p.waitForTimeout(300);await voir('catégorie active');
+  await p.evaluate(()=>{const b=document.querySelectorAll('#chips .cats button')[1];b&&b.click()});await p.waitForTimeout(300);await voir('catégorie active');
   await p.click('.tabs button[data-t=pro]');await p.waitForTimeout(400);await voir('progrès');
   await p.click('.tabs button[data-t=quiz]');await p.click('#fday');await p.waitForTimeout(500);await voir('famille du jour');
   ok(p.errs.length===0,tag+' aucune erreur JavaScript');await ctx.close()}
