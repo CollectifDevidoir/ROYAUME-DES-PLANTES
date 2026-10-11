@@ -179,8 +179,8 @@ pot="M19 41H45L41 58H23Z"
 RI.append(shadow(32,59.5,13,2)+S('M32 41C32 32 31.5 24 32 13','g3',2.8)+leaf(32,36,-56,15,6,'g2','g3',None)+leaf(32,36,56,15,6,'g1','g2',None)+leaf(32,27,-48,12.5,5.2,'g1','g2',None)+leaf(32,27,48,12.5,5.2,'g2','g3',None)+leaf(32,15,0,10,4.6,'g1','g2',None)
   +dep(pot,'o2','o3',0,1.2)+F('M36 41H45L41 58H34Z','o3')+dep('M16 36.5H48V43.5H16Z','o2','o3',0,1.2)+F('M16 36.5H48V38.5H16Z','o1'))
 RI.append(shadow(32,58.5,20,2.6)+S('M28 57L25 46M36 57L39 46M32 57V48','b2',2.8)+crown_blob(32,37,20,13,9,'g1','g2','g3',jit=[1,.9,1.1,1,.8,1.2,1,.9,1])
-  +''.join(g(''.join(F('M0 0C1.6 -1 2 -3.6 0 -5C-2 -3.6 -1.6 -1 0 0Z','p2').join(['<g transform="rotate(%d)">'%a,'</g>']) for a in range(0,360,72))+F(circ(0,0,1.3),'y2'),x,y) for x,y in [(22,34),(31,29),(41,34),(35,42),(25,42)]))
-RI.append(shadow(32,58.5,11,2.2)+trunk(32,57,32,3.4,2.1)+S('M32 44L37.5 39','b3',2)+crown_blob(32,22,12.5,15.5,8,'g1','g1','g2',spots=False)+F(ell(28,17,3,5),'c1'))
+  +''.join(g(''.join(F('M0 0C1.6 -1 2 -3.6 0 -5C-2 -3.6 -1.6 -1 0 0Z','p2').join(['<g transform="rotate(%d)">'%a,'</g>']) for a in range(0,360,72))+F(circ(0,0,1.3),'y2'),x,y) for x,y in [(20.5,37),(27,30.5),(37,30),(43.5,36.5),(32,41.5)]))
+RI.append(shadow(32,58.5,11,2.2)+trunk(32,57,32,3.4,2.1)+S('M32.4 43.5C34 41 36 39.5 38 35.5','b3',1.8)+S('M31.6 46.5C30 44 28.2 41.5 26.5 36','b3',1.6)+crown_blob(32,22,12.5,15.5,8,'g1','g1','g2',spots=False)+F(ell(28,17,3,5),'c1'))
 RI.append(shadow(32,58.5,18,2.6)+trunk(32,57,36,5.8,3.4)+S('M31 46L25 39M33.5 43L39 38','b3',2.2)+crown_blob(32,25,20.5,17,10,'g1','g2','g3',jit=[1,.9,1.1,1,.8,1.2,1,.9,1,1.1])
   +''.join(berry(x,y,2.8) for x,y in [(22,30),(41,23),(36,33),(27,21)]))
 # Grand chêne : large couronne d'automne (orangé, reflet clair), tronc puissant, sans glands
@@ -259,13 +259,21 @@ def voute(y0,n=26,seed=5):
     for i in range(n):
         x=1200-i*w;d+=f'Q{f(x-w/2)} {f(y0+R.uniform(22,34))} {f(x-w)} {f(y0+R.uniform(-8,10))}'
     return d+'Z'
-SP_L1=f'<path d="{lisiere(600)}"/><path opacity=".7" d="{lisiere(640,9)}"/>'
-SP_L2=(''.join(f'<path d="{tronc(x,w,l,1.6,0)}"/>' for x,w,l in [(130,16,-6),(300,12,5),(455,14,-4),(745,15,5),(900,12,-5),(1075,17,6)])
-       +f'<path d="{voute(78,34,5)}"/><path opacity=".55" d="{voute(108,44,8)}"/>')
-SP_L3=(''.join(f'<path d="{tronc(x,w,l,1.5,-10)}"/>' for x,w,l in [(25,46,-8),(398,30,6),(803,32,-7),(1178,48,8)])
-       +'<path d="'+fronde(415,800,560,640,440,660,13,44)+fronde(440,800,600,730,500,715,10,28)+fronde(785,800,640,640,760,660,13,44)
-       +fronde(760,800,600,730,700,715,10,28)+fronde(0,800,200,620,40,640,14,52)+fronde(1200,800,1000,620,1160,640,14,52)
-       +fronde(70,800,300,730,170,700,11,32)+fronde(1130,800,900,730,1030,700,11,32)+'"/>')
+def bosses(y0,pas,creux,seed,sens=1,bord=800):
+    """Houppiers en arcs de cercle de tailles variées (sens=1 : bosses vers le haut, -1 : voûte qui retombe)."""
+    import random;R=random.Random(seed);x=-60;d=f'M-60 {bord}L-60 {y0}'
+    while x<1260:
+        w=R.uniform(*pas);ny=y0+sens*R.uniform(0,creux);r=w*R.uniform(.55,.75)
+        d+=f'A{f(r)} {f(r)} 0 0 {1 if sens==1 else 0} {f(x+w)} {f(ny)}';x+=w
+    return d+f'L1260 {bord}Z'
+# Lisière lointaine en arcs ronds ; troncs moyens et troncs de premier plan d'épaisseurs et d'écarts irréguliers (aucune symétrie,
+# ni sur ordinateur ni dans la bande centrale visible sur téléphone) ; fougères dissymétriques.
+SP_L1=f'<path d="{bosses(590,(110,220),26,3)}"/><path opacity=".7" d="{bosses(650,(80,150),18,11)}"/>'
+SP_L2=(''.join(f'<path d="{tronc(x,w,l,1.6,0)}"/>' for x,w,l in [(92,10,-5),(236,15,7),(470,9,-4),(640,13,6),(858,11,-6),(1018,16,4),(1150,9,-3)])
+       +f'<path d="{bosses(64,(150,280),34,5,-1,-40)}"/><path opacity=".5" d="{bosses(104,(110,210),26,8,-1,-40)}"/>')
+SP_L3=(''.join(f'<path d="{tronc(x,w,l,1.5,-10)}"/>' for x,w,l in [(38,54,-10),(306,22,8),(744,36,-7),(1004,25,9),(1188,44,6)])
+       +'<path d="'+fronde(0,800,215,610,40,630,15,54)+fronde(60,800,250,735,150,705,11,30)+fronde(318,800,410,722,340,745,8,20)
+       +fronde(728,800,560,650,700,660,13,44)+fronde(752,800,830,728,770,750,7,18)+fronde(1200,800,1070,690,1170,700,10,34)+'"/>')
 SPLASH={'l1':SP_L1,'l2':SP_L2,'l3':SP_L3}
 
 

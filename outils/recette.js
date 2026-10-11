@@ -34,7 +34,7 @@ for(const [w,h] of TAILLES){
   await p.click('.tabs button[data-t=quiz]');await p.waitForTimeout(300);
   await p.click('#ring');await cap('reglages');await pasDeDebord('réglages');
   ok(await p.evaluate(()=>$('set').open),tag+' réglages ouverts');await p.click('#set-x');await p.waitForTimeout(250);
-  await p.click('#help');await cap('aide');await pasDeDebord('aide');
+  await p.click(await p.evaluate(()=>document.documentElement.classList.contains('dk'))?'#side [data-sd=aide]':'#help');await cap('aide');await pasDeDebord('aide');
   ok(p.errs.length===0,tag+' aucune erreur JavaScript '+(p.errs.length?JSON.stringify(p.errs.slice(0,3)):''));
   await ctx.close();
 }
