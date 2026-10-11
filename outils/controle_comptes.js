@@ -59,15 +59,15 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   await B.p.fill('#sb-ac',codeB);await B.p.click('#sb-af button');ok(await att(B.p,()=>/propre code/.test($('ami').innerText)),'son propre code : refusé');
   await B.p.fill('#sb-ac','RPL-ZZZZZ');await B.p.click('#sb-af button');ok(await att(B.p,()=>/Aucun ami avec ce code/.test($('ami').innerText)),'code inconnu : message clair');
   await B.p.fill('#sb-ac',codeA.toLowerCase());await B.p.click('#sb-af button');
-  ok(await att(B.p,()=>/Antoine fait maintenant partie/.test($('ami').innerText)&&document.querySelectorAll('.tbm tbody tr').length===2),'ami ajouté avec son code (minuscules acceptées) : tableau à 2 lignes');
-  const lignes=await B.p.evaluate(()=>[...document.querySelectorAll('.tbm tbody tr')].map(r=>[...r.cells].map(c=>c.innerText.trim())));
+  ok(await att(B.p,()=>/Antoine fait maintenant partie/.test($('ami').innerText)&&document.querySelectorAll('.tbl li').length===2),'ami ajouté avec son code (minuscules acceptées) : tableau à 2 lignes');
+  const lignes=await B.p.evaluate(()=>[...document.querySelectorAll('.tbl li')].map(r=>[r.querySelector('.tbn').innerText.trim(),r.querySelector('.tbs b').innerText.trim()]));
   ok(lignes[0][0]==='Coline'&&lignes[0][1]==='2'&&lignes[1][0]==='Antoine'&&lignes[1][1]==='1','tableau du jour : Coline 2 exercices, Antoine 1, du plus actif au moins actif');
-  ok(await B.p.evaluate(()=>document.querySelector('.tbm tr.moi td').innerText.trim()==='Coline'),'ma ligne est mise en avant');await T(B.p,'3-tableau');
+  ok(await B.p.evaluate(()=>document.querySelector('.tbl li.moi .tbn').innerText.trim()==='Coline'),'ma ligne est mise en avant');await T(B.p,'3-tableau');
   await B.p.evaluate(()=>{document.querySelector('.rgs').dataset.t='1'});
-  await B.p.click('[data-per="s"]');ok(await att(B.p,()=>[...document.querySelectorAll('.tbm th')].some(x=>x.textContent==='Jours')&&document.querySelectorAll('.tbm tbody tr').length===2&&document.querySelector('[data-per="s"]').getAttribute('aria-selected')==='true'),'classement « Cette semaine » : mêmes amis, colonne des jours joués');await T(B.p,'3s-semaine');
-  await B.p.click('[data-per="m"]');ok(await att(B.p,()=>document.querySelector('[data-per="m"]').getAttribute('aria-selected')==='true'&&document.querySelectorAll('.tbm tbody tr').length===2),'classement « Ce mois-ci »');
+  await B.p.click('[data-per="s"]');ok(await att(B.p,()=>/jours? jou/.test(document.querySelector('.tbl').textContent)&&document.querySelectorAll('.tbl li').length===2&&document.querySelector('[data-per="s"]').getAttribute('aria-selected')==='true'),'classement « Cette semaine » : mêmes amis, colonne des jours joués');await T(B.p,'3s-semaine');
+  await B.p.click('[data-per="m"]');ok(await att(B.p,()=>document.querySelector('[data-per="m"]').getAttribute('aria-selected')==='true'&&document.querySelectorAll('.tbl li').length===2),'classement « Ce mois-ci »');
   ok(await B.p.evaluate(()=>document.querySelector('.rgs').dataset.t==='1'),'changer de période ne redessine que le classement (les icônes des rangs ne bougent pas)');
-  await B.p.click('[data-per="j"]');ok(await att(B.p,()=>!/Jours/.test(document.querySelector('.tbm thead').textContent)),'retour à « Aujourd\'hui »');
+  await B.p.click('[data-per="j"]');ok(await att(B.p,()=>!/jours? jou/.test(document.querySelector('.tbl').textContent)&&!/depuis/.test(document.querySelector('.tbh').textContent)),'retour à « Aujourd\'hui »');
   // ---- Antoine voit Coline après actualisation
   await A.p.click('#sb-maj');ok(await att(A.p,()=>/Coline/.test($('ami').innerText)),'Antoine voit Coline (amitié réciproque)');
   // ---- Coline change de pseudo : pseudo pris refusé, annuler ne change rien, puis nouveau pseudo visible par son ami
@@ -76,7 +76,7 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   await B.p.click('#sb-pa');ok(await att(B.p,()=>$('sb-pn')&&$('sb-pn').textContent==='Coline'),'changer de pseudo : « Annuler » garde l\'ancien');
   await B.p.click('#sb-pe');await B.p.fill('#sb-ps2','x');await B.p.click('#sb-pf2 button[type=submit]');ok(await att(B.p,()=>/2 à 20/.test($('ami').innerText)),'changer de pseudo : trop court refusé');
   await B.p.fill('#sb-ps2','Coline_B');await B.p.click('#sb-pf2 button[type=submit]');
-  ok(await att(B.p,()=>$('sb-pn')&&$('sb-pn').textContent==='Coline_B'&&document.querySelector('.tbm tr.moi td').innerText.trim()==='Coline_B'),'changer de pseudo : nouveau pseudo affiché dans le compte et le tableau');
+  ok(await att(B.p,()=>$('sb-pn')&&$('sb-pn').textContent==='Coline_B'&&document.querySelector('.tbl li.moi .tbn').innerText.trim()==='Coline_B'),'changer de pseudo : nouveau pseudo affiché dans le compte et le tableau');
   await A.p.click('#sb-maj');ok(await att(A.p,()=>/Coline_B/.test($('ami').innerText)),'l\'ami voit le nouveau pseudo, l\'amitié est gardée');
   await B.p.click('#sb-pe');await B.p.fill('#sb-ps2','Coline');await B.p.click('#sb-pf2 button[type=submit]');await att(B.p,()=>$('sb-pn')&&$('sb-pn').textContent==='Coline');await A.p.click('#sb-maj');await att(A.p,()=>/Coline\b/.test($('ami').innerText));
   // ---- Antoine sur un nouvel appareil : sa progression revient

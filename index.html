@@ -1034,14 +1034,6 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
 .sbf label>span{display:flex;align-items:baseline;gap:6px}.sbf label small{font-weight:600;color:var(--mu)}
 #sb-go{width:100%}.sbh{margin:-2px 0 0;font-size:.82rem}
 .lnkb{display:block;margin:10px auto 0;padding:8px;border:0;background:none;color:var(--ac);font:600 .88rem var(--fx);text-decoration:underline;cursor:pointer;min-height:36px}
-.tbm{width:100%;border-collapse:collapse;font:600 .9rem var(--fx);font-variant-numeric:tabular-nums}
-.tbm th{font:600 11px var(--fx);color:var(--mu);text-align:right;padding:4px 4px 6px;text-transform:uppercase;letter-spacing:.04em}
-.tbm th:first-child,.tbm td:first-child{text-align:left}
-.tbm td{padding:9px 4px;border-top:1px solid var(--bd);text-align:right}
-.tbm td:first-child{font-weight:600}.tbn{display:flex;align-items:center;gap:6px}
-.tbm td .tgi{width:22px;height:22px;margin:0}
-.tbm tr.moi td{background:rgba(47,107,63,.08)}
-.tbm tr.moi td:first-child{border-radius:10px 0 0 10px}.tbm tr.moi td:last-child{border-radius:0 10px 10px 0}
 .psl{display:flex;align-items:center;gap:4px;margin:0 0 2px;min-height:34px}
 .psl b{font:600 1.05rem var(--ft);color:var(--fg)}
 .psl input{flex:1;min-width:0;max-width:240px;padding:6px 10px;border-radius:10px;border:1.5px solid var(--ac);background:#fff;color:#14281a;font:600 1rem var(--fx)}
@@ -1055,7 +1047,6 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
 .gam{margin-top:12px}.gam summary{cursor:pointer;color:var(--ac);font:600 .9rem var(--fx);min-height:36px;display:flex;align-items:center}
 .gar{display:flex;align-items:center;justify-content:space-between;padding:6px 0;border-top:1px solid var(--bd)}
 #ami .stm{margin:0}
-@media (max-width:379px){.tbm{font-size:.82rem}.tbm th{font-size:10px}}
 /* 7.5 : focus visible partout */
 .pk[data-l]:focus-visible,.lr:focus-visible,.gal img:focus-visible,.car:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
 .opts>button:focus-visible,#shn:focus-visible,.more:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
@@ -1265,7 +1256,7 @@ html.dk .hk-h{display:flex;align-items:baseline;gap:10px;margin:0 0 14px}
 html.dk .hk-h h3{margin:0;font:600 1.4rem var(--ft)}
 html.dk .hk-h span{font:400 .9rem var(--fx);color:var(--mu)}
 @media (max-width:1279px){html.dk #side{width:236px}html.dk main{margin-left:236px!important}html.dk .hk-t{grid-template-columns:repeat(3,1fr)}}
-html.dk #herb{display:block!important}
+html.dk #herb:not([hidden]){display:block!important}
 html.dk #herb>.card:first-child{margin-bottom:14px}
 html.dk .hk-t button{min-width:0}
 html.dk .hk-t button b,html.dk .hk-t button small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -1292,6 +1283,30 @@ html.dk #side .rank .rs{white-space:normal!important}
 #splash .sp-cr b{font:600 .8rem var(--fx);letter-spacing:.14em;text-transform:uppercase}
 #splash.go .sp-cr{opacity:0}
 @media (max-height:700px){.sp-ico{width:56px;height:56px;border-radius:15px;margin-bottom:16px}#splash .sp-ui h1{font-size:clamp(2.8rem,9vw,5.4rem)}#splash .sp-ui p.sp-ac{margin-top:14px}#spb{margin-top:22px}}
+/* classement : liste classée, une ligne par personne, sans défilement latéral */
+.tbh{margin:0 0 8px;font-size:.8rem}
+.tbl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-variant-numeric:tabular-nums}
+.tbl li{display:grid;grid-template-columns:26px 30px minmax(0,1fr) auto;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;background:var(--bg2)}
+.tbl li.moi{background:color-mix(in srgb,var(--ac) 12%,var(--card));box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--ac) 40%,transparent)}
+.tbp{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--card);color:var(--mu);font:600 .8rem var(--fx)}
+.tbl li:nth-child(1) .tbp{background:#f1cf72;color:#4f3a05}.tbl li:nth-child(2) .tbp{background:#d8dee3;color:#36414a}.tbl li:nth-child(3) .tbp{background:#e5b189;color:#552e12}
+.tbl .tgi{width:30px;height:30px;margin:0}
+.tbx{min-width:0}
+.tbx b{display:flex;align-items:center;gap:6px;min-width:0;font:600 .98rem/1.25 var(--fx);color:var(--fg)}
+.tbx .tbn{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tbx small{display:block;margin-top:2px;font:400 .78rem/1.35 var(--fx);color:var(--mu)}
+.tbx small span{white-space:nowrap}
+.tbt{flex:none;padding:1px 7px;border-radius:99px;background:var(--ac);color:var(--card);font:600 10px/1.5 var(--fx);font-style:normal;letter-spacing:.06em;text-transform:uppercase}
+.tbs{text-align:right}
+.tbs b{display:block;font:600 1.3rem/1 var(--ft);color:var(--fg)}
+.tbs small{font:400 .7rem var(--fx);color:var(--mu)}
+@media (max-width:379px){.tbl li{grid-template-columns:24px 26px minmax(0,1fr) auto;gap:8px;padding:9px 10px}.tbl .tgi{width:26px;height:26px}}
+
+/* ordinateur : pastilles d'onglet centrées, « ? » de l'aide comme sur le téléphone */
+html.dk #side .tabs button span{flex:none;width:34px!important;height:34px!important;display:grid!important;place-items:center;padding:0!important;margin:0!important;line-height:0}
+html.dk #side .tabs button span>*{margin:0!important;transform:none!important;position:static!important}
+html.dk #side .tabs button span .tgi,html.dk #side .tabs button span svg{width:26px!important;height:26px!important;display:block}
+.sd-q{display:grid;place-items:center;flex:none;width:22px;height:22px;background:var(--ac);color:var(--card);font:600 .85rem/22px var(--ft);text-align:center;padding-top:2px;box-sizing:border-box;border-radius:60% 40% 55% 45%/50% 60% 40% 50%;transform:rotate(-8deg)}
 </style>
 </head>
 <body>
@@ -3389,7 +3404,8 @@ async function sbCl(){
   const tb=sbTab[per]||[],amis=(sbTab.j||tb).filter(x=>!x.moi),pj=per!=='j'&&!sbTab[per];
   const PER=[['j','Aujourd\'hui'],['s','Cette semaine'],['m','Ce mois-ci']],lg=per!=='j';
   return {amis,h:`<div class="card" id="sb-cl"><h3 class="hh">Classement</h3><div class="sbt s3" role="tablist" aria-label="Période">${PER.map(([k,t])=>`<button type="button" role="tab" data-per="${k}" aria-selected="${k===per}">${t}</button>`).join('')}</div>
-${pj?'<p class="na">Classement de la période indisponible pour l\'instant : réessaie dans un moment.</p>':`<table class="tbm"><thead><tr><th>${amis.length?'Ami':'Toi'}</th><th>Exercices</th><th>Réussite</th><th>Nouvelles<span class="vh"> plantes</span></th>${lg?'<th>Jours</th>':''}</tr></thead><tbody>${tb.map(x=>`<tr${x.moi?' class="moi"':''}><td><span class="tbn"><span class="tgi">${rIcon(x.rang)}</span>${esc(x.pseudo)}</span></td><td>${x.exercices}</td><td>${x.exercices?Math.round(100*x.justes/x.exercices)+' %':'–'}</td><td>${x.nouvelles}</td>${lg?`<td>${x.jours||0}</td>`:''}</tr>`).join('')}</tbody></table>`}
+${pj?'<p class="na">Classement de la période indisponible pour l\'instant : réessaie dans un moment.</p>':`<p class="na tbh">Classés par exercices${per==='s'?', depuis lundi':per==='m'?', depuis le début du mois':''}</p><ol class="tbl">${tb.map((x,i)=>{const d=x.exercices?[Math.round(100*x.justes/x.exercices)+' % de réussite',x.nouvelles?x.nouvelles+' nouvelle'+(x.nouvelles>1?'s':''):'',lg?(x.jours||0)+' jour'+((x.jours||0)>1?'s':'')+' joué'+((x.jours||0)>1?'s':''):''].filter(Boolean).map(t=>'<span>'+t+'</span>').join(' · '):'Pas encore joué';
+  return `<li${x.moi?' class="moi"':''}><span class="tbp" aria-label="${i+1}e">${i+1}</span><span class="tgi">${rIcon(x.rang)}</span><span class="tbx"><b><span class="tbn">${esc(x.pseudo)}</span>${x.moi&&amis.length?'<i class="tbt">toi</i>':''}</b><small>${d}</small></span><span class="tbs"><b>${x.exercices}</b><small>exercice${x.exercices>1?'s':''}</small></span></li>`}).join('')}</ol>`}
 ${amis.length?'':'<p class="na tbv">Ajoute un ami avec son code pour comparer vos progrès.</p>'}<button class="lnkb" id="sb-maj" type="button">Actualiser</button></div>`};
 }
 function sbClLie(){
@@ -3597,7 +3613,7 @@ streak=+st.streak||0;stats();
       side.innerHTML='<a class="sd-logo" href="#" aria-label="Le royaume des plantes"><img src="icones/favicon.svg" alt=""><span>Le royaume<i>des plantes</i></span></a>';
       side.append($('top'),document.querySelector('.tabs'));
       const bas=document.createElement('div');bas.className='sd-bas';
-      bas.innerHTML=`<button type="button" data-sd="prf">${ico('profil')}Profil &amp; amis</button><button type="button" data-sd="set">${ico('reglages')}Réglages</button><button type="button" data-sd="aide">${ico('quiz')}Comment ça marche</button><p class="sd-cr">Imaginé par Dévidoir</p>`;
+      bas.innerHTML=`<button type="button" data-sd="prf">${ico('profil')}Profil &amp; amis</button><button type="button" data-sd="set">${ico('reglages')}Réglages</button><button type="button" data-sd="aide"><span class="sd-q" aria-hidden="true">?</span>Comment ça marche</button><p class="sd-cr">Imaginé par Dévidoir</p>`;
       side.append(bas);document.body.prepend(side);
       side.querySelector('.sd-logo').onclick=e=>{e.preventDefault();tabTo('quiz')};
       bas.querySelector('[data-sd=prf]').onclick=openProfil;bas.querySelector('[data-sd=set]').onclick=openSettings;bas.querySelector('[data-sd=aide]').onclick=()=>$('help').click();
