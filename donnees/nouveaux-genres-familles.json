@@ -19,19 +19,18 @@
    ],
    "sources": [
     "https://www.rhs.org.uk/plants/57957/melia-azedarach/details",
-    "https://www.worldplants.ca/display.php?id=1339",
-    "https://www.lapetiteloiterie.fr/lpl/wp-content/uploads/melia-azedarach.pdf",
-    "https://www.vdberk.co.uk/trees/melia-azedarach/"
+    "https://www.promessedefleurs.ie/shrubs/shrubs-by-variety/melia-chinaberry/melia-azedarach.html",
+    "https://www.treesandshrubsonline.org/articles/melia/melia-azedarach/"
    ],
-   "a_reverifier": false
+   "corrections": ""
   },
   "Tetradium": {
    "famille": "Rutaceae",
    "GD": [
     "",
     "Arbres caducs de 8 à 10 m en culture, couronne étalée.",
-    "Opposées, imparipennées (5 à 11 folioles), luisantes dessus, glauques dessous ; jaunes en automne.",
-    "Juillet à août, larges corymbes crème très mellifères.",
+    "Opposées, imparipennées (5 à 11 folioles), luisantes dessus, plus pâles dessous.",
+    "Juillet à août, larges corymbes plats blanc crème très mellifères.",
     "",
     "",
     "",
@@ -39,14 +38,15 @@
     "Drainé",
     "Sec à frais",
     "Tous pH",
-    "Environ -15 °C et plus (zones USDA 5 à 8).",
+    "Très rustique (zones USDA 5 à 8, environ -25 °C).",
     ""
    ],
    "sources": [
-    "https://www.ebben.nl/fr/treeebb/tedaniel-tetradium-daniellii/pdf/",
-    "https://www.jardiner-malin.fr/fiche/larbre-a-miel.html"
+    "https://landscapeplants.oregonstate.edu/plants/tetradium-daniellii",
+    "https://www.worldplants.ca/display.php?id=36",
+    "https://dendro.cnre.vt.edu/DENDROLOGY/SYLLABUS/factsheet.cfm?ID=980"
    ],
-   "a_reverifier": false
+   "corrections": "Folioles 'plus pâles dessous' au lieu de 'glauques' ; couleur d'automne retirée (non confirmée) ; rusticité reformulée (zones USDA 5 à 8, environ -25 °C)."
   },
   "Platycladus": {
    "famille": "Cupressaceae",
@@ -54,7 +54,7 @@
     "",
     "Conifère arbustif à petit arbre de 3 à 15 m, souvent conique ou à plusieurs troncs.",
     "Écailles opposées sur rameaux aplatis disposés en plans verticaux.",
-    "Printemps ; cônes charnus bleutés puis bruns, écailles épaisses en crochet.",
+    "Printemps ; cônes charnus bleu-vert puis bruns, 6 à 8 écailles épaisses terminées en crochet.",
     "",
     "",
     "",
@@ -62,15 +62,15 @@
     "Drainé",
     "Sec à frais",
     "Tous pH",
-    "Environ -15 à -20 °C (zone USDA 6).",
+    "Très rustique (zone USDA 6, environ -20 °C et plus).",
     ""
    ],
    "sources": [
-    "https://www.arboretum.purdue.edu/explorer/plants/676/",
-    "https://landscapeplants.oregonstate.edu/plants/platycladus-orientalis",
-    "https://www.conifers.org/cu/pl/index.htm"
+    "https://www.conifers.org/cu/pl/index.htm",
+    "https://ask.ifas.ufl.edu/publication/ST489",
+    "https://worldplants.ca/display0.php?id=508"
    ],
-   "a_reverifier": false
+   "corrections": "Cônes précisés (bleu-vert, 6 à 8 écailles) ; rusticité 'environ -20 °C et plus' (zone 6, H7 selon worldplants) au lieu de -15 à -20 °C."
   },
   "Hippocrepis": {
    "famille": "Fabaceae",
@@ -78,7 +78,7 @@
     "",
     "Arbrisseau de 1 à 2 m (H. emerus) ; les autres espèces sont des herbacées basses.",
     "Alternes, imparipennées, 5 à 9 folioles obovales.",
-    "Avril à juillet, fleurs papilionacées jaunes par 1 à 5 ; gousses fines articulées.",
+    "Avril à juillet, fleurs papilionacées jaune pâle en petites ombelles de 1 à 8 ; gousses fines articulées.",
     "",
     "",
     "",
@@ -86,21 +86,21 @@
     "Drainé",
     "Sec",
     "Neutre à alcalin",
-    "",
+    "RHS H5 (environ -10 à -15 °C).",
     ""
    ],
    "sources": [
     "https://www.rhs.org.uk/plants/77693/hippocrepis-emerus/details",
-    "https://eflorasys.univ-lorraine.fr/index.php/en/species/view/102845",
-    "https://www.jardiner-malin.fr/fiche/coronille.html"
+    "https://en.wikipedia.org/wiki/Hippocrepis_emerus",
+    "https://treesandshrubsonline.org/articles/hippocrepis/hippocrepis-emerus/"
    ],
-   "a_reverifier": false
+   "corrections": "Fleurs par 1 à 8 (et non 1 à 5) ; rusticité RHS H5 ajoutée."
   },
   "Atriplex": {
    "famille": "Amaranthaceae",
    "GD": [
     "",
-    "Arbustes semi-persistants de 1,5 à 2 m (A. halimus) ; nombreuses espèces herbacées annuelles.",
+    "Arbustes semi-persistants de 1,5 à 2,5 m (A. halimus) ; nombreuses espèces herbacées annuelles.",
     "Alternes, ovales à losangiques, gris argenté, d'aspect farineux.",
     "Été, petites fleurs verdâtres discrètes en panicules.",
     "",
@@ -115,10 +115,9 @@
    ],
    "sources": [
     "https://www.rhs.org.uk/plants/1903/wd/details",
-    "https://www.monherbier.com/site/especes/31716",
-    "https://www.jardiner-malin.fr/fiche/pourpier-mer-arbuste-mer.html"
+    "https://temperate.theferns.info/plant/Atriplex+halimus"
    ],
-   "a_reverifier": false
+   "corrections": "Hauteur 1,5 à 2,5 m (RHS) au lieu de 1,5 à 2 m."
   },
   "Bupleurum": {
    "famille": "Apiaceae",
@@ -126,23 +125,22 @@
     "",
     "Arbuste persistant de 1,5 à 2,5 m (B. fruticosum) ; la plupart des espèces sont herbacées.",
     "Alternes, simples, entières, coriaces et bleu-vert chez B. fruticosum.",
-    "Juillet à septembre, ombelles jaunes.",
+    "Juin à septembre, ombelles bombées de petites fleurs jaunes.",
     "",
     "",
     "",
     "Soleil",
-    "Pauvre, caillouteux, très drainé",
+    "Drainé",
     "Sec",
     "Neutre à alcalin",
-    "RHS H4, environ -15 °C ; supporte les embruns.",
+    "RHS H4 ; environ -10 à -15 °C une fois installé ; supporte les embruns.",
     ""
    ],
    "sources": [
     "https://www.rhs.org.uk/plants/2555/bupleurum-fruticosum/details",
-    "https://www.promessedefleurs.ie/shrubs/shrubs-a-to-z/bupleurum-fruticosum.html",
-    "https://www.jelitto.com/Seed/Perennials/BUPLEURUM+fruticosum+Portion+s.html"
+    "https://www.promessedefleurs.ie/shrubs/shrubs-a-to-z/bupleurum-fruticosum.html"
    ],
-   "a_reverifier": false
+   "corrections": "Floraison juin à septembre (RHS : été et début d'automne) ; sol 'Drainé' (RHS : tout sol bien drainé) ; rusticité H4 = environ -10 °C, -15 °C seulement une fois installé."
   },
   "Loropetalum": {
    "famille": "Hamamelidaceae",
@@ -158,23 +156,22 @@
     "Humifère et frais",
     "Frais",
     "Acide à neutre",
-    "RHS H3 à H4 (environ -5 à -10 °C).",
+    "RHS H3 pour l'espèce, H3 à H4 selon le cultivar (environ -5 à -10 °C) ; abriter des vents froids.",
     ""
    ],
    "sources": [
     "https://www.rhs.org.uk/plants/10535/wd/details",
-    "https://www.rhs.org.uk/plants/318360/loropetalum-chinense-var-rubrum",
-    "https://www.gardenia.net/genus/loropetalum-plant-care-and-best-varieties"
+    "https://plants.ces.ncsu.edu/plants/loropetalum-chinense/common-name/chinese-fringe-flower/"
    ],
-   "a_reverifier": false
+   "corrections": "Rusticité précisée (H3 pour l'espèce) ; reste confirmé (pH acide à neutre, pas de calcaire)."
   },
   "Westringia": {
    "famille": "Lamiaceae",
    "GD": [
     "",
     "Arbustes persistants de 1 à 2 m, compacts.",
-    "Verticillées par 3 à 5, linéaires, gris-vert.",
-    "Surtout printemps et été (fleurs éparses toute l'année), petites fleurs à 2 lèvres blanc à mauve pâle.",
+    "Verticillées par 3 à 5 (le plus souvent 4), linéaires, gris-vert.",
+    "Surtout printemps et été (fleurs éparses toute l'année), petites fleurs à 2 lèvres blanches à mauve pâle, à l'aisselle des feuilles.",
     "",
     "",
     "",
@@ -182,15 +179,15 @@
     "Drainé",
     "Sec",
     "Tous pH",
-    "Environ -5 °C ; climat doux ou abri.",
+    "Environ -4 à -5 °C en sol bien drainé ; climat doux ou abri.",
     ""
    ],
    "sources": [
-    "https://anbg.gov.au/gnp/gnp1/westringia-fruticosa.html",
-    "https://leafland.co.nz/plants/westringia-fruticosa/",
-    "https://www.paramountplants.co.uk/plant/wf/westringia-fruticosa.html"
+    "https://eflora.sydney.edu.au/browse/westringia/",
+    "https://www.promessedefleurs.ie/gardening-tips/familysheet/westringia-fruticosa-australian-rosemary-planting-growing-and-care",
+    "https://leafland.co.nz/plants/westringia-fruticosa/"
    ],
-   "a_reverifier": false
+   "corrections": "Feuilles le plus souvent par 4 ; fleurs axillaires ; rusticité -4 à -5 °C liée au drainage."
   },
   "Polygala": {
    "famille": "Polygalaceae",
@@ -198,7 +195,7 @@
     "",
     "Arbustes persistants de 1 à 2,5 m (P. myrtifolia) ; aussi petites vivaces et annuelles.",
     "Alternes, simples, entières, elliptiques.",
-    "Longue floraison sous climat doux, fleurs pourpres à 2 sépales en ailes et carène à crête frangée.",
+    "Très longue floraison (printemps à automne) sous climat doux, fleurs pourpres à 2 sépales en ailes et carène à crête frangée.",
     "",
     "",
     "",
@@ -211,18 +208,18 @@
    ],
    "sources": [
     "https://worldplants.ca/display.php?id=6046",
-    "https://vicflora.rbg.vic.gov.au/flora/taxon/fc351117-0f8f-4efb-86d2-e9b7738d1ee7",
-    "https://nzflora.info/factsheet/Taxon/Polygala-myrtifolia.html"
+    "https://www.promessedefleurs.ie/shrubs/shrubs-by-variety/polygala/polygala-myrtifolia.html",
+    "https://en.wikipedia.org/wiki/Polygala"
    ],
-   "a_reverifier": false
+   "corrections": "Période de floraison précisée (printemps à automne)."
   },
   "Rubia": {
    "famille": "Rubiaceae",
    "GD": [
     "",
-    "Lianes herbacées ou sous-ligneuses accrochantes de 1 à 3 m.",
-    "Verticillées par 4 à 6, coriaces et luisantes chez R. peregrina, bords à aiguillons accrochants.",
-    "Mai à juillet, petites fleurs jaune verdâtre à 5 lobes ; baies noires.",
+    "Lianes herbacées ou sous-ligneuses accrochantes, jusqu'à 1,5 m chez R. peregrina.",
+    "Verticillées par 4 à 6, coriaces, persistantes et luisantes chez R. peregrina, bords à aiguillons crochus.",
+    "Avril à août selon la région, petites fleurs jaune verdâtre à 5 lobes ; baies vertes puis noires.",
     "",
     "",
     "",
@@ -233,8 +230,12 @@
     "",
     ""
    ],
-   "sources": [],
-   "a_reverifier": true
+   "sources": [
+    "https://en.wikipedia.org/wiki/Rubia_peregrina",
+    "https://genialvegetal.net/-Garance-voyageuse-",
+    "https://www.monherbier.com/site/especes/59389"
+   ],
+   "corrections": "Hauteur ramenée à 1,5 m (30 à 150 cm) au lieu de 1 à 3 m ; floraison avril à août (et non mai à juillet) ; feuilles persistantes."
   },
   "Bignonia": {
    "famille": "Bignoniaceae",
@@ -242,7 +243,7 @@
     "",
     "Liane semi-persistante à vrilles de 6 à 15 m.",
     "Opposées, à 2 folioles et une vrille ramifiée terminée par des crampons adhésifs.",
-    "Avril à juin, fleurs en trompette orange-rouge, jaunes à la gorge.",
+    "Mars à juin, fleurs en trompette orange à l'extérieur, jaunes à l'intérieur.",
     "",
     "",
     "",
@@ -250,19 +251,23 @@
     "Frais et drainé",
     "Frais",
     "Tous pH",
-    "Environ -15 °C.",
+    "Environ -20 °C (zones USDA 6 à 9) ; peut repartir de la base après un hiver rude.",
     ""
    ],
-   "sources": [],
-   "a_reverifier": true
+   "sources": [
+    "https://en.wikipedia.org/wiki/Bignonia_capreolata",
+    "https://plants.ces.ncsu.edu/plants/bignonia-capreolata/common-name/crossvine/",
+    "https://plants.usda.gov/DocumentLibrary/plantguide/pdf/pg_bica.pdf"
+   ],
+   "corrections": "Floraison mars à juin ; couleur précisée (orange dehors, jaune dedans) ; rusticité zone 6 (environ -20 °C) au lieu de -15 °C."
   },
   "Pileostegia": {
    "famille": "Hydrangeaceae",
    "GD": [
     "",
-    "Liane persistante à racines crampons de 6 à 10 m, croissance lente.",
-    "Opposées, coriaces, oblongues, vert foncé, nervures marquées.",
-    "Août à octobre, panicules mousseuses blanc crème.",
+    "Liane persistante à racines crampons de 4 à 10 m, croissance lente.",
+    "Opposées, coriaces, étroitement elliptiques, jusqu'à 15 cm, vert foncé.",
+    "Fin d'été à début d'automne (août-septembre), panicules mousseuses blanc crème.",
     "",
     "",
     "",
@@ -270,19 +275,22 @@
     "Humifère et frais",
     "Frais",
     "Tous pH",
-    "Environ -15 °C.",
+    "RHS H5 (environ -10 à -15 °C) ; abriter des vents froids.",
     ""
    ],
-   "sources": [],
-   "a_reverifier": true
+   "sources": [
+    "https://www.rhs.org.uk/plants/13019/pileostegia-viburnoides/details",
+    "https://www.paramountplants.co.uk/plant/pivi/pileostegia-viburnoides.html"
+   ],
+   "corrections": "Hauteur 4 à 10 m (RHS 4-8 m) ; feuilles 'étroitement elliptiques' (RHS) ; floraison août-septembre au lieu d'août à octobre ; rusticité RHS H5."
   },
   "Schizophragma": {
    "famille": "Hydrangeaceae",
    "GD": [
     "",
-    "Lianes caduques à racines crampons, jusqu'à 10 m.",
+    "Lianes caduques à racines crampons, 8 à 12 m.",
     "Opposées, ovales à cordées, longuement pétiolées, dentées.",
-    "Juillet, corymbes plats bordés de bractées blanches formées d'un seul sépale (4 chez Hydrangea petiolaris).",
+    "Juin à juillet, corymbes plats bordés de fleurs stériles à un seul grand sépale blanc (4 chez Hydrangea petiolaris).",
     "",
     "",
     "",
@@ -290,19 +298,23 @@
     "Humifère et frais",
     "Frais",
     "Tous pH",
-    "Environ -20 °C.",
+    "RHS H5 (environ -10 à -15 °C).",
     ""
    ],
-   "sources": [],
-   "a_reverifier": true
+   "sources": [
+    "https://www.rhs.org.uk/plants/16815/schizophragma-hydrangeoides/details",
+    "https://depts.washington.edu/hortlib/pal/distinguishing-hydrangea-petiolaris-from-schizophragma-hydrangeoides",
+    "https://www.worldplants.ca/display.php?id=1603"
+   ],
+   "corrections": "Hauteur 8 à 12 m (RHS) ; floraison juin à juillet ; formulation 'fleurs stériles à un seul sépale' ; rusticité RHS H5 (et non -20 °C)."
   },
   "Ammophila": {
    "famille": "Poaceae",
    "GD": [
     "",
-    "Grandes touffes drageonnantes de 60 à 120 cm, fixatrices des dunes.",
-    "Enroulées en jonc, glauques, raides et piquantes.",
-    "Juin à août, panicule dense en épi cylindrique jaune paille.",
+    "Grandes touffes drageonnantes jusqu'à 1,2 m, fixatrices des dunes.",
+    "Enroulées en jonc, raides, à pointe piquante, gris-vert.",
+    "Juillet à août, panicule dense en épi cylindrique jaune paille de 15 à 30 cm.",
     "",
     "",
     "",
@@ -313,16 +325,20 @@
     "Très rustique.",
     ""
    ],
-   "sources": [],
-   "a_reverifier": true
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ammophila_arenaria",
+    "https://eflora.sydney.edu.au/taxon/ammophila",
+    "https://www.northwaleswildlifetrust.org.uk/cy/wildlife-explorer-839"
+   ],
+   "corrections": "Floraison juillet-août (et non juin) ; hauteur jusqu'à 1,2 m ; longueur de l'épi ajoutée."
   },
   "Corynephorus": {
    "famille": "Poaceae",
    "GD": [
     "",
-    "Petites touffes denses de 10 à 30 cm.",
+    "Petites touffes denses de 15 à 30 cm.",
     "Très fines, enroulées, raides, gris-bleu.",
-    "Juin à août, panicule violacée à arêtes en massue.",
+    "Juin à août, panicule violacée ; arêtes épaissies en massue au sommet, avec un anneau de poils.",
     "",
     "",
     "",
@@ -333,16 +349,19 @@
     "Très rustique.",
     ""
    ],
-   "sources": [],
-   "a_reverifier": true
+   "sources": [
+    "https://www.infoflora.ch/en/flora/corynephorus-canescens.html",
+    "https://www.rhs.org.uk/plants/72885/corynephorus-canescens/details"
+   ],
+   "corrections": "Hauteur 15 à 30 cm ; arête en massue précisée (Info Flora). Milieu confirmé (RHS : sable, drainé, acide)."
   },
   "Agrostis": {
    "famille": "Poaceae",
    "GD": [
     "",
     "Touffes fines de 20 à 60 cm ; nombreuses espèces gazonnantes.",
-    "Linéaires, fines ; enroulées et glauques chez A. curtisii.",
-    "Juin à août, panicules fines et légères, épillets à une fleur.",
+    "Linéaires, fines ; sétacées (fines comme des soies) chez A. curtisii.",
+    "Juin à juillet, panicules fines et légères, épillets à une fleur.",
     "",
     "",
     "",
@@ -350,39 +369,45 @@
     "Léger, sableux",
     "Sec à frais",
     "Acide",
-    "Très rustique.",
+    "",
     ""
    ],
-   "sources": [],
-   "a_reverifier": true
+   "sources": [
+    "https://en.wikipedia.org/wiki/Agrostis_curtisii",
+    "https://somersetrareplantsgroup.org.uk/agrostis-curtisii-2021-02-02"
+   ],
+   "corrections": "Feuilles 'sétacées' au lieu de 'enroulées et glauques' (glauque non confirmé) ; floraison juin-juillet ; rusticité retirée (non confirmée)."
   },
   "Cladium": {
    "famille": "Cyperaceae",
    "GD": [
     "",
-    "Grandes touffes rhizomateuses de 1 à 2,5 m.",
-    "Longues, glauques, carénées, bords et carène finement dentés, tranchants.",
-    "Juin à août, grandes inflorescences ramifiées d'épillets bruns.",
+    "Grandes touffes rhizomateuses de 1 à 2,5 m, en peuplements denses.",
+    "Longues, étroites, raides, carénées, bords et carène finement dentés, tranchants.",
+    "Juin à août, grandes inflorescences ramifiées de glomérules d'épillets bruns.",
     "",
     "",
     "",
     "Soleil",
     "Détrempé ou vaseux",
-    "Aquatique",
+    "Humide",
     "Neutre à alcalin",
     "",
     ""
    ],
-   "sources": [],
-   "a_reverifier": true
+   "sources": [
+    "https://wildbristol.uk/groups/grasses/great-fen-sedge/",
+    "https://www.iucn-uk-peatlandprogramme.org/wildlife-explorer/grasses-sedges-and-rushes/great-fen-sedge"
+   ],
+   "corrections": "'Glauques' retiré (non confirmé) ; humidité 'Humide' (marais et bords d'étangs) au lieu de 'Aquatique'."
   },
   "Anemanthele": {
    "famille": "Poaceae",
    "GD": [
     "",
-    "Touffe arquée persistante de 60 à 90 cm.",
+    "Touffe arquée semi-persistante de 50 à 100 cm.",
     "Fines, arquées, vert olive se teintant de cuivre, orange et rouge.",
-    "Juin à septembre, panicules légères brun rosé retombantes.",
+    "Juillet à septembre, panicules légères brun rougeâtre retombantes.",
     "",
     "",
     "",
@@ -390,18 +415,20 @@
     "Frais et drainé",
     "Frais",
     "Tous pH",
-    "Environ -10 °C.",
+    "RHS H4 (environ -10 °C sur de courtes périodes).",
     ""
    ],
-   "sources": [],
-   "a_reverifier": true
+   "sources": [
+    "https://www.rhs.org.uk/plants/128871/anemanthele-lessoniana/details"
+   ],
+   "corrections": "Semi-persistante (RHS) ; hauteur 50 à 100 cm ; floraison fin d'été (juillet à septembre) ; RHS H4."
   },
   "Chasmanthium": {
    "famille": "Poaceae",
    "GD": [
     "",
-    "Touffes dressées caduques de 60 à 120 cm.",
-    "Larges et plates (1 à 2 cm), vert frais, jaune doré en automne.",
+    "Touffes dressées caduques de 60 à 150 cm.",
+    "Larges et plates (jusqu'à 2 cm), vert frais, jaune doré en automne.",
     "Juillet à septembre, épillets aplatis pendants, verts puis bronze.",
     "",
     "",
@@ -410,19 +437,22 @@
     "Frais et drainé",
     "Frais",
     "Tous pH",
-    "Très rustique (environ -25 °C).",
+    "Très rustique (zones USDA 3 à 8 ou 5 selon les sources, environ -25 °C).",
     ""
    ],
-   "sources": [],
-   "a_reverifier": true
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/Chasmanthium-latifolium",
+    "https://missouriplants.com/Chasmanthium_latifolium_page.html"
+   ],
+   "corrections": "Hauteur 60 à 150 cm (NC State 2-5 ft) ; largeur des feuilles 'jusqu'à 2 cm' ; zone USDA précisée."
   },
   "Muhlenbergia": {
    "famille": "Poaceae",
    "GD": [
     "",
-    "Touffes de 60 à 90 cm.",
+    "Touffes de 50 à 100 cm.",
     "Très fines, filiformes, vert foncé.",
-    "Septembre à octobre, nuage de panicules vaporeuses rose pourpre.",
+    "Fin d'été à automne (surtout septembre-octobre), nuage de panicules vaporeuses rose pourpre.",
     "",
     "",
     "",
@@ -430,19 +460,22 @@
     "Drainé",
     "Sec",
     "Tous pH",
-    "Environ -15 °C en sol drainé ; craint l'humidité hivernale.",
+    "RHS H4 (environ -10 °C) ; craint l'humidité hivernale.",
     ""
    ],
-   "sources": [],
-   "a_reverifier": true
+   "sources": [
+    "https://www.rhs.org.uk/plants/170542/wd/details",
+    "https://ask.ifas.ufl.edu/publication/FP415"
+   ],
+   "corrections": "Rusticité RHS H4 (environ -10 °C) au lieu de -15 °C ; hauteur 50 à 100 cm ; floraison fin d'été à automne."
   },
   "Asphodelus": {
    "famille": "Asphodelaceae",
    "GD": [
     "",
-    "Vivaces à racines tubérisées, hampes de 60 à 120 cm.",
-    "Toutes basales, linéaires, en gouttière ou carénées.",
-    "Avril à juin, grappes de fleurs étoilées blanches à nervure médiane brune.",
+    "Vivaces en touffes, hampes de 40 à 120 cm.",
+    "Toutes basales, linéaires, pointues, en gouttière.",
+    "Avril à juillet selon l'altitude, grappes denses de fleurs étoilées blanches à strie médiane rose ou brune.",
     "",
     "",
     "",
@@ -453,28 +486,36 @@
     "",
     ""
    ],
-   "sources": [],
-   "a_reverifier": true
+   "sources": [
+    "https://www.first-nature.com/flowers/asphodelus-albus.php",
+    "https://www.techno-science.net/fr/definitions/asphodele-blanc",
+    "https://www.jardiner-malin.fr/fiche/asphodele-asphodelus.html"
+   ],
+   "corrections": "Hauteur 40 à 120 cm ; 'racines tubérisées' et 'carénées' retirés (non confirmés) ; floraison avril à juillet ; strie rose ou brune."
   },
   "Lithodora": {
    "famille": "Boraginaceae",
    "GD": [
     "",
-    "Sous-arbrisseaux persistants prostrés de 10 à 30 cm.",
+    "Sous-arbrisseaux persistants prostrés de 10 à 25 cm, en tapis (L. diffusa, aujourd'hui Glandora diffusa).",
     "Alternes, étroites, vert foncé, hérissées de poils raides.",
-    "Mai à juillet, fleurs en entonnoir bleu gentiane.",
+    "Fin de printemps à été (mai à juillet), fleurs en entonnoir bleu gentiane.",
     "",
     "",
     "",
-    "Soleil à mi-ombre",
+    "Soleil",
     "Frais et drainé",
     "Frais",
-    "Acide",
-    "Environ -15 °C.",
+    "Acide à neutre",
+    "RHS H5 (environ -10 à -15 °C).",
     ""
    ],
-   "sources": [],
-   "a_reverifier": true
+   "sources": [
+    "https://www.rhs.org.uk/plants/386765/glandora-diffusa-lag-d-c-thomas/details",
+    "https://www.rhs.org.uk/plants/48275/lithodora-diffusa-heavenly-blue/details",
+    "https://worldplants.ca/display.php?id=589"
+   ],
+   "corrections": "Hauteur 10 à 25 cm ; nom actuel Glandora diffusa signalé ; exposition 'Soleil' et pH 'Acide à neutre' (RHS) ; rusticité RHS H5."
   },
   "Lotus": {
    "famille": "Fabaceae",
@@ -482,7 +523,7 @@
     "",
     "Vivaces herbacées couchées à dressées de 10 à 40 cm.",
     "Alternes, à 5 folioles dont 2 à la base, semblables à des stipules.",
-    "Mai à septembre, ombelles de fleurs papilionacées jaunes souvent teintées de rouge ; gousses en patte d'oiseau.",
+    "Mai à septembre, ombelles de 2 à 12 fleurs papilionacées jaunes souvent teintées de rouge ; gousses en patte d'oiseau.",
     "",
     "",
     "",
@@ -493,16 +534,19 @@
     "",
     ""
    ],
-   "sources": [],
-   "a_reverifier": true
+   "sources": [
+    "https://www.pnwflowers.com/flower/lotus-corniculatus",
+    "https://flora-burren.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=38157"
+   ],
+   "corrections": "Nombre de fleurs par ombelle ajouté (2 à 12)."
   },
   "Libertia": {
    "famille": "Iridaceae",
    "GD": [
     "",
-    "Vivaces en touffes persistantes de 40 à 90 cm.",
+    "Vivaces en touffes persistantes de 50 à 90 cm.",
     "Linéaires, en éventail, raides, vert foncé.",
-    "Mai à juin, fleurs blanches à 3 pétales en panicules dressées.",
+    "Mai à juillet, fleurs blanches à 3 grands pétales en panicules dressées ; capsules noires en automne.",
     "",
     "",
     "",
@@ -510,19 +554,22 @@
     "Frais et drainé",
     "Frais",
     "Tous pH",
-    "Environ -10 °C.",
+    "RHS H3 (H4 selon certaines pépinières), environ -5 à -10 °C ; feuillage abîmé par les hivers rudes.",
     ""
    ],
-   "sources": [],
-   "a_reverifier": true
+   "sources": [
+    "https://www.rhs.org.uk/plants/10068/libertia-grandiflora-r-br-sweet/details",
+    "https://worldplants.ca/display.php?id=9259"
+   ],
+   "corrections": "Hauteur 50 à 90 cm ; floraison jusqu'en juillet ; rusticité RHS H3 (environ -5 °C) plutôt que -10 °C."
   },
   "Tulbaghia": {
    "famille": "Amaryllidaceae",
    "GD": [
     "",
-    "Vivaces bulbeuses en touffes de 30 à 60 cm.",
+    "Vivaces rhizomateuses en touffes de 30 à 60 cm.",
     "Linéaires, étroites, odeur d'ail au froissement.",
-    "Juin à octobre, ombelles de fleurs tubulaires mauves.",
+    "Juillet à septembre, ombelles de fleurs tubulaires mauves, parfumées.",
     "",
     "",
     "",
@@ -530,17 +577,20 @@
     "Drainé",
     "Sec à frais",
     "Tous pH",
-    "Environ -5 à -10 °C.",
+    "RHS H3 (environ -5 °C) ; paillage sec en hiver hors régions douces.",
     ""
    ],
-   "sources": [],
-   "a_reverifier": true
+   "sources": [
+    "https://www.rhs.org.uk/plants/183129/tulbaghia-violacea-fine-form/details",
+    "https://worldplants.ca/display.php?id=5977"
+   ],
+   "corrections": "Rhizomes cormiformes (et non bulbes) ; floraison juillet à septembre (RHS) ; rusticité RHS H3."
   },
   "Veronicastrum": {
    "famille": "Plantaginaceae",
    "GD": [
     "",
-    "Vivaces dressées de 1,2 à 2 m.",
+    "Vivaces dressées de 1 à 2 m.",
     "Verticillées par 3 à 7, lancéolées, dentées.",
     "Juillet à septembre, longs épis effilés blancs, roses ou bleu lavande.",
     "",
@@ -553,8 +603,12 @@
     "Très rustique.",
     ""
    ],
-   "sources": [],
-   "a_reverifier": true
+   "sources": [
+    "https://missouriplants.com/Veronicastrum_virginicum_page.html",
+    "https://warcapps.usgs.gov/PlantID/Species/Details/1270",
+    "https://worldplants.ca/display0.php?id=6185"
+   ],
+   "corrections": "Hauteur 1 à 2 m (sources : 0,8 à 2 m)."
   },
   "Physostegia": {
    "famille": "Lamiaceae",
@@ -562,7 +616,7 @@
     "",
     "Vivaces rhizomateuses dressées de 60 à 120 cm, tiges carrées.",
     "Opposées, lancéolées, dentées.",
-    "Juillet à septembre, épis à 4 rangs de fleurs roses ou blanches.",
+    "Août à octobre, épis à 4 rangs de fleurs à 2 lèvres roses, mauves ou blanches.",
     "",
     "",
     "",
@@ -573,8 +627,12 @@
     "Très rustique.",
     ""
    ],
-   "sources": [],
-   "a_reverifier": true
+   "sources": [
+    "https://illinoiswildflowers.info/prairie/plantx/obed_plantx.htm",
+    "https://hort.ifas.ufl.edu/database/documents/pdf/shrub_fact_sheets/phyvira.pdf",
+    "https://www.almanac.com/plant/obedient-plant"
+   ],
+   "corrections": "Floraison fin d'été à automne (août à octobre) au lieu de juillet à septembre."
   },
   "Gaillardia": {
    "famille": "Asteraceae",
@@ -582,19 +640,22 @@
     "",
     "Vivaces de courte durée ou annuelles de 30 à 80 cm.",
     "Alternes, lancéolées, velues, gris-vert.",
-    "Juin à octobre, capitules rouges bordés de jaune, cœur bombé pourpre.",
+    "Juin à septembre, capitules rouges bordés de jaune, cœur bombé pourpre.",
     "",
     "",
     "",
     "Soleil",
-    "Léger, sableux",
+    "Drainé",
     "Sec",
     "Tous pH",
-    "Environ -15 °C en sol drainé.",
+    "RHS H5 (environ -10 à -15 °C) en sol drainé.",
     ""
    ],
-   "sources": [],
-   "a_reverifier": true
+   "sources": [
+    "https://www.rhs.org.uk/plants/360385/gaillardia-x-grandiflora-sunset-sunrise-sunset-dwarf-series/details",
+    "https://rhs.org.uk/plants/349950/gaillardia-grandiflora-fanblaze-pbr/details"
+   ],
+   "corrections": "Floraison juin à septembre (RHS : début d'été à début d'automne) ; sol 'Drainé' (RHS : craie, limon, sable) ; rusticité RHS H5."
   }
  },
  "familles": {

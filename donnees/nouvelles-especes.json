@@ -140,7 +140,7 @@
  {
   "latin": "Melia azedarach",
   "nom_accepte": "Melia azedarach",
-  "commun": "Lilas des Indes",
+  "commun": "Lilas de Perse",
   "famille": "Meliaceae",
   "cles": [
    "feuilles bipennées de 50 cm, folioles dentées",
@@ -149,10 +149,10 @@
    "écorce brun gris sillonnée"
   ],
   "sources_cles": [
-   "https://www.rhs.org.uk/plants/57957/melia-azedarach/details",
    "https://jardin-thuret.hub.inrae.fr/media/fiches-especes-ardem-2023/melia-azedarach.pdf",
-   "https://www.worldplants.ca/display0.php?id=1339",
-   "https://www.iucngisd.org/gisd/pdf.php?sc=636"
+   "https://www.iucngisd.org/gisd/pdf.php?sc=636",
+   "https://www.rhs.org.uk/plants/57957/melia-azedarach/details",
+   "https://www.worldplants.ca/display0.php?id=1339"
   ],
   "phrase": "Arbre d'ombrage méditerranéen à fleurs lilas parfumées et fruits jaunes ; fruits toxiques.",
   "description": {
@@ -2594,7 +2594,7 @@
  {
   "latin": "Lychnis flos-cuculi",
   "nom_accepte": "Silene flos-cuculi",
-  "commun": "Lychnis fleur de coucou",
+  "commun": "Lychnis fleur-de-coucou",
   "famille": "Caryophyllaceae",
   "cles": [
    "pétales roses profondément découpés en 4 lanières",
@@ -2603,17 +2603,20 @@
   ],
   "sources_cles": [
    "https://en.wikipedia.org/wiki/Silene_flos-cuculi",
+   "https://floranorthamerica.org/Silene_flos-cuculi",
    "https://nzflora.info/factsheet/Taxon/Silene-flos-cuculi.html",
-   "https://floranorthamerica.org/Silene_flos-cuculi"
+   "https://www.cbnbrest.fr/files/Fiche_ZH_BZH_Lychnis_flos_coculi_20230112.pdf",
+   "https://www.rhs.org.uk/plants/293121/silene-flos-cuculi/details"
   ],
   "phrase": "Fleurs roses ébouriffées aux pétales en lanières ; une touche légère pour prairies et noues fleuries.",
   "description": {
    "port": "Vivace, tiges dressées de 30 à 90 cm",
    "fleurs": "Pétales roses à limbe divisé en 4 lobes étroits",
-   "floraison": "Début d'été (juin d'après les herbiers ; à préciser)"
+   "floraison": "Mai à août",
+   "feuilles": "Feuilles opposées, étroites et lancéolées, soudées par paires à la base"
   },
   "milieu": null,
-  "statut": "douteux",
+  "statut": "ok",
   "remarque": "Nom accepté Silene flos-cuculi (syn. Lychnis flos-cuculi). Feuilles, floraison et milieu (prairies humides selon l'usage courant) non confirmés par les sources lues. Milieu non renseigné : aucune source consultée ne donnait l'écologie (WebFetch indisponible, budget de recherche épuisé).",
   "cat": "vivace"
  },

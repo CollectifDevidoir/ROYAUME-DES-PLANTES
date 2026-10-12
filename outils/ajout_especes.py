@@ -3,6 +3,7 @@
 # (donnees/rangs-nouveaux.json) et les textes « Plus de 700 ».
 # Seules les espèces complètes entrent : 3 à 5 clés de 55 caractères au plus, 2 sources au moins, une phrase,
 # port et feuilles décrits, et au moins 3 photos libres trouvées sur iNaturalist. Les autres sont listées, avec la raison.
+# Noms acceptés en plus du nom affiché (donnees/synonymes.json) et compléments de familles (donnees/familles-complements.json).
 # Usage : python3 outils/ajout_especes.py [--ecrire]   (sans option : bilan seulement, rien n'est modifié)
 import json,re,sys,csv,io,pathlib
 R=pathlib.Path(__file__).resolve().parent.parent;D=R/'donnees'
@@ -56,7 +57,7 @@ NF={f:v for f,v in GF['familles'].items() if f in fams}
 maj('FX',{f:v['FX'] for f,v in NF.items()})
 # 3. familles → genres (FG), fiches de familles (FI) et nombre d'espèces (FW)
 for g,v in NG.items():
-    f=v['famille'];m=re.search(r'\n'+f+r":'([^']*)'",s)
+    f=v['famille'];o=s.index('const FG={');m=re.compile(r"(?:^|[\n,{])"+f+r":'([^']*)'").search(s,o)
     if m:s=s[:m.start(1)]+' '.join(sorted(m.group(1).split()+[g]))+s[m.end(1):]
     else:rep('const FG={\n','const FG={\n'+f+":'"+g+"',\n")
 def lignes(debut,ajout):
@@ -74,7 +75,22 @@ if len(o)==12:
     o+=[re.sub(r'^<svg[^>]*>|</svg>$','',RG[n]) for n in ('druide','esprit','legende')];s=s[:a]+json.dumps(o,ensure_ascii=False,separators=(',',':'))+s[a+fin:]
 rep('aria-label="Les 12 rangs"','aria-label="Les ${R.length} rangs"',2)
 rep('.rgs{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));','.rgs{display:grid;grid-template-columns:repeat(15,minmax(0,1fr));')
-# 5. textes : « Plus de 600 » devient « Plus de 700 »
+# 5. noms botaniques récents ou anciens acceptés à l'écrit (le nom affiché reste le plus courant) et dans la recherche de l'herbier
+SYN=json.load(open(D/'synonymes.json',encoding='utf-8')) if (D/'synonymes.json').exists() else {}
+if SYN:
+    rep("S.forEach(s=>{if(s[2]==='conifère')s[2]='arbre'});","S.forEach(s=>{if(s[2]==='conifère')s[2]='arbre'});\n// Autres noms acceptés quand on écrit la réponse (nouveau nom accepté ou ancien nom courant) ; données : donnees/synonymes.json\nconst SYN="+json.dumps(SYN,ensure_ascii=False,separators=(',',':'))+";\nconst noms=s=>[s[0],...(SYN[s[0]]||[])];")
+    rep("const w=S.find(s=>typed?norm(s[0])===norm(v):s[0]===v);","const w=S.find(s=>typed?noms(s).some(n=>norm(n)===norm(v)):s[0]===v);")
+    rep("const good=typed?near(norm(v),norm(cur[0])):v===cur[0];","const good=typed?noms(cur).some(n=>near(norm(v),norm(n))):v===cur[0];")
+    rep("typo=typed&&good&&norm(v)!==norm(c[0]);","typo=typed&&good&&!noms(c).some(n=>norm(n)===norm(v)),autre=typed&&good&&!typo&&norm(v)!==norm(c[0]);")
+    rep('<span class="sl2"><em>${c[0]}</em>','<span class="sl2"><em>${c[0]}</em>${autre?` <small class="fm">· aussi accepté : <em>${esc(v)}</em></small>`:\'\'}')
+    rep("S.filter(s=>norm(s[0]).includes(q)||norm(s[1]).includes(q))","S.filter(s=>noms(s).some(n=>norm(n).includes(q))||norm(s[1]).includes(q))")
+# 6. compléments de familles : curiosités des cartes « Famille du jour » (FC) et nombres d'espèces manquants (FW)
+FCX=json.load(open(D/'familles-complements.json',encoding='utf-8')) if (D/'familles-complements.json').exists() else {}
+if FCX.get('FC'):maj('FC',FCX['FC'])
+if FCX.get('FW'):
+    a=s.index('const FW={};`')+len('const FW={};`');b=s.index('`',a);have={l.split('|')[0] for l in s[a:b].split('\n')}
+    lignes('const FW={};`',[f+'|'+n for f,n in FCX['FW'].items() if f not in have])
+# 7. textes : « Plus de 600 » devient « Plus de 700 »
 if N>=700:rep('Plus de 600 ','Plus de 700 ',3)
 (R/'index.html').write_text(s,encoding='utf-8')
 # 6. clés sourcées (tableur des clés, puis table Q régénérée) et photos (index de l'appli)
