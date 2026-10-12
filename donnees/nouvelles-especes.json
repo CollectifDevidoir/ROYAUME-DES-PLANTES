@@ -1,0 +1,3202 @@
+[
+ {
+  "latin": "Acer × freemanii",
+  "nom_accepte": "Acer × freemanii",
+  "commun": "Érable de Freeman",
+  "famille": "Sapindaceae",
+  "cles": [
+   "5 lobes, sinus moins profonds que l'érable argenté",
+   "revers des feuilles blanc argenté",
+   "jeunes rameaux rougeâtres ; fleurs rouges précoces",
+   "automne rouge orangé vif selon le clone"
+  ],
+  "sources_cles": [
+   "https://www.treesandshrubsonline.org/articles/acer/acer-x-freemanii",
+   "https://dendro.cnre.vt.edu/dendrology/carddetail.cfm?ID=939",
+   "https://landscapeplants.oregonstate.edu/plants/acer-freemanii"
+  ],
+  "phrase": "Hybride d'érable rouge et d'érable argenté : croissance vigoureuse et feu rouge orangé en automne.",
+  "description": {
+   "port": "Arbre à couronne ovale ou arrondie, branches dressées",
+   "feuilles": "Palmées à 5 lobes, intermédiaires entre les parents, revers argenté",
+   "ecorce": "Gris clair et lisse jeune, puis en lanières ou finement fissurée",
+   "fleurs": "Petites fleurs rouges avant les feuilles",
+   "floraison": "Mars à avril"
+  },
+  "milieu": [
+   "Soleil",
+   "Frais et drainé",
+   "Frais à humide",
+   "Acide à neutre"
+  ],
+  "statut": "ok",
+  "remarque": "Hybride A. rubrum × A. saccharinum ; vendu surtout en clones ('Autumn Blaze' = 'Jeffersred', 'Armstrong'), parfois sous le nom d'A. rubrum. Coloration et découpe variables selon le clone. Supporte sols humides et inondations ponctuelles. pH : préférence acide à neutre héritée d'A. rubrum, non confirmée par une source lue.",
+  "cat": "arbre"
+ },
+ {
+  "latin": "Aesculus flava",
+  "nom_accepte": "Aesculus flava",
+  "commun": "Pavier jaune",
+  "famille": "Sapindaceae",
+  "cles": [
+   "5 folioles elliptiques finement dentées, pétiolulées",
+   "panicules dressées jaune verdâtre en mai",
+   "capsule lisse en poire, sans épines",
+   "bourgeons non collants (marronnier : collants)",
+   "écorce grise s'écaillant en plaques avec l'âge"
+  ],
+  "sources_cles": [
+   "https://www.treesandshrubsonline.org/articles/aesculus/aesculus-flava/",
+   "https://worldplants.ca/display.php?id=915",
+   "https://plantdatabase.uconn.edu/detail.php?pid=36",
+   "https://canr.udel.edu/udbg/?p=944"
+  ],
+  "phrase": "Pavier américain à fleurs jaunes, plus sobre que le marronnier ; feuillage jaune orangé en automne.",
+  "description": {
+   "port": "Arbre de 15 à 25 m, couronne arrondie",
+   "feuilles": "Opposées, palmées à 5 folioles de 10 à 15 cm, finement dentées",
+   "ecorce": "Gris brun, lisse jeune, puis en plaques écailleuses",
+   "fleurs": "Panicules dressées de 15 cm, jaunes teintées de vert",
+   "floraison": "Mai",
+   "fruits": "Capsule lisse piriforme à 1-2 graines brunes"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Riche et frais",
+   "Frais",
+   "Acide à neutre"
+  ],
+  "statut": "ok",
+  "remarque": "Syn. Aesculus octandra. Se distingue d'A. hippocastanum (capsule épineuse, bourgeons collants, fleurs blanches) et d'A. glabra (capsule épineuse). Origine : est des États-Unis, fonds de vallée et pentes humides. Hauteur non confirmée précisément par les sources lues.",
+  "cat": "arbre"
+ },
+ {
+  "latin": "Alnus × spaethii",
+  "nom_accepte": "Alnus × spaethii",
+  "commun": "Aulne de Späth",
+  "famille": "Betulaceae",
+  "cles": [
+   "grandes feuilles lancéolées jusqu'à 15-18 cm, luisantes",
+   "jeunes feuilles pourprées au débourrement",
+   "longs chatons jaunes au printemps",
+   "port étroit et dressé"
+  ],
+  "sources_cles": [
+   "https://www.vdberk.co.uk/trees/alnus-spaethii-spaeth/",
+   "https://www.rhs.org.uk/plants/91790/alnus-x-spaethii/details",
+   "https://www.barcham.co.uk/store/products/alnus-spaethii"
+  ],
+  "phrase": "Aulne urbain robuste à grandes feuilles luisantes ; supporte sécheresse, inondation et revêtements.",
+  "description": {
+   "port": "Arbre de 12 à 20 m, port étroit et dressé",
+   "feuilles": "Lancéolées, vert foncé luisant, dents fines espacées, pourprées au débourrement",
+   "fleurs": "Chatons mâles jaunes",
+   "floraison": "Février à mars"
+  },
+  "milieu": [
+   "Soleil",
+   "Tous sols",
+   "Frais à humide",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Hybride A. japonica × A. subcordata obtenu chez Späth (Berlin, 1894, commercialisé en 1908). Feuilles bien plus allongées que chez A. glutinosa (arrondies, échancrées) ou A. cordata (en cœur). Mois de floraison déduit du genre, non lu explicitement. Sensible au Phytophthora selon la RHS.",
+  "cat": "arbre"
+ },
+ {
+  "latin": "Malus trilobata",
+  "nom_accepte": "Malus trilobata (syn. Eriolobus trilobatus)",
+  "commun": "Pommier trilobé",
+  "famille": "Rosaceae",
+  "cles": [
+   "feuilles d'érable à 3 lobes profonds, relobés",
+   "fleurs blanches jusqu'à 4 cm en bouquets lâches",
+   "petits fruits verdâtres lavés de rouge",
+   "automne rouge vif ; port dressé pyramidal"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/25759/wd/details",
+   "https://www.vdberk.co.uk/trees/malus-trilobata/",
+   "https://treesandshrubsonline.org/articles/malus/malus-trilobata/"
+  ],
+  "phrase": "Pommier à feuilles d'érable, port dressé et compact, flamboyant à l'automne ; adapté à la rue.",
+  "description": {
+   "port": "Petit arbre de 5 à 8 m, port dressé puis pyramidal large",
+   "feuilles": "Luisantes, à 3 lobes profonds dentés, rouge vif en automne",
+   "fleurs": "Blanches, jusqu'à 4 cm, en corymbes lâches",
+   "floraison": "Mai à juin",
+   "fruits": "Petites pommes verdâtres teintées de rouge"
+  },
+  "milieu": [
+   "Soleil",
+   "Frais et drainé",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Pommier sauvage du Liban et de Méditerranée orientale (Grèce, Turquie, Syrie). Classé par certains auteurs dans le genre Eriolobus : vérifier le nom retenu dans l'appli. Feuille lobée unique chez les Malus courants. Hauteur annoncée très variable (5 m pépinières, >12 m RHS).",
+  "cat": "arbre"
+ },
+ {
+  "latin": "Melia azedarach",
+  "nom_accepte": "Melia azedarach",
+  "commun": "Lilas des Indes",
+  "famille": "Meliaceae",
+  "cles": [
+   "feuilles bipennées de 50 cm, folioles dentées",
+   "panicules lâches de fleurs étoilées lilas pâle",
+   "drupes rondes jaunes persistant l'hiver, sans feuilles",
+   "écorce brun gris sillonnée"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/57957/melia-azedarach/details",
+   "https://jardin-thuret.hub.inrae.fr/media/fiches-especes-ardem-2023/melia-azedarach.pdf",
+   "https://www.worldplants.ca/display0.php?id=1339",
+   "https://www.iucngisd.org/gisd/pdf.php?sc=636"
+  ],
+  "phrase": "Arbre d'ombrage méditerranéen à fleurs lilas parfumées et fruits jaunes ; fruits toxiques.",
+  "description": {
+   "port": "Arbre de 8 à 15 m, couronne étalée",
+   "feuilles": "Caduques, bipennées, folioles ovales luisantes dentées, jaunes en automne",
+   "ecorce": "Brun gris à brun rougeâtre, sillonnée",
+   "fleurs": "Panicules de petites fleurs étoilées lilas pâle, parfumées",
+   "floraison": "Mai à juin",
+   "fruits": "Drupes jaunes de 1 cm, persistantes"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Aussi appelé lilas de Perse, arbre à chapelets, margousier (à ne pas confondre avec le neem, Azadirachta indica). Toutes parties toxiques, fruits surtout. Envahissant dans plusieurs régions chaudes (drageons). Rusticité limitée (H3 RHS) : sud et façade atlantique douce.",
+  "cat": "arbre"
+ },
+ {
+  "latin": "Populus × canescens",
+  "nom_accepte": "Populus × canescens",
+  "commun": "Peuplier grisard",
+  "famille": "Salicaceae",
+  "cles": [
+   "feuilles arrondies, revers feutré gris (pas blanc)",
+   "feuilles peu lobées, moins que chez P. alba",
+   "écorce blanchâtre à lenticelles en losange sombres",
+   "drageonne ; cime large et arrondie"
+  ],
+  "sources_cles": [
+   "https://www.futura-sciences.com/planete/definitions/botanique-peuplier-grisard-8933/",
+   "https://treesandshrubsonline.org/articles/populus/populus-canescens/",
+   "https://keele.ac.uk/arboretum/ourtrees/speciesaccounts/greypoplar",
+   "https://species.wikimedia.org/wiki/Populus_%C3%97_canescens"
+  ],
+  "phrase": "Grand peuplier drageonnant à feuillage gris argenté ; bords de rivière et sols frais.",
+  "description": {
+   "port": "Grand arbre de 25 à 35 m, cime large arrondie",
+   "feuilles": "Ovales à arrondies, crénelées ou peu lobées, feutre gris dessous s'estompant l'été",
+   "ecorce": "Blanchâtre à lenticelles en losange, crevassée à la base",
+   "fleurs": "Chatons de 3 à 4 cm",
+   "floraison": "Mars à avril"
+  },
+  "milieu": [
+   "Soleil",
+   "Frais et drainé",
+   "Frais à humide",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Hybride naturel P. alba × P. tremula (ypréau). Indigène ou naturalisé en France, bords de cours d'eau. Confusion fréquente avec P. alba : revers gris et non blanc neigeux, feuilles moins lobées. Les lenticelles en losange existent aussi chez P. alba. Hauteur non confirmée par une source lue.",
+  "cat": "arbre"
+ },
+ {
+  "latin": "Prunus sargentii",
+  "nom_accepte": "Prunus sargentii",
+  "commun": "Cerisier de Sargent",
+  "famille": "Rosaceae",
+  "cles": [
+   "fleurs simples roses en ombelles sessiles",
+   "jeunes feuilles bronze rougeâtre",
+   "écorce acajou luisante, lenticelles horizontales",
+   "automne orange rouge précoce"
+  ],
+  "sources_cles": [
+   "https://bcarboretum.org/plants/genus/Prunus/species/sargentii",
+   "https://extension.usu.edu/treebrowser/catalog/cherry-sargent.php",
+   "https://ebben.nl/en/treeebb/prsargen-prunus-sargentii"
+  ],
+  "phrase": "Cerisier japonais à fleurs simples roses, écorce acajou et coloration automnale précoce.",
+  "description": {
+   "port": "Arbre de 8 à 12 m, couronne arrondie évasée",
+   "feuilles": "Ovales dentées, bronze au débourrement, orange rouge en automne",
+   "ecorce": "Brun rouge à acajou, luisante, à lenticelles horizontales",
+   "fleurs": "Simples roses de 3-4 cm, en ombelles de 2 à 6",
+   "floraison": "Avril à mai"
+  },
+  "milieu": [
+   "Soleil",
+   "Frais et drainé",
+   "Frais",
+   "Acide à neutre"
+  ],
+  "statut": "ok",
+  "remarque": "Syn. Prunus serrulata var. sachalinensis. Fleurs sans pédoncule commun (ombelles sessiles), à la différence de P. serrulata. Craint eau stagnante et sol compacté.",
+  "cat": "arbre"
+ },
+ {
+  "latin": "Pyrus cordata",
+  "nom_accepte": "Pyrus cordata",
+  "commun": "Poirier à feuilles en cœur",
+  "famille": "Rosaceae",
+  "cles": [
+   "fruits ronds de 1-1,5 cm (P. pyraster : 3 cm)",
+   "feuilles petites, base en cœur ou arrondie",
+   "rameaux épineux, terminés en épine",
+   "fleurs blanches en corymbes au printemps"
+  ],
+  "sources_cles": [
+   "https://floranorthamerica.org/Pyrus_cordata",
+   "https://www.futura-sciences.com/planete/definitions/botanique-poirier-feuilles-cordees-10468/",
+   "https://woodlandtrust.org.uk/trees-woods-and-wildlife/british-trees/a-z-of-british-trees/plymouth-pear",
+   "https://www.trebrown.co.uk/shop/species/pyrus_cordata.php"
+  ],
+  "phrase": "Poirier sauvage épineux de l'ouest atlantique, en haies et lisières ; petits fruits ronds.",
+  "description": {
+   "port": "Arbuste ou petit arbre épineux de 8 à 10 m",
+   "feuilles": "Petites, ovales, base en cœur à arrondie",
+   "fleurs": "Blanches en corymbes",
+   "floraison": "Avril à mai",
+   "fruits": "Petites poires rondes de 1 à 1,5 cm, calice généralement caduc"
+  },
+  "milieu": [
+   "Soleil",
+   "Léger, sableux",
+   "Sec à frais",
+   "Acide à neutre"
+  ],
+  "statut": "ok",
+  "remarque": "Indigène en France, aire atlantique du Pays basque à la Bretagne (concerne Gironde/Landes) : haies, lisières, coteaux secs sur sols siliceux. Protégé au Royaume-Uni (Plymouth pear). Confusion possible avec Pyrus pyraster (fruits plus gros). Pas de fiche Tela/INPN lue (accès impossible).",
+  "cat": "arbre"
+ },
+ {
+  "latin": "Quercus castaneifolia",
+  "nom_accepte": "Quercus castaneifolia",
+  "commun": "Chêne à feuilles de châtaignier",
+  "famille": "Fagaceae",
+  "cles": [
+   "feuilles oblongues, 10-15 dents triangulaires par côté",
+   "nervures droites finissant dans chaque dent",
+   "cupule hérissée d'écailles recourbées, aspect moussu",
+   "glands bicolores, base orangée"
+  ],
+  "sources_cles": [
+   "https://www.treesandshrubsonline.org/articles/quercus/quercus-castaneifolia/",
+   "https://landscapeplants.oregonstate.edu/plants/quercus-castaneifolia",
+   "https://www.worldplants.ca/display.php?id=5131",
+   "https://hortflora.rbg.vic.gov.au/taxon/ad8de526-5340-11e7-b82b-005056b0018f"
+  ],
+  "phrase": "Grand chêne du Caucase et d'Iran, feuilles de châtaignier ; vigoureux, pour parcs et avenues.",
+  "description": {
+   "port": "Grand arbre à couronne large",
+   "feuilles": "Oblongues de 10 à 20 cm, à dents triangulaires régulières, revers grisâtre",
+   "fruits": "Glands de 2-3 cm dans une cupule à écailles linéaires recourbées"
+  },
+  "milieu": [
+   "Soleil",
+   "Tous sols",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "douteux",
+  "remarque": "Caractères foliaires et cupule confirmés ; hauteur, écorce et milieu non confirmés par les sources lues (WebFetch indisponible, extraits de recherche seulement). Confusion avec Q. cerris (cupule aussi hérissée mais feuilles lobées irrégulières) et avec Castanea sativa (feuilles à dents en arête, pas de gland).",
+  "cat": "arbre"
+ },
+ {
+  "latin": "Quercus × hispanica",
+  "nom_accepte": "Quercus × hispanica",
+  "commun": "Chêne de Lucombe",
+  "famille": "Fagaceae",
+  "cles": [
+   "semi-persistant : feuilles vertes en partie l'hiver",
+   "feuilles ovales à dents aiguës, revers feutré gris",
+   "écorce rugueuse et liégeuse sans vrai liège",
+   "cupule à écailles duveteuses recourbées"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/75037/quercus-hispanica-lucombeana/details",
+   "https://hortflora.rbg.vic.gov.au/taxon/f6dfad96-6eca-46eb-900b-373125d4c703",
+   "https://oaknames.internationaloaksociety.org/plant-name/1518"
+  ],
+  "phrase": "Chêne semi-persistant à écorce liégeuse, hybride du chêne-liège ; majestueux en grand parc.",
+  "description": {
+   "port": "Grand arbre semi-persistant, de plus de 12 m",
+   "feuilles": "Ovales de 5 à 10 cm, base inégale, dents aiguës, luisantes dessus, feutrées grises dessous",
+   "ecorce": "Rugueuse, crevassée, liégeuse",
+   "fruits": "Glands mûrissant en 2 ans, cupule à écailles duveteuses recourbées"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Hybride Q. cerris × Q. suber ; 'Lucombeana' né vers 1762 à Exeter. Le nom de Lucombe désigne strictement le cultivar 'Lucombeana'. Hybride variable selon les individus. Feuilles moins découpées que Q. cerris ; écorce moins épaisse que Q. suber. Milieu non confirmé par une source lue.",
+  "cat": "arbre"
+ },
+ {
+  "latin": "Quercus phellos",
+  "nom_accepte": "Quercus phellos",
+  "commun": "Chêne saule",
+  "famille": "Fagaceae",
+  "cles": [
+   "feuilles étroites de saule, entières, sans lobes",
+   "pointe de la feuille terminée par une soie",
+   "feuille vert luisant dessus, plus pâle dessous",
+   "petits glands ronds, cupule plate en soucoupe",
+   "feuillage jaune à brun rouge en automne"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/28189/wd/details",
+   "https://plants.ces.ncsu.edu/plants/all/quercus-phellos/",
+   "https://mdc.mo.gov/discover-nature/field-guide/willow-oak",
+   "https://www.ebben.nl/fr/treeebb/quphello-quercus-phellos/pdf/"
+  ],
+  "phrase": "Chêne aux feuilles de saule, port élancé ; pour sols acides et frais, supporte l'argile.",
+  "description": {
+   "port": "Arbre de 15 à 20 m en culture (jusqu'à 30 m dans son aire)",
+   "feuilles": "Feuilles linéaires lancéolées entières, 5 à 12 cm, vert luisant, pointe en soie",
+   "ecorce": "Écorce lisse gris brun rougeâtre, puis gris foncé à plaques écailleuses",
+   "fruits": "Petits glands d'environ 1 cm, cupule plate couvrant le quart du fruit"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Frais et drainé",
+   "Frais à humide",
+   "Acide à neutre"
+  ],
+  "statut": "ok",
+  "remarque": "Chêne du groupe des chênes rouges, originaire de l'est des États-Unis. Chlorose en sol calcaire. Mois de floraison non confirmé (fleurs insignifiantes).",
+  "cat": "arbre"
+ },
+ {
+  "latin": "Sorbus × thuringiaca",
+  "nom_accepte": "Hedlundia thuringiaca",
+  "commun": "Alisier de Thuringe",
+  "famille": "Rosaceae",
+  "cles": [
+   "feuilles lobées, 1 à 4 paires de folioles libres en bas",
+   "lobes de plus en plus profonds vers la base",
+   "revers des feuilles gris et velu",
+   "corymbes de fleurs blanc crème au printemps",
+   "grappes de fruits rouge vif ronds d'environ 1 cm"
+  ],
+  "sources_cles": [
+   "https://bsbi.org/learn/resources/plant-crib/sorbus",
+   "https://treesandshrubsonline.org/articles/hedlundia/hedlundia-thuringiaca/",
+   "https://www.rhs.org.uk/plants/97559/sorbus-thuringiaca-fastigiata/details",
+   "https://www.vdberk.co.uk/en_GB/pdf/tree/2970/sorbus-thuringiaca-fastigiata.pdf"
+  ],
+  "phrase": "Petit arbre d'alignement urbain, couronne compacte et fruits rouges appréciés des oiseaux.",
+  "description": {
+   "port": "Arbre de 6 à 12 m, couronne ovale compacte ('Fastigiata')",
+   "feuilles": "Feuilles lobées, folioles libres à la base, vert foncé dessus, grises et velues dessous",
+   "fleurs": "Corymbes blanc crème",
+   "floraison": "Mai",
+   "fruits": "Fruits rouge vif globuleux, 10 à 12 mm"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Frais et drainé",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "douteux",
+  "remarque": "Hybride Sorbus aucuparia × S. aria s.l. Nom accepté actuel Hedlundia thuringiaca (Sennikov & Kurtto, 2017 ; WFO, GRIN), mais POWO rattache des synonymes à × Arsorbus : nomenclature instable. Souvent confondu avec S. × pinnatifida (paire de folioles basale écartée). Nom français peu attesté dans les sources lues. Le cultivar 'Fastigiata' est le plus planté.",
+  "cat": "arbre"
+ },
+ {
+  "latin": "Tetradium daniellii",
+  "nom_accepte": "Tetradium daniellii",
+  "commun": "Arbre à miel",
+  "famille": "Rutaceae",
+  "cles": [
+   "feuilles composées de 5 à 11 folioles ovales luisantes",
+   "larges corymbes plats de fleurs blanc crème en été",
+   "capsules rouges s'ouvrant sur des graines noires",
+   "écorce lisse grise rappelant celle du hêtre",
+   "feuillage jaune en automne"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/19630/wd/details",
+   "https://arboretum.harvard.edu/stories/bee-bee-tree/",
+   "https://ebben.nl/en/treeebb/tedaniel-tetradium-daniellii",
+   "https://www.jardiner-malin.fr/fiche/larbre-a-miel.html"
+  ],
+  "phrase": "Floraison crème très mellifère en fin d'été, quand peu d'arbres fleurissent ; fruits rouges.",
+  "description": {
+   "port": "Arbre étalé de 8 à 10 m en culture (jusqu'à 15-20 m)",
+   "feuilles": "Feuilles composées de 5 à 11 folioles ovales, vert foncé luisant, revers velouté",
+   "ecorce": "Écorce lisse grise",
+   "fleurs": "Grands corymbes plats de petites fleurs blanc crème parfumées",
+   "floraison": "Juillet à août",
+   "fruits": "Capsules rouges puis brunes, graines noires luisantes"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Drainé",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Synonymes : Euodia (Evodia) daniellii, Euodia velutina. Originaire de Chine et Corée. Autres noms : arbre aux abeilles, évodia. Craint l'excès d'humidité ; à l'abri du vent. Rustique vers -15 °C et plus.",
+  "cat": "arbre"
+ },
+ {
+  "latin": "Tilia × euchlora",
+  "nom_accepte": "Tilia × euchlora",
+  "commun": "Tilleul de Crimée",
+  "famille": "Malvaceae",
+  "cles": [
+   "feuilles vert foncé très luisantes, dents à pointe fine",
+   "revers glabre sauf touffes de poils bruns aux nervures",
+   "rameaux minces verts glabres, bourgeons rouge orangé",
+   "branches basses retombantes"
+  ],
+  "sources_cles": [
+   "https://landscapeplants.oregonstate.edu/plants/tilia-euchlora",
+   "https://www.ebben.nl/en/treeebb/tieuchlo-tilia-x-euchlora",
+   "https://plants.ces.ncsu.edu/plants/tilia-x-euchlora",
+   "https://worldplants.ca/display.php?id=10152"
+  ],
+  "phrase": "Tilleul d'avenue au feuillage luisant, branches basses retombantes ; fleurs parfumées en été.",
+  "description": {
+   "port": "Arbre de 15 à 20 m, couronne ovale dense, branches basses pendantes",
+   "feuilles": "Feuilles cordiformes à base oblique, 5 à 10 cm, vert foncé luisant, revers plus clair",
+   "fleurs": "Cymes pendantes jaune pâle parfumées",
+   "floraison": "Juin à juillet"
+  },
+  "milieu": null,
+  "statut": "ok",
+  "remarque": "Hybride présumé T. cordata × T. dasystyla, parenté incertaine ; parfois nommé T. × europaea 'Euchlora'. Floraison mai-juin selon World Plants. Tolère presque tous sols et le vent (Ebben), mais exposition, humidité et pH non confirmés : milieu laissé vide.",
+  "cat": "arbre"
+ },
+ {
+  "latin": "Ulmus × hollandica",
+  "nom_accepte": "Ulmus × hollandica",
+  "commun": "Orme de Hollande",
+  "famille": "Ulmaceae",
+  "cles": [
+   "feuille ovale large, base nettement asymétrique",
+   "grand côté de la base en oreillette, bord denté",
+   "feuille lisse et luisante dessus, rarement rugueuse",
+   "samare ailée échancrée, graine près de l'échancrure",
+   "rejets nombreux, ailes de liège sur jeunes rameaux"
+  ],
+  "sources_cles": [
+   "https://flora.tmag.tas.gov.au/pdf/Ulmaceae_2019_1.pdf",
+   "https://hortflora.rbg.vic.gov.au/taxon/ad8d56ec-5340-11e7-b82b-005056b0018f",
+   "https://landscapeplants.oregonstate.edu/node/928",
+   "https://floraseries.landcareresearch.co.nz/taxa/bdacba8a-b4c0-4da9-b7ab-39847911cfe6"
+  ],
+  "phrase": "Grand orme hybride autrefois planté en alignement ; souvent sensible à la graphiose.",
+  "description": {
+   "port": "Arbre jusqu'à 40 m, drageonnant",
+   "feuilles": "Feuilles ovales larges, 6 à 14 cm, aiguës, base inégale, bord denté",
+   "fleurs": "Glomérules avant les feuilles",
+   "fruits": "Samares largement ailées, échancrées au sommet"
+  },
+  "milieu": null,
+  "statut": "douteux",
+  "remarque": "Groupe d'hybrides U. glabra × U. minor (parfois U. plotii) très variable selon les cultivars ('Belgica', 'Major', 'Vegeta'…), intermédiaire entre les parents : difficile à reconnaître sur photo. Aucune source française lue ; milieu et mois de floraison non confirmés. Beaucoup de clones sensibles à la graphiose.",
+  "cat": "arbre"
+ },
+ {
+  "latin": "Ulmus parvifolia",
+  "nom_accepte": "Ulmus parvifolia",
+  "commun": "Orme de Chine",
+  "famille": "Ulmaceae",
+  "cles": [
+   "écorce se desquamant en plaques grises, crème, orange",
+   "petites feuilles dentées de 2 à 6 cm, luisantes",
+   "floraison et samares en fin d'été et automne",
+   "samares plates en disque, échancrées, graine centrale"
+  ],
+  "sources_cles": [
+   "https://www.treesandshrubsonline.org/articles/ulmus/ulmus-parvifolia/",
+   "https://plantdatabase.uconn.edu/detail.php?pid=515",
+   "https://extension.usu.edu/treebrowser/catalog/elm-lacebark-chinese",
+   "https://www.lsu.edu/departments/horticulture/plantmaterials/Plant Groups/Deciduous Trees/Ulmus parvifolia/index.htm"
+  ],
+  "phrase": "Petit orme à l'écorce en mosaïque très décorative ; résistant à la ville et à la sécheresse.",
+  "description": {
+   "port": "Arbre de 6 à 10 m, couronne arrondie",
+   "feuilles": "Petites feuilles simples alternes dentées, vert foncé",
+   "ecorce": "Écorce exfoliante en plaques, dessous orangé cannelle",
+   "fleurs": "Petites fleurs vert clair discrètes",
+   "floraison": "Août à octobre",
+   "fruits": "Samares brunes en disque, environ 8 mm"
+  },
+  "milieu": [
+   "Soleil",
+   "Frais et drainé",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Floraison automnale, contrairement aux ormes européens (floraison de fin d'hiver). Ne pas confondre avec Ulmus pumila (orme de Sibérie), aussi appelé « orme de Chine » en pépinière. Ne supporte pas les sols détrempés.",
+  "cat": "arbre"
+ },
+ {
+  "latin": "Abies koreana",
+  "nom_accepte": "Abies koreana",
+  "commun": "Sapin de Corée",
+  "famille": "Pinaceae",
+  "cles": [
+   "cônes dressés bleu violacé dès le jeune âge",
+   "aiguilles de 1,5-2 cm à 2 bandes blanches dessous",
+   "petit conifère conique compact, croissance lente"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/44/wd/details",
+   "https://worldplants.ca/display.php?id=366",
+   "https://www.lapetiteloiterie.fr/lpl/wp-content/uploads/abies-koreana.pdf",
+   "https://plantdatabase.uconn.edu/detail.php?pid=4"
+  ],
+  "phrase": "Petit sapin conique qui porte ses cônes violets dès le jeune âge ; idéal en petit jardin.",
+  "description": {
+   "port": "Conifère conique compact de 4 à 10 m",
+   "feuilles": "Aiguilles courtes vert foncé, revers à 2 bandes blanches",
+   "fruits": "Cônes dressés cylindriques de 4 à 7 cm, bleu violacé puis bruns"
+  },
+  "milieu": [
+   "Soleil",
+   "Frais et drainé",
+   "Frais",
+   "Acide à neutre"
+  ],
+  "statut": "ok",
+  "remarque": "Originaire de Corée (île de Jeju). Certains sujets ont des cônes verts. À abriter des vents froids. Cultivar courant 'Silberlocke' à aiguilles recourbées montrant le revers blanc.",
+  "cat": "conifère"
+ },
+ {
+  "latin": "Abies pinsapo",
+  "nom_accepte": "Abies pinsapo",
+  "commun": "Sapin d'Espagne",
+  "famille": "Pinaceae",
+  "cles": [
+   "aiguilles rigides insérées tout autour du rameau",
+   "aiguilles courtes de 1-2 cm, bleu vert, en brosse",
+   "cônes dressés cylindriques, verts pourprés puis bruns"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/59/wd/details",
+   "https://treesandshrubsonline.org/articles/abies/abies-pinsapo/",
+   "https://oneaction.ch/wp-content/uploads/2024/05/Reunis-sous-la-canopee-2024-Abies-pinsapo.pdf",
+   "https://www.vdberk.co.uk/trees/abies-pinsapo/"
+  ],
+  "phrase": "Sapin méditerranéen au feuillage en brosse bleu vert ; plus résistant à la chaleur que les autres.",
+  "description": {
+   "port": "Conifère conique de 15 à 25 m",
+   "feuilles": "Aiguilles rigides de 8 à 20 mm, rayonnant tout autour du rameau, bleu vert à bandes cireuses",
+   "fruits": "Cônes dressés cylindriques de 9 à 15 cm, vert pourpré puis bruns"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Endémique des sierras d'Andalousie (900-1800 m), espèce menacée. Sources divergentes sur le pH : sols dolomitiques ou serpentines carbonatés ou non (agriculture.gouv.fr), « neutre à calcaire » (Van den Berk), « acide à neutre » (RHS). Les populations marocaines sont parfois séparées (A. marocana).",
+  "cat": "conifère"
+ },
+ {
+  "latin": "Juniperus chinensis",
+  "nom_accepte": "Juniperus chinensis",
+  "commun": "Genévrier de Chine",
+  "famille": "Cupressaceae",
+  "cles": [
+   "deux feuillages : écailles serrées et aiguilles par 3",
+   "aiguilles juvéniles à 2 bandes pâles dessus",
+   "petits cônes charnus pruineux violet brun à noirs",
+   "port très variable selon le cultivar"
+  ],
+  "sources_cles": [
+   "https://plants.ces.ncsu.edu/plants/juniperus-chinensis/",
+   "https://www.ruhr-uni-bochum.de/biodivpfl/Cupressaceae/Description/HTML/Juniperus%20chinensis%20chinensis.htm",
+   "https://www.techno-science.net/fr/definitions/genevrier-de-chine",
+   "https://www.jardiner-malin.fr/fiche/juniperus-entretien-taille.html"
+  ],
+  "phrase": "Genévrier très polymorphe, des formes rampantes aux colonnes ; supporte sécheresse et calcaire.",
+  "description": {
+   "port": "Arbuste ou petit arbre, port très variable (étalé à colonnaire)",
+   "feuilles": "Feuilles adultes en écailles sur 4 rangs ; aiguilles juvéniles par 3 ou opposées",
+   "fruits": "Galbules charnus de 7 à 12 mm, pruineux, violet brun à noirs, mûrs en 2 ans"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Sec",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Espèce dioïque. Feuillage juvénile surtout sur rameaux ombragés. Nombreux cultivars, souvent mêlés à J. × pfitzeriana (J. × media). Craint les sols humides. pH : tolère le calcaire ; pas de restriction trouvée.",
+  "cat": "conifère"
+ },
+ {
+  "latin": "Juniperus horizontalis",
+  "nom_accepte": "Juniperus horizontalis",
+  "commun": "Genévrier rampant",
+  "famille": "Cupressaceae",
+  "cles": [
+   "tapis plaqué au sol de 10-30 cm, très étalé",
+   "feuilles en écailles, bleu vert, prune en hiver",
+   "cônes bleu foncé pruineux de 5-7 mm"
+  ],
+  "sources_cles": [
+   "https://www.minnesotawildflowers.info/shrub/creeping-juniper",
+   "https://landscapeplants.oregonstate.edu/plants/juniperus-horizontalis",
+   "https://www.fs.usda.gov/database/feis/plants/shrub/junhor/all.html",
+   "https://www.worldplants.ca/display.php?id=1865"
+  ],
+  "phrase": "Couvre-sol persistant pour talus et rocailles ensoleillés ; feuillage prune en hiver.",
+  "description": {
+   "port": "Arbuste rampant de 10 à 30 cm, étalé sur plusieurs mètres",
+   "feuilles": "Écailles opposées de 1 à 2 mm, vert bleuté, violacées en hiver ; aiguilles juvéniles sur jeunes pousses",
+   "fruits": "Galbules bleu foncé pruineux, mûrs en 18 mois"
+  },
+  "milieu": [
+   "Soleil",
+   "Pauvre, caillouteux, très drainé",
+   "Sec",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Originaire du nord de l'Amérique du Nord (dunes, rochers, crêtes calcaires, landes). Ne supporte pas les sols humides. Proche de J. sabina et J. communis subsp. alpina (port rampant) : regarder les écailles et la teinte hivernale.",
+  "cat": "conifère"
+ },
+ {
+  "latin": "Juniperus squamata",
+  "nom_accepte": "Juniperus squamata",
+  "commun": "Genévrier écailleux",
+  "famille": "Cupressaceae",
+  "cles": [
+   "aiguilles piquantes par 3, bleu-vert glauque",
+   "vieilles aiguilles sèches restant à la base des rameaux",
+   "écorce brune s'exfoliant en fines lanières",
+   "petits cônes charnus noir luisant, à 1 graine"
+  ],
+  "sources_cles": [
+   "https://en.wikipedia.org/wiki/Juniperus_squamata",
+   "https://www.conifers.org/cu/Juniperus_squamata.php",
+   "https://www.rhs.org.uk/plants/9625/juniperus-squamata/details",
+   "https://www.promessedefleurs.ie/shrubs/foolproof-shrubs/juniperus-squamata-floreant.html"
+  ],
+  "phrase": "Genévrier bleuté des rocailles et talus bien drainés ; cultivars bas comme 'Blue Star' ou 'Blue Carpet'.",
+  "description": {
+   "port": "Arbuste persistant bas, souvent étalé, parfois petit arbre",
+   "feuilles": "Aiguilles de 3 à 9 mm, par 3, bleu-vert glauque, piquantes",
+   "ecorce": "Brun rouge, s'exfoliant en fines lanières",
+   "fruits": "Cônes charnus globuleux de 4 à 9 mm, noir luisant, à une graine"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Drainé",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Originaire de l'Himalaya et de Chine. Craint les sols mal drainés (pourriture des racines). Couleur du feuillage variable selon les cultivars. Sources lues uniquement via extraits WebSearch (WebFetch indisponible).",
+  "cat": "conifère"
+ },
+ {
+  "latin": "Pinus parviflora",
+  "nom_accepte": "Pinus parviflora",
+  "commun": "Pin blanc du Japon",
+  "famille": "Pinaceae",
+  "cles": [
+   "aiguilles courtes (3-6 cm) par 5, souvent tordues",
+   "faces internes des aiguilles blanches (stomates)",
+   "aiguilles en touffes denses au bout des rameaux",
+   "petits cônes ovales brun rouge, persistant des années",
+   "écorce lisse gris noir, écailleuse avec l'âge"
+  ],
+  "sources_cles": [
+   "https://www.conifers.org/pi/Pinus_parviflora.php",
+   "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=284968&isprofile=0&letter=P",
+   "https://www.rhs.org.uk/plants/13113/i-pinus-parviflora-i/details"
+  ],
+  "phrase": "Pin à aiguilles courtes en touffes et petits cônes persistants ; nombreux cultivars nains pour petits jardins.",
+  "description": {
+   "port": "Arbre colonnaire de plus de 12 m ; nombreux cultivars nains",
+   "feuilles": "Aiguilles par 5, 3 à 6 cm, tordues, vert foncé dessus, faces internes blanchâtres",
+   "ecorce": "Gris noir et lisse jeune, puis fissurée et écailleuse",
+   "fruits": "Cônes ovales brun rouge, 5 à 8 cm, persistant plusieurs années"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Originaire du Japon et de Corée. Taille des cônes variable selon les sources (MoBot 5-8 cm, Gymnosperm Database 6-8 cm). Proche de Pinus strobus (aiguilles plus longues, cônes longs). Sources lues via extraits WebSearch.",
+  "cat": "conifère"
+ },
+ {
+  "latin": "Platycladus orientalis",
+  "nom_accepte": "Platycladus orientalis",
+  "commun": "Thuya d'Orient",
+  "famille": "Cupressaceae",
+  "cles": [
+   "rameaux aplatis dressés à la verticale, en éventail",
+   "écailles vert uniforme sur les deux faces",
+   "cônes bleu-vert puis brun rouge, écailles à crochet",
+   "cône de 1,5-2 cm à 6-8 écailles épaisses"
+  ],
+  "sources_cles": [
+   "https://www.conifers.org/cu/Platycladus.php",
+   "http://www.efloras.org/florataxon.aspx?flora_id=2&taxon_id=125775",
+   "http://www.efloras.org/florataxon.aspx?flora_id=5&taxon_id=242352240",
+   "http://www.missouribotanicalgarden.org/plantfinder/PlantFinderDetails.aspx?taxonid=285022",
+   "https://www.rhs.org.uk/plants/165484/platycladus-orientalis-pyramidalis-aurea/details"
+  ],
+  "phrase": "Thuya d'Orient : rameaux plats dressés en éventail ; haies et isolés, nombreux cultivars dorés.",
+  "description": {
+   "port": "Arbre ou arbuste persistant",
+   "feuilles": "Écailles opposées de 1 à 3 mm, appliquées, vert uniforme, aromatiques au froissement",
+   "fruits": "Cônes bleu-vert puis brun rouge, 1,5 à 2,5 cm, écailles à pointe recourbée en crochet ; graines sans aile"
+  },
+  "milieu": [
+   "Soleil",
+   "Frais et drainé",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Synonyme : Thuja orientalis. Se distingue de Thuja occidentalis par ses rameaux plats tenus à la verticale et ses cônes à crochets. Craint les sols détrempés et les vents desséchants jeune. Hauteur non vérifiée. Sources lues via extraits WebSearch.",
+  "cat": "conifère"
+ },
+ {
+  "latin": "Taxus × media",
+  "nom_accepte": "Taxus × media",
+  "commun": "If hybride",
+  "famille": "Taxaceae",
+  "cles": [
+   "aiguilles plates sur 2 rangs, vert foncé luisant",
+   "dessous des aiguilles vert plus clair",
+   "arille rouge charnu en coupe autour de la graine",
+   "port souvent large et étalé",
+   "écorce brune écailleuse"
+  ],
+  "sources_cles": [
+   "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=253960",
+   "https://landscapeplants.oregonstate.edu/plants/taxus-media-hicksii",
+   "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=253962&isprofile=0&gen=Taxus"
+  ],
+  "phrase": "If hybride au port souvent étalé, pour haies et massifs persistants ; arilles rouges charnus.",
+  "description": {
+   "port": "Arbuste persistant, souvent large et étalé (variable selon cultivar)",
+   "feuilles": "Aiguilles pointues sur 2 rangs, vert foncé luisant dessus, plus claires dessous",
+   "ecorce": "Brune, écailleuse",
+   "fruits": "Arille rouge charnu"
+  },
+  "milieu": null,
+  "statut": "douteux",
+  "remarque": "Hybride Taxus baccata × T. cuspidata. Les clés trouvées ne le distinguent PAS de Taxus baccata (critères fins non confirmés faute de recherches : quota épuisé). Milieu non vérifié. Nom 'If hybride' non vérifié.",
+  "cat": "conifère"
+ },
+ {
+  "latin": "Erica scoparia",
+  "nom_accepte": "Erica scoparia",
+  "commun": "Bruyère à balais",
+  "famille": "Ericaceae",
+  "cles": [],
+  "sources_cles": [],
+  "phrase": "",
+  "description": {},
+  "milieu": null,
+  "statut": "douteux",
+  "remarque": "NON RECHERCHÉ : le quota de recherches web de la session a été épuisé avant cette espèce (WebFetch indisponible : DNS bloqué). Fiche vide, à refaire entièrement. Famille et nom commun repris de l'entrée, non vérifiés.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Erica ciliaris",
+  "nom_accepte": "Erica ciliaris",
+  "commun": "Bruyère ciliée",
+  "famille": "Ericaceae",
+  "cles": [],
+  "sources_cles": [],
+  "phrase": "",
+  "description": {},
+  "milieu": null,
+  "statut": "douteux",
+  "remarque": "NON RECHERCHÉ : le quota de recherches web de la session a été épuisé avant cette espèce (WebFetch indisponible : DNS bloqué). Fiche vide, à refaire entièrement. Famille et nom commun repris de l'entrée, non vérifiés.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Erica tetralix",
+  "nom_accepte": "Erica tetralix",
+  "commun": "Bruyère à quatre angles",
+  "famille": "Ericaceae",
+  "cles": [],
+  "sources_cles": [],
+  "phrase": "",
+  "description": {},
+  "milieu": null,
+  "statut": "douteux",
+  "remarque": "NON RECHERCHÉ : le quota de recherches web de la session a été épuisé avant cette espèce (WebFetch indisponible : DNS bloqué). Fiche vide, à refaire entièrement. Famille et nom commun repris de l'entrée, non vérifiés.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Daboecia cantabrica",
+  "nom_accepte": "Daboecia cantabrica",
+  "commun": "Bruyère de Saint-Daboec",
+  "famille": "Ericaceae",
+  "cles": [],
+  "sources_cles": [],
+  "phrase": "",
+  "description": {},
+  "milieu": null,
+  "statut": "douteux",
+  "remarque": "NON RECHERCHÉ : le quota de recherches web de la session a été épuisé avant cette espèce (WebFetch indisponible : DNS bloqué). Fiche vide, à refaire entièrement. Famille et nom commun repris de l'entrée, non vérifiés.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Myrica gale",
+  "nom_accepte": "Myrica gale",
+  "commun": "Piment royal",
+  "famille": "Myricaceae",
+  "cles": [],
+  "sources_cles": [],
+  "phrase": "",
+  "description": {},
+  "milieu": null,
+  "statut": "douteux",
+  "remarque": "NON RECHERCHÉ : le quota de recherches web de la session a été épuisé avant cette espèce (WebFetch indisponible : DNS bloqué). Fiche vide, à refaire entièrement. Famille et nom commun repris de l'entrée, non vérifiés.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Salix atrocinerea",
+  "nom_accepte": "Salix atrocinerea",
+  "commun": "Saule roux",
+  "famille": "Salicaceae",
+  "cles": [],
+  "sources_cles": [],
+  "phrase": "",
+  "description": {},
+  "milieu": null,
+  "statut": "douteux",
+  "remarque": "NON RECHERCHÉ : le quota de recherches web de la session a été épuisé avant cette espèce (WebFetch indisponible : DNS bloqué). Fiche vide, à refaire entièrement. Famille et nom commun repris de l'entrée, non vérifiés.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Salix viminalis",
+  "nom_accepte": "Salix viminalis",
+  "commun": "Osier blanc",
+  "famille": "Salicaceae",
+  "cles": [
+   "feuilles longues et étroites, 8-15 cm, bord enroulé",
+   "dessous des feuilles blanc argenté soyeux",
+   "longs rameaux droits et souples, duveteux jeunes",
+   "chatons avant les feuilles, en mars-avril"
+  ],
+  "sources_cles": [
+   "https://www.lapetiteloiterie.fr/lpl/wp-content/uploads/salix-viminalis.pdf",
+   "https://en.wikipedia.org/wiki/Salix_viminalis",
+   "https://www.asturnatura.com/en/nature/species/salix-viminalis"
+  ],
+  "phrase": "Osier des vanniers : longues tiges souples pour le tressage, haies vives et maintien des berges.",
+  "description": {
+   "port": "Arbuste à tiges multiples de 3 à 6 m",
+   "feuilles": "Feuilles linéaires-lancéolées de 8 à 15 cm, vert foncé mat dessus, blanc argenté soyeux dessous",
+   "fleurs": "Chatons mâles jaunes, femelles verdâtres, sur pieds séparés",
+   "floraison": "Mars à avril"
+  },
+  "milieu": [
+   "Soleil",
+   "Tous sols",
+   "Frais à humide",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Dioïque. Bords des eaux, prés humides et zones inondables, craint la sécheresse ; sol et pH non précisés par les sources (valeurs larges).",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Salix repens",
+  "nom_accepte": "Salix repens",
+  "commun": "Saule rampant",
+  "famille": "Salicaceae",
+  "cles": [
+   "saule nain couché ou rampant, 20-60 cm, drageonnant",
+   "petites feuilles de 1-4 cm, dessous à soies argentées",
+   "jeunes feuilles couvertes d'un duvet argenté",
+   "chatons avant les feuilles, de mars à mai"
+  ],
+  "sources_cles": [
+   "https://www.cbnbrest.fr/files/Fiche_ZH_BZH_Salix_repens_20230112.pdf",
+   "https://cbnfc-ori.org/sites/default/files/2023-07/Salix_cle-FloraJurana.pdf",
+   "https://www.truffaut.com/salix-repens-saule-rampant-pot-de-2l-3l.html"
+  ],
+  "phrase": "Petit saule couvre-sol des dunes humides et des landes ; feuillage argenté au printemps.",
+  "description": {
+   "port": "Arbrisseau couché ou rampant de 20 à 60 cm, à souche traçante",
+   "feuilles": "Feuilles alternes de 1 à 4 cm, vert foncé luisant dessus, glauques et soyeuses argentées dessous",
+   "fleurs": "Chatons sur pieds séparés",
+   "floraison": "Mars à mai"
+  },
+  "milieu": [
+   "Soleil",
+   "Léger, sableux",
+   "Frais à humide",
+   "Acide"
+  ],
+  "statut": "ok",
+  "remarque": "Dioïque. Landes humides, tourbières, dépressions dunaires (sols acides, tourbeux ou sableux selon la sous-espèce) : présent sur le littoral atlantique.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Ulex minor",
+  "nom_accepte": "Ulex minor",
+  "commun": "Ajonc nain",
+  "famille": "Fabaceae",
+  "cles": [
+   "ajonc bas, souvent vers 30 cm, très épineux",
+   "épines souples, 1 cm au plus, finement striées",
+   "petites fleurs jaunes, calice de 8-9 mm au plus",
+   "fleurit en fin d'été, pas au printemps"
+  ],
+  "sources_cles": [
+   "https://bsbi.org/learn/resources/plant-crib/ulex",
+   "https://www.nzflora.info/factsheet/taxon/Ulex-minor.html",
+   "https://www.treesandshrubsonline.org/articles/ulex/ulex-minor/",
+   "https://eflorasys.univ-lorraine.fr/index.php/en/species/view/128123"
+  ],
+  "phrase": "Petit ajonc des landes : touffes basses épineuses fleuries de jaune en fin d'été.",
+  "description": {
+   "port": "Sous-arbrisseau persistant de 30 cm environ, jusqu'à 1 m à l'ombre",
+   "feuilles": "Feuilles réduites à des écailles ou des épines",
+   "fleurs": "Papilionacées jaune vif, corolle de 7 à 11 mm, ailes plus courtes que la carène",
+   "floraison": "Juillet à septembre",
+   "fruits": "Gousse velue de 8 à 10 mm, brun noir"
+  },
+  "milieu": [
+   "Soleil",
+   "Léger, sableux",
+   "Sec à frais",
+   "Acide"
+  ],
+  "statut": "ok",
+  "remarque": "Aussi « petit ajonc ». Confusion avec Ulex gallii (fleurs plus grandes, calice > 10 mm, floraison jusqu'en novembre) ; U. europaeus a des épines rigides jusqu'à 25 mm et fleurit surtout au printemps. Espèce des landes de plaine (France, Espagne, Portugal, Angleterre).",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Amelanchier ovalis",
+  "nom_accepte": "Amelanchier ovalis",
+  "commun": "Amélanchier à feuilles ovales",
+  "famille": "Rosaceae",
+  "cles": [
+   "feuilles ovales arrondies de 2,5-4 cm, crénelées",
+   "jeunes feuilles à revers tomenteux blanc",
+   "fleurs blanches à pétales bien plus longs que sépales",
+   "petits fruits globuleux bleu noir de 8-10 mm"
+  ],
+  "sources_cles": [
+   "https://www.techno-science.net/fr/definitions/amelanchier",
+   "https://bsbi.org/wp-content/uploads/dlm_uploads/Amelanchier_Crib.pdf",
+   "https://www.cretanflora.com/amelanchier_ovalis_text.html",
+   "https://oneaction.ch/wp-content/uploads/2024/03/Reunis-sous-la-canopee-2024-Amelanchier-ovalis.pdf"
+  ],
+  "phrase": "Amélanchier indigène des rocailles calcaires : nuage de fleurs blanches au printemps, baies sucrées.",
+  "description": {
+   "port": "Arbuste caduc ou petit arbre",
+   "feuilles": "Feuilles ovales arrondies, crénelées, tomenteuses blanches dessous puis glabrescentes",
+   "fleurs": "Fleurs blanches à pétales de 14 à 17 mm",
+   "floraison": "Avril à mai",
+   "fruits": "Petits fruits globuleux bleu foncé à noirs, sucrés"
+  },
+  "milieu": [
+   "Soleil",
+   "Pauvre, caillouteux, très drainé",
+   "Sec",
+   "Neutre à alcalin"
+  ],
+  "statut": "ok",
+  "remarque": "Seul amélanchier européen basophile (les autres préfèrent les sols acides). Parfois nommé A. rotundifolia ; souvent appelé simplement « amélanchier ». Indigène en France.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Hippocrepis emerus",
+  "nom_accepte": "Hippocrepis emerus",
+  "commun": "Coronille arbrisseau",
+  "famille": "Fabaceae",
+  "cles": [
+   "fleurs jaune pâle par 1-5, dos parfois teinté rouge",
+   "pétales à long onglet, 2-3 fois le calice",
+   "feuilles composées de 5-9 folioles obovales",
+   "gousse fine de 5-11 cm, articulée en segments",
+   "arbuste caduc touffu à rameaux verts"
+  ],
+  "sources_cles": [
+   "https://en.wikipedia.org/wiki/Hippocrepis_emerus",
+   "https://www.treesandshrubsonline.org/articles/hippocrepis/hippocrepis-emerus/",
+   "https://www.rhs.org.uk/plants/77693/hippocrepis-emerus/details",
+   "https://inpn.mnhn.fr/espece/cd_nom/92517"
+  ],
+  "phrase": "Petit arbuste de lisière à fleurs jaunes printanières, pour talus secs et calcaires.",
+  "description": {
+   "port": "Arbrisseau caduc touffu de 0,5 à 1,5 m (2 m maximum)",
+   "feuilles": "Feuilles composées de 5 à 9 folioles obovales mucronées",
+   "fleurs": "Fleurs papilionacées jaune pâle, 14 à 20 mm, par 1 à 5",
+   "floraison": "Avril à juillet",
+   "fruits": "Gousses fines articulées de 5 à 11 cm"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Drainé",
+   "Sec",
+   "Neutre à alcalin"
+  ],
+  "statut": "ok",
+  "remarque": "Synonyme : Coronilla emerus. Noms français confirmés : coronille arbrisseau, coronille faux-séné, séné bâtard, hippocrépide faux baguenaudier (INPN) ; « coronille des jardins » non retrouvé dans les sources. Bois, broussailles et lisières sur pentes chaudes et sèches ; RHS indique la craie.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Atriplex halimus",
+  "nom_accepte": "Atriplex halimus",
+  "commun": "Arroche halime",
+  "famille": "Amaranthaceae",
+  "cles": [
+   "feuillage gris argenté sur les deux faces",
+   "petites feuilles ovales pétiolées, aspect écailleux",
+   "tiges blanchâtres couvertes de fines écailles",
+   "fleurs jaunâtres discrètes en épis"
+  ],
+  "sources_cles": [
+   "https://www.jardiner-malin.fr/fiche/pourpier-mer-arbuste-mer.html",
+   "https://feedipedia.review.fao.org/node/24708",
+   "https://inpn.mnhn.fr/espece/cd_nom/95050?lg=en",
+   "https://camed.cirad.fr/content/download/4273/31728/version/1/file/Nedjimi+2013+Atriplex+halimus+subsp.+schweinfurthii+%28Chenopodiaceae%29+-+Description+%C3%A9cologie+et+utilisations+pastorales+et+th%C3%A9rapeutiques.pdf"
+  ],
+  "phrase": "Pourpier de mer : haie brise-vent argentée en bord de mer, résiste au sel et à la sécheresse.",
+  "description": {
+   "port": "Arbrisseau halophyte de 1,5 à 2 m",
+   "feuilles": "Petites feuilles ovales pétiolées, gris argenté sur les deux faces",
+   "fleurs": "Fleurs jaunâtres insignifiantes en épis",
+   "floraison": "Juin à juillet"
+  },
+  "milieu": [
+   "Soleil",
+   "Léger, sableux",
+   "Sec",
+   "Neutre à alcalin"
+  ],
+  "statut": "douteux",
+  "remarque": "Aussi « pourpier de mer ». Famille Amaranthaceae en APG (anciennement Chenopodiaceae). Description tirée de sources faibles (fiche jardinage, annonce, fiche FAO) : sources botaniques détaillées non consultables ; floraison à confirmer. Tolère sel et calcaire, pousse aussi hors sol salé si sol alcalin.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Bupleurum fruticosum",
+  "nom_accepte": "Bupleurum fruticosum",
+  "commun": "Buplèvre ligneux",
+  "famille": "Apiaceae",
+  "cles": [
+   "ombelles en dôme de petites fleurs jaunes",
+   "feuilles simples entières coriaces bleu-vert",
+   "feuilles oblongues de 5-12 cm, nervure médiane nette",
+   "arbuste persistant étalé à tiges fines, ~2 m"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/2555/bupleurum-fruticosum/details",
+   "https://floraofgibraltar.myspecies.info/taxonomy/term/1805/descriptions",
+   "https://www.gardenia.net/plant/bupleurum-fruticosum-shrubby-hare-ear",
+   "https://eflorasys.univ-lorraine.fr/index.php/en/species/view/87051"
+  ],
+  "phrase": "Arbuste méditerranéen au feuillage bleuté et ombelles jaunes en plein été ; très résistant au sec.",
+  "description": {
+   "port": "Arbuste persistant étalé de 2 à 2,5 m",
+   "feuilles": "Feuilles oblongues-elliptiques coriaces, bleu-vert, 5 à 12 cm",
+   "fleurs": "Ombelles composées de petites fleurs jaunes",
+   "floraison": "Juin à septembre"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Sec",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Seul buplèvre arbustif courant (les autres sont herbacés). Maquis du bassin méditerranéen ; pH et sol non précisés par les sources lues (valeurs larges).",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Arbutus andrachne",
+  "nom_accepte": "Arbutus andrachne",
+  "commun": "Arbousier de Grèce",
+  "famille": "Ericaceae",
+  "cles": [
+   "écorce lisse rouge orangé s'exfoliant en lames",
+   "écorce neuve vert pistache virant orange brun",
+   "feuilles adultes souvent entières, vert foncé luisant",
+   "fleurs blanc crème en panicules au printemps",
+   "fruits ronds lisses de 1,2 cm, orange à rouge"
+  ],
+  "sources_cles": [
+   "https://earthpedia.earth.com/plant-encyclopedia/angiosperms/ericaceae/arbutus-andrachne/",
+   "https://cretanflora.com/arbutus_andrachne_text.html",
+   "https://www.gardenia.net/plant/arbutus-andrachne",
+   "https://treelib.ca/species/888/arbutus_andrachne"
+  ],
+  "phrase": "Arbousier à écorce rouge lisse et décorative, fleuri au printemps ; à isoler en climat doux.",
+  "description": {
+   "port": "Arbuste ou petit arbre persistant de 1,5 à 3 m, jusqu'à 12 m",
+   "feuilles": "Feuilles vert foncé luisant, souvent entières (dentées chez les jeunes)",
+   "ecorce": "Lisse, rouge orangé, s'exfoliant en lames papyracées",
+   "fleurs": "Panicules dressées blanc crème",
+   "floraison": "Printemps",
+   "fruits": "Fruits globuleux lisses, orange à rouges"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Méditerranée orientale. Diffère d'A. unedo par l'écorce lisse rouge, les feuilles souvent entières et la floraison printanière (unedo : automne). Commun corrigé : « arbousier de Grèce » (Greek strawberry tree) ; « arbousier d'Orient » aussi possible mais non vérifié. Mois de floraison exacts et sol non précisés par les sources lues.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Arbutus × andrachnoides",
+  "nom_accepte": "Arbutus × andrachnoides",
+  "commun": "Arbousier hybride",
+  "famille": "Ericaceae",
+  "cles": [
+   "écorce cannelle rouge s'exfoliant sur les vieux sujets",
+   "feuilles vert moyen luisant, blanchâtres dessous",
+   "fleurs blanches en grelot, parfois rosées",
+   "fleurit de l'automne au printemps",
+   "fruits orange-rouge rares"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/1470/Arbutus-x-andrachnoides/Details",
+   "https://en.wikipedia.org/wiki/Arbutus_%C3%97_andrachnoides",
+   "https://www.paramountplants.co.uk/plant/aran/arbutus-andrachnoides.html"
+  ],
+  "phrase": "Arbousier à écorce cannelle et floraison de l'automne au printemps ; bel isolé persistant de jardin.",
+  "description": {
+   "port": "Arbre buissonnant persistant de 4 à 8 m",
+   "feuilles": "Feuilles vert moyen luisant, blanchâtres dessous",
+   "ecorce": "Brun cannelle, s'exfoliant (sombre comme A. unedo chez les jeunes sujets)",
+   "fleurs": "Panicules de petites fleurs blanches en urne, parfois rosées",
+   "floraison": "Octobre à avril",
+   "fruits": "Fruits orange-rouge, rarement produits"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Hybride naturel A. andrachne × A. unedo, AGM RHS, rustique H4, plein soleil abrité. Écorce variable avec l'âge. Sol et pH non précisés par les sources lues.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Cotoneaster lacteus",
+  "nom_accepte": "Cotoneaster coriaceus",
+  "commun": "Cotonéaster laiteux",
+  "famille": "Rosaceae",
+  "cles": [
+   "dessous des feuilles feutré blanc jaunâtre",
+   "feuilles coriaces vert foncé, jusqu'à 6 cm",
+   "larges corymbes de petites fleurs blanc laiteux",
+   "baies rouges tenant jusqu'en hiver",
+   "grand arbuste persistant dense, ~4 m"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/4629/wd/details",
+   "https://wildbristol.uk/groups/trees-shrubs/shrubs-non-native/late-cotoneaster/",
+   "https://www.nzflora.info/factsheet/taxon/Cotoneaster-coriaceus.html",
+   "https://powo.science.kew.org/taxon/722554-1"
+  ],
+  "phrase": "Grand cotonéaster persistant pour haies libres ; baies rouges appréciées des oiseaux tout l'hiver.",
+  "description": {
+   "port": "Arbuste persistant dense de 4 m environ",
+   "feuilles": "Feuilles coriaces vert foncé, jusqu'à 6 cm, blanches feutrées dessous",
+   "fleurs": "Grands corymbes de petites fleurs blanc laiteux",
+   "floraison": "Juin à juillet",
+   "fruits": "Baies rouges persistantes en hiver"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Tous sols",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "POWO et la Flora of China le placent en synonyme de C. coriaceus Franch. ; Fryer & Hylmö (2009) maintiennent les deux espèces. Nom horticole courant : C. lacteus. Floraison d'après une source britannique (Wild Bristol). Milieu non précisé par les sources lues (valeurs larges).",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Lonicera pileata",
+  "nom_accepte": "Lonicera ligustrina var. pileata",
+  "commun": "Chèvrefeuille couvre-sol",
+  "famille": "Caprifoliaceae",
+  "cles": [
+   "petites feuilles ovales luisantes par paires, type buis",
+   "rameaux étalés à l'horizontale, couvre-sol bas",
+   "baies rondes violettes translucides en automne",
+   "petites fleurs crème jaunâtre discrètes au printemps"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/10509/lonicera-pileata/details",
+   "http://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=245395&isprofile=0&pt=2",
+   "https://www.bricomarche.com/p/lonicera-pileata-c2l/3472200173940"
+  ],
+  "phrase": "Couvre-sol persistant très rustique, accepte la mi-ombre sous les arbres et les tailles sévères.",
+  "description": {
+   "port": "Arbuste couvre-sol de 0,3 à 0,6 m, étalé jusqu'à 2,5 m",
+   "feuilles": "Petites feuilles ovales opposées, vert foncé luisant, persistantes",
+   "fleurs": "Petites fleurs blanc crème parfumées, discrètes",
+   "floraison": "Mai à juin",
+   "fruits": "Petites baies violettes translucides, non comestibles"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Tous sols",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "La RHS classe désormais certains cultivars sous Lonicera ligustrina var. pileata. Autre nom commercial : chèvrefeuille à cupule. Baies à ne pas consommer.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Ligustrum japonicum",
+  "nom_accepte": "Ligustrum japonicum",
+  "commun": "Troène du Japon",
+  "famille": "Oleaceae",
+  "cles": [
+   "feuilles épaisses de 4-8 cm, 3 à 5 paires de nervures",
+   "feuilles vert foncé très luisant, dessous vert pâle",
+   "panicules coniques de petites fleurs blanches",
+   "drupes ovales noir pourpré pruineuses en hiver"
+  ],
+  "sources_cles": [
+   "https://en.wikipedia.org/wiki/Ligustrum_japonicum",
+   "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=282944",
+   "https://auth1.dpr.ncparks.gov/flora/species_account.php?id=2001",
+   "https://warcapps.usgs.gov/PlantID/Species/Details/1584"
+  ],
+  "phrase": "Persistant au feuillage très brillant, pour haies denses ou petit arbre taillé en tige.",
+  "description": {
+   "port": "Arbuste ou petit arbre persistant de 2 à 5 m",
+   "feuilles": "Opposées, ovales, épaisses et coriaces, vert foncé luisant, dessous pâle",
+   "ecorce": "Lisse, gris brun pâle",
+   "fleurs": "Panicules de petites fleurs blanches à 4 lobes, odeur jugée désagréable",
+   "floraison": "Mai à juin",
+   "fruits": "Drupes ovales noir pourpré pruineuses, persistantes en hiver"
+  },
+  "milieu": null,
+  "statut": "ok",
+  "remarque": "Confusion fréquente avec L. lucidum (troène de Chine) : celui-ci a des feuilles plus grandes (6-13 cm), à pointe longue, avec 6 à 8 paires de nervures. Milieu non renseigné : pas de source lue sur le sol. Fruits nocifs (RHS, cv. 'Texanum').",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Loropetalum chinense",
+  "nom_accepte": "Loropetalum chinense",
+  "commun": "Loropétale",
+  "famille": "Hamamelidaceae",
+  "cles": [
+   "fleurs à 4 pétales étroits en lanières, blanc ou rose",
+   "feuillage persistant souvent pourpre (var. rubrum)",
+   "petites feuilles ovales duveteuses dessous",
+   "fleurs en pompons ébouriffés de fin d'hiver"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/10535/loropetalum-chinense/details",
+   "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=281039",
+   "https://en.wikipedia.org/wiki/Loropetalum_chinense",
+   "https://www.jardiner-malin.fr/fiche/loropetalum-chinense.html"
+  ],
+  "phrase": "Feuillage pourpre et fleurs roses en lanières à la sortie de l'hiver ; terre acide à neutre.",
+  "description": {
+   "port": "Arbuste persistant de 1,5 à 4 m selon la variété",
+   "feuilles": "Ovales, poils étoilés, dessous pâle et duveteux ; vertes ou pourpre foncé (var. rubrum)",
+   "fleurs": "Pompons de fleurs à 4 pétales en lanières, blancs (type) ou rose framboise",
+   "floraison": "Février à avril"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Humifère et frais",
+   "Frais",
+   "Acide à neutre"
+  ],
+  "statut": "ok",
+  "remarque": "Même famille que l'hamamélis (pétales en lanières), mais persistant. Craint l'engorgement et le calcaire superficiel (RHS) ; chlorose en sol alcalin. Rusticité H3 pour l'espèce, H4 pour beaucoup de cultivars.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Osmanthus × burkwoodii",
+  "nom_accepte": "Osmanthus × burkwoodii",
+  "commun": "Osmanthe de Burkwood",
+  "famille": "Oleaceae",
+  "cles": [
+   "feuilles opposées ovales de 2-5 cm, finement dentées",
+   "feuilles coriaces vert foncé un peu luisant",
+   "bouquets de petites fleurs blanches au printemps",
+   "arbuste persistant dense et buissonnant"
+  ],
+  "sources_cles": [
+   "https://www.treesandshrubsonline.org/articles/osmanthus/osmanthus-x-burkwoodii/",
+   "https://plants.ces.ncsu.edu/plants/osmanthus-x-burkwoodii/common-name/burkwood-osmanthus/",
+   "https://www.truffaut.com/osmanthus-burkwoodi-ctr-7-litres-60-80-cm-75038.html"
+  ],
+  "phrase": "Persistant dense aux fleurs blanches très parfumées en avril, idéal en haie libre.",
+  "description": {
+   "port": "Arbuste persistant dense de 2 à 3 m",
+   "feuilles": "Opposées, ovales, légèrement dentées, coriaces, vert foncé",
+   "fleurs": "Petites fleurs blanches très parfumées en bouquets terminaux et axillaires",
+   "floraison": "Avril à mai",
+   "fruits": "Rares petits fruits bleu noir"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Drainé",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Hybride O. delavayi × O. decorus, plus compact qu'O. delavayi. Tolère argile lourde et calcaire.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Viburnum × burkwoodii",
+  "nom_accepte": "Viburnum × burkwoodii",
+  "commun": "Viorne de Burkwood",
+  "famille": "Adoxaceae",
+  "cles": [
+   "boutons roses puis boules de fleurs blanches parfumées",
+   "feuilles ovales luisantes, revers gris feutré",
+   "semi-persistant, teintes pourpres en automne",
+   "fruits rouges virant au noir"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/91671/viburnum-burkwoodii/details",
+   "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=279019&isprofile=1&gen=Viburnum",
+   "https://www.treesandshrubsonline.org/articles/viburnum/viburnum-x-burkwoodii/",
+   "https://www.stihl.com/792.aspx?idTree=263"
+  ],
+  "phrase": "Boules blanches au parfum puissant au printemps ; semi-persistant facile pour massifs.",
+  "description": {
+   "port": "Arbuste semi-persistant de 2 à 3 m",
+   "feuilles": "Ovales, vert foncé luisant dessus, revers gris tomenteux",
+   "fleurs": "Corymbes en dôme, boutons roses, fleurs blanches très parfumées",
+   "floraison": "Mars à mai",
+   "fruits": "Rouges puis noirs"
+  },
+  "milieu": null,
+  "statut": "ok",
+  "remarque": "Hybride V. carlesii × V. utile. V. carlesii est caduc à feuilles mates ; V. × burkwoodii garde une partie de ses feuilles luisantes. Milieu non renseigné : pas de source lue sur le sol.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Hamamelis × intermedia",
+  "nom_accepte": "Hamamelis × intermedia",
+  "commun": "Hamamélis hybride",
+  "famille": "Hamamelidaceae",
+  "cles": [
+   "fleurs à pétales fins en rubans froissés, jaune à rouge",
+   "floraison en plein hiver sur rameaux nus",
+   "feuilles ovales, jaunes à orange rouge en automne",
+   "arbuste évasé à branches étalées"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/206231/hamamelis-%C3%97-intermedia-swallow-hayes/details",
+   "https://www.treesandshrubsonline.org/articles/hamamelis/hamamelis-x-intermedia/",
+   "https://jardin-florilege.eu/fr/encyclopedie/hamamelis-x-intermedia-swallow-hayes",
+   "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=266466&isprofile=0&gen=Hamamelis"
+  ],
+  "phrase": "Fleurs en rubans jaunes à rouges en plein hiver, puis belles couleurs d'automne.",
+  "description": {
+   "port": "Arbuste caduc à croissance lente, jusqu'à 4 m de haut et de large",
+   "feuilles": "Grandes, ovales, vert foncé ; jaunes à orange rouge en automne",
+   "fleurs": "Pétales fins en rubans, jaunes, orange, cuivre ou rouges, parfois parfumés",
+   "floraison": "Décembre à mars"
+  },
+  "milieu": [
+   "Soleil",
+   "Humifère et frais",
+   "Frais",
+   "Acide à neutre"
+  ],
+  "statut": "ok",
+  "remarque": "Hybride H. japonica × H. mollis ; couleur, parfum et date très variables selon le cultivar ('Diane' rouge, 'Primavera' jaune primevère). Tolère un sol humifère sur calcaire selon certains cultivars (RHS).",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Westringia fruticosa",
+  "nom_accepte": "Westringia fruticosa",
+  "commun": "Romarin d'Australie",
+  "famille": "Lamiaceae",
+  "cles": [
+   "feuilles étroites en verticilles de 4, non opposées",
+   "fleurs blanches à mauve pâle, gorge ponctuée",
+   "feuilles de 1-3 cm, dessous duveteux blanchâtre",
+   "buisson dense et arrondi d'aspect de romarin"
+  ],
+  "sources_cles": [
+   "https://en.wikipedia.org/wiki/Westringia_fruticosa",
+   "https://anbg.gov.au/gnp/gnp1/westringia-fruticosa.html",
+   "https://apps.lucidcentral.org/plants_se_nsw/text/entities/westringia_fruticosa.htm",
+   "https://www.promessedefleurs.ie/shrubs/shrubs-by-variety/westringia-rosemary/westringia-fruticosa-smookie.html"
+  ],
+  "phrase": "Allure de romarin, très résistant aux embruns et au vent ; pour jardins littoraux doux.",
+  "description": {
+   "port": "Arbuste persistant dense d'environ 1,5 m",
+   "feuilles": "Étroites, 1 à 3 cm, en verticilles de 4 (parfois 3 à 5), dessous duveteux",
+   "fleurs": "Blanches à mauve pâle, taches orangées à pourpres à la gorge",
+   "floraison": "Presque toute l'année, surtout printemps à automne"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Sec",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Différence avec le vrai romarin (Salvia rosmarinus) : feuilles en verticilles de 4, et non opposées. Rusticité limitée, à réserver au littoral doux ou au pot. pH « Tous pH » déduit de « large gamme de sols bien drainés ».",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Polygala myrtifolia",
+  "nom_accepte": "Polygala myrtifolia",
+  "commun": "Polygala à feuilles de myrte",
+  "famille": "Polygalaceae",
+  "cles": [
+   "fleurs pourpres type pois, carène à crête frangée",
+   "feuilles alternes ovales de 1,5-3 cm, lisses",
+   "courtes grappes de fleurs au bout des rameaux",
+   "capsules plates en forme de cœur"
+  ],
+  "sources_cles": [
+   "https://nzflora.info/factsheet/Taxon/Polygala-myrtifolia.html",
+   "https://worldplants.ca/display0.php?id=6046",
+   "https://www.jardiner-malin.fr/fiche/polygala-myrtifolia.html",
+   "https://nzpcn.org.nz/flora/species/polygala-myrtifolia"
+  ],
+  "phrase": "Floraison pourpre presque continue sur un buisson persistant, en climat doux et sol léger.",
+  "description": {
+   "port": "Arbuste persistant ramifié et arrondi de 0,5 à 2 m",
+   "feuilles": "Alternes, ovales à elliptiques, 15 à 30 mm, glabres",
+   "fleurs": "Pourpre rosé veiné, carène à crête frangée blanche ou pourpre",
+   "floraison": "Mars à novembre",
+   "fruits": "Capsules plates en cœur, ailées"
+  },
+  "milieu": null,
+  "statut": "ok",
+  "remarque": "Originaire d'Afrique du Sud ; envahissant en Nouvelle-Zélande et en Australie. Rustique vers -7 °C. Sol léger bien drainé, soleil à mi-ombre ; milieu laissé vide faute de donnée sur le pH.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Salvia microphylla",
+  "nom_accepte": "Salvia microphylla",
+  "commun": "Sauge arbustive",
+  "famille": "Lamiaceae",
+  "cles": [
+   "feuilles ovales à bord denté, nervures bien visibles",
+   "fleurs rouges, roses ou magenta en verticilles",
+   "petites feuilles opposées sur tiges ligneuses"
+  ],
+  "sources_cles": [
+   "https://en.wikipedia.org/wiki/Salvia_microphylla",
+   "https://salvias.org.au/plant-identification/salvia-microphylla-greggii-forms/"
+  ],
+  "phrase": "Sauge buissonnante aux fleurs rouges à magenta, souvent hybridée avec S. greggii.",
+  "description": {
+   "port": "Sous-arbrisseau buissonnant, souvent plus haut que S. greggii",
+   "feuilles": "Opposées, ovales, dentées, glabres ou un peu poilues, nervures visibles",
+   "fleurs": "Verticilles de fleurs magenta, rouges, roses ou rose vif"
+  },
+  "milieu": null,
+  "statut": "douteux",
+  "remarque": "Confusion très fréquente avec S. greggii (feuilles plus étroites, à bord entier) ; les deux s'hybrident facilement. Floraison, hauteur et milieu non vérifiés (budget de recherche épuisé) ; nom commun « sauge à petites feuilles » à vérifier.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Mahonia × media",
+  "nom_accepte": "Mahonia × media",
+  "commun": "Mahonia hybride",
+  "famille": "Berberidaceae",
+  "cles": [],
+  "sources_cles": [],
+  "phrase": "",
+  "description": {},
+  "milieu": null,
+  "statut": "douteux",
+  "remarque": "Aucune source consultée : budget de recherche web épuisé et WebFetch indisponible. Fiche à refaire ; vérifier aussi le rattachement possible à Berberis × media.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Viburnum odoratissimum",
+  "nom_accepte": "Viburnum odoratissimum",
+  "commun": "Viorne odorante",
+  "famille": "Adoxaceae",
+  "cles": [
+   "grandes feuilles coriaces vert clair très luisantes",
+   "fleurs blanches parfumées en grappes coniques",
+   "baies rouges virant au noir à maturité",
+   "jeunes rameaux verts à rougeâtres"
+  ],
+  "sources_cles": [
+   "https://edis.ifas.ufl.edu/publication/ST660",
+   "https://plants.ces.ncsu.edu/plants/viburnum-odoratissimum",
+   "https://www.nmns.edu.tw/en/exhibitions/galleries/plants/group5/viburnum-odoratissimum/",
+   "https://www.rhs.org.uk/plants/115921/viburnum-odoratissimum-var-awabuki/details"
+  ],
+  "phrase": "Grand persistant au feuillage laqué, fleurs blanches parfumées ; haie libre en climat doux.",
+  "description": {
+   "port": "Arbuste ou petit arbre persistant jusqu'à 5-6 m",
+   "feuilles": "Grandes feuilles coriaces, très brillantes",
+   "ecorce": "Rameaux verts et rougeâtres, puis gris brun",
+   "fleurs": "Petites fleurs blanches parfumées en grappes coniques",
+   "floraison": "Printemps à été",
+   "fruits": "Baies rouges puis noires"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Drainé",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "douteux",
+  "remarque": "Sources consultées via extraits WebSearch uniquement (WebFetch bloqué par le proxy). En pépinière, beaucoup de plantes vendues sous ce nom sont V. awabuki (= V. odoratissimum var. awabuki selon POWO), à feuilles plus sombres et plus épaisses ; nom à risque. Rusticité limitée (H5 RHS pour awabuki, zones USDA 8-10). Bord de feuille et mois de floraison précis non confirmés.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Rosa sempervirens",
+  "nom_accepte": "Rosa sempervirens",
+  "commun": "Rosier toujours vert",
+  "famille": "Rosaceae",
+  "cles": [
+   "styles soudés en longue colonne velue",
+   "5 (7) folioles coriaces, luisantes, gardées l'hiver",
+   "fleurs simples blanches de 3-5 cm en petits corymbes",
+   "tiges sarmenteuses à aiguillons épars et courbés"
+  ],
+  "sources_cles": [
+   "https://www.techno-science.net/fr/definitions/rosa-sempervirens",
+   "https://treesandshrubsonline.org/articles/rosa/rosa-sempervirens/",
+   "https://www.cretanflora.com/rosa_sempervirens_text.html",
+   "https://herbarivirtual.uib.cat/en/general/206/especie/gardans"
+  ],
+  "phrase": "Rosier sauvage méditerranéen des haies et fourrés, fleurs blanches au printemps, feuillage d'hiver.",
+  "description": {
+   "port": "Arbrisseau sarmenteux de 1,5 m, grimpant jusqu'à 3,5 m",
+   "feuilles": "Feuilles à 5 (7) folioles coriaces vert sombre, persistant une grande partie de l'hiver",
+   "fleurs": "Fleurs simples blanches, légèrement odorantes, 3-5 cm",
+   "floraison": "Mai à juillet",
+   "fruits": "Cynorhodons"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Tous sols",
+   "Sec à frais",
+   "Acide à neutre"
+  ],
+  "statut": "ok",
+  "remarque": "Sources consultées via extraits WebSearch uniquement (WebFetch bloqué par le proxy). Indigène dans le Midi de la France (maquis, haies, lisières). Proche de Rosa arvensis, qui a des folioles plus minces, mates et caduques. Le nom « rosier de tous les mois » existe aussi.",
+  "cat": "grimpante"
+ },
+ {
+  "latin": "Rubia peregrina",
+  "nom_accepte": "Rubia peregrina",
+  "commun": "Garance voyageuse",
+  "famille": "Rubiaceae",
+  "cles": [
+   "feuilles coriaces luisantes en verticilles de 4 à 5",
+   "bord des feuilles à petits aiguillons crochus",
+   "petites fleurs étoilées jaune verdâtre à 5 lobes",
+   "baies noires à maturité"
+  ],
+  "sources_cles": [
+   "https://www.first-nature.com/flowers/rubia-peregrina.php",
+   "https://www.cretanflora.com/Rubia peregrina text.html",
+   "https://genialvegetal.net/-Garance-voyageuse-",
+   "https://eflorasys.univ-lorraine.fr/index.php/en/species/view/140174"
+  ],
+  "phrase": "Liane persistante accrochante des haies et bois clairs ; s'agrippe par ses aiguillons crochus.",
+  "description": {
+   "port": "Liane persistante de 30 à 150 cm, accrochante",
+   "feuilles": "Feuilles ovales-lancéolées coriaces, persistantes, en verticilles de 4 à 5, bords à aiguillons crochus",
+   "fleurs": "Petites fleurs jaune verdâtre étoilées, 4-6 mm, en cymes lâches",
+   "floraison": "Avril à août",
+   "fruits": "Baies noires"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Drainé",
+   "Sec à frais",
+   "Acide à neutre"
+  ],
+  "statut": "ok",
+  "remarque": "Sources consultées via extraits WebSearch uniquement (WebFetch bloqué par le proxy). Indigène en France (bois, haies, 0-1200 m), protégée en Basse-Normandie et Limousin. Ne pas confondre avec Rubia tinctorum (feuilles caduques, minces) ni avec les gaillets (Galium), sans feuilles coriaces. Floraison variable selon la région.",
+  "cat": "grimpante"
+ },
+ {
+  "latin": "Clematis cirrhosa",
+  "nom_accepte": "Clematis cirrhosa",
+  "commun": "Clématite cirrheuse",
+  "famille": "Ranunculaceae",
+  "cles": [
+   "clochettes pendantes crème en plein hiver",
+   "intérieur des fleurs parfois moucheté de rouge",
+   "feuilles persistantes vert foncé, souvent à 3 folioles",
+   "revers des feuilles légèrement bronzé"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/3930/clematis-cirrhosa/details",
+   "https://internationalclematissociety.org/?p=738",
+   "https://www.rtbf.be/article/une-clematite-qui-fleurit-en-hiver-decouvrez-la-clematite-de-noel-ou-clematis-cirrhosa-11482562"
+  ],
+  "phrase": "Seule clématite à fleurir en hiver : clochettes crème sur feuillage persistant, contre un mur abrité.",
+  "description": {
+   "port": "Liane persistante de 2,5 à 4 m",
+   "feuilles": "Feuilles vert foncé à 3 folioles, revers bronzé",
+   "fleurs": "Clochettes pendantes crème à jaune pâle, parfois mouchetées de rouge",
+   "floraison": "Décembre à mars"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Sources consultées via extraits WebSearch uniquement (WebFetch bloqué par le proxy). Nom français proposé « Clématite d'hiver » remplacé par « Clématite cirrheuse » (nom usuel ; « clématite de Noël » en commerce). Feuillage semi-persistant en hiver rude. Milieu déduit (espèce méditerranéenne, mur abrité) : non confirmé par une source lue.",
+  "cat": "grimpante"
+ },
+ {
+  "latin": "Bignonia capreolata",
+  "nom_accepte": "Bignonia capreolata",
+  "commun": "Bignone à vrilles",
+  "famille": "Bignoniaceae",
+  "cles": [
+   "feuille à 2 folioles et vrille ramifiée entre elles",
+   "trompettes rouge orangé, gorge jaune",
+   "folioles entières, base en cœur, pointe effilée",
+   "longue capsule plate à graines ailées"
+  ],
+  "sources_cles": [
+   "https://dendro.cnre.vt.edu/dendrology/syllabus/factsheet.cfm?ID=484",
+   "https://plants.usda.gov/DocumentLibrary/plantguide/pdf/pg_bica.pdf",
+   "https://plants.ces.ncsu.edu/plants/bignonia-capreolata/common-name/crossvine/",
+   "https://extension.okstate.edu/programs/oklahoma-proven/plant-profiles/crossvine"
+  ],
+  "phrase": "Liane semi-persistante à trompettes rouge orangé au printemps ; grimpe seule grâce à ses vrilles.",
+  "description": {
+   "port": "Liane vigoureuse semi-persistante à vrilles",
+   "feuilles": "Feuilles opposées à 2 folioles entières, vrille ramifiée terminale, pourprées en hiver",
+   "fleurs": "Trompettes rouge orangé, jaunes à l'intérieur",
+   "floraison": "Avril à mai",
+   "fruits": "Capsule plate de 10 à 18 cm, graines ailées"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Riche et frais",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Sources consultées via extraits WebSearch uniquement (WebFetch bloqué par le proxy). Nom français « bignone à vrilles » peu attesté (en anglais crossvine). Origine sud-est des États-Unis. Rusticité discutée (zone USDA 6 à H2 selon les sources). Distinction avec Campsis : 2 folioles + vrille au lieu de 7-11 folioles. Mois de floraison approximatifs (« printemps » dans les sources).",
+  "cat": "grimpante"
+ },
+ {
+  "latin": "Campsis grandiflora",
+  "nom_accepte": "Campsis grandiflora",
+  "commun": "Bignone de Chine",
+  "famille": "Bignoniaceae",
+  "cles": [
+   "calice lobé jusqu'au milieu, à dents lancéolées",
+   "feuilles à 7-9 folioles dentées, glabres dessous",
+   "grandes trompettes orange rouge, gorge jaune",
+   "tube de corolle court par rapport à C. radicans"
+  ],
+  "sources_cles": [
+   "https://beanstreesandshrubs.org/browse/campsis/campsis-grandiflora-thunb-k-schum/",
+   "https://efloraofindia.com/?p=1309732",
+   "https://lml-database.icimod.org/detail/campsis-grandiflora",
+   "https://laconcepcion.malaga.eu/en/the-garden/plant-highlights/plant-detail/Campsis-grandiflora"
+  ],
+  "phrase": "Grande liane caduque aux larges trompettes orange en plein été ; pour pergolas ensoleillées.",
+  "description": {
+   "port": "Liane caduque ligneuse, quelques racines-crampons",
+   "feuilles": "Feuilles imparipennées à 7-9 folioles dentées, glabres",
+   "fleurs": "Grandes trompettes orange rouge à gorge jaune",
+   "floraison": "Juillet à septembre",
+   "fruits": "Capsule allongée"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Sources consultées via extraits WebSearch uniquement (WebFetch bloqué par le proxy). Confusion fréquente avec C. radicans (folioles 9-11 velues dessous, calice peu lobé) et l'hybride C. × tagliabuana ('Madame Galen'), souvent vendu sous ce nom. Racines aériennes rares, moins accrochante que C. radicans.",
+  "cat": "grimpante"
+ },
+ {
+  "latin": "Actinidia arguta",
+  "nom_accepte": "Actinidia arguta",
+  "commun": "Kiwaï",
+  "famille": "Actinidiaceae",
+  "cles": [
+   "feuilles ovales luisantes à pétiole rouge vif",
+   "bord finement denté à dents en soies inégales",
+   "petits fruits verts glabres de 2-3 cm, comme du raisin",
+   "fleurs blanc verdâtre à anthères pourpres"
+  ],
+  "sources_cles": [
+   "https://arboretum.harvard.edu/stories/hidden-gem-among-vines-actinidia-arguta",
+   "https://www.rhs.org.uk/plants/409/actinidia-arguta-f-f/details",
+   "https://plantdatabase.kpu.ca/Plant/acag",
+   "https://beanstreesandshrubs.org/browse/actinidia/actinidia-arguta-sieb-zucc-miq/"
+  ],
+  "phrase": "Kiwi rustique à petits fruits lisses qui se mangent avec la peau ; liane vigoureuse pour pergola.",
+  "description": {
+   "port": "Liane volubile caduque très vigoureuse",
+   "feuilles": "Feuilles ovales 6-12 cm, vert foncé luisant, finement dentées, pétiole rouge",
+   "fleurs": "Fleurs blanc verdâtre parfumées, anthères pourpres",
+   "floraison": "Juin à juillet",
+   "fruits": "Petites baies vert jaunâtre glabres de 2-3 cm"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Riche et frais",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Sources consultées via extraits WebSearch uniquement (WebFetch bloqué par le proxy). Espèce dioïque : pieds mâle et femelle nécessaires (sauf cultivars autofertiles comme 'Issai'). Très rustique (zone USDA 3). Se distingue du kiwi (A. deliciosa) par ses fruits glabres et ses feuilles glabres non feutrées.",
+  "cat": "grimpante"
+ },
+ {
+  "latin": "Actinidia kolomikta",
+  "nom_accepte": "Actinidia kolomikta",
+  "commun": "Actinidia panaché",
+  "famille": "Actinidiaceae",
+  "cles": [
+   "extrémité des feuilles panachée de blanc et de rose",
+   "feuilles en cœur, nervures marquées",
+   "petites fleurs blanches cireuses en début d'été",
+   "jeunes feuilles vert pourpré, panachure sur pied âgé"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/190776/actinidia-kolomikta-m/details",
+   "https://www.rhsplants.co.uk/plants/_/actinidia-kolomikta/classid.179",
+   "https://www.burford.co.uk/products/actinidia-kolomikta",
+   "https://plants.ces.ncsu.edu/plants/actinidia-kolomikta"
+  ],
+  "phrase": "Liane caduque au feuillage tricolore blanc et rose ; couleurs plus vives au soleil, sur un mur abrité.",
+  "description": {
+   "port": "Liane volubile caduque jusqu'à 6 m",
+   "feuilles": "Feuilles en cœur, vert pourpré puis pointe blanche et rose",
+   "fleurs": "Petites fleurs blanches cireuses, légèrement parfumées",
+   "floraison": "Juin"
+  },
+  "milieu": [
+   "Soleil",
+   "Riche et frais",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Sources consultées via extraits WebSearch uniquement (WebFetch bloqué par le proxy). La panachure est plus marquée sur les pieds mâles, au soleil, et apparaît après quelques années. Nom français « actinidia panaché » d'usage commercial ; aussi « kiwi d'ornement ». Sol et pH non précisés par les sources lues.",
+  "cat": "grimpante"
+ },
+ {
+  "latin": "Jasminum polyanthum",
+  "nom_accepte": "Jasminum polyanthum",
+  "commun": "Jasmin polyanthe",
+  "famille": "Oleaceae",
+  "cles": [
+   "boutons rose vif s'ouvrant en étoiles blanches",
+   "feuilles persistantes pennées à 5-7 folioles",
+   "masses de fleurs à long tube, très parfumées",
+   "liane volubile vigoureuse"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/9457/Jasminum-polyanthum/Details",
+   "https://www.chicagobotanic.org/plant-information/plant-finder/jasminum-polyanthum-pink-jasmine",
+   "https://worldplants.ca/display.php?id=3563"
+  ],
+  "phrase": "Jasmin très parfumé, boutons roses et fleurs blanches en fin d'hiver ; réservé aux régions sans gel.",
+  "description": {
+   "port": "Liane volubile persistante vigoureuse",
+   "feuilles": "Feuilles pennées à 5-7 folioles lancéolées",
+   "fleurs": "Fleurs blanches à long tube, 2 cm, issues de boutons roses",
+   "floraison": "Février à mai"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Drainé",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Sources consultées via extraits WebSearch uniquement (WebFetch bloqué par le proxy). Peu rustique (H2 RHS) : à abriter, littoral doux ou véranda. Se distingue de J. officinale par ses boutons roses et sa floraison de fin d'hiver. Mois de floraison exacts déduits (« fin d'hiver et printemps »).",
+  "cat": "grimpante"
+ },
+ {
+  "latin": "Pileostegia viburnoides",
+  "nom_accepte": "Hydrangea viburnoides",
+  "commun": "Hortensia grimpant persistant",
+  "famille": "Hydrangeaceae",
+  "cles": [
+   "panicules mousseuses crème aux étamines saillantes",
+   "feuilles persistantes coriaces, étroites, jusqu'à 15 cm",
+   "liane qui s'accroche seule au mur",
+   "floraison de fin d'été à l'automne"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/13019/pileostegia-viburnoides/details",
+   "https://www.rhs.org.uk/plants/510688/hydrangea-viburnoides/details",
+   "https://www.paramountplants.co.uk/plant/pivi/pileostegia-viburnoides.html",
+   "https://www.provendernurseries.co.uk/factsheets/pileostegia-viburnoides"
+  ],
+  "phrase": "Grimpante persistante à croissance lente qui couvre les murs à l'ombre ; fleurs crème en fin d'été.",
+  "description": {
+   "port": "Liane persistante auto-agrippante de 4 à 8 m",
+   "feuilles": "Feuilles coriaces, elliptiques étroites, jusqu'à 15 cm",
+   "fleurs": "Panicules terminales de 15 cm, petites fleurs crème étoilées",
+   "floraison": "Août à octobre"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Riche et frais",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Sources consultées via extraits WebSearch uniquement (WebFetch bloqué par le proxy). Désormais classé Hydrangea viburnoides (RHS). Nom français « Pileostégia » peu usité ; « hortensia grimpant persistant » utilisé en pépinière. Pousse à toute exposition, même à l'ombre (RHS H5). Allergène cutané.",
+  "cat": "grimpante"
+ },
+ {
+  "latin": "Schizophragma hydrangeoides",
+  "nom_accepte": "Hydrangea hydrangeoides",
+  "commun": "Hortensia grimpant du Japon",
+  "famille": "Hydrangeaceae",
+  "cles": [
+   "fleurs stériles à un seul grand sépale blanc ovale",
+   "feuilles opposées rondes à cordées, à grosses dents",
+   "large corymbe plat blanc crème en été",
+   "liane à racines-crampons, plaquée contre le support"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/16815/schizophragma-hydrangeoides/details",
+   "https://treesandshrubsonline.org/articles/schizophragma/schizophragma-hydrangeoides/",
+   "https://www.arboretum.purdue.edu/explorer/?p=5216",
+   "https://www.beanstreesandshrubs.org/browse/schizophragma/"
+  ],
+  "phrase": "Liane caduque à racines-crampons pour murs et troncs, même au nord ; corymbes blancs en été.",
+  "description": {
+   "port": "Liane caduque de 8 à 12 m, à racines aériennes",
+   "feuilles": "Opposées, rondes à cordées, grossièrement dentées",
+   "fleurs": "Corymbes plats blanc crème, fleurs stériles à un seul sépale",
+   "floraison": "Juin à août"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Frais et drainé",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "La RHS classe désormais l'espèce sous Hydrangea hydrangeoides. Confusion avec Hydrangea petiolaris (anomala), dont les fleurs stériles ont 4 sépales. Nom français non trouvé dans une source francophone. WebFetch indisponible : données tirées des extraits WebSearch.",
+  "cat": "grimpante"
+ },
+ {
+  "latin": "Ammophila arenaria",
+  "nom_accepte": "Ammophila arenaria",
+  "commun": "Oyat",
+  "famille": "Poaceae",
+  "cles": [
+   "panicule dense en épi cylindrique de 10 à 25 cm",
+   "feuilles enroulées en tube, vert glauque, raides",
+   "ligule membraneuse très longue, 1 à 3 cm",
+   "touffes raides fixant les dunes de sable"
+  ],
+  "sources_cles": [
+   "https://inpn.mnhn.fr/espece/cd_nom/82139",
+   "https://static1.kew.org/data/grasses-db/www/imp00384.htm",
+   "https://www.nzflora.info/factsheet/Taxon/Ammophila-arenaria.html",
+   "https://www.iucngisd.org/gisd/species.php?sc=1518"
+  ],
+  "phrase": "Oyat : la graminée qui fixe les dunes littorales ; touffes glauques et épis denses sur le sable.",
+  "description": {
+   "port": "Touffes raides gris glauque",
+   "feuilles": "Enroulées en tube, vert glauque",
+   "fleurs": "Panicule dense en épi, 10 à 25 cm",
+   "floraison": "Mai à août"
+  },
+  "milieu": [
+   "Soleil",
+   "Léger, sableux",
+   "Sec",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Indigène des dunes atlantiques (Gironde, Landes), planté pour fixer les dunes. Certaines bases récentes la placent dans Calamagrostis (C. arenaria), non vérifié ici. pH non précisé par les sources (Tous pH par défaut). Floraison surtout juillet-août en Europe.",
+  "cat": "graminée"
+ },
+ {
+  "latin": "Carex arenaria",
+  "nom_accepte": "Carex arenaria",
+  "commun": "Laîche des sables",
+  "famille": "Cyperaceae",
+  "cles": [
+   "pousses alignées en rangs droits sur le sable",
+   "petite laîche de 10 à 35 cm, feuilles raides",
+   "feuilles fines et coriaces comme du fil de fer"
+  ],
+  "sources_cles": [
+   "https://inpn.mnhn.fr/espece/cd_nom/88349",
+   "https://www.iucn-uk-peatlandprogramme.org/wildlife-explorer/grasses-sedges-and-rushes/sand-sedge",
+   "https://bsbi.org/taxa/2cd4p9h.bpc/carex-arenaria",
+   "https://wildlifetrusts.org/node/653"
+  ],
+  "phrase": "Laîche pionnière des dunes : ses pousses en lignes droites trahissent le rhizome traçant.",
+  "description": {
+   "port": "Vivace de 10 à 35 cm, à long rhizome traçant",
+   "feuilles": "Fines, raides, graminiformes",
+   "floraison": "Mai à juillet"
+  },
+  "milieu": [
+   "Soleil",
+   "Léger, sableux",
+   "Sec",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Aussi appelée salsepareille des pauvres. Indigène des dunes atlantiques. Description fine de l'inflorescence non trouvée dans les extraits lus ; pH non précisé (Tous pH par défaut).",
+  "cat": "graminée"
+ },
+ {
+  "latin": "Corynephorus canescens",
+  "nom_accepte": "Corynephorus canescens",
+  "commun": "Corynéphore blanchâtre",
+  "famille": "Poaceae",
+  "cles": [
+   "petites touffes denses gris argenté de 15-30 cm",
+   "feuilles filiformes raides gris-vert, enroulées",
+   "gaines inférieures et nœuds rougeâtres",
+   "panicule étroite d'épillets blanchâtres ou rosés"
+  ],
+  "sources_cles": [
+   "https://www.infoflora.ch/en/flora/corynephorus-canescens.html",
+   "https://static1.kew.org/data/grasses-db/www/imp02559.htm",
+   "https://floranorthamerica.org/Corynephorus%20canescens",
+   "https://eflorasys.univ-lorraine.fr/index.php/en/species/view/92614"
+  ],
+  "phrase": "Petites touffes gris argenté des sables nus et dunes grises ; pionnière des sols très secs.",
+  "description": {
+   "port": "Touffes denses de 15 à 30 cm",
+   "feuilles": "Filiformes, raides, gris-vert, enroulées",
+   "fleurs": "Panicule étroite blanchâtre à rosée ; arêtes en massue"
+  },
+  "milieu": [
+   "Soleil",
+   "Léger, sableux",
+   "Sec",
+   "Acide à neutre"
+  ],
+  "statut": "douteux",
+  "remarque": "Nom français corrigé : eFlore donne Corynéphore blanchâtre (ou Canche des sables) ; « Canche blanchâtre » non retrouvé. Floraison et pH non confirmés par les sources lues (budget de recherche épuisé) : à vérifier. Arêtes en massue à poils au milieu, critère clé mais visible seulement à la loupe.",
+  "cat": "graminée"
+ },
+ {
+  "latin": "Agrostis curtisii",
+  "nom_accepte": "Agrostis curtisii",
+  "commun": "Agrostide de Curtis",
+  "famille": "Poaceae",
+  "cles": [
+   "touffe dense de feuilles filiformes très fines",
+   "panicule étroite contractée de 3 à 10 cm",
+   "feuilles rudes, fines comme des soies",
+   "touffe compacte de 10 à 60 cm des landes"
+  ],
+  "sources_cles": [
+   "https://static1.kew.org/data/grasses-db/www/imp00132.htm",
+   "https://somersetrareplantsgroup.org.uk/agrostis-curtisii-2021-02-02",
+   "https://gd.eppo.int/taxon/AGSSE",
+   "https://www.sbco.fr/pdf/ArtBull/Bull24/SBCO-Bull24-p151-178-Foucault-Recherches_Pelouses_Agrostion_curtisii.pdf"
+  ],
+  "phrase": "Graminée fine des landes atlantiques acides ; touffes serrées parmi bruyères et ajoncs.",
+  "description": {
+   "port": "Touffe dense de 10 à 60 cm, sans stolons",
+   "feuilles": "Filiformes, 0,2-0,3 mm de large, rudes",
+   "fleurs": "Panicule étroite lancéolée, 3 à 10 cm"
+  },
+  "milieu": [
+   "Soleil",
+   "Léger, sableux",
+   "Sec",
+   "Acide"
+  ],
+  "statut": "douteux",
+  "remarque": "Synonyme : Agrostis setacea Curtis ; aussi agrostide sétacée. Espèce atlantique des landes sèches acides (Agrostion curtisii de l'ouest de la France). Floraison non confirmée par les sources lues (budget de recherche épuisé). Confusion possible avec A. canina et les fétuques fines.",
+  "cat": "graminée"
+ },
+ {
+  "latin": "Cladium mariscus",
+  "nom_accepte": "Cladium mariscus",
+  "commun": "Marisque",
+  "famille": "Cyperaceae",
+  "cles": [
+   "feuilles très longues à bord finement denté, coupant",
+   "épillets brun roux en têtes globuleuses étagées",
+   "grande touffe de 1 à 2,5 m en marais",
+   "tige ronde creuse dépassant 1 m"
+  ],
+  "sources_cles": [
+   "https://www.cbnbrest.fr/files/Fiche_ZH_BZH_Cladium_mariscus_20230112.pdf",
+   "https://wildbristol.uk/groups/grasses/great-fen-sedge/",
+   "https://www.pladias.cz/en/factsheet/default/2155",
+   "https://sac.jncc.gov.uk/habitat/H7210"
+  ],
+  "phrase": "Grand carex des marais et bords d'étangs, en peuplements denses ; feuilles coupantes.",
+  "description": {
+   "port": "Grande touffe de 1 à 2,5 m",
+   "feuilles": "Linéaires, jusqu'à 2 m, bords finement dentés coupants",
+   "fleurs": "Panicule étagée d'épillets brun roux",
+   "floraison": "Juin à août"
+  },
+  "milieu": [
+   "Soleil",
+   "Détrempé ou vaseux",
+   "Humide",
+   "Neutre à alcalin"
+  ],
+  "statut": "ok",
+  "remarque": "Habitat optimal : marais calcaires (habitat d'intérêt communautaire 7210) ; aussi zones humides littorales et étangs. Feuilles coupantes : manipuler avec gants.",
+  "cat": "graminée"
+ },
+ {
+  "latin": "Festuca arundinacea",
+  "nom_accepte": "Schedonorus arundinaceus (syn. Lolium arundinaceum)",
+  "commun": "Fétuque élevée",
+  "famille": "Poaceae",
+  "cles": [
+   "oreillettes courtes ciliées à la base du limbe",
+   "feuilles planes larges de 5 à 10 mm, vert foncé",
+   "grosse touffe, chaumes raides dépassant parfois 1,5 m",
+   "plus robuste et plus large que la fétuque des prés"
+  ],
+  "sources_cles": [
+   "https://www.naturespot.org.uk/species/tall-fescue-0",
+   "https://forages.oregonstate.edu/nfgc/eo/onlineforagecurriculum/instructormaterials/availabletopics/plantid/identifyforages",
+   "https://hal.sorbonne-universite.fr/hal-02952842v1/document",
+   "https://www.jardiner-malin.fr/fiche/fetuque-elevee.html"
+  ],
+  "phrase": "Graminée robuste des prairies et gazons rustiques ; supporte piétinement et sécheresse.",
+  "description": {
+   "port": "Grosse touffe, chaumes pouvant dépasser 1,5 m",
+   "feuilles": "Planes, 5 à 10 mm de large, vert foncé",
+   "floraison": "Mai à juillet"
+  },
+  "milieu": [
+   "Soleil",
+   "Tous sols",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "douteux",
+  "remarque": "Nom à risque : NatureSpot la donne sous Schedonorus arundinaceus, d'autres bases sous Lolium arundinaceum. Aussi fétuque roseau. Les cils des oreillettes s'usent avec l'âge ; la fétuque des prés a des oreillettes glabres. Milieu non détaillé dans les sources lues : valeurs à vérifier.",
+  "cat": "graminée"
+ },
+ {
+  "latin": "Melica uniflora",
+  "nom_accepte": "Melica uniflora",
+  "commun": "Mélique uniflore",
+  "famille": "Poaceae",
+  "cles": [
+   "épillets brun pourpre ovales, peu nombreux, espacés",
+   "panicule lâche et étalée, peu ramifiée",
+   "gaines basales rouge pourpre",
+   "limbes fins de 3 à 7 mm de large"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/11031/melica-uniflora/details",
+   "https://www.naturespot.org/node/29725",
+   "https://giardinocapracotta.unimol.it/en/?p=4402",
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:408184-1/general-information"
+  ],
+  "phrase": "Graminée légère des sous-bois clairs ; épillets pourpres en grains de riz au printemps.",
+  "description": {
+   "port": "Touffe lâche",
+   "feuilles": "Limbes de 5 à 20 cm sur 3 à 7 mm",
+   "fleurs": "Panicule lâche d'épillets brun pourpre",
+   "floraison": "Mai à juillet"
+  },
+  "milieu": [
+   "Mi-ombre à ombre",
+   "Drainé",
+   "Sec à frais",
+   "Neutre à alcalin"
+  ],
+  "statut": "ok",
+  "remarque": "La RHS la recommande en lisière de bois, sol plutôt sec, neutre à calcaire, sans eau stagnante ; eFlorasys la relie aussi à des bois acides : pH variable en nature.",
+  "cat": "graminée"
+ },
+ {
+  "latin": "Anemanthele lessoniana",
+  "nom_accepte": "Anemanthele lessoniana",
+  "commun": "Herbe aux faisans",
+  "famille": "Poaceae",
+  "cles": [
+   "feuilles fines arquées striées orange et bronze",
+   "touffe en fontaine de 0,5 à 1 m, plus large que haute",
+   "fines panicules aériennes brun rouge, retombantes"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/128871/anemanthele-lessoniana/details",
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:999638-1",
+   "https://hardysplants.co.uk/grasses/anemanthele-lessoniana-syn-stipa-arundinacea",
+   "https://burford.co.uk/products/anemanthele-lessoniana"
+  ],
+  "phrase": "Touffe en fontaine aux feuilles cuivrées en hiver ; graminée de massif néo-zélandaise.",
+  "description": {
+   "port": "Touffe arquée de 0,5 à 1 m, 1 à 1,5 m de large",
+   "feuilles": "Étroites, arquées, teintées orange et rouge en été-automne",
+   "fleurs": "Panicules aériennes brun rouge, retombantes",
+   "floraison": "Juin à septembre"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Drainé",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "douteux",
+  "remarque": "Synonyme : Stipa arundinacea. Nom accepté confirmé par POWO. Nom « herbe aux faisans » non trouvé en source francophone (en anglais pheasant's tail grass). Rusticité H4, se ressème. Milieu non confirmé par les extraits lus : à vérifier.",
+  "cat": "graminée"
+ },
+ {
+  "latin": "Calamagrostis brachytricha",
+  "nom_accepte": "Calamagrostis arundinacea (selon POWO ; débattu)",
+  "commun": "Calamagrostide à poils courts",
+  "famille": "Poaceae",
+  "cles": [
+   "plumets étroits duveteux teintés pourpre, fin d'été",
+   "plumets pâlissant en gris argenté, tenant l'hiver",
+   "touffe de feuilles vert brillant, jaunes à l'automne"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/129801/calamagrostis-brachytricha/details",
+   "https://powo.science.kew.org/taxon/394338-1",
+   "https://plants.ces.ncsu.edu/plants/calamagrostis-brachytricha/common-name/korean-feather-reed-grass",
+   "https://proctorsnursery.co.uk/product/calamagrostis-brachytricha"
+  ],
+  "phrase": "Plumets rosés en fin d'été puis argentés en hiver ; supporte la mi-ombre, rare chez une graminée.",
+  "description": {
+   "port": "Touffe de 1 à 1,5 m",
+   "feuilles": "Linéaires vert brillant, jaunes à l'automne",
+   "fleurs": "Plumets étroits pourpre rosé puis gris argenté",
+   "floraison": "Août à octobre"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Frais et drainé",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "douteux",
+  "remarque": "Nom à risque : POWO la met en synonymie de C. arundinacea, la Flora of Japan (2020) la garde comme espèce. Nom français non trouvé en source. pH non précisé.",
+  "cat": "graminée"
+ },
+ {
+  "latin": "Chasmanthium latifolium",
+  "nom_accepte": "Chasmanthium latifolium",
+  "commun": "Avoine à larges feuilles",
+  "famille": "Poaceae",
+  "cles": [
+   "épillets très aplatis et pendants, en petit poisson",
+   "panicule lâche retombante sur pédicelles fins",
+   "feuilles larges lancéolées, rappelant un bambou",
+   "épillets verts puis bronze puis paille"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/45715/wd/details",
+   "https://plants.usda.gov/DocumentLibrary/plantguide/pdf/pg_chla5.pdf",
+   "https://ag.missouristate.edu/PBTrewatha/river-oats-grass.htm",
+   "https://plants.ces.ncsu.edu/plants/Chasmanthium-latifolium"
+  ],
+  "phrase": "Épillets plats pendants qui bronzent à l'automne ; graminée à feuilles larges, tolère la mi-ombre.",
+  "description": {
+   "port": "Touffe de 0,5 à 1 m",
+   "feuilles": "Feuilles larges lancéolées, vert vif, jaune doré à l'automne",
+   "fleurs": "Panicules retombantes d'épillets aplatis, verts puis bronze",
+   "floraison": "Juillet à septembre",
+   "fruits": "Épillets secs beige paille persistant l'hiver"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Frais et drainé",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Originaire de l'est de l'Amérique du Nord (river oats, northern sea oats). pH non précisé par les sources lues. Floraison variable selon les sources (juillet à octobre). Sources lues via extraits WebSearch (WebFetch indisponible : DNS).",
+  "cat": "graminée"
+ },
+ {
+  "latin": "Muhlenbergia capillaris",
+  "nom_accepte": "Muhlenbergia capillaris",
+  "commun": "Muhlenbergie capillaire (herbe rose)",
+  "famille": "Poaceae",
+  "cles": [
+   "nuage aérien d'épillets rose vif au-dessus de la touffe",
+   "touffe dense de feuilles très fines vert foncé",
+   "panicule très ouverte, rameaux capillaires",
+   "floraison tardive, fin d'été à automne"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/170542/wd/details",
+   "https://plants.ces.ncsu.edu/plants/muhlenbergia-capillaris/common-name/pink-muhly-grass",
+   "https://edis.ifas.ufl.edu/publication/FP415/pdf"
+  ],
+  "phrase": "Brume rose spectaculaire en automne ; graminée de plein soleil, résistante à la sécheresse et aux embruns.",
+  "description": {
+   "port": "Touffe dense de 0,5 à 1 m",
+   "feuilles": "Feuilles linéaires fines vert foncé, jusqu'à 30 cm",
+   "fleurs": "Panicules aériennes d'épillets roses",
+   "floraison": "Juillet à novembre"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Originaire du sud-est des États-Unis. Rusticité RHS H4. Ne pas confondre avec les cultivars ('Lenca' Regal Mist) plus foncés. Sources lues via extraits WebSearch (WebFetch indisponible : DNS).",
+  "cat": "graminée"
+ },
+ {
+  "latin": "Pennisetum orientale",
+  "nom_accepte": "Cenchrus orientalis",
+  "commun": "Pennisetum d'Orient",
+  "famille": "Poaceae",
+  "cles": [
+   "épis étroits plumeux rose mauve, soies longues velues",
+   "touffe basse arquée de feuilles fines gris-vert",
+   "épis plus fins et plus précoces que P. alopecuroides",
+   "épis pâlissant en blanc rosé puis brun clair"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/70387/pennisetum-orientale-oriental-fountain-grass/details",
+   "https://plants.ces.ncsu.edu/plants/cenchrus-orientalis/common-name/oriental-fountain-grass",
+   "https://www.plantdelights.com/products/pennisetum-orientale"
+  ],
+  "phrase": "Épis plumeux rose mauve tout l'été sur une touffe compacte ; idéal en massif sec et ensoleillé.",
+  "description": {
+   "port": "Touffe arquée de 40 à 60 cm",
+   "feuilles": "Feuilles linéaires vert à gris-vert",
+   "fleurs": "Épis velus étroits gris mauve à rose, 10 à 14 cm",
+   "floraison": "Juin à septembre"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Nom accepté Cenchrus orientalis (transfert des Pennisetum vers Cenchrus). Début de floraison variable selon les sources (fin de printemps à fin juillet). pH non précisé par les sources lues. Protection hivernale conseillée en région froide. Sources lues via extraits WebSearch (WebFetch indisponible : DNS).",
+  "cat": "graminée"
+ },
+ {
+  "latin": "Stipa calamagrostis",
+  "nom_accepte": "Achnatherum calamagrostis",
+  "commun": "Calamagrostide argentée (stipe calamagrostide)",
+  "famille": "Poaceae",
+  "cles": [
+   "panicule plumeuse argentée puis fauve, souple, penchée",
+   "épillets à 1 fleur, arête genouillée de 8-12 mm",
+   "grosse touffe de feuilles glauques retombantes",
+   "tiges arquées sous le poids des panicules"
+  ],
+  "sources_cles": [
+   "https://www.monherbier.com/site/especes/34318",
+   "https://inpn.mnhn.fr/espece/cd_nom/79970",
+   "https://www.botanic.cam.ac.uk/the-garden/plant-list/stipa-calamagrostis",
+   "https://www.i-flora.com/en/fact-sheets/search-for-species/art/show/achnatherum-calamagrostis.html"
+  ],
+  "phrase": "Panicules argentées puis dorées, très souples au vent ; graminée des pentes sèches calcaires.",
+  "description": {
+   "port": "Grosse touffe de 0,6 à 1,2 m",
+   "feuilles": "Feuilles glauques, arquées et retombantes",
+   "fleurs": "Panicules de 20 à 30 cm, argentées puis fauves",
+   "floraison": "Juillet à septembre"
+  },
+  "milieu": [
+   "Soleil",
+   "Pauvre, caillouteux, très drainé",
+   "Sec",
+   "Neutre à alcalin"
+  ],
+  "statut": "ok",
+  "remarque": "Nom accepté (TAXREF/INPN) : Achnatherum calamagrostis ; Stipa calamagrostis en synonyme. Indigène en France (montagnes calcaires du sud et de l'est), absent de Gironde/Landes. Floraison : fin d'été selon RHS, données variables. Sources lues via extraits WebSearch (WebFetch indisponible : DNS).",
+  "cat": "graminée"
+ },
+ {
+  "latin": "Carex testacea",
+  "nom_accepte": "Carex testacea",
+  "commun": "Laîche orange",
+  "famille": "Cyperaceae",
+  "cles": [
+   "feuilles fines arquées vert olive à reflets cuivrés",
+   "teinte orange plus vive en hiver et au soleil",
+   "tiges florales brunes retombantes, dépassant la touffe",
+   "touffe persistante en fontaine de 40-60 cm"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/83677/wd/details",
+   "https://www.nzpcn.org.nz/flora/species/carex-testacea/",
+   "https://www.nelsonnatives.co.nz/carex-testacea-prairie-fire",
+   "https://kauripark.com/plant-library/p/carex-testacea"
+  ],
+  "phrase": "Touffe persistante vert olive virant au cuivre orangé en hiver ; couleur plus intense au soleil.",
+  "description": {
+   "port": "Touffe persistante arquée de 40 à 60 cm",
+   "feuilles": "Feuilles étroites vert olive, cuivre orangé en hiver",
+   "fleurs": "Épis bruns discrets sur tiges retombantes",
+   "floraison": "Mai à juillet"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Frais et drainé",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Endémique de Nouvelle-Zélande (dunes, forêts côtières, prairies). Floraison sept.-déc. dans l'hémisphère Sud, transposée en mai-juillet (à confirmer). Craint l'excès d'eau l'hiver. RHS H5. Sources lues via extraits WebSearch (WebFetch indisponible : DNS).",
+  "cat": "graminée"
+ },
+ {
+  "latin": "Asphodelus albus",
+  "nom_accepte": "Asphodelus albus",
+  "commun": "Asphodèle blanc",
+  "famille": "Asphodelaceae",
+  "cles": [
+   "grappe dense de fleurs blanches sur hampe nue",
+   "tépales blancs à nervure médiane rose brun",
+   "rosette de longues feuilles linéaires en gouttière",
+   "étamines à anthères orangées"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/Plants/1713/Asphodelus-albus/Details",
+   "https://www.techno-science.net/fr/definitions/asphodele-blanc",
+   "https://www.first-nature.com/flowers/asphodelus-albus.php",
+   "https://www.randozone.com/flore/asphodele-blanc/"
+  ],
+  "phrase": "Hampes de fleurs blanches veinées de rose au printemps ; vivace des landes et pelouses sèches.",
+  "description": {
+   "port": "Vivace en touffe, hampes de 0,5 à 1 m",
+   "feuilles": "Feuilles basales linéaires, en gouttière, un peu glauques",
+   "fleurs": "Grappe dense de fleurs blanches à 6 tépales veinés de rose brun",
+   "floraison": "Avril à juin",
+   "fruits": "Capsules globuleuses"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Indigène en France. Confusion possible avec A. ramosus (tige très ramifiée) et A. cerasifer ; critère de séparation fin (bractées) non confirmé par les sources lues. Floraison jusqu'en juillet en altitude. Sources lues via extraits WebSearch (WebFetch indisponible : DNS).",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Lithodora diffusa",
+  "nom_accepte": "Glandora diffusa",
+  "commun": "Grémil diffus",
+  "famille": "Boraginaceae",
+  "cles": [
+   "fleurs en entonnoir bleu gentiane à 5 lobes",
+   "tapis bas persistant de 10-15 cm",
+   "petites feuilles linéaires vert foncé, rudes et poilues",
+   "tiges couchées velues formant un coussin étalé"
+  ],
+  "sources_cles": [
+   "https://taxref.mnhn.fr/taxref-web/taxa/1026511",
+   "https://taxref.mnhn.fr/taxref-web/taxa/106373/habitats",
+   "https://www.rhs.org.uk/plants/386765/glandora-diffusa-lag-dc-thomas/details",
+   "https://arthurleej.com/plant-of-month/p-o-m-April13.html",
+   "https://www.jardineriaon.com/en/lithodora-diffusa.html"
+  ],
+  "phrase": "Tapis persistant couvert de fleurs bleu intense au printemps ; rocaille en sol non calcaire.",
+  "description": {
+   "port": "Sous-arbrisseau rampant de 15 cm, étalé sur 60 cm",
+   "feuilles": "Feuilles linéaires, vert foncé mat, poilues et rudes",
+   "fleurs": "Fleurs en entonnoir bleu profond (blanches chez 'Alba')",
+   "floraison": "Mai à juillet"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Sec à frais",
+   "Acide à neutre"
+  ],
+  "statut": "douteux",
+  "remarque": "Nom à risque. TAXREF : Lithodora diffusa (Lag.) I.M.Johnst. = Glandora diffusa (endémique cantabrique) ; mais « L. diffusa auct. » = Glandora prostrata, grémil prostré des landes atlantiques (sud-ouest France). Les plantes du commerce ('Heavenly Blue', 'Grace Ward') sont rattachées par certains à G. prostrata. Craint le calcaire. Sources lues via extraits WebSearch (WebFetch indisponible : DNS).",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Dianthus gallicus",
+  "nom_accepte": "Dianthus hyssopifolius subsp. gallicus",
+  "commun": "Œillet des dunes (œillet de France)",
+  "famille": "Caryophyllaceae",
+  "cles": [
+   "fleurs roses parfumées, pétales découpés en lanières",
+   "feuilles courtes, presque planes",
+   "petite touffe à base ligneuse sur sable dunaire",
+   "pétales serrés, frange profonde"
+  ],
+  "sources_cles": [
+   "https://eflorasys.univ-lorraine.fr/index.php/en/species/view/133849",
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:953885-1",
+   "https://www.atlantic-loire-valley.com/visits/nature/la-dune-grise-de-sion-dune-fixee",
+   "https://gd.eppo.int/taxon/DINGA"
+  ],
+  "phrase": "Œillet rose frangé et parfumé des dunes grises atlantiques ; espèce protégée en France.",
+  "description": {
+   "port": "Sous-arbrisseau bas en touffe",
+   "feuilles": "Feuilles courtes, presque planes",
+   "fleurs": "Fleurs roses parfumées, pétales découpés en lanières",
+   "floraison": "Non confirmée par les sources lues (été)"
+  },
+  "milieu": [
+   "Soleil",
+   "Léger, sableux",
+   "Sec",
+   "Tous pH"
+  ],
+  "statut": "douteux",
+  "remarque": "POWO : Dianthus hyssopifolius subsp. gallicus ; D. gallicus Pers. = basionyme. Endémique des côtes atlantiques ouest France - nord-ouest Espagne, présent sur les dunes de Gironde/Landes ; protection nationale. Mois de floraison, couleur des feuilles et pH non confirmés. Disponibilité en pépinière à vérifier (espèce protégée). Sources lues via extraits WebSearch (WebFetch indisponible : DNS).",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Eryngium maritimum",
+  "nom_accepte": "Eryngium maritimum",
+  "commun": "Panicaut maritime",
+  "famille": "Apiaceae",
+  "cles": [
+   "feuilles bleu glauque épineuses, nervures blanches",
+   "capitules bleu pâle entourés de bractées épineuses",
+   "touffe raide gris bleuté sur sable de dune",
+   "port de houx bleu, tiges ramifiées de 30-60 cm"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/6787/wd/details",
+   "https://www.cbnbrest.fr/files/FicheEspèce_Eryngium_maritimum_CBNB_vf.pdf",
+   "https://www.uksouthwest.net/wildflowers/apiaceae/eryngium-maritimum.html",
+   "https://www.surreywildlifetrust.org/wildlife-explorer/wildflowers/sea-holly"
+  ],
+  "phrase": "Feuillage bleu argenté épineux et capitules bleus ; emblème des dunes, cueillette réglementée.",
+  "description": {
+   "port": "Vivace en touffe raide de 30 à 60 cm",
+   "feuilles": "Feuilles coriaces palmatilobées, glauques, à dents épineuses et nervures blanches",
+   "fleurs": "Capitules arrondis bleu pâle, involucre de bractées épineuses",
+   "floraison": "Juin à septembre"
+  },
+  "milieu": [
+   "Soleil",
+   "Léger, sableux",
+   "Sec",
+   "Neutre à alcalin"
+  ],
+  "statut": "ok",
+  "remarque": "Indigène sur les dunes atlantiques (Gironde/Landes). Cueillette interdite ou réglementée dans de nombreux départements. Ne pas confondre avec E. campestre (feuillage vert, fleurs blanchâtres). Sources lues via extraits WebSearch (WebFetch indisponible : DNS).",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Euphorbia paralias",
+  "nom_accepte": "Euphorbia paralias",
+  "commun": "Euphorbe maritime (euphorbe des dunes)",
+  "famille": "Euphorbiaceae",
+  "cles": [
+   "feuilles charnues glauques, serrées et imbriquées",
+   "tiges dressées en touffe, base ligneuse, latex blanc",
+   "ombelle à 3-6 rayons de cyathes vert jaunâtre",
+   "feuilles plus épaisses que chez E. portlandica"
+  ],
+  "sources_cles": [
+   "https://bsbi.org/learn/resources/plant-crib/euphorbia",
+   "https://nzpcn.org.nz/flora/species/euphorbia-paralias",
+   "https://www.maltawildplants.com/EUPH/Euphorbia_paralias.php",
+   "https://ftp.uksouthwest.net/wildflowers/euphorbiaceae/euphorbia-paralias.html"
+  ],
+  "phrase": "Touffes glauques charnues des plages et dunes ; latex blanc irritant, à manipuler avec gants.",
+  "description": {
+   "port": "Vivace en touffe dressée de 30 à 70 cm",
+   "feuilles": "Feuilles charnues bleu-vert, serrées et imbriquées",
+   "fleurs": "Cyathes vert jaunâtre en ombelle à 3-6 rayons",
+   "floraison": "Juin à octobre",
+   "fruits": "Capsules granuleuses"
+  },
+  "milieu": [
+   "Soleil",
+   "Léger, sableux",
+   "Sec",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Indigène des dunes atlantiques et méditerranéennes. Confusion avec E. portlandica (feuilles minces, nervure dessous saillante, souvent tiges rougeâtres). Invasive en Australie/Nouvelle-Zélande. pH non précisé par les sources lues. Sources lues via extraits WebSearch (WebFetch indisponible : DNS).",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Helichrysum stoechas",
+  "nom_accepte": "Helichrysum stoechas",
+  "commun": "Immortelle des dunes",
+  "famille": "Asteraceae",
+  "cles": [
+   "capitules jaune vif serrés en bouquets arrondis",
+   "feuilles linéaires argentées laineuses, bords enroulés",
+   "bractées membraneuses luisantes autour des capitules",
+   "sous-arbrisseau gris argenté touffu de 20 à 50 cm"
+  ],
+  "sources_cles": [
+   "https://en.wikipedia.org/wiki/Helichrysum_stoechas",
+   "https://www.rhs.org.uk/Plants/8545/wd/Details",
+   "https://www.techno-science.net/fr/definitions/immortelle-commune",
+   "https://asnatnic.fr/wp-content/uploads/2023/02/ANNAM-RAPPORT-DRAMONT.pdf"
+  ],
+  "phrase": "Immortelle des dunes : touffe argentée et capitules jaunes à odeur de curry ; sables et rocailles secs.",
+  "description": {
+   "port": "Sous-arbrisseau touffu de 20 à 50 cm",
+   "feuilles": "Feuilles linéaires, gris argenté laineux, bords enroulés",
+   "fleurs": "Capitules jaune vif en corymbes arrondis, bractées luisantes",
+   "floraison": "Juin à septembre"
+  },
+  "milieu": [
+   "Soleil",
+   "Léger, sableux",
+   "Sec",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Proche de H. italicum (capitules plus allongés, bractées glanduleuses). var. maritimum : forme littorale. pH non précisé par les sources (sables littoraux souvent calcaires).",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Teucrium chamaedrys",
+  "nom_accepte": "Teucrium chamaedrys",
+  "commun": "Germandrée petit-chêne",
+  "famille": "Lamiaceae",
+  "cles": [
+   "petites feuilles ovales dentées rappelant le chêne",
+   "fleurs rose pourpre bilabiées en grappes",
+   "bractées pourpres sous les fleurs",
+   "touffe basse ligneuse à la base, tiges ascendantes"
+  ],
+  "sources_cles": [
+   "https://fr-academic.com/dic.nsf/frwiki/1616398",
+   "https://pladias.cz/factsheet/default/4861",
+   "https://www.i-flora.com/en/fact-sheets/search-for-species/art/show/teucrium-chamaedrys.html",
+   "https://www.promessedefleurs.ie/perennials/perennials-by-variety/teucrium/teucrium-chamaedrys-wild-form-germander.html"
+  ],
+  "phrase": "Petite touffe aromatique pour rocailles et pelouses sèches calcaires ; floraison rose en été.",
+  "description": {
+   "port": "Sous-arbrisseau étalé de 10 à 40 cm, drageonnant",
+   "feuilles": "Petites feuilles ovales dentées, vert à vert gris",
+   "fleurs": "Grappes de fleurs rose pourpre bilabiées, bractées pourpres",
+   "floraison": "Juin à septembre"
+  },
+  "milieu": [
+   "Soleil",
+   "Pauvre, caillouteux, très drainé",
+   "Sec",
+   "Neutre à alcalin"
+  ],
+  "statut": "ok",
+  "remarque": "Usage médicinal à proscrire : plante hépatotoxique (épidémie d'hépatites en France, 1993).",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Stachys officinalis",
+  "nom_accepte": "Betonica officinalis",
+  "commun": "Bétoine officinale",
+  "famille": "Lamiaceae",
+  "cles": [
+   "épi dense de fleurs rose pourpre au sommet de la tige",
+   "feuilles basales crénelées, longuement pétiolées",
+   "feuilles de tige peu nombreuses, petites, sessiles",
+   "tige carrée fine"
+  ],
+  "sources_cles": [
+   "https://en.wikipedia.org/wiki/Betonica_officinalis",
+   "https://plants.ces.ncsu.edu/plants/betonica-officinalis/common-name/common-hedgenettle/",
+   "https://www.truffaut.com/epiaire-officinale-lot-de-5-godets.html",
+   "https://www.pollichia.de/images/gruppen/AK_Botanik/Weingart2025/a-b/Betonica_officinalis.pdf"
+  ],
+  "phrase": "Bétoine : épis rose pourpre en été, prairies maigres et lisières sur sols plutôt acides.",
+  "description": {
+   "port": "Vivace en rosette, tiges dressées de 30 à 60 cm",
+   "feuilles": "Basales ovales-oblongues crénelées, pétiolées ; caulinaires sessiles",
+   "fleurs": "Épis denses rose pourpre",
+   "floraison": "Juin à septembre"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Frais et drainé",
+   "Sec à frais",
+   "Acide à neutre"
+  ],
+  "statut": "ok",
+  "remarque": "Betonica séparé de Stachys : nom accepté Betonica officinalis (syn. Stachys officinalis, S. betonica). Hauteur non confirmée par les sources lues.",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Knautia arvensis",
+  "nom_accepte": "Knautia arvensis",
+  "commun": "Knautie des champs",
+  "famille": "Caprifoliaceae",
+  "cles": [
+   "capitule plat lilas, fleurons externes plus grands",
+   "feuilles de tige opposées, pennatifides",
+   "tige à poils raides dirigés vers le bas",
+   "fleurons à 4 lobes (scabieuses : 5 lobes)"
+  ],
+  "sources_cles": [
+   "https://en.wikipedia.org/wiki/Knautia_arvensis",
+   "https://cbnfc-ori.org/sites/default/files/2025-04/Cl%C3%A9-identification-Dipsacacees_WEB.pdf",
+   "https://gentiana.org/wp-content/uploads/Fiche-espece-Knautia.pdf"
+  ],
+  "phrase": "Grands capitules lilas très visités par les pollinisateurs ; plante typique des prairies fleuries.",
+  "description": {
+   "port": "Vivace en rosette, tiges de 25 à 100 cm",
+   "feuilles": "Basales simples dentées ; caulinaires opposées pennatifides",
+   "fleurs": "Capitules plats lilas à bleu violet",
+   "floraison": "Mai à septembre"
+  },
+  "milieu": null,
+  "statut": "ok",
+  "remarque": "Pas de paillettes sur le réceptacle, calice à 8 soies (différences avec Scabiosa). Floraison variable selon les sources (mai-août à juillet-septembre). Milieu non renseigné : aucune source consultée ne donnait l'écologie (WebFetch indisponible, budget de recherche épuisé).",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Lychnis flos-cuculi",
+  "nom_accepte": "Silene flos-cuculi",
+  "commun": "Lychnis fleur de coucou",
+  "famille": "Caryophyllaceae",
+  "cles": [
+   "pétales roses profondément découpés en 4 lanières",
+   "fleurs d'aspect ébouriffé, rose vif",
+   "tige dressée grêle, ramifiée au sommet"
+  ],
+  "sources_cles": [
+   "https://en.wikipedia.org/wiki/Silene_flos-cuculi",
+   "https://nzflora.info/factsheet/Taxon/Silene-flos-cuculi.html",
+   "https://floranorthamerica.org/Silene_flos-cuculi"
+  ],
+  "phrase": "Fleurs roses ébouriffées aux pétales en lanières ; une touche légère pour prairies et noues fleuries.",
+  "description": {
+   "port": "Vivace, tiges dressées de 30 à 90 cm",
+   "fleurs": "Pétales roses à limbe divisé en 4 lobes étroits",
+   "floraison": "Début d'été (juin d'après les herbiers ; à préciser)"
+  },
+  "milieu": null,
+  "statut": "douteux",
+  "remarque": "Nom accepté Silene flos-cuculi (syn. Lychnis flos-cuculi). Feuilles, floraison et milieu (prairies humides selon l'usage courant) non confirmés par les sources lues. Milieu non renseigné : aucune source consultée ne donnait l'écologie (WebFetch indisponible, budget de recherche épuisé).",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Pulmonaria longifolia",
+  "nom_accepte": "Pulmonaria longifolia",
+  "commun": "Pulmonaire à feuilles longues",
+  "famille": "Boraginaceae",
+  "cles": [
+   "feuilles basales étroites lancéolées, tachées de blanc",
+   "fleurs en entonnoir roses en bouton puis bleues",
+   "touffe basse de 15 à 40 cm fleurie au printemps"
+  ],
+  "sources_cles": [
+   "https://en.wikipedia.org/wiki/Pulmonaria_longifolia",
+   "https://www.rhs.org.uk/plants/14148/wd/details",
+   "https://www.randozone.com/flore/pulmonaire-a-feuilles-lanceolees/"
+  ],
+  "phrase": "Couvre-sol d'ombre au feuillage étroit tacheté ; fleurs roses virant au bleu dès mars.",
+  "description": {
+   "port": "Vivace en touffe semi-persistante de 15 à 40 cm",
+   "feuilles": "Basales étroites lancéolées, tachées de blanc ou vert pâle",
+   "fleurs": "Grappes de fleurs en entonnoir, roses puis bleu violet",
+   "floraison": "Mars à mai"
+  },
+  "milieu": [
+   "Mi-ombre à ombre",
+   "Humifère et frais",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Indigène de l'ouest de l'Europe (France, Espagne, Portugal). Craint la sécheresse prolongée. Les feuilles étroites la distinguent des autres pulmonaires.",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Lotus corniculatus",
+  "nom_accepte": "Lotus corniculatus",
+  "commun": "Lotier corniculé",
+  "famille": "Fabaceae",
+  "cles": [
+   "ombelle de 2 à 6 fleurs jaunes souvent teintées rouge",
+   "feuille à 5 folioles, paire basale comme des stipules",
+   "gousses linéaires étalées comme de petites cornes",
+   "tige pleine (lotier des fanges : tige creuse)"
+  ],
+  "sources_cles": [
+   "https://www.techno-science.net/fr/definitions/lotier-cornicule",
+   "https://inpn.mnhn.fr/espece/cd_nom/106653/tab/fiche",
+   "https://www.cbnbrest.fr/files/Fiche_ZH_BZH_Lotus_pedunculatus_20230112.pdf",
+   "https://www.randozone.com/flore/lotier-cornicule/"
+  ],
+  "phrase": "Petite légumineuse jaune des prairies et talus, mellifère, qui enrichit le sol en azote.",
+  "description": {
+   "port": "Vivace basse, tiges couchées à ascendantes",
+   "feuilles": "5 folioles, les 2 inférieures en position de stipules",
+   "fleurs": "Ombelles de fleurs jaune vif, orangées à rouge brique",
+   "floraison": "Mai à septembre",
+   "fruits": "Gousses linéaires en petites cornes"
+  },
+  "milieu": null,
+  "statut": "ok",
+  "remarque": "Genre nouveau dans l'appli. Confusion avec Lotus pedunculatus (tige creuse, zones humides). Milieu non renseigné : aucune source consultée ne donnait l'écologie (WebFetch indisponible, budget de recherche épuisé).",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Malva sylvestris",
+  "nom_accepte": "Malva sylvestris",
+  "commun": "Mauve sylvestre",
+  "famille": "Malvaceae",
+  "cles": [
+   "5 pétales rose pourpre veinés de pourpre foncé",
+   "fleurs groupées à l'aisselle des feuilles",
+   "feuilles à 5 lobes peu profonds et arrondis",
+   "plante dressée jusqu'à 1 à 1,5 m"
+  ],
+  "sources_cles": [
+   "https://gentiana.org/wp-content/uploads/Fiche-espece-Mauve.pdf",
+   "https://www.redzet.lv/en/info/(Malva_sylvestris)_Common_Mallow",
+   "https://www.jardiner-malin.fr/fiche/malva-sylvestris-grande-mauve.html"
+  ],
+  "phrase": "Grande mauve aux fleurs rose veiné de pourpre tout l'été ; friches, bords de chemins.",
+  "description": {
+   "port": "Bisannuelle ou vivace dressée d'environ 1 m",
+   "feuilles": "Feuilles palmées à 5 lobes peu profonds, arrondis",
+   "fleurs": "5 pétales libres rose pourpre veinés de pourpre, environ 15 mm",
+   "floraison": "Mai à septembre"
+  },
+  "milieu": null,
+  "statut": "ok",
+  "remarque": "Milieu non renseigné : aucune source consultée ne donnait l'écologie (WebFetch indisponible, budget de recherche épuisé).",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Mentha aquatica",
+  "nom_accepte": "Mentha aquatica",
+  "commun": "Menthe aquatique",
+  "famille": "Lamiaceae",
+  "cles": [
+   "tête florale terminale globuleuse lilas",
+   "1 ou 2 verticilles de fleurs sous la tête",
+   "feuilles ovales pointues, dentées, pétiolées",
+   "tiges carrées souvent rougeâtres et velues"
+  ],
+  "sources_cles": [
+   "https://www.infoflora.ch/en/flora/mentha-aquatica.html",
+   "https://flora-burren.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=38189",
+   "https://paysagae.olihost.com/assets/mare/identification/fiches-determination-flore/fiche-menthe-aquatique.pdf"
+  ],
+  "phrase": "Menthe des berges et bassins, têtes lilas en fin d'été ; tiges rougeâtres et rhizomes.",
+  "description": {
+   "port": "Vivace rhizomateuse de 20 à 50 cm, parfois 1 m",
+   "feuilles": "Ovales à lancéolées, dentées, 2 à 5 cm",
+   "fleurs": "Tête globuleuse lilas ou rose, corolle à 4 lobes",
+   "floraison": "Juillet à octobre"
+  },
+  "milieu": null,
+  "statut": "ok",
+  "remarque": "Plante de bord de mares et bassins, mais le milieu exact n'a pas été lu dans une source. Milieu non renseigné : aucune source consultée ne donnait l'écologie (WebFetch indisponible, budget de recherche épuisé).",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Thymus serpyllum",
+  "nom_accepte": "Thymus serpyllum",
+  "commun": "Serpolet",
+  "famille": "Lamiaceae",
+  "cles": [
+   "tiges couchées s'enracinant aux nœuds, tapis ras",
+   "très petites feuilles opposées, longs poils à la base",
+   "fleurs mauve rose en capitules terminaux"
+  ],
+  "sources_cles": [
+   "https://www.techno-science.net/fr/definitions/serpolet",
+   "https://areq.net/lang/fr/Serpolet.html",
+   "https://franco.wiki/fr/Serpolet.html"
+  ],
+  "phrase": "Tapis aromatique ras, fleuri de juin à septembre ; sols maigres, secs et sableux.",
+  "description": {
+   "port": "Sous-arbrisseau rampant en coussins de 5 à 30 cm",
+   "feuilles": "Très petites (3-10 mm), opposées, poils longs à la base",
+   "fleurs": "Capitules terminaux mauves à pourpres",
+   "floraison": "Juin à septembre"
+  },
+  "milieu": [
+   "Soleil",
+   "Léger, sableux",
+   "Sec",
+   "Tous pH"
+  ],
+  "statut": "douteux",
+  "remarque": "Nom à risque : le « serpolet » du commerce et des flores anciennes regroupe souvent d'autres thyms rampants (T. praecox, T. pulegioides). Sources botaniques de référence non consultées ; pH non tranché (sources contradictoires).",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Achillea filipendulina",
+  "nom_accepte": "Achillea filipendulina",
+  "commun": "Achillée filipendule",
+  "famille": "Asteraceae",
+  "cles": [
+   "larges plateaux plats jaune d'or de 4 à 10 cm",
+   "feuilles très découpées comme une fougère, gris-vert",
+   "tiges raides dressées jusqu'à 1,2-1,5 m",
+   "capitules minuscules serrés en corymbe composé"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/90798/wd/details",
+   "https://worldplants.ca/display.php?id=2641",
+   "https://www.jardiner-malin.fr/fiche/fleur/achillea-filipendulina.html"
+  ],
+  "phrase": "Grands plateaux jaune d'or tout l'été, fleur sèche durable ; massifs secs et ensoleillés.",
+  "description": {
+   "port": "Vivace dressée de 1 à 1,5 m",
+   "feuilles": "Feuilles pennatiséquées, velues, gris-vert, aspect de fougère",
+   "fleurs": "Corymbes composés aplatis jaune d'or, 4 à 10 cm",
+   "floraison": "Juin à septembre"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Aussi appelée achillée jaune. Craint l'argile lourde détrempée l'hiver (RHS). Cultivars courants : 'Cloth of Gold', 'Gold Plate' ; 'Coronation Gold' est un hybride plus bas.",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Eryngium planum",
+  "nom_accepte": "Eryngium planum",
+  "commun": "Panicaut plane",
+  "famille": "Apiaceae",
+  "cles": [
+   "petites têtes ovoïdes bleu acier d'environ 2 cm",
+   "collerette de bractées étroites, épineuses, bleutées",
+   "tiges ramifiées teintées de bleu, nombreuses têtes",
+   "rosette de feuilles basales ovales, en cœur, dentées"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/24972/eryngium-planum/details",
+   "https://plants.ces.ncsu.edu/plants/eryngium-planum/common-name/blue-sea-holly/",
+   "https://www.seedaholic.com/eryngium-planum-blue-sea-holly.html"
+  ],
+  "phrase": "Nuée de petites têtes bleu acier sur tiges bleutées ; massifs secs et graveleux, fleur sèche.",
+  "description": {
+   "port": "Vivace en touffe de 60 à 100 cm",
+   "feuilles": "Basales ovales à base en cœur, dentées, vert foncé ; feuilles des tiges lobées",
+   "fleurs": "Capitules ovoïdes bleu acier entourés de bractées épineuses",
+   "floraison": "Juin à septembre"
+  },
+  "milieu": [
+   "Soleil",
+   "Pauvre, caillouteux, très drainé",
+   "Sec",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Têtes nettement plus petites et bractées plus courtes que chez E. alpinum ou E. × zabelii. Sources divergentes sur le caractère épineux des feuilles (épines surtout sur bractées et feuilles caulinaires). pH non précisé par les sources consultées.",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Geranium × cantabrigiense",
+  "nom_accepte": "Geranium × cantabrigiense",
+  "commun": "Géranium de Cambridge",
+  "famille": "Geraniaceae",
+  "cles": [
+   "tapis bas de 20-30 cm de feuilles rondes lobées",
+   "feuilles à 7 divisions dentées, rougissant à l'automne",
+   "fleurs rose pâle à blanc rosé, étamines rose vif",
+   "feuilles aromatiques au froissement"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/92274/geranium-x-cantabrigiense-biokovo/details",
+   "https://hortflora.rbg.vic.gov.au/taxon/ada639f0-5340-11e7-b82b-005056b0018f",
+   "https://powo.science.kew.org/taxon/906203-1"
+  ],
+  "phrase": "Couvre-sol bas et parfumé, semi-persistant ; supporte l'ombre sèche une fois installé.",
+  "description": {
+   "port": "Vivace tapissante de 20 à 30 cm",
+   "feuilles": "Arrondies, 3 à 9 cm, 7 divisions dentées, semi-persistantes, aromatiques",
+   "fleurs": "Rose pâle à rose carmin, 2,5 cm, étamines saillantes rose foncé",
+   "floraison": "Mai à juin"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Drainé",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Hybride stérile G. dalmaticum × G. macrorrhizum (Cambridge, 1974). Plus bas et à feuilles plus petites et plus lisses que G. macrorrhizum. Cultivars : 'Biokovo' (blanc rosé), 'Karmina', 'Cambridge'. Tolère la plupart des sols sauf détrempés (RHS).",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Libertia grandiflora",
+  "nom_accepte": "Libertia grandiflora",
+  "commun": "Libertia à grandes fleurs",
+  "famille": "Iridaceae",
+  "cles": [
+   "touffe de feuilles en lanière raides, type iris",
+   "fleurs blanches en coupe à 3 grands pétales ronds",
+   "hampes florales dressées au-dessus du feuillage",
+   "capsules vertes puis noires, graines orange vif"
+  ],
+  "sources_cles": [
+   "https://nzflora.info/factsheet/Taxon/Libertia-grandiflora.html",
+   "https://www.rhs.org.uk/plants/10068/libertia-grandiflora/details",
+   "https://nzpcn.org.nz/flora/species/libertia-grandiflora",
+   "https://www.phoenixperennials.com/?p=4219"
+  ],
+  "phrase": "Touffe persistante type iris, fleurs blanches en début d'été ; massifs abrités et doux.",
+  "description": {
+   "port": "Vivace persistante en touffe de 60 à 90 cm",
+   "feuilles": "Linéaires en lanière, coriaces, persistantes",
+   "fleurs": "Blanches en coupe, 2 à 3,5 cm, 3 pétales ronds et 3 sépales petits",
+   "floraison": "Mai à juillet",
+   "fruits": "Capsules vertes noircissant, graines orange"
+  },
+  "milieu": [
+   "Soleil",
+   "Frais et drainé",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Endémique de Nouvelle-Zélande (mikoikoi). Rustique limite (RHS H3, env. -5 à -10 °C) : situation chaude et abritée, craint l'humidité hivernale. Proche de L. formosa (fleurs plus petites, serrées). pH non précisé par les sources consultées.",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Phlomis russeliana",
+  "nom_accepte": "Phlomis russeliana",
+  "commun": "Phlomis de Russell",
+  "famille": "Lamiaceae",
+  "cles": [
+   "fleurs jaune pâle en casque, en verticilles étagés",
+   "grandes feuilles en cœur, feutrées, en tapis basal",
+   "hampes dressées au-dessus du tapis de feuilles",
+   "têtes sèches brunes en étages, tenant l'hiver"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/12705/wd/details",
+   "https://aiph.org/floraculture/news/plant-profile-phlomis-russeliana/",
+   "https://www.fobssheffield.co.uk/plant-of-the-month/phlomis-russeliana"
+  ],
+  "phrase": "Étages de verticilles jaunes puis silhouettes sèches tout l'hiver ; couvre-sol feutré.",
+  "description": {
+   "port": "Vivace de 90 cm à 1,2 m",
+   "feuilles": "Grandes, cordiformes, feutrées, duveteuses dessous",
+   "fleurs": "Jaune pâle, bilabiées en casque, en verticilles denses",
+   "floraison": "Juin à septembre",
+   "fruits": "Têtes sèches décoratives persistant l'hiver"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Vivace herbacée, à ne pas confondre avec Phlomis fruticosa (sauge de Jérusalem, arbuste ligneux gris). Parfois vendue sous le nom erroné P. samia ou P. viscosa. Appelée aussi sauge turque. Tolère la mi-ombre (RHS).",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Tulbaghia violacea",
+  "nom_accepte": "Tulbaghia violacea",
+  "commun": "Ail du Cap",
+  "famille": "Amaryllidaceae",
+  "cles": [
+   "ombelle de fleurs étoilées lilas sur hampe nue",
+   "touffe de feuilles étroites en lanière gris-vert",
+   "fleurs tubulaires évasées en étoile, 8 à 20 par tête",
+   "feuilles à odeur d'ail au froissement"
+  ],
+  "sources_cles": [
+   "https://plants.ces.ncsu.edu/plants/tulbaghia-violacea/",
+   "https://worldplants.ca/display.php?id=5977",
+   "https://www.austintexas.gov/watershed-protection/plant-guide/society-garlic"
+  ],
+  "phrase": "Ombelles lilas tout l'été au-dessus de feuilles à odeur d'ail ; bordures sèches abritées.",
+  "description": {
+   "port": "Vivace bulbeuse en touffe de 30 à 60 cm",
+   "feuilles": "Linéaires, gris-vert, jusqu'à 30 cm, odeur d'ail",
+   "fleurs": "Ombelles de 8 à 20 fleurs lilas en étoile",
+   "floraison": "Juin à octobre"
+  },
+  "milieu": [
+   "Soleil",
+   "Léger, sableux",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Aussi appelée ail de société. Sud-africaine ; rustique environ -10 °C, pailler en hiver. Différente des Allium par ses fleurs tubulaires à couronne. Cultivar panaché 'Silver Lace'.",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Veronicastrum virginicum",
+  "nom_accepte": "Veronicastrum virginicum",
+  "commun": "Véronique de Virginie",
+  "famille": "Plantaginaceae",
+  "cles": [
+   "feuilles étroites dentées en verticilles de 3 à 7",
+   "épis fins blancs en candélabre au sommet",
+   "tiges raides non ramifiées jusqu'à 1,5-2 m"
+  ],
+  "sources_cles": [
+   "https://www.minnesotawildflowers.info/flower/culvers-root",
+   "https://www.rhs.org.uk/plants/18873/wd/details",
+   "https://www.canr.msu.edu/nativeplants/plant_facts/culvers_root",
+   "https://www.promessedefleurs.ie/gardening-tips/familysheet/emveronicastrum-virginicum-em-virginia-veronica-to-plant-to-grow"
+  ],
+  "phrase": "Grands épis blancs en candélabre et étages de feuilles verticillées ; prairies fraîches.",
+  "description": {
+   "port": "Vivace dressée de 1,5 à 2 m",
+   "feuilles": "Lancéolées, dentées, en verticilles de 3 à 7",
+   "fleurs": "Épis effilés blancs, parfois rosés ou lavande",
+   "floraison": "Juillet à septembre"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Humifère et frais",
+   "Frais à humide",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Nord-américaine. Les Veronica ont des feuilles opposées, non verticillées. Anciennement classée en Scrophulariaceae. pH non précisé par les sources consultées (tolère l'argile).",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Leucanthemum × superbum",
+  "nom_accepte": "Leucanthemum × superbum",
+  "commun": "Marguerite d'été",
+  "famille": "Asteraceae",
+  "cles": [
+   "grands capitules blancs à cœur jaune, 7 à 10 cm",
+   "ligules blanches nombreuses, souvent trilobées au bout",
+   "feuilles épaisses vert foncé, étroites, dentées",
+   "touffe robuste de 50 cm à 1 m, tiges peu ramifiées"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/98781/leucanthemum-superbum/details",
+   "https://www.naturespot.org/species/shasta-daisy",
+   "https://apps.lucidcentral.org/plants_se_nsw/text/entities/leucanthemum_x_superbum.htm"
+  ],
+  "phrase": "Grandes marguerites blanches tout l'été, bonne fleur à couper ; massifs ensoleillés.",
+  "description": {
+   "port": "Vivace en touffe de 50 cm à 1 m",
+   "feuilles": "Basales elliptiques-oblongues, dentées, vert foncé épaisses",
+   "fleurs": "Capitules blancs simples ou doubles à cœur jaune, jusqu'à 10 cm",
+   "floraison": "Juin à septembre"
+  },
+  "milieu": [
+   "Soleil",
+   "Frais et drainé",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Nom commun proposé « Grande marguerite » remplacé : il désigne surtout L. vulgare/L. maximum ; « marguerite d'été » (shasta daisy) est l'usage horticole, non confirmé par une source lue ici. Hybride L. lacustre × L. maximum. Plus grand et à capitules plus larges que L. vulgare. pH non précisé par les sources consultées.",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Physostegia virginiana",
+  "nom_accepte": "Physostegia virginiana",
+  "commun": "Physostégie de Virginie",
+  "famille": "Lamiaceae",
+  "cles": [
+   "épi dense de fleurs tubulaires en 4 rangées nettes",
+   "fleurs roses à lilas ou blanches, en gueule",
+   "tiges carrées dressées, épis jusqu'à 25 cm",
+   "feuilles sessiles lancéolées à dents aiguës espacées"
+  ],
+  "sources_cles": [
+   "https://illinoiswildflowers.info/prairie/plantx/obed_plantx.htm",
+   "https://inpn.mnhn.fr/espece/cd_nom/95404",
+   "https://www.prairieresto.com/plant/physostegia-virginiana/",
+   "https://monde.ccdmd.qc.ca/ressource/?id=111139"
+  ],
+  "phrase": "Épis roses de fin d'été, fleurs qui restent où on les pousse ; s'étale en sol frais.",
+  "description": {
+   "port": "Vivace drageonnante de 60 cm à 1,2 m",
+   "feuilles": "Sessiles, lancéolées, glabres, dents aiguës espacées",
+   "fleurs": "Tubulaires bilabiées roses, lilas ou blanches, en 4 rangs",
+   "floraison": "Juillet à octobre"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Riche et frais",
+   "Frais à humide",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Nom proposé « Cataleptique » gardé comme synonyme populaire (plante cataleptique, plante charnière) ; nom INPN : Physostégie de Virginie. Rhizomes envahissants en sol humide. pH non précisé par les sources consultées.",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Gaillardia × grandiflora",
+  "nom_accepte": "Gaillardia × grandiflora",
+  "commun": "Gaillarde",
+  "famille": "Asteraceae",
+  "cles": [
+   "capitules rouges à pointes jaunes, cœur brun rouge",
+   "ligules bicolores en bandes rouge orangé et jaune",
+   "feuilles étroites gris-vert, velues et dentées"
+  ],
+  "sources_cles": [
+   "https://plants.ces.ncsu.edu/plants/gaillardia-x-grandiflora/common-name/blanket-flower/",
+   "https://nzflora.info/factsheet/taxon/Gaillardia-xgrandiflora.html",
+   "https://www.jardiner-malin.fr/fiche/gaillarde.html",
+   "https://garden.org/learn/howto/grow/blanketflowers/"
+  ],
+  "phrase": "Floraison chaude rouge et jaune tout l'été, très résistante à la sécheresse ; sol drainé.",
+  "description": {
+   "port": "Vivace en touffe, souvent de courte durée",
+   "feuilles": "Linéaires à lancéolées, dentées, couvertes de poils grisâtres",
+   "fleurs": "Capitules rouges bordés de jaune, centre brun rouge",
+   "floraison": "Juin à octobre"
+  },
+  "milieu": [
+   "Soleil",
+   "Léger, sableux",
+   "Sec",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Hybride G. aristata × G. pulchella, souvent de courte durée. Ne supporte pas l'argile détrempée en hiver. G. pulchella (annuelle) est très proche.",
+  "cat": "vivace"
+ }
+]

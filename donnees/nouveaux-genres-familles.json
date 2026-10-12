@@ -1,0 +1,707 @@
+{
+ "genres": {
+  "Melia": {
+   "famille": "Meliaceae",
+   "GD": [
+    "",
+    "Arbres caducs de 8 à 15 m, couronne étalée.",
+    "Alternes, bipennées, folioles dentées.",
+    "Mai à juin, panicules lâches de fleurs lilas parfumées ; drupes jaunes persistant en hiver.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Drainé",
+    "Sec à frais",
+    "Tous pH",
+    "Environ -12 à -15 °C ; abriter du vent froid.",
+    ""
+   ],
+   "sources": [
+    "https://www.rhs.org.uk/plants/57957/melia-azedarach/details",
+    "https://www.worldplants.ca/display.php?id=1339",
+    "https://www.lapetiteloiterie.fr/lpl/wp-content/uploads/melia-azedarach.pdf",
+    "https://www.vdberk.co.uk/trees/melia-azedarach/"
+   ],
+   "a_reverifier": false
+  },
+  "Tetradium": {
+   "famille": "Rutaceae",
+   "GD": [
+    "",
+    "Arbres caducs de 8 à 10 m en culture, couronne étalée.",
+    "Opposées, imparipennées (5 à 11 folioles), luisantes dessus, glauques dessous ; jaunes en automne.",
+    "Juillet à août, larges corymbes crème très mellifères.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Drainé",
+    "Sec à frais",
+    "Tous pH",
+    "Environ -15 °C et plus (zones USDA 5 à 8).",
+    ""
+   ],
+   "sources": [
+    "https://www.ebben.nl/fr/treeebb/tedaniel-tetradium-daniellii/pdf/",
+    "https://www.jardiner-malin.fr/fiche/larbre-a-miel.html"
+   ],
+   "a_reverifier": false
+  },
+  "Platycladus": {
+   "famille": "Cupressaceae",
+   "GD": [
+    "",
+    "Conifère arbustif à petit arbre de 3 à 15 m, souvent conique ou à plusieurs troncs.",
+    "Écailles opposées sur rameaux aplatis disposés en plans verticaux.",
+    "Printemps ; cônes charnus bleutés puis bruns, écailles épaisses en crochet.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Drainé",
+    "Sec à frais",
+    "Tous pH",
+    "Environ -15 à -20 °C (zone USDA 6).",
+    ""
+   ],
+   "sources": [
+    "https://www.arboretum.purdue.edu/explorer/plants/676/",
+    "https://landscapeplants.oregonstate.edu/plants/platycladus-orientalis",
+    "https://www.conifers.org/cu/pl/index.htm"
+   ],
+   "a_reverifier": false
+  },
+  "Daboecia": {
+   "famille": "Ericaceae",
+   "GD": [
+    "",
+    "Sous-arbrisseaux persistants de 30 à 50 cm.",
+    "Alternes, petites, elliptiques, vert foncé dessus, blanchâtres dessous.",
+    "Juin à septembre (parfois octobre), grosses clochettes pourpres, roses ou blanches en grappes lâches.",
+    "",
+    "",
+    "",
+    "Soleil à mi-ombre",
+    "Humifère et frais",
+    "Frais",
+    "Acide",
+    "Abriter en climat froid.",
+    ""
+   ],
+   "sources": [
+    "https://www.jardiner-malin.fr/fiche/daboecia-cantabrica.html",
+    "https://www.truffaut.com/daboecia-cantabrica-pot-2l-1104772.html"
+   ],
+   "a_reverifier": false
+  },
+  "Myrica": {
+   "famille": "Myricaceae",
+   "GD": [
+    "",
+    "Arbustes caducs de 1 à 2 m, drageonnants (genre restreint à M. gale et quelques espèces ; les autres en Morella).",
+    "Alternes, oblancéolées, dentées vers le sommet, ponctuées de glandes, aromatiques au froissement.",
+    "Printemps avant les feuilles, chatons mâles brun orangé et femelles rougeâtres, souvent sur pieds séparés.",
+    "",
+    "",
+    "",
+    "Soleil à mi-ombre",
+    "Détrempé ou vaseux",
+    "Humide",
+    "Acide",
+    "Très rustique.",
+    ""
+   ],
+   "sources": [
+    "https://www.techno-science.net/fr/definitions/piment-royal",
+    "https://landscapeplants.oregonstate.edu/morella",
+    "https://flore-de-la-belgique.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/name.php?id=8876"
+   ],
+   "a_reverifier": false
+  },
+  "Hippocrepis": {
+   "famille": "Fabaceae",
+   "GD": [
+    "",
+    "Arbrisseau de 1 à 2 m (H. emerus) ; les autres espèces sont des herbacées basses.",
+    "Alternes, imparipennées, 5 à 9 folioles obovales.",
+    "Avril à juillet, fleurs papilionacées jaunes par 1 à 5 ; gousses fines articulées.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Drainé",
+    "Sec",
+    "Neutre à alcalin",
+    "",
+    ""
+   ],
+   "sources": [
+    "https://www.rhs.org.uk/plants/77693/hippocrepis-emerus/details",
+    "https://eflorasys.univ-lorraine.fr/index.php/en/species/view/102845",
+    "https://www.jardiner-malin.fr/fiche/coronille.html"
+   ],
+   "a_reverifier": false
+  },
+  "Atriplex": {
+   "famille": "Amaranthaceae",
+   "GD": [
+    "",
+    "Arbustes semi-persistants de 1,5 à 2 m (A. halimus) ; nombreuses espèces herbacées annuelles.",
+    "Alternes, ovales à losangiques, gris argenté, d'aspect farineux.",
+    "Été, petites fleurs verdâtres discrètes en panicules.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Drainé",
+    "Sec",
+    "Tous pH",
+    "Environ -10 °C (RHS H4) ; supporte embruns et sel.",
+    ""
+   ],
+   "sources": [
+    "https://www.rhs.org.uk/plants/1903/wd/details",
+    "https://www.monherbier.com/site/especes/31716",
+    "https://www.jardiner-malin.fr/fiche/pourpier-mer-arbuste-mer.html"
+   ],
+   "a_reverifier": false
+  },
+  "Bupleurum": {
+   "famille": "Apiaceae",
+   "GD": [
+    "",
+    "Arbuste persistant de 1,5 à 2,5 m (B. fruticosum) ; la plupart des espèces sont herbacées.",
+    "Alternes, simples, entières, coriaces et bleu-vert chez B. fruticosum.",
+    "Juillet à septembre, ombelles jaunes.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Pauvre, caillouteux, très drainé",
+    "Sec",
+    "Neutre à alcalin",
+    "RHS H4, environ -15 °C ; supporte les embruns.",
+    ""
+   ],
+   "sources": [
+    "https://www.rhs.org.uk/plants/2555/bupleurum-fruticosum/details",
+    "https://www.promessedefleurs.ie/shrubs/shrubs-a-to-z/bupleurum-fruticosum.html",
+    "https://www.jelitto.com/Seed/Perennials/BUPLEURUM+fruticosum+Portion+s.html"
+   ],
+   "a_reverifier": false
+  },
+  "Loropetalum": {
+   "famille": "Hamamelidaceae",
+   "GD": [
+    "",
+    "Arbustes persistants de 1 à 4 m selon le cultivar.",
+    "Alternes, ovales, petites ; pourpres chez la var. rubrum.",
+    "Fin d'hiver à printemps, fleurs parfumées à pétales en lanières, blanches ou roses, en bouquets.",
+    "",
+    "",
+    "",
+    "Soleil à mi-ombre",
+    "Humifère et frais",
+    "Frais",
+    "Acide à neutre",
+    "RHS H3 à H4 (environ -5 à -10 °C).",
+    ""
+   ],
+   "sources": [
+    "https://www.rhs.org.uk/plants/10535/wd/details",
+    "https://www.rhs.org.uk/plants/318360/loropetalum-chinense-var-rubrum",
+    "https://www.gardenia.net/genus/loropetalum-plant-care-and-best-varieties"
+   ],
+   "a_reverifier": false
+  },
+  "Westringia": {
+   "famille": "Lamiaceae",
+   "GD": [
+    "",
+    "Arbustes persistants de 1 à 2 m, compacts.",
+    "Verticillées par 3 à 5, linéaires, gris-vert.",
+    "Surtout printemps et été (fleurs éparses toute l'année), petites fleurs à 2 lèvres blanc à mauve pâle.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Drainé",
+    "Sec",
+    "Tous pH",
+    "Environ -5 °C ; climat doux ou abri.",
+    ""
+   ],
+   "sources": [
+    "https://anbg.gov.au/gnp/gnp1/westringia-fruticosa.html",
+    "https://leafland.co.nz/plants/westringia-fruticosa/",
+    "https://www.paramountplants.co.uk/plant/wf/westringia-fruticosa.html"
+   ],
+   "a_reverifier": false
+  },
+  "Polygala": {
+   "famille": "Polygalaceae",
+   "GD": [
+    "",
+    "Arbustes persistants de 1 à 2,5 m (P. myrtifolia) ; aussi petites vivaces et annuelles.",
+    "Alternes, simples, entières, elliptiques.",
+    "Longue floraison sous climat doux, fleurs pourpres à 2 sépales en ailes et carène à crête frangée.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Drainé",
+    "Sec à frais",
+    "Tous pH",
+    "P. myrtifolia RHS H3 à H4 (environ -5 °C).",
+    ""
+   ],
+   "sources": [
+    "https://worldplants.ca/display.php?id=6046",
+    "https://vicflora.rbg.vic.gov.au/flora/taxon/fc351117-0f8f-4efb-86d2-e9b7738d1ee7",
+    "https://nzflora.info/factsheet/Taxon/Polygala-myrtifolia.html"
+   ],
+   "a_reverifier": false
+  },
+  "Rubia": {
+   "famille": "Rubiaceae",
+   "GD": [
+    "",
+    "Lianes herbacées ou sous-ligneuses accrochantes de 1 à 3 m.",
+    "Verticillées par 4 à 6, coriaces et luisantes chez R. peregrina, bords à aiguillons accrochants.",
+    "Mai à juillet, petites fleurs jaune verdâtre à 5 lobes ; baies noires.",
+    "",
+    "",
+    "",
+    "Soleil à mi-ombre",
+    "Drainé",
+    "Sec à frais",
+    "Tous pH",
+    "",
+    ""
+   ],
+   "sources": [],
+   "a_reverifier": true
+  },
+  "Bignonia": {
+   "famille": "Bignoniaceae",
+   "GD": [
+    "",
+    "Liane semi-persistante à vrilles de 6 à 15 m.",
+    "Opposées, à 2 folioles et une vrille ramifiée terminée par des crampons adhésifs.",
+    "Avril à juin, fleurs en trompette orange-rouge, jaunes à la gorge.",
+    "",
+    "",
+    "",
+    "Soleil à mi-ombre",
+    "Frais et drainé",
+    "Frais",
+    "Tous pH",
+    "Environ -15 °C.",
+    ""
+   ],
+   "sources": [],
+   "a_reverifier": true
+  },
+  "Pileostegia": {
+   "famille": "Hydrangeaceae",
+   "GD": [
+    "",
+    "Liane persistante à racines crampons de 6 à 10 m, croissance lente.",
+    "Opposées, coriaces, oblongues, vert foncé, nervures marquées.",
+    "Août à octobre, panicules mousseuses blanc crème.",
+    "",
+    "",
+    "",
+    "Mi-ombre à ombre",
+    "Humifère et frais",
+    "Frais",
+    "Tous pH",
+    "Environ -15 °C.",
+    ""
+   ],
+   "sources": [],
+   "a_reverifier": true
+  },
+  "Schizophragma": {
+   "famille": "Hydrangeaceae",
+   "GD": [
+    "",
+    "Lianes caduques à racines crampons, jusqu'à 10 m.",
+    "Opposées, ovales à cordées, longuement pétiolées, dentées.",
+    "Juillet, corymbes plats bordés de bractées blanches formées d'un seul sépale (4 chez Hydrangea petiolaris).",
+    "",
+    "",
+    "",
+    "Soleil à mi-ombre",
+    "Humifère et frais",
+    "Frais",
+    "Tous pH",
+    "Environ -20 °C.",
+    ""
+   ],
+   "sources": [],
+   "a_reverifier": true
+  },
+  "Ammophila": {
+   "famille": "Poaceae",
+   "GD": [
+    "",
+    "Grandes touffes drageonnantes de 60 à 120 cm, fixatrices des dunes.",
+    "Enroulées en jonc, glauques, raides et piquantes.",
+    "Juin à août, panicule dense en épi cylindrique jaune paille.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Léger, sableux",
+    "Sec",
+    "Tous pH",
+    "Très rustique.",
+    ""
+   ],
+   "sources": [],
+   "a_reverifier": true
+  },
+  "Corynephorus": {
+   "famille": "Poaceae",
+   "GD": [
+    "",
+    "Petites touffes denses de 10 à 30 cm.",
+    "Très fines, enroulées, raides, gris-bleu.",
+    "Juin à août, panicule violacée à arêtes en massue.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Léger, sableux",
+    "Sec",
+    "Acide",
+    "Très rustique.",
+    ""
+   ],
+   "sources": [],
+   "a_reverifier": true
+  },
+  "Agrostis": {
+   "famille": "Poaceae",
+   "GD": [
+    "",
+    "Touffes fines de 20 à 60 cm ; nombreuses espèces gazonnantes.",
+    "Linéaires, fines ; enroulées et glauques chez A. curtisii.",
+    "Juin à août, panicules fines et légères, épillets à une fleur.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Léger, sableux",
+    "Sec à frais",
+    "Acide",
+    "Très rustique.",
+    ""
+   ],
+   "sources": [],
+   "a_reverifier": true
+  },
+  "Cladium": {
+   "famille": "Cyperaceae",
+   "GD": [
+    "",
+    "Grandes touffes rhizomateuses de 1 à 2,5 m.",
+    "Longues, glauques, carénées, bords et carène finement dentés, tranchants.",
+    "Juin à août, grandes inflorescences ramifiées d'épillets bruns.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Détrempé ou vaseux",
+    "Aquatique",
+    "Neutre à alcalin",
+    "",
+    ""
+   ],
+   "sources": [],
+   "a_reverifier": true
+  },
+  "Anemanthele": {
+   "famille": "Poaceae",
+   "GD": [
+    "",
+    "Touffe arquée persistante de 60 à 90 cm.",
+    "Fines, arquées, vert olive se teintant de cuivre, orange et rouge.",
+    "Juin à septembre, panicules légères brun rosé retombantes.",
+    "",
+    "",
+    "",
+    "Soleil à mi-ombre",
+    "Frais et drainé",
+    "Frais",
+    "Tous pH",
+    "Environ -10 °C.",
+    ""
+   ],
+   "sources": [],
+   "a_reverifier": true
+  },
+  "Chasmanthium": {
+   "famille": "Poaceae",
+   "GD": [
+    "",
+    "Touffes dressées caduques de 60 à 120 cm.",
+    "Larges et plates (1 à 2 cm), vert frais, jaune doré en automne.",
+    "Juillet à septembre, épillets aplatis pendants, verts puis bronze.",
+    "",
+    "",
+    "",
+    "Soleil à mi-ombre",
+    "Frais et drainé",
+    "Frais",
+    "Tous pH",
+    "Très rustique (environ -25 °C).",
+    ""
+   ],
+   "sources": [],
+   "a_reverifier": true
+  },
+  "Muhlenbergia": {
+   "famille": "Poaceae",
+   "GD": [
+    "",
+    "Touffes de 60 à 90 cm.",
+    "Très fines, filiformes, vert foncé.",
+    "Septembre à octobre, nuage de panicules vaporeuses rose pourpre.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Drainé",
+    "Sec",
+    "Tous pH",
+    "Environ -15 °C en sol drainé ; craint l'humidité hivernale.",
+    ""
+   ],
+   "sources": [],
+   "a_reverifier": true
+  },
+  "Asphodelus": {
+   "famille": "Asphodelaceae",
+   "GD": [
+    "",
+    "Vivaces à racines tubérisées, hampes de 60 à 120 cm.",
+    "Toutes basales, linéaires, en gouttière ou carénées.",
+    "Avril à juin, grappes de fleurs étoilées blanches à nervure médiane brune.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Drainé",
+    "Sec à frais",
+    "Tous pH",
+    "",
+    ""
+   ],
+   "sources": [],
+   "a_reverifier": true
+  },
+  "Lithodora": {
+   "famille": "Boraginaceae",
+   "GD": [
+    "",
+    "Sous-arbrisseaux persistants prostrés de 10 à 30 cm.",
+    "Alternes, étroites, vert foncé, hérissées de poils raides.",
+    "Mai à juillet, fleurs en entonnoir bleu gentiane.",
+    "",
+    "",
+    "",
+    "Soleil à mi-ombre",
+    "Frais et drainé",
+    "Frais",
+    "Acide",
+    "Environ -15 °C.",
+    ""
+   ],
+   "sources": [],
+   "a_reverifier": true
+  },
+  "Lotus": {
+   "famille": "Fabaceae",
+   "GD": [
+    "",
+    "Vivaces herbacées couchées à dressées de 10 à 40 cm.",
+    "Alternes, à 5 folioles dont 2 à la base, semblables à des stipules.",
+    "Mai à septembre, ombelles de fleurs papilionacées jaunes souvent teintées de rouge ; gousses en patte d'oiseau.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Tous sols",
+    "Sec à frais",
+    "Tous pH",
+    "",
+    ""
+   ],
+   "sources": [],
+   "a_reverifier": true
+  },
+  "Libertia": {
+   "famille": "Iridaceae",
+   "GD": [
+    "",
+    "Vivaces en touffes persistantes de 40 à 90 cm.",
+    "Linéaires, en éventail, raides, vert foncé.",
+    "Mai à juin, fleurs blanches à 3 pétales en panicules dressées.",
+    "",
+    "",
+    "",
+    "Soleil à mi-ombre",
+    "Frais et drainé",
+    "Frais",
+    "Tous pH",
+    "Environ -10 °C.",
+    ""
+   ],
+   "sources": [],
+   "a_reverifier": true
+  },
+  "Tulbaghia": {
+   "famille": "Amaryllidaceae",
+   "GD": [
+    "",
+    "Vivaces bulbeuses en touffes de 30 à 60 cm.",
+    "Linéaires, étroites, odeur d'ail au froissement.",
+    "Juin à octobre, ombelles de fleurs tubulaires mauves.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Drainé",
+    "Sec à frais",
+    "Tous pH",
+    "Environ -5 à -10 °C.",
+    ""
+   ],
+   "sources": [],
+   "a_reverifier": true
+  },
+  "Veronicastrum": {
+   "famille": "Plantaginaceae",
+   "GD": [
+    "",
+    "Vivaces dressées de 1,2 à 2 m.",
+    "Verticillées par 3 à 7, lancéolées, dentées.",
+    "Juillet à septembre, longs épis effilés blancs, roses ou bleu lavande.",
+    "",
+    "",
+    "",
+    "Soleil à mi-ombre",
+    "Riche et frais",
+    "Frais à humide",
+    "Tous pH",
+    "Très rustique.",
+    ""
+   ],
+   "sources": [],
+   "a_reverifier": true
+  },
+  "Physostegia": {
+   "famille": "Lamiaceae",
+   "GD": [
+    "",
+    "Vivaces rhizomateuses dressées de 60 à 120 cm, tiges carrées.",
+    "Opposées, lancéolées, dentées.",
+    "Juillet à septembre, épis à 4 rangs de fleurs roses ou blanches.",
+    "",
+    "",
+    "",
+    "Soleil à mi-ombre",
+    "Riche et frais",
+    "Frais à humide",
+    "Tous pH",
+    "Très rustique.",
+    ""
+   ],
+   "sources": [],
+   "a_reverifier": true
+  },
+  "Gaillardia": {
+   "famille": "Asteraceae",
+   "GD": [
+    "",
+    "Vivaces de courte durée ou annuelles de 30 à 80 cm.",
+    "Alternes, lancéolées, velues, gris-vert.",
+    "Juin à octobre, capitules rouges bordés de jaune, cœur bombé pourpre.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Léger, sableux",
+    "Sec",
+    "Tous pH",
+    "Environ -15 °C en sol drainé.",
+    ""
+   ],
+   "sources": [],
+   "a_reverifier": true
+  }
+ },
+ "familles": {
+  "Meliaceae": {
+   "FI": "Meliaceae|Méliacées|Arbres à feuilles pennées dont les étamines sont soudées en tube autour du pistil.|Alternes, pennées ou bipennées.|Petites, 4 à 5 pétales, étamines soudées en tube.|Drupe, baie ou capsule ; graines souvent ailées (acajou).|Sapindacées et Anacardiacées : feuilles pennées aussi, mais étamines libres.",
+   "FW": "Meliaceae|600",
+   "FX": [
+    "Famille de l'acajou, du margousier (neem) et du lilas des Indes (Melia), surtout tropicale.",
+    "",
+    "Arbres d'ombrage des régions chaudes (Melia) ; bois précieux.",
+    ""
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Meliaceae",
+    "https://apps.lucidcentral.org/rainforest/text/entities/Meliaceae.htm",
+    "https://treelib.ca/family/73/meliaceae"
+   ]
+  },
+  "Myricaceae": {
+   "FI": "Myricaceae|Myricacées|Arbustes aromatiques à feuilles ponctuées de glandes et fleurs en chatons.|Alternes, simples, ponctuées de glandes aromatiques.|Unisexuées, sans pétales, en chatons.|Petite drupe ou noix, souvent cireuse.|Salicacées : chatons aussi, mais feuilles non aromatiques.",
+   "FW": "Myricaceae|55",
+   "FX": [
+    "Famille du piment royal (Myrica), des ciriers (Morella) et de Comptonia.",
+    "",
+    "Haies et massifs en sols humides ou pauvres ; racines fixatrices d'azote (Frankia).",
+    ""
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Myricaceae",
+    "https://frankia.mcb.uconn.edu/home/myricaceae/",
+    "https://landscapeplants.oregonstate.edu/morella"
+   ]
+  },
+  "Amaranthaceae": {
+   "FI": "Amaranthaceae|Amaranthacées|Herbes ou arbustes à minuscules fleurs sans pétales, feuillage souvent farineux ou charnu, fréquents en milieu salé.|Alternes ou opposées, simples, souvent charnues ou farineuses.|Minuscules, verdâtres, sans pétales, en glomérules ou épis.|Akène ou utricule à une graine, parfois enveloppé de bractées.|Polygonacées : fleurs discrètes aussi, mais gaine (ochréa) à la base des feuilles.",
+   "FW": "Amaranthaceae|2 040",
+   "FX": [
+    "Famille des amarantes, épinards, betteraves, arroches (Atriplex) et salicornes ; inclut les anciennes Chénopodiacées.",
+    "",
+    "Haies littorales (Atriplex), massifs (amarantes, célosies), plantes potagères.",
+    ""
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Amaranthaceae",
+    "https://www.inaturalist.org/guide_taxa/1017149"
+   ]
+  },
+  "Polygalaceae": {
+   "FI": "Polygalaceae|Polygalacées|Fleur faussement papilionacée : 2 sépales latéraux colorés en ailes et carène souvent frangée.|Alternes, simples, entières.|Zygomorphes, 2 sépales pétaloïdes en ailes, pétale inférieur en carène à crête.|Capsule aplatie à 2 loges.|Fabacées : fleur papilionacée mais ailes formées de pétales, feuilles souvent composées.",
+   "FW": "Polygalaceae|950",
+   "FX": [
+    "Famille des polygales (Polygala), presque cosmopolite, des petites vivaces de prairie aux arbustes d'Afrique du Sud.",
+    "",
+    "Arbuste fleuri des jardins méditerranéens (P. myrtifolia), petites vivaces de rocaille.",
+    ""
+   ],
+   "sources": [
+    "https://flora.tmag.tas.gov.au/vascular-families/polygalaceae",
+    "https://en.wikipedia.org/wiki/Polygala"
+   ]
+  }
+ }
+}
