@@ -4,8 +4,9 @@
 // 50 personnes sur le même wifi ne dépasse plus la limite de l'API (60 à 100 requêtes par minute).
 // Lancé chaque mois par .github/workflows/photos.yml (1 requête par seconde, environ 1 h).
 // Usage local : node outils/construire_photos.js [nombre d'espèces, pour un essai]
+// Essai sur une liste : LISTE=fichier.json (liste de noms latins) SORTIE=fichier.json node outils/construire_photos.js
 const fs=require('fs'),vm=require('vm'),path=require('path');
-const R=path.resolve(__dirname,'..'),SORTIE=path.join(R,'donnees','photos.json');
+const R=path.resolve(__dirname,'..'),SORTIE=process.env.SORTIE?path.resolve(process.env.SORTIE):path.join(R,'donnees','photos.json');
 const h=fs.readFileSync(path.join(R,'index.html'),'utf8');
 const a=h.indexOf('const S=['),b=h.indexOf('\n',h.indexOf('for(const t in X3)'));
 const S=vm.runInNewContext(h.slice(a,b)+'\nS');
@@ -53,13 +54,14 @@ async function espece(l){
 }
 (async()=>{
   const ancien=fs.existsSync(SORTIE)?JSON.parse(fs.readFileSync(SORTIE,'utf8')).especes||{}:{};
-  const L=S.filter(s=>!s[3]).slice(0,+process.argv[2]||S.length),out={},sans=[];let ok=0,garde=0,rien=0;
+  const LI=process.env.LISTE?JSON.parse(fs.readFileSync(process.env.LISTE,'utf8')):null;
+  const L=(LI?LI.map(l=>[l]):S.filter(s=>!s[3])).slice(0,+process.argv[2]||Infinity),out={},sans=[];let ok=0,garde=0,rien=0;
   for(const[i,s]of L.entries()){
     try{const e=await espece(s[0]);if(e){out[s[0]]=e;ok++}else{rien++;sans.push(s[0])}}
     catch(e){if(ancien[s[0]]){out[s[0]]=ancien[s[0]];garde++}else rien++;console.log('échec',s[0],e.message)}
     if(i%25===24)console.log(`${i+1}/${L.length} espèces, ${n} requêtes`);
   }
-  if(ok<L.length*.8&&Object.keys(ancien).length){console.log(`seulement ${ok} espèces à jour : fichier précédent conservé`);process.exit(1)}
+  if(!LI&&ok<L.length*.8&&Object.keys(ancien).length){console.log(`seulement ${ok} espèces à jour : fichier précédent conservé`);process.exit(1)}
   fs.writeFileSync(SORTIE,JSON.stringify({date:new Date().toISOString().slice(0,10),especes:out,sans}));
   console.log(`${ok} espèces à jour, ${garde} reprises du fichier précédent, ${rien} sans photo libre ; ${n} requêtes ; ${(fs.statSync(SORTIE).size/1024).toFixed(0)} Ko`);
 })();

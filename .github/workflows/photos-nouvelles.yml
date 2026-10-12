@@ -1,0 +1,34 @@
+# Préparation des nouvelles espèces (branche de travail, rien n'est publié) : cherche leurs photos iNaturalist libres
+# avec le même script que l'index de l'appli, et range le résultat dans donnees/photos-nouvelles.json.
+# Se lance tout seul quand la liste donnees/nouvelles-especes-liste.json change sur cette branche.
+name: Photos des nouvelles espèces
+on:
+  workflow_dispatch:
+  push:
+    branches: [claude/youthful-tesla-t2e4cp]
+    paths: [donnees/nouvelles-especes-liste.json]
+permissions:
+  contents: write
+concurrency:
+  group: photos-nouvelles
+  cancel-in-progress: true
+jobs:
+  photos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Chercher les photos (1 requête par seconde)
+        run: LISTE=donnees/nouvelles-especes-liste.json SORTIE=donnees/photos-nouvelles.json node outils/construire_photos.js
+      - name: Ranger le résultat sur la branche
+        run: |
+          git config user.name "Photos des nouvelles espèces"
+          git config user.email "actions@github.com"
+          git add donnees/photos-nouvelles.json
+          git diff --cached --quiet && { echo "Rien de nouveau"; exit 0; }
+          git commit -m "Photos des nouvelles espèces : essai du $(date +%Y-%m-%d)"
+          git pull --rebase origin claude/youthful-tesla-t2e4cp
+          git push origin HEAD:claude/youthful-tesla-t2e4cp
