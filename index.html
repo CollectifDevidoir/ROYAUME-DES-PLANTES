@@ -2486,7 +2486,7 @@ function paintCredits(s){
   el.innerHTML=a&&a.inat?a.inat.imgs.map(x=>'<p>'+esc(frLic(x.lic))+'</p>').join('')+'<p>Photos via iNaturalist.</p>':'<p>Photos : Wikipédia / Wikimedia Commons (voir le © sur chaque photo).</p>';
 }
 
-let replay=null,pre=null,organ='',pvSet=null;
+let replay=null,pre=null,preN=null,qCur=null,organ='',pvSet=null;   // preN : question normale mise de côté pendant un entraînement (resservie en le quittant, photo déjà chargée)
 let famFocus=null,famCur=null,curTab='quiz',acqNow=false,lastKn=-1,qN=0,recent=[],sess=new Set(),soon=[],tyRun={t:'',n:0},trLbl='',trTot=0,trN=0,wasTrain=false;
 function stickUI(){document.body.classList.toggle('nostick',curTab!=='quiz'||curTrain)}
 function trUI(){stickUI();$('trn').hidden=!curTrain;$('chips').hidden=curTrain;$('quiz').classList.toggle('train',curTrain);if(curTrain){$('trl').innerHTML=ico('target','ic-in')+' Mode entraînement';$('trs').textContent=trLbl+' · '+Math.min(trN,trTot)+'/'+trTot+' · sans effet sur le niveau'}}
@@ -2703,11 +2703,11 @@ async function next(){
   $('pic').className='pic sk';$('pic').textContent='Chargement…';done=false;
   const slow=setTimeout(()=>{if(tk===nxt&&$('pic').classList.contains('sk'))$('pic').textContent='Chargement de la photo… la connexion semble lente.'},5000);
   const q=await(pre||prepare());clearTimeout(slow);
-  if(tk!==nxt)return;pre=null;
+  if(tk!==nxt)return;pre=null;if(q&&!q.train)qCur=q;
   if(!q&&Date.now()<iOff){const w=()=>{const e=$('q-wait');if(e)e.textContent=Math.max(1,Math.ceil((iOff-Date.now())/1e3))};$('pic').innerHTML='<div style="padding:16px;text-align:center" role="status"><p>Le service de photos demande une courte pause.<br>Reprise dans <b id="q-wait"></b> s…</p></div>';w();const iv=setInterval(()=>{if(tk!==nxt||!$('q-wait')){clearInterval(iv);return}w()},1e3);setTimeout(()=>{clearInterval(iv);if(tk===nxt)next()},iOff-Date.now()+400);return}
   if(!q){$('pic').innerHTML='<div style="padding:16px"><p>Aucune image chargée. Vérifie la connexion.</p><button class="big" id="q-retry">Réessayer</button></div>';$('q-retry').onclick=()=>{bad.clear();next()};return}
   cur=q.s;typed=q.typed;curTrain=!!q.train;pvSet=q.pv||null;jeuQ={t:Date.now(),o:pvSet?'photos':!q.im.label?'plante':JEU_ORG[q.im.label]||'autre'};$('qc').classList.toggle('ty',!!typed&&!pvSet);if(typed&&!pvSet)firstQ=false;
-  if(wasTrain&&!curTrain){toast('Entraînement terminé');famFocus=null}wasTrain=curTrain;if(curTrain)trN=Math.min(trN+1,trTot);trUI();
+  if(wasTrain&&!curTrain){toast('Entraînement terminé');famFocus=null;preN=null}wasTrain=curTrain;if(curTrain)trN=Math.min(trN+1,trTot);trUI();
   if(pvSet){
     $('pic').hidden=true;$('q').className='pv';$('opts').className='opts ph';
     $('q').innerHTML='Quelle photo montre <span class="pvn">'+esc(cur[0])+'&nbsp;?</span>';
@@ -2757,7 +2757,7 @@ function answer(v){
 }
 function startReplay(l,lbl,fam){const u=[...new Set(l)];if(l.length>=4&&u.length===2&&l[0]!==l[1])showDiff(u,()=>startReplay0(l,lbl,fam));else startReplay0(l,lbl,fam)}
 function showDiff(u,go){const sp=u.map(n=>S.find(s=>s[0]===n)).filter(Boolean);if(sp.length<2)return go();openSheet(sp[0],sp[1],{go,diff:true})}
-function startReplay0(l,lbl,fam){famFocus=fam||null;firstQ=true;replay=[...l];trLbl=lbl||'Entraînement';trTot=l.length;trN=0;shown={};pre=null;tabTo('quiz');next()}
+function startReplay0(l,lbl,fam){famFocus=fam||null;firstQ=true;if(!curTrain&&!replay)preN=done?pre:qCur?Promise.resolve(qCur):null;replay=[...l];trLbl=lbl||'Entraînement';trTot=l.length;trN=0;shown={};pre=null;tabTo('quiz');next()}
 const OR=[['Feuilles',/feuill|limbe|pétiole|petiole|foliole|nervure|leaf|leaves|foliage|leaflet/i],['Fruits',/fruit|graine|gland|akène|akene|baie|samare|gousse|drupe|cône|capsule|noix|faîne|seed|berry|nut\b|pod|cone|acorn/i],['Fleurs',/fleur|inflorescence|pétale|chaton|floraison|corolle|flower|petal|catkin|bloom/i],['Écorce et rameaux',/écorce|ecorce|rameau|tronc|tige|bourgeon|branche|rhizome|bark|twig|stem|shoot|\bbud/i],['Port',/port\b|hauteur|silhouette|houppier|couronne|haut de|mesure|atteint|height|habit|crown|tall|grows/i]];
 const sents=x=>{const a=((x||'').replace(/\r/g,'').replace(/=+ *[^=\n]+ *=+/g,' ').replace(/\[[^\]]*\]/g,'').replace(/\s+/g,' ').match(/[^.!?]+[.!?]+/g)||[]).map(s=>s.trim()),o=[];a.forEach(s=>{const q=o[o.length-1];if(q&&/(?:\b[A-Z]|\b(?:subsp|var|env|cf|sp|ssp|spp|ex|fig|vol|av|apr|St|Ste))\.$/.test(q))o[o.length-1]=q+' '+s;else o.push(s)});return o.filter(s=>s.length>=30&&s.length<=300)};
 const orow=x=>{const r=OR.find(o=>o[1].test(x));return r?r[0]:null};
@@ -3236,7 +3236,7 @@ function startFamily(f){
   const l=S.filter(s=>FAM[gen(s[0])]===f).sort((a,b)=>own(a)-own(b)||Math.random()-.5).slice(0,10).map(s=>s[0]);
   startReplay(l.sort(()=>Math.random()-.5),'Famille : '+FI[f][0],f);
 }
-function restart(){last=null;cur=null;pre=null;replay=null;chips();next()}
+function restart(){last=null;cur=null;pre=null;preN=null;replay=null;chips();next()}
 function chips(){
   const pick=k=>{mode=k;firstQ=true;try{localStorage.setItem('qp.mode',k)}catch(e){}restart()};
   const own=s=>(st.sp[s[0]]||{b:0}).b>=4,cpt=k=>{const a=k==='tout'?S:S.filter(s=>s[2]===k);return a.filter(own).length+'/'+a.length};
@@ -3540,7 +3540,7 @@ $('shg').onclick=()=>setSh(shS()==='full'?'mid':'full');
 document.addEventListener('click',e=>{const x=e.target.closest&&e.target.closest('[data-sp],.pk[data-l]');if(!x)return;const s=S.find(y=>y[0]===(x.dataset.sp||x.dataset.l));if(s)openSheet(s,null,{})});
 $('rplay').onclick=()=>startReplay(st.tm.l.slice(),'Mes erreurs du jour');
 $('fday').onclick=()=>openFamily(famDay());
-$('trq').onclick=()=>{replay=null;pre=null;wasTrain=false;curTrain=false;famFocus=null;trUI();next()};
+$('trq').onclick=()=>{replay=null;pre=preN;preN=null;wasTrain=false;curTrain=false;famFocus=null;trUI();next()};
 $('help').onclick=()=>{$('dbody').innerHTML=helpHtml();const d=$('dlg');d.showModal?d.showModal():d.setAttribute('open','');d.scrollTop=0;$('dbody').scrollTop=0;const h=d.querySelector('h2');if(h)h.focus({preventScroll:true})};
 $('dx').onclick=()=>{const d=$('dlg');d.close?d.close():d.removeAttribute('open')};$('dlg-x').onclick=()=>$('dx').click();
 $('dlg').onclick=e=>{if(e.target===$('dlg'))$('dx').click()};
