@@ -72,53 +72,6 @@
    ],
    "a_reverifier": false
   },
-  "Daboecia": {
-   "famille": "Ericaceae",
-   "GD": [
-    "",
-    "Sous-arbrisseaux persistants de 30 à 50 cm.",
-    "Alternes, petites, elliptiques, vert foncé dessus, blanchâtres dessous.",
-    "Juin à septembre (parfois octobre), grosses clochettes pourpres, roses ou blanches en grappes lâches.",
-    "",
-    "",
-    "",
-    "Soleil à mi-ombre",
-    "Humifère et frais",
-    "Frais",
-    "Acide",
-    "Abriter en climat froid.",
-    ""
-   ],
-   "sources": [
-    "https://www.jardiner-malin.fr/fiche/daboecia-cantabrica.html",
-    "https://www.truffaut.com/daboecia-cantabrica-pot-2l-1104772.html"
-   ],
-   "a_reverifier": false
-  },
-  "Myrica": {
-   "famille": "Myricaceae",
-   "GD": [
-    "",
-    "Arbustes caducs de 1 à 2 m, drageonnants (genre restreint à M. gale et quelques espèces ; les autres en Morella).",
-    "Alternes, oblancéolées, dentées vers le sommet, ponctuées de glandes, aromatiques au froissement.",
-    "Printemps avant les feuilles, chatons mâles brun orangé et femelles rougeâtres, souvent sur pieds séparés.",
-    "",
-    "",
-    "",
-    "Soleil à mi-ombre",
-    "Détrempé ou vaseux",
-    "Humide",
-    "Acide",
-    "Très rustique.",
-    ""
-   ],
-   "sources": [
-    "https://www.techno-science.net/fr/definitions/piment-royal",
-    "https://landscapeplants.oregonstate.edu/morella",
-    "https://flore-de-la-belgique.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/name.php?id=8876"
-   ],
-   "a_reverifier": false
-  },
   "Hippocrepis": {
    "famille": "Fabaceae",
    "GD": [
@@ -658,21 +611,6 @@
     "https://en.wikipedia.org/wiki/Meliaceae",
     "https://apps.lucidcentral.org/rainforest/text/entities/Meliaceae.htm",
     "https://treelib.ca/family/73/meliaceae"
-   ]
-  },
-  "Myricaceae": {
-   "FI": "Myricaceae|Myricacées|Arbustes aromatiques à feuilles ponctuées de glandes et fleurs en chatons.|Alternes, simples, ponctuées de glandes aromatiques.|Unisexuées, sans pétales, en chatons.|Petite drupe ou noix, souvent cireuse.|Salicacées : chatons aussi, mais feuilles non aromatiques.",
-   "FW": "Myricaceae|55",
-   "FX": [
-    "Famille du piment royal (Myrica), des ciriers (Morella) et de Comptonia.",
-    "",
-    "Haies et massifs en sols humides ou pauvres ; racines fixatrices d'azote (Frankia).",
-    ""
-   ],
-   "sources": [
-    "https://en.wikipedia.org/wiki/Myricaceae",
-    "https://frankia.mcb.uconn.edu/home/myricaceae/",
-    "https://landscapeplants.oregonstate.edu/morella"
    ]
   },
   "Amaranthaceae": {

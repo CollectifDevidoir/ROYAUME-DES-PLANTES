@@ -4,7 +4,8 @@
 // 50 personnes sur le même wifi ne dépasse plus la limite de l'API (60 à 100 requêtes par minute).
 // Lancé chaque mois par .github/workflows/photos.yml (1 requête par seconde, environ 1 h).
 // Usage local : node outils/construire_photos.js [nombre d'espèces, pour un essai]
-// Essai sur une liste : LISTE=fichier.json (liste de noms latins) SORTIE=fichier.json node outils/construire_photos.js
+// Essai sur une liste : LISTE=fichier.json (liste de noms latins, ou « Nom=Nom accepté sur iNaturalist ») SORTIE=fichier.json node outils/construire_photos.js
+// (avec LISTE, les espèces déjà trouvées dans SORTIE sont gardées et seules les autres sont cherchées)
 const fs=require('fs'),vm=require('vm'),path=require('path');
 const R=path.resolve(__dirname,'..'),SORTIE=process.env.SORTIE?path.resolve(process.env.SORTIE):path.join(R,'donnees','photos.json');
 const h=fs.readFileSync(path.join(R,'index.html'),'utf8');
@@ -55,9 +56,9 @@ async function espece(l){
 (async()=>{
   const ancien=fs.existsSync(SORTIE)?JSON.parse(fs.readFileSync(SORTIE,'utf8')).especes||{}:{};
   const LI=process.env.LISTE?JSON.parse(fs.readFileSync(process.env.LISTE,'utf8')):null;
-  const L=(LI?LI.map(l=>[l]):S.filter(s=>!s[3])).slice(0,+process.argv[2]||Infinity),out={},sans=[];let ok=0,garde=0,rien=0;
+  const L=(LI?LI.map(l=>l.split('=')).filter(([l])=>!ancien[l]):S.filter(s=>!s[3])).slice(0,+process.argv[2]||Infinity),out=LI?{...ancien}:{},sans=[];let ok=0,garde=0,rien=0;
   for(const[i,s]of L.entries()){
-    try{const e=await espece(s[0]);if(e){out[s[0]]=e;ok++}else{rien++;sans.push(s[0])}}
+    try{const e=await espece(s[1]||s[0]);if(e){out[s[0]]=e;ok++}else{rien++;sans.push(s[0])}}
     catch(e){if(ancien[s[0]]){out[s[0]]=ancien[s[0]];garde++}else rien++;console.log('échec',s[0],e.message)}
     if(i%25===24)console.log(`${i+1}/${L.length} espèces, ${n} requêtes`);
   }
