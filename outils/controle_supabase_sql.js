@@ -88,5 +88,60 @@ const refus=async(p,m,motif)=>{try{await p;ok(false,m+' (accepté à tort)')}cat
   await refus(comme(db,null,'select envoyer_jeu($1,$2::jsonb,$3::jsonb)',[A1,JSON.stringify(Array(401).fill(L())),'[]']).then(async()=>{if(+(await db.query('select sum(vues) n from public.jeu')).rows[0].n!==7)throw new Error('trop gros paquet ignoré');throw new Error('ignoré')}),'jeu : paquet de plus de 400 lignes','ignoré');
   for(const tb of ['jeu','jeu_confusions','jeu_par_jour','especes_vues','especes_ratees','confusions','par_exercice','par_heure'])await refus(comme(db,null,`select * from public.${tb}`),'jeu : un visiteur ne lit pas '+tb,'permission denied');
   await refus(comme(db,U.antoine,'select * from public.especes_vues'),'jeu : un compte ne lit pas les statistiques','permission denied');
+  // mesures d'usage anonymes et Coulisses
+  const A3=require('crypto').randomUUID(),J=new Date().toISOString().slice(0,10);
+  await comme(db,null,"select noter_visite($1,current_date,false,'telephone',394,true,'2026.10.14')",[A3]);
+  await comme(db,null,"select noter_visite($1,current_date,false,'pirate',99999,null,'v<script>')",[A3]);
+  const vi=(await db.query('select * from public.visites where appareil=$1',[A3])).rows[0];
+  ok(vi.ouvertures===2&&vi.ecran==='telephone'&&vi.largeur===400&&vi.installee===true&&vi.version==='2026.10.14','visite : appareil, largeur arrondie, installée, version ; valeurs hors liste ignorées '+JSON.stringify(vi));
+  const M=o=>JSON.stringify(Object.assign({v:'2026.10.14',t:'telephone'},o));
+  await comme(db,null,'select envoyer_mesures($1,$2::jsonb)',[A3,M({
+    u:[{j:J,q:'herbier',n:2},{j:J,q:'herbier',n:1},{j:J,q:'pirate',n:3},{j:'2001-01-01',q:'aide',n:1}],
+    s:[{j:J,id:42,m:3,n:12,d:'quiz'},{j:J,id:43,m:0,n:0,d:'ailleurs'}],
+    p:[{j:J,e:'Carpinus betulus',ph:111,v:8,ok:1},{j:J,e:'Carpinus betulus',ph:222,v:8,ok:8},{j:J,e:'<b>',ph:3,v:1,ok:1}],
+    g:[{j:J,e:'Carpinus betulus',ph:111},{j:J,e:'Carpinus betulus',ph:111}],
+    e:[{j:J,m:"Cannot read properties of null (reading 'x')",n:2},{j:J,m:'Erreur 40312 chez https://x.fr',n:1},{j:J,m:'mail a@b.fr',n:1}],
+    r:{j:J,goal:40,vib:true,mode:'tout',sombre:false}})]);
+  await comme(db,U.antoine,'select envoyer_mesures($1,$2::jsonb)',[A3,M({s:[{j:J,id:42,m:7,n:20,d:'herbier'}],e:[{j:J,m:"Cannot read properties of null (reading 'x')",n:1}],r:{j:J,goal:60,vib:false,mode:'arbre',sombre:true}})]);
+  const us=(await db.query('select * from public.usages')).rows;
+  ok(us.length===1&&us[0].quoi==='herbier'&&us[0].fois===3,'usages : écran compté, fonction inconnue et jour trop ancien ignorés '+JSON.stringify(us));
+  const se=(await db.query('select * from public.sessions')).rows;
+  ok(se.length===1&&se[0].minutes===7&&se[0].exercices===20&&se[0].dernier==='herbier','sessions : une session mise à jour (durée et exercices au plus haut), dernier écran inconnu refusé '+JSON.stringify(se));
+  ok((await db.query('select count(*)::int n from public.photos_jeu')).rows[0].n===2,'photos : réussite par photo, nom invalide ignoré');
+  ok((await db.query('select count(*)::int n from public.signalements')).rows[0].n===1,'signalements : une photo signalée une seule fois par jour et par appareil');
+  const er=(await db.query('select * from public.erreurs')).rows;
+  ok(er.length===1&&er[0].fois===3&&er[0].version==='2026.10.14'&&er[0].ecran==='telephone','erreurs : messages avec nombre, adresse ou e-mail refusés, sans identifiant d\'appareil '+JSON.stringify(er));
+  ok(!Object.keys(er[0]).includes('appareil'),'erreurs : aucune colonne d\'appareil');
+  const rg=(await db.query('select * from public.reglages')).rows;
+  ok(rg.length===1&&rg[0].objectif===60&&rg[0].mode==='arbre'&&rg[0].sombre===true,'réglages : une ligne par jour, dernière valeur gardée');
+  await comme(db,null,'select envoyer_mesures($1,$2::jsonb)',[A3,M({r:{j:J,goal:40,vib:true,mode:'<script>',sombre:false}})]);
+  ok((await db.query('select mode from public.reglages')).rows[0].mode==='arbre','réglages : mode hors liste refusé');
+  for(const tb of ['usages','sessions','photos_jeu','signalements','erreurs','reglages','admins'])await refus(comme(db,U.antoine,`select * from public.${tb}`),'mesures : un compte ne lit pas '+tb,'permission denied');
+  await refus(comme(db,null,'select _purger()'),'mesures : un visiteur ne peut pas lancer l\'effacement','permission denied');
+  // Coulisses : réservé aux administrateurs
+  await refus(comme(db,null,'select coulisses(current_date - 6, current_date) r'),'coulisses : visiteur non connecté','permission denied');
+  ok((await r('paul','select suis_admin() r'))===false,'coulisses : Paul n\'est pas administrateur');
+  await refus(comme(db,U.paul,'select coulisses(current_date - 6, current_date) r'),'coulisses : compte non administrateur','NON_AUTORISE');
+  await db.query('insert into public.admins values ($1)',[U.antoine]);
+  ok((await r('antoine','select suis_admin() r'))===true,'coulisses : Antoine est administrateur');
+  await refus(comme(db,U.antoine,'select coulisses(current_date - 500, current_date) r'),'coulisses : période trop longue','PERIODE_INVALIDE');
+  // fidélité : 3 appareils arrivés il y a 10 jours, 2 reviennent 8 jours plus tard
+  const C=[1,2,3].map(()=>require('crypto').randomUUID());
+  for(const c of C)await db.query('insert into public.visites(jour,appareil) values (current_date - 10,$1)',[c]);
+  for(const c of C.slice(0,2))await db.query('insert into public.visites(jour,appareil) values (current_date - 2,$1)',[c]);
+  const co=await r('antoine','select coulisses(current_date - 29, current_date) r');
+  ok(co.resume.appareils>=5&&co.resume.nouveaux>=5&&co.resume.telephone===100&&co.resume.installee===100,'coulisses : résumé (appareils, nouveaux, téléphone, installée) '+JSON.stringify(co.resume));
+  ok(co.jours.length===30&&co.jours.at(-1).jour===J,'coulisses : 30 jours, aujourd\'hui compris');
+  ok(co.retours.j7===67,'coulisses : 2 appareils sur 3 revenus après 7 jours '+JSON.stringify(co.retours));
+  ok(Array.isArray(co.cohortes)&&co.cohortes.some(x=>x.appareils>=3&&Array.isArray(x.suite)&&x.suite.length===4),'coulisses : cohortes par semaine '+JSON.stringify(co.cohortes));
+  ok(co.usages[0].quoi==='herbier'&&co.usages[0].appareils===1,'coulisses : fonctions utilisées');
+  ok(co.durees.length===5&&co.durees.find(x=>x.tranche==='5 à 14 min').sessions===1&&co.departs[0].dernier==='herbier','coulisses : durée des sessions et dernier écran');
+  ok(co.photos.length===1&&co.photos[0].photo===111&&co.photos[0].signalements===1,'coulisses : photo qui piège repérée et signalée '+JSON.stringify(co.photos));
+  ok(co.erreurs[0].fois===3&&co.reglages.objectifs[0].objectif===60&&co.reglages.sombre===100,'coulisses : erreurs et réglages');
+  ok(co.versions.some(x=>x.version==='2026.10.14')&&co.ecrans.some(x=>x.ecran==='telephone'),'coulisses : versions et types d\'écran');
+  // effacement après 13 mois
+  await db.query("insert into public.usages values (current_date - 400,$1,'aide',1)",[A3]);await db.query("insert into public.visites(jour,appareil) values (current_date - 400,$1)",[A3]);
+  await db.query('select public._purger()');
+  ok((await db.query("select count(*)::int n from public.usages where jour < current_date - 395")).rows[0].n===0&&(await db.query("select count(*)::int n from public.visites where jour < current_date - 395")).rows[0].n===0,'mesures : effacées après 13 mois');
   console.log(ech?ech+' ÉCHEC(S)':'SUPABASE (SQL) : tout est OK');process.exit(ech?1:0);
 })().catch(e=>{console.error(e);process.exit(1)});

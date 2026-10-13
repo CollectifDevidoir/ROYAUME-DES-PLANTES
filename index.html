@@ -176,6 +176,8 @@ dialog p{margin:0 0 4px;font-size:.9rem}
 #zm{position:fixed;inset:0;z-index:99;display:flex;align-items:center;justify-content:center;background:rgba(10,20,12,.55);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
 #zm img{max-width:96vw;max-height:92vh;object-fit:contain;border-radius:12px}
 .zmx{position:absolute;top:calc(env(safe-area-inset-top,0px) + 14px);right:14px;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.9);color:#14281a;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}.zmx .tgi{width:18px;height:18px}
+.zms{position:absolute;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);left:50%;transform:translateX(-50%);min-height:44px;padding:0 18px;border:0;border-radius:22px;background:rgba(255,255,255,.9);color:#14281a;font:600 15px var(--fx);cursor:pointer}
+.zms:disabled{cursor:default;opacity:.85}
 #q-form{flex-wrap:wrap}
 .jk{flex-basis:100%;margin-top:6px;border-radius:12px;font-size:.9rem}
 @keyframes fi{from{opacity:0}}
@@ -1354,7 +1356,7 @@ body.pvdo #veil{opacity:0}
 <dialog id="prf" class="bs" aria-labelledby="prf-t"><div class="bsh"><i class="bsg" aria-hidden="true"></i><h2 id="prf-t" class="vh" tabindex="-1">Mon profil</h2><button class="bsx" id="prf-x" type="button" aria-label="Fermer le profil" data-ic="close"></button></div><div id="ami"></div></dialog>
 <dialog id="fch" class="fch"><div class="fhd"><i class="bsg" aria-hidden="true"></i><b id="fht"></b><button id="fcx" aria-label="Fermer" data-ic="close"></button></div><div id="fcb"></div><div id="fcf"></div></dialog>
 <div class="sh" id="sh" hidden role="region" aria-label="Fiche de l'espèce"><div class="shh"><button class="grip" id="shg" aria-label="Agrandir ou réduire la fiche"><i></i></button><div id="shr" aria-live="polite"></div><button id="shm" aria-label="Réduire la fiche en bandeau" data-ic="chev-d"></button></div><div id="shb"></div><div class="shf"><button class="big" id="shn">Plante suivante <span class="ic-in" data-ic="arrow"></span></button></div></div>
-<div id="zm" hidden><button class="zmx" type="button" aria-label="Fermer la photo" data-ic="close"></button><img alt=""></div>
+<div id="zm" hidden><button class="zmx" type="button" aria-label="Fermer la photo" data-ic="close"></button><img alt=""><button class="zms" id="zms" type="button" hidden>Photo douteuse ?</button></div>
 <script>
 // Liste des espèces : [nom latin, nom commun, type]
 // Pour en ajouter : une ligne de plus. Les photos sont cherchées sur iNaturalist (licences libres, avec crédits), à défaut sur Wikipédia.
@@ -2735,7 +2737,7 @@ function jokerUI(){const b=$('jk');if(!b)return;const left=()=>5-jkS().n,key=()=
   const paint=()=>{const t=used()?'Indice utilisé, encore '+left()+' sur 5 aujourd\'hui':left()>0?'Indice : '+left()+' sur 5 aujourd\'hui':'Plus d\'indice aujourd\'hui';b.innerHTML='<span class="tgi">'+HINT+'</span><b class="jkn">'+left()+'</b>';b.setAttribute('aria-label',t);b.title=t;b.classList.toggle('usd',used());b.disabled=used()||left()<=0||done};
   const showH=()=>{const h=$('q-ini');if(!h)return;h.textContent=lab();h.hidden=false;h.setAttribute('aria-label','Initiales : '+lab());$('q-form').classList.add('hint')};
   paint();if(used())showH();
-  b.onclick=()=>{if(done||used()||left()<=0)return;hintKey=key();jkS().n++;save();showH();paint()}}
+  b.onclick=()=>{if(done||used()||left()<=0)return;hintKey=key();jkS().n++;usage('joker');save();showH();paint()}}
 const loadable=src=>new Promise(r=>{const i=new Image();i.referrerPolicy='no-referrer';i.onload=()=>r(true);i.onerror=()=>r(false);setTimeout(()=>r(false),7000);i.src=src});
 // Variante « quelle photo ? » : la bonne espèce + 3 leurres du même type (un proche cousin de temps en temps)
 async function photoSet(s,im){
@@ -2849,7 +2851,7 @@ async function next(){
   if(tk!==nxt)return;pre=null;if(q&&!q.train)qCur=q;
   if(!q&&Date.now()<iOff){const w=()=>{const e=$('q-wait');if(e)e.textContent=Math.max(1,Math.ceil((iOff-Date.now())/1e3))};$('pic').innerHTML='<div style="padding:16px;text-align:center" role="status"><p>Le service de photos demande une courte pause.<br>Reprise dans <b id="q-wait"></b> s…</p></div>';w();const iv=setInterval(()=>{if(tk!==nxt||!$('q-wait')){clearInterval(iv);return}w()},1e3);setTimeout(()=>{clearInterval(iv);if(tk===nxt)next()},iOff-Date.now()+400);return}
   if(!q){$('pic').innerHTML='<div style="padding:16px"><p>Aucune image chargée. Vérifie la connexion.</p><button class="big" id="q-retry">Réessayer</button></div>';$('q-retry').onclick=()=>{bad.clear();next()};return}
-  cur=q.s;typed=q.typed;curTrain=!!q.train;pvSet=q.pv||null;jeuQ={t:Date.now(),o:pvSet?'photos':!q.im.label?'plante':JEU_ORG[q.im.label]||'autre'};$('qc').classList.toggle('ty',!!typed&&!pvSet);$('qc').classList.toggle('pvq',!!pvSet);$('qc').classList.remove('pvr');document.body.classList.remove('pvdo');if(typed&&!pvSet)firstQ=false;
+  cur=q.s;typed=q.typed;curTrain=!!q.train;pvSet=q.pv||null;jeuQ={t:Date.now(),o:pvSet?'photos':!q.im.label?'plante':JEU_ORG[q.im.label]||'autre',ph:pvSet?0:+(String(q.im.src||'').match(/\/photos\/(\d+)\//)||[])[1]||0};$('qc').classList.toggle('ty',!!typed&&!pvSet);$('qc').classList.toggle('pvq',!!pvSet);$('qc').classList.remove('pvr');document.body.classList.remove('pvdo');if(typed&&!pvSet)firstQ=false;
   if(wasTrain&&!curTrain){toast('Entraînement terminé');famFocus=null;preN=null}wasTrain=curTrain;if(curTrain)trN=Math.min(trN+1,trTot);trUI();
   if(pvSet){
     $('pic').hidden=true;$('q').className='pv';$('opts').className='opts ph';
@@ -2900,7 +2902,7 @@ function answer(v){
 }
 function startReplay(l,lbl,fam){const u=[...new Set(l)];if(l.length>=4&&u.length===2&&l[0]!==l[1])showDiff(u,()=>startReplay0(l,lbl,fam));else startReplay0(l,lbl,fam)}
 function showDiff(u,go){const sp=u.map(n=>S.find(s=>s[0]===n)).filter(Boolean);if(sp.length<2)return go();openSheet(sp[0],sp[1],{go,diff:true})}
-function startReplay0(l,lbl,fam){famFocus=fam||null;firstQ=true;if(!curTrain&&!replay)preN=done?pre:qCur?Promise.resolve(qCur):null;replay=[...l];trLbl=lbl||'Entraînement';trTot=l.length;trN=0;shown={};pre=null;tabTo('quiz');next()}
+function startReplay0(l,lbl,fam){usage('entrainement');famFocus=fam||null;firstQ=true;if(!curTrain&&!replay)preN=done?pre:qCur?Promise.resolve(qCur):null;replay=[...l];trLbl=lbl||'Entraînement';trTot=l.length;trN=0;shown={};pre=null;tabTo('quiz');next()}
 const OR=[['Feuilles',/feuill|limbe|pétiole|petiole|foliole|nervure|leaf|leaves|foliage|leaflet/i],['Fruits',/fruit|graine|gland|akène|akene|baie|samare|gousse|drupe|cône|capsule|noix|faîne|seed|berry|nut\b|pod|cone|acorn/i],['Fleurs',/fleur|inflorescence|pétale|chaton|floraison|corolle|flower|petal|catkin|bloom/i],['Écorce et rameaux',/écorce|ecorce|rameau|tronc|tige|bourgeon|branche|rhizome|bark|twig|stem|shoot|\bbud/i],['Port',/port\b|hauteur|silhouette|houppier|couronne|haut de|mesure|atteint|height|habit|crown|tall|grows/i]];
 const sents=x=>{const a=((x||'').replace(/\r/g,'').replace(/=+ *[^=\n]+ *=+/g,' ').replace(/\[[^\]]*\]/g,'').replace(/\s+/g,' ').match(/[^.!?]+[.!?]+/g)||[]).map(s=>s.trim()),o=[];a.forEach(s=>{const q=o[o.length-1];if(q&&/(?:\b[A-Z]|\b(?:subsp|var|env|cf|sp|ssp|spp|ex|fig|vol|av|apr|St|Ste))\.$/.test(q))o[o.length-1]=q+' '+s;else o.push(s)});return o.filter(s=>s.length>=30&&s.length<=300)};
 const orow=x=>{const r=OR.find(o=>o[1].test(x));return r?r[0]:null};
@@ -2995,7 +2997,7 @@ function detHtml(sp,P,D,two,_tg){
 }
 
 // Fiche d'entraînement (rappel des différences avant de s'exercer sur une confusion)
-async function openSheet(c,w,o){
+async function openSheet(c,w,o){usage('fiche');
   o=o||{};const tk=++shTok,d=$('fch'),two=!!(w&&w[0]!==c[0]),sp=two?[c,w]:[c];
   $('fht').textContent=two?'Ne plus confondre':'Fiche de la plante';
   // duel : les deux espèces côte à côte, affichées tout de suite (photos dès qu'elles arrivent)
@@ -3145,7 +3147,7 @@ function setHtml(){
   const pnl=setPanel==='save'?`<div class="stp"><p>Copie ta progression pour la garder ou la passer sur un autre appareil, ou colle une sauvegarde pour la restaurer.</p><div class="row"><button class="mini" id="set-copy" type="button">Copier</button><button class="mini" id="set-paste" type="button">Restaurer</button></div><div id="set-out"></div></div>`
    :setPanel==='priv'?`<div class="stp prv"><p><b>Sur cet appareil</b> : ta progression et tes réglages, qui servent à choisir les plantes à revoir.</p>
 <p><b>Avec un compte</b> (facultatif) : ta progression est aussi sauvegardée en ligne. Tes amis voient ton pseudo et tes chiffres du jour, jamais ton e-mail.</p>
-<p><b>Version bêta</b> : quelques statistiques d'utilisation, anonymes, nous aident à améliorer l'appli. Rien de personnel.</p>
+<p><b>Statistiques anonymes</b> : réponses du quiz, écrans ouverts, type d'appareil et erreurs techniques, liés à un numéro tiré au hasard, jamais à ton nom ni à ton adresse IP. Elles nous aident à améliorer l'appli et sont effacées après 13 mois.</p>
 <p><b>Tout effacer</b> : « Réinitialiser » ci-dessous, ou « Supprimer mon compte » dans ton profil. Pas de publicité, rien n'est revendu.</p></div>`
    :setPanel==='reset'?`<div class="stp"><p class="stm ko">${sbU&&sbP?'Effacer toute ta progression, sur cet appareil et dans ton compte ? Tes réglages et tes amis sont conservés.':'Effacer toute la progression sur cet appareil ? Tes réglages sont conservés.'}</p><div class="row"><button class="mini" id="set-no" type="button">Annuler</button><button class="mini ko full" id="set-yes" type="button">Tout effacer</button></div></div>`:'';
   return `<h3 class="stl">Objectif du jour</h3>
@@ -3176,13 +3178,13 @@ function setRender(focusId){
       if(!o2.set||typeof o2.set!=='object')o2.set=st.set;st=o2;streak=+st.streak||0;fix();save();setPanel='';stats();if(!$('pro').hidden)pro();restart();setRender('set-save');toast('Progression restaurée')}};
   if(focusId&&$(focusId))$(focusId).focus();
 }
-function openSettings(){setPanel='';setRender('');const d=$('set');if(d.showModal){if(!d.open)d.showModal()}else d.setAttribute('open','');d.scrollTop=0;$('set-t').focus({preventScroll:true})}
+function openSettings(){usage('reglages');setPanel='';setRender('');const d=$('set');if(d.showModal){if(!d.open)d.showModal()}else d.setAttribute('open','');d.scrollTop=0;$('set-t').focus({preventScroll:true})}
 $('set-x').onclick=()=>$('set').close();
 $('set').onclick=e=>{if(e.target===$('set'))$('set').close()};
 $('ring').onclick=openSettings;
 $('ring').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openSettings()}};
 // Profil : volet ouvert en touchant le logo de rang (en-tête) ou depuis Progrès
-function openProfil(){const d=$('prf');ami();if(d.showModal){if(!d.open)d.showModal()}else d.setAttribute('open','');d.scrollTop=0;$('prf-t').focus({preventScroll:true});
+function openProfil(){usage('profil');const d=$('prf');ami();if(d.showModal){if(!d.open)d.showModal()}else d.setAttribute('open','');d.scrollTop=0;$('prf-t').focus({preventScroll:true});
   if($('medal').classList.contains('nv')){$('medal').classList.remove('nv');try{localStorage.setItem('qp.prf',today())}catch(e){}}}
 $('prf-x').onclick=()=>$('prf').close();
 $('prf').onclick=e=>{if(e.target===$('prf'))$('prf').close()};
@@ -3356,7 +3358,7 @@ const tileImg=async(e,k=0)=>{const s=S.find(x=>x[0]===e.dataset.l);if(!s||e.quer
   if(im&&im.src){e.classList.remove('no');const i=new Image();i.referrerPolicy='no-referrer';i.alt='';i.onerror=()=>{i.remove();e.classList.add('no')};i.src=im.src;e.prepend(i)}
   else{e.classList.add('no');if(k<3){if(cache[s[0]]===null)delete cache[s[0]];setTimeout(()=>{if(e.isConnected)tileImg(e,k+1)},3000*(k+1))}}};
 const cap=x=>{x=String(x||'').trim();return x?x[0].toUpperCase()+x.slice(1):x};
-function openFamily(f){
+function openFamily(f){usage('famille_jour');
   const d=$('fam'),z=$('fz'),sp=S.filter(s=>FAM[gen(s[0])]===f),own=s=>(st.sp[s[0]]||{b:0}).b>=4,info=FI[f],got=sp.filter(own).length;
   famCur=f;shTok++;st.fd={d:today()};save();stats();
   const nx='<button class="fnx" type="button">Suivant '+ico('chev-r','ic-in')+'</button>';
@@ -3413,7 +3415,7 @@ function tabTo(t){
   document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-current',x.dataset.t===t));
   TB.forEach(id=>$(id).hidden=id!==t);
   curTab=t;stickUI();window.scrollTo(0,0);$('sh').classList.toggle('off',t!=='quiz');hsUpd();
-  if(t==='herb')herb();if(t==='pro')pro();
+  if(t==='herb')herb();if(t==='pro')pro();if(t!=='quiz')usage(t==='herb'?'herbier':'progres');
 }
 document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>tabTo(b.dataset.t));
 $('next').onclick=next;
@@ -3437,8 +3439,10 @@ function compterVisite(){
   if(!sbOn()||Date.now()-vuA<18e5)return;vuA=Date.now();
   const id=appId();if(!id)return;
   let compte=false;try{compte=!!localStorage.getItem('qp.sb')}catch(e){}   // session du compte (storageKey de createClient)
-  fetch(SBU+'/rest/v1/rpc/compter_visite',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json',apikey:SB_KEY,Authorization:'Bearer '+SB_KEY},
-    body:JSON.stringify({p_appareil:id,p_jour:today(),p_compte:compte})}).catch(()=>{});
+  const rpc=(f,o)=>fetch(SBU+'/rest/v1/rpc/'+f,{method:'POST',keepalive:true,headers:{'Content-Type':'application/json',apikey:SB_KEY,Authorization:'Bearer '+SB_KEY},body:JSON.stringify(o)});
+  const base={p_appareil:id,p_jour:today(),p_compte:compte};
+  rpc('noter_visite',{...base,p_ecran:ecranType(),p_largeur:Math.round(innerWidth),p_installee:installee(),p_version:APP_V})
+    .then(r=>{if(r.status===404)return rpc('compter_visite',base)}).catch(()=>{});   // base pas encore mise à jour : ancienne fonction
 }
 setTimeout(compterVisite,3000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)compterVisite()});
@@ -3456,12 +3460,13 @@ function jeuNote(good,w){
   const b=jeuLire(),k=[j,h,cur[0],x,jeuQ.o,m].join('|'),e=b.l[k]||(b.l[k]={c:cur[2],v:0,ok:0,a:0,s:0});
   e.v++;if(good)e.ok++;if(acqNow)e.a++;e.s+=Math.max(0,Math.min(120,Math.round((Date.now()-jeuQ.t)/1e3)));
   if(!good&&w&&w[0]!==cur[0]){const kc=[j,cur[0],w[0]].join('|');b.c[kc]=(b.c[kc]||0)+1}
+  sesActif(1);if(jeuQ.ph)mesPhoto(cur[0],jeuQ.ph,good);
   jeuQ=null;jeuEcrire(b);if(!jeuT)jeuT=setTimeout(jeuEnvoi,Math.max(3e4,jeuEnv+3e4-Date.now()));
 }
 // remet sur l'appareil un paquet dont l'envoi a échoué (réseau coupé) : il repartira au prochain envoi
 function jeuRemettre(L,C){const b=jeuLire();for(const k in L){const e=b.l[k];if(e){e.v+=L[k].v;e.ok+=L[k].ok;e.a+=L[k].a;e.s+=L[k].s}else b.l[k]=L[k]}for(const k in C)b.c[k]=(b.c[k]||0)+C[k];jeuEcrire(b)}
 function jeuEnvoi(){
-  clearTimeout(jeuT);jeuT=0;if(!sbOn())return;const id=appId();if(!id)return;
+  clearTimeout(jeuT);jeuT=0;if(!sbOn())return;mesEnvoi();const id=appId();if(!id)return;
   const b=jeuLire(),K=Object.keys(b.l).slice(0,400),KC=Object.keys(b.c).slice(0,400);if(!K.length&&!KC.length)return;
   const L={},C={};K.forEach(k=>{L[k]=b.l[k];delete b.l[k]});KC.forEach(k=>{C[k]=b.c[k];delete b.c[k]});jeuEcrire(b);jeuEnv=Date.now();
   const pj=K.map(k=>{const[j,h,e,x,o,m]=k.split('|'),v=L[k];return{j,h:+h,e,c:v.c,x,o,m,v:v.v,ok:v.ok,a:v.a,s:v.s}});
@@ -3473,6 +3478,51 @@ function jeuEnvoi(){
 }
 setTimeout(jeuEnvoi,5000);
 document.addEventListener('visibilitychange',()=>{if(document.hidden)jeuEnvoi()});
+// Mesures d'usage anonymes (supabase/schema.sql, « usages », « sessions », « photos_jeu », « signalements », « erreurs », « reglages ») :
+// même identifiant d'appareil tiré au hasard ; seulement des valeurs prises dans des listes fermées, jamais de texte saisi.
+// Gardées sur l'appareil et envoyées avec les statistiques de jeu ; une base pas encore mise à jour les refuse sans gêner l'appli.
+const APP_V='2026.10.14';   // version de l'appli (AAAA.MM.JJ), à changer à chaque publication
+const ecranType=()=>{try{const m=Math.min(screen.width,screen.height);return !matchMedia('(pointer:coarse)').matches?'ordi':m<600?'telephone':'tablette'}catch(e){return'ordi'}};
+const installee=()=>{try{return matchMedia('(display-mode: standalone)').matches||navigator.standalone===true}catch(e){return false}};
+function mesLire(){try{const o=JSON.parse(localStorage.getItem('qp.mes')||'{}');return{u:o.u||{},s:o.s||{},p:o.p||{},g:o.g||{},e:o.e||{},r:o.r||''}}catch(e){return{u:{},s:{},p:{},g:{},e:{},r:''}}}
+function mesEcrire(b){try{localStorage.setItem('qp.mes',JSON.stringify(b))}catch(e){}}
+function usage(q){if(sbOn()){const b=mesLire(),k=today()+'|'+q;b.u[k]=(b.u[k]||0)+1;mesEcrire(b)}}
+function mesPhoto(e,ph,good){const b=mesLire(),k=today()+'|'+e+'|'+ph,x=b.p[k]||(b.p[k]={v:0,ok:0});x.v++;if(good)x.ok++;mesEcrire(b)}
+// Session : temps entre la première et la dernière action (une pause de 30 min ou plus en ouvre une nouvelle), exercices, dernier écran
+let ses=null,errN=0;
+function sesActif(ex){const t=Date.now(),j=today();if(!ses||t-ses.t1>18e5||ses.j!==j)ses={id:Math.floor(Math.random()*9e9),j,t0:t,t1:t,n:0};ses.t1=t;if(ex)ses.n++}
+function ecranVu(){const d=document.querySelector('dialog[open]');if(d)return d.id==='prf'?'profil':d.id==='set'?'reglages':'fenetre';if(curTrain)return'entrainement';return curTab==='herb'?'herbier':curTab==='pro'?'progres':'quiz'}
+function sesNote(){if(!ses)return;const b=mesLire();b.s[ses.id]={j:ses.j,m:Math.min(240,Math.round((ses.t1-ses.t0)/6e4)),n:Math.min(2000,ses.n),d:ecranVu()};mesEcrire(b)}
+sesActif();document.addEventListener('pointerdown',()=>sesActif(),{passive:true,capture:true});document.addEventListener('keydown',()=>sesActif(),{capture:true});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)sesNote()},{capture:true});   // avant l'envoi au départ de la page
+// Erreurs techniques : message sans adresse, e-mail ni nombre, 5 au plus par ouverture
+function mesErreur(m){if(!sbOn()||errN>=5)return;m=String(m||'').replace(/^Uncaught (\w*Error: )?/,'').replace(/https?:\/\/\S+/g,'').replace(/\S+@\S+/g,'').replace(/\d+/g,'#').replace(/\s+/g,' ').trim().slice(0,140);
+  if(!m)return;errN++;const b=mesLire(),k=today()+'|'+m;b.e[k]=(b.e[k]||0)+1;mesEcrire(b)}
+addEventListener('error',e=>mesErreur(e.message));
+addEventListener('unhandledrejection',e=>mesErreur(e.reason&&(e.reason.message||e.reason)));
+// Agrandissement de la photo du quiz : « Photo douteuse ? » la signale (une fois par photo)
+function zmSignal(im){const bt=$('zms'),ph=im.closest('#pic')&&cur&&+(String(im.currentSrc||im.src).match(/\/photos\/(\d+)\//)||[])[1];bt.hidden=!sbOn()||!ph;if(bt.hidden)return;
+  const k=today()+'|'+cur[0]+'|'+ph,fait=!!mesLire().g[k];bt.disabled=fait;bt.textContent=fait?'Photo signalée, merci':'Photo douteuse ?';
+  bt.onclick=e=>{e.stopPropagation();const b=mesLire();b.g[k]=1;mesEcrire(b);bt.disabled=true;bt.textContent='Photo signalée, merci'}}
+function mesEnvoi(){
+  if(!sbOn())return;const id=appId();if(!id)return;sesNote();
+  const b=mesLire(),j=today(),cles=(o,n)=>Object.keys(o).slice(0,n),U=cles(b.u,200),Ss=cles(b.s,50),P=cles(b.p,400),G=cles(b.g,50),E=cles(b.e,20),R=b.r!==j;
+  if(!U.length&&!Ss.length&&!P.length&&!G.length&&!E.length&&!R)return;
+  const m={v:APP_V,t:ecranType(),
+    u:U.map(k=>{const[d,q]=k.split('|');return{j:d,q,n:b.u[k]}}),
+    s:Ss.map(k=>({...b.s[k],id:+k})),
+    p:P.map(k=>{const[d,e,ph]=k.split('|');return{j:d,e,ph:+ph,v:b.p[k].v,ok:b.p[k].ok}}),
+    g:G.map(k=>{const[d,e,ph]=k.split('|');return{j:d,e,ph:+ph}}),
+    e:E.map(k=>({j:k.slice(0,10),m:k.slice(11),n:b.e[k]}))};
+  if(R)m.r={j,goal:goal(),vib:!!st.set.vib,mode,sombre:matchMedia('(prefers-color-scheme: dark)').matches};
+  // retirés de l'appareil avant l'envoi, remis si le réseau est coupé
+  const L={u:{},p:{},g:{},e:{},s:{}};U.forEach(k=>{L.u[k]=b.u[k];delete b.u[k]});P.forEach(k=>{L.p[k]=b.p[k];delete b.p[k]});G.forEach(k=>{L.g[k]=1;delete b.g[k]});
+  E.forEach(k=>{L.e[k]=b.e[k];delete b.e[k]});Ss.forEach(k=>{L.s[k]=b.s[k];delete b.s[k]});if(R)b.r=j;mesEcrire(b);
+  const remettre=()=>{const c=mesLire();for(const k in L.u)c.u[k]=(c.u[k]||0)+L.u[k];for(const k in L.e)c.e[k]=(c.e[k]||0)+L.e[k];for(const k in L.g)c.g[k]=1;
+    for(const k in L.s)if(!c.s[k])c.s[k]=L.s[k];for(const k in L.p){const x=c.p[k]||(c.p[k]={v:0,ok:0});x.v+=L.p[k].v;x.ok+=L.p[k].ok}if(R)c.r='';mesEcrire(c)};
+  fetch(SBU+'/rest/v1/rpc/envoyer_mesures',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json',apikey:SB_KEY,Authorization:'Bearer '+SB_KEY},
+    body:JSON.stringify({p_appareil:id,p_mesures:m})}).then(r=>{if(r.status>=500||r.status===429)throw 0}).catch(remettre);   // refus 4xx : paquet abandonné
+}
 // La bibliothèque n'est chargée que si les comptes servent : onglet Profil ouvert, session enregistrée ou retour d'un lien de connexion.
 function sbLib(){
   if(sbLd)return sbLd;
@@ -3707,10 +3757,10 @@ document.addEventListener('click',e=>{const x=e.target.closest&&e.target.closest
 $('rplay').onclick=()=>startReplay(st.tm.l.slice(),'Mes erreurs du jour');
 $('fday').onclick=()=>openFamily(famDay());
 $('trq').onclick=()=>{replay=null;pre=preN;preN=null;wasTrain=false;curTrain=false;famFocus=null;trUI();next()};
-$('help').onclick=()=>{$('dbody').innerHTML=helpHtml();const d=$('dlg');d.showModal?d.showModal():d.setAttribute('open','');d.scrollTop=0;$('dbody').scrollTop=0;const h=d.querySelector('h2');if(h)h.focus({preventScroll:true})};
+$('help').onclick=()=>{usage('aide');$('dbody').innerHTML=helpHtml();const d=$('dlg');d.showModal?d.showModal():d.setAttribute('open','');d.scrollTop=0;$('dbody').scrollTop=0;const h=d.querySelector('h2');if(h)h.focus({preventScroll:true})};
 $('dx').onclick=()=>{const d=$('dlg');d.close?d.close():d.removeAttribute('open')};$('dlg-x').onclick=()=>$('dx').click();
 $('dlg').onclick=e=>{if(e.target===$('dlg'))$('dx').click()};
-document.addEventListener('click',e=>{const z=$('zm');if(!z.hidden){z.hidden=true;return}const im=e.target.closest&&e.target.closest('#pic img,.fph img,.cph img,.gal img,.idp');if(im){(document.querySelector('dialog[open]')||document.body).append(z);z.querySelector('img').src=im.currentSrc||im.src;z.hidden=false}});
+document.addEventListener('click',e=>{const z=$('zm');if(!z.hidden){z.hidden=true;return}const im=e.target.closest&&e.target.closest('#pic img,.fph img,.cph img,.gal img,.idp');if(im){(document.querySelector('dialog[open]')||document.body).append(z);z.querySelector('img').src=im.currentSrc||im.src;z.hidden=false;usage('zoom');zmSignal(im)}});
 document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('.dtb button');if(!b)return;const w=b.closest('.dtw');w.querySelectorAll('.dtb button').forEach(x=>x.setAttribute('aria-selected',x===b?'true':'false'));w.querySelectorAll('.dtp').forEach(q=>{q.hidden=q.dataset.p!==b.dataset.p})});
 $('fcx').onclick=closeSheet;$('fch').onclick=e=>{if(e.target===$('fch'))closeSheet()};
 document.addEventListener('keydown',e=>{

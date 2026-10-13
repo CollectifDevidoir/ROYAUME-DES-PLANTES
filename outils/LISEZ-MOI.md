@@ -25,6 +25,8 @@ Les contrôles des comptes demandent en plus `npm i -g @electric-sql/pglite @sup
 | `controle_illustrations.js [fichier]` | Illustrations : affichage, aucune ombre portée ni dégradé, au moins une forme contrastée à 3:1 sur son fond réel (clair et sombre, téléphone et ordinateur), rangs variés. |
 | `controle_ordinateur.js [fichier]` | Version ordinateur (souris) : colonne de 1 120 px, QCM et saisie centrés face à la photo, Herbier et Progrès sur 2 colonnes, Réglages et Famille du jour en fenêtres centrées ; le téléphone garde ses volets. |
 | `controle_supabase_sql.js` | Comptes : exécute `supabase/schema.sql` sur une vraie base PostgreSQL embarquée (PGlite) ; parcours complet et règles de sécurité. |
+| `controle_mesures.js` | Mesures d'usage anonymes de bout en bout (faux Supabase) : visite, écrans ouverts, session, réussite par photo, photo signalée, erreur, réglages, base pas à jour. |
+| `controle_coulisses.js [dossier]` | Page `coulisses.html` : connexion, accès réservé aux administrateurs, chiffres sur données d'exemple, périodes, téléphone et ordinateur, thème sombre. Avec un dossier : captures. |
 | `controle_comptes.js [fichier] [dossier]` | Comptes de bout en bout : vraie bibliothèque supabase-js, faux Supabase local (`supabase/faux_supabase.js`), deux appareils, amis, tableau du jour, reprise de la progression. |
 | `simulation_memoire.js [jours] [graines]` | Simulation de progression avec le vrai code de l'appli (étape 6). |
 
