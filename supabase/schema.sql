@@ -310,7 +310,7 @@ begin
       and x.c in ('arbre', 'conifère', 'arbuste', 'grimpante', 'graminée', 'vivace')
       and x.x in ('qcm', 'saisie', 'photos')
       and x.o in ('plante', 'feuillage', 'fleurs', 'fruits', 'autre', 'photos')
-      and x.m in ('classique', 'arbre', 'arbuste', 'vivace', 'grimpante', 'graminée', 'famille', 'erreurs', 'revoir', 'paire')
+      and x.m in ('classique', 'arbre', 'arbuste', 'vivace', 'grimpante', 'graminée', 'famille', 'erreurs', 'revoir', 'paire', 'defi')
     group by x.j, x.h, x.e, x.x, x.o, x.m
     on conflict (jour, heure, appareil, espece, exercice, organe, mode) do update
       set vues = least(jeu.vues + excluded.vues, 5000), justes = least(jeu.justes + excluded.justes, 5000),
@@ -486,7 +486,7 @@ begin
     select x.j, p_appareil, x.q, least(sum(x.n), 500)
     from jsonb_to_recordset(m->'u') as x(j date, q text, n int)
     where x.j between current_date - 7 and current_date + 1 and x.n between 1 and 500
-      and x.q in ('herbier', 'progres', 'profil', 'reglages', 'aide', 'fiche', 'famille_jour', 'entrainement', 'joker', 'zoom')
+      and x.q in ('herbier', 'progres', 'profil', 'reglages', 'aide', 'fiche', 'famille_jour', 'entrainement', 'joker', 'zoom', 'defi', 'defi_partage')
     group by x.j, x.q
     on conflict (jour, appareil, quoi) do update set fois = least(usages.fois + excluded.fois, 5000);
   end if;
@@ -495,7 +495,7 @@ begin
     select distinct on (x.j, x.id) x.j, p_appareil, x.id, least(greatest(x.m, 0), 240), least(greatest(x.n, 0), 2000), x.d
     from jsonb_to_recordset(m->'s') as x(j date, id bigint, m int, n int, d text)
     where x.j between current_date - 7 and current_date + 1 and x.id between 0 and 9000000000 and x.m is not null and x.n is not null
-      and x.d in ('quiz', 'entrainement', 'herbier', 'progres', 'profil', 'reglages', 'fenetre')
+      and x.d in ('quiz', 'entrainement', 'defi', 'herbier', 'progres', 'profil', 'reglages', 'fenetre')
     order by x.j, x.id, x.m desc
     on conflict (jour, appareil, sid) do update
       set minutes = greatest(sessions.minutes, excluded.minutes), exercices = greatest(sessions.exercices, excluded.exercices), dernier = excluded.dernier;
@@ -640,6 +640,9 @@ begin
     'erreurs', (select coalesce(jsonb_agg(x), '[]') from (
       select message, version, ecran, sum(fois) as fois, max(jour) as dernier from erreurs where jour between d and f
       group by message, version, ecran order by 4 desc limit 20) x),
+    'defis', (select coalesce(jsonb_agg(x order by x.jour), '[]') from (
+      select jour, count(*) as joueurs, round(avg(score), 1) as score_moyen, count(*) filter (where score = 10) as sans_faute
+      from defis where jour between d and f group by jour) x),
     'reglages', (select jsonb_build_object(
       'objectifs', (select coalesce(jsonb_agg(x order by x.objectif), '[]') from (
         select objectif, count(*) as appareils from (select distinct on (appareil) appareil, objectif from reglages where jour between d and f order by appareil, jour desc) r
@@ -653,6 +656,45 @@ begin
         (select distinct on (appareil) sombre from reglages where jour between d and f order by appareil, jour desc) r)))
   ) into res;
   return res;
+end $$;
+
+-- ---------- Défi du jour ----------
+-- Un résultat par compte et par jour (jour de Paris) : le premier envoyé compte, on ne peut pas rejouer.
+-- reponses : 10 caractères, 1 juste, 0 faux, dans l'ordre des questions.
+create table if not exists public.defis (
+  user_id  uuid not null references public.profils(id) on delete cascade,
+  jour     date not null,
+  score    smallint not null check (score between 0 and 10),
+  reponses text not null check (reponses ~ '^[01]{10}$'),
+  quand    timestamptz not null default now(),
+  primary key (user_id, jour)
+);
+alter table public.defis enable row level security;
+revoke all on public.defis from anon, authenticated;
+
+create or replace function public.publier_defi(p_jour date, p_reponses text) returns void
+language plpgsql volatile security definer set search_path = public as $$
+declare j date := (now() at time zone 'Europe/Paris')::date;
+begin
+  if not exists (select 1 from profils where id = _moi()) then raise exception 'SANS_PROFIL'; end if;
+  if p_jour is null or p_jour not between j - 1 and j then raise exception 'JOUR_INVALIDE'; end if;
+  if p_reponses is null or p_reponses !~ '^[01]{10}$' then raise exception 'REPONSES_INVALIDES'; end if;
+  insert into defis (user_id, jour, score, reponses)
+  values (_moi(), p_jour, length(replace(p_reponses, '0', '')), p_reponses)
+  on conflict (user_id, jour) do nothing;
+end $$;
+
+-- Classement du défi d'un jour : moi et mes amis, avec ou sans résultat (score nul : pas encore joué).
+create or replace function public.tableau_defi(p_jour date) returns json
+language plpgsql stable security definer set search_path = public as $$
+begin
+  return coalesce((
+    select json_agg(json_build_object('pseudo', p.pseudo, 'moi', p.id = _moi(), 'rang', p.rang, 'score', d.score, 'reponses', d.reponses)
+      order by d.score desc nulls last, p.pseudo)
+    from profils p
+    left join defis d on d.user_id = p.id and d.jour = p_jour
+    where p.id = _moi() or p.id in (select ami_id from amities where user_id = _moi())
+  ), '[]'::json);
 end $$;
 
 -- ---------- Droits : seules les fonctions publiques, et seulement une fois connecté ----------
@@ -672,3 +714,5 @@ revoke all on function public.noter_visite(uuid, date, boolean, text, int, boole
 grant execute on function public.noter_visite(uuid, date, boolean, text, int, boolean, text), public.envoyer_mesures(uuid, jsonb) to anon, authenticated;
 revoke all on function public.suis_admin(), public.coulisses(date, date) from public, anon;
 grant execute on function public.suis_admin(), public.coulisses(date, date) to authenticated;
+revoke all on function public.publier_defi(date, text), public.tableau_defi(date) from public, anon;
+grant execute on function public.publier_defi(date, text), public.tableau_defi(date) to authenticated;

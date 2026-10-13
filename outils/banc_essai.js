@@ -1,12 +1,24 @@
 // Banc d'essai : fausses réponses iNaturalist + photos générées (le réseau est bloqué ici)
 const {chromium}=require('playwright');
-const path=require('path');
+const path=require('path'),fs=require('fs'),http=require('http'),os=require('os');
+// Petit serveur local (comme GitHub Pages), pour les tests qui rechargent la page : ouverte comme un fichier (file://),
+// la page perd parfois tout son stockage local au rechargement dans Chromium. Il sert les fichiers du dépôt et du dossier
+// temporaire ; donnees/photos.json est refusé, comme en file:// (les tests fournissent leur index avec PHOTOS_TEST).
+const RAC=[path.resolve(__dirname,'..'),fs.realpathSync(os.tmpdir())],TYPES={'.html':'text/html; charset=utf-8','.js':'text/javascript','.json':'application/json','.css':'text/css','.svg':'image/svg+xml','.png':'image/png','.woff2':'font/woff2','.webmanifest':'application/manifest+json'};
+const LOCAL=/^http:\/\/127\.0\.0\.1:\d+\//;let srv=null;
+async function adresse(f){
+  if(!srv){srv=http.createServer((rq,rs)=>{const x=path.resolve(decodeURIComponent(new URL(rq.url,'http://l').pathname));
+      if(!RAC.some(r=>x.startsWith(r+path.sep))||/[\/\\]donnees[\/\\]photos\.json$/.test(x)||!fs.existsSync(x)||fs.statSync(x).isDirectory()){rs.writeHead(404);return rs.end()}
+      rs.writeHead(200,{'content-type':TYPES[path.extname(x)]||'application/octet-stream','cache-control':'no-store'});fs.createReadStream(x).pipe(rs)});
+    await new Promise(r=>srv.listen(0,'127.0.0.1',r));srv.unref()}
+  return 'http://127.0.0.1:'+srv.address().port+encodeURI(fs.realpathSync(path.resolve(f)).split(path.sep).join('/'))}
 const svg=(n)=>{const h=(n*47)%360;return `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="${n%3?600:900}"><rect width="100%" height="100%" fill="hsl(${h},45%,45%)"/><circle cx="400" cy="300" r="160" fill="hsl(${(h+60)%360},70%,70%)"/><text x="40" y="80" font-size="60" fill="#fff">photo ${n}</text></svg>`};
 async function open(o={}){
   const b=o.browser||await chromium.launch({executablePath:process.env.CHROMIUM||'/opt/pw-browsers/chromium'});
   const ctx=await b.newContext({viewport:{width:o.w||360,height:o.h||640},deviceScaleFactor:2,hasTouch:!!o.touch,isMobile:!!o.touch,colorScheme:o.cs||'light'});
   let k=0;
   await ctx.route(/^https?:/,r=>{const u=r.request().url();
+    if(LOCAL.test(u))return r.continue();
     if(u.startsWith('https://api.inaturalist.org/v1/taxa?q=')){const q=decodeURIComponent(u.split('q=')[1].split('&')[0]);k++;
       return r.fulfill({contentType:'application/json',body:JSON.stringify({results:[{id:k,name:q,preferred_common_name:'',default_photo:{medium_url:`https://img.test/photos/${k}/medium.svg`,license_code:'cc-by',attribution:'test'}}]})})}
     const td=u.match(/api\.inaturalist\.org\/v1\/taxa\/(\d+)/);
@@ -20,10 +32,10 @@ async function open(o={}){
   if(o.seed)await p.addInitScript(()=>{let x=12345;Math.random=()=>{x=(x*1103515245+12345)%2147483648;return x/2147483648}});
   if(o.state)await p.addInitScript(s=>{if(!sessionStorage.getItem('init')){localStorage.setItem('quizplantes.v1',s);localStorage.setItem('qp.coach','1');sessionStorage.setItem('init','1')}},o.state);
   else await p.addInitScript(()=>{localStorage.setItem('qp.coach','1')});
-  await p.goto('file://'+path.resolve(o.file||path.resolve(__dirname,'..','index.html')));await p.waitForTimeout(400);
+  const F=path.resolve(o.file||path.resolve(__dirname,'..','index.html'));await p.goto(o.http?await adresse(F):'file://'+F);await p.waitForTimeout(400);
   await p.evaluate(()=>{const s=document.getElementById('splash');if(s)s.click()});await p.waitForTimeout(1700);
   // par défaut, un habitué : au tout premier lancement, l'appli masque le choix des modes jusqu'à la première réponse (o.fresh pour le garder)
   if(!o.fresh)await p.evaluate(()=>{if(document.body.classList.contains('fresh')){document.body.classList.remove('fresh');const q=document.getElementById('q');if(q&&/^Bienvenue/.test(q.textContent))q.textContent='Quelle est cette plante ?'}});
   return {b,ctx,p};
 }
-module.exports={open};
+module.exports={open,adresse,LOCAL};

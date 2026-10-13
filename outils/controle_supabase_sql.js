@@ -88,6 +88,21 @@ const refus=async(p,m,motif)=>{try{await p;ok(false,m+' (accepté à tort)')}cat
   await refus(comme(db,null,'select envoyer_jeu($1,$2::jsonb,$3::jsonb)',[A1,JSON.stringify(Array(401).fill(L())),'[]']).then(async()=>{if(+(await db.query('select sum(vues) n from public.jeu')).rows[0].n!==7)throw new Error('trop gros paquet ignoré');throw new Error('ignoré')}),'jeu : paquet de plus de 400 lignes','ignoré');
   for(const tb of ['jeu','jeu_confusions','jeu_par_jour','especes_vues','especes_ratees','confusions','par_exercice','par_heure'])await refus(comme(db,null,`select * from public.${tb}`),'jeu : un visiteur ne lit pas '+tb,'permission denied');
   await refus(comme(db,U.antoine,'select * from public.especes_vues'),'jeu : un compte ne lit pas les statistiques','permission denied');
+  // défi du jour : un résultat par compte et par jour (jour de Paris), classement entre amis
+  const JP=(await db.query("select (now() at time zone 'Europe/Paris')::date::text j")).rows[0].j;
+  await f('antoine','select publier_defi($1::date,$2)',[JP,'1101110111']);
+  await f('antoine','select publier_defi($1::date,$2)',[JP,'1111111111']);
+  await refus(comme(db,U.antoine,"select publier_defi(current_date - 5,'1111111111')"),'défi : jour trop ancien','JOUR_INVALIDE');
+  await refus(comme(db,U.antoine,'select publier_defi($1::date,$2)',[JP,'12x']),'défi : réponses invalides','REPONSES_INVALIDES');
+  await f('paul',`select ajouter_ami('${pa.code_ami}')`);
+  await f('paul','select publier_defi($1::date,$2)',[JP,'1111111100']);
+  const dT=await r('antoine','select tableau_defi($1::date) r',[JP]),dA=dT.find(x=>x.moi),dP=dT.find(x=>x.pseudo==='Paul');
+  ok(dA&&dA.score===8&&dA.reponses==='1101110111','défi : le premier résultat envoyé compte, rejouer ne le remplace pas '+JSON.stringify(dA));
+  ok(dP&&dP.score===8&&dP.reponses==='1111111100','défi : on voit le score de ses amis '+JSON.stringify(dT.map(x=>[x.pseudo,x.score])));
+  ok(!dT.some(x=>x.pseudo==='Intrus'),'défi : un non-ami n\'apparaît pas');
+  ok((await r('paul','select tableau_defi($1::date - 1) r',[JP])).every(x=>x.score===null),'défi : un autre jour, personne n\'a encore joué');
+  await refus(comme(db,null,'select tableau_defi(current_date) r'),'défi : visiteur non connecté','permission denied');
+  await refus(comme(db,U.antoine,'select * from public.defis'),'défi : la table n\'est pas lisible directement','permission denied');
   // mesures d'usage anonymes et Coulisses
   const A3=require('crypto').randomUUID(),J=new Date().toISOString().slice(0,10);
   await comme(db,null,"select noter_visite($1,current_date,false,'telephone',394,true,'2026.10.14')",[A3]);

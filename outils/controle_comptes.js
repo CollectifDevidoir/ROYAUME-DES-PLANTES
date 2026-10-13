@@ -17,7 +17,7 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   const F=copie('comptes',URL_SB,'cle-anon-test');
   if(DOS)fs.mkdirSync(DOS,{recursive:true});
   const db=await base(),b=await chromium.launch({executablePath:process.env.CHROMIUM||'/opt/pw-browsers/chromium'});
-  const appareil=async(w=390,h=844,file=F,url=URL_SB)=>{const o=await open({browser:b,w,h,touch:w<900,seed:true,file});const j=[];await brancher(o.p,db,url,j);o.j=j;return o};
+  const appareil=async(w=390,h=844,file=F,url=URL_SB,http=true)=>{const o=await open({browser:b,w,h,touch:w<900,seed:true,file,http});const j=[];await brancher(o.p,db,url,j);o.j=j;return o};
   const T=async(p,n)=>{await p.waitForTimeout(250);if(DOS)await p.screenshot({path:path.join(DOS,n+'.png')})};
   const att=async(p,f,arg,ms=8000)=>{try{await p.waitForFunction(f,arg,{timeout:ms});return true}catch(e){return false}};
   const txt=p=>p.evaluate(()=>$('ami').innerText);
@@ -98,7 +98,9 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   B.p.once('dialog',d=>d.accept());await B.p.click('#sb-del');ok(await att(B.p,()=>!!document.querySelector('#sb-f')),'compte supprimé : retour au formulaire');
   await A.p.click('#sb-maj');ok(await att(A.p,()=>!/Coline/.test($('ami').innerText)),'Coline a disparu du tableau d\'Antoine');
   // ---- lien de connexion par e-mail : seulement si l'appli est servie en http(s)
-  ok(await C.p.evaluate(()=>!document.querySelector('#sb-otp')),'fichier local : pas de bouton « lien par e-mail » (il exige une adresse web)');
+  await C.p.click('#sb-tin').catch(()=>{});ok(await C.p.evaluate(()=>!!document.querySelector('#sb-otp')),'adresse web : bouton « lien par e-mail » proposé');
+  const Lf=await appareil(390,844,F,URL_SB,false);await Lf.p.click('#medal');await att(Lf.p,()=>!!document.querySelector("#sb-f"));await Lf.p.click("#sb-tin").catch(()=>{});
+  ok(await Lf.p.evaluate(()=>!document.querySelector("#sb-otp")),'fichier local : pas de bouton « lien par e-mail » (il exige une adresse web)');
   // ---- adresse de la page du tableau de bord collée par erreur : l'appli en déduit l'URL du projet
   const ID='abcdefghijklmnopqrst',URL_D='https://'+ID+'.supabase.co';
   const D=await appareil(390,844,copie('tableau',`https://supabase.com/dashboard/project/${ID}/settings/api-keys`,'cle-anon-test'),URL_D);

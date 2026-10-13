@@ -1,13 +1,13 @@
 // Étape 6 : simulation de la progression (vrai code de l'appli + joueur simulé qui apprend et oublie).
 // Compare la version actuelle et des variantes qui ne touchent qu'aux niveaux 1 à 3.
 // Usage : node outils/simulation_memoire.js [jours=30] [graines=8]
-const {chromium}=require('playwright');const path=require('path');
+const {chromium}=require('playwright');const {adresse,LOCAL}=require('./banc_essai.js');const path=require('path');
 const JOURS=+process.argv[2]||30,GRAINES=+process.argv[3]||8,PAR_JOUR=40;
 // Variantes : remplacements dans la fonction srs() de l'appli
 const VARIANTES={
   actuelle:[], // variante A retenue à l'étape 6 : niveau 2 → 3 en 3 QCM, ou 1 exercice difficile + 1 QCM
   avant_etape6:[["if(p.c>=3){p.b=3;p.c=0}","if(p.c>=2){p.b=3;p.c=0}"]],
-  A2_palier2_QCM:[["if(b0===2){p.c+=fmt==='mcq'?1:2;if(p.c>=3)","if(b0===2){p.c+=fmt==='mcq'?1:3;if(p.c>=3)"]],
+  A2_palier2_QCM:[["if(b0===2){p.c+=fmt==='mcq'||fmt==='defi'?1:2;if(p.c>=3)","if(b0===2){p.c+=fmt==='mcq'||fmt==='defi'?1:3;if(p.c>=3)"]],
 };
 const SIM=function(o){
   // hasard reproductible
@@ -54,9 +54,9 @@ const SIM=function(o){
 };
 (async()=>{
   const b=await chromium.launch({executablePath:process.env.CHROMIUM||'/opt/pw-browsers/chromium'});
-  const ctx=await b.newContext();await ctx.route(/^https?:/,r=>r.abort());
+  const ctx=await b.newContext();await ctx.route(/^https?:/,r=>LOCAL.test(r.request().url())?r.continue():r.abort());
   const p=await ctx.newPage();
-  await p.goto('file://'+path.resolve(__dirname,'..','index.html'));await p.waitForTimeout(800);
+  await p.goto(await adresse(path.resolve(__dirname,'..','index.html')));await p.waitForTimeout(800);
   const res={};
   for(const[nom,rep]of Object.entries(VARIANTES)){
     const r=[];for(let g=1;g<=GRAINES;g++){await p.reload();await p.waitForTimeout(300);r.push(await p.evaluate(`(${SIM.toString()})(${JSON.stringify({graine:g,rep,jours:JOURS,parJour:PAR_JOUR})})`))}
