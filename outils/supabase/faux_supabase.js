@@ -41,9 +41,10 @@ async function brancher(page,db,url,journal=[]){
     let corps={};try{corps=JSON.parse(q.postData()||'{}')}catch(e){}
     // réglages publics du projet (lus par l'appli pour savoir si l'e-mail de confirmation est exigé)
     if(u.pathname==='/auth/v1/settings')return js(200,{disable_signup:false,mailer_autoconfirm:!!journal.autoconfirm});
-    // la mesure d'audience et les statistiques de jeu anonymes sont comptées à part : le journal ne garde que le trafic lié au compte
-    if(u.pathname==='/rest/v1/rpc/compter_visite')journal.visites=(journal.visites||0)+1;
-    else if(u.pathname==='/rest/v1/rpc/envoyer_jeu')journal.jeu=(journal.jeu||0)+1;else journal.push(u.pathname+u.search);
+    // la mesure d'audience, les statistiques de jeu et les mesures d'usage anonymes sont comptées à part : le journal ne garde que le trafic lié au compte
+    if(u.pathname==='/rest/v1/rpc/compter_visite'||u.pathname==='/rest/v1/rpc/noter_visite')journal.visites=(journal.visites||0)+1;
+    else if(u.pathname==='/rest/v1/rpc/envoyer_jeu')journal.jeu=(journal.jeu||0)+1;
+    else if(u.pathname==='/rest/v1/rpc/envoyer_mesures')journal.mesures=(journal.mesures||0)+1;else journal.push(u.pathname+u.search);
     if(u.pathname==='/auth/v1/signup'){
       const ex=(await db.query('select * from auth.users where email=$1',[corps.email])).rows[0];
       if(ex)return js(422,{code:422,error_code:'user_already_exists',msg:'User already registered'});
@@ -75,7 +76,8 @@ async function brancher(page,db,url,journal=[]){
       try{
         const res=await comme(db,id,`select public.${m[1]}(${noms.map((n,i)=>`${n} => $${i+1}`).join(',')}) as r`,noms.map(n=>corps[n]!==null&&typeof corps[n]==='object'?JSON.stringify(corps[n]):corps[n]));
         const v=res.rows[0].r;return v===null||v===undefined?r.fulfill({status:204,headers:cors}):js(200,v);
-      }catch(e){return js(400,{code:e.code||'P0001',message:e.message,details:null,hint:null})}
+      }catch(e){if(e.code==='42883')return js(404,{code:'PGRST202',message:'Could not find the function public.'+m[1],details:null,hint:null});   // comme PostgREST : fonction absente
+        return js(400,{code:e.code||'P0001',message:e.message,details:null,hint:null})}
     }
     return js(404,{message:'introuvable : '+u.pathname});
   });

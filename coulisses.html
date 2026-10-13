@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Coulisses · Le royaume des plantes</title>
+<link rel="icon" type="image/svg+xml" href="icones/favicon.svg?v=1">
+<style>
+/* Coulisses : chiffres anonymes de l'appli, réservés aux administrateurs (supabase/schema.sql, fonction coulisses).
+   Mêmes polices et couleurs que l'appli ; une seule couleur de données (le vert de l'appli), le texte reste en encre. */
+@font-face{font-family:"Newsreader";src:url(polices/newsreader.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Newsreader";src:url(polices/newsreader-i.woff2) format("woff2");font-weight:400 600;font-style:italic;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible Next";src:url(polices/atkinson-next.woff2) format("woff2");font-weight:200 800;font-style:normal;font-display:swap}
+:root{--ft:"Newsreader",Georgia,serif;--fx:"Atkinson Hyperlegible Next",system-ui,sans-serif;
+  --bg1:#d3e3c2;--bg2:#eaf2df;--fg:#14281a;--card:#fbfdf9;--ac:#2f6b3f;--ac2:#8ab77a;--ok:#1f7a45;--ko:#b3392e;--mu:#5b6d5f;--bd:#c9dbc4;--soft:#e4eed9;--on:#fff;--grid:#dde8d5;color-scheme:light}
+@media(prefers-color-scheme:dark){:root{--bg1:#0a140d;--bg2:#15261b;--fg:#e3eee4;--card:#1a2a1e;--ac:#8fcf9f;--ac2:#3d6b48;--ok:#7bd192;--ko:#f09a90;--mu:#98ab9c;--bd:#2c4132;--soft:#203328;--on:#0b1a10;--grid:#26392c;color-scheme:dark}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;min-height:100vh;color:var(--fg);font:16px/1.5 var(--fx);background:linear-gradient(var(--bg1),var(--bg2) 360px);background-color:var(--bg2)}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:calc(env(safe-area-inset-top,0px) + 20px) 60px;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--ft);font-weight:600;line-height:1.15;margin:0;text-wrap:balance}
+h1{font-size:clamp(1.8rem,4.5vw,2.4rem)}
+h2{font-size:1.3rem}
+h3{font-size:1.02rem}
+p{margin:0}
+a{color:var(--ac)}
+button,input{font:inherit}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px}
+.top .sub{color:var(--mu);font-size:.92rem}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.seg{display:inline-flex;background:var(--card);border:1px solid var(--bd);border-radius:999px;padding:3px;gap:2px}
+.seg button{border:0;background:none;color:var(--mu);font-weight:700;font-size:.9rem;padding:7px 13px;border-radius:999px;cursor:pointer;min-height:36px}
+.seg button[aria-pressed="true"]{background:var(--ac);color:var(--on)}
+.btn{border:1.5px solid var(--ac);background:none;color:var(--ac);font-weight:700;border-radius:999px;padding:7px 15px;cursor:pointer;min-height:38px}
+.btn.plein{background:var(--ac);color:var(--on)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px;align-items:start}
+.grid>*{min-width:0}
+.large{grid-column:1/-1}
+.note{color:var(--mu);font-size:.86rem}
+.msg{max-width:560px;margin:8vh auto 0}
+.msg form{display:flex;flex-direction:column;gap:10px}
+.msg label{font-weight:700;font-size:.9rem;display:flex;flex-direction:column;gap:4px}
+.msg input{border:1.5px solid var(--bd);border-radius:12px;padding:10px 12px;background:var(--card);color:var(--fg)}
+.err{color:var(--ko);font-weight:700}
+pre.sql{background:var(--soft);border-radius:10px;padding:10px 12px;overflow-x:auto;font-size:.85rem;white-space:pre-wrap;word-break:break-word}
+/* chiffres clés */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:12px}
+.kpi{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.kpi b{font-family:var(--ft);font-size:1.9rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.kpi span{color:var(--mu);font-size:.86rem}
+.kpi small{color:var(--fg);font-size:.82rem;font-weight:600}
+/* barres horizontales */
+.hb{display:flex;flex-direction:column;gap:6px;font-size:.9rem}
+.hb .r{display:grid;grid-template-columns:minmax(0,11em) minmax(0,1fr) auto;gap:10px;align-items:center;padding:2px 4px;border-radius:8px}
+.hb .r:hover,.hb .r:focus-visible{background:var(--soft)}
+.hb .l{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hb .l i{font-family:var(--ft);font-size:1.02em}
+.hb .t{height:10px;border-radius:5px;background:var(--grid);overflow:hidden}
+.hb .t i{display:block;height:100%;border-radius:0 5px 5px 0;background:var(--ac)}
+.hb .v{font-variant-numeric:tabular-nums;font-weight:700;text-align:right;white-space:nowrap}
+.hb .v small{font-weight:400;color:var(--mu)}
+/* graphique en barres verticales */
+.vb{width:100%;overflow-x:auto}
+.vb svg{display:block;width:100%;height:auto}
+.vb text{fill:var(--mu);font:11px var(--fx)}
+.vb .g{stroke:var(--grid);stroke-width:1}
+.vb rect.b{fill:var(--ac)}
+.vb rect.h{fill:transparent;cursor:default}
+.vb rect.h:hover+rect.b,.vb g.on rect.b{fill:var(--ac2)}
+/* tableaux */
+.tw{overflow-x:auto;border:1px solid var(--bd);border-radius:12px}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--bd);vertical-align:middle}
+tr:last-child td{border-bottom:0}
+th{font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mu);font-weight:700;white-space:nowrap}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td i{font-family:var(--ft);font-size:1.03em}
+td small{display:block;color:var(--mu)}
+.coh td.c{white-space:nowrap;text-align:center;font-variant-numeric:tabular-nums;font-weight:700;min-width:3.4em}
+/* photos qui piègent */
+.ph{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr));gap:12px}
+.ph a{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--fg);background:var(--soft);border-radius:12px;padding:8px;min-width:0}
+.ph .im{aspect-ratio:1;border-radius:8px;background:var(--grid) center/cover no-repeat;display:grid;place-items:center;color:var(--mu);font-size:.8rem;text-align:center}
+.ph b{font-size:.86rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ph span{font-size:.8rem;color:var(--mu)}
+.ph .ko{color:var(--ko);font-weight:700}
+.duo{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:10px}
+.duo div{background:var(--soft);border-radius:12px;padding:10px 12px}
+.duo b{display:block;font-family:var(--ft);font-size:1.5rem;font-variant-numeric:tabular-nums}
+.duo span{color:var(--mu);font-size:.84rem}
+.vide{color:var(--mu);font-style:italic}
+#tip{position:fixed;z-index:9;pointer-events:none;background:var(--fg);color:var(--card);border-radius:10px;padding:7px 10px;font-size:.82rem;line-height:1.35;max-width:260px;box-shadow:0 6px 18px rgba(0,0,0,.2)}
+@media (max-width:520px){.hb .r{grid-template-columns:minmax(0,8.5em) minmax(0,1fr) auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div><h1>Coulisses</h1><p class="sub">Le royaume des plantes · chiffres anonymes, réservés aux administrateurs</p></div>
+    <div class="bar" id="ctl" hidden>
+      <div class="seg" role="group" aria-label="Période" id="per"><button type="button" data-n="7">7 jours</button><button type="button" data-n="30">30 jours</button><button type="button" data-n="90">3 mois</button><button type="button" data-n="365">12 mois</button></div>
+      <button class="btn" type="button" id="maj">Actualiser</button>
+    </div>
+  </header>
+  <main id="vue"><p class="note">Chargement…</p></main>
+  <footer class="note" id="pied" hidden></footer>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+const SB_URL='https://hcbzkpsxqxhmqcblfsnm.supabase.co',SB_KEY='sb_publishable_rtqaluMAanjewYK2bvJ3Xw_zMampeYI';
+const SB_LIB='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.js',SB_SRI='sha384-BWcjm9OdFth9TbhCxZPdm+gAOUMAzQy9nmTs12ioXdCcbVnJaPMn+fMUoQCLt60R';
+const $=id=>document.getElementById(id),vue=$('vue');
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const nb=n=>(+n||0).toLocaleString('fr-FR'),pc=n=>n===null||n===undefined?'–':Math.round(n)+' %';
+const jstr=d=>{const x=new Date(d);return x.getFullYear()+'-'+String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0')};
+const jcourt=s=>new Date(s.slice(0,10)+'T12:00').toLocaleDateString('fr-FR',{day:'numeric',month:'short'});
+let sb=null,per=(()=>{try{return +localStorage.getItem('qp.coul.per')||30}catch(e){return 30}})(),noms={},photos={};
+// noms communs et photos de l'index de l'appli (facultatif : la page marche sans)
+const index=fetch('donnees/photos.json').then(r=>r.json()).then(j=>{for(const[l,e]of Object.entries(j.especes||{})){noms[l]=e[1];for(const p of e[5]||[]){const m=String(p[0]).match(/^(\d+)\.(\w+)$/);if(m)photos[m[1]]='https://inaturalist-open-data.s3.amazonaws.com/photos/'+m[1]+'/square.'+m[2]}}}).catch(()=>{});
+const nomL=l=>`<i>${esc(l)}</i>${noms[l]?` <small>${esc(noms[l])}</small>`:''}`;
+const NOMS={herbier:'Herbier',progres:'Progrès',profil:'Profil et amis',reglages:'Réglages',aide:'Aide',fiche:'Fiches des plantes',famille_jour:'Famille du jour',entrainement:'Entraînement',joker:'Jokers',zoom:'Photo agrandie',
+  quiz:'Quiz',fenetre:'Une fenêtre (aide, famille…)',telephone:'Téléphone',tablette:'Tablette',ordi:'Ordinateur',inconnu:'Inconnu',
+  qcm:'QCM',saisie:'Nom à écrire',photos:'4 photos',plante:'Plante entière',feuillage:'Feuillage',fleurs:'Fleurs',fruits:'Fruits',autre:'Autre photo',
+  classique:'Classique',tout:'Classique',arbre:'Arbres',arbuste:'Arbustes',vivace:'Vivaces',grimpante:'Grimpantes','graminée':'Graminées','conifère':'Conifères',famille:'Famille du jour',erreurs:'Mes erreurs',revoir:'Plantes à revoir',paire:'Paire de confusion'};
+const nom=k=>NOMS[k]||k;
+// ---------- infobulle commune (souris, doigt et clavier) ----------
+const tip=$('tip');
+function tipMontre(t,x,y){tip.innerHTML=t;tip.hidden=false;const w=tip.offsetWidth,h=tip.offsetHeight;tip.style.left=Math.max(8,Math.min(innerWidth-w-8,x+12))+'px';tip.style.top=Math.max(8,y-h-12)+'px'}
+document.addEventListener('pointermove',e=>{const t=e.target.closest&&e.target.closest('[data-tip]');if(t)tipMontre(t.dataset.tip,e.clientX,e.clientY);else tip.hidden=true});
+document.addEventListener('focusin',e=>{const t=e.target.closest&&e.target.closest('[data-tip]');if(t){const r=t.getBoundingClientRect();tipMontre(t.dataset.tip,r.left+r.width/2,r.top)}else tip.hidden=true});
+document.addEventListener('scroll',()=>{tip.hidden=true},{passive:true});
+// ---------- composants ----------
+// barres horizontales : [{l: libellé html, v: valeur, txt: valeur affichée, tip}]
+function hbar(rows,max){if(!rows.length)return '<p class="vide">Pas encore de données.</p>';const m=max||Math.max(1,...rows.map(r=>+r.v||0));
+  return `<div class="hb">${rows.map(r=>`<div class="r" tabindex="0" data-tip="${esc(r.tip||'')}"><span class="l">${r.l}</span><span class="t"><i style="width:${Math.max(0,Math.min(100,100*(+r.v||0)/m)).toFixed(1)}%"></i></span><span class="v">${r.txt??nb(r.v)}</span></div>`).join('')}</div>`}
+// barres verticales sur une échelle : [{x: libellé, v, tip}], une étiquette toutes les « pas » barres
+function vbar(rows,pas,lib){if(!rows.length||!rows.some(r=>+r.v))return '<p class="vide">Pas encore de données.</p>';
+  const W=Math.max(300,Math.min(1120,vue.clientWidth-38)),H=W<500?180:220,g=36,b=22,n=rows.length,max=Math.max(...rows.map(r=>+r.v||0)),e=Math.pow(10,Math.floor(Math.log10(max))),top=Math.ceil(max/e)*e||1;
+  const bw=(W-g-8)/n,y=v=>H-b-(H-b-12)*v/top,ticks=[0,top/2,top];
+  return `<div class="vb"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(lib)}">${ticks.map(t=>`<line class="g" x1="${g}" x2="${W-4}" y1="${y(t)}" y2="${y(t)}"/><text x="${g-6}" y="${y(t)+4}" text-anchor="end">${nb(t)}</text>`).join('')}
+${rows.map((r,i)=>{const x=g+i*bw,h=H-b-y(+r.v||0);return `<g tabindex="0" data-tip="${esc(r.tip)}"><rect class="h" x="${x}" y="8" width="${bw}" height="${H-b-8}"/><rect class="b" x="${(x+Math.min(1,bw*.12)).toFixed(1)}" y="${(H-b-Math.max(h,+r.v?2:0)).toFixed(1)}" width="${Math.max(1,bw-2*Math.min(1,bw*.12)).toFixed(1)}" height="${Math.max(h,+r.v?2:0).toFixed(1)}" rx="${Math.min(4,bw/3).toFixed(1)}"/>${i%pas===0||i===n-1&&n<=31?`<text x="${(i===n-1?x+bw:i===0?x:x+bw/2).toFixed(1)}" y="${H-6}" text-anchor="${i===n-1?'end':i===0?'start':'middle'}">${esc(r.x)}</text>`:''}</g>`}).join('')}</svg></div>`}
+const tableau=(tete,lignes)=>lignes.length?`<div class="tw"><table><thead><tr>${tete.map(t=>`<th${t[1]?' class="n"':''}>${t[0]}</th>`).join('')}</tr></thead><tbody>${lignes.map(l=>`<tr>${l.map((c,i)=>`<td${tete[i][1]?' class="n"':''}>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`:'<p class="vide">Pas encore de données.</p>';
+const carte=(t,c,cls,note)=>`<section class="card${cls?' '+cls:''}"><h2>${t}</h2>${c}${note?`<p class="note">${note}</p>`:''}</section>`;
+// ---------- rendu ----------
+let derniers=null,rT=0;addEventListener('resize',()=>{clearTimeout(rT);rT=setTimeout(()=>{if(derniers&&vue.querySelector('.kpis'))rendu(derniers)},200)});
+function rendu(d){derniers=d;
+  const R=d.resume,J=d.jours||[],n=J.length,pas=n<=7?1:n<=31?5:n<=95?14:30;
+  const kp=(v,l,s)=>`<div class="kpi"><b>${v}</b><span>${l}</span>${s?`<small>${s}</small>`:''}</div>`;
+  const kpis=`<div class="kpis">${kp(nb(R.appareils),'appareils différents',nb(R.nouveaux)+' nouveaux')}${kp(nb(R.joueurs),'ont joué',nb(R.exercices)+' exercices, '+pc(R.reussite)+' de réussite')}
+${kp(pc(d.retours&&d.retours.j7),'reviennent après 7 jours',`après 1 jour ${pc(d.retours&&d.retours.j1)} · après 30 jours ${pc(d.retours&&d.retours.j30)}`)}
+${kp(R.minutes_mediane===null?'–':nb(R.minutes_mediane)+' min','par session (médiane)',R.exos_mediane===null?nb(R.sessions)+' sessions':nb(R.exos_mediane)+' exercices par session · '+nb(R.sessions)+' sessions')}
+${kp(pc(R.telephone),'sur téléphone',pc(R.installee)+' ont installé l\'appli')}</div>`;
+  const jours=vbar(J.map(x=>({x:jcourt(x.jour),v:x.appareils,tip:`<b>${jcourt(x.jour)}</b><br>${nb(x.appareils)} appareils dont ${nb(x.nouveaux)} nouveaux<br>${nb(x.ouvertures)} ouvertures · ${nb(x.joueurs)} joueurs<br>${nb(x.exercices)} exercices${x.reussite!==null?', '+x.reussite+' % de réussite':''}`})),pas,'Appareils par jour');
+  const exos=vbar(J.map(x=>({x:jcourt(x.jour),v:x.exercices,tip:`<b>${jcourt(x.jour)}</b><br>${nb(x.exercices)} exercices${x.reussite!==null?' · '+x.reussite+' % de réussite':''}<br>${nb(x.joueurs)} joueurs`})),pas,'Exercices par jour');
+  const coh=(d.cohortes||[]).slice(-12),cell=v=>v===null||v===undefined?'<td class="c"><span class="note">–</span></td>':`<td class="c" style="background:color-mix(in srgb,var(--ac) ${Math.round(Math.min(100,v)*.85)}%,var(--card));color:${v>=55?'var(--on)':'var(--fg)'}">${v} %</td>`;
+  const cohT=coh.length?`<div class="tw coh"><table><thead><tr><th>Arrivée</th><th class="n">Appareils</th><th>S+1</th><th>S+2</th><th>S+3</th><th>S+4</th></tr></thead><tbody>${coh.map(c=>`<tr><td>${jcourt(c.semaine)}</td><td class="n">${nb(c.appareils)}</td>${(c.suite||[]).map(cell).join('')}</tr>`).join('')}</tbody></table></div>`:'<p class="vide">Pas encore de données.</p>';
+  const totA=Math.max(1,R.appareils);
+  const usages=hbar((d.usages||[]).map(u=>({l:esc(nom(u.quoi)),v:u.appareils,txt:`${Math.round(100*u.appareils/totA)} % <small>· ${nb(u.fois)}×</small>`,tip:`<b>${esc(nom(u.quoi))}</b><br>${nb(u.appareils)} appareils sur ${nb(R.appareils)} · ouvert ${nb(u.fois)} fois`})),totA);
+  const ecr=hbar((d.ecrans||[]).map(e=>({l:esc(nom(e.ecran)),v:e.appareils,tip:`${nb(e.appareils)} appareils`})));
+  const larg=(()=>{const T=[['moins de 500 px',0,499],['500 à 899 px',500,899],['900 à 1 299 px',900,1299],['1 300 px et plus',1300,1e5]];return hbar(T.map(([l,a,z])=>{const v=(d.largeurs||[]).filter(x=>x.largeur>=a&&x.largeur<=z).reduce((s,x)=>s+x.appareils,0);return{l,v,tip:`${nb(v)} appareils`}}).filter(x=>x.v))})();
+  const vers=tableau([['Version'],['Appareils',1]],(d.versions||[]).map(v=>[esc(v.version),nb(v.appareils)]));
+  const dur=hbar((d.durees||[]).map(x=>({l:esc(x.tranche),v:x.sessions,tip:`${nb(x.sessions)} sessions`})));
+  const dep=hbar((d.departs||[]).map(x=>({l:esc(nom(x.dernier)),v:x.sessions,tip:`${nb(x.sessions)} sessions terminées sur cet écran`})));
+  const H=Array.from({length:24},(_,h)=>(d.heures||[]).find(x=>x.heure===h)||{heure:h,exercices:0,reussite:null});
+  const heures=vbar(H.map(x=>({x:x.heure+' h',v:x.exercices,tip:`<b>${x.heure} h – ${x.heure+1} h</b><br>${nb(x.exercices)} exercices${x.reussite!==null?' · '+x.reussite+' % de réussite':''}`})),3,'Exercices par heure');
+  const crit=c=>hbar((d.exercices||[]).filter(x=>x.critere===c).map(x=>({l:esc(nom(x.valeur)),v:x.reussite,txt:`${pc(x.reussite)} <small>· ${nb(x.exercices)}</small>`,tip:`<b>${esc(nom(x.valeur))}</b><br>${nb(x.exercices)} exercices · ${pc(x.reussite)} de réussite<br>${x.secondes} s par exercice en moyenne`})),100);
+  const rat=hbar((d.ratees||[]).map(x=>({l:nomL(x.espece),v:x.reussite,txt:`${pc(x.reussite)} <small>· ${nb(x.vues)} vues</small>`,tip:`<b>${esc(x.espece)}</b><br>${nb(x.vues)} fois montrée · ${pc(x.reussite)} de réussite`})),100);
+  const vues=tableau([['Plante'],['Vues',1],['Réussite',1]],(d.vues||[]).map(x=>[nomL(x.espece),nb(x.vues),pc(x.reussite)]));
+  const conf=tableau([['Plante montrée'],['Réponse donnée'],['Fois',1],['Joueurs',1]],(d.confusions||[]).map(x=>[nomL(x.espece),nomL(x.reponse),nb(x.fois),nb(x.joueurs)]));
+  const phc=(x,s)=>`<a href="https://www.inaturalist.org/photos/${+x.photo}" target="_blank" rel="noopener" data-tip="${esc(s)}"><span class="im"${photos[x.photo]?` style="background-image:url('${photos[x.photo]}')"`:''}>${photos[x.photo]?'':'photo n° '+nb(x.photo)}</span><b><i>${esc(x.espece)}</i></b>`;
+  const pieges=(d.photos||[]).length?`<div class="ph">${d.photos.map(x=>phc(x,`Photo ${x.photo} : ${x.reussite} % de réussite, contre ${x.reussite_espece} % pour la plante`)+`<span><span class="ko">${pc(x.reussite)}</span> sur cette photo, ${pc(x.reussite_espece)} en tout · ${nb(x.vues)} vues${x.signalements?` · signalée ${x.signalements}×`:''}</span></a>`).join('')}</div>`:'<p class="vide">Aucune photo ne fait nettement moins bien que sa plante pour l\'instant.</p>';
+  const sig=(d.signalements||[]).length?`<div class="ph">${d.signalements.map(x=>phc(x,`Signalée ${x.fois} fois`)+`<span><span class="ko">signalée ${nb(x.fois)}×</span>${x.vues?` · ${pc(x.reussite)} sur ${nb(x.vues)} vues`:''}</span></a>`).join('')}</div>`:'<p class="vide">Aucune photo signalée.</p>';
+  const err=tableau([['Message'],['Version'],['Appareil'],['Fois',1],['Dernière fois',1]],(d.erreurs||[]).map(x=>[esc(x.message),esc(x.version),esc(nom(x.ecran)),nb(x.fois),jcourt(x.dernier)]));
+  const rg=d.reglages||{};
+  const obj=hbar((rg.objectifs||[]).map(x=>({l:x.objectif+' par jour',v:x.appareils,tip:`${nb(x.appareils)} appareils`})));
+  const mod=hbar((rg.modes||[]).map(x=>({l:esc(nom(x.mode)),v:x.appareils,tip:`${nb(x.appareils)} appareils`})));
+  vue.innerHTML=`${kpis}<div class="grid" style="margin-top:16px">
+${carte('Fréquentation',jours,'large','Appareils différents par jour. Survolez ou touchez une barre pour le détail.')}
+${carte('Exercices par jour',exos,'large')}
+${carte('Fidélité',`<div class="duo"><div><b>${pc(d.retours&&d.retours.j1)}</b><span>reviennent après 1 jour</span></div><div><b>${pc(d.retours&&d.retours.j7)}</b><span>après 7 jours</span></div><div><b>${pc(d.retours&&d.retours.j30)}</b><span>après 30 jours</span></div></div>${cohT}`,'large','Semaine d\'arrivée des appareils, puis part de ceux qui sont revenus 1, 2, 3 ou 4 semaines plus tard ; « – » : semaine pas encore terminée.')}
+${carte('Fonctions utilisées',usages,'','Part des appareils de la période qui ont ouvert chaque écran, et nombre d\'ouvertures.')}
+${carte('Sessions',`<h3>Durée d'activité</h3>${dur}<h3>Dernier écran avant de partir</h3>${dep}`,'','Une session s\'arrête après 30 min sans action.')}
+${carte('Appareils',`<h3>Type d'écran</h3>${ecr}<h3>Largeur de fenêtre</h3>${larg}<h3>Versions de l'appli</h3>${vers}`)}
+${carte('Heures de jeu',heures,'large','Exercices par heure de la journée, sur toute la période.')}
+${carte('Réussite par exercice',`<h3>Type d'exercice</h3>${crit('exercice')}<h3>Photo montrée</h3>${crit('organe')}`)}
+${carte('Réussite par mode et catégorie',`<h3>Mode</h3>${crit('mode')}<h3>Catégorie</h3>${crit('categorie')}`)}
+${carte('Plantes les plus ratées',rat,'',`Plantes montrées 10 fois au moins. ${nb(d.especes_vues)} plantes différentes vues sur la période.`)}
+${carte('Plantes les plus montrées',vues)}
+${carte('Confusions',conf,'large','Plante montrée, et plante répondue à la place.')}
+${carte('Photos qui piègent',pieges,'large','Photos vues 6 fois au moins dont la réussite est inférieure d\'au moins 20 points à celle de leur plante. Touchez une photo pour l\'ouvrir sur iNaturalist.')}
+${carte('Photos signalées',sig,'large','Signalées avec « Photo douteuse ? » depuis l\'agrandissement de la photo du quiz.')}
+${carte('Erreurs techniques',err,'large','Messages nettoyés : ni adresse, ni nombre, ni identifiant d\'appareil.')}
+${carte('Réglages choisis',`<div class="duo"><div><b>${pc(rg.vibrations)}</b><span>gardent les vibrations</span></div><div><b>${pc(rg.sombre)}</b><span>ont l'appareil en mode sombre</span></div></div><h3>Objectif du jour</h3>${obj}<h3>Mode de jeu choisi</h3>${mod}`)}
+</div>`;
+  $('pied').hidden=false;$('pied').textContent=`Du ${jcourt(d.periode.debut)} au ${jcourt(d.periode.fin)} · mis à jour à ${new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}. Données effacées automatiquement après 13 mois.`;
+}
+// ---------- accès ----------
+function connexion(m){
+  $('ctl').hidden=true;$('pied').hidden=true;
+  vue.innerHTML=`<section class="card msg"><h2>Connexion</h2><p>Connecte-toi avec ton compte du royaume. Si tu es déjà connecté dans l'appli sur cet appareil, la page s'ouvre directement.</p>
+<form id="lg"><label>E-mail<input id="lg-m" type="email" autocomplete="username" required></label><label>Mot de passe<input id="lg-p" type="password" autocomplete="current-password"></label>
+<div class="bar"><button class="btn plein" type="submit">Se connecter</button><button class="btn" type="button" id="lg-l">Recevoir un lien par e-mail</button></div><p id="lg-e" class="${m&&m.ok?'note':'err'}" aria-live="polite">${esc(m&&m.t||'')}</p></form></section>`;
+  $('lg').onsubmit=async e=>{e.preventDefault();const p=$('lg-p').value;if(!p){$('lg-e').className='err';$('lg-e').textContent='Indique ton mot de passe, ou demande un lien par e-mail.';return}
+    const {error}=await sb.auth.signInWithPassword({email:$('lg-m').value.trim(),password:p});if(error){$('lg-e').className='err';$('lg-e').textContent=/Invalid login/.test(error.message)?'E-mail ou mot de passe incorrect.':'Connexion impossible : '+error.message;return}acces()};
+  $('lg-l').onclick=async()=>{const m=$('lg-m').value.trim();if(!m){$('lg-e').className='err';$('lg-e').textContent='Indique ton e-mail.';return}
+    const {error}=await sb.auth.signInWithOtp({email:m,options:{shouldCreateUser:false,emailRedirectTo:location.href.split('#')[0]}});
+    $('lg-e').className=error?'err':'note';$('lg-e').textContent=error?'Envoi impossible : '+error.message:'Lien envoyé : ouvre-le sur cet appareil.'};
+}
+function refus(mail){
+  $('ctl').hidden=true;
+  vue.innerHTML=`<section class="card msg"><h2>Accès réservé</h2><p>Ce compte (${esc(mail)}) n'a pas accès aux Coulisses. Pour l'autoriser, dans Supabase, SQL Editor :</p>
+<pre class="sql">insert into public.admins select id from auth.users where email = '${esc(mail)}' on conflict do nothing;</pre><div class="bar"><button class="btn" type="button" id="re">Réessayer</button><button class="btn" type="button" id="out">Changer de compte</button></div></section>`;
+  $('re').onclick=acces;$('out').onclick=sortir;
+}
+async function sortir(){await sb.auth.signOut({scope:'local'});connexion({ok:true,t:'Déconnecté sur cet appareil (l\'appli aussi).'})}
+async function charger(){
+  document.querySelectorAll('#per button').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.n===per));
+  const fin=new Date(),deb=new Date(Date.now()-(per-1)*864e5);
+  vue.setAttribute('aria-busy','true');
+  const {data,error}=await sb.rpc('coulisses',{p_debut:jstr(deb),p_fin:jstr(fin)});vue.removeAttribute('aria-busy');
+  if(error){vue.innerHTML=`<section class="card msg"><h2>Chiffres indisponibles</h2><p class="err">${/coulisses|PGRST202/.test(error.message+error.code)&&!/NON_AUTORISE/.test(error.message)?'La base n\'est pas à jour : relance supabase/schema.sql dans le SQL Editor de Supabase.':/NON_AUTORISE/.test(error.message)?'Ce compte n\'a pas accès aux Coulisses.':'Erreur : '+esc(error.message)}</p></section>`;return}
+  await Promise.race([index,new Promise(r=>setTimeout(r,1500))]);rendu(data);
+}
+async function acces(){
+  const {data:{session}}=await sb.auth.getSession();if(!session)return connexion();
+  const {data:adm,error}=await sb.rpc('suis_admin');
+  if(error){vue.innerHTML=`<section class="card msg"><h2>Coulisses indisponibles</h2><p class="err">${error.code==='PGRST202'||/suis_admin/.test(error.message)?'La base n\'est pas à jour : relance supabase/schema.sql dans le SQL Editor de Supabase.':'Le serveur ne répond pas : vérifie ta connexion internet. '+esc(error.message)}</p></section>`;return}
+  if(!adm)return refus(session.user.email||'');
+  $('ctl').hidden=false;charger();
+}
+document.querySelectorAll('#per button').forEach(b=>b.onclick=()=>{per=+b.dataset.n;try{localStorage.setItem('qp.coul.per',per)}catch(e){}charger()});
+$('maj').onclick=charger;
+const s=document.createElement('script');s.src=SB_LIB;s.integrity=SB_SRI;s.crossOrigin='anonymous';
+s.onload=()=>{sb=supabase.createClient(SB_URL,SB_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true,storageKey:'qp.sb'}});acces()};
+s.onerror=()=>{vue.innerHTML='<section class="card msg"><h2>Coulisses indisponibles</h2><p class="err">Le module de connexion n\'a pas pu être chargé : vérifie ta connexion internet.</p></section>'};
+document.head.append(s);
+</script>
+</body>
+</html>

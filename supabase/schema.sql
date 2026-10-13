@@ -356,6 +356,305 @@ create or replace view public.par_heure with (security_invoker = true) as
 revoke all on public.jeu_par_jour, public.especes_vues, public.especes_ratees, public.confusions, public.par_exercice, public.par_heure
   from public, anon, authenticated;
 
+-- ---------- Mesures d'usage (anonymes) et Coulisses ----------
+-- Même identifiant d'appareil tiré au hasard que les visites ; uniquement des valeurs prises dans des listes fermées,
+-- jamais de texte saisi. Tout est effacé après 13 mois (_purger). Lecture réservée aux administrateurs, page coulisses.html.
+alter table public.visites add column if not exists ecran text;        -- telephone, tablette, ordi
+alter table public.visites add column if not exists largeur smallint;  -- largeur de fenêtre arrondie à 100 px
+alter table public.visites add column if not exists installee boolean; -- appli ajoutée à l'écran d'accueil
+alter table public.visites add column if not exists version text;      -- version de l'appli
+
+-- Écrans et fonctions ouverts : un compteur par jour, appareil et fonction.
+create table if not exists public.usages (
+  jour     date not null,
+  appareil uuid not null,
+  quoi     text not null,
+  fois     int  not null default 0 check (fois between 0 and 5000),
+  primary key (jour, appareil, quoi)
+);
+-- Sessions : une ligne par session (identifiant tiré au hasard), durée d'activité, exercices, dernier écran avant de partir.
+create table if not exists public.sessions (
+  jour      date     not null,
+  appareil  uuid     not null,
+  sid       bigint   not null,
+  minutes   smallint not null default 0 check (minutes between 0 and 240),
+  exercices smallint not null default 0 check (exercices between 0 and 2000),
+  dernier   text     not null,
+  primary key (jour, appareil, sid)
+);
+-- Réussite par photo montrée (numéro de photo iNaturalist, public) : repère les photos qui piègent.
+create table if not exists public.photos_jeu (
+  jour     date   not null,
+  appareil uuid   not null,
+  espece   text   not null,
+  photo    bigint not null,
+  vues     int    not null default 0 check (vues between 0 and 5000),
+  justes   int    not null default 0 check (justes between 0 and 5000),
+  primary key (jour, appareil, espece, photo)
+);
+-- Photos signalées « douteuses » depuis l'agrandissement de la photo du quiz.
+create table if not exists public.signalements (
+  jour     date   not null,
+  appareil uuid   not null,
+  espece   text   not null,
+  photo    bigint not null,
+  primary key (jour, appareil, photo)
+);
+-- Erreurs techniques : message nettoyé (sans adresse ni nombre), sans identifiant d'appareil.
+create table if not exists public.erreurs (
+  jour    date not null,
+  version text not null,
+  ecran   text not null,
+  message text not null,
+  fois    int  not null default 0 check (fois between 0 and 100000),
+  primary key (jour, version, ecran, message)
+);
+-- Réglages choisis, une fois par jour et par appareil.
+create table if not exists public.reglages (
+  jour        date     not null,
+  appareil    uuid     not null,
+  objectif    smallint not null,
+  vibrations  boolean  not null,
+  mode        text     not null,
+  sombre      boolean  not null,
+  primary key (jour, appareil)
+);
+-- Comptes autorisés à lire les Coulisses (à remplir à la main dans le SQL Editor, voir LISEZ-MOI).
+create table if not exists public.admins (
+  user_id uuid primary key references auth.users(id) on delete cascade
+);
+create index if not exists visites_appareil on public.visites (appareil, jour);
+create index if not exists sessions_jour on public.sessions (jour);
+create index if not exists photos_jeu_photo on public.photos_jeu (espece, photo);
+
+alter table public.usages       enable row level security;
+alter table public.sessions     enable row level security;
+alter table public.photos_jeu   enable row level security;
+alter table public.signalements enable row level security;
+alter table public.erreurs      enable row level security;
+alter table public.reglages     enable row level security;
+alter table public.admins       enable row level security;
+revoke all on public.usages, public.sessions, public.photos_jeu, public.signalements, public.erreurs, public.reglages, public.admins
+  from anon, authenticated;
+
+-- Effacement automatique des mesures de plus de 13 mois (appelé de temps en temps à l'ouverture de l'appli).
+create or replace function public._purger() returns void
+language plpgsql volatile security definer set search_path = public as $$
+declare limite date := current_date - 395;
+begin
+  delete from visites where jour < limite;      delete from jeu where jour < limite;
+  delete from jeu_confusions where jour < limite; delete from usages where jour < limite;
+  delete from sessions where jour < limite;     delete from photos_jeu where jour < limite;
+  delete from signalements where jour < limite; delete from erreurs where jour < limite;
+  delete from reglages where jour < limite;
+end $$;
+
+-- Ouverture de l'appli, avec le type d'appareil et la version (remplace compter_visite, gardée pour les anciennes versions).
+create or replace function public.noter_visite(p_appareil uuid, p_jour date, p_compte boolean,
+  p_ecran text, p_largeur int, p_installee boolean, p_version text) returns void
+language plpgsql volatile security definer set search_path = public as $$
+declare e text := case when p_ecran in ('telephone', 'tablette', 'ordi') then p_ecran end;
+        l smallint := case when p_largeur between 0 and 8000 then (round(p_largeur / 100.0) * 100)::smallint end;
+        v text := case when p_version ~ '^[0-9]{4}\.[0-9]{2}\.[0-9]{2}$' then p_version end;
+begin
+  if p_appareil is null or p_jour is null or p_jour not between current_date - 1 and current_date + 1 then return; end if;
+  insert into visites (jour, appareil, compte, ecran, largeur, installee, version)
+  values (p_jour, p_appareil, coalesce(p_compte, false), e, l, p_installee, v)
+  on conflict (jour, appareil) do update
+    set ouvertures = least(visites.ouvertures + 1, 500), compte = visites.compte or excluded.compte,
+        ecran = coalesce(excluded.ecran, visites.ecran), largeur = coalesce(excluded.largeur, visites.largeur),
+        installee = coalesce(excluded.installee, visites.installee), version = coalesce(excluded.version, visites.version);
+  if random() < 0.01 then perform _purger(); end if;
+end $$;
+
+-- Paquet de mesures envoyé par l'appli (même rythme que les statistiques de jeu). Valeurs hors listes : ignorées.
+--   u : [{j, q, n}]  écrans et fonctions ouverts          s : [{j, id, m, n, d}]  sessions
+--   p : [{j, e, ph, v, ok}]  réussite par photo           g : [{j, e, ph}]  photos signalées
+--   e : [{j, m, n}]  erreurs (avec v version, t écran)     r : {j, goal, vib, mode, sombre}  réglages du jour
+create or replace function public.envoyer_mesures(p_appareil uuid, p_mesures jsonb) returns void
+language plpgsql volatile security definer set search_path = public as $$
+declare
+  nom constant text := '^[A-Z][a-z]+( [a-z×-]+){0,3}$';
+  m jsonb := p_mesures; r jsonb;
+  v text := case when p_mesures->>'v' ~ '^[0-9]{4}\.[0-9]{2}\.[0-9]{2}$' then p_mesures->>'v' else 'inconnue' end;
+  t text := case when p_mesures->>'t' in ('telephone', 'tablette', 'ordi') then p_mesures->>'t' else 'inconnu' end;
+begin
+  if p_appareil is null or jsonb_typeof(m) <> 'object' then return; end if;
+  if (select count(*) from usages where appareil = p_appareil and jour >= current_date - 1) > 400 then return; end if;
+  if jsonb_typeof(m->'u') = 'array' and jsonb_array_length(m->'u') <= 200 then
+    insert into usages (jour, appareil, quoi, fois)
+    select x.j, p_appareil, x.q, least(sum(x.n), 500)
+    from jsonb_to_recordset(m->'u') as x(j date, q text, n int)
+    where x.j between current_date - 7 and current_date + 1 and x.n between 1 and 500
+      and x.q in ('herbier', 'progres', 'profil', 'reglages', 'aide', 'fiche', 'famille_jour', 'entrainement', 'joker', 'zoom')
+    group by x.j, x.q
+    on conflict (jour, appareil, quoi) do update set fois = least(usages.fois + excluded.fois, 5000);
+  end if;
+  if jsonb_typeof(m->'s') = 'array' and jsonb_array_length(m->'s') <= 50 then
+    insert into sessions (jour, appareil, sid, minutes, exercices, dernier)
+    select distinct on (x.j, x.id) x.j, p_appareil, x.id, least(greatest(x.m, 0), 240), least(greatest(x.n, 0), 2000), x.d
+    from jsonb_to_recordset(m->'s') as x(j date, id bigint, m int, n int, d text)
+    where x.j between current_date - 7 and current_date + 1 and x.id between 0 and 9000000000 and x.m is not null and x.n is not null
+      and x.d in ('quiz', 'entrainement', 'herbier', 'progres', 'profil', 'reglages', 'fenetre')
+    order by x.j, x.id, x.m desc
+    on conflict (jour, appareil, sid) do update
+      set minutes = greatest(sessions.minutes, excluded.minutes), exercices = greatest(sessions.exercices, excluded.exercices), dernier = excluded.dernier;
+  end if;
+  if jsonb_typeof(m->'p') = 'array' and jsonb_array_length(m->'p') <= 400 then
+    insert into photos_jeu (jour, appareil, espece, photo, vues, justes)
+    select x.j, p_appareil, x.e, x.ph, least(sum(x.v), 500), least(sum(greatest(x.ok, 0)), sum(x.v), 500)
+    from jsonb_to_recordset(m->'p') as x(j date, e text, ph bigint, v int, ok int)
+    where x.j between current_date - 7 and current_date + 1 and x.v between 1 and 500 and x.ph > 0
+      and x.e ~ nom and length(x.e) <= 60
+    group by x.j, x.e, x.ph
+    on conflict (jour, appareil, espece, photo) do update
+      set vues = least(photos_jeu.vues + excluded.vues, 5000), justes = least(photos_jeu.justes + excluded.justes, 5000);
+  end if;
+  if jsonb_typeof(m->'g') = 'array' and jsonb_array_length(m->'g') <= 50 then
+    insert into signalements (jour, appareil, espece, photo)
+    select distinct on (x.j, x.ph) x.j, p_appareil, x.e, x.ph
+    from jsonb_to_recordset(m->'g') as x(j date, e text, ph bigint)
+    where x.j between current_date - 7 and current_date + 1 and x.ph > 0 and x.e ~ nom and length(x.e) <= 60
+    on conflict do nothing;
+  end if;
+  if jsonb_typeof(m->'e') = 'array' and jsonb_array_length(m->'e') <= 20 then
+    insert into erreurs (jour, version, ecran, message, fois)
+    select x.j, v, t, x.m, least(sum(x.n), 50)
+    from jsonb_to_recordset(m->'e') as x(j date, m text, n int)
+    where x.j between current_date - 7 and current_date + 1 and x.n between 1 and 50
+      and length(x.m) between 1 and 140 and x.m !~ '[0-9]{3}' and x.m !~* '(https?:|@)'
+    group by x.j, x.m
+    on conflict (jour, version, ecran, message) do update set fois = least(erreurs.fois + excluded.fois, 100000);
+  end if;
+  r := m->'r';
+  if jsonb_typeof(r) = 'object' and (r->>'j') ~ '^[0-9]{4}-[0-9]{2}-[0-9]{2}$' and (r->>'j')::date between current_date - 1 and current_date + 1
+     and (r->>'goal') ~ '^[0-9]{1,3}$' and jsonb_typeof(r->'vib') = 'boolean' and jsonb_typeof(r->'sombre') = 'boolean'
+     and r->>'mode' in ('tout', 'arbre', 'arbuste', 'vivace', 'grimpante', 'graminée') then
+    insert into reglages (jour, appareil, objectif, vibrations, mode, sombre)
+    values ((r->>'j')::date, p_appareil, least((r->>'goal')::int, 500), (r->>'vib')::boolean, r->>'mode', (r->>'sombre')::boolean)
+    on conflict (jour, appareil) do update
+      set objectif = excluded.objectif, vibrations = excluded.vibrations, mode = excluded.mode, sombre = excluded.sombre;
+  end if;
+end $$;
+
+-- Ce compte a-t-il accès aux Coulisses ?
+create or replace function public.suis_admin() returns boolean
+language sql stable security definer set search_path = public as $$
+  select exists (select 1 from admins where user_id = auth.uid())
+$$;
+
+-- Coulisses : tous les chiffres d'une période en un seul appel, pour les administrateurs seulement.
+create or replace function public.coulisses(p_debut date, p_fin date) returns jsonb
+language plpgsql stable security definer set search_path = public as $$
+declare d date := p_debut; f date := p_fin; res jsonb;
+begin
+  if not exists (select 1 from admins where user_id = _moi()) then raise exception 'NON_AUTORISE'; end if;
+  if d is null or f is null or d > f or f - d > 400 then raise exception 'PERIODE_INVALIDE'; end if;
+  with
+  prem as (select appareil, min(jour) as debut from visites group by appareil),
+  vis as (select * from visites where jour between d and f),
+  jx as (select * from jeu where jour between d and f),
+  ses as (select * from sessions where jour between d and f),
+  dernier_app as (select distinct on (appareil) appareil, ecran, installee, version, largeur from vis order by appareil, jour desc),
+  pho as (select espece, photo, sum(vues) as vues, sum(justes) as justes from photos_jeu where jour between d and f group by espece, photo),
+  esp as (select espece, sum(vues) as vues, sum(justes) as justes from jx group by espece),
+  sig as (select espece, photo, count(*) as fois from signalements where jour between d and f group by espece, photo)
+  select jsonb_build_object(
+    'periode', jsonb_build_object('debut', d, 'fin', f),
+    'resume', jsonb_build_object(
+      'appareils', (select count(distinct appareil) from vis),
+      'nouveaux', (select count(*) from prem where debut between d and f),
+      'ouvertures', (select coalesce(sum(ouvertures), 0) from vis),
+      'avec_compte', (select count(distinct appareil) from vis where compte),
+      'joueurs', (select count(distinct appareil) from jx),
+      'exercices', (select coalesce(sum(vues), 0) from jx),
+      'reussite', (select round(100.0 * sum(justes) / nullif(sum(vues), 0)) from jx),
+      'sessions', (select count(*) from ses),
+      'minutes_mediane', (select percentile_cont(0.5) within group (order by minutes) from ses),
+      'exos_mediane', (select percentile_cont(0.5) within group (order by exercices) from ses where exercices > 0),
+      'telephone', (select round(100.0 * count(*) filter (where ecran = 'telephone') / nullif(count(*) filter (where ecran is not null), 0)) from dernier_app),
+      'installee', (select round(100.0 * count(*) filter (where installee) / nullif(count(*) filter (where installee is not null), 0)) from dernier_app)),
+    'jours', (select coalesce(jsonb_agg(x order by x.jour), '[]') from (
+      select g::date as jour,
+        (select count(*) from vis where jour = g::date) as appareils,
+        (select count(*) from prem where debut = g::date) as nouveaux,
+        (select coalesce(sum(ouvertures), 0) from vis where jour = g::date) as ouvertures,
+        (select count(distinct appareil) from jx where jour = g::date) as joueurs,
+        (select coalesce(sum(vues), 0) from jx where jour = g::date) as exercices,
+        (select round(100.0 * sum(justes) / nullif(sum(vues), 0)) from jx where jour = g::date) as reussite
+      from generate_series(d, f, interval '1 day') g) x),
+    'retours', (select jsonb_build_object(
+      'j1', round(100.0 * count(*) filter (where debut <= current_date - 1 and exists (select 1 from visites v where v.appareil = p.appareil and v.jour >= p.debut + 1))
+                  / nullif(count(*) filter (where debut <= current_date - 1), 0)),
+      'j7', round(100.0 * count(*) filter (where debut <= current_date - 7 and exists (select 1 from visites v where v.appareil = p.appareil and v.jour >= p.debut + 7))
+                  / nullif(count(*) filter (where debut <= current_date - 7), 0)),
+      'j30', round(100.0 * count(*) filter (where debut <= current_date - 30 and exists (select 1 from visites v where v.appareil = p.appareil and v.jour >= p.debut + 30))
+                  / nullif(count(*) filter (where debut <= current_date - 30), 0)))
+      from prem p where p.debut between d and f),
+    'cohortes', (select coalesce(jsonb_agg(x order by x.semaine), '[]') from (
+      select c.semaine, c.appareils,
+        (select jsonb_agg(case when c.semaine + 7 * (k + 1) > current_date then null else
+           round(100.0 * (select count(distinct v.appareil) from visites v join prem q on q.appareil = v.appareil
+                          where date_trunc('week', q.debut)::date = c.semaine
+                            and v.jour >= c.semaine + 7 * k and v.jour < c.semaine + 7 * (k + 1)) / c.appareils) end order by k)
+         from generate_series(1, 4) k) as suite
+      from (select date_trunc('week', debut)::date as semaine, count(*) as appareils from prem where debut between d and f group by 1) c) x),
+    'ecrans', (select coalesce(jsonb_agg(x order by x.appareils desc), '[]') from (
+      select coalesce(ecran, 'inconnu') as ecran, count(*) as appareils from dernier_app group by 1) x),
+    'versions', (select coalesce(jsonb_agg(x order by x.version desc), '[]') from (
+      select coalesce(version, 'avant les mesures') as version, count(*) as appareils from dernier_app group by 1) x),
+    'largeurs', (select coalesce(jsonb_agg(x order by x.largeur), '[]') from (
+      select largeur, count(*) as appareils from dernier_app where largeur is not null group by largeur) x),
+    'usages', (select coalesce(jsonb_agg(x order by x.appareils desc, x.quoi), '[]') from (
+      select quoi, count(distinct appareil) as appareils, sum(fois) as fois from usages where jour between d and f group by quoi) x),
+    'durees', (select coalesce(jsonb_agg(x order by x.ordre), '[]') from (
+      select b.ordre, b.tranche, count(s.*) as sessions from (values (1, 'moins d''1 min', 0, 0), (2, '1 à 4 min', 1, 4), (3, '5 à 14 min', 5, 14),
+        (4, '15 à 29 min', 15, 29), (5, '30 min et plus', 30, 1000)) b(ordre, tranche, mini, maxi)
+      left join ses s on s.minutes between b.mini and b.maxi group by b.ordre, b.tranche) x),
+    'departs', (select coalesce(jsonb_agg(x order by x.sessions desc), '[]') from (
+      select dernier, count(*) as sessions from ses group by dernier) x),
+    'heures', (select coalesce(jsonb_agg(x order by x.heure), '[]') from (
+      select heure, sum(vues) as exercices, round(100.0 * sum(justes) / nullif(sum(vues), 0)) as reussite from jx group by heure) x),
+    'exercices', (select coalesce(jsonb_agg(x order by x.critere, x.exercices desc), '[]') from (
+      select v.critere, v.valeur, sum(j.vues) as exercices, round(100.0 * sum(j.justes) / nullif(sum(j.vues), 0)) as reussite,
+             round(1.0 * sum(j.secondes) / nullif(sum(j.vues), 0), 1) as secondes
+      from jx j cross join lateral (values ('exercice', j.exercice), ('organe', j.organe), ('mode', j.mode), ('categorie', j.categorie)) as v(critere, valeur)
+      group by v.critere, v.valeur) x),
+    'ratees', (select coalesce(jsonb_agg(x), '[]') from (
+      select espece, vues, round(100.0 * justes / nullif(vues, 0)) as reussite from esp where vues >= 10 order by 3, vues desc limit 15) x),
+    'vues', (select coalesce(jsonb_agg(x), '[]') from (
+      select espece, vues, round(100.0 * justes / nullif(vues, 0)) as reussite from esp order by vues desc, espece limit 10) x),
+    'especes_vues', (select count(*) from esp),
+    'confusions', (select coalesce(jsonb_agg(x), '[]') from (
+      select espece, reponse, sum(fois) as fois, count(distinct appareil) as joueurs from jeu_confusions where jour between d and f
+      group by espece, reponse order by 3 desc, espece limit 15) x),
+    'photos', (select coalesce(jsonb_agg(x), '[]') from (
+      select p.espece, p.photo, p.vues, round(100.0 * p.justes / p.vues) as reussite,
+             round(100.0 * e.justes / nullif(e.vues, 0)) as reussite_espece, coalesce(s.fois, 0) as signalements
+      from pho p join esp e on e.espece = p.espece left join sig s on s.photo = p.photo
+      where p.vues >= 6 and 100.0 * p.justes / p.vues <= 100.0 * e.justes / nullif(e.vues, 0) - 20
+      order by 100.0 * e.justes / nullif(e.vues, 0) - 100.0 * p.justes / p.vues desc, p.vues desc limit 15) x),
+    'signalements', (select coalesce(jsonb_agg(x), '[]') from (
+      select s.espece, s.photo, s.fois, p.vues, round(100.0 * p.justes / nullif(p.vues, 0)) as reussite
+      from sig s left join pho p on p.photo = s.photo and p.espece = s.espece order by s.fois desc, s.espece limit 20) x),
+    'erreurs', (select coalesce(jsonb_agg(x), '[]') from (
+      select message, version, ecran, sum(fois) as fois, max(jour) as dernier from erreurs where jour between d and f
+      group by message, version, ecran order by 4 desc limit 20) x),
+    'reglages', (select jsonb_build_object(
+      'objectifs', (select coalesce(jsonb_agg(x order by x.objectif), '[]') from (
+        select objectif, count(*) as appareils from (select distinct on (appareil) appareil, objectif from reglages where jour between d and f order by appareil, jour desc) r
+        group by objectif) x),
+      'modes', (select coalesce(jsonb_agg(x order by x.appareils desc), '[]') from (
+        select mode, count(*) as appareils from (select distinct on (appareil) appareil, mode from reglages where jour between d and f order by appareil, jour desc) r
+        group by mode) x),
+      'vibrations', (select round(100.0 * count(*) filter (where vibrations) / nullif(count(*), 0)) from
+        (select distinct on (appareil) vibrations from reglages where jour between d and f order by appareil, jour desc) r),
+      'sombre', (select round(100.0 * count(*) filter (where sombre) / nullif(count(*), 0)) from
+        (select distinct on (appareil) sombre from reglages where jour between d and f order by appareil, jour desc) r)))
+  ) into res;
+  return res;
+end $$;
+
 -- ---------- Droits : seules les fonctions publiques, et seulement une fois connecté ----------
 revoke all on function public._moi(), public._nouveau_code(), public._profil_json(profils) from public, anon, authenticated;
 revoke all on function public.mon_profil(), public.choisir_pseudo(text), public.publier(date, int, int, int, int, int, int, int),
@@ -368,3 +667,8 @@ grant execute on function public.envoyer_jeu(uuid, jsonb, jsonb) to anon, authen
 grant execute on function public.mon_profil(), public.choisir_pseudo(text), public.publier(date, int, int, int, int, int, int, int),
   public.ajouter_ami(text), public.retirer_ami(text), public.tableau(date), public.tableau_periode(date, date), public.publier_jours(jsonb), public.sauver_progression(jsonb),
   public.lire_progression(), public.supprimer_compte() to authenticated;
+revoke all on function public._purger() from public, anon, authenticated;
+revoke all on function public.noter_visite(uuid, date, boolean, text, int, boolean, text), public.envoyer_mesures(uuid, jsonb) from public;
+grant execute on function public.noter_visite(uuid, date, boolean, text, int, boolean, text), public.envoyer_mesures(uuid, jsonb) to anon, authenticated;
+revoke all on function public.suis_admin(), public.coulisses(date, date) from public, anon;
+grant execute on function public.suis_admin(), public.coulisses(date, date) to authenticated;

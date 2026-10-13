@@ -187,3 +187,42 @@ select heure, sum(vues) exercices, count(distinct appareil) joueurs from jeu whe
 ```
 
 Le résultat d'une requête peut être exporté en CSV (bouton d'export au-dessus du résultat) pour l'ouvrir dans un tableur.
+
+## Coulisses : tous les chiffres sur une page
+
+`coulisses.html` affiche, sans écrire de SQL, la fréquentation, la fidélité, les fonctions utilisées, les sessions,
+les appareils, la réussite par exercice, les plantes ratées, les confusions, les photos qui piègent, les photos signalées,
+les erreurs techniques et les réglages. Elle n'est liée nulle part dans l'appli et n'est pas indexée par les moteurs de recherche.
+Elle ne s'ouvre qu'avec un compte administrateur : la base vérifie le compte (fonction `coulisses`), la page ne reçoit que des totaux.
+
+**Mise en route (une fois)**
+
+1. Supabase > SQL Editor > New query : coller tout `supabase/schema.sql` et cliquer sur **Run** (le script se relance sans risque).
+2. Autoriser ton compte, toujours dans le SQL Editor (avec l'e-mail de ton compte du royaume) :
+   ```sql
+   insert into public.admins select id from auth.users where email = 'ton-adresse@exemple.fr' on conflict do nothing;
+   ```
+3. Ouvrir `https://<adresse de l'appli>/coulisses.html`. Si tu es déjà connecté dans l'appli sur cet appareil, la page s'ouvre directement ;
+   sinon, connecte-toi avec ton e-mail et ton mot de passe, ou demande un lien par e-mail.
+
+Pour retirer un accès : `delete from public.admins where user_id = (select id from auth.users where email = '…');`
+
+**Mesures d'usage ajoutées** (même identifiant d'appareil tiré au hasard, jamais de texte saisi, effacées après 13 mois)
+
+| Table | Contenu |
+|---|---|
+| `visites` (colonnes ajoutées) | type d'écran (téléphone, tablette, ordi), largeur de fenêtre arrondie à 100 px, appli installée ou non, version |
+| `usages` | écrans et fonctions ouverts par jour : herbier, progrès, profil, réglages, aide, fiches, Famille du jour, entraînement, jokers, photo agrandie |
+| `sessions` | durée d'activité (une pause de 30 min ouvre une nouvelle session), nombre d'exercices, dernier écran avant de partir |
+| `photos_jeu` | réussite par photo montrée (numéro de photo iNaturalist) |
+| `signalements` | photos signalées avec « Photo douteuse ? » dans l'agrandissement de la photo du quiz |
+| `erreurs` | erreurs techniques : message sans adresse ni nombre, version et type d'écran, sans identifiant d'appareil |
+| `reglages` | objectif du jour, vibrations, mode de jeu, appareil en mode sombre, une fois par jour |
+
+La fidélité se calcule à partir des visites : le premier jour où un appareil apparaît, puis ses retours.
+
+**Version de l'appli.** `index.html` porte `const APP_V='AAAA.MM.JJ'` : change cette date à chaque publication,
+pour relier une erreur ou un changement de chiffres à une version.
+
+**Ordre de mise à jour.** L'appli marche avec une base pas encore à jour (elle revient à l'ancienne mesure des visites
+et les nouvelles mesures sont simplement perdues), mais relance `schema.sql` avant de publier pour ne rien perdre.
