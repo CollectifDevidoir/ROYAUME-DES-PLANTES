@@ -86,7 +86,8 @@ if SYN:
     rep("S.filter(s=>norm(s[0]).includes(q)||norm(s[1]).includes(q))","S.filter(s=>noms(s).some(n=>norm(n).includes(q))||norm(s[1]).includes(q))")
 # 6. compléments de familles : curiosités des cartes « Famille du jour » (FC) et nombres d'espèces manquants (FW)
 FCX=json.load(open(D/'familles-complements.json',encoding='utf-8')) if (D/'familles-complements.json').exists() else {}
-if FCX.get('FC'):maj('FC',FCX['FC'])
+FCn={f:v['FC'] for f,v in NF.items() if v.get('FC')}
+if FCX.get('FC') or FCn:maj('FC',{**FCn,**FCX.get('FC',{})})
 if FCX.get('FW'):
     a=s.index('const FW={};`')+len('const FW={};`');b=s.index('`',a);have={l.split('|')[0] for l in s[a:b].split('\n')}
     lignes('const FW={};`',[f+'|'+n for f,n in FCX['FW'].items() if f not in have])

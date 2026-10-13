@@ -3103,5 +3103,429 @@
   "statut": "ok",
   "remarque": "Hybride G. aristata × G. pulchella, souvent de courte durée. Ne supporte pas l'argile détrempée en hiver. G. pulchella (annuelle) est très proche.",
   "cat": "vivace"
+ },
+ {
+  "latin": "Jacaranda mimosifolia",
+  "nom_accepte": "Jacaranda mimosifolia",
+  "commun": "Flamboyant bleu",
+  "famille": "Bignoniaceae",
+  "cles": [
+   "trompettes bleu lavande en panicules, sur bois nu",
+   "feuilles bipennées très finement découpées, type mimosa",
+   "capsule ligneuse ronde et aplatie, brune, persistante",
+   "couronne légère et étalée, arbre caduc ou semi-caduc"
+  ],
+  "sources_cles": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:130936-2/general-information",
+   "https://dendro.cnre.vt.edu/dendrology/syllabus/factsheet.cfm?ID=735",
+   "https://en.wikipedia.org/wiki/Jacaranda_mimosifolia",
+   "https://www.futura-sciences.com/maison/definitions/jardin-jacaranda-20871/",
+   "https://www.jardiner-malin.fr/fiche/jacaranda.html",
+   "https://www.techno-science.net/fr/definitions/jacaranda",
+   "https://edis.ifas.ufl.edu/publication/ST317/pdf"
+  ],
+  "phrase": "Nuage de fleurs bleu lavande en fin de printemps ; arbre d'avenue des jardins de la Côte d'Azur.",
+  "description": {
+   "port": "Arbre caduc à semi-caduc, jusqu'à 20 m dans son aire d'origine, couronne légère et étalée",
+   "feuilles": "Feuilles bipennées à folioles fines, évoquant le mimosa ou une fougère",
+   "fleurs": "Trompettes bleu lavande d'environ 5 cm en panicules, souvent avant les feuilles",
+   "floraison": "Mai à juillet",
+   "fruits": "Capsule ligneuse ronde et aplatie, 4 à 7 cm, pouvant rester 2 ans sur l'arbre"
+  },
+  "milieu": null,
+  "statut": "ok",
+  "remarque": "Originaire d'Amérique du Sud (sud du Brésil, Paraguay, Uruguay, nord de l'Argentine, Bolivie). Rusticité très discutée selon les sources : dégâts dès -2/-3 °C (sources italiennes), gelées ponctuelles de -3 à -5 °C supportées (jardiner-malin), arbres établis jusqu'à environ -7 °C (Wikipédia en), -12 °C annoncé par Futura (optimiste) ; USDA 9b-11. En France : pleine terre seulement sur le littoral méditerranéen abrité, nombreux sujets dans les jardins de la Côte d'Azur ; ailleurs en bac rentré l'hiver. Conditions sourcées (milieu laissé à null, humidité non sourcée) : plein soleil, abri du vent, sol bien drainé plutôt léger, sans excès de calcaire.",
+  "cat": "arbre"
+ },
+ {
+  "latin": "Erythrina crista-galli",
+  "nom_accepte": "Erythrina crista-galli",
+  "commun": "Érythrine crête-de-coq",
+  "famille": "Fabaceae",
+  "cles": [
+   "grappes de fleurs rouge écarlate",
+   "feuilles trifoliées, 3 folioles ovales à bord entier",
+   "aiguillons sur pétioles, nervures et jeunes rameaux",
+   "rameaux florifères qui sèchent après la floraison"
+  ],
+  "sources_cles": [
+   "https://www.domainedurayol.org/en/la-plante-du-mois-une-crete-de-coq-sud-americaine/",
+   "https://www.rhs.org.uk/Plants/742/wd/Details",
+   "https://en.wikipedia.org/wiki/Erythrina_crista-galli",
+   "https://herbarivirtual.uib.cat/en/general/1495/especie/ceibo",
+   "https://landscapeplants.aub.edu.lb/Plants/PlantProfile/a6f3d93d-d453-4f36-ab81-c4ab5365ffbe",
+   "https://operationwildflower.org.za/index.php/albums/genera/erythrinas/erythrina-crista-galli-il-2-7071",
+   "https://www.jardiner-malin.fr/fiche/erythrina-crista-galli.html",
+   "https://www.techno-science.net/fr/definitions/erythrina-crista-galli"
+  ],
+  "phrase": "Grappes rouge écarlate spectaculaires en été ; à placer contre un mur chaud, au soleil.",
+  "description": {
+   "port": "Petit arbre ou arbuste épineux, 5 à 8 m dans son aire d'origine, 2 à 3 m en France",
+   "feuilles": "Trifoliées, folioles ovales à oblongues, vert foncé, caduques au froid ou en sécheresse",
+   "ecorce": "Tronc et pétioles armés d'aiguillons",
+   "fleurs": "Grappes de fleurs rouge écarlate",
+   "floraison": "Mai à juillet"
+  },
+  "milieu": null,
+  "statut": "ok",
+  "remarque": "Arbre national de l'Argentine (ceibo), originaire d'Argentine, Uruguay, sud du Brésil, Paraguay et Bolivie. Aussi appelé arbre corail ou ceibo ; ne pas confondre avec Erythrina variegata, « arbre corail » asiatique de 15-20 m. Rusticité : souche relativement rustique, cultivable en pleine terre seulement en climat doux, parties aériennes souvent rabattues comme une vivace après la chute des feuilles ; USDA 9-11 ; la RHS conseille un paillis épais l'hiver. En France : la plus courante des érythrines dans les jardins des régions peu gélives (ex. Domaine du Rayol, Var). Conditions sourcées (milieu laissé à null, pH non sourcé) : plein soleil, emplacement abrité au sud ou à l'ouest, sol frais, riche et bien drainé, sans eau stagnante. Floraison donnée vers mai par jardiner-malin, présentée en juillet au Rayol.",
+  "cat": "arbre"
+ },
+ {
+  "latin": "Butia capitata",
+  "nom_accepte": "Butia odorata",
+  "commun": "Palmier abricot",
+  "famille": "Arecaceae",
+  "cles": [
+   "palmes pennées bleu-gris fortement arquées vers le sol",
+   "pétioles bordés d'aiguillons bien marqués",
+   "tronc trapu gris garni des anciennes bases de palmes",
+   "fruits ronds jaune orangé, de la taille d'une cerise"
+  ],
+  "sources_cles": [
+   "https://jardin-thuret.hub.inrae.fr/content/download/5999/48614?version=1",
+   "https://florida.plantatlas.usf.edu/specimen/plantdetails/4222",
+   "https://www.rhs.org.uk/plants/28123/butia-capitata/details",
+   "https://plants.ces.ncsu.edu/plants/butia-odorata",
+   "https://www.lepotager-demesreves.fr/?idu=5835",
+   "https://canarius.com/fr/plantes/butia-capitata-jelly-palm.html",
+   "https://www.promessedefleurs.ie/annuals/flower-seeds/tree-seeds/butia-capitata-seeds-jelly-palm.html"
+  ],
+  "phrase": "Palmier trapu aux palmes bleutées retombantes ; un des plus rustiques, résiste au sec et au vent.",
+  "description": {
+   "port": "Palmier à stipe unique trapu, 4 à 5 m, jusqu'à 8 m en bonnes conditions",
+   "feuilles": "Palmes pennées arquées, bleu-gris à vert, pétioles épineux",
+   "ecorce": "Stipe grisâtre marqué par les bases des anciennes palmes",
+   "fruits": "Fruits ronds jaune orangé, parfois teintés de rouge, comestibles (gelées)"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Sec à frais",
+   "Acide à neutre"
+  ],
+  "statut": "ok",
+  "remarque": "Synonyme à risque : le palmier planté depuis un siècle en Europe du Sud sous le nom de Butia capitata est en réalité Butia odorata (Barb.Rodr.) Noblick (comb. 2011), ancien B. capitata var. odorata. Le vrai Butia capitata (Martius) est une espèce distincte du cerrado du Brésil central, quasi absente des jardins. La fiche décrit la plante cultivée en France (B. odorata). Autres noms : palmier à gelée, jelly palm. Rusticité : gels accidentels de -10 °C sans dégâts, quelques sujets ont survécu à -20 °C ; le plus rustique du genre. En France : cultivé au Jardin Thuret d'Antibes depuis les années 1860, fréquent sur le littoral méditerranéen et en climat doux. pH : le Jardin Thuret note qu'il supporte mal le calcaire (feuillage jaunissant), alors que la RHS accepte les sols calcaires ; « Acide à neutre » retenu d'après Thuret. Lumière nécessaire pour rester trapu et bleu. S'échappe des jardins en Floride.",
+  "cat": "arbre"
+ },
+ {
+  "latin": "Callistemon citrinus",
+  "nom_accepte": "Melaleuca citrina",
+  "commun": "Rince-bouteille",
+  "famille": "Myrtaceae",
+  "cles": [
+   "épis rouges en goupillon, faits d'étamines saillantes",
+   "rameau qui repousse au-delà de l'épi après floraison",
+   "capsules ligneuses en manchon le long des vieux rameaux",
+   "feuilles lancéolées coriaces, odeur de citron froissées"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/2687/callistemon-citrinus/details",
+   "https://www.worldplants.ca/display.php?id=4489",
+   "https://garden.org/plants/view/75669/Crimson-Bottlebrush-Melaleuca-citrina/",
+   "https://www.nparks.gov.sg/florafaunaweb/flora/2/7/2772",
+   "https://resources.austplants.com.au/plant/callistemon-citrinus-syn-melaleuca-citrina/",
+   "https://www.jardiner-malin.fr/fiche/rince-bouteilles-callistemon-entretien.html",
+   "https://www.truffaut.com/callistemon-plantation-entretien.html",
+   "https://provence-alpes-cotedazur.com/decouvrir/espaces-naturels/patrimoine-naturel/arbres-remarquables-callistemon-citrinus-rince-bouteille-menton-fr-3698887/"
+  ],
+  "phrase": "Brosses rouges très mellifères sur un persistant de climat doux ; haie libre en sol non calcaire.",
+  "description": {
+   "port": "Arbuste persistant buissonnant, parfois retombant selon la variété",
+   "feuilles": "Lancéolées, coriaces, parfumées citron au froissement ; jeunes pousses rosées et soyeuses",
+   "fleurs": "Épis cylindriques rouges formés d'étamines saillantes, très nectarifères",
+   "fruits": "Capsules ligneuses en coupe, groupées le long des rameaux, restant fermées des années"
+  },
+  "milieu": [
+   "Soleil",
+   "Frais et drainé",
+   "Sec à frais",
+   "Acide à neutre"
+  ],
+  "statut": "ok",
+  "remarque": "Nom récemment changé : Callistemon a été fondu dans Melaleuca (données génomiques), le nom accepté est Melaleuca citrina (Curtis) Dum.Cours. ; Callistemon citrinus (Curtis) Skeels reste le nom commercial courant. Rusticité : H3 selon la RHS (H2-H4 selon World Plants), environ -6 à -8 °C, USDA 9-10 ; demande une situation abritée des vents froids. En France : culture en pleine terre réservée aux régions à hiver doux (Midi, littoral) ; arbre remarquable à Menton ; ailleurs en pot hiverné. Sol non calcaire, neutre à acide, bien drainé, sans eau stagnante l'hiver ; tolère la sécheresse une fois installé. Origine : Australie orientale.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Echium candicans",
+  "nom_accepte": "Echium candicans",
+  "commun": "Vipérine de Madère",
+  "famille": "Boraginaceae",
+  "cles": [
+   "épis denses de petites fleurs bleues ou blanches",
+   "étamines rouges dépassant des fleurs",
+   "feuilles lancéolées gris argenté, velues, en rosettes",
+   "arbuste ramifié à nombreux épis dressés en même temps"
+  ],
+  "sources_cles": [
+   "https://en.wikipedia.org/wiki/Echium_candicans",
+   "https://rhs.org.uk/Plants/6290/wd/Details",
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:115594-1",
+   "https://landscapeplants.aub.edu.lb/Plants/PlantProfile/%20%20%20%200e1e11b0-40d8-411a-99ee-475fd0df9fdd",
+   "https://nathistoc.bio.uci.edu/Plants%20of%20Upper%20Newport%20Bay%20%28Robert%20De%20Ruff%29/Boraginaceae/Echium%20candicans.htm",
+   "https://promessedefleurs.ie/perennials/perennials-a-to-z/echium-candicans.html",
+   "https://www.bigplantnursery.co.uk/?p=14135"
+  ],
+  "phrase": "Épis bleus spectaculaires au printemps au-dessus d'un feuillage argenté ; jardins littoraux secs.",
+  "description": {
+   "port": "Sous-arbrisseau ramifié à croissance rapide, 1,5 à 3 m, vit 5 à 7 ans",
+   "feuilles": "Lancéolées, gris-vert argenté, couvertes de poils blancs, en verticilles au bout des tiges",
+   "fleurs": "Panicules terminales denses en épi, bleu pâle à bleu foncé ou blanches, étamines rouges",
+   "floraison": "Mars à juin"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Sec",
+   "Neutre à alcalin"
+  ],
+  "statut": "ok",
+  "remarque": "Endémique de Madère ; synonyme Echium fastuosum (vendu aussi comme « Echium fastuosa »). Rusticité faible : H1C selon la RHS (protéger du gel par un voile), USDA 9-11 ; craint surtout le froid humide l'hiver, réclame une situation chaude et abritée ou littorale. En France : uniquement en climat très doux (littoral méditerranéen, littoral atlantique abrité) ; aucune source trouvée ne localise précisément ses plantations ni sa naturalisation en France. Supporte vent, sel, sécheresse et sol pauvre ; se ressème en sol léger ou caillouteux, devenu envahissant en Californie. Feuillage irritant pour la peau. Envoi vers la Corse interdit (réglementation Xylella fastidiosa).",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Cycas revoluta",
+  "nom_accepte": "Cycas revoluta",
+  "commun": "Cycas du Japon",
+  "famille": "Cycadaceae",
+  "cles": [
+   "rosette de grandes frondes pennées raides au sommet",
+   "folioles linéaires étroites à bord enroulé dessous",
+   "tronc trapu et épais, d'aspect liégeux",
+   "cône ovoïde brun doré au centre des sujets adultes"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/5127/cycas-revoluta/details",
+   "https://en.wikipedia.org/wiki/Cycas_revoluta",
+   "https://www.worldplants.ca/display.php?id=8643",
+   "https://www.techno-science.net/fr/definitions/cycas-du-japon",
+   "https://fobbg.co.uk/plant-collections/cycads/cycas-revoluta/",
+   "https://www.jardiner-malin.fr/fiche/cycas-plantation-entretien-arrosage.html",
+   "https://www.truffaut.com/palmier-cycas-entretien.html"
+  ],
+  "phrase": "Silhouette graphique de « faux palmier » à croissance très lente ; isolé en pot ou en massif sec.",
+  "description": {
+   "port": "Cycadale à tronc trapu, croissance très lente, jusqu'à 8 m chez les très vieux sujets",
+   "feuilles": "Pennées, recourbées, 100 à 150 cm, en rosette terminale ; folioles linéaires de 10 à 20 cm à marges révolutées",
+   "ecorce": "Tronc épais et liégeux",
+   "fleurs": "Pas de fleurs : cônes mâles ovoïdes brun doré, structures femelles en feuilles modifiées, sur sujets âgés"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Drainé",
+   "Sec à frais",
+   "Acide à neutre"
+  ],
+  "statut": "ok",
+  "remarque": "Gymnosperme (cycadale), pas un palmier malgré son nom commercial de « palmier du Japon / sagoutier ». Épithète revoluta = bords des folioles enroulés. Rusticité : H3 selon la RHS (H2 dans d'autres bases) ; feuillage abîmé dès -3 °C, perd toutes ses feuilles vers -10 °C et se comporte alors en plante caduque ; à garder au sec l'hiver. En France : pleine terre réservée aux climats doux (Côte d'Azur, Corse, sud-ouest), très courant en pot ailleurs, rentré l'hiver dans les régions froides. Sol bien drainé, frais à sec, légèrement acide à neutre ; soleil ou mi-ombre.",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Leptospermum scoparium",
+  "nom_accepte": "Leptospermum scoparium",
+  "commun": "Arbre à thé de Nouvelle-Zélande (manuka)",
+  "famille": "Myrtaceae",
+  "cles": [
+   "petites feuilles raides à pointe piquante, 7-20 mm",
+   "fleurs blanches, roses ou rouges à 5 pétales, ~1 cm",
+   "capsules ligneuses rondes persistant des années",
+   "feuilles aromatiques au froissement"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/Plants/9978/wd/Details",
+   "https://anbg.gov.au/leptospermum/leptospermum-scoparium.html",
+   "https://dicotkey.utas.edu.au/dicotkey/MYRTS/gLeptospermum_6.htm",
+   "https://www.apstas.org.au/flora-1/leptospermum-scoparium",
+   "https://www.jardiner-malin.fr/fiche/leptospermum.html"
+  ],
+  "phrase": "Manuka : persistant fin couvert de petites fleurs au printemps ; à réserver aux jardins doux et abrités.",
+  "description": {
+   "port": "Arbuste persistant arrondi de 2 à 4 m",
+   "feuilles": "Petites feuilles persistantes, raides, piquantes, vert sombre parfois bronzé",
+   "fleurs": "Fleurs en coupe à 5 pétales, blanches, roses ou rouges, simples ou doubles selon les cultivars",
+   "floraison": "Mai à juin (fin de printemps et début d'été, selon la RHS)",
+   "fruits": "Capsules ligneuses persistantes de 5 à 10 mm"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Sec à frais",
+   "Acide à neutre"
+  ],
+  "statut": "ok",
+  "remarque": "Origine Nouvelle-Zélande et sud-est de l'Australie. Rusticité RHS H4 ; environ -7 à -8 °C selon les sources, jeunes sujets à protéger. En France, pleine terre sur le littoral atlantique doux (Bretagne, Pays basque) et en Méditerranée, ailleurs en pot hiverné. Nombreux cultivars à fleurs rouges ou doubles ('Red Damask', 'Ruby Glow'). Ne pas confondre avec Melaleuca alternifolia, autre « arbre à thé » (huile essentielle).",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Plumbago auriculata",
+  "nom_accepte": "Plumbago auriculata",
+  "commun": "Dentelaire du Cap",
+  "famille": "Plumbaginaceae",
+  "cles": [
+   "fleurs bleu ciel à long tube s'ouvrant en 5 lobes",
+   "calice côtelé, collant et glanduleux dans le haut",
+   "feuilles alternes vert clair en spatule, ~5 cm",
+   "fleurs en bouquets terminaux, bleues ou blanches"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/13333/plumbago-auriculata/details",
+   "https://www.treesandshrubsonline.org/articles/plumbago/plumbago-auriculata/",
+   "https://en.wikipedia.org/wiki/Plumbago_auriculata",
+   "https://www.truffaut.com/plumbago-varietes-plantation-entretien.html"
+  ],
+  "phrase": "Floraison bleu ciel tout l'été sur murs et terrasses du Midi ; en pot hiverné hors gel ailleurs.",
+  "description": {
+   "port": "Arbuste persistant sarmenteux, à palisser",
+   "feuilles": "Feuilles alternes, vert clair, en spatule, d'environ 5 cm",
+   "fleurs": "Fleurs bleu ciel (blanches chez f. alba) à long tube, environ 1,5 à 2 cm de diamètre",
+   "floraison": "Été jusqu'aux premières gelées"
+  },
+  "milieu": [
+   "Soleil",
+   "Drainé",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Synonyme très courant en jardinerie : Plumbago capensis Thunb. (= P. auriculata). Originaire d'Afrique du Sud. RHS H2 (hors gel) ; la souche repart après des gels de -5 à -7 °C selon les sources françaises. Pleine terre en Méditerranée et sur le littoral atlantique doux, ailleurs en pot rentré l'hiver. Sève irritante pour la peau (RHS).",
+  "cat": "arbuste"
+ },
+ {
+  "latin": "Bougainvillea glabra",
+  "nom_accepte": "Bougainvillea glabra",
+  "commun": "Bougainvillier",
+  "famille": "Nyctaginaceae",
+  "cles": [
+   "3 bractées papyracées magenta autour des fleurs",
+   "petites fleurs blanches tubulaires au centre",
+   "tube floral à 5 angles, bractées courtes",
+   "tiges épineuses, épines robustes souvent recourbées"
+  ],
+  "sources_cles": [
+   "https://www.missouribotanicalgarden.org/plan-your-visit/family-of-attractions/butterfly-house/butterflies-and-plants/our-plant-collection/article/1511/ibougainvillea-glabrai",
+   "https://plants.ces.ncsu.edu/plants/bougainvillea-glabra",
+   "https://www.rhs.org.uk/plants/91850/bougainvillea-glabra/details",
+   "https://floraseries.landcareresearch.co.nz/taxa/16788201-502a-4b0c-ab96-f2f0e80f5a7f",
+   "https://www.jardiner-malin.fr/fiche/bougainvillee-bougainvillier.html"
+  ],
+  "phrase": "Bractées magenta éclatantes sur façades et pergolas méditerranéennes ; liane épineuse à palisser.",
+  "description": {
+   "port": "Liane arbustive sarmenteuse, persistante, épineuse",
+   "feuilles": "Feuilles alternes ovales, pubérulentes jeunes puis presque glabres",
+   "fleurs": "Petites fleurs blanches tubulaires entourées de 3 bractées colorées (pourpre, magenta)"
+  },
+  "milieu": [
+   "Soleil",
+   "Frais et drainé",
+   "Sec à frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Origine Brésil (Amérique du Sud). RHS H1C ; dehors, supporte de brèves gelées vers -3 °C. En France, pleine terre surtout sur la Côte d'Azur et en Corse (zone de l'oranger), ailleurs en bac hiverné hors gel (mini 10 °C la nuit selon la RHS). Confusion fréquente avec B. spectabilis (tube floral rond, bractées plus longues, feuilles velues) et les nombreux hybrides (B. ×buttiana) aux caractères mélangés.",
+  "cat": "grimpante"
+ },
+ {
+  "latin": "Musa basjoo",
+  "nom_accepte": "Musa basjoo",
+  "commun": "Bananier du Japon",
+  "famille": "Musaceae",
+  "cles": [
+   "immenses feuilles en pagaie, jusqu'à 2 m de long",
+   "faux tronc vert formé des bases des feuilles",
+   "épi floral terminal pendant, fleurs crème",
+   "petites bananes vertes non comestibles, à graines"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/11230/i-Musa-basjoo-i/Details",
+   "https://en.wikipedia.org/wiki/Musa_basjoo",
+   "https://www.truffaut.com/musa-basjoo-ctr-24l-531609.html",
+   "https://www.jardiner-malin.fr/fiche/bananier.html"
+  ],
+  "phrase": "Le bananier le plus rustique : grand feuillage tropical pour massifs abrités, repart de souche après l'hiver.",
+  "description": {
+   "port": "Grande vivace drageonnante à faux tronc, jusqu'à 5 m",
+   "feuilles": "Feuilles vert vif en pagaie, jusqu'à 2 m sur 70 cm",
+   "fleurs": "Épis terminaux pendants de fleurs crème",
+   "floraison": "Été (après 12 à 24 mois de chaleur)",
+   "fruits": "Petites bananes vert jaune, peu de pulpe, nombreuses graines noires, non comestibles"
+  },
+  "milieu": [
+   "Soleil",
+   "Riche et frais",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Origine Chine (Sichuan), longtemps crue japonaise. RHS H2 pour la partie aérienne : feuillage brûlé dès -2 °C, faux tronc tué vers -5 °C ; la souche paillée survit vers -12 à -15 °C et repart au printemps. Très planté dans toute la moitié ouest et sud de la France, jusqu'en région parisienne avec protection. Ne pas confondre avec Ensete ventricosum (nervure rouge, non drageonnant, non rustique).",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Strelitzia reginae",
+  "nom_accepte": "Strelitzia reginae",
+  "commun": "Oiseau de paradis",
+  "famille": "Strelitziaceae",
+  "cles": [
+   "fleur en tête d'oiseau : pétales orange et bleus",
+   "fleurs sortant d'une spathe en forme de bec",
+   "feuilles oblongues gris-vert sur long pétiole raide",
+   "touffe persistante sans tronc, environ 1 à 1,5 m"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/17807/strelitzia-reginae-bird-of-paradise-bird-of-paradise-flower/details",
+   "https://worldplants.ca/display.php?id=2725",
+   "https://www.techno-science.net/fr/definitions/strelitzia",
+   "https://www.truffaut.com/strelitzia-reginae-60-80-ctr-8-litres-366355.html",
+   "https://www.jardiner-malin.fr/fiche/strelitzia.html"
+  ],
+  "phrase": "Fleurs spectaculaires orange et bleu ; en pleine terre seulement sur la Riviera, sinon en bac en véranda.",
+  "description": {
+   "port": "Vivace persistante en touffe de 1 à 1,5 m",
+   "feuilles": "Feuilles oblongues gris-vert, cireuses, sur un pétiole rigide et cylindrique jusqu'à 70 cm",
+   "fleurs": "Fleurs orange et bleues émergeant en succession d'une spathe en bec",
+   "floraison": "Mai à septembre en extérieur ; fleurit après plusieurs années"
+  },
+  "milieu": [
+   "Soleil à mi-ombre",
+   "Frais et drainé",
+   "Frais",
+   "Tous pH"
+  ],
+  "statut": "ok",
+  "remarque": "Origine Afrique australe. RHS H1B (non rustique) ; meurt vers -2 °C selon les sources françaises. Pleine terre possible seulement en situation abritée du littoral méditerranéen (Côte d'Azur) ; ailleurs plante de véranda ou d'intérieur lumineux, hivernée au-dessus de 10 °C. Ne pas confondre avec Strelitzia nicolai (port arborescent, fleurs blanches et bleu sombre).",
+  "cat": "vivace"
+ },
+ {
+  "latin": "Dicksonia antarctica",
+  "nom_accepte": "Dicksonia antarctica",
+  "commun": "Fougère arborescente de Tasmanie",
+  "famille": "Dicksoniaceae",
+  "cles": [
+   "tronc brun roux, fibreux et doux, couvert de racines",
+   "bases des frondes velues, poils roux, sans écailles",
+   "couronne de grandes frondes divisées jusqu'à 2,4 m",
+   "frondes mortes pendant le long du tronc"
+  ],
+  "sources_cles": [
+   "https://www.rhs.org.uk/plants/5794/wd/details",
+   "https://vicflora.rbg.vic.gov.au/flora/taxon/9c9ecf70-9027-490a-b26e-add18d163bf7",
+   "https://friendsoftarrabulga.org.au/2012/10/14/tree-ferns-at-tarra-bulga/",
+   "https://en.wikipedia.org/wiki/Dicksonia_antarctica",
+   "https://www.jardiner-malin.fr/fiche/fougere-arborescente.html"
+  ],
+  "phrase": "Silhouette préhistorique pour sous-bois abrités et humides ; arroser le tronc en été.",
+  "description": {
+   "port": "Fougère arborescente à tronc unique, 2,5 à 4 m, croissance de 2 à 5 cm par an",
+   "feuilles": "Grandes frondes vert foncé finement divisées, en couronne au sommet du tronc",
+   "ecorce": "Tronc brun roux, doux et fibreux, couvert de racines adventives"
+  },
+  "milieu": [
+   "Mi-ombre à ombre",
+   "Humifère et frais",
+   "Frais",
+   "Acide à neutre"
+  ],
+  "statut": "ok",
+  "remarque": "Origine sud-est de l'Australie et Tasmanie. RHS H3 : environ -5 à -10 °C selon l'abri ; protéger la couronne (paille) en hiver, éviter les vents desséchants. Fréquente dans les jardins de Bretagne, du Cotentin et du littoral atlantique doux. Se distingue des Cyathea (C. australis, C. cooperi) par ses poils, et non des écailles, et son tronc doux non hérissé de bases de frondes. Nom commun proposé « Fougère arborescente » trop générique : précisé en « de Tasmanie ».",
+  "cat": "vivace"
  }
 ]

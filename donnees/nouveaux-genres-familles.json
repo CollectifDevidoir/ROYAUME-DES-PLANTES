@@ -656,6 +656,273 @@
     "https://rhs.org.uk/plants/349950/gaillardia-grandiflora-fanblaze-pbr/details"
    ],
    "corrections": "Floraison juin à septembre (RHS : début d'été à début d'automne) ; sol 'Drainé' (RHS : craie, limon, sable) ; rusticité RHS H5."
+  },
+  "Jacaranda": {
+   "famille": "Bignoniaceae",
+   "GD": [
+    "",
+    "Arbres de 10 à 20 m (J. mimosifolia), couronne étalée ; plus petit en pot ou climat frais.",
+    "Opposées, bipennées, très finement découpées, rappelant le mimosa ou une fronde de fougère ; caduques à semi-persistantes.",
+    "Mai à juillet, panicules terminales de fleurs tubulaires bleu mauve ; rare en pot.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Drainé",
+    "Sec à frais",
+    "",
+    "H1C selon la RHS ; minimum 5 °C la nuit en hiver.",
+    ""
+   ],
+   "sources": [
+    "https://www.rhs.org.uk/plants/jacaranda/growing-guide",
+    "https://www.rhs.org.uk/plants/9429/wd/details",
+    "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:130936-2/general-information",
+    "https://www.futura-sciences.com/maison/definitions/jardin-jacaranda-20871/"
+   ]
+  },
+  "Erythrina": {
+   "famille": "Fabaceae",
+   "GD": [
+    "",
+    "Arbres de 5 à 8 m dans leur aire, 2 à 3 m en France (E. crista-galli) ; rameaux épineux.",
+    "Alternes, trifoliolées, coriaces, caduques ; pétiole et nervure souvent épineux.",
+    "Vers mai à l'été en France ; grappes de fleurs papilionacées rouge écarlate.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Drainé",
+    "Frais",
+    "",
+    "H3 selon la RHS (E. crista-galli) ; souche paillée environ -10 °C.",
+    ""
+   ],
+   "sources": [
+    "https://www.rhs.org.uk/Plants/742/wd/Details",
+    "https://www.techno-science.net/fr/definitions/erythrina-crista-galli",
+    "https://www.jardiner-malin.fr/fiche/erythrina-crista-galli.html",
+    "https://www.promessedefleurs.ie/shrubs/shrubs-by-variety/erythrina/erythrina-crista-galli-cockspur-coral-tree.html"
+   ]
+  },
+  "Butia": {
+   "famille": "Arecaceae",
+   "GD": [
+    "",
+    "Palmier à stipe trapu de 4 à 5 m, parfois 8 m (B. capitata) ; croissance lente.",
+    "Pennées, fortement arquées, vert bleuté à gris ; pétiole bordé d'épines brunes.",
+    "Juin à septembre, grappes denses jaunes à rouges entre les feuilles ; fruits jaune orangé comestibles.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Drainé",
+    "Sec à frais",
+    "Acide à neutre",
+    "H3 selon la RHS ; gels accidentels vers -10 °C (jardin Thuret, INRAE).",
+    ""
+   ],
+   "sources": [
+    "https://www.rhs.org.uk/plants/28123/butia-capitata/details",
+    "https://jardin-thuret.hub.inrae.fr/content/download/5999/48614?version=1",
+    "https://www.truffaut.com/butia-capitata-90-100-cm-pot-d-28cm-1102260.html",
+    "https://www.echocommunity.org/resources/9be1ab41-b3b4-45e9-b5bc-61b1ab08354a"
+   ]
+  },
+  "Callistemon": {
+   "famille": "Myrtaceae",
+   "GD": [
+    "",
+    "Arbustes persistants de 2 à 3 m, rameaux arqués (C. citrinus).",
+    "Alternes, lancéolées, rigides, à odeur citronnée au froissement.",
+    "Juin à août, épis rouges en écouvillon formés de longues étamines, au bout des rameaux.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Drainé",
+    "Sec à frais",
+    "Acide à neutre",
+    "H3 selon la RHS (C. citrinus) ; environ -7 °C.",
+    ""
+   ],
+   "sources": [
+    "https://rhs.org.uk/plants/109137/callistemon-citrinus-firebrand/details",
+    "https://www.worldplants.ca/display.php?id=4489",
+    "https://www.truffaut.com/callistemon-citrinus-splendens-touffe-d22cm-594388.html",
+    "https://temperate.theferns.info/plant/Callistemon+citrinus"
+   ]
+  },
+  "Cycas": {
+   "famille": "Cycadaceae",
+   "GD": [
+    "",
+    "Stipe trapu de 1 à 3 m (jusqu'à 6-7 m très âgé), couronne de feuilles au sommet (C. revoluta).",
+    "Pennées, 70 à 150 cm, folioles étroites rigides, luisantes, piquantes, à bords enroulés ; pétiole épineux.",
+    "Pas de fleurs : plante dioïque, cône mâle allongé, feuilles fertiles jaunâtres en couronne chez la femelle.",
+    "",
+    "",
+    "",
+    "Soleil à mi-ombre",
+    "Drainé",
+    "Sec à frais",
+    "",
+    "H3 selon la RHS (C. revoluta) ; exposition abritée.",
+    ""
+   ],
+   "sources": [
+    "https://www.rhs.org.uk/plants/5127/cycas-revoluta/details",
+    "https://www.techno-science.net/fr/definitions/cycas-du-japon",
+    "https://espacepourlavie.ca/carnet-horticole/cycas",
+    "https://www.ortobotaniconapoli.it/en/resources/information-on-tree-species/cycas-revoluta.html"
+   ]
+  },
+  "Leptospermum": {
+   "famille": "Myrtaceae",
+   "GD": [
+    "",
+    "Arbrisseaux persistants de 1,5 à 3 m, écorce écailleuse (L. scoparium).",
+    "Alternes, petites (environ 1 cm), pointues, piquantes, aromatiques.",
+    "Été, fleurs à 5 pétales blancs, roses ou rouges selon les cultivars.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Léger, sableux",
+    "Sec à frais",
+    "Acide à neutre",
+    "H4 selon la RHS (L. scoparium) ; jeunes plants à protéger.",
+    ""
+   ],
+   "sources": [
+    "https://www.rhs.org.uk/Plants/9978/wd/Details",
+    "https://anbg.gov.au/leptospermum/leptospermum-scoparium.html",
+    "https://www.techno-science.net/fr/definitions/manuka",
+    "https://www.techno-science.net/fr/definitions/leptospermum",
+    "https://www.jardiner-malin.fr/fiche/leptospermum.html"
+   ]
+  },
+  "Plumbago": {
+   "famille": "Plumbaginaceae",
+   "GD": [
+    "",
+    "Arbustes sarmenteux persistants, rameaux grêles et flexibles, 2,5 à 4 m palissés (P. auriculata).",
+    "Elliptiques à oblongues, 4 à 8 cm, vert mat.",
+    "Fin mai à septembre (jusqu'en novembre au sud), fleurs bleu ciel à long tube et 5 lobes, en bouquets.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Drainé",
+    "Sec à frais",
+    "",
+    "H2 selon la RHS ; la souche repart après des gels de -6 à -7 °C.",
+    ""
+   ],
+   "sources": [
+    "https://www.rhs.org.uk/plants/13333/plumbago-auriculata/details",
+    "https://worldplants.ca/display.php?id=5291",
+    "https://www.truffaut.com/plumbago-varietes-plantation-entretien.html",
+    "https://www.promessedefleurs.ie/climbers/climbers-by-variety/plumbago-dentelaire-du-cap.html"
+   ]
+  },
+  "Bougainvillea": {
+   "famille": "Nyctaginaceae",
+   "GD": [
+    "",
+    "Lianes ligneuses épineuses à palisser, jusqu'à 20 m sous les tropiques (B. glabra).",
+    "Alternes, pétiolées, ovales, semi-luisantes, jusqu'à 13 cm.",
+    "Mai à octobre en France ; 3 bractées papyracées magenta entourant 3 petites fleurs tubulaires crème.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Drainé",
+    "Sec à frais",
+    "",
+    "H1C selon la RHS (B. glabra) ; minimum 10 °C la nuit sous abri.",
+    ""
+   ],
+   "sources": [
+    "https://www.rhs.org.uk/plants/91850/bougainvillea-glabra/details",
+    "https://www.rhs.org.uk/advice/profile?pid=816",
+    "https://portal.cybertaxonomy.org/flora-guianas/cdm_dataportal/taxon/62fdf0e8-71d9-48cc-8c43-5a3b848f7f5d",
+    "https://www.futura-sciences.com/maison/definitions/jardin-bougainvillier-20239/"
+   ]
+  },
+  "Musa": {
+   "famille": "Musaceae",
+   "GD": [
+    "",
+    "Herbes géantes à pseudo-tronc de gaines foliaires, 3 à 5 m, drageonnantes (M. basjoo).",
+    "Immenses, entières, jusqu'à 3 m, en bouquet au sommet ; se déchirent au vent.",
+    "Été, inflorescence pendante à bractées, fleurs jaunâtres ; petits fruits non comestibles chez M. basjoo.",
+    "",
+    "",
+    "",
+    "Soleil à mi-ombre",
+    "Riche et frais",
+    "Frais",
+    "",
+    "H2 selon la RHS ; feuillage détruit vers -2 °C, rhizome paillé jusqu'à environ -12 °C.",
+    ""
+   ],
+   "sources": [
+    "https://www.rhs.org.uk/plants/11230/musa-basjoo/details",
+    "https://en.wikipedia.org/wiki/Musa_basjoo",
+    "https://www.kernock.co.uk/acatalog/Musa-Basjoo-U2274.html",
+    "https://www.jardiner-malin.fr/fiche/musa-basjoo-bananier-japonais.html",
+    "https://www.truffaut.com/musa-basjoo-pot-5l-1125440.html"
+   ]
+  },
+  "Strelitzia": {
+   "famille": "Strelitziaceae",
+   "GD": [
+    "",
+    "Vivaces en touffe, environ 1 à 1,5 m (S. reginae).",
+    "Ovales, coriaces, vert bleuté, rappelant le bananier, longuement pétiolées, sur deux rangs.",
+    "Mai à octobre en culture ; fleurs orange et bleues sortant d'une spathe en bec d'oiseau.",
+    "",
+    "",
+    "",
+    "Soleil",
+    "Drainé",
+    "Frais",
+    "",
+    "H1B selon la RHS ; culture sous verre, arrosage réduit l'hiver.",
+    ""
+   ],
+   "sources": [
+    "https://www.rhs.org.uk/plants/17807/strelitzia-reginae-bird-of-paradise-bird-of-paradise-flower/details",
+    "https://worldplants.ca/display.php?id=2725",
+    "https://www.truffaut.com/strelitzia-reginae-60-80-ctr-8-litres-366355.html",
+    "https://en.wikipedia.org/wiki/Strelitzia"
+   ]
+  },
+  "Dicksonia": {
+   "famille": "Dicksoniaceae",
+   "GD": [
+    "",
+    "Fougères arborescentes à stipe fibreux brun de 25-30 cm de diamètre, 4 à 6 m en culture (D. antarctica).",
+    "Frondes de 2 à 3 m, tripennées, souples, en couronne.",
+    "Pas de fleurs : spores en sores au bord des segments.",
+    "",
+    "",
+    "",
+    "Mi-ombre à ombre",
+    "Humifère et frais",
+    "Frais à humide",
+    "Acide à neutre",
+    "H3 selon la RHS ; environ -7 °C sans protection, protéger la couronne.",
+    ""
+   ],
+   "sources": [
+    "https://www.rhs.org.uk/plants/5794/wd/details",
+    "https://gardenofwales.gardenexplorer.org/taxon-5794.aspx",
+    "https://landscapeplants.aub.edu.lb/Plants/PlantProfile/f2196bbe-e9df-4888-84d5-30dc5715f088",
+    "https://www.provendernurseries.co.uk/factsheets/dicksonia-antartica",
+    "https://www.nzflora.info/factsheet/taxon/Dicksoniaceae.html"
+   ]
   }
  },
  "familles": {
@@ -700,6 +967,108 @@
    "sources": [
     "https://flora.tmag.tas.gov.au/vascular-families/polygalaceae",
     "https://en.wikipedia.org/wiki/Polygala"
+   ]
+  },
+  "Musaceae": {
+   "FI": "Musaceae|Musacées|herbe géante à pseudo-tronc formé de gaines foliaires emboîtées, feuilles immenses entières|très grandes, entières, en spirale, nervures latérales parallèles, se déchirent en lanières au vent|inflorescence à grandes bractées, fleurs en rangées sous chaque bractée|baie charnue (banane), à graines chez les espèces sauvages|strelitzia : feuilles proches mais sur deux rangs, sans pseudo-tronc ; ensète : pseudo-tronc unique, ne drageonne pas",
+   "FW": "Musaceae|environ 90",
+   "FX": [
+    "Bananiers et ensètes : herbes géantes des tropiques d'Afrique et d'Asie.",
+    "",
+    "Bananes et plantains ; Musa basjoo et Ensete pour les jardins exotiques.",
+    ""
+   ],
+   "FC": [
+    "Le « tronc » du bananier n'est pas du bois : c'est un pseudo-tronc fait des gaines des feuilles emboîtées. Kew décrit les Musa comme des herbes géantes vivaces, issues d'un rhizome ramifié.",
+    "Royal Botanic Gardens, Kew (Plants of the World Online)",
+    "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:327926-2/general-information"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Musaceae",
+    "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:327926-2/general-information",
+    "https://www.techno-science.net/fr/definitions/musaceae"
+   ]
+  },
+  "Strelitziaceae": {
+   "FI": "Strelitziaceae|Strélitziacées|feuilles de bananier disposées sur deux rangs en éventail, fleurs sortant d'une spathe rigide en bec|grandes, entières, coriaces, longuement pétiolées, distiques|émergent d'une spathe ; chez Strelitzia 3 sépales orange et pétales bleus|capsule ligneuse ; graines à arille coloré|bananier : pseudo-tronc et feuilles en spirale ; arbre du voyageur (Ravenala) : éventail géant sur un tronc",
+   "FW": "Strelitziaceae|7",
+   "FX": [
+    "Oiseau de paradis (Afrique australe), arbre du voyageur (Madagascar) et Phenakospermum (Amérique du Sud).",
+    "",
+    "Fleur coupée, plante de véranda et de jardin méditerranéen.",
+    ""
+   ],
+   "FC": [
+    "L'oiseau de paradis est pollinisé par les souimangas : l'oiseau se pose sur la bractée en forme de barque pour boire le nectar, la fleur s'ouvre sous son poids et lui couvre la poitrine de pollen.",
+    "Birmingham Botanical Gardens",
+    "https://www.birminghambotanicalgardens.org.uk/?p=651"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Strelitziaceae",
+    "https://www.britannica.com/plant/Strelitziaceae",
+    "https://www.birminghambotanicalgardens.org.uk/?p=651"
+   ]
+  },
+  "Nyctaginaceae": {
+   "FI": "Nyctaginaceae|Nyctaginacées|un seul périanthe pétaloïde en tube, souvent entouré de bractées colorées ou d'un involucre|simples, entières, opposées ou alternes|sans vrais pétales : périanthe tubulaire coloré ; 3 bractées vivement colorées chez le bougainvillier|petit fruit sec enfermé dans la base persistante du périanthe (anthocarpe), souvent côtelé|bougainvillier : la couleur vient des bractées, les vraies fleurs sont les petits tubes crème au centre",
+   "FW": "Nyctaginaceae|plus de 250",
+   "FX": [
+    "Famille pantropicale du bougainvillier et de la belle-de-nuit (Mirabilis).",
+    "",
+    "Grimpantes et massifs fleuris en climat doux.",
+    ""
+   ],
+   "FC": [
+    "Le bougainvillier a été découvert lors d'une courte escale à Rio de Janeiro du premier tour du monde français (1766-1769). L'assistant du botaniste Commerson était en fait une femme, Jeanne Baret, première à faire le tour du globe.",
+    "Université d'Oxford (Oxford Plants 400)",
+    "https://herbaria.plants.ox.ac.uk/bol/plants400/Profiles/AB/Bougainvillea"
+   ],
+   "sources": [
+    "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30000256-2/general-information",
+    "https://www.britannica.com/plant/Nyctaginaceae",
+    "https://www-archiv.fdm.uni-hamburg.de/b-online/delta/angio/www/nyctagin.htm",
+    "https://herbaria.plants.ox.ac.uk/bol/plants400/Profiles/AB/Bougainvillea"
+   ]
+  },
+  "Cycadaceae": {
+   "FI": "Cycadaceae|Cycadacées|port de palmier mais gymnosperme : couronne de feuilles pennées rigides au sommet d'un stipe trapu|pennées, coriaces, folioles étroites et piquantes, pétiole épineux|pas de fleurs : plantes dioïques ; cône mâle allongé ; femelle sans vrai cône, feuilles fertiles (mégasporophylles) en couronne lâche|pas de fruits : graines nues rougeâtres sur le bord des mégasporophylles|palmiers : vraies fleurs et fruits ; autres cycas (Zamiacées) : cônes femelles compacts",
+   "FW": "Cycadaceae|environ 113",
+   "FX": [
+    "Un seul genre, Cycas : gymnospermes anciennes à port de palmier, d'Asie, d'Océanie et d'Afrique de l'Est.",
+    "",
+    "Plante d'ornement en bac ou jardin abrité ; graines et feuilles toxiques.",
+    ""
+   ],
+   "FC": [
+    "En 1896, Sakugoro Ikeno, de l'Université impériale de Tokyo, découvre des spermatozoïdes mobiles chez Cycas revoluta, la même année que Hirase chez le ginkgo : des gamètes qui nagent chez une plante à graines.",
+    "Universität Hamburg (Biological Classics in the Internet, d'après Ogura 1967)",
+    "https://www-archiv.fdm.uni-hamburg.de/b-online/fo47/ginkgo/ogura.htm"
+   ],
+   "sources": [
+    "https://kaweah.freedombox.rocks/kiwix/wikipedia_en_all_maxi_2023-10/Cycas",
+    "https://s4.lite.msu.edu/res/msu/botonl/b_online/cycads/ident.html",
+    "https://www.delta-intkey.com/gymno/www/cycadace.htm",
+    "https://www-archiv.fdm.uni-hamburg.de/b-online/fo47/ginkgo/ogura.htm"
+   ]
+  },
+  "Dicksoniaceae": {
+   "FI": "Dicksoniaceae|Dicksoniacées|fougères souvent arborescentes, stipe fibreux brun, couronne de grandes frondes très divisées|frondes très grandes, 2 à 3 fois pennées, souples|pas de fleurs : spores dans des sores marginaux protégés par une indusie à deux valves|pas de fruits : spores|Cyathea (Cyathéacées) : autre fougère arborescente, sores sous le limbe et non au bord",
+   "FW": "Dicksoniaceae|30 à 40",
+   "FX": [
+    "Fougères arborescentes de l'hémisphère sud : Dicksonia, Calochlaena, Lophosoria.",
+    "",
+    "Jardins exotiques ombragés et frais en climat doux.",
+    ""
+   ],
+   "FC": [
+    "Le « tronc » de la fougère arborescente Dicksonia antarctica n'est pas du bois : il est formé des restes en décomposition des croissances antérieures, qui servent de substrat aux racines de la plante.",
+    "Stellenbosch University Botanical Garden",
+    "https://sun.gardenexplorer.org/taxon-587.aspx"
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Dicksoniaceae",
+    "https://www.nzflora.info/factsheet/taxon/Dicksoniaceae.html",
+    "https://sun.gardenexplorer.org/taxon-587.aspx"
    ]
   }
  }
