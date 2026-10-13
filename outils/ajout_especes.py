@@ -1,6 +1,6 @@
 # Ajoute les nouvelles espèces préparées (donnees/nouvelles-especes.json) à l'appli, avec leurs genres et familles
 # (donnees/nouveaux-genres-familles.json), leurs photos (donnees/photos-nouvelles.json), les 3 rangs supplémentaires
-# (donnees/rangs-nouveaux.json) et les textes « Plus de 700 ».
+# (donnees/rangs.json) et les textes « Plus de 700 ».
 # Seules les espèces complètes entrent : 3 à 5 clés de 55 caractères au plus, 2 sources au moins, une phrase,
 # port et feuilles décrits, et au moins 3 photos libres trouvées sur iNaturalist. Les autres sont listées, avec la raison.
 # Noms acceptés en plus du nom affiché (donnees/synonymes.json) et compléments de familles (donnees/familles-complements.json).
@@ -10,7 +10,6 @@ R=pathlib.Path(__file__).resolve().parent.parent;D=R/'donnees'
 E=json.load(open(D/'nouvelles-especes.json',encoding='utf-8'))
 GF=json.load(open(D/'nouveaux-genres-familles.json',encoding='utf-8'))
 PH=json.load(open(D/'photos-nouvelles.json',encoding='utf-8'))['especes'] if (D/'photos-nouvelles.json').exists() else {}
-RG=json.load(open(D/'rangs-nouveaux.json',encoding='utf-8'))
 s=(R/'index.html').read_text(encoding='utf-8')
 qa=s.index('const Q={');deja=set(re.findall(r'^"([^"]+)":',s[qa:s.index('\n};',qa)],re.M))
 garde,refus=[],[]
@@ -66,14 +65,26 @@ def lignes(debut,ajout):
     L=sorted(set(L),key=lambda l:l.split('|')[0]);s=s[:a]+'\n'.join(L)+s[b:]
 lignes('const FI={};`',[v['FI'] for v in NF.values()])
 lignes('const FW={};`',[v['FW'] for v in NF.values()])
-# 4. trois rangs de plus, au-dessus de « Maître du royaume » (les seuils existants ne bougent pas : personne ne perd son rang)
-top=N-N%10;P=[[600,'Druide'],[680,'Esprit de la forêt'],[min(760,top),'Légende du royaume']]
-m=re.search(r'const R=(\[\[.*?\]\]);',s);Rk=json.loads(m.group(1))
-if len(Rk)==12:s=s[:m.start(1)]+json.dumps(Rk+P,ensure_ascii=False)+s[m.end(1):]
-k=s.index('const RI=');a=k+9;o,fin=json.JSONDecoder().raw_decode(s[a:])
-if len(o)==12:
-    o+=[re.sub(r'^<svg[^>]*>|</svg>$','',RG[n]) for n in ('druide','esprit','legende')];s=s[:a]+json.dumps(o,ensure_ascii=False,separators=(',',':'))+s[a+fin:]
+# 4. les 15 rangs (donnees/rangs.json, icônes dessinées par outils/illustrations.py) : Baliveau, Arbre remarquable et Esprit sylvestre
+#    s'intercalent, seuils réharmonisés de 0 à 700 espèces ; la teinte des animations de rang suit les 15 rangs
+RG=json.load(open(D/'rangs.json',encoding='utf-8'))
+m=re.search(r'const R=(\[\[.*?\]\]);',s);s=s[:m.start(1)]+json.dumps(RG['R'],ensure_ascii=False)+s[m.end(1):]
+k=s.index('const RI=');a=k+9;o,fin=json.JSONDecoder().raw_decode(s[a:]);s=s[:a]+json.dumps(RG['RI'],ensure_ascii=False,separators=(',',':'))+s[a+fin:]
+rep('const rankHue=i=>Math.round(125-i*(79/11));','const rankHue=i=>Math.round(125-i*(79/(R.length-1)));')
+rep('.ri .fr3{fill:#c22a50}','.ri .fr3{fill:#c22a50}.ri .fr4{fill:#8c1f3e}')
 rep('aria-label="Les 12 rangs"','aria-label="Les ${R.length} rangs"',2)
+# profil : chaque icône de la frise des rangs se touche pour afficher son nom et le nombre d'espèces à acquérir
+rep("""<li class="${i<b.rang?'pas':i===b.rang?'ici':'fut'}" title="${x[1]} : ${x[0]} espèce${x[0]>1?'s':''}">""",
+    """<li class="${i<b.rang?'pas':i===b.rang?'ici':'fut'}" data-i="${i}" tabindex="0" role="button" title="${x[1]} : ${x[0]} espèce${x[0]>1?'s':''}">""")
+rep('<p class="na rgn">','<p class="na rgn" aria-live="polite">')
+rep('.rgs .ici{background:var(--bg2);box-shadow:0 0 0 2px var(--ac)}','.rgs .ici{background:var(--bg2);box-shadow:0 0 0 2px var(--ac)}\\n.rgs li[data-i]{cursor:pointer}.rgs li.vu{background:var(--bg2);box-shadow:0 0 0 2px var(--mu)}.rgs li.vu .tgi{opacity:.9;filter:none}.rgs li:focus-visible{outline:2px solid var(--ac);outline-offset:1px}')
+rep("function sbClLie(){","""// Profil : toucher une icône de rang affiche, sous la frise, son nom et le nombre d'espèces à acquérir ; le rang actuel ramène au prochain rang
+function rangVu(li){const p=document.querySelector('#ami .rgn');if(!p||!li)return;const i=+li.dataset.i,b=monBilan(),r=R[i];if(p.dataset.d===undefined)p.dataset.d=p.innerHTML;
+  document.querySelectorAll('#ami .rgs li').forEach(x=>x.classList.toggle('vu',x===li&&i!==b.rang));
+  p.innerHTML=i===b.rang?p.dataset.d:i<b.rang?`<b>${r[1]}</b> : rang atteint${r[0]?` à ${r[0]} espèces acquises`:''}.`:`<b>${r[1]}</b> : à ${r[0]} espèces acquises (encore ${r[0]-b.acquises}).`}
+document.addEventListener('click',e=>{const li=e.target.closest&&e.target.closest('#ami .rgs li[data-i]');if(li)rangVu(li)});
+document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target&&e.target.matches&&e.target.matches('#ami .rgs li[data-i]')){e.preventDefault();rangVu(e.target)}});
+function sbClLie(){""")
 rep('.rgs{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));','.rgs{display:grid;grid-template-columns:repeat(15,minmax(0,1fr));')
 # 5. noms botaniques récents ou anciens acceptés à l'écrit (le nom affiché reste le plus courant) et dans la recherche de l'herbier
 SYN=json.load(open(D/'synonymes.json',encoding='utf-8')) if (D/'synonymes.json').exists() else {}
