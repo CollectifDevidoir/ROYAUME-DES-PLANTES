@@ -46,7 +46,7 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   await A.p.fill('#sb-ps','Antoine');await A.p.click('#sb-pf button');
   ok(await att(A.p,()=>/RPL-[A-Z0-9]{5}/.test($('ami').innerText)),'profil créé avec un code ami');
   const codeA=await A.p.evaluate(()=>$('sb-code').textContent);
-  ok(/Antoine/.test(await txt(A.p))&&/Prochain rang/.test(await txt(A.p))&&await A.p.evaluate(()=>document.querySelectorAll('#ami .rgs li').length===12),'profil : pseudo, rang et échelle des 12 rangs');
+  ok(/Antoine/.test(await txt(A.p))&&/Prochain rang/.test(await txt(A.p))&&await A.p.evaluate(()=>document.querySelectorAll('#ami .rgs li').length===R.length),'profil : pseudo, rang et échelle des 12 rangs');
   ok(await A.p.evaluate(()=>{pro();return /1\s*\n?\s*jour de suite/.test($('pro').innerText)}),'Progrès : jours de suite (les chiffres ne sont plus répétés dans le profil)');
   ok(A.j.some(x=>x.includes('rpc/publier'))&&A.j.some(x=>x.includes('rpc/sauver_progression')),'chiffres et progression envoyés au compte');
   // ---- Coline : second appareil

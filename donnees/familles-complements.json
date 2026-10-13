@@ -1,0 +1,77 @@
+{
+ "FC": {
+  "Apiaceae": [
+   "La grande ciguë, le poison qui tua Socrate en 399 av. J.-C., doit sa toxicité à la coniine. En 1886, cette molécule est devenue le tout premier alcaloïde fabriqué par synthèse en laboratoire.",
+   "Université de Bristol, Molecule of the Month (Coniine and the Hemlock Alkaloids)",
+   "https://www.chm.bris.ac.uk/motm/hemlock/synthesis.htm"
+  ],
+  "Bignoniaceae": [
+   "Le catalpa, si courant dans les parcs et les cours d'école en France, vient du sud-est des États-Unis. Son nom est emprunté à la langue des Creeks, un peuple amérindien.",
+   "Université Stanford, Trees of Stanford (Catalpa bignonioides)",
+   "https://trees.stanford.edu/ENCYC/CATbi.htm"
+  ],
+  "Boraginaceae": [
+   "La pulmonaire officinale porte souvent des fleurs roses et bleues sur la même tige. Ses fleurs s'ouvrent roses, puis virent au bleu-violet en vieillissant.",
+   "NC State Extension, Plant Toolbox (Pulmonaria officinalis)",
+   "https://plants.ces.ncsu.edu/plants/pulmonaria-officinalis"
+  ],
+  "Euphorbiaceae": [
+   "Le rouge du poinsettia ne vient pas de pétales mais de bractées, c'est-à-dire de feuilles modifiées. Les vraies fleurs sont les petits boutons jaunes du centre (cyathes), sans aucun pétale.",
+   "Université Purdue, Plant & Pest Diagnostic Laboratory",
+   "https://ag.purdue.edu/department/btny/ppdl/potw-dept-folder/2023/poinsettia.html"
+  ],
+  "Plantaginaceae": [
+   "En 1785, le médecin anglais William Withering a tiré la digitale pourpre d'un remède populaire contre l'hydropisie. Après dix ans d'essais, il l'a fait entrer en médecine, et ses dérivés soignent encore le cœur.",
+   "Linda Hall Library, Scientist of the Day (William Withering)",
+   "https://www.lindahall.org/about/news/scientist-of-the-day/william-withering/"
+  ],
+  "Rutaceae": [
+   "La fraxinelle, une cousine des agrumes, dégage par temps chaud des huiles volatiles. Si l'on en approche une flamme, elles s'embrasent en un éclair sans abîmer la plante, d'où son surnom de « buisson ardent ».",
+   "Université de Washington, Elisabeth C. Miller Library (Plant Answer Line)",
+   "https://depts.washington.edu/hortlib/resources-info/pal"
+  ],
+  "Meliaceae": [
+   "L'acajou véritable appartient à la même famille que le lilas de Perse. Le grand acajou d'Amérique (Swietenia macrophylla) est protégé par l'annexe II de la CITES depuis novembre 2003.",
+   "USDA Forest Service, Treesearch",
+   "https://research.fs.usda.gov/treesearch/30087"
+  ],
+  "Amaranthaceae": [
+   "La betterave, une Amaranthacée comme l'épinard, a pris son essor grâce au blocus continental. Privé de sucre de canne, Napoléon a fait réserver des terres à sa culture par un décret de 1811.",
+   "Fondation Napoléon, « La bataille du sucre »",
+   "https://www.napoleon.org/histoire-des-2-empires/articles/la-bataille-du-sucre/"
+  ],
+  "Polygalaceae": [
+   "« Polygala » signifie « beaucoup de lait » en grec. On croyait que les vaches qui broutaient ce petit polygale des prés donnaient plus de lait, d'où son ancien nom d'« herbe à lait ».",
+   "Dictionnaire de l'Académie française, 9e édition",
+   "https://dictionnaire-academie.fr/article/A9P3240"
+  ],
+  "Arecaceae": [
+   "Le coco de mer, un palmier qui ne pousse naturellement qu'aux Seychelles, produit la plus grosse graine du monde : elle pèse de 15 à 20 kg.",
+   "Université de Coimbra, Centre de connaissance",
+   "https://www.uc.pt/en/our-uc/knowledge-centre/coco-de-mer"
+  ],
+  "Myrtaceae": [
+   "Le clou de girofle est un bouton floral séché, cueilli juste avant d'éclore sur le giroflier des Moluques : une Myrtacée, cousine de l'eucalyptus et du rince-bouteille.",
+   "TRAMIL, réseau de recherche sur les plantes médicinales de la Caraïbe",
+   "https://tramil.net/fr/plant/syzygium-aromaticum"
+  ]
+ },
+ "FW": {
+  "Altingiaceae": "15",
+  "Escalloniaceae": "130",
+  "Staphyleaceae": "40"
+ },
+ "sources": {
+  "FW": {
+   "Altingiaceae": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3881344",
+   "Escalloniaceae": "https://apps.lucidcentral.org/rainforest/text/entities/escalloniaceae.htm",
+   "Staphyleaceae": "https://en.wikipedia.org/wiki/Staphyleaceae"
+  },
+  "melia": [
+   "https://jardin-thuret.hub.inrae.fr/media/fiches-especes-ardem-2023/melia-azedarach.pdf",
+   "https://www.calameo.com/caue77/books/0059881810cad6863bbe5",
+   "https://www.idref.fr/232993505",
+   "https://especes-envahissantes-outremer.fr/?p=22023"
+  ]
+ }
+}

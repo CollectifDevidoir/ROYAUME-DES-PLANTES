@@ -13,7 +13,7 @@ PAL={'g1':'#b4e67f','g2':'#72c24c','g3':'#459c3c','g4':'#2c7433',
      'w1':'#ffe6b5','w2':'#f6c67c','w3':'#d99a4f',
      'y1':'#fff3a8','y2':'#ffcf3d','y3':'#ef9f1c',
      'o1':'#ffb684','o2':'#f27c46','o3':'#c8552c',
-     'r1':'#ffa3b5','r2':'#f0466b','r3':'#c22a50',
+     'r1':'#ffa3b5','r2':'#f0466b','r3':'#c22a50','r4':'#8c1f3e',
      'p1':'#ffd6e6','p2':'#ff92bb','p3':'#e2628f',
      'v1':'#dcc2ff','v2':'#ab7ce9','v3':'#7c52c4',
      'u1':'#c8ecff','u2':'#4db3f2','u3':'#2a83cc',
@@ -199,6 +199,39 @@ crown="M20 13L25 17.5L28.5 8L32 15L35.5 8L39 17.5L44 13L42 22H22Z"
 RI.append(F(star(11,14,4,1),'y2')+F(star(54,20,3,.8),'y2')+shadow(32,58.5,24,2.8)+trunk(32,57,40,7.5,4.6)+S('M30 49L20 41M34 47L45 39','b3',2.6)
   +crown_blob(32,33,24,12,12,'y1','y2','y3',jit=[1,1.2,.8,1,1.1,.9,1,1.2,.9,1,.8,1.1],a0=-95)+''.join(berry(x,y,2.3,'o2','o3','o1') for x,y in [(20,36),(40,30),(44,38)])
   +dep(crown,'y2','y3',0,1.4)+F(circ(32,18,1.8),'r2')+F(circ(24.5,19.2,1.3),'u2')+F(circ(39.5,19.2,1.3),'u2'))
+# ---------- Rangs ajoutés (15 rangs) : Baliveau (6e), Arbre remarquable (10e), Esprit sylvestre (14e) ----------
+# 6 · Baliveau : tige fine et droite, feuillage léger en petites touffes étagées (plus petit et plus aérien que le jeune arbre)
+baliveau=(shadow(32,58.5,9,2)+trunk(32,57,14,2.4,1.2)
+  +S('M32 40C34.5 38 36.5 36.5 38.5 34M32 31C29.5 29 27.5 27.5 25.5 25M32 24C34 22.5 35.5 21 37 19','b3',1.4)
+  +crown_blob(39,31.5,6.2,5,7,'g1','g1','g2',spots=False)+crown_blob(25,22.5,6,4.8,7,'g1','g1','g2',spots=False)
+  +crown_blob(37.5,16.5,5,4,6,'g1','g1','g2',spots=False)+crown_blob(31.5,11,4.6,4.4,6,'g1','g1','g2',spots=False)
+  +F(ell(29.8,9.6,1.2,1.6),'c1'))
+# 10 · Arbre remarquable : port très étalé, houppier massif pourpre (hêtre pourpre), tronc puissant à contreforts
+remarquable=(shadow(32,58.5,30,2.8)
+  +F('M20 57.5C25.5 53 27 47 26.5 39L37.5 39C37 47 38.5 53 44 57.5Z','b2')+F('M32 39L37.5 39C37 47 38.5 53 44 57.5L36 57.5C34.5 51 34 45.5 32 39Z','b3')
+  +S('M28 44L11 35M36 43L53 34M29.5 40L22 30M34.5 40L42 29','b3',3.2)
+  +crown_blob(12,31,10.5,8.5,9,'p2','r3','r4',jit=[1,1.1,.9,1,1.15,.9,1,1.1,.95])+crown_blob(52,31,10.5,8.5,9,'p2','r3','r4',jit=[1,.9,1.1,1,.95,1.1,1,.9,1.05])
+  +crown_blob(32,22,22,13,13,'p2','r3','r4',jit=[1,1.15,.85,1.1,1,.9,1.1,1,.9,1.1,1,.95,1.05],a0=-95))
+# 13 · Esprit sylvestre : tête de cerf géométrique adoucie, blanche et lumineuse, de face ; bois nets, étoile-losange au front, regard en amande ;
+# halo vert nuit et petits points de lueur
+def mir(d):
+    import re
+    return re.sub(r'(-?\d+(?:\.\d+)?) (-?\d+(?:\.\d+)?)',lambda m:f'{f(64-float(m.group(1)))} {m.group(2)}',d)
+tete='M32 25.6Q35 25.8 37.6 27.2Q39.6 28.6 39.4 31.2Q37.6 38.6 35 46.4Q32 51.6 29 46.4Q26.4 38.6 24.6 31.2Q24.4 28.6 26.4 27.2Q29 25.8 32 25.6Z'
+gauche='M32 25.6Q29 25.8 26.4 27.2Q24.4 28.6 24.6 31.2Q26.4 38.6 29 46.4Q30.4 49 32 49.4Z'
+oreille='M24.2 30.4Q18.6 29.8 14.6 25.6Q19.6 24.2 24.8 27.6Z'
+bois='M28.8 26.2C27.6 22 25 16.4 21.2 13C19.6 10.8 18.6 8.4 18.2 5.6M26.9 20.8C25.2 19.8 23.6 19.4 21.8 19.6M23 15.2C23.4 13 23.8 11.2 24.6 9.4M21.2 13C19.2 11.8 17.2 11.2 15.2 11.2'
+oeil='M30.4 35.8Q28.4 33.4 25.8 33.6Q27.4 36 30.4 35.8Z'
+k=1.16
+cerf=(S(bois,'c3',2.4)+S(mir(bois),'c3',2.4)+S(bois,'y1',1.1)+S(mir(bois),'y1',1.1)
+  +F(oreille,'c2')+F(mir(oreille),'c3')+F(tete,'c2')+F(gauche,'c1')
+  +F(oeil,'t4')+F(mir(oeil),'t4')+F(circ(28.2,34.8,.55),'y1')+F(circ(35.8,34.8,.55),'y1')
+  +F('M30.4 46.8Q32 46.4 33.6 46.8Q32.8 48.2 32 48.8Q31.2 48.2 30.4 46.8Z','t4')
+  +F(star(32,20.4,3.4,.9),'y2')+F(star(32,20.4,1.7,.45),'y1'))
+esprit=(F(circ(32,31,27),'t4')+F(circ(32,32,20),'t3')+F(circ(32,33,13),'t2')
+  +f'<g transform="translate({f(32-32*k)} {f(29-29*k)}) scale({k})">'+cerf+'</g>'
+  +''.join(F(circ(x,y,r),'y1') for x,y,r in [(9.5,30,1),(54.5,30,1),(13,45,.8),(51,45,.8),(19,52.5,.7),(45,52.5,.7)]))
+RI.insert(5,baliveau);RI.insert(9,remarquable);RI.insert(13,esprit)
 # ---------- Décor de fond (#bg, 1200×800, ancré en bas) ----------
 def tronc(x,w,lean=0,flare=1.6,top=-10,br=None,rx=None):
     """Tronc effilé, légèrement penché, avec empattement au pied et départs de branches."""
