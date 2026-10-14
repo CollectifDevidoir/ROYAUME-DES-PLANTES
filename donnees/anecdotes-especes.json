@@ -1,0 +1,2606 @@
+{
+ "_lisez_moi": "Relecture des phrases « À découvrir » et curiosités par espèce. curiosite : rédigée sans nommer la plante (utilisable comme question). certitude « source » : appuyée par les URL de sources ; « connaissance » : à sourcer. reserve : non affichée ni utilisée (raison indiquée). floraison : mois habituels en France. Intégré par outils/anecdotes_vers_appli.py.",
+ "especes": {
+  "Acer campestre": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "En Italie, on le plantait dans les champs comme tuteur vivant pour faire grimper la vigne : c'est la « vigne mariée » à l'arbre.",
+   "theme": "usage",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://www.ortobotaniconapoli.it/images/Delpinoa/Delpinoa_n_s_44_2002_[2003]/Delpinoa_n_s_44_2002_[2003]_053-063.pdf",
+    "https://lavenaria.it/sites/default/files/page-documents/zolle_reali/webz_2021_schede_bot_acer_campestre.pdf",
+    "https://www.uoguelph.ca/foibis/detail_2.cfm%3Ftype=french&oplid=4827&fcid=2381.html"
+   ],
+   "certitude": "source"
+  },
+  "Acer platanoides": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Introduit en Amérique du Nord comme arbre d'alignement, il y envahit les forêts au point que sa vente est interdite au Massachusetts.",
+   "theme": "écologie",
+   "floraison": [
+    3,
+    4
+   ],
+   "sources": [
+    "https://www.mass.gov/info-details/prohibited-plant-list-faq",
+    "https://extension.umd.edu/resource/invasives-your-woodland-norway-maple"
+   ],
+   "certitude": "source"
+  },
+  "Acer pseudoplatanus": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son bois à fil ondulé est le matériau classique du fond, des éclisses et du manche des violons depuis les grands luthiers italiens.",
+   "theme": "usage",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://bioresources.cnr.ncsu.edu/resources/modal-analysis-of-violin-bodies-with-back-plates-made-of-different-wood-species/",
+    "https://www.woodworkingnetwork.com/archived/custom/great-designs-wood-stradivarius-violin"
+   ],
+   "certitude": "source"
+  },
+  "Aesculus hippocastanum": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "En 1917, des écoliers britanniques ramassèrent ses graines par milliers de tonnes pour en tirer l'acétone nécessaire aux explosifs.",
+   "theme": "histoire",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://live.historicengland.org.uk/listing/what-is-designation/heritage-highlights/conkers-help-win-fww",
+    "https://windsorlocalhistorygroup.org/first-world-war-centenary-horse-chestnuts-and-the-war-effort"
+   ],
+   "certitude": "source"
+  },
+  "Alnus glutinosa": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son bois, qui vire à l'orange vif à la coupe, ne pourrit pas sous l'eau : on dit qu'une partie de Venise repose sur des pieux de ce bois.",
+   "theme": "usage",
+   "floraison": [
+    2,
+    3
+   ],
+   "sources": [
+    "https://www.futura-sciences.com/planete/definitions/botanique-aulne-glutineux-10464/",
+    "https://www.techno-science.net/fr/definitions/aulne-glutineux"
+   ],
+   "certitude": "source"
+  },
+  "Betula pendula": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Les Néandertaliens chauffaient son écorce à l'abri de l'air pour en tirer un goudron collant qui fixait leurs outils, il y a 200 000 ans.",
+   "theme": "histoire",
+   "floraison": [
+    3,
+    4
+   ],
+   "sources": [
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5579016/",
+    "https://www.smithsonianmag.com/smart-news/making-neanderthal-birch-tar-isnt-complex-thought-180972994/"
+   ],
+   "certitude": "source"
+  },
+  "Carpinus betulus": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son bois, si dur que les Anglais le disent « de corne », servait aux étals de boucher, aux moyeux de roue et aux manches d'outils.",
+   "theme": "usage",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://college-emile-zola.edu69.ac-lyon.fr/wp-content/uploads/sites/99/2024/04/1-CHARME.pdf",
+    "https://www.techno-science.net/fr/definitions/charme"
+   ],
+   "certitude": "source"
+  },
+  "Castanea sativa": {
+   "phrase_statut": "corrigée",
+   "phrase_corrigee": "Arbre des coteaux acides, cultivé pour ses châtaignes (les « marrons » en sont des variétés) ; les bogues piquantes les protègent.",
+   "curiosite": "Sur l'Etna, un vieux spécimen dit « des cent chevaux » mesurait près de 58 m de tour en 1780 : record de circonférence jamais mesuré.",
+   "theme": "record",
+   "floraison": [
+    6,
+    7
+   ],
+   "sources": [
+    "https://blog.rowleygallery.co.uk/the-chestnut-of-a-hundred-horses/",
+    "https://www.greenme.it/ambiente/natura/castagno-cento-cavalli-albero-leggende/"
+   ],
+   "certitude": "source"
+  },
+  "Cercis siliquastrum": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Une légende chrétienne veut que le traître des Évangiles s'y soit pendu, et que ses fleurs, jadis blanches, aient rougi de honte.",
+   "theme": "culture",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [],
+   "certitude": "connaissance",
+   "reserve": true,
+   "raison_reserve": "légende non sourcée"
+  },
+  "Fagus sylvatica": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Les mots « book » et « Buch » viendraient de son nom germanique, peut-être parce qu'on gravait des runes sur des tablettes de son bois.",
+   "theme": "étymologie",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://www.etymonline.com/word/book",
+    "https://www.etymonline.com/word/beech"
+   ],
+   "certitude": "source"
+  },
+  "Fraxinus excelsior": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Dans la mythologie nordique, Yggdrasil, l'arbre-monde dont les branches relient les neuf mondes, est un immense arbre de cette espèce.",
+   "theme": "culture",
+   "floraison": [
+    3,
+    4
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Yggdrasil",
+    "https://treesforlife.org.uk/into-the-forest/trees-plants-animals/trees/ash/ash-mythology-and-folklore/"
+   ],
+   "certitude": "source"
+  },
+  "Ginkgo biloba": {
+   "phrase_statut": "corrigée",
+   "phrase_corrigee": "Lignée de plus de 200 millions d'années ; arbre dioïque dont les graines charnues sentent mauvais : on plante surtout des mâles.",
+   "curiosite": "À Hiroshima, des dizaines de ces arbres proches de l'explosion de 1945 ont survécu et refait des feuilles ; certains y vivent encore.",
+   "theme": "histoire",
+   "floraison": [],
+   "sources": [
+    "https://gggp.org/ginkgo-survivor-trees/",
+    "https://www.botanic-garden.ox.ac.uk/node/3504151"
+   ],
+   "certitude": "source"
+  },
+  "Gleditsia triacanthos": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Les mastodontes mangeaient ses gousses sucrées ; ses épines, qui s'arrêtent à la hauteur que ces géants atteignaient, seraient une défense.",
+   "theme": "écologie",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://bygl.osu.edu/node/959",
+    "https://www.lakeforest.edu/news/domestication-of-gleditsia-triacanthos"
+   ],
+   "certitude": "source"
+  },
+  "Juglans regia": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Ses fruits récoltés en Isère ont reçu dès 1938 une appellation d'origine contrôlée, l'une des toutes premières accordées à un fruit.",
+   "theme": "cuisine",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://europeangardens.eu/inventories/fr/inventaires/Auvergne-Rhone-Alpes/Isere/FRIEJP_INVIsere.xml/ead/FRIEJP_INVIsere_J188.pdf",
+    "https://www.alpes-isere.com/?p=58656"
+   ],
+   "certitude": "source"
+  },
+  "Liquidambar styraciflua": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Au Mexique, les Aztèques mêlaient sa résine aromatique au tabac à fumer, la brûlaient comme encens et la recevaient en tribut.",
+   "theme": "histoire",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://libraryexhibits.uvm.edu/omeka/exhibits/show/uvmtrees/sweet-gum-introduction/sweet-gum-medicinal-uses",
+    "https://aztecglyphs.wired-humanities.org/node/1698"
+   ],
+   "certitude": "source"
+  },
+  "Liriodendron tulipifera": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Les Amérindiens creusaient des pirogues dans son tronc droit et léger, d'où son surnom anglais de « canoewood ».",
+   "theme": "usage",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://facilities.utah.edu/tree-tour/tuliptree/",
+    "https://encyclopedia.nahc-mapping.org/node/20585",
+    "https://en.wikipedia.org/wiki/Liriodendron"
+   ],
+   "certitude": "source"
+  },
+  "Magnolia grandiflora": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Arrivé près de Nantes vers 1711, il y est roi : un sujet du Jardin des Plantes de la ville, planté en 1807, serait le doyen d'Europe.",
+   "theme": "histoire",
+   "floraison": [
+    6,
+    7,
+    8
+   ],
+   "sources": [
+    "https://magnoliasociety.org/resources/CultivarChecklist/checklist_docs/checklist_m.htm",
+    "https://en.wikipedia.org/wiki/Magnolia_grandiflora"
+   ],
+   "certitude": "source"
+  },
+  "Platanus × hispanica": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Le champignon qui décime ceux du canal du Midi serait arrivé en Provence en 1944-1945 avec des caisses de munitions américaines.",
+   "theme": "histoire",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://www.senat.fr/questions/base/2015/qSEQ15091247S.html",
+    "https://macleans.ca/society/life/giving-up-to-a-u-s-invader/"
+   ],
+   "certitude": "source"
+  },
+  "Populus nigra": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "La résine de ses bourgeons est la principale source de propolis en Europe : les abeilles s'en servent pour calfeutrer et assainir la ruche.",
+   "theme": "écologie",
+   "floraison": [
+    3,
+    4
+   ],
+   "sources": [
+    "https://www.cari.be/IMG/pdf/151-fichepropolis.pdf",
+    "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/feuillus/le-peuplier-noir-populus-nigra"
+   ],
+   "certitude": "source"
+  },
+  "Prunus avium": {
+   "phrase_statut": "corrigée",
+   "phrase_corrigee": "Ancêtre des cerisiers à fruits doux (guignes, bigarreaux) ; ses fleurs blanches éclairent les haies au printemps.",
+   "curiosite": "Son nom latin signifie « des oiseaux » : grives, merles et étourneaux raffolent de ses petits fruits et en dispersent les noyaux.",
+   "theme": "étymologie",
+   "floraison": [
+    4
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Quercus robur": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "En Normandie, un spécimen de 800 à 1 200 ans abrite dans son tronc creux deux chapelles superposées, aménagées en 1696.",
+   "theme": "histoire",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ch%C3%AAne_chapelle",
+    "https://www.seine-maritime-tourisme.com/en/offers/le-chene-dallouville-allouville-bellefosse-en-5134356/"
+   ],
+   "certitude": "source"
+  },
+  "Quercus ilex": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "En Espagne, ses glands, les plus doux de la dehesa, engraissent l'hiver les porcs ibériques destinés au jambon « de bellota ».",
+   "theme": "cuisine",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://artsandculture.google.com/story/2QXxevnGhnS4Kw",
+    "https://www.interempresas.net/porcino/576077-Arranca-la-montanera-con-el-sector-del-cerdo-iberico-pendiente-de-las-lluvias-otonales.html"
+   ],
+   "certitude": "source"
+  },
+  "Quercus rubra": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son bois aux vaisseaux ouverts laisse fuir les liquides : impossible d'en faire des tonneaux étanches, à la différence de ses cousins européens.",
+   "theme": "usage",
+   "floraison": [
+    5
+   ],
+   "sources": [
+    "https://www.britannica.com/plant/northern-red-oak",
+    "https://link.springer.com/10.1038/s41598-024-67298-x"
+   ],
+   "certitude": "source"
+  },
+  "Robinia pseudoacacia": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Le plus vieil arbre de Paris, planté vers 1601 square René-Viviani, face à Notre-Dame, est de cette espèce venue d'Amérique du Nord.",
+   "theme": "record",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://www.paris.fr/lieux/square-rene-viviani-2441",
+    "https://www.pariszigzag.fr/insolite/lieux-insolites/plus-vieil-arbre-paris/"
+   ],
+   "certitude": "source"
+  },
+  "Salix alba": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Les battes de cricket sont taillées dans le bois d'une variété de cet arbre, à la fois léger, résistant et peu cassant.",
+   "theme": "usage",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://gabrielhemery.com/knowledge/species/salix-alba-var-caerulea/",
+    "https://www.bioimages.org.uk/bioinfohtml/html/Salix_alba_var_caerulea.htm"
+   ],
+   "certitude": "source"
+  },
+  "Sophora japonica": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Malgré son nom, il est chinois : un jésuite en envoya les graines de Chine, et Bernard de Jussieu le sema à Paris en 1747.",
+   "theme": "histoire",
+   "floraison": [
+    7,
+    8
+   ],
+   "sources": [
+    "https://www.jardindesplantesdeparis.fr/system/files/2024-07/histoires_d_arbres.pdf",
+    "https://www.pariszigzag.fr/?p=230030",
+    "https://www.treesandshrubsonline.org/articles/styphnolobium/styphnolobium-japonicum/"
+   ],
+   "certitude": "source"
+  },
+  "Sorbus aucuparia": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Le conservateur alimentaire E200, l'acide sorbique, a été isolé pour la première fois en 1859 à partir de ses baies encore vertes.",
+   "theme": "usage",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sorbic_acid",
+    "https://www.medicinenet.com/what_is_sorbic_acid/article.htm"
+   ],
+   "certitude": "source"
+  },
+  "Tilia cordata": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Tendre et sans fil, son bois était le favori des sculpteurs de retables gothiques allemands, comme Tilman Riemenschneider.",
+   "theme": "culture",
+   "floraison": [
+    6,
+    7
+   ],
+   "sources": [
+    "https://www.metmuseum.org/press-releases/tilman-riemenschneider--master-sculptor-of-the-late-middle-ages-2000-exhibitions",
+    "https://en.wikipedia.org/wiki/Tilman_Riemenschneider"
+   ],
+   "certitude": "source"
+  },
+  "Ulmus minor": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "On attribue à Sully ceux des places de village, mais Henri II en ordonnait déjà la plantation en 1552, selon un historien forestier.",
+   "theme": "histoire",
+   "floraison": [
+    2,
+    3
+   ],
+   "sources": [
+    "https://revueforestierefrancaise.agroparistech.fr/article/download/7686/31299",
+    "https://dictionnaire-academie.fr/article/A6O0465"
+   ],
+   "certitude": "source"
+  },
+  "Cedrus atlantica": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Une forêt du Petit Luberon est née en 1861 de graines de cet arbre venues d'Algérie, semées à la main par les habitants des villages voisins.",
+   "theme": "histoire",
+   "floraison": [
+    9,
+    10
+   ],
+   "sources": [
+    "https://vaucluse.fr/nos-territoires/espaces-naturels-sensibles-biodiversite-et-paysages/les-sites-labellises-espace-naturel-sensible-a-decouvrir/les-espaces-naturels-sensibles-forets/la-foret-des-cedres-du-petit-luberon-906/pdf",
+    "https://www.parcduluberon.fr/wp-content/uploads/2017/12/plaquette_bois_cedre_luberon.pdf",
+    "https://provence-alpes-cotedazur.com/decouvrir/espaces-naturels/foret-cedres-luberon/"
+   ],
+   "certitude": "source"
+  },
+  "Pinus pinea": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Ses cônes mettent environ trois ans à mûrir ; leurs graines comestibles sont enfermées dans une coque si dure qu'on la casse entre deux pierres.",
+   "theme": "cuisine",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://graphsearch.epfl.ch/fr/concept/547980",
+    "https://www.techno-science.net/fr/definitions/pin-parasol",
+    "https://www.truffaut.com/pinus-pinea-demi-tige-175-200-cm-14-16-25839.html"
+   ],
+   "certitude": "source"
+  },
+  "Pinus sylvestris": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son aire naturelle va de l'Écosse et de l'Espagne jusqu'à l'Extrême-Orient russe : c'est le pin à la plus vaste répartition au monde.",
+   "theme": "record",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Taxus baccata": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "En Normandie, deux spécimens de cet arbre âgés d'environ 1 500 ans abritent dans leur tronc creux, l'un une chapelle, l'autre un oratoire.",
+   "theme": "histoire",
+   "floraison": [
+    2,
+    3,
+    4
+   ],
+   "sources": [
+    "https://en.normandie-tourisme.fr/museums-and-heritage-sites/ifs-millenaires-a-la-haye-de-routot/",
+    "https://www.culture.gouv.fr/Media/Thematiques/Patrimoine-culturel-immateriel/Files/Fiches-inventaire-du-PCI/la-haye-de-routot"
+   ],
+   "certitude": "source"
+  },
+  "Cupressus sempervirens": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "En Iran, un spécimen de cet arbre estimé à 4 000 ans passe pour le plus vieux de son espèce ; la tradition locale l'attribue à Zoroastre.",
+   "theme": "record",
+   "floraison": [
+    2,
+    3,
+    4
+   ],
+   "sources": [
+    "https://whc.unesco.org/fr/listesindicatives/6552",
+    "https://www.guinnessworldrecords.com/world-records/93363-oldest-cypress"
+   ],
+   "certitude": "source"
+  },
+  "Sequoiadendron giganteum": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Le plus gros arbre vivant connu appartient à cette espèce : son seul tronc cube environ 1 487 m³ et pèse près de 1 400 tonnes.",
+   "theme": "record",
+   "floraison": [
+    3,
+    4
+   ],
+   "sources": [
+    "https://www.nps.gov/SEKI/LEARN/NATURE/SHERMAN.HTM"
+   ],
+   "certitude": "source"
+  },
+  "Cornus sanguinea": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Ötzi, l'homme des glaces vieux de 5 300 ans, portait dans son carquois des tiges de flèches dont certaines étaient taillées dans le bois de cet arbuste.",
+   "theme": "histoire",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://www.iceman.it/en/oetzi/equipment",
+    "https://en.wikipedia.org/wiki/Cornus_sanguinea"
+   ],
+   "certitude": "source",
+   "reserve": true,
+   "raison_reserve": "la source ne précise pas l'espèce"
+  },
+  "Corylus avellana": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son nom d'espèce rappelle Avella (Abella), ville de Campanie dont les fruits étaient déjà réputés au temps de Pline l'Ancien.",
+   "theme": "étymologie",
+   "floraison": [
+    1,
+    2,
+    3
+   ],
+   "sources": [
+    "https://dictionnaire-academie.fr/article/A9A3387",
+    "https://en.wikipedia.org/wiki/Corylus_avellana"
+   ],
+   "certitude": "source"
+  },
+  "Crataegus monogyna": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "En Angleterre, une variété de cet arbuste refleurit vers Noël ; la légende la fait naître du bâton planté par Joseph d'Arimathie.",
+   "theme": "culture",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Glastonbury_Thorn",
+    "https://thegardenhistory.blog/2018/12/22/the-glastonbury-thorn/"
+   ],
+   "certitude": "source",
+   "reserve": true,
+   "raison_reserve": "sources faibles (légende de Glastonbury)"
+  },
+  "Ligustrum vulgare": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Un grand papillon de nuit d'environ 10 cm d'envergure, dont la chenille verte rayée de mauve se nourrit de ses feuilles, porte son nom en français.",
+   "theme": "écologie",
+   "floraison": [
+    6,
+    7
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Viburnum tinus": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Le bleu métallique de ses fruits ne vient pas d'un pigment : il naît de couches de gouttelettes de graisse dans la paroi des cellules.",
+   "theme": "écologie",
+   "floraison": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "sources": [
+    "https://www.bristol.ac.uk/news/2020/august/metallic-blue-fruits.html",
+    "https://www.cam.ac.uk/node/216752",
+    "https://donoghuelab.yale.edu/sites/default/files/middleton_currbio_2020.pdf"
+   ],
+   "certitude": "source"
+  },
+  "Buxus sempervirens": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son bois très dur au grain serré, coupé en travers des fibres, a permis au graveur anglais Thomas Bewick d'imposer la gravure sur bois de bout.",
+   "theme": "usage",
+   "floraison": [
+    3,
+    4
+   ],
+   "sources": [
+    "https://www.universalis.fr/encyclopedie/thomas-bewick/",
+    "https://paper.gatech.edu/index.php/artifact/thomas-bewick-bird-woodblock"
+   ],
+   "certitude": "source"
+  },
+  "Sambucus nigra": {
+   "phrase_statut": "corrigée",
+   "phrase_corrigee": "Sureau noir : larges corymbes plats de fleurs blanches parfumées et baies noires à cuire ; haies et lisières.",
+   "curiosite": "Sa moelle blanche et légère sert aux botanistes à maintenir les tissus mous pour les couper en tranches très fines à observer au microscope.",
+   "theme": "usage",
+   "floraison": [
+    5,
+    6,
+    7
+   ],
+   "sources": [
+    "https://lewebpedagogique.com/svtbertholon/files/2018/04/FT_de_coupes_vegetales.pdf",
+    "https://cahier-de-prepa.fr/bcpst2.2-fermat/download?id=4422"
+   ],
+   "certitude": "source"
+  },
+  "Laurus nobilis": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Le mot « lauréat » vient de son nom latin : on ceignait de ses rameaux la tête des poètes et des vainqueurs.",
+   "theme": "étymologie",
+   "floraison": [
+    3,
+    4
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Nerium oleander": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Fleur officielle d'Hiroshima, cet arbuste compte parmi les premières plantes à avoir refleuri sur la ville dévastée par la bombe de 1945.",
+   "theme": "culture",
+   "floraison": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "sources": [
+    "https://www.city.hiroshima.lg.jp/_res/projects/default_project/_page_/001/018/288/26827.pdf",
+    "https://cca.org.hk/news/remembering-6th-august-pain"
+   ],
+   "certitude": "source"
+  },
+  "Prunus laurocerasus": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Écrasées, ses feuilles dégagent du cyanure à odeur d'amande : les entomologistes s'en servaient jadis pour tuer les insectes dans leurs bocaux.",
+   "theme": "toxicité",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://www.saps.org.uk/trees/laurel.htm",
+    "https://en.wikipedia.org/wiki/Killing_jar"
+   ],
+   "certitude": "source"
+  },
+  "Ilex aquifolium": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Ses feuilles piquantes abondent surtout sous 2,5 m, à portée des cerfs : plus une branche est broutée, plus elle en produit.",
+   "theme": "écologie",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://www.botany.one/unwelcome-biting-turns-holly-prickly/",
+    "https://blog.plantwise.org/?p=3593"
+   ],
+   "certitude": "source"
+  },
+  "Hydrangea macrophylla": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Au Japon, une tisane sucrée tirée des feuilles fermentées d'une forme de cet arbuste est versée sur les statues du Bouddha chaque 8 avril.",
+   "theme": "culture",
+   "floraison": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "sources": [
+    "https://en.wikipedia.com/wiki/Amacha",
+    "https://yunomi.life/products/kunohe-village-amacha"
+   ],
+   "certitude": "source",
+   "reserve": true,
+   "raison_reserve": "sources faibles"
+  },
+  "Choisya ternata": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son nom de genre rend hommage à un pasteur et botaniste genevois du XIXe siècle, collaborateur d'Augustin Pyramus de Candolle.",
+   "theme": "étymologie",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Lavandula angustifolia": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Selon son propre récit, un chimiste lyonnais soigna en 1910 ses brûlures avec son essence, puis forgea le mot « aromathérapie ».",
+   "theme": "histoire",
+   "floraison": [
+    6,
+    7,
+    8
+   ],
+   "sources": [
+    "https://roberttisserand.com/2011/04/gattefosses-burn/",
+    "https://www.pharma-gdd.com/fr/qu-est-ce-que-l-aromatherapie"
+   ],
+   "certitude": "source"
+  },
+  "Rosmarinus officinalis": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "En 2017, des analyses d'ADN l'ont fait entrer dans le genre d'une autre aromatique célèbre de sa famille : son nom botanique a donc changé.",
+   "theme": "histoire",
+   "floraison": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "sources": [
+    "https://rhs.org.uk/plants/articles/misc/rosemary-becomes-a-sage",
+    "https://en.wikipedia.org/wiki/Rosemary"
+   ],
+   "certitude": "source"
+  },
+  "Hedera helix": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Il porte deux sortes de feuilles : lobées sur les tiges qui grimpent, entières sur les rameaux adultes sans crampons, les seuls à fleurir.",
+   "theme": "écologie",
+   "floraison": [
+    9,
+    10,
+    11
+   ],
+   "sources": [
+    "https://ask.ifas.ufl.edu/publication/EP243",
+    "https://hortflora.rbg.vic.gov.au/taxon/ada6bc4a-5340-11e7-b82b-005056b0018f"
+   ],
+   "certitude": "source"
+  },
+  "Wisteria sinensis": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Le plus grand spécimen connu, planté en Californie en 1894, couvre plus de 4 000 m² ; le Guinness l'a sacré plus grande plante fleurie en 1990.",
+   "theme": "record",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://ucanr.edu/node/106012",
+    "https://pbssocal.org/shows/socal-wanderer/five-of-the-most-fascinating-examples-of-flora-in-socal",
+    "https://en.wikipedia.org/wiki/Sierra_Madre_Wistaria"
+   ],
+   "certitude": "source"
+  },
+  "Clematis vitalba": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Ses tiges creuses étaient fumées en cachette par les garçons de ferme, d'où ses surnoms de « bois fumant » ou « bois de pipe ».",
+   "theme": "culture",
+   "floraison": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "sources": [
+    "https://www.fr.ch/mhnf/actualites/lherbe-aux-mendiants"
+   ],
+   "certitude": "source"
+  },
+  "Miscanthus sinensis": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Croisée avec une espèce voisine, cette graminée a donné un hybride stérile géant, cultivé en Europe comme biomasse pour produire de l'énergie.",
+   "theme": "usage",
+   "floraison": [
+    8,
+    9,
+    10
+   ],
+   "sources": [
+    "https://www.agronomy-journal.org/10.1051/agro/2009034",
+    "https://hal.archives-ouvertes.fr/hal-00886516"
+   ],
+   "certitude": "source"
+  },
+  "Stipa tenuissima": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Vendue comme ornementale, elle est devenue en Australie une mauvaise herbe interdite : chaque touffe y produit jusqu'à 100 000 graines par an.",
+   "theme": "écologie",
+   "floraison": [
+    6,
+    7,
+    8
+   ],
+   "sources": [
+    "https://nt.gov.au/environment/weeds/weeds-in-the-nt/A-Z-list-of-weeds-in-the-NT/mexican-feather-grass",
+    "https://weeds.dpi.nsw.gov.au/Weed/mexicanfeathergrass"
+   ],
+   "certitude": "source"
+  },
+  "Achillea millefolium": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son nom savant évoque un héros de la guerre de Troie qui, selon Pline l'Ancien, aurait soigné avec elle la blessure du roi Télèphe.",
+   "theme": "étymologie",
+   "floraison": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "sources": [
+    "https://gardenhistoryresearchfoundation.com/2025/04/07/whats-in-a-name-yarrow-and-the-great-achilles/",
+    "https://www.ahpa.org/herbs_in_history_yarrow"
+   ],
+   "certitude": "source"
+  },
+  "Alnus cordata": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "À l'état sauvage, cet arbre ne pousse qu'en Corse et dans le sud de l'Apennin italien (Campanie, Basilicate, Calabre).",
+   "theme": "écologie",
+   "floraison": [
+    2,
+    3
+   ],
+   "sources": [
+    "https://agriculture.gouv.fr/sites/default/files/160420_aco_fiche.pdf",
+    "https://powo.science.kew.org/taxon/294902-1"
+   ],
+   "certitude": "source"
+  },
+  "Catalpa bignonioides": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Aux États-Unis, on le plante près des étangs pour la chenille d'un sphinx qui dévore ses feuilles, appât de pêche très prisé.",
+   "theme": "usage",
+   "floraison": [
+    6,
+    7
+   ],
+   "sources": [
+    "https://edis.ifas.ufl.edu/publication/ST130/pdf",
+    "https://texasinsects.tamu.edu/?p=368"
+   ],
+   "certitude": "source"
+  },
+  "Cedrus deodara": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son nom d'espèce vient du sanskrit devadāru, « bois des dieux » ; cet arbre est aussi l'arbre national du Pakistan.",
+   "theme": "étymologie",
+   "floraison": [
+    9,
+    10,
+    11
+   ],
+   "sources": [
+    "https://thegardenstrust.org/journeys-of-empire-the-deodar-of-pakistan/",
+    "https://www.nationalarboretum.act.gov.au/living-collections/forests-and-trees/forest-11"
+   ],
+   "certitude": "source"
+  },
+  "Cedrus libani": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Planté en 1734 au Jardin des Plantes de Paris, cet arbre y vit toujours ; on raconte que les jeunes plants auraient voyagé dans un chapeau.",
+   "theme": "histoire",
+   "floraison": [
+    9,
+    10,
+    11
+   ],
+   "sources": [
+    "https://www.pariszigzag.fr/secret/histoire-insolite-paris/la-fascinante-histoire-de-larbre-de-300-ans-du-jardin-des-plantes",
+    "https://www.geneve.ch/themes/environnement-urbain-espaces-verts/ville-nature/arbres/250-arbres-decouvrir/cedres-parc-beaulieu"
+   ],
+   "certitude": "source",
+   "reserve": true,
+   "raison_reserve": "légende du chapeau, source faible"
+  },
+  "Corylus colurna": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Cet arbre ne drageonne pas : on l'emploie comme porte-greffe pour cultiver les variétés à noisettes sans rejets à leur base.",
+   "theme": "usage",
+   "floraison": [
+    2,
+    3
+   ],
+   "sources": [
+    "https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2021.813902/pdf",
+    "https://en.wikipedia.org/wiki/Corylus_colurna"
+   ],
+   "certitude": "source"
+  },
+  "Juglans nigra": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Des copeaux de son bois utilisés en litière peuvent déclencher une fourbure chez le cheval en un ou deux jours.",
+   "theme": "toxicité",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://www.ontario.ca/page/horses-and-black-walnut-shavings",
+    "https://www.canr.msu.edu/resources/michigan_trees_toxic_to_horses_donkeys_and_mules_e3062",
+    "https://extension.purdue.edu/extmedia/FNR/FNR-254.pdf"
+   ],
+   "certitude": "source"
+  },
+  "Larix decidua": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Selon Vitruve, César ne put incendier la tour d'un fort alpin bâtie de ce bois ; ce récit, peut-être légendaire, expliquerait son nom.",
+   "theme": "histoire",
+   "floraison": [
+    3,
+    4,
+    5
+   ],
+   "sources": [
+    "https://fgh.perseids.org/read/latinLit/phi1056/phi001/perseus-eng1/2.9.8-2.9.16",
+    "https://lexundria.com/vitr/2.9.16/cf"
+   ],
+   "certitude": "source"
+  },
+  "Malus domestica": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son ancêtre sauvage forme encore des forêts au Kazakhstan, au pied des monts Tian Shan près d'Almaty ; l'ADN l'a confirmé en 2010.",
+   "theme": "histoire",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://applesandpeople.org.uk/stories/heavenly-mountains/",
+    "https://www.atlasobscura.com/places/the-last-wild-apple-forests-almaty-kazakhstan"
+   ],
+   "certitude": "source"
+  },
+  "Malus floribunda": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Presque toutes les variétés de pommes résistantes à la tavelure doivent leur gène de résistance à un seul sujet de cette espèce, le n° 821.",
+   "theme": "usage",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://doc.rero.ch/record/319914",
+    "https://www.biorxiv.org/content/10.1101/794636v1.full"
+   ],
+   "certitude": "source"
+  },
+  "Magnolia kobus": {
+   "phrase_statut": "corrigée",
+   "phrase_corrigee": "Fleurs blanches précoces en mars-avril, avant les feuilles ; arbre très rustique, mais les gelées tardives abîment ses fleurs.",
+   "curiosite": "Son nom vient d'un mot japonais signifiant « poing », pour ses boutons ; issu de semis, il peut attendre 15 à 30 ans avant de bien fleurir.",
+   "theme": "étymologie",
+   "floraison": [
+    3,
+    4
+   ],
+   "sources": [
+    "https://www.treesandshrubsonline.org/articles/magnolia/magnolia-kobus",
+    "https://cornellbotanicgardens.org/?p=21447",
+    "https://plants.ces.ncsu.edu/plants/magnolia-kobus/common-name/northern-japanese-magnolia/"
+   ],
+   "certitude": "source"
+  },
+  "Olea europaea": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Les vainqueurs des Jeux olympiques antiques recevaient le kotinos, une couronne tressée de rameaux de sa forme sauvage.",
+   "theme": "culture",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Picea abies": {
+   "phrase_statut": "corrigée",
+   "phrase_corrigee": "Faux sapin : c'est le « sapin de Noël » traditionnel, mais ses cônes pendent et tombent entiers, contrairement aux vrais sapins.",
+   "curiosite": "En Suède, un individu de cette espèce se régénère par marcottage depuis environ 9 500 ans : c'est l'un des plus vieux clones d'arbre connus.",
+   "theme": "record",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Old_Tjikko",
+    "https://mymodernmet.com/old-tjikko-sweden"
+   ],
+   "certitude": "source"
+  },
+  "Platanus orientalis": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Hérodote raconte que Xerxès para d'or un de ces arbres ; Haendel en fit le sujet de l'air « Ombra mai fu » de son opéra Serse.",
+   "theme": "histoire",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://lexundria.com/hdt/7.31/mcly",
+    "https://classical-inquiries.chs.harvard.edu/notes-on-xerxes-and-his-persian-empire/"
+   ],
+   "certitude": "source"
+  },
+  "Pyrus calleryana": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Ses fleurs sentent le poisson avarié ; jugé envahissant, cet arbre est interdit de vente et de plantation dans l'Ohio depuis 2023.",
+   "theme": "écologie",
+   "floraison": [
+    3,
+    4
+   ],
+   "sources": [
+    "https://www.news5cleveland.com/news/state/callery-pear-the-smelly-jekyll-and-hyde-tree-will-be-banned-in-ohio-come-2023",
+    "https://www.popsci.com/environment/callery-pear-tree-ban/",
+    "https://www.invasivespeciesinfo.gov/terrestrial/plants/callery-pear"
+   ],
+   "certitude": "source"
+  },
+  "Pyrus communis": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Pour l'eau-de-vie « prisonnière », on enfile une bouteille sur le jeune fruit au printemps : il y grossit sur l'arbre jusqu'à la récolte.",
+   "theme": "usage",
+   "floraison": [
+    3,
+    4
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Poire_Williams",
+    "https://spiritsanddistilling.com/dictionary/acref-9780199311132-e-1156"
+   ],
+   "certitude": "source"
+  },
+  "Salix babylonica": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Linné l'a nommé d'après le psaume « Au bord des fleuves de Babylone », mais il vient de Chine ; l'arbre du psaume était un peuplier.",
+   "theme": "étymologie",
+   "floraison": [
+    3,
+    4
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Salix_babylonica",
+    "https://landscapeplants.oregonstate.edu/plants/salix-babylonica"
+   ],
+   "certitude": "source"
+  },
+  "Thuja plicata": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Des peuples de la côte Pacifique nord-américaine l'appellent « arbre de vie » : son bois donnait totems et pirogues, son écorce des habits.",
+   "theme": "culture",
+   "floraison": [
+    3,
+    4
+   ],
+   "sources": [
+    "https://www.portland.gov/trees/western-redcedar-thuja-plicata",
+    "https://www.ucc.ie/en/tree-explorers/trees/a-z/thujaplicata/",
+    "https://www.gorge.ca/species-gallery/western-red-cedar-(thuja-plicata)"
+   ],
+   "certitude": "source"
+  },
+  "Aucuba japonica": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Introduit en Angleterre en 1783 sous forme femelle seulement, cet arbuste n'y porta de baies qu'après l'arrivée d'un mâle de Yokohama vers 1861.",
+   "theme": "histoire",
+   "floraison": [
+    3,
+    4
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Aucuba_japonica",
+    "https://garden.rcplondon.ac.uk/Plant/Details/180",
+    "https://www.burncoose.co.uk/site/plants.cfm?pl_id=406"
+   ],
+   "certitude": "source"
+  },
+  "Berberis thunbergii": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Envahissant aux États-Unis, il crée sous ses fourrés un microclimat humide où abondent les tiques porteuses de la maladie de Lyme.",
+   "theme": "écologie",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://entomologytoday.org/2017/10/04/the-5-year-plan-manage-japanese-barberry-to-keep-tick-levels-low-reduce-lyme-risk/",
+    "https://www.trincoll.edu/?p=25113"
+   ],
+   "certitude": "source"
+  },
+  "Berberis vulgaris": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Arraché près des champs depuis le XVIIe siècle, cet arbuste jadis cultivé au jardin a presque disparu des plaines céréalières françaises.",
+   "theme": "histoire",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://bioger.versailles-saclay.hub.inrae.fr/media/files/pages-perso/page-perso-suffert-frederic/pdf-publis/valade-2022",
+    "https://lalanguefrancaise.com/dictionnaire/definition/epine-vinette"
+   ],
+   "certitude": "source"
+  },
+  "Buddleja davidii": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Après le Blitz, il fut l'un des premiers à coloniser les ruines bombardées de Londres ; les Londoniens en ont fait un symbole de leur ville.",
+   "theme": "écologie",
+   "floraison": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "sources": [
+    "https://www.wildlondon.org.uk/node/3710",
+    "https://thestreettree.com/2011/09/25/buddleia-an-urban-barometer/"
+   ],
+   "certitude": "source"
+  },
+  "Camellia japonica": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Au pays du Soleil-Levant, ses fleurs tombent entières : on disait que les samouraïs l'évitaient, cette chute rappelant une tête tranchée.",
+   "theme": "culture",
+   "floraison": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "sources": [
+    "https://www.nippon.com/en/japan-topics/bg900579/",
+    "https://akirakurosawa.info/?p=2746"
+   ],
+   "certitude": "source"
+  },
+  "Ceanothus thyrsiflorus": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Comme l'aulne, cet arbuste héberge dans ses racines des bactéries Frankia qui fixent l'azote de l'air : il prospère en sol pauvre.",
+   "theme": "écologie",
+   "floraison": [
+    4,
+    5,
+    6
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Cornus alba": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Ses rameaux sont rouge vif, mais son nom latin d'espèce évoque ses fruits blanchâtres ; il est originaire de Sibérie et du nord de la Chine.",
+   "theme": "étymologie",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Cotinus coggygria": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son bois jaune fournissait le fustet, teinture des textiles au Moyen Âge ; ses plumets sont faits des pédicelles poilus de fleurs stériles.",
+   "theme": "usage",
+   "floraison": [
+    6,
+    7
+   ],
+   "sources": [
+    "https://thesaurus.inha.fr/thesaurus/resource/ark:/54721/11b28533-9077-4f2e-9808-95377c740964",
+    "https://cameo.mfa.org/wiki/Young_fustic_(Cotinus_coggygria_)_LC"
+   ],
+   "certitude": "source"
+  },
+  "Cotoneaster horizontalis": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "En Angleterre et au pays de Galles, le planter ou le laisser se répandre dans la nature est un délit : il y est classé envahissant.",
+   "theme": "écologie",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://www.rhs.org.uk/plants/4619/cotoneaster-horizontalis/details",
+    "https://www.gardenersworld.com/plants/schedule-9"
+   ],
+   "certitude": "source"
+  },
+  "Euonymus japonicus": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Ses capsules rosées s'ouvrent en hiver sur des graines enrobées d'orange, toxiques pour l'homme mais dispersées par les oiseaux.",
+   "theme": "toxicité",
+   "floraison": [
+    6,
+    7
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Forsythia × intermedia": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son nom honore un jardinier écossais de George III, récompensé par l'État pour un « emplâtre » de bouse et de chaux censé guérir les arbres.",
+   "theme": "histoire",
+   "floraison": [
+    3,
+    4
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/William_Forsyth_(horticulturist)",
+    "https://www.hort.purdue.edu/NEWCROP/pdfs/ch4801p17.pdf"
+   ],
+   "certitude": "source"
+  },
+  "Hibiscus syriacus": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Fleur nationale de la Corée du Sud, citée dans son hymne ; il doit son nom d'espèce à des jardins syriens, mais il est originaire d'Asie.",
+   "theme": "culture",
+   "floraison": [
+    7,
+    8,
+    9
+   ],
+   "sources": [
+    "https://linguasia.com/national-flower-korea-mugunghwa",
+    "https://www.marylandbiodiversity.com/species/2884"
+   ],
+   "certitude": "source"
+  },
+  "Mahonia aquifolium": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Repéré lors de l'expédition Lewis et Clark, cet arbuste aux baies comestibles est la fleur officielle de l'État de l'Oregon depuis 1899.",
+   "theme": "culture",
+   "floraison": [
+    3,
+    4,
+    5
+   ],
+   "sources": [
+    "https://statesymbolsusa.org/node/2918",
+    "https://www.npsoregon.org/wp/kalmiopsis/kalmiopsis13/fillhart.pdf"
+   ],
+   "certitude": "source"
+  },
+  "Philadelphus coronarius": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son nom français vient du latin syringa, « seringue » : vidées de leur moelle, ses tiges creuses servaient de seringues ou de flûtes.",
+   "theme": "étymologie",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://dictionnaire-academie.fr/article/A9S1358-A",
+    "https://www.lalanguefrancaise.com/dictionnaire/definition/syringa"
+   ],
+   "certitude": "source"
+  },
+  "Photinia × fraseri": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Cet hybride est apparu vers 1940 dans une pépinière de Birmingham, en Alabama, d'un croisement spontané entre deux espèces asiatiques.",
+   "theme": "histoire",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://southern.edu/arboretum/plant/view?id=71",
+    "https://www.treesandshrubsonline.org/articles/photinia/photinia-x-fraseri/"
+   ],
+   "certitude": "source"
+  },
+  "Pittosporum tobira": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Au Japon, on plaçait ses rameaux près des portes pour chasser les démons à la fête de Setsubun ; son nom japonais signifie « porte ».",
+   "theme": "culture",
+   "floraison": [
+    4,
+    5,
+    6
+   ],
+   "sources": [
+    "https://www.mlit.go.jp/tagengo-db/en/R1-02529.html",
+    "https://en.wikipedia.org/wiki/Pittosporum_tobira"
+   ],
+   "certitude": "source"
+  },
+  "Pyracantha coccinea": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son nom scientifique vient du grec et signifie « épine de feu », en écho à ses fruits flamboyants et à ses rameaux épineux.",
+   "theme": "étymologie",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Rhododendron ponticum": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Le miel tiré de ses fleurs, près de la mer Noire, est toxique : en 401 av. J.-C., Xénophon raconte que ses soldats en furent intoxiqués.",
+   "theme": "toxicité",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC2660097",
+    "https://www.sciencenordic.com/biotechnology-health/the-darker-side-to-poohs-cravings-for-honey/2142421"
+   ],
+   "certitude": "source"
+  },
+  "Rosa canina": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Pendant la Seconde Guerre mondiale, les écoliers britanniques récoltaient ses fruits pour fabriquer un sirop national riche en vitamine C.",
+   "theme": "histoire",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://www.bmj.com/content/1/4230/171.1.full.pdf",
+    "https://www.plant-lore.com/plantofthemonth/gathering-rose-hips/"
+   ],
+   "certitude": "source"
+  },
+  "Spiraea japonica": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Introduit comme ornemental aux États-Unis vers 1870, cet arbuste s'y est échappé des jardins et est classé envahissant dans plusieurs États de l'Est.",
+   "theme": "écologie",
+   "floraison": [
+    6,
+    7,
+    8
+   ],
+   "sources": [
+    "https://forestupdate.frec.vt.edu/content/dam/forestupdate_frec_vt_edu/newsletter/archives/2019/33_4/GagnonSpiraea.pdf",
+    "https://plants.ces.ncsu.edu/plants/spiraea-japonica/common-name/japanese-spirea"
+   ],
+   "certitude": "source"
+  },
+  "Syringa vulgaris": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Depuis une loi de 1919, cet arbuste à fleurs violettes est la fleur officielle du New Hampshire, symbole du caractère robuste de ses habitants.",
+   "theme": "culture",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://nh.gov/almanac/flower.htm",
+    "https://gc.nh.gov/rsa/html/I/3/3-5.htm"
+   ],
+   "certitude": "source"
+  },
+  "Viburnum opulus": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Sous le nom de « kalyna », cet arbuste aux grappes de fruits rouges est un symbole national de l'Ukraine, chanté dans « Tchervona kalyna ».",
+   "theme": "culture",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://dn.gov.ua/en/news/na-donechchyni-vidbudetsia-onlain-konkurs-kalyna-natsionalnyi-symvol-ukrainy",
+    "https://en.wikipedia.org/wiki/Kalina_krasnaya"
+   ],
+   "certitude": "source"
+  },
+  "Weigela florida": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son nom honore le chimiste allemand C. E. von Weigel ; le botaniste Robert Fortune l'a rapporté de Chine en Angleterre en 1845.",
+   "theme": "histoire",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Weigela",
+    "https://www.redzet.lv/en/info/Weigela"
+   ],
+   "certitude": "source"
+  },
+  "Arbutus unedo": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Les armoiries de Madrid montrent un ours dressé contre cet arbre : sa statue de la Puerta del Sol est un lieu de rendez-vous célèbre.",
+   "theme": "culture",
+   "floraison": [
+    10,
+    11,
+    12
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Statue_of_the_Bear_and_the_Strawberry_Tree",
+    "https://www.themakingofmadrid.com/2024/01/29/the-bear-and-the-strawberry-tree/"
+   ],
+   "certitude": "source"
+  },
+  "Acanthus mollis": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Selon Vitruve, ses feuilles poussant autour d'un panier posé sur une tombe de Corinthe auraient inspiré le chapiteau corinthien.",
+   "theme": "histoire",
+   "floraison": [
+    6,
+    7,
+    8
+   ],
+   "sources": [
+    "https://fgh.perseids.org/read/latinLit/phi1056/phi001/perseus-eng1/4.1.9-4.1.12",
+    "https://artmuseum.princeton.edu/art/collections/objects/15725"
+   ],
+   "certitude": "source"
+  },
+  "Agapanthus praecox": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son nom scientifique, formé sur les mots grecs agapê et anthos, signifie « fleur de l'amour » ; elle est originaire d'Afrique du Sud.",
+   "theme": "étymologie",
+   "floraison": [
+    7,
+    8
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Alchemilla mollis": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Les alchimistes recueillaient les gouttes perlant sur ses feuilles, qu'ils croyaient capables d'aider à fabriquer de l'or : d'où son nom.",
+   "theme": "étymologie",
+   "floraison": [
+    6,
+    7
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Bergenia cordifolia": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Frottées entre les doigts, ses feuilles émettent un couinement, d'où son surnom anglais de « pigsqueak », le cri du cochon.",
+   "theme": "culture",
+   "floraison": [
+    3,
+    4,
+    5
+   ],
+   "sources": [
+    "https://missouribotanicalgarden.org/gardens-gardening/your-garden/plant-finder/plant-details/kc/b710/bergenia-cordifolia.aspx",
+    "https://extension.sdstate.edu/pig-squeak-bergenia-cordifolia-winterglut-winterglow"
+   ],
+   "certitude": "source"
+  },
+  "Digitalis purpurea": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "En 1785, le médecin anglais William Withering publia l'étude de ses effets contre l'hydropisie, à l'origine d'un médicament du cœur.",
+   "theme": "médecine",
+   "floraison": [
+    5,
+    6,
+    7
+   ],
+   "sources": [
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5545334/",
+    "https://www.lindahall.org/about/news/scientist-of-the-day/william-withering/"
+   ],
+   "certitude": "source"
+  },
+  "Echinacea purpurea": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son nom scientifique vient du grec « hérisson », à cause des écailles raides et piquantes de son cœur bombé.",
+   "theme": "étymologie",
+   "floraison": [
+    7,
+    8,
+    9
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Euphorbia characias": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Ses capsules mûres explosent et projettent leurs graines, que des fourmis emportent ensuite au nid, attirées par leur petit appendice nutritif.",
+   "theme": "écologie",
+   "floraison": [
+    3,
+    4,
+    5
+   ],
+   "sources": [
+    "https://portalrecerca.uab.cat/en/publications/seed-production-predation-and-dispersal-in-the-mediterranean-myrm/",
+    "https://datadryad.org/dataset/doi:10.5061/dryad.076g250"
+   ],
+   "certitude": "source"
+  },
+  "Geranium sanguineum": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Cette vivace est la fleur emblème du comté de Northumberland, en Angleterre, où elle orne pelouses littorales et affleurements calcaires.",
+   "theme": "culture",
+   "floraison": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "sources": [
+    "https://bsbi.org/northumberland",
+    "https://fabulousnorth.com/blog/bloody-cranesbill-the-county-flower-of-northumberland/"
+   ],
+   "certitude": "source"
+  },
+  "Helleborus orientalis": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Ce qu'on prend pour ses pétales sont des sépales : ils restent des semaines sur la plante et verdissent peu à peu après la fécondation.",
+   "theme": "écologie",
+   "floraison": [
+    2,
+    3,
+    4
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Hemerocallis fulva": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Sa forme la plus répandue est triploïde et presque stérile : sans graines, elle a pourtant colonisé les bords de route américains par ses rhizomes.",
+   "theme": "écologie",
+   "floraison": [
+    6,
+    7,
+    8
+   ],
+   "sources": [
+    "https://uaex.uada.edu/yard-garden/resource-library/plant-week/ditch-lily-7-10-09.aspx",
+    "https://gardenclub.org/blog/ditch-lilies"
+   ],
+   "certitude": "source"
+  },
+  "Hosta sieboldiana": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son nom honore un médecin allemand expulsé du Japon en 1829 pour avoir détenu des cartes du pays, alors interdites aux étrangers.",
+   "theme": "histoire",
+   "floraison": [
+    6,
+    7
+   ],
+   "sources": [
+    "https://www.ndl.go.jp/zoshoin/e/collection/16.html",
+    "https://www.swaen.com/eastmeetswest/philipp-franz-balthasar-von-siebold"
+   ],
+   "certitude": "source"
+  },
+  "Iris germanica": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Séché et vieilli plusieurs années, son rhizome prend une odeur de violette grâce aux irones, très prisés des parfumeurs.",
+   "theme": "usage",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://fraterworks.com/blogs/information/iris-naturals-a-primer",
+    "https://premierepeau.com/blogs/news/orris-root-perfumerys-5-year-wait-premiere-peau"
+   ],
+   "certitude": "source"
+  },
+  "Iris pseudacorus": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Ses graines torréfiées ont été essayées comme succédané de café, et son rhizome riche en tanins servait autrefois à fabriquer de l'encre.",
+   "theme": "usage",
+   "floraison": [
+    5,
+    6,
+    7
+   ],
+   "sources": [
+    "https://temperate.theferns.info/plant/Iris+pseudacorus",
+    "https://www.botanical-dermatology-database.info/pdfs/%232349ContDermNewsl%2808%29171~1970.pdf"
+   ],
+   "certitude": "source"
+  },
+  "Paeonia lactiflora": {
+   "phrase_statut": "corrigée",
+   "phrase_corrigee": "Pivoine de Chine : vivace herbacée à grandes fleurs parfumées, d'une grande longévité ; fleurit en mai-juin.",
+   "curiosite": "Sa racine pelée et séchée, le « bai shao », compte depuis des siècles parmi les remèdes les plus utilisés de la médecine chinoise.",
+   "theme": "médecine",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://www.frontiersin.org/articles/10.3389/fphar.2011.00010/full"
+   ],
+   "certitude": "source"
+  },
+  "Papaver orientale": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Ses graines, récoltées en 1701 près d'Erzurum par l'expédition du botaniste Tournefort, furent semées au Jardin du Roi à Paris dès 1702.",
+   "theme": "histoire",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://bioone.org/journals/candollea/volume-74/issue-1/c2019v741a7/The-discovery-and-naming-of-Papaver-orientale-sl-Papaveraceae-with/10.15553/c2019v741a7.full",
+    "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:673641-1/general-information"
+   ],
+   "certitude": "source"
+  },
+  "Salvia officinalis": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "L'École de Salerne demandait : « Pourquoi mourrait-il, l'homme dont le jardin en abrite ? » ; son nom vient du latin salvare, sauver.",
+   "theme": "médecine",
+   "floraison": [
+    5,
+    6,
+    7
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Sedum spectabile": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Les jardiniers anglais la rabattent fin mai, pendant le Chelsea Flower Show : cette « Chelsea chop » la rend plus compacte et retarde sa floraison.",
+   "theme": "usage",
+   "floraison": [
+    8,
+    9,
+    10
+   ],
+   "sources": [
+    "https://www.rhs.org.uk/pruning/chelsea-chop",
+    "https://www.rhs.org.uk/plants/hylotelephium/growing-guide"
+   ],
+   "certitude": "source"
+  },
+  "Sedum acre": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Ses petites feuilles charnues ont une saveur brûlante qui lui vaut le surnom de « poivre de muraille » ; leur suc peut irriter la peau.",
+   "theme": "étymologie",
+   "floraison": [
+    6,
+    7
+   ],
+   "sources": [
+    "https://biodiversite.calanques-parcnational.fr/espece/122101",
+    "https://worldofsucculents.com/sedum-acre/"
+   ],
+   "certitude": "source"
+  },
+  "Thymus vulgaris": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "En 1719, le chimiste allemand Caspar Neumann isola de son huile essentielle des cristaux de thymol, un puissant antiseptique.",
+   "theme": "médecine",
+   "floraison": [
+    4,
+    5,
+    6
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Thymol",
+    "https://henriettes-herb.com/eclectic/kings/thymol.html"
+   ],
+   "certitude": "source"
+  },
+  "Verbena bonariensis": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Ses graines, tombées d'herbiers séchés envoyés d'Argentine, ont germé en 1726 dans le jardin anglais d'Eltham : début de son succès en Europe.",
+   "theme": "histoire",
+   "floraison": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "sources": [
+    "https://www.biology.ox.ac.uk/node/4995886",
+    "https://highdowngardens.co.uk/plant-focus-october-2021-verbena-bonariensis/"
+   ],
+   "certitude": "source"
+  },
+  "Vinca minor": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Rousseau, la revoyant 30 ans après une promenade avec Mme de Warens, s'écria « Ah ! voilà de la… » : scène célèbre des Confessions.",
+   "theme": "culture",
+   "floraison": [
+    3,
+    4,
+    5
+   ],
+   "sources": [
+    "https://www.rousseauonline.ch/pdf/rousseauonline-0076.pdf",
+    "https://muse.jhu.edu/article/535481"
+   ],
+   "certitude": "source"
+  },
+  "Campsis radicans": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Dans son Amérique natale, le colibri à gorge rubis plonge la tête dans ses trompettes : le pollen se dépose sur les plumes de son crâne.",
+   "theme": "écologie",
+   "floraison": [
+    7,
+    8,
+    9
+   ],
+   "sources": [
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11387201/",
+    "https://dc.etsu.edu/etsu-works/9658"
+   ],
+   "certitude": "source"
+  },
+  "Hedera colchica": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Froissées, ses grandes feuilles dégagent une odeur rappelant le céleri, un moyen simple de le distinguer de son cousin indigène.",
+   "theme": "usage",
+   "floraison": [
+    9,
+    10,
+    11
+   ],
+   "sources": [
+    "https://e-katalogroslin.pl/pdf/2871,bluszcz-kolchidzki_hedera-colchica"
+   ],
+   "certitude": "source",
+   "reserve": true,
+   "raison_reserve": "source unique (pépinière)"
+  },
+  "Jasminum officinale": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son nom vient du persan yâsaman, mot qui a aussi donné le prénom Yasmine.",
+   "theme": "étymologie",
+   "floraison": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Lonicera periclymenum": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Ses fleurs s'ouvrent et embaument vers 18-19 h : seuls les sphinx à trompe d'au moins 22 mm atteignent alors le nectar au fond du tube.",
+   "theme": "écologie",
+   "floraison": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "sources": [
+    "https://bsbi.org/in-your-area/local-botany/co-fermanagh/fermanagh-species-accounts/lonicera-periclymenum-l",
+    "https://www.rhs.org.uk/plants/10508/wd/details"
+   ],
+   "certitude": "source"
+  },
+  "Parthenocissus quinquefolia": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Venue d'Amérique du Nord et cultivée en Europe dès 1629, cette grimpante est aujourd'hui jugée envahissante dans une partie de l'UE.",
+   "theme": "histoire",
+   "floraison": [
+    6,
+    7
+   ],
+   "sources": [
+    "https://stories.rbge.org.uk/archives/9530",
+    "https://bsbi.org/taxa/2cd4p9h.n0d/parthenocissus-quinquefolia",
+    "https://en.wikipedia.org/wiki/Parthenocissus_quinquefolia"
+   ],
+   "certitude": "source"
+  },
+  "Parthenocissus tricuspidata": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Plantée en 1937 au pied des murs du stade de baseball Wrigley Field à Chicago, elle en tapisse toujours le champ extérieur.",
+   "theme": "culture",
+   "floraison": [
+    6,
+    7
+   ],
+   "sources": [
+    "https://baseballhall.org/discover-more/stories/baseball-history/wrigley-field-ivy",
+    "https://www.mlb.com/cubs/news/origin-of-wrigley-field-ivy"
+   ],
+   "certitude": "source"
+  },
+  "Passiflora caerulea": {
+   "phrase_statut": "corrigée",
+   "phrase_corrigee": "Passiflore bleue : fleur complexe à couronne de filaments, grimpe par vrilles ; fruits orange.",
+   "curiosite": "Des missionnaires y lisaient la Passion du Christ : filaments = couronne d'épines, 3 stigmates = clous, 5 étamines = plaies.",
+   "theme": "culture",
+   "floraison": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "sources": [
+    "https://thursd.com/articles/passiflora-caerulea-the-complete-care-guide-and-religious-meaning-behind-it",
+    "https://saintanne-kew.org.uk/?p=2003"
+   ],
+   "certitude": "source"
+  },
+  "Vitis vinifera": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Au XIXe s., un minuscule insecte venu d'Amérique ravagea presque tout le vignoble français, sauvé en greffant les cépages sur des pieds américains.",
+   "theme": "histoire",
+   "floraison": [
+    6
+   ],
+   "sources": [
+    "https://hal.inrae.fr/hal-03206064/document",
+    "https://www.Inrae.fr/sites/default/files/pdf/Extraits-AgroMots_PagesPhylloxera.pdf"
+   ],
+   "certitude": "source"
+  },
+  "Wisteria floribunda": {
+   "phrase_statut": "corrigée",
+   "phrase_corrigee": "Glycine du Japon : grappes s'ouvrant de la base vers la pointe, de 30 à 50 cm, plus d'1 m chez certains cultivars.",
+   "curiosite": "Au Japon, à Ashikaga, un seul pied âgé d'environ 150 ans couvre plus de 1 000 m² de treille : un monument naturel protégé.",
+   "theme": "record",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://ashikaga-kankou.jp/en/spot/flower_park",
+    "https://soranews24.com/2025/05/01/japans-160-year-old-great-wisteria-of-tochigi-is-now-in-full-bloom-ready-for-visitors%e3%80%90photos%e3%80%91/amp/"
+   ],
+   "certitude": "source"
+  },
+  "Carex pendula": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "L'une des plus grandes cypéracées d'Europe : ses tiges fleuries, à section triangulaire, peuvent dépasser 1,5 m de haut.",
+   "theme": "record",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Cortaderia selloana": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Un seul pied peut produire plus d'un million de graines dispersées par le vent : d'où son invasion des talus et friches du littoral.",
+   "theme": "écologie",
+   "floraison": [
+    8,
+    9,
+    10
+   ],
+   "sources": [
+    "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/herbe-de-la-pampa-fiche-espece-vf.pdf",
+    "https://www.techno-science.net/fr/definitions/herbe-de-la-pampa"
+   ],
+   "certitude": "source"
+  },
+  "Festuca glauca": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Cette star bleue des rocailles est indigène du sud-ouest de l'Europe, France comprise ; elle fut décrite en 1787 par le Dauphinois Villars.",
+   "theme": "histoire",
+   "floraison": [
+    5,
+    6,
+    7
+   ],
+   "sources": [
+    "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:20008857-1"
+   ],
+   "certitude": "source"
+  },
+  "Pennisetum alopecuroides": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son nom d'espèce signifie « qui ressemble à une queue de renard » (du grec alôpêx, renard), en raison de ses épis duveteux.",
+   "theme": "étymologie",
+   "floraison": [
+    8,
+    9,
+    10
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Phragmites australis": {
+   "phrase_statut": "corrigée",
+   "phrase_corrigee": "Roseau commun : grande graminée des roselières ; il épure l'eau et abrite de nombreux oiseaux.",
+   "curiosite": "En Camargue, ses tiges coupées, appelées « sagne », couvrent depuis des siècles les toits des cabanes de gardians.",
+   "theme": "usage",
+   "floraison": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "sources": [
+    "https://pole-lagunes.org/sagno-sagnie-renovation-du-toit-de-sagne-de-la-cabane-de-gardian",
+    "https://www.mab-france.org/workspace/uploads/mab/documents/camargue-toits-de-camargue.pdf"
+   ],
+   "certitude": "source"
+  },
+  "Phyllostachys nigra": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Au Japon, une variété de cette graminée géante a fleuri en 2020, un siècle après la précédente floraison : sans graines, ses tiges sont mortes en 3 ans.",
+   "theme": "record",
+   "floraison": [],
+   "sources": [
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10259779/"
+   ],
+   "certitude": "source"
+  },
+  "Typha latifolia": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Pendant la Seconde Guerre mondiale, privée de kapok, l'US Navy bourra un temps des gilets de sauvetage avec le duvet de ses épis.",
+   "theme": "histoire",
+   "floraison": [
+    6,
+    7,
+    8
+   ],
+   "sources": [
+    "https://www.usni.org/magazines/proceedings/1946/october/buoyant-materials-navy-life-preservers-world-war-ii",
+    "https://tpwmagazine.com/archive/2010/jul/scout1/"
+   ],
+   "certitude": "source"
+  },
+  "Abies alba": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Dans la forêt de la Joux (Jura), un spécimen d'environ 45 m, élu « Président » en 1964, domine l’une des plus belles futaies de France.",
+   "theme": "record",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://www.jura-tourism.com/patrimoine-naturel/la-foret-de-la-joux/",
+    "https://www.routes-touristiques.com/tourisme/les-circuits/franche-comte/circuit-de-la-route-des-sapins-39-et-25.html"
+   ],
+   "certitude": "source"
+  },
+  "Thuja occidentalis": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Surnommé « arbre de vie », ce conifère serait l'annedda dont l'infusion guérit du scorbut l'équipage de Jacques Cartier en 1536 (identité débattue).",
+   "theme": "histoire",
+   "floraison": [
+    3,
+    4
+   ],
+   "sources": [
+    "https://www.thecanadianencyclopedia.ca/fr/article/thuya-cedre",
+    "https://nouvelles.ulaval.ca/2009/11/04/lhistoire-meconnue-dun-arbre-de-vie-bcdb4f929398e4390b6b993096acce60"
+   ],
+   "certitude": "source",
+   "reserve": true,
+   "raison_reserve": "identité de l'annedda débattue"
+  },
+  "Alnus incana": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Grâce aux bactéries fixatrices d'azote de ses racines, cet arbre pionnier sert à reboiser gravières et terrils miniers.",
+   "theme": "écologie",
+   "floraison": [
+    2,
+    3,
+    4
+   ],
+   "sources": [
+    "https://mustila.fi/en/plants/alnusincana/",
+    "https://www.ejes.cz/index.php/ejes/article/download/1466/400/5745"
+   ],
+   "certitude": "source"
+  },
+  "Cercis canadensis": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "George Washington admirait cet arbre : il en transplanta des pieds sauvages le long des allées de son domaine de Mount Vernon.",
+   "theme": "histoire",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://www.nps.gov/places/eastern-redbud-cercis-canadensis.htm",
+    "https://edit.mountvernon.org/the-estate-gardens/gardens-landscapes/plant-finder/item/eastern-redbud"
+   ],
+   "certitude": "source"
+  },
+  "Rhododendron luteum": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Autour de la mer Noire, son nectar donne un « miel fou » toxique, qui aurait intoxiqué les soldats grecs de Xénophon en 401 av. J.-C.",
+   "theme": "toxicité",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://mustila.fi/en/?p=15684",
+    "https://Www.wikipedia.org/wiki/Mad_honey"
+   ],
+   "certitude": "source",
+   "reserve": true,
+   "raison_reserve": "doublon : l'épisode de Xénophon est rattaché à Rhododendron ponticum"
+  },
+  "Ilex crenata": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Au Japon, on le taille depuis des siècles en masses arrondies évoquant collines ou nuages : c'est l'art du karikomi.",
+   "theme": "culture",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://www.seattlejapanesegarden.org/blog/2016/06/15/karikomi-the-art-of-shearing-back"
+   ],
+   "certitude": "source"
+  },
+  "Ligustrum ovalifolium": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Malgré son nom, cet arbuste ne vient pas de l'Ouest américain : il est originaire du Japon et de Corée.",
+   "theme": "étymologie",
+   "floraison": [
+    6,
+    7
+   ],
+   "sources": [
+    "https://www.bellarmine.edu/faculty/drobinson/CaliforniaPrivet.htm",
+    "https://trees.stanford.edu/ENCYC/LIGov.htm"
+   ],
+   "certitude": "source"
+  },
+  "Sambucus racemosa": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Crus, ses fruits et surtout ses graines sont toxiques ; cuits longuement, ils devenaient une sorte de confiture chez les peuples du Nord-Ouest américain.",
+   "theme": "cuisine",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://epe.lac-bac.gc.ca/100/205/301/ic/cdc/hazeltons/elder.htm",
+    "https://www.uwb.edu/wetland/plants/sambucus-racemosa"
+   ],
+   "certitude": "source"
+  },
+  "Spiraea thunbergii": {
+   "phrase_statut": "corrigée",
+   "phrase_corrigee": "Spirée de Thunberg : petites fleurs blanches en bouquets le long des rameaux nus, dès mars ; feuillage fin.",
+   "curiosite": "Elle honore un élève de Linné qui herborisa au Japon en 1775-1776, alors quasi fermé aux Occidentaux.",
+   "theme": "histoire",
+   "floraison": [
+    3,
+    4
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Pittosporum tenuifolium": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Ses petites fleurs pourpre sombre embaument surtout la nuit ; les Maoris tiraient de son écorce une gomme pour leurs parfums.",
+   "theme": "usage",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://ngaitahu.iwi.nz/our_stories/kohuhu-striking-show-stopper",
+    "https://teara.govt.nz/mi/shrubs-and-small-trees-of-the-forest/page-8"
+   ],
+   "certitude": "source"
+  },
+  "Malus sylvestris": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Par croisements répétés, nos pommes cultivées sont aujourd'hui génétiquement plus proches de cet arbre que de leur ancêtre d'Asie centrale.",
+   "theme": "histoire",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://journals.plos.org/plosgenetics/article/info:doi/10.1371/journal.pgen.1002703"
+   ],
+   "certitude": "source"
+  },
+  "Platanus occidentalis": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Croisé au XVIIe siècle avec son cousin d'Orient, cet arbre américain a donné l'hybride qui ombrage aujourd'hui tant d'avenues européennes.",
+   "theme": "histoire",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/London_plane",
+    "https://woodlandtrust.org.uk/trees-woods-and-wildlife/british-trees/a-z-of-british-trees/london-plane"
+   ],
+   "certitude": "source"
+  },
+  "Pyrus pyraster": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Cet arbre forestier rare compte parmi les ancêtres sauvages d'un grand fruit de verger européen, avec lequel il s'hybride encore.",
+   "theme": "histoire",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Pyrus_pyraster",
+    "https://frontiersin.org/journals/plant-science/articles/10.3389/fpls.2017.00751/full"
+   ],
+   "certitude": "source"
+  },
+  "Syringa reticulata": {
+   "phrase_statut": "corrigée",
+   "phrase_corrigee": "Lilas du Japon : arbre à grandes panicules crème en juin, au parfum musqué rappelant le troène plutôt que le lilas commun.",
+   "curiosite": "Dans le Hokkaidō préhistorique, son bois très résistant à la pourriture servait de poteaux et de chevrons pour les habitations.",
+   "theme": "histoire",
+   "floraison": [
+    6
+   ],
+   "sources": [
+    "https://jwoodscience.springeropen.com/articles/10.1186/s10086-025-02201-4",
+    "https://treesandshrubsonline.org/articles/syringa/syringa-reticulata/"
+   ],
+   "certitude": "source"
+  },
+  "Berberis darwinii": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Cet arbuste fut découvert au Chili en 1835 par un célèbre naturaliste, lors du voyage du Beagle ; il porte depuis son nom.",
+   "theme": "histoire",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Berberis_darwinii",
+    "https://treesandshrubsonline.org/articles/berberis/berberis-darwinii/"
+   ],
+   "certitude": "source"
+  },
+  "Crataegus laevigata": {
+   "phrase_statut": "corrigée",
+   "phrase_corrigee": "Aubépine à deux styles : fleurs à 2 (parfois 3) styles ; plus forestière que l'aubépine monogyne, elle supporte l'ombre.",
+   "curiosite": "En Angleterre, cet arbuste qui tolère l'ombre est considéré comme un indicateur de forêts anciennes, bien plus que son cousin des haies.",
+   "theme": "écologie",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://harvardforest1.fas.harvard.edu/publications/pdfs/Thomas_JEcology_2021.pdf",
+    "https://ancienttrees.woodlandtrust.org.uk/how-to-record/species-guides/hawthorn/"
+   ],
+   "certitude": "source"
+  },
+  "Ligustrum lucidum": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "En Chine, cet arbre accueillait une cochenille dont les mâles sécrètent une cire blanche, longtemps utilisée pour fabriquer des bougies.",
+   "theme": "usage",
+   "floraison": [
+    7,
+    8,
+    9
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ligustrum_lucidum",
+    "https://trees.stanford.edu/ENCYC/LIGlu.htm"
+   ],
+   "certitude": "source"
+  },
+  "Aesculus parviflora": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Planté dans des jardins du monde entier, cet arbuste ne pousse à l'état sauvage que dans quelques bois et ravins d'Alabama et de Géorgie.",
+   "theme": "écologie",
+   "floraison": [
+    7,
+    8
+   ],
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/all/aesculus-parviflora/"
+   ],
+   "certitude": "source"
+  },
+  "Magnolia stellata": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "À l'état sauvage, cet arbuste ne vit que dans quelques zones humides autour de la baie d'Ise, au Japon, où il est menacé d'extinction.",
+   "theme": "écologie",
+   "floraison": [
+    3,
+    4
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Magnolia_stellata",
+    "https://www.treesandshrubsonline.org/articles/magnolia/magnolia-stellata"
+   ],
+   "certitude": "source"
+  },
+  "Bellis perennis": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son nom anglais vient de « day's eye », l'œil du jour : ses capitules s'ouvrent au lever du soleil et se referment le soir.",
+   "theme": "étymologie",
+   "floraison": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Convallaria majalis": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son parfum est impossible à extraire de ses fleurs : les parfums qui l'évoquent sont reconstitués avec des molécules de synthèse.",
+   "theme": "usage",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://www.tendance-parfums.com/dior-diorissimo-eau-de-toilette.html",
+    "https://premierepeau.com/fr/pages/glossary-terms/lily-of-the-valley"
+   ],
+   "certitude": "source"
+  },
+  "Iris sibirica": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Malgré son nom évoquant une contrée glacée, cette vivace pousse à l'état sauvage dans des prairies humides de France, où elle est protégée.",
+   "theme": "écologie",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://reserves-naturelles.strasbourg.eu/en/foret-de-la-robertsau/discover/siberian-iris/",
+    "https://eflorasys.univ-lorraine.fr/index.php/en/species/view/103777"
+   ],
+   "certitude": "source"
+  },
+  "Iris foetidissima": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son nom d'espèce latin la qualifie de « la plus puante », alors que beaucoup trouvent que ses feuilles froissées sentent plutôt le rôti de bœuf.",
+   "theme": "étymologie",
+   "floraison": [
+    5,
+    6,
+    7
+   ],
+   "sources": [],
+   "certitude": "connaissance"
+  },
+  "Primula vulgaris": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Après la mort d'un Premier ministre britannique en 1881, ses fleurs étaient déposées chaque 19 avril sur sa statue à Londres.",
+   "theme": "culture",
+   "floraison": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Primrose_Day",
+    "https://historicengland.org.uk/images-books/photos/item/CC97/01840"
+   ],
+   "certitude": "source"
+  },
+  "Primula veris": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son nom anglais viendrait du vieil anglais « cūslyppe », bouse de vache : elle poussait souvent dans les pâtures, parmi les bouses.",
+   "theme": "étymologie",
+   "floraison": [
+    3,
+    4,
+    5
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Primula_veris",
+    "https://www.wiktionary.com/wiki/cowslip"
+   ],
+   "certitude": "source"
+  },
+  "Narcissus pseudonarcissus": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Cultivée en altitude au pays de Galles, cette vivace fournit la galantamine, une molécule utilisée contre la maladie d'Alzheimer.",
+   "theme": "médecine",
+   "floraison": [
+    2,
+    3,
+    4
+   ],
+   "sources": [
+    "https://woodlandtrust.org.uk/trees-woods-and-wildlife/plants/wild-flowers/wild-daffodil/",
+    "https://gov.uk/government/news/welsh-grown-daffodils-help-tackle-alzheimers"
+   ],
+   "certitude": "source"
+  },
+  "Sedum album": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Ses feuilles charnues nourrissent les chenilles de l'Apollon, grand papillon blanc des montagnes protégé en France.",
+   "theme": "écologie",
+   "floraison": [
+    6,
+    7,
+    8
+   ],
+   "sources": [
+    "https://cbnfc-ori.org/sites/cbnfc-ori.org/files/Fiche_Parnassius_apollo.pdf"
+   ],
+   "certitude": "source"
+  },
+  "Sedum telephium": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Surnommée autrefois « herbe à la coupure » ou « herbe aux charpentiers », cette vivace charnue servait à soigner les plaies.",
+   "theme": "médecine",
+   "floraison": [
+    7,
+    8,
+    9
+   ],
+   "sources": [
+    "https://taxref.mnhn.fr/taxref-web/taxa/122267",
+    "https://eflorasys.univ-lorraine.fr/index.php/en/species/view/103162",
+    "https://www.eatweeds.co.uk/orpine-sedum-telephium"
+   ],
+   "certitude": "source"
+  },
+  "Trifolium repens": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Une tige de cette vivace portant 63 folioles, trouvée au Japon en 2023, détient le record du monde ; la forme à quatre est déjà rare.",
+   "theme": "record",
+   "floraison": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "sources": [
+    "https://www.guinnessworldrecords.com/world-records/most-leaves-on-a-clover/"
+   ],
+   "certitude": "source"
+  },
+  "Urtica dioica": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Faute de coton pendant la Première Guerre mondiale, l'armée allemande fit tisser des uniformes avec les fibres de cette plante.",
+   "theme": "histoire",
+   "floraison": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "sources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC9230748",
+    "https://ww1.habsburger.net/en/node/6441"
+   ],
+   "certitude": "source"
+  },
+  "Viola odorata": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Son parfum contient des ionones qui anesthésient brièvement nos récepteurs olfactifs : on cesse de la sentir, puis l'odeur revient.",
+   "theme": "usage",
+   "floraison": [
+    2,
+    3,
+    4
+   ],
+   "sources": [
+    "https://woodlandtrust.org.uk/trees-woods-and-wildlife/plants/wild-flowers/sweet-violet/",
+    "https://sciencebase.com/science-blog/the-fading-scent-of-violets.html"
+   ],
+   "certitude": "source"
+  },
+  "Vitis coignetiae": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Elle doit son nom à une Française, fille d'un rosiériste lyonnais, qui en rapporta des graines d'un voyage au Japon en 1875.",
+   "theme": "histoire",
+   "floraison": [
+    6
+   ],
+   "sources": [
+    "https://www.treesandshrubsonline.org/articles/vitis/vitis-coignetiae/",
+    "https://en.wikipedia.org/wiki/Vitis_coignetiae"
+   ],
+   "certitude": "source"
+  },
+  "Hedera hibernica": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Sur la côte ouest des États-Unis, la grimpante invasive qu'on dit « anglaise » est surtout cette espèce, aux chromosomes doublés.",
+   "theme": "écologie",
+   "floraison": [
+    9,
+    10,
+    11
+   ],
+   "sources": [
+    "https://link.springer.com/doi/10.1007/s10530-013-0446-7",
+    "https://www.portland.gov/parks/nature/know-ivy-league"
+   ],
+   "certitude": "source"
+  },
+  "Aesculus flava": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Le plus grand des marronniers américains : cet arbre peut dépasser 30 m et abonde dans les Great Smoky Mountains des Appalaches.",
+   "theme": "record",
+   "floraison": [
+    5,
+    6
+   ],
+   "sources": [
+    "https://www.inaturalist.org/guide_taxa/225865",
+    "https://eec.ky.gov/Natural-Resources/Forestry/ky-champion-trees/Documents/Buckeye%20yellow.pdf"
+   ],
+   "certitude": "source"
+  },
+  "Malus trilobata": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Rare en nature, du nord de la Grèce au Liban, ce petit arbre est si singulier que certains botanistes l'ont placé seul dans un genre à part.",
+   "theme": "histoire",
+   "floraison": [
+    5
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Malus_trilobata",
+    "https://redlist.parks.org.il/en/plants/detail/Eriolobus%20trilobatus",
+    "https://www.treesandshrubsonline.org/articles/malus/malus-trilobata/"
+   ],
+   "certitude": "source"
+  },
+  "Pyrus cordata": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "L'un des arbres les plus rares de Grande-Bretagne ; ses fleurs dégagent une odeur comparée à des crevettes avariées ou à une moquette mouillée.",
+   "theme": "record",
+   "floraison": [
+    4,
+    5
+   ],
+   "sources": [
+    "https://woodlandtrust.org.uk/trees-woods-and-wildlife/british-trees/a-z-of-british-trees/plymouth-pear",
+    "https://www.botanic.cam.ac.uk/the-garden/plant-list/pyrus-cordata"
+   ],
+   "certitude": "source"
+  },
+  "Ligustrum japonicum": {
+   "phrase_statut": "exacte",
+   "phrase_corrigee": "",
+   "curiosite": "Dans son pays d'origine, son nom évoque la souris : ses petits fruits noirs et oblongs y sont comparés à des crottes de rongeur.",
+   "theme": "étymologie",
+   "floraison": [
+    6,
+    7
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ligustrum_japonicum",
+    "https://www.biodiversity4all.org/guide_taxa/1554918"
+   ],
+   "certitude": "source"
+  }
+ }
+}

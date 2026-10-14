@@ -1,0 +1,5231 @@
+{
+ "_lisez_moi": "Milieux et faits par espèce, pour les espèces qui n'avaient pas de milieu propre (l'appli montrait celui du genre). expo, sol, humidite, ph : vocabulaire de l'appli (table ES). certitude : « source » = valeurs confirmées par au moins une page citée dans sources ; « connaissance » = à confirmer par une source. Intégré par outils/milieux_vers_appli.py.",
+ "especes": {
+  "Carpinus betulus": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie Mineure",
+   "sources": [
+    "https://www.rhs.org.uk/plants/3136/carpinus-betulus-common-hornbeam-charmille-european-hornbeam-horn-beech-horse-beech-hurst-beech-white-beech-yoke-elm-oestrywydden/details"
+   ],
+   "certitude": "source",
+   "notes": "Feuillage marcescent : les feuilles sèches restent sur les haies en hiver."
+  },
+  "Castanea sativa": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Acide à neutre",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Europe du Sud-Est, Asie Mineure, Caucase",
+   "sources": [
+    "https://www.rhs.org.uk/plants/3191/wd/details",
+    "https://ecocrop.apps.fao.org/ecocrop/srv/en/dataSheet?id=2234"
+   ],
+   "certitude": "source",
+   "notes": "Calcifuge (optimum pH 5 à 6) ; archéophyte introduit dès l'Antiquité, souvent considéré comme indigène dans le Midi."
+  },
+  "Fagus sylvatica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "faines crues en grande quantité",
+   "indigene": "indigène en France",
+   "origine": "Europe",
+   "sources": [
+    "https://www.rhs.org.uk/plants/7127/fagus-sylvatica/details"
+   ],
+   "certitude": "source",
+   "notes": "Craint les sols détrempés et la sécheresse estivale ; feuillage marcescent sur les jeunes sujets et les haies."
+  },
+  "Ginkgo biloba": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "graines (enveloppe charnue irritante, amande crue en quantité)",
+   "indigene": "exotique",
+   "origine": "Chine",
+   "sources": [
+    "https://hgic.clemson.edu/factsheet/ginkgo-or-maidenhair-tree/",
+    "https://trees.umn.edu/ginkgo-ginkgo-biloba"
+   ],
+   "certitude": "source",
+   "notes": "Planter des sujets mâles : la chair des graines des pieds femelles sent le beurre rance."
+  },
+  "Gleditsia triacanthos": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "graines et feuilles ; longues épines blessantes (sauf forme inermis)",
+   "indigene": "exotique",
+   "origine": "Est de l'Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/33602/wd/details",
+    "https://plants.ces.ncsu.edu/plants/gleditsia-triacanthos"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Liquidambar styraciflua": {
+   "expo": "Soleil",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Est des États-Unis, Mexique, Amérique centrale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/10334/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Chlorose en sol calcaire ; colorations d'automne meilleures en sol acide."
+  },
+  "Liriodendron tulipifera": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Est de l'Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/10338/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "La RHS recommande un sol sans calcaire."
+  },
+  "Robinia pseudoacacia": {
+   "expo": "Soleil",
+   "sol": "Tous sols",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "toxique",
+   "toxicite_parties": "écorce, graines, feuilles (fleurs comestibles)",
+   "indigene": "naturalisée en France",
+   "origine": "Est de l'Amérique du Nord",
+   "sources": [],
+   "certitude": "connaissance",
+   "notes": "Espèce envahissante, drageonnante et fixatrice d'azote."
+  },
+  "Sophora japonica": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "toxique",
+   "toxicite_parties": "graines et gousses",
+   "indigene": "exotique",
+   "origine": "Chine, Corée",
+   "sources": [
+    "https://www.rhs.org.uk/plants/231724/wd/details",
+    "https://plants.ces.ncsu.edu/plants/styphnolobium-japonicum/common-name/japanese-pagoda-tree/"
+   ],
+   "certitude": "source",
+   "notes": "Nom accepté actuel : Styphnolobium japonicum."
+  },
+  "Taxus baccata": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "très toxique",
+   "toxicite_parties": "toutes les parties sauf l'arille rouge (graines comprises)",
+   "indigene": "indigène en France",
+   "origine": "Europe, Afrique du Nord, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/18001/taxus-baccata/details"
+   ],
+   "certitude": "source",
+   "notes": "Supporte aussi l'ombre dense ; craint surtout l'excès d'eau. RHS : plein soleil, mi-ombre ou ombre totale."
+  },
+  "Sequoiadendron giganteum": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Californie (Sierra Nevada)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/17257/sequoiadendron-giganteum/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Buxus sempervirens": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "toxique",
+   "toxicite_parties": "toutes les parties, surtout les feuilles",
+   "indigene": "indigène en France",
+   "origine": "Europe du Sud et de l'Ouest, Afrique du Nord, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/2579/Buxus-sempervirens/Details"
+   ],
+   "certitude": "source",
+   "notes": "Calcicole dans la nature, mais pousse bien en culture quel que soit le pH."
+  },
+  "Laurus nobilis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Bassin méditerranéen",
+   "sources": [
+    "https://powo.science.kew.org/taxon/465049-1",
+    "https://sophy.tela-botanica.org/pltcli/PC3404.htm"
+   ],
+   "certitude": "source",
+   "notes": "Indigène dans la région méditerranéenne ; ne pas confondre avec le laurier-cerise ou le laurier-rose, toxiques."
+  },
+  "Nerium oleander": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "très toxique",
+   "toxicite_parties": "toutes les parties",
+   "indigene": "indigène en France",
+   "origine": "Bassin méditerranéen",
+   "sources": [
+    "https://sbocc.fr/wp-content/uploads/2025/05/Carnets-botaniques-n°252.pdf"
+   ],
+   "certitude": "source",
+   "notes": "Rare à l'état indigène dans les lits de rivières du Var et des Alpes-Maritimes. Aussi spontané sur quelques ruisseaux du Cap Corse (Carnets botaniques SBOcc n°252)."
+  },
+  "Choisya ternata": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "feuilles (irritantes au contact)",
+   "indigene": "exotique",
+   "origine": "Mexique",
+   "sources": [
+    "https://www.rhs.org.uk/plants/3766/wd/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Rosmarinus officinalis": {
+   "expo": "Soleil",
+   "sol": "Pauvre, caillouteux, très drainé",
+   "humidite": "Sec",
+   "ph": "Neutre à alcalin",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Bassin méditerranéen",
+   "sources": [
+    "https://www.rhs.org.uk/plants/384211/salvia-rosmarinus-ro/details"
+   ],
+   "certitude": "source",
+   "notes": "Nom accepté actuel : Salvia rosmarinus ; tolère aussi les sols acides s'ils sont bien drainés."
+  },
+  "Ailanthus altissima": {
+   "expo": "Soleil",
+   "sol": "Tous sols",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "sève, écorce et feuilles (irritantes)",
+   "indigene": "naturalisée en France",
+   "origine": "Chine",
+   "sources": [
+    "https://inpn.mnhn.fr/espece/cd_nom/80824",
+    "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2025/10/FicheEspece_CDREEE_Ailantegglanduleux_HD_WEB.pdf"
+   ],
+   "certitude": "source",
+   "notes": "Espèce exotique envahissante (INPN : introduit envahissant) inscrite sur la liste des espèces préoccupantes pour l'Union (règlement 1143/2014, ajout par le règlement d'exécution 2019/1262)."
+  },
+  "Albizia julibrissin": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "graines",
+   "indigene": "exotique",
+   "origine": "Asie, de l'Iran à la Chine et au Japon",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/26447/wd/Details"
+   ],
+   "certitude": "source",
+   "notes": "Craint les sols lourds et détrempés en hiver."
+  },
+  "Amelanchier lamarckii": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Est de l'Amérique du Nord (naturalisé en Europe du Nord-Ouest)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/26602/amelanchier-lamarckii/details"
+   ],
+   "certitude": "source",
+   "notes": "Fruits comestibles ; ne pas confondre avec l'amélanchier indigène (A. ovalis), calcicole. Statut d'indigénat non vérifié sur l'INPN (localement naturalisé en France)."
+  },
+  "Broussonetia papyrifera": {
+   "expo": "Soleil",
+   "sol": "Tous sols",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Asie de l'Est",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/broussonetia-papyrifera"
+   ],
+   "certitude": "source",
+   "notes": "Drageonnant et potentiellement envahissant ; pollen très allergisant."
+  },
+  "Carya illinoinensis": {
+   "expo": "Soleil",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Centre-Sud des États-Unis, Mexique",
+   "sources": [
+    "https://ag.missouristate.edu/PBTrewatha/pecan.htm",
+    "https://www.chicagobotanic.org/plant-information/plant-finder/carya-illinoinensis-pecan"
+   ],
+   "certitude": "source",
+   "notes": "Demande des étés chauds pour fructifier."
+  },
+  "Cercidiphyllum japonicum": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Japon, Chine",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/77430/Cercidiphyllum-japonicum-Rotfuchs/Details"
+   ],
+   "certitude": "source",
+   "notes": "Tolère le sol calcaire mais colore mieux en sol acide ou neutre ; craint la sécheresse."
+  },
+  "Davidia involucrata": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chine (Sichuan, Yunnan)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/5364/wd/details",
+    "https://www.treesandshrubsonline.org/articles/davidia/davidia-involucrata"
+   ],
+   "certitude": "source",
+   "notes": "Indice du genre trompeur : la RHS indique tous pH (acide, neutre ou alcalin)."
+  },
+  "Diospyros kaki": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chine",
+   "sources": [
+    "https://www.rhs.org.uk/plants/5919/diospyros-kaki-f/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Gymnocladus dioicus": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "toxique",
+   "toxicite_parties": "graines et gousses crues, feuilles",
+   "indigene": "exotique",
+   "origine": "Centre-Est de l'Amérique du Nord",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/gymnocladus-dioicus/",
+    "https://www.canr.msu.edu/resources/kentucky_coffeetree"
+   ],
+   "certitude": "source",
+   "notes": "Tolère sols calcaires, sel et sécheresse une fois installé."
+  },
+  "Koelreuteria paniculata": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chine, Corée",
+   "sources": [
+    "https://www.rhs.org.uk/plants/9772/wd/details",
+    "https://plants.ces.ncsu.edu/plants/koelreuteria-paniculata"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Lagerstroemia indica": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chine, Corée, Asie du Sud-Est",
+   "sources": [
+    "https://www.rhs.org.uk/plants/363763/lagerstroemia-indica-centennial/details"
+   ],
+   "certitude": "source",
+   "notes": "Fleurit bien seulement avec des étés chauds ; peut jaunir (chlorose) en sol très calcaire."
+  },
+  "Metasequoia glyptostroboides": {
+   "expo": "Soleil",
+   "sol": "Riche et frais",
+   "humidite": "Frais à humide",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chine (Hubei, Sichuan)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/11093/wd/details",
+    "https://plants.ces.ncsu.edu/plants/metasequoia-glyptostroboides/"
+   ],
+   "certitude": "source",
+   "notes": "Conifère à feuillage caduc ; tolère les sols engorgés."
+  },
+  "Olea europaea": {
+   "expo": "Soleil",
+   "sol": "Pauvre, caillouteux, très drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Bassin méditerranéen",
+   "sources": [
+    "https://www.rhs.org.uk/plants/11735/olea-europaea-f/details"
+   ],
+   "certitude": "source",
+   "notes": "La forme sauvage (oléastre) est indigène dans le Midi ; pousse aussi sur sols siliceux bien drainés."
+  },
+  "Ostrya carpinifolia": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe du Sud, Asie Mineure",
+   "sources": [
+    "https://rhs.org.uk/Plants/12012/wd/Details",
+    "https://worldplants.ca/display.php?id=7042"
+   ],
+   "certitude": "source",
+   "notes": "Indigène dans les Alpes-Maritimes et en Corse ; préfère le calcaire mais la RHS indique tous pH."
+  },
+  "Paulownia tomentosa": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chine",
+   "sources": [
+    "https://www.rhs.org.uk/plants/21410/wd/details",
+    "https://edis.ifas.ufl.edu/publication/ST433/pdf"
+   ],
+   "certitude": "source",
+   "notes": "Peut se ressemer spontanément en milieu urbain."
+  },
+  "Phoenix canariensis": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Acide à neutre",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Îles Canaries",
+   "sources": [
+    "https://www.rhs.org.uk/plants/12767/Phoenix-canariensis/Details",
+    "https://www.worldplants.ca/display.php?id=4699"
+   ],
+   "certitude": "source",
+   "notes": "Pétioles armés d'épines acérées ; menacé par le charançon rouge du palmier. pH corrigé : la RHS indique un sol acide à neutre."
+  },
+  "Sequoia sempervirens": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Côte de Californie et du sud de l'Oregon",
+   "sources": [
+    "https://www.rhs.org.uk/plants/17252/sequoia-sempervirens/details"
+   ],
+   "certitude": "source",
+   "notes": "Apprécie une humidité atmosphérique élevée (climat océanique). pH, sol et humidité corrigés : la RHS indique un sol neutre, modérément fertile, frais mais bien drainé. pH « Neutre » seul trop étroit : acide à neutre retenu."
+  },
+  "Taxodium distichum": {
+   "expo": "Soleil",
+   "sol": "Détrempé ou vaseux",
+   "humidite": "Frais à humide",
+   "ph": "Acide à neutre",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Sud-Est des États-Unis",
+   "sources": [
+    "https://www.rhs.org.uk/plants/17999/taxodium-distichum-swamp-cypress-bald-cypress/details",
+    "https://woodyplants.cals.cornell.edu/plant/251"
+   ],
+   "certitude": "source",
+   "notes": "Pousse aussi en sol ordinaire frais ; forme des pneumatophores au bord de l'eau ; chlorose en sol calcaire."
+  },
+  "Trachycarpus fortunei": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chine, Himalaya",
+   "sources": [
+    "https://www.rhs.org.uk/plants/18291/Trachycarpus-fortunei/Details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Zelkova serrata": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Japon, Corée, Chine",
+   "sources": [
+    "https://www.rhs.org.uk/plants/19206/wd/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Abelia × grandiflora": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "semi-persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Hybride horticole (parents originaires de Chine)",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/100036/Abelia-x-grandiflora/Details"
+   ],
+   "certitude": "source",
+   "notes": "Fleurit moins à mi-ombre ; demande une situation abritée."
+  },
+  "Aucuba japonica": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "baies et feuilles",
+   "indigene": "exotique",
+   "origine": "Japon, Chine, Corée",
+   "sources": [
+    "https://www.rhs.org.uk/plants/148757/aucuba-japonica/details",
+    "https://plants.ces.ncsu.edu/plants/aucuba-japonica/common-name/gold-dust/"
+   ],
+   "certitude": "source",
+   "notes": "Le feuillage brûle en plein soleil."
+  },
+  "Buddleja davidii": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Chine",
+   "sources": [
+    "https://ofb.gouv.fr/doc/retours-experience-de-gestion-buddleia-du-pere-david-buddleja-davidii",
+    "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/fiche_espece_buddleia_vf.pdf"
+   ],
+   "certitude": "source",
+   "notes": "Espèce envahissante (friches, voies ferrées, berges)."
+  },
+  "Callicarpa bodinieri": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "baies",
+   "indigene": "exotique",
+   "origine": "Chine",
+   "sources": [
+    "https://www.rhs.org.uk/plants/99513/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Planter plusieurs pieds pour une bonne fructification."
+  },
+  "Calluna vulgaris": {
+   "expo": "Soleil",
+   "sol": "Léger, sableux",
+   "humidite": "Sec à frais",
+   "ph": "Acide",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Afrique du Nord, Asie Mineure",
+   "sources": [
+    "https://www.rhs.org.uk/plants/2712/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Strictement calcifuge : landes sur sols pauvres, sableux et acides."
+  },
+  "Caryopteris × clandonensis": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Hybride horticole (parents originaires d'Asie de l'Est)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/97161/caryopteris-%C3%97-clandonensis-heavenly-blue/details"
+   ],
+   "certitude": "source",
+   "notes": "Ne supporte pas les sols détrempés ; la RHS indique tous pH."
+  },
+  "Ceanothus thyrsiflorus": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Californie, Oregon",
+   "sources": [
+    "https://www.rhs.org.uk/plants/3278/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Indice du genre trompeur : espèce tolérante au calcaire, mais risque de chlorose sur craie peu profonde."
+  },
+  "Chaenomeles japonica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Japon",
+   "sources": [
+    "https://www.rhs.org.uk/plants/3461/chaenomeles-japonica/details"
+   ],
+   "certitude": "source",
+   "notes": "Peut jaunir en sol très calcaire."
+  },
+  "Chimonanthus praecox": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "graines",
+   "indigene": "exotique",
+   "origine": "Chine",
+   "sources": [
+    "https://www.rhs.org.uk/plants/29215/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Demande une situation abritée et ensoleillée pour fleurir en hiver."
+  },
+  "Cotinus coggygria": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "sève (irritante pour la peau)",
+   "indigene": "indigène en France",
+   "origine": "Europe du Sud jusqu'à la Chine",
+   "sources": [
+    "https://www.rhs.org.uk/plants/4552/cotinus-coggygria-smoke-tree-american-smoke-tree/details"
+   ],
+   "certitude": "source",
+   "notes": "Indigène en Provence et dans le Sud-Est ; colore et fleurit mal à l'ombre dense."
+  },
+  "Cytisus scoparius": {
+   "expo": "Soleil",
+   "sol": "Léger, sableux",
+   "humidite": "Sec",
+   "ph": "Acide",
+   "feuillage": "caduc",
+   "toxicite": "toxique",
+   "toxicite_parties": "toutes les parties, surtout les graines",
+   "indigene": "indigène en France",
+   "origine": "Europe occidentale et centrale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/5254/cytisus-scoparius/details",
+    "https://www.rhs.org.uk/plants/149741/cytisus-scoparius-vanesse/details"
+   ],
+   "certitude": "source",
+   "notes": "Calcifuge ; tiges vertes photosynthétiques, les petites feuilles tombent tôt."
+  },
+  "Escallonia rubra": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chili, Argentine",
+   "sources": [
+    "https://www.rhs.org.uk/plants/6861/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Très résistant aux embruns (haies littorales) ; fleurit peu à l'ombre."
+  },
+  "Forsythia × intermedia": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Hybride horticole (parents originaires de Chine)",
+   "sources": [],
+   "certitude": "connaissance",
+   "notes": ""
+  },
+  "Frangula alnus": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais à humide",
+   "ph": "Acide à neutre",
+   "feuillage": "caduc",
+   "toxicite": "toxique",
+   "toxicite_parties": "écorce fraîche et fruits",
+   "indigene": "indigène en France",
+   "origine": "Europe, Afrique du Nord, Asie occidentale",
+   "sources": [
+    "https://forest.jrc.ec.europa.eu/media/atlas/Frangula_alnus.pdf",
+    "https://bsbi.org/taxa/2cd4p9h.c18/frangula-alnus"
+   ],
+   "certitude": "source",
+   "notes": "Indice du genre trompeur : sols frais à humides, mais évite l'engorgement permanent."
+  },
+  "Fuchsia magellanica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chili, Argentine (Patagonie)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/7494/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Indice du genre trompeur : la RHS indique soleil ou mi-ombre ; semi-persistant en climat doux."
+  },
+  "Hamamelis mollis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chine",
+   "sources": [
+    "https://www.rhs.org.uk/plants/94441/hamamelis-mollis-goldcrest/details",
+    "https://www.gardensillustrated.com/winter/hamamelis-the-best-witch-hazel-to-grow/"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Hibiscus syriacus": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Asie de l'Est (Chine)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/40530/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "pH corrigé : la RHS indique un sol acide à neutre (craie toutefois listée parmi les types de sol). pH large gardé : la RHS cite aussi les sols crayeux."
+  },
+  "Hippophae rhamnoides": {
+   "expo": "Soleil",
+   "sol": "Léger, sableux",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie tempérée",
+   "sources": [
+    "https://www.rhs.org.uk/plants/8765/wd/details",
+    "https://woodyplants.cals.cornell.edu/plant/111"
+   ],
+   "certitude": "source",
+   "notes": "Baies comestibles ; un pied mâle est nécessaire pour la fructification."
+  },
+  "Kerria japonica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chine, Japon",
+   "sources": [
+    "https://www.rhs.org.uk/plants/224031/kerria-japonica-(l-)-dc/details"
+   ],
+   "certitude": "source",
+   "notes": "Indice du genre trompeur : la RHS indique soleil ou mi-ombre, tout sol drainé."
+  },
+  "Kolkwitzia amabilis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chine centrale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/67708/kolkwitzia-amabilis-pink-cloud/details",
+    "https://plants.ces.ncsu.edu/plants/kolkwitzia-amabilis/common-name/beauty-bush/"
+   ],
+   "certitude": "source",
+   "notes": "Floraison meilleure en plein soleil."
+  },
+  "Leycesteria formosa": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Himalaya, Chine du Sud-Ouest",
+   "sources": [
+    "https://www.rhs.org.uk/plants/10061/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Se ressème facilement, subspontané localement dans l'Ouest."
+  },
+  "Myrtus communis": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Bassin méditerranéen",
+   "sources": [
+    "https://www.rhs.org.uk/plants/11311/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Rustique jusqu'à environ -10 °C (H4) : abri conseillé dans le Nord."
+  },
+  "Nandina domestica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "persistant",
+   "toxicite": "toxique",
+   "toxicite_parties": "baies et feuilles (glycosides cyanogènes)",
+   "indigene": "exotique",
+   "origine": "Chine, Japon",
+   "sources": [
+    "https://fairfaxgardening.org/nandina/",
+    "https://plants.ces.ncsu.edu/plants/nandina-domestica-harbour-dwarf/common-name/harbour-dwarf-nandina"
+   ],
+   "certitude": "source",
+   "notes": "Chlorose possible en sol calcaire ; baies dangereuses pour les animaux."
+  },
+  "Osmanthus heterophyllus": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Japon, Taïwan",
+   "sources": [
+    "https://www.rhs.org.uk/plants/11988/wd/details",
+    "https://plants.ces.ncsu.edu/plants/osmanthus-heterophyllus/common-name/holly-osmanthus/"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Perovskia atriplicifolia": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Asie centrale (Afghanistan, Pakistan)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/383623/salvia-yangii-pe/details",
+    "https://plants.ces.ncsu.edu/plants/salvia-yangii"
+   ],
+   "certitude": "source",
+   "notes": "Désormais nommée Salvia yangii ; tolère le calcaire comme les sols neutres."
+  },
+  "Philadelphus coronarius": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Europe du Sud-Est, Caucase",
+   "sources": [
+    "https://www.rhs.org.uk/plants/92563/wd/details",
+    "https://taxref.mnhn.fr/taxref-web/taxa/113138"
+   ],
+   "certitude": "source",
+   "notes": "Tolère la sécheresse et le calcaire."
+  },
+  "Photinia × fraseri": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "persistant",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "feuilles (glycosides cyanogènes)",
+   "indigene": "exotique",
+   "origine": "Hybride horticole (parents de Chine et du Japon)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/99292/photinia-x-fraseri/details"
+   ],
+   "certitude": "source",
+   "notes": "La RHS indique un pH acide à neutre ; supporte mal le calcaire."
+  },
+  "Physocarpus opulifolius": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Est de l'Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/12876/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Préfère un sol neutre à acide ; chlorose possible sur craie superficielle."
+  },
+  "Potentilla fruticosa": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Régions tempérées et froides de l'hémisphère Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/13582/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Rare à l'état sauvage en France (Pyrénées, Alpes) ; nom actuel Dasiphora fruticosa. Expo corrigée : RHS indique plein soleil ou mi-ombre."
+  },
+  "Pyracantha coccinea": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "graines (glycosides cyanogènes)",
+   "indigene": "indigène en France",
+   "origine": "Europe du Sud, Asie Mineure",
+   "sources": [
+    "https://www.rhs.org.uk/plants/14208/pyracantha-coccinea/details",
+    "https://gd.eppo.int/taxon/PYECO"
+   ],
+   "certitude": "source",
+   "notes": "Indigène dans le Midi."
+  },
+  "Rhus typhina": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "sève (irritante)",
+   "indigene": "naturalisée en France",
+   "origine": "Est de l'Amérique du Nord",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/rhus-typhina",
+    "https://www.rhs.org.uk/plants/105810/Rhus-typhina-Dissecta/Details"
+   ],
+   "certitude": "source",
+   "notes": "Drageonne fortement ; considéré comme envahissant."
+  },
+  "Ruscus aculeatus": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "toxique",
+   "toxicite_parties": "baies",
+   "indigene": "indigène en France",
+   "origine": "Europe, Bassin méditerranéen",
+   "sources": [
+    "https://www.rhs.org.uk/plants/16177/wd/details",
+    "https://plants.ces.ncsu.edu/plants/ruscus-aculeatus"
+   ],
+   "certitude": "source",
+   "notes": "Supporte l'ombre sèche ; tolère aussi le soleil."
+  },
+  "Santolina chamaecyparissus": {
+   "expo": "Soleil",
+   "sol": "Pauvre, caillouteux, très drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "feuilles",
+   "indigene": "naturalisée en France",
+   "origine": "Méditerranée occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/19856/Santolina-chamaecyparissus/Details"
+   ],
+   "certitude": "source",
+   "notes": "Statut d'indigénat discuté en France ; supporte le calcaire."
+  },
+  "Sarcococca confusa": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "fruits",
+   "indigene": "exotique",
+   "origine": "Chine (connue surtout en culture)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/16452/sarcococca-confusa/details",
+    "https://plants.ces.ncsu.edu/plants/sarcococca-confusa/common-name/fragrant-sarcococca"
+   ],
+   "certitude": "source",
+   "notes": "Tolère l'ombre sèche une fois installé."
+  },
+  "Skimmia japonica": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "persistant",
+   "toxicite": "toxique",
+   "toxicite_parties": "baies et feuilles",
+   "indigene": "exotique",
+   "origine": "Japon, Chine, Taïwan",
+   "sources": [
+    "https://www.rhs.org.uk/plants/17401/skimmia-japonica/details"
+   ],
+   "certitude": "source",
+   "notes": "Préfère un sol acide à neutre, tolère un sol alcalin riche en humus ; chlorose au soleil ou en sol sec."
+  },
+  "Spartium junceum": {
+   "expo": "Soleil",
+   "sol": "Pauvre, caillouteux, très drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "toxique",
+   "toxicite_parties": "toutes parties, surtout les graines",
+   "indigene": "indigène en France",
+   "origine": "Bassin méditerranéen",
+   "sources": [
+    "https://www.rhs.org.uk/plants/68455/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Rameaux verts presque sans feuilles une grande partie de l'année."
+  },
+  "Symphoricarpos albus": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Tous sols",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "toxique",
+   "toxicite_parties": "baies",
+   "indigene": "naturalisée en France",
+   "origine": "Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/90622/symphoricarpos-albus/details"
+   ],
+   "certitude": "source",
+   "notes": "Tolère aussi l'ombre ; drageonne fortement."
+  },
+  "Tamarix gallica": {
+   "expo": "Soleil",
+   "sol": "Léger, sableux",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe du Sud-Ouest, Méditerranée",
+   "sources": [
+    "https://floraveg.eu/factsheet/default/103431"
+   ],
+   "certitude": "source",
+   "notes": "Supporte le sel et les embruns (littoral, berges)."
+  },
+  "Vitex agnus-castus": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "fruits (effets hormonaux)",
+   "indigene": "indigène en France",
+   "origine": "Bassin méditerranéen, Asie centrale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/43844/wd/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Weigela florida": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chine du Nord, Corée, Japon",
+   "sources": [
+    "https://www.rhs.org.uk/plants/101006/wd/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Arbutus unedo": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Bassin méditerranéen, Europe atlantique",
+   "sources": [
+    "https://www.rhs.org.uk/plants/1473/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Indice du genre trompeur : la RHS indique qu'il tolère les sols calcaires (pH acide à alcalin)."
+  },
+  "Acanthus mollis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Méditerranée occidentale et centrale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/26036/acanthus-mollis-latifolius-group/details"
+   ],
+   "certitude": "source",
+   "notes": "Feuillage présent l'hiver, repos estival en été sec ; difficile à éradiquer."
+  },
+  "Agapanthus praecox": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "toutes parties (sève irritante)",
+   "indigene": "exotique",
+   "origine": "Afrique du Sud",
+   "sources": [
+    "https://www.rhs.org.uk/plants/625/agapanthus-praecox/details",
+    "https://plants.ces.ncsu.edu/plants/agapanthus-praecox/"
+   ],
+   "certitude": "source",
+   "notes": "Espèce à feuillage persistant, plus frileuse que les agapanthes caduques."
+  },
+  "Alchemilla mollis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Carpates, Caucase, Turquie",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/774/Alchemilla-mollis/Details",
+    "https://www.rhs.org.uk/plants/alchemilla/growing-guide"
+   ],
+   "certitude": "source",
+   "notes": "Se ressème abondamment."
+  },
+  "Anemone × hybrida": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "toutes parties (sève irritante)",
+   "indigene": "exotique",
+   "origine": "Hybride horticole (espèces de Chine)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/95915/anemone-x-hybrida-pamina/details",
+    "https://www.rhs.org.uk/plants/102330/anemone-x-hybrida-rosenschale/details"
+   ],
+   "certitude": "source",
+   "notes": "Drageonne une fois installée. Toxicité corrigée : RHS signale seulement des troubles digestifs légers et une irritation cutanée."
+  },
+  "Aquilegia vulgaris": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "toutes parties, surtout graines et racines",
+   "indigene": "indigène en France",
+   "origine": "Europe",
+   "sources": [
+    "https://www.rhs.org.uk/plants/100859/wd/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Artemisia absinthium": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "feuilles et sommités fleuries (thuyone)",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie tempérée, Afrique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/1625/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Sous-arbrisseau à base ligneuse. Feuillage corrigé : RHS la classe comme vivace caduque (seuls certains cultivars semi-persistants)."
+  },
+  "Symphyotrichum novi-belgii": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Est de l'Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/340057/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Naturalisé et parfois envahissant au bord des cours d'eau. Expo corrigée : RHS indique plein soleil ou mi-ombre."
+  },
+  "Astilbe × arendsii": {
+   "expo": "Mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais à humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Hybride horticole (espèces d'Asie de l'Est)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/1799/astilbe-erica-x-arendsii/details",
+    "https://www.rhs.org.uk/plants/58057/astilbe-obergartner-jurgens-x-arendsii/details"
+   ],
+   "certitude": "source",
+   "notes": "Craint la sécheresse et le calcaire. pH corrigé : la plupart des fiches RHS indiquent acide, neutre ou alcalin (quelques cultivars acide à neutre)."
+  },
+  "Astrantia major": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe centrale et méridionale, Caucase",
+   "sources": [
+    "https://www.rhs.org.uk/plants/99713/astrantia-major-rosensinfonie/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Bergenia cordifolia": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Sibérie, Altaï, Mongolie",
+   "sources": [
+    "https://www.rhs.org.uk/plants/2209/Bergenia-cordifolia/Details"
+   ],
+   "certitude": "source",
+   "notes": "Très tolérante (sols pauvres, secs ou calcaires)."
+  },
+  "Brunnera macrophylla": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Caucase",
+   "sources": [
+    "https://www.rhs.org.uk/plants/2433/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Les feuilles brûlent en plein soleil."
+  },
+  "Centranthus ruber": {
+   "expo": "Soleil",
+   "sol": "Pauvre, caillouteux, très drainé",
+   "humidite": "Sec",
+   "ph": "Neutre à alcalin",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Bassin méditerranéen",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/93739/Centranthus-ruber/Details"
+   ],
+   "certitude": "source",
+   "notes": "Typique des vieux murs et sols calcaires, mais pousse aussi en sol acide (murs de granite). pH corrigé : RHS indique sol neutre à alcalin, idéalement calcaire ou caillouteux."
+  },
+  "Cerastium tomentosum": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Italie (Apennins), Sicile",
+   "sources": [
+    "https://www.rhs.org.uk/plants/3401/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Couvre-sol vigoureux, peut devenir envahissant."
+  },
+  "Crocosmia × crocosmiiflora": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Hybride horticole (parents d'Afrique du Sud)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/92445/crocosmia-x-crocosmiiflora/details"
+   ],
+   "certitude": "source",
+   "notes": "Indice du genre trompeur : la RHS indique tous pH ; naturalisé et envahissant (Bretagne)."
+  },
+  "Delphinium elatum": {
+   "expo": "Soleil",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "très toxique",
+   "toxicite_parties": "toutes parties, surtout les graines",
+   "indigene": "indigène en France",
+   "origine": "Montagnes d'Europe, Asie centrale et septentrionale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/5398/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Rare à l'état sauvage (Alpes) ; les delphiniums de jardin sont surtout des hybrides. pH corrigé : RHS indique acide, neutre ou alcalin."
+  },
+  "Dicentra spectabilis": {
+   "expo": "Mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Neutre à alcalin",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "toutes parties",
+   "indigene": "exotique",
+   "origine": "Chine, Corée, Sibérie",
+   "sources": [
+    "https://www.rhs.org.uk/plants/293049/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Nom actuel Lamprocapnos spectabilis ; feuillage disparaît dès l'été. pH corrigé : RHS indique sol neutre à légèrement alcalin."
+  },
+  "Echinacea purpurea": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Est de l'Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/41568/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Sol corrigé : RHS indique un sol bien drainé, profond et humifère."
+  },
+  "Echinops ritro": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe du Sud, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/98351/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Indigène dans le Midi, souvent en sol calcaire."
+  },
+  "Epimedium alpinum": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Europe du Sud (Italie, Balkans)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/6480/epimedium-alpinum-barrenwort-alpine-barrenwort/details"
+   ],
+   "certitude": "source",
+   "notes": "La RHS indique un pH acide à neutre, plus étroit que l'indice du genre."
+  },
+  "Erigeron karvinskianus": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Mexique, Amérique centrale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/32487/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Se ressème dans les murs et fissures."
+  },
+  "Eryngium bourgatii": {
+   "expo": "Soleil",
+   "sol": "Pauvre, caillouteux, très drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Pyrénées, Espagne, Afrique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/6780/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Craint l'humidité hivernale."
+  },
+  "Hemerocallis fulva": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Tous sols",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "toutes parties (très toxique pour les chats)",
+   "indigene": "naturalisée en France",
+   "origine": "Chine, Corée, Japon",
+   "sources": [
+    "https://www.rhs.org.uk/plants/8622/wd/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Heuchera sanguinea": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Neutre",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Sud-Ouest des États-Unis, nord du Mexique",
+   "sources": [
+    "https://www.rhs.org.uk/plants/8719/heuchera-sanguinea/details"
+   ],
+   "certitude": "source",
+   "notes": "La RHS indique un pH neutre pour l'espèce."
+  },
+  "Hosta sieboldiana": {
+   "expo": "Mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "herbacée caduque",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "feuilles (pour chiens et chats)",
+   "indigene": "exotique",
+   "origine": "Japon",
+   "sources": [
+    "https://www.rhs.org.uk/plants/8824/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Expo corrigée : RHS indique mi-ombre. pH corrigé : RHS indique sol acide à neutre."
+  },
+  "Iberis sempervirens": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Neutre à alcalin",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Montagnes d'Europe du Sud, Asie Mineure",
+   "sources": [
+    "https://rhs.org.uk/Plants/9066/wd/Details",
+    "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:285652-1"
+   ],
+   "certitude": "source",
+   "notes": "Indigénat corrigé : POWO (Kew) la donne indigène en France (Pyrénées, Sud), à confirmer sur l'INPN."
+  },
+  "Kniphofia uvaria": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Afrique du Sud",
+   "sources": [
+    "https://www.rhs.org.uk/plants/9766/wd/details",
+    "https://plants.ces.ncsu.edu/plants/kniphofia-uvaria/common-name/red-hot-poker/"
+   ],
+   "certitude": "source",
+   "notes": "Craint l'excès d'eau en hiver."
+  },
+  "Leucanthemum vulgare": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie tempérée",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/32804/Leucanthemum-vulgare/Details"
+   ],
+   "certitude": "source",
+   "notes": "Rosette basale présente en hiver. Expo corrigée : RHS indique plein soleil ou mi-ombre."
+  },
+  "Liriope muscari": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chine, Japon, Taïwan",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/liriope-muscari",
+    "https://www.rhs.org.uk/plants/56842/liriope-muscari-royal-purple/details"
+   ],
+   "certitude": "source",
+   "notes": "Préfère un sol acide à neutre ; tolère l'ombre presque complète."
+  },
+  "Lychnis coronaria": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Europe du Sud-Est, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/518096/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Nom actuel Silene coronaria ; vivace de courte durée qui se ressème. Expo corrigée : RHS indique plein soleil ou mi-ombre."
+  },
+  "Nepeta × faassenii": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "hybride horticole (parents du Caucase et d'Europe du Sud)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/52221/nepeta-x-faassenii/details"
+   ],
+   "certitude": "source",
+   "notes": "Hybride horticole stérile (N. racemosa × N. nepetella). Expo corrigée : RHS indique plein soleil ou mi-ombre pour l'espèce (certains cultivars plein soleil seulement)."
+  },
+  "Ophiopogon japonicus": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chine, Japon, Corée",
+   "sources": [
+    "https://www.rhs.org.uk/plants/136860/ophiopogon-japonicus-variegatus-v/details",
+    "https://plants.ces.ncsu.edu/plants/ophiopogon-japonicus/common-name/dwarf-lilyturf/"
+   ],
+   "certitude": "source",
+   "notes": "Indice du genre trop ombragé : la RHS indique soleil ou mi-ombre (idéal ombre légère), sol plutôt légèrement acide."
+  },
+  "Origanum vulgare": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Neutre à alcalin",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale et centrale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/11923/origanum-vulgare/details"
+   ],
+   "certitude": "source",
+   "notes": "RHS : sol bien drainé, de préférence alcalin."
+  },
+  "Papaver orientale": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "latex, toutes parties",
+   "indigene": "exotique",
+   "origine": "Caucase, nord-est de la Turquie, nord de l'Iran",
+   "sources": [
+    "https://www.rhs.org.uk/plants/12234/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Feuillage qui disparaît dès l'été après floraison puis repousse en rosette à l'automne. RHS : plein soleil, la plupart des sols s'ils sont bien drainés, pas trop acides."
+  },
+  "Persicaria amplexicaulis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais à humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Himalaya (Afghanistan à Chine)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/100515/persicaria-amplexicaulis/details"
+   ],
+   "certitude": "source",
+   "notes": "Craint la sécheresse ; RHS : sol frais à mal drainé ; désormais classée Bistorta amplexicaulis."
+  },
+  "Phlox paniculata": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Est de l'Amérique du Nord",
+   "sources": [
+    "https://marylandbiodiversity.com/view/2536",
+    "https://arboretum.psu.edu/?p=16618"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Pulmonaria officinalis": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "semi-persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe",
+   "sources": [
+    "https://www.rhs.org.uk/plants/14153/wd/details",
+    "https://plants.ces.ncsu.edu/plants/pulmonaria-officinalis"
+   ],
+   "certitude": "source",
+   "notes": "Rosette de feuilles d'été souvent conservée l'hiver ; oïdium si sol sec."
+  },
+  "Polygonatum multiflorum": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "baies et rhizome",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie tempérée",
+   "sources": [
+    "https://mustila.fi/en/plants/polygonatummultiflorum/",
+    "https://www.ebben.nl/fr/treeebb/pomultif-polygonatum-multiflorum/pdf"
+   ],
+   "certitude": "source",
+   "notes": "Baies bleu-noir toxiques (arboretum Mustila) ; tolère l'ombre et tous types de sols (Ebben)."
+  },
+  "Rudbeckia fulgida": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Est des États-Unis",
+   "sources": [
+    "https://garden.missouri.edu/node/201"
+   ],
+   "certitude": "source",
+   "notes": "Plein soleil ou ombre légère ; tolère aussi les sols plus secs."
+  },
+  "Sempervivum tectorum": {
+   "expo": "Soleil",
+   "sol": "Pauvre, caillouteux, très drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Montagnes d'Europe du Sud (Alpes, Pyrénées, Massif central)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/17164/Sempervivum-tectorum/Details",
+    "https://plants.ces.ncsu.edu/plants/sempervivum-tectorum"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Stachys byzantina": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Caucase à l'Iran",
+   "sources": [
+    "https://www.rhs.org.uk/plants/17707/Stachys-byzantina/Details"
+   ],
+   "certitude": "source",
+   "notes": "Feuillage laineux qui pourrit en sol humide l'hiver. Origine précisée d'après la RHS (Caucase à l'Iran)."
+  },
+  "Thymus vulgaris": {
+   "expo": "Soleil",
+   "sol": "Pauvre, caillouteux, très drainé",
+   "humidite": "Sec",
+   "ph": "Neutre à alcalin",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Méditerranée occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/18213/wd/details",
+    "https://plants.ces.ncsu.edu/plants/thymus/common-name/thyme"
+   ],
+   "certitude": "source",
+   "notes": "Sous-arbrisseau ligneux, indigène dans le Midi."
+  },
+  "Verbascum thapsus": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "graines (saponines), poils irritants",
+   "indigene": "indigène en France",
+   "origine": "Europe, Afrique du Nord, Asie",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/verbascum-thapsus/common-name/woolly-mullein/",
+    "https://gardenersworld.com/plants/verbascum-thapsus"
+   ],
+   "certitude": "source",
+   "notes": "Bisannuelle : rosette persistante l'hiver la 1re année ; pas spécialement calcicole, contrairement à l'indice du genre. Toxicité faible et discutée (Gardeners' World : pas d'effet toxique signalé ; graines jadis utilisées comme poison de pêche)."
+  },
+  "Polystichum setiferum": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe occidentale et méridionale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/13490/polystichum-setiferum/details"
+   ],
+   "certitude": "source",
+   "notes": "Fougère à frondes persistantes ; protéger la souche de l'excès d'eau hivernal."
+  },
+  "Dryopteris filix-mas": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "rhizome et frondes",
+   "indigene": "indigène en France",
+   "origine": "Hémisphère Nord tempéré",
+   "sources": [
+    "https://www.rhs.org.uk/plants/114462/wd/details",
+    "https://temperate.theferns.info/plant/Dryopteris+filix-mas"
+   ],
+   "certitude": "source",
+   "notes": "Indice du genre trop restrictif : la fougère mâle tolère aussi les sols calcaires. RHS : ombre ou mi-ombre, pH acide à alcalin, craie tolérée."
+  },
+  "Athyrium filix-femina": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Hémisphère Nord tempéré",
+   "sources": [
+    "https://www.rhs.org.uk/plants/1897/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Famille actuelle : Athyriaceae (et non Aspleniaceae)."
+  },
+  "Actinidia deliciosa": {
+   "expo": "Soleil",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chine",
+   "sources": [
+    "https://www.rhs.org.uk/plants/139844/actinidia-deliciosa-solo-s-pf/details",
+    "https://www.agrobio-bretagne.org/wp-content/uploads/2012/04/fiche_kiwi.pdf"
+   ],
+   "certitude": "source",
+   "notes": "Dioïque : pied mâle nécessaire pour les fruits ; craint le calcaire actif. Exposition corrigée : la RHS indique plein soleil, site abrité."
+  },
+  "Akebia quinata": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "semi-persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chine, Japon, Corée",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/akebia-quinata",
+    "https://www.gardenersworld.com/plants/akebia-quinata/"
+   ],
+   "certitude": "source",
+   "notes": "Fruits comestibles ; peut devenir envahissante."
+  },
+  "Aristolochia macrophylla": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "toxique",
+   "toxicite_parties": "toutes parties (acide aristolochique)",
+   "indigene": "exotique",
+   "origine": "Est de l'Amérique du Nord (Appalaches)",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Aristolochia_macrophylla",
+    "https://www.promessedefleurs.ie/climbers/climbers-by-variety/aristolochia-macrophylla.html"
+   ],
+   "certitude": "source",
+   "notes": "Craint les sols secs ; acide aristolochique néphrotoxique et cancérogène."
+  },
+  "Campsis radicans": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "feuilles et fleurs (sève irritante pour la peau)",
+   "indigene": "exotique",
+   "origine": "Sud-est des États-Unis",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/campsis-radicans/"
+   ],
+   "certitude": "source",
+   "notes": "NC State : toxicité faible, dermatite de contact ; besoin de soleil pour bien fleurir."
+  },
+  "Fallopia baldschuanica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Tous sols",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Asie centrale (Tadjikistan, Afghanistan, Pakistan)",
+   "sources": [
+    "https://europlusmed.org/cdm_dataportal/taxon/0112c3fa-cc2f-4ed0-89c5-653c120de088"
+   ],
+   "certitude": "source",
+   "notes": "Très vigoureuse, localement échappée de jardins. Euro+Med : naturalisée en France."
+  },
+  "Humulus lupulus": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "cônes (toxiques pour le chien), tiges rugueuses irritantes",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale, Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/117193/humulus-lupulus-aureus-f/details",
+    "https://plants.ces.ncsu.edu/plants/humulus-lupulus/common-name/hops"
+   ],
+   "certitude": "source",
+   "notes": "Vivace grimpante dont les tiges meurent chaque hiver. RHS : toxique pour le chien si ingéré ; NC State : sévérité faible."
+  },
+  "Passiflora caerulea": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "semi-persistant",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "feuilles et fruits verts",
+   "indigene": "exotique",
+   "origine": "Brésil, Argentine, Paraguay, Uruguay",
+   "sources": [
+    "https://www.rhs.org.uk/plants/12356/wd/details",
+    "https://plants.ces.ncsu.edu/plants/passiflora-caerulea/common-name/passion-flower/"
+   ],
+   "certitude": "source",
+   "notes": "Persistante en climat doux, perd ses feuilles par froid marqué ; fruit mûr comestible mais fade."
+  },
+  "Trachelospermum jasminoides": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "sève (latex irritant)",
+   "indigene": "exotique",
+   "origine": "Chine, Japon, Corée, Vietnam",
+   "sources": [
+    "https://www.rhs.org.uk/plants/18287/trachelospermum-jasminoides/details",
+    "https://ashridgetrees.co.uk/p/climbing-plants/jasmine/trachelospermum-jasminoides"
+   ],
+   "certitude": "source",
+   "notes": "Abriter des vents froids."
+  },
+  "Arundo donax": {
+   "expo": "Soleil",
+   "sol": "Riche et frais",
+   "humidite": "Frais à humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Asie (centrale et méridionale)",
+   "sources": [
+    "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/170217_-Fiche_Canne-de-provence.pdf"
+   ],
+   "certitude": "source",
+   "notes": "Très envahissante par rhizomes, naturalisée de longue date dans le Midi. Introduite probablement à l'époque romaine ; liste noire des EEE en région méditerranéenne."
+  },
+  "Calamagrostis × acutiflora": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "hybride horticole d'espèces eurasiatiques (C. arundinacea × C. epigejos)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/72074/calamagrostis-%C3%97-acutiflora-karl-foerster/details",
+    "https://plants.ces.ncsu.edu/plants/calamagrostis-x-acutiflora"
+   ],
+   "certitude": "source",
+   "notes": "Hybride stérile ; parents indigènes en Europe mais le clone 'Karl Foerster' est horticole ; tolère argile et sols variés."
+  },
+  "Cortaderia selloana": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Amérique du Sud (Argentine, Brésil, Chili)",
+   "sources": [
+    "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/herbe-de-la-pampa-fiche-espece-vf.pdf",
+    "https://gd.eppo.int/taxon/CDTSE/distribution/FR"
+   ],
+   "certitude": "source",
+   "notes": "Espèce exotique envahissante en France (littoral atlantique et méditerranéen) ; feuilles coupantes. Réglementée depuis 2023 : vente et plantation interdites."
+  },
+  "Deschampsia cespitosa": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Hémisphère Nord tempéré et froid",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/5638/Deschampsia-cespitosa/Details"
+   ],
+   "certitude": "source",
+   "notes": "RHS : préfère les sols acides à neutres (indice du genre « Tous pH »)."
+  },
+  "Fargesia murielae": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chine centrale (Hubei, Sichuan)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/82475/fargesia-murielae/details"
+   ],
+   "certitude": "source",
+   "notes": "Bambou cespiteux non traçant ; meilleur à mi-ombre."
+  },
+  "Hakonechloa macra": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Japon (Honshu)",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/33668/Hakonechloa-macra/Details"
+   ],
+   "certitude": "source",
+   "notes": "RHS : tous pH et soleil à ombre ; mi-ombre conseillée en climat chaud et pour les formes panachées."
+  },
+  "Imperata cylindrica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Bassin méditerranéen, Afrique, Asie tropicale et tempérée",
+   "sources": [
+    "https://www.rhs.org.uk/plants/94352/imperata-cylindrica-rubra/details",
+    "https://plants.ces.ncsu.edu/plants/imperata-cylindrica/common-name/japanese-blood-grass/"
+   ],
+   "certitude": "source",
+   "notes": "Espèce indigène des sables du littoral méditerranéen ; le cultivar 'Rubra' cultivé est d'origine japonaise ; envahissante ailleurs."
+  },
+  "Melica ciliata": {
+   "expo": "Soleil",
+   "sol": "Pauvre, caillouteux, très drainé",
+   "humidite": "Sec",
+   "ph": "Neutre à alcalin",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Afrique du Nord, Asie occidentale",
+   "sources": [
+    "https://www.infoflora.ch/en/flora/melica-ciliata.html",
+    "https://www.i-flora.com/en/fact-sheets/search-for-species/art/show/melica-ciliata.html"
+   ],
+   "certitude": "source",
+   "notes": "Espèce des rochers et éboulis calcaires chauds."
+  },
+  "Molinia caerulea": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais à humide",
+   "ph": "Acide à neutre",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale, Afrique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/11169/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "RHS : pH acide à neutre ; ne pas laisser se dessécher en été."
+  },
+  "Panicum virgatum": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/71459/wd/details",
+    "https://www.arboretum.purdue.edu/explorer/plants/21790"
+   ],
+   "certitude": "source",
+   "notes": "Tolère aussi les sols humides et les inondations passagères."
+  },
+  "Phragmites australis": {
+   "expo": "Soleil",
+   "sol": "Détrempé ou vaseux",
+   "humidite": "Humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Cosmopolite",
+   "sources": [],
+   "certitude": "connaissance",
+   "notes": "Supporte jusqu'à environ 1 m d'eau ; rhizomes très traçants."
+  },
+  "Schizachyrium scoparium": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Amérique du Nord",
+   "sources": [
+    "https://ag.missouristate.edu/PBTrewatha/little-bluestem.htm",
+    "https://www.whiteflowerfarm.com/blogs/growing-guides/growguide-schizachyrium-grass"
+   ],
+   "certitude": "source",
+   "notes": "Dépérit en sol lourd, riche ou détrempé."
+  },
+  "Sorghastrum nutans": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Amérique du Nord (centre et est)",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/sorghastrum-nutans",
+    "https://extension.umd.edu:443/resource/yellow-indiangrass"
+   ],
+   "certitude": "source",
+   "notes": "Verse en sol riche et humide."
+  },
+  "Sporobolus heterolepis": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Amérique du Nord (centre et est)",
+   "sources": [
+    "https://mdc.mo.gov/discover-nature/field-guide/prairie-dropseed",
+    "https://briggsnursery.com/plant/grass-sporobolus-heterolepis"
+   ],
+   "certitude": "source",
+   "notes": "Tolère l'argile, préfère les sols secs et caillouteux."
+  },
+  "Typha latifolia": {
+   "expo": "Soleil",
+   "sol": "Détrempé ou vaseux",
+   "humidite": "Aquatique",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Quasi cosmopolite (hémisphère Nord surtout)",
+   "sources": [
+    "https://soar.suny.edu/server/api/core/bitstreams/30b991c7-6ba5-44de-ba93-3d371217e5d1/content"
+   ],
+   "certitude": "source",
+   "notes": "Famille Typhaceae : ce n'est pas une graminée au sens botanique."
+  },
+  "Araucaria araucana": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chili et Argentine (Andes)",
+   "sources": [
+    "https://www.rhsplants.co.uk/plants/_/araucaria-araucana/classid.7011/sku.pl00000367/",
+    "https://www.rhs.org.uk/plants/308236/araucaria-angustifolia-x-araucana/details"
+   ],
+   "certitude": "source",
+   "notes": "Tolère tous pH mais préfère un sol légèrement acide ; graines comestibles."
+  },
+  "Pseudotsuga menziesii": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Ouest de l'Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/14090/Pseudotsuga-menziesii/Details",
+    "https://plants.ces.ncsu.edu/plants/pseudotsuga-menziesii/common-name/douglas-fir/"
+   ],
+   "certitude": "source",
+   "notes": "Largement planté en forêt française, se ressème localement ; craint le calcaire actif. Exposition corrigée : la RHS indique plein soleil, sol non calcaire (pH acide à neutre)."
+  },
+  "Sciadopitys verticillata": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Japon",
+   "sources": [
+    "https://www.rhs.org.uk/plants/16830/wd/details",
+    "https://plants.ces.ncsu.edu/plants/sciadopitys-verticillata/common-name/umbrella-pine"
+   ],
+   "certitude": "source",
+   "notes": "RHS : pH acide à neutre ; ne supporte ni sécheresse ni vents froids."
+  },
+  "Cydonia oblonga": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "caduc",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "pépins (amygdaline)",
+   "indigene": "naturalisée en France",
+   "origine": "Caucase, Iran, Asie centrale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/5160/cydonia-oblonga-f/details",
+    "https://hortiedu.uniag.sk/en/plant/quince"
+   ],
+   "certitude": "source",
+   "notes": "Sensible à la chlorose en sol trop calcaire. La RHS admet tous pH, mais l'université de Nitra signale la chlorose en sol calcaire : pH acide à neutre conservé."
+  },
+  "Laburnum anagyroides": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "très toxique",
+   "toxicite_parties": "toutes parties, surtout les graines",
+   "indigene": "indigène en France",
+   "origine": "Europe centrale et méridionale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/87530/wd/details",
+    "https://plants.ces.ncsu.edu/plants/laburnum-anagyroides/common-name/golden-rain-tree"
+   ],
+   "certitude": "source",
+   "notes": "Une des plantes ornementales les plus toxiques (cytisine). Exposition corrigée : la RHS indique plein soleil ; NC State classe le risque toxique comme élevé."
+  },
+  "Mespilus germanica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Sud-est de l'Europe, Asie occidentale",
+   "sources": [],
+   "certitude": "connaissance",
+   "notes": "Ancienne introduction (archéophyte) devenue spontanée dans les haies et bois ; préfère les sols non calcaires."
+  },
+  "Nyssa sylvatica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais à humide",
+   "ph": "Acide à neutre",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Est de l'Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/174075/nyssa-sylvatica-miss-scarlet-f/details",
+    "https://plants.ces.ncsu.edu/plants/nyssa-sylvatica/common-name/tupelo/"
+   ],
+   "certitude": "source",
+   "notes": "Jaunit en sol calcaire ; supporte les sols mal drainés ; reprise difficile à la transplantation."
+  },
+  "Parrotia persica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Nord de l'Iran, Caucase (forêts hyrcaniennes)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/12341/parrotia-persica/details",
+    "https://plants.ces.ncsu.edu/plants/parrotia-persica/common-name/iron-tree"
+   ],
+   "certitude": "source",
+   "notes": "Tolère le calcaire ; meilleures couleurs d'automne au soleil en sol acide."
+  },
+  "Pterocarya fraxinifolia": {
+   "expo": "Soleil",
+   "sol": "Riche et frais",
+   "humidite": "Frais à humide",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Caucase, nord de l'Iran",
+   "sources": [
+    "https://www.rhs.org.uk/plants/14123/wd/details",
+    "https://www.ebben.nl/en/treeebb/ptfraxin-pterocarya-fraxinifolia/"
+   ],
+   "certitude": "source",
+   "notes": "Arbre de bords de rivières, drageonnant."
+  },
+  "Aronia melanocarpa": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Est de l'Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/1610/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Évite les sols superficiels sur craie ; baies comestibles mais astringentes."
+  },
+  "Pieris japonica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Acide",
+   "feuillage": "persistant",
+   "toxicite": "toxique",
+   "toxicite_parties": "toutes parties (feuilles, fleurs, nectar)",
+   "indigene": "exotique",
+   "origine": "Japon, est de la Chine, Taïwan",
+   "sources": [
+    "https://www.rhs.org.uk/plants/13000/pieris-japonica/details",
+    "https://plants.ces.ncsu.edu/plants/pieris-japonica"
+   ],
+   "certitude": "source",
+   "notes": "Plante de terre de bruyère ; RHS : plein soleil ou ombre légère, à l'abri des vents froids."
+  },
+  "Stephanandra incisa": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Japon, Corée",
+   "sources": [
+    "https://www.rhs.org.uk/plants/43659/stephanandra-incisa-prostrata/details",
+    "https://ccetompkins.org/resources/beautification-stephanandra"
+   ],
+   "certitude": "source",
+   "notes": "Désormais rattaché au genre Neillia (Neillia incisa)."
+  },
+  "Ulex europaeus": {
+   "expo": "Soleil",
+   "sol": "Léger, sableux",
+   "humidite": "Sec",
+   "ph": "Acide à neutre",
+   "feuillage": "persistant",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "graines",
+   "indigene": "indigène en France",
+   "origine": "Europe occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/18575/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Calcifuge ; envahissant hors de son aire d'origine. pH corrigé : la RHS indique sol acide à neutre (sableux, pauvre, plein soleil)."
+  },
+  "Kalmia latifolia": {
+   "expo": "Mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Acide",
+   "feuillage": "persistant",
+   "toxicite": "très toxique",
+   "toxicite_parties": "toutes parties",
+   "indigene": "exotique",
+   "origine": "Est de l'Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/9708/kalmia-latifolia/details",
+    "https://plants.ces.ncsu.edu/plants/kalmia-latifolia/common-name/mountain-laurel"
+   ],
+   "certitude": "source",
+   "notes": "RHS : mi-ombre, soleil seulement si le sol reste frais ; ne supporte ni calcaire ni sol détrempé."
+  },
+  "Griselinia littoralis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Nouvelle-Zélande",
+   "sources": [
+    "https://www.rhs.org.uk/plants/90215/griselinia-littoralis-bantry-bay-v/details",
+    "https://plantright.org/better-plants/griselinia-littoralis/"
+   ],
+   "certitude": "source",
+   "notes": "Craint les vents froids desséchants ; idéal en climat littoral doux."
+  },
+  "Sorbaria sorbifolia": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Asie du Nord-Est (Sibérie, Mandchourie, Corée, Japon)",
+   "sources": [
+    "https://rhs.org.uk/Plants/17517/wd/Details",
+    "https://woodyplants.cals.cornell.edu/plant/235"
+   ],
+   "certitude": "source",
+   "notes": "Drageonne fortement en sol frais ; ne supporte pas les situations sèches."
+  },
+  "Aconitum napellus": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais à humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "très toxique",
+   "toxicite_parties": "toute la plante, surtout les racines (toxique aussi par contact)",
+   "indigene": "indigène en France",
+   "origine": "Europe (montagnes)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/380/aconitum-napellus/details"
+   ],
+   "certitude": "source",
+   "notes": "Considérée comme la plante la plus toxique de la flore européenne : manipuler avec des gants. RHS : mi-ombre de préférence, plein soleil toléré si sol humifère paillé ; toute la plante toxique, éviter le contact cutané."
+  },
+  "Anthemis tinctoria": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "plante entière (allergies de contact)",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/324868/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Vivace souvent de courte durée, garde une rosette de feuilles en hiver doux. Nom accepté par la RHS : Cota tinctoria."
+  },
+  "Aruncus dioicus": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais à humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Montagnes d'Europe, Asie, Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/128979/wd/details",
+    "https://www.jardiner-malin.fr/fiche/aruncus-dioicus-barbe-de-bouc.html"
+   ],
+   "certitude": "source",
+   "notes": "Accepte le soleil seulement si le sol reste constamment frais ; mi-ombre plus sûre en climat chaud."
+  },
+  "Calamintha nepeta": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Neutre à alcalin",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe du Sud, Afrique du Nord, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/2605/calamintha-nepeta/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Coreopsis verticillata": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Est du Canada au sud-est des États-Unis",
+   "sources": [
+    "https://rhs.org.uk/plants/4369/coreopsis-verticillata/details"
+   ],
+   "certitude": "source",
+   "notes": "Origine précisée d'après la RHS (E Canada to SE USA)."
+  },
+  "Dictamnus albus": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "toute la plante (sève phototoxique : brûlures cutanées au soleil)",
+   "indigene": "indigène en France",
+   "origine": "Europe du Sud et centrale, Asie",
+   "sources": [
+    "https://www.rhs.org.uk/plants/5799/dictamnus-albus/details",
+    "https://plants.ces.ncsu.edu/plants/dictamnus-albus"
+   ],
+   "certitude": "source",
+   "notes": "Contact avec la peau suivi d'exposition au soleil : phytophotodermatite ; à l'état sauvage plutôt calcicole."
+  },
+  "Doronicum orientale": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Sud-Est de l'Europe, Caucase, Turquie",
+   "sources": [
+    "https://www.rhs.org.uk/plants/6026/wd/details",
+    "https://www.jardiner-malin.fr/fiche/doronic-floraison-planter.html"
+   ],
+   "certitude": "source",
+   "notes": "Le RHS indique un pH neutre à acide ; feuillage qui disparaît dès l'été (dormance estivale)."
+  },
+  "Eupatorium cannabinum": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais à humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "toute la plante (alcaloïdes pyrrolizidiniques)",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie, Afrique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/7024/wd/details",
+    "https://naturblick.museumfuernaturkunde.berlin/species/portrait/336?lang=en"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Filipendula ulmaria": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/32871/wd/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Gaura lindheimeri": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Sud des États-Unis (Texas, Louisiane), Mexique",
+   "sources": [
+    "https://gardenersworld.com/how-to/grow-plants/how-to-grow-gaura",
+    "https://www.nature-and-garden.com/gardening/gaura-lindheimeri.html"
+   ],
+   "certitude": "source",
+   "notes": "Nom actuel : Oenothera lindheimeri ; craint l'humidité hivernale."
+  },
+  "Gypsophila paniculata": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Neutre à alcalin",
+   "feuillage": "herbacée caduque",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "toute la plante (saponines)",
+   "indigene": "exotique",
+   "origine": "Europe centrale et orientale, Asie centrale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/97861/gypsophila-paniculata-bristol-fairy-d/details",
+    "https://plants.ces.ncsu.edu/plants/gypsophila-paniculata"
+   ],
+   "certitude": "source",
+   "notes": "Craint l'humidité hivernale ; préfère un sol calcaire très drainant."
+  },
+  "Helenium autumnale": {
+   "expo": "Soleil",
+   "sol": "Riche et frais",
+   "humidite": "Frais à humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "toute la plante (lactones sesquiterpéniques)",
+   "indigene": "exotique",
+   "origine": "Amérique du Nord",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/helenium-autumnale/"
+   ],
+   "certitude": "source",
+   "notes": "Ne supporte pas la sécheresse estivale. Humidité corrigée : NC State indique un sol humide à mouillé (bords de cours d'eau, zones humides)."
+  },
+  "Knautia macedonica": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Neutre à alcalin",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Balkans",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/61000/Knautia-macedonica/Details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Ligularia dentata": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "toute la plante (alcaloïdes pyrrolizidiniques)",
+   "indigene": "exotique",
+   "origine": "Chine, Japon",
+   "sources": [
+    "https://www.rhs.org.uk/plants/10083/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Le feuillage s'affaisse au soleil de midi : ombre aux heures chaudes en France."
+  },
+  "Lupinus polyphyllus": {
+   "expo": "Soleil",
+   "sol": "Léger, sableux",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "graines surtout, toute la plante",
+   "indigene": "naturalisée en France",
+   "origine": "Ouest de l'Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/10573/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Calcifuge ; localement envahissant en milieu naturel."
+  },
+  "Monarda didyma": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Est de l'Amérique du Nord",
+   "sources": [
+    "https://www.rhsplants.co.uk/plants/_/monarda-didyma/classid.2000053210/",
+    "https://en.wikipedia.org/wiki/Monarda_didyma"
+   ],
+   "certitude": "source",
+   "notes": "Sensible à l'oïdium si le sol s'assèche."
+  },
+  "Phormium tenax": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Nouvelle-Zélande",
+   "sources": [
+    "https://www.rhs.org.uk/plants/12791/phormium-tenax/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Rodgersia pinnata": {
+   "expo": "Mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Humide",
+   "ph": "Acide à neutre",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chine (Yunnan, Sichuan)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/15921/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Le RHS accepte le soleil si le sol reste humide et tolère l'ombre ; pH acide selon le RHS."
+  },
+  "Saponaria officinalis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Tous sols",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "racines et graines surtout (saponines)",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/saponaria-officinalis/common-name/wild-sweet-william",
+    "https://illinoiswildflowers.info/weeds/plants/soapwort.htm"
+   ],
+   "certitude": "source",
+   "notes": "Drageonne et peut devenir envahissante."
+  },
+  "Scabiosa columbaria": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Neutre à alcalin",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Afrique du Nord, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/16772/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Espèce des pelouses calcaires sèches."
+  },
+  "Solidago canadensis": {
+   "expo": "Soleil",
+   "sol": "Tous sols",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Amérique du Nord",
+   "sources": [
+    "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/Solidago-canadensis_Solidage-du-Canada.pdf"
+   ],
+   "certitude": "source",
+   "notes": "Espèce exotique envahissante en France : plantation déconseillée."
+  },
+  "Tradescantia virginiana": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "sève (irritation cutanée)",
+   "indigene": "exotique",
+   "origine": "Est des États-Unis",
+   "sources": [
+    "https://www.rhs.org.uk/plants/18305/wd/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Trollius europaeus": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "toute la plante (protoanémonine)",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale (montagnes)",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/18449/Trollius-europaeus/Details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Yucca filamentosa": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "racines et feuilles (saponines) ; feuilles piquantes",
+   "indigene": "exotique",
+   "origine": "Sud-Est des États-Unis",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/all/yucca-filamentosa/",
+    "https://mgnv.org/wp-content/uploads/2026/08/Yucca_filamentosa.2026.pdf"
+   ],
+   "certitude": "source",
+   "notes": "pH corrigé : NC State indique un sol neutre et bien drainé ; craint l'humidité stagnante. pH large gardé : plante tolérante (une seule source le dit neutre)."
+  },
+  "Sanguisorba officinalis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais à humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie, Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/16403/wd/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Tiarella cordifolia": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Est de l'Amérique du Nord",
+   "sources": [
+    "https://www.perennials.com/plants/tiarella-cordifolia.html",
+    "https://www.northcreeknurseries.com/plantName/Tiarella-cordifolia-"
+   ],
+   "certitude": "source",
+   "notes": "Craint l'excès d'eau en hiver comme la sécheresse."
+  },
+  "Cryptomeria japonica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Japon, Chine",
+   "sources": [
+    "https://www.rhs.org.uk/plants/5015/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Indice du genre trompeur : le RHS le donne tolérant à tous pH (préfère toutefois un sol humifère, à l'abri)."
+  },
+  "Maclura pomifera": {
+   "expo": "Soleil",
+   "sol": "Tous sols",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "fruits (non comestibles), latex irritant",
+   "indigene": "exotique",
+   "origine": "Centre-sud des États-Unis (Texas, Oklahoma, Arkansas)",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/maclura-pomifera/common-name/mapo/",
+    "https://woodyplants.cals.cornell.edu/plant/143"
+   ],
+   "certitude": "source",
+   "notes": "Très rustique et tolérant (sécheresse, sols pauvres, inondation passagère) ; rameaux épineux."
+  },
+  "Phellodendron amurense": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Nord-Est de l'Asie (Chine, Mandchourie, Corée, Japon)",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/phellodendron-amurense",
+    "https://woodyplants.cals.cornell.edu/plant/167"
+   ],
+   "certitude": "source",
+   "notes": "Peut se ressemer et devenir envahissant (pieds femelles)."
+  },
+  "Sassafras albidum": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "caduc",
+   "toxicite": "toxique",
+   "toxicite_parties": "écorce des racines, huile essentielle (safrole)",
+   "indigene": "exotique",
+   "origine": "Est de l'Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/44746/wd/details",
+    "https://treeselector-clevelandmetroparks.com/tree-selector/sassafras"
+   ],
+   "certitude": "source",
+   "notes": "Chlorose en sol calcaire."
+  },
+  "Acacia dealbata": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Acide à neutre",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Sud-Est de l'Australie, Tasmanie",
+   "sources": [
+    "https://taxref.mnhn.fr/taxref-web/taxa/79691/groups"
+   ],
+   "certitude": "source",
+   "notes": "Calcifuge (chlorose en sol calcaire) ; espèce envahissante dans le Sud-Est de la France. TAXREF le classe parmi les espèces exotiques envahissantes en métropole."
+  },
+  "Eriobotrya japonica": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "graines (glycosides cyanogènes)",
+   "indigene": "exotique",
+   "origine": "Centre-sud de la Chine",
+   "sources": [
+    "https://www.rhs.org.uk/plants/6735/eriobotrya-japonica/details"
+   ],
+   "certitude": "source",
+   "notes": "Fruits comestibles ; graines à ne pas consommer."
+  },
+  "Ceratonia siliqua": {
+   "expo": "Soleil",
+   "sol": "Pauvre, caillouteux, très drainé",
+   "humidite": "Sec",
+   "ph": "Neutre à alcalin",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Méditerranée orientale, Proche-Orient",
+   "sources": [
+    "https://taxref.mnhn.fr/taxref-web/taxa/447038/groups"
+   ],
+   "certitude": "source",
+   "notes": "Cultivé de longue date et subspontané sur le littoral méditerranéen ; gélif. TAXREF le range parmi les espèces introduites naturalisées en métropole."
+  },
+  "Schinus molle": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "baies, résine et sève irritantes",
+   "indigene": "exotique",
+   "origine": "Andes (Pérou, Bolivie, Chili, Argentine)",
+   "sources": [
+    "https://jardin-thuret.hub.inrae.fr/content/download/6704/54892?version=1",
+    "https://www.poisonsinfo.health.qld.gov.au/plants-and-mushrooms/pepperina-schinus-molle"
+   ],
+   "certitude": "source",
+   "notes": "Baies vendues comme « poivre rose » mais irritantes à forte dose ; craint les vents froids."
+  },
+  "Chamaerops humilis": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Méditerranée occidentale (Espagne, Italie, Afrique du Nord)",
+   "sources": [
+    "https://jardin-thuret.hub.inrae.fr/content/download/6000/48617?version=1",
+    "https://eflorasys.univ-lorraine.fr/index.php/en/species/view/90524"
+   ],
+   "certitude": "source",
+   "notes": "Statut corrigé : seul palmier indigène de France (quelques stations du littoral varois et des Alpes-Maritimes), protégé au niveau national et classé « En danger » au Livre rouge ; populations naturelles souvent hybridées avec des individus plantés (Jardin Thuret, INRAE)."
+  },
+  "Cordyline australis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "feuilles (pour chiens et chats)",
+   "indigene": "exotique",
+   "origine": "Nouvelle-Zélande",
+   "sources": [
+    "https://www.rhs.org.uk/plants/4361/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Craint l'eau stagnante ; résiste à la sécheresse une fois installé."
+  },
+  "Washingtonia filifera": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Sud-Ouest des États-Unis (Californie, Arizona), Basse-Californie",
+   "sources": [
+    "https://gardenerspath.com/plants/landscape-trees/grow-california-fan-palm/",
+    "https://palmcentre.co.uk/products/outdoor-plants/garden-palm-trees/washingtonia-filifera/"
+   ],
+   "certitude": "source",
+   "notes": "Craint le froid humide."
+  },
+  "Punica granatum": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "écorce des racines et des tiges (alcaloïdes)",
+   "indigene": "naturalisée en France",
+   "origine": "Iran, Asie centrale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/14189/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Fruits comestibles ; subspontané dans le Midi."
+  },
+  "Calocedrus decurrens": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Ouest des États-Unis (Oregon, Californie, Nevada), Basse-Californie",
+   "sources": [
+    "https://www.rhs.org.uk/plants/2763/wd/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Colutea arborescens": {
+   "expo": "Soleil",
+   "sol": "Pauvre, caillouteux, très drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "graines et feuilles (purgatives)",
+   "indigene": "indigène en France",
+   "origine": "Europe du Sud, Afrique du Nord",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/colutea-arborescens/common-name/common-bladder-senna",
+    "https://temperate.theferns.info/plant/Colutea+arborescens"
+   ],
+   "certitude": "source",
+   "notes": "Fixe l'azote ; à l'état sauvage plutôt sur sols calcaires secs."
+  },
+  "Fatsia japonica": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "feuilles et fruits (saponines), sève irritante",
+   "indigene": "exotique",
+   "origine": "Japon, Corée du Sud",
+   "sources": [
+    "https://www.rhs.org.uk/plants/7147/fatsia-japonica/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Rubus idaeus": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie, Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/16137/rubus-idaeus/details"
+   ],
+   "certitude": "source",
+   "notes": "Indice du genre à nuancer : le framboisier préfère un sol légèrement acide et craint le calcaire (chlorose)."
+  },
+  "Staphylea pinnata": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe centrale et du Sud-Est, Asie Mineure",
+   "sources": [
+    "https://www.rhs.org.uk/plants/17753/wd/details",
+    "https://plants.ces.ncsu.edu/plants/staphylea-pinnata"
+   ],
+   "certitude": "source",
+   "notes": "Rare à l'état sauvage en France (Est) ; supporte mal la sécheresse."
+  },
+  "Teucrium fruticans": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Neutre à alcalin",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Méditerranée occidentale (Espagne, Italie, Afrique du Nord)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/18060/wd/details",
+    "https://en.wikipedia.org/wiki/Teucrium_fruticans",
+    "https://taxref.mnhn.fr/taxref-web/taxa/90427",
+    "https://europlusmed.org/cdm_dataportal/taxon/c3bc4490-e745-4a88-93ab-77ff1aa12d59"
+   ],
+   "certitude": "source",
+   "notes": "Statut corrigé : TAXREF le donne présent en métropole (code P, non classé parmi les introduites) et Euro+Med le dit natif en France ; indigénat parfois discuté. Gélif sous -5 °C environ."
+  },
+  "Cephalotaxus harringtonia": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "toxique",
+   "toxicite_parties": "feuilles et graines",
+   "indigene": "exotique",
+   "origine": "Japon, Corée, Chine",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/cephalotaxus-harringtonia/",
+    "https://plants.ces.ncsu.edu/plants/cephalotaxus-harringtonia-duke-gardens/"
+   ],
+   "certitude": "source",
+   "notes": "Supporte le soleil sous climat à étés frais ; très tolérant à l'ombre."
+  },
+  "Acca sellowiana": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Sud du Brésil, Uruguay, nord de l'Argentine",
+   "sources": [
+    "https://www.rhs.org.uk/plants/26630/acca-sellowiana/details",
+    "https://crfg.org/?p=93626"
+   ],
+   "certitude": "source",
+   "notes": "Arrosage utile en été pour la fructification ; syn. Feijoa sellowiana."
+  },
+  "Helichrysum italicum": {
+   "expo": "Soleil",
+   "sol": "Pauvre, caillouteux, très drainé",
+   "humidite": "Sec",
+   "ph": "Neutre à alcalin",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe méridionale (bassin méditerranéen)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/34062/Helichrysum-italicum/Details"
+   ],
+   "certitude": "source",
+   "notes": "pH corrigé : RHS indique un sol pauvre, drainé, neutre à alcalin ; craint l'humidité hivernale."
+  },
+  "Phlomis fruticosa": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Méditerranée centrale et orientale (Italie, Balkans, Turquie)",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/12700/wd/Details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Actaea simplex": {
+   "expo": "Mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "toute la plante, surtout racines et baies",
+   "indigene": "exotique",
+   "origine": "Asie orientale (Russie orientale, Chine, Corée, Japon)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/165618/actaea-simplex-prichards-giant/details",
+    "https://www.rhs.org.uk/plants/227224/actaea-simplex-atropurpurea-group-black-negligee/details"
+   ],
+   "certitude": "source",
+   "notes": "Syn. Cimicifuga simplex ; ombre légère et sol frais enrichi en humus."
+  },
+  "Ajuga reptans": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale, Afrique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/742/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Supporte le soleil si le sol reste frais."
+  },
+  "Alcea rosea": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Asie (origine exacte incertaine, Chine ou Asie occidentale)",
+   "sources": [
+    "https://taxref.mnhn.fr/taxref-web/taxa/81023/groups"
+   ],
+   "certitude": "source",
+   "notes": "Bisannuelle ou vivace de courte durée, sensible à la rouille. TAXREF la classe parmi les espèces introduites naturalisées en métropole."
+  },
+  "Anthriscus sylvestris": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "sève phototoxique (irritation cutanée au soleil) ; risque de confusion avec les ciguës",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie, Afrique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/1346/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Plante nitrophile des lisières et prairies, tolère le plein soleil : l'indice du genre (mi-ombre à ombre) est trop ombragé. Parties toxiques précisées : RHS signale une sève nocive pour la peau au soleil."
+  },
+  "Arabis alpina": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Montagnes d'Europe, Afrique du Nord, Asie",
+   "sources": [
+    "https://www.rhs.org.uk/plants/358096/arabis-alpina-subsp-caucasica-lotti-white/details"
+   ],
+   "certitude": "source",
+   "notes": "La RHS indique tous pH (fiches de la sous-espèce caucasica), plus large que l'indice du genre (neutre à alcalin)."
+  },
+  "Armeria maritima": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Littoraux et montagnes d'Europe, hémisphère Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/1597/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Tolère le sel et les embruns ; sol pauvre accepté."
+  },
+  "Arum italicum": {
+   "expo": "Mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "plante entière, surtout baies (oxalates)",
+   "indigene": "indigène en France",
+   "origine": "Europe méridionale et occidentale, Afrique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/1658/wd/details",
+    "https://plants.ces.ncsu.edu/plants/all/arum-italicum/"
+   ],
+   "certitude": "source",
+   "notes": "Feuillage présent d'automne au printemps, disparaît en été (dormance estivale). RHS : soleil ou mi-ombre, sol humifère frais mais drainé, tous pH, toxique."
+  },
+  "Asarum europaeum": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "herbacée persistante",
+   "toxicite": "toxique",
+   "toxicite_parties": "plante entière (feuilles, rhizome)",
+   "indigene": "indigène en France",
+   "origine": "Europe",
+   "sources": [
+    "https://www.rhs.org.uk/plants/1680/asarum-europaeum/details"
+   ],
+   "certitude": "source",
+   "notes": "Indice du genre trompeur : la RHS indique un sol acide à neutre."
+  },
+  "Aubrieta deltoidea": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec",
+   "ph": "Neutre à alcalin",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Balkans, Grèce, Turquie",
+   "sources": [
+    "https://www.rhs.org.uk/plants/1909/aubrieta-deltoidea/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Bellis perennis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/94326/wd/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Caltha palustris": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Détrempé ou vaseux",
+   "humidite": "Humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "plante entière fraîche, surtout feuilles",
+   "indigene": "indigène en France",
+   "origine": "Régions tempérées de l'hémisphère Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/97658/caltha-palustris-var-palustris/details"
+   ],
+   "certitude": "source",
+   "notes": "Peut pousser en eau peu profonde (jusqu'à 10 cm)."
+  },
+  "Cardamine pratensis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais à humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie, Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/94085/wd/details",
+    "https://www.rhsplants.co.uk/plants/_/cardamine-pratensis/classid.2000018822/"
+   ],
+   "certitude": "source",
+   "notes": "RHS indique mi-ombre à ombre en sol humifère humide ; plante de prairies humides, tolère le soleil si le sol reste frais."
+  },
+  "Ceratostigma plumbaginoides": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chine occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/3410/Ceratostigma-plumbaginoides/Details",
+    "https://plants.ces.ncsu.edu/plants/all/ceratostigma-plumbaginoides/"
+   ],
+   "certitude": "source",
+   "notes": "Craint les sols détrempés ; supporte la mi-ombre selon NC State."
+  },
+  "Chelidonium majus": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Tous sols",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "latex orangé et plante entière",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie",
+   "sources": [
+    "https://www.rhs.org.uk/plants/3711/wd/details",
+    "https://www.ivis.org/library/guide-to-poisonous-house-and-garden-plants/chelidonium-majus-celandine"
+   ],
+   "certitude": "source",
+   "notes": "Plante nitrophile des murs et décombres."
+  },
+  "Convallaria majalis": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "très toxique",
+   "toxicite_parties": "plante entière (feuilles, fleurs, baies)",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie",
+   "sources": [
+    "https://www.rhs.org.uk/plants/4327/Convallaria-majalis/Details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Cyclamen hederifolium": {
+   "expo": "Mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "tubercule surtout",
+   "indigene": "indigène en France",
+   "origine": "Bassin méditerranéen (sud-est de la France, Corse à Turquie)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/5145/Cyclamen-hederifolium/Details",
+    "https://plants.ces.ncsu.edu/plants/cyclamen-hederifolium"
+   ],
+   "certitude": "source",
+   "notes": "Feuillage d'automne à printemps, dormance estivale ; RHS : tous pH (indice du genre neutre à alcalin) et éviter l'humidité estivale."
+  },
+  "Echium vulgare": {
+   "expo": "Soleil",
+   "sol": "Pauvre, caillouteux, très drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "plante entière (alcaloïdes pyrrolizidiniques), poils irritants",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/6298/wd/details",
+    "https://www.rhsplants.co.uk/plants/_/echium-vulgare/classid.2000018819"
+   ],
+   "certitude": "source",
+   "notes": "Bisannuelle plutôt que vivace (rosette la première année)."
+  },
+  "Eranthis hyemalis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Neutre à alcalin",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "plante entière, surtout tubercule",
+   "indigene": "naturalisée en France",
+   "origine": "Europe du Sud (Italie, Balkans)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/6540/Eranthis-hyemalis/Details",
+    "https://plants.ces.ncsu.edu/plants/eranthis-hyemalis"
+   ],
+   "certitude": "source",
+   "notes": "Tolère la plupart des sols mais réussit mieux en sol calcaire (RHS)."
+  },
+  "Fragaria vesca": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie, Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/7280/fragaria-vesca-f/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Galium odoratum": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "plante entière à forte dose (coumarine)",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie, Afrique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/7595/wd/details",
+    "https://plants.ces.ncsu.edu/plants/galium-odoratum/"
+   ],
+   "certitude": "source",
+   "notes": "La RHS indique tous pH, plus large que l'indice du genre (neutre à alcalin)."
+  },
+  "Geum urbanum": {
+   "expo": "Mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie, Afrique du Nord",
+   "sources": [
+    "https://rhs.org.uk/Plants/7987/wd/Details"
+   ],
+   "certitude": "source",
+   "notes": "Plante des lisières et sous-bois clairs, plus ombre-tolérante que l'indice du genre."
+  },
+  "Glechoma hederacea": {
+   "expo": "Mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "plante entière (toxique surtout pour les chevaux)",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie",
+   "sources": [
+    "https://weedguide.cfaes.osu.edu/singlerecord.asp?id=58",
+    "https://www.gardenorganic.org.uk/weeds/ground-ivy",
+    "https://hortsense.cahnrs.wsu.edu/fact-sheet/weeds-ground-ivy-glechoma-hederacea/"
+   ],
+   "certitude": "source",
+   "notes": "Sol corrigé : Ohio State et Garden Organic la décrivent sur sols humides et riches, souvent lourds."
+  },
+  "Helianthemum nummularium": {
+   "expo": "Soleil",
+   "sol": "Pauvre, caillouteux, très drainé",
+   "humidite": "Sec",
+   "ph": "Neutre à alcalin",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe",
+   "sources": [
+    "https://www.rhs.org.uk/plants/8469/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Sous-arbrisseau ; tolère un sol légèrement acide selon la RHS."
+  },
+  "Hesperis matronalis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Neutre à alcalin",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe centrale et méridionale, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/8681/wd/details",
+    "https://plants.ces.ncsu.edu/plants/hesperis-matronalis"
+   ],
+   "certitude": "source",
+   "notes": "La RHS indique neutre à alcalin, plus étroit que l'indice du genre ; souvent bisannuelle."
+  },
+  "Inula helenium": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Asie centrale et occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/9171/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Ancienne plante médicinale naturalisée (archéophyte)."
+  },
+  "Lamium maculatum": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/9812/wd/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Lathyrus latifolius": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "graines (lathyrisme)",
+   "indigene": "indigène en France",
+   "origine": "Europe méridionale",
+   "sources": [
+    "https://powo.science.kew.org/taxon/501802-1",
+    "https://www.europlusmed.org/cdm_dataportal/taxon/6ecd9fd3-c307-426c-9b13-e1454862c6a5"
+   ],
+   "certitude": "connaissance",
+   "notes": "Tolère les sols pauvres et secs, contrairement à l'indice du genre (riche et frais). POWO et Euro+Med confirment l'indigénat en France ; autres valeurs non sourcées."
+  },
+  "Lobelia cardinalis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "plante entière (alcaloïdes)",
+   "indigene": "exotique",
+   "origine": "Amérique du Nord",
+   "sources": [
+    "https://www.clemson.edu/cafls/vincent/articles/jent-plant-profile-lobelia-cardinalis-sc-nurseryman-magazine-p29-janfeb2016.pdf",
+    "https://www.gardenersworld.com/how-to/grow-plants/lobelia-cardinalis"
+   ],
+   "certitude": "source",
+   "notes": "pH 5,8 à 7,8 selon Clemson, d'où tous pH plutôt qu'acide à neutre ; souvent de courte durée."
+  },
+  "Lunaria annua": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Europe du Sud-Est",
+   "sources": [
+    "https://www.rhs.org.uk/plants/98034/lunaria-annua/details"
+   ],
+   "certitude": "source",
+   "notes": "Annuelle ou bisannuelle, pas vivace ; tolère le plein soleil (RHS)."
+  },
+  "Lythrum salicaria": {
+   "expo": "Soleil",
+   "sol": "Riche et frais",
+   "humidite": "Humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Eurasie, Afrique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/10645/wd/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Malva moschata": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe",
+   "sources": [
+    "https://www.rhs.org.uk/plants/10797/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Sol léger et bien drainé, résiste à la sécheresse une fois installée."
+  },
+  "Mentha × piperita": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais à humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Hybride européen (M. aquatica × M. spicata)",
+   "sources": [
+    "https://inpn.mnhn.fr/espece/cd_nom/108295/tab/taxo"
+   ],
+   "certitude": "connaissance",
+   "notes": "Hybride stérile, multiplié par division ; envahissant par stolons. Statut INPN en métropole non confirmé (fiche cd_nom 108295 vue, statut lisible seulement pour les Antilles : introduite non établie)."
+  },
+  "Nymphaea alba": {
+   "expo": "Soleil",
+   "sol": "Détrempé ou vaseux",
+   "humidite": "Aquatique",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "rhizome et graines",
+   "indigene": "indigène en France",
+   "origine": "Europe, Afrique du Nord, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/11623/nymphaea-alba-h/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Nuphar lutea": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Détrempé ou vaseux",
+   "humidite": "Aquatique",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "rhizome",
+   "indigene": "indigène en France",
+   "origine": "Eurasie, Afrique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/11602/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Supporte un peu d'ombre et l'eau courante lente, mieux que Nymphaea."
+  },
+  "Oxalis acetosella": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "herbacée persistante",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "feuilles en grande quantité (oxalates)",
+   "indigene": "indigène en France",
+   "origine": "Eurasie, Afrique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/12040/wd/details",
+    "https://bsbi.org/in-your-area/local-botany/co-fermanagh/fermanagh-species-accounts/oxalis-acetosella-l"
+   ],
+   "certitude": "source",
+   "notes": "La RHS indique tous pH, mais à l'état sauvage elle est surtout fréquente en sol acide (BSBI)."
+  },
+  "Pachysandra terminalis": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "plante entière",
+   "indigene": "exotique",
+   "origine": "Japon, Chine",
+   "sources": [
+    "https://www.rhs.org.uk/plants/12099/pachysandra-terminalis-japanese-spurge/details"
+   ],
+   "certitude": "source",
+   "notes": "Sous-arbrisseau persistant ; tous sols sauf très secs (RHS)."
+  },
+  "Petasites hybridus": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "feuilles et rhizome (alcaloïdes pyrrolizidiniques)",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale",
+   "sources": [
+    "https://promessedefleurs.ie/perennials/perennials-a-to-z/petasites-hybridus.html",
+    "https://plantlust.com/plants/13410/petasites-hybridus/"
+   ],
+   "certitude": "source",
+   "notes": "Très envahissant par rhizomes ; préfère la mi-ombre où les feuilles restent plus fraîches."
+  },
+  "Ranunculus repens": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais à humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "toxique",
+   "toxicite_parties": "plante fraîche entière",
+   "indigene": "indigène en France",
+   "origine": "Eurasie, Afrique du Nord",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/all/ranunculus/",
+    "https://greencoverinitiative.com/wild-plants/ranunculus-repens-creeping-buttercup/"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Ficaria verna": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "plante fraîche entière",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale, Afrique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/337208/wd/details",
+    "https://temperate.theferns.info/plant/Ranunculus+ficaria"
+   ],
+   "certitude": "source",
+   "notes": "Éphémère printanière : la partie aérienne disparaît dès la fin du printemps."
+  },
+  "Narcissus pseudonarcissus": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "bulbe et plante entière",
+   "indigene": "indigène en France",
+   "origine": "Europe occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/11388/narcissus-pseudonarcissus-13/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Galanthus nivalis": {
+   "expo": "Mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "bulbe surtout",
+   "indigene": "indigène en France",
+   "origine": "Europe centrale et méridionale",
+   "sources": [
+    "https://taxref.mnhn.fr/taxref-web/taxa/99233"
+   ],
+   "certitude": "connaissance",
+   "notes": "TAXREF (INPN) confirme l'indigénat en métropole ; autres valeurs non sourcées."
+  },
+  "Hyacinthoides non-scripta": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "bulbe et plante entière",
+   "indigene": "indigène en France",
+   "origine": "Europe atlantique",
+   "sources": [
+    "https://www.rhs.org.uk/plants/8890/hyacinthoides-non-scripta/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Muscari armeniacum": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "bulbe",
+   "indigene": "exotique",
+   "origine": "Caucase, Turquie, Arménie",
+   "sources": [
+    "https://www.rhs.org.uk/plants/11247/muscari-armeniacum/details"
+   ],
+   "certitude": "source",
+   "notes": "Peut devenir envahissant (RHS)."
+  },
+  "Leucojum vernum": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais à humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "bulbe et plante entière",
+   "indigene": "indigène en France",
+   "origine": "Europe centrale et méridionale",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/leucojum-vernum/",
+    "https://rhs.org.uk/Plants/10012/Leucojum-vernum/Details"
+   ],
+   "certitude": "source",
+   "notes": "Sol constamment frais mais non détrempé."
+  },
+  "Fritillaria meleagris": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais à humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "bulbe",
+   "indigene": "indigène en France",
+   "origine": "Europe",
+   "sources": [
+    "https://www.rhs.org.uk/plants/7403/Fritillaria-meleagris/Details",
+    "https://www.nargs.org/plant-of-the-month/fritillaria-meleagris"
+   ],
+   "certitude": "source",
+   "notes": "Prairies humides en hiver, mieux drainées en été."
+  },
+  "Scilla siberica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "bulbe",
+   "indigene": "exotique",
+   "origine": "Russie méridionale, Caucase, Turquie",
+   "sources": [
+    "https://www.rhs.org.uk/plants/16868/scilla-siberica/details",
+    "https://www.rhs.org.uk/plants/scilla"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Silene dioica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe",
+   "sources": [
+    "https://www.rhs.org.uk/plants/17328/silene-dioeca/details"
+   ],
+   "certitude": "source",
+   "notes": "Indice du genre trompeur : espèce de mi-ombre et de sol frais, craint l'engorgement."
+  },
+  "Symphytum officinale": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais à humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "racines et feuilles en usage interne (alcaloïdes pyrrolizidiniques)",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/17886/wd/details",
+    "https://plants.ces.ncsu.edu/plants/symphytum-officinale/common-name/boneset/"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Thalictrum aquilegiifolium": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "plante fraîche",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie tempérée",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/thalictrum-aquilegiifolium/common-name/columbine-meadow-rue",
+    "https://www.rhs.org.uk/plants/347946/thalictrum-aquilegiifolium-white-cloud/details"
+   ],
+   "certitude": "source",
+   "notes": "Préfère la mi-ombre en climat chaud."
+  },
+  "Trifolium repens": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie, Afrique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/88720/wd/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Tussilago farfara": {
+   "expo": "Soleil",
+   "sol": "Tous sols",
+   "humidite": "Frais",
+   "ph": "Neutre à alcalin",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "feuilles et fleurs (alcaloïdes pyrrolizidiniques)",
+   "indigene": "indigène en France",
+   "origine": "Eurasie, Afrique du Nord",
+   "sources": [
+    "https://dnr.wisconsin.gov/sites/default/files/topic/Invasives/LR_Tussilago_farfara.pdf",
+    "https://www.nwcb.wa.gov/weeds/european-coltsfoot"
+   ],
+   "certitude": "source",
+   "notes": "Pionnière des sols argileux et marneux remaniés, souvent calcaires ; fleurit avant l'apparition des feuilles."
+  },
+  "Urtica dioica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "poils urticants (feuilles et tiges)",
+   "indigene": "indigène en France",
+   "origine": "Eurasie, Afrique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/18618/wd/details",
+    "https://fermanagh.bsbi.org/urtica-dioica-l"
+   ],
+   "certitude": "source",
+   "notes": "Indicatrice de sols riches en azote."
+  },
+  "Valeriana officinalis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais à humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie",
+   "sources": [
+    "https://www.rhs.org.uk/plants/18738/wd/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Viola odorata": {
+   "expo": "Mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Afrique du Nord, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/99231/viola-odorata-alba-vt/details",
+    "https://temperate.theferns.info/plant/Viola+odorata"
+   ],
+   "certitude": "source",
+   "notes": "RHS la dit semi-persistante ; feuilles présentes en hiver."
+  },
+  "Zantedeschia aethiopica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Détrempé ou vaseux",
+   "humidite": "Humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "plante entière (oxalates), irritante pour la peau",
+   "indigene": "exotique",
+   "origine": "Afrique du Sud",
+   "sources": [
+    "https://www.rhs.org.uk/plants/19190/zantedeschia-aethiopica/details",
+    "https://www.rhs.org.uk/plants/zantedeschia/growing-guide"
+   ],
+   "certitude": "source",
+   "notes": "Feuillage persistant en climat doux, disparaît l'hiver ailleurs ; peut se cultiver en bordure de bassin jusqu'à 30 cm d'eau."
+  },
+  "Asplenium scolopendrium": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais",
+   "ph": "Neutre à alcalin",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale, Afrique du Nord, Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/25910/asplenium-scolopendrium/details"
+   ],
+   "certitude": "source",
+   "notes": "Craint le soleil de midi ; tolère l'ombre sèche une fois installée."
+  },
+  "Pteridium aquilinum": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Léger, sableux",
+   "humidite": "Sec à frais",
+   "ph": "Acide",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "toute la plante, surtout crosses et rhizome (ptaquiloside, thiaminase)",
+   "indigene": "indigène en France",
+   "origine": "cosmopolite (régions tempérées et tropicales)",
+   "sources": [
+    "https://franco.wiki/fr/Pteridium_aquilinum.html",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10780724/"
+   ],
+   "certitude": "source",
+   "notes": "Indicatrice de sols acides et pauvres ; toxique pour le bétail et cancérigène, envahissante."
+  },
+  "Osmunda regalis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Afrique, Asie, Amériques",
+   "sources": [
+    "https://www.rhs.org.uk/plants/12001/osmunda-regalis/details"
+   ],
+   "certitude": "source",
+   "notes": "La RHS la dit tolérante à tous pH mais à l'état sauvage elle pousse surtout en sols acides tourbeux ; sol constamment humide indispensable."
+  },
+  "Matteuccia struthiopteris": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais à humide",
+   "ph": "Acide à neutre",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie, Amérique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/10920/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Indigène très rare en France (Vosges), protégée ; drageonnante."
+  },
+  "Blechnum spicant": {
+   "expo": "Mi-ombre à ombre",
+   "sol": "Humifère et frais",
+   "humidite": "Frais à humide",
+   "ph": "Acide à neutre",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Afrique du Nord, Asie, Amérique du Nord occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/2320/Blechnum-spicant/Details"
+   ],
+   "certitude": "source",
+   "notes": "Désormais nommée Struthiopteris spicant ; calcifuge."
+  },
+  "Polypodium vulgare": {
+   "expo": "Mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Eurasie",
+   "sources": [
+    "https://www.rhs.org.uk/plants/13464/polypodium-vulgare/details"
+   ],
+   "certitude": "source",
+   "notes": "Fougère des murs et rochers, tolère l'ombre sèche ; la RHS indique sol neutre à alcalin alors qu'elle pousse aussi sur roches acides."
+  },
+  "Agave americana": {
+   "expo": "Soleil",
+   "sol": "Pauvre, caillouteux, très drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "sève irritante pour la peau, feuilles",
+   "indigene": "naturalisée en France",
+   "origine": "Mexique",
+   "sources": [
+    "https://www.aixenprovence.fr/IMG/pdf/fiche_especes_11_-_l_agave_d_ame_rique.pdf"
+   ],
+   "certitude": "connaissance",
+   "notes": "Naturalisée sur le littoral méditerranéen ; extrémités des feuilles très piquantes. Statut d'exotique envahissante en France confirmé (fiche Aix-en-Provence) ; autres valeurs non sourcées."
+  },
+  "Opuntia ficus-indica": {
+   "expo": "Soleil",
+   "sol": "Pauvre, caillouteux, très drainé",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "naturalisée en France",
+   "origine": "Mexique",
+   "sources": [
+    "https://gd.eppo.int/taxon/OPUFI"
+   ],
+   "certitude": "connaissance",
+   "notes": "Fruits comestibles ; glochides (aiguillons fins) irritants à manipuler. EPPO : fréquemment naturalisée, envahissante en Corse ; autres valeurs non sourcées."
+  },
+  "Canna indica": {
+   "expo": "Soleil",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Amérique tropicale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/3001/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Rhizomes à rentrer hors gel dans les régions froides."
+  },
+  "Acorus calamus": {
+   "expo": "Soleil",
+   "sol": "Détrempé ou vaseux",
+   "humidite": "Aquatique",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "rhizome et feuilles (bêta-asarone, cancérigène)",
+   "indigene": "naturalisée en France",
+   "origine": "Asie",
+   "sources": [
+    "https://www.rhs.org.uk/plants/396/wd/details",
+    "https://gardenuat.rcp.ac.uk/viewPlant?plantId=28"
+   ],
+   "certitude": "source",
+   "notes": "Plante de berge en eau peu profonde (moins de 22 cm selon la RHS)."
+  },
+  "Butomus umbellatus": {
+   "expo": "Soleil",
+   "sol": "Détrempé ou vaseux",
+   "humidite": "Aquatique",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Eurasie",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/2567/wd/Details",
+    "https://www.rhsplants.co.uk/plants/_/butomus-umbellatus/classid.2000047983/"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Centaurea montana": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "montagnes d'Europe",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/3364/Centaurea-montana/Details"
+   ],
+   "certitude": "source",
+   "notes": "Indigène dans les montagnes françaises (Alpes, Jura, Vosges, Pyrénées) ; tolère la mi-ombre, contrairement à l'indice du genre."
+  },
+  "Buphthalmum salicifolium": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Neutre à alcalin",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe centrale et méridionale",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/28114/wd/Details"
+   ],
+   "certitude": "source",
+   "notes": "Espèce calcicole des pelouses et lisières montagnardes, résistante à la sécheresse."
+  },
+  "Aster amellus": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/92915/wd/Details"
+   ],
+   "certitude": "source",
+   "notes": "Calcicole à l'état sauvage (protégée dans plusieurs régions) mais tolère tous pH en culture selon la RHS."
+  },
+  "Celastrus orbiculatus": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "toxique",
+   "toxicite_parties": "fruits et graines",
+   "indigene": "exotique",
+   "origine": "Asie du Nord-Est",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/3307/Celastrus-orbiculatus/Details"
+   ],
+   "certitude": "source",
+   "notes": "Très vigoureuse, invasive en Amérique du Nord ; plantes dioïques sauf le groupe hermaphrodite."
+  },
+  "Muehlenbeckia complexa": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "semi-persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Nouvelle-Zélande",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/11221/wd/Details"
+   ],
+   "certitude": "source",
+   "notes": "Demande une exposition abritée des vents froids ; persistante en climat doux."
+  },
+  "Schisandra chinensis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Chine, Corée, Japon, Extrême-Orient russe",
+   "sources": [
+    "https://www.rhs.org.uk/plants/16803/schisandra-chinensis/details"
+   ],
+   "certitude": "source",
+   "notes": "Dioïque : un pied mâle et un pied femelle pour obtenir les baies comestibles."
+  },
+  "Solanum jasminoides": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Neutre à alcalin",
+   "feuillage": "semi-persistant",
+   "toxicite": "toxique",
+   "toxicite_parties": "baies et feuilles",
+   "indigene": "exotique",
+   "origine": "Brésil, Argentine, Paraguay",
+   "sources": [
+    "https://www.rhs.org.uk/plants/150759/wd/details",
+    "https://plants.ces.ncsu.edu/plants/solanum-laxum/"
+   ],
+   "certitude": "source",
+   "notes": "Nom actuel Solanum laxum ; rustique seulement en climat doux. pH corrigé : RHS indique sol neutre à légèrement alcalin ; NC State classe la plante comme toxique."
+  },
+  "Dioscorea communis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "toxique",
+   "toxicite_parties": "baies et rhizome",
+   "indigene": "indigène en France",
+   "origine": "Europe, Afrique du Nord, Asie occidentale",
+   "sources": [
+    "https://www.cap.chu-lille.fr/2021/01/05/tamier"
+   ],
+   "certitude": "source",
+   "notes": "Liane des haies et lisières, souvent à mi-ombre ; tiges aériennes annuelles sur gros tubercule."
+  },
+  "Bryonia dioica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Sec à frais",
+   "ph": "Neutre à alcalin",
+   "feuillage": "herbacée caduque",
+   "toxicite": "très toxique",
+   "toxicite_parties": "racine (tubercule) et baies",
+   "indigene": "indigène en France",
+   "origine": "Europe, Afrique du Nord, Asie occidentale",
+   "sources": [
+    "https://www.cap.chu-lille.fr/2021/01/26/bryone-dioique",
+    "https://dorsetnature.co.uk/pages-flower/wf-82.html"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Calystegia sepium": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais à humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "toute la plante, surtout racines (purgatives)",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie, régions tempérées",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/calystegia-sepium/common-name/binghams-false-bindweed",
+    "https://hortsense.cahnrs.wsu.edu/fact-sheet/weeds-hedge-bindweed-calystegia-sepium/"
+   ],
+   "certitude": "source",
+   "notes": "Adventice vivace des sols frais et riches (haies, berges)."
+  },
+  "Convolvulus arvensis": {
+   "expo": "Soleil",
+   "sol": "Tous sols",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "toute la plante, surtout racines (purgatives)",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie",
+   "sources": [
+    "https://www.maine.gov/DACF/php/gotpests/weeds/factsheets/morning-glory-usda.pdf",
+    "https://eorganic.org/node/35147"
+   ],
+   "certitude": "source",
+   "notes": "Adventice tenace à racines profondes."
+  },
+  "Smilax aspera": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Bassin méditerranéen, Afrique, Asie",
+   "sources": [
+    "https://temperate.theferns.info/plant/Smilax+aspera",
+    "https://floraveg.eu/factsheet/default/132202"
+   ],
+   "certitude": "source",
+   "notes": "Liane épineuse des garrigues et maquis méditerranéens."
+  },
+  "Briza media": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/2406/Briza-media/Details"
+   ],
+   "certitude": "source",
+   "notes": "Graminée des prairies maigres, préfère les sols pauvres."
+  },
+  "Dactylis glomerata": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie, Afrique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/5283/cock-s-foot/details",
+    "https://keys.lucidcentral.org/keys/v3/pastures/Html/Cocksfoot.htm"
+   ],
+   "certitude": "source",
+   "notes": "Pollen très allergisant. Sol corrigé : RHS indique sol fertile, frais mais drainé ; ne supporte pas les sols détrempés."
+  },
+  "Helictotrichon sempervirens": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Neutre à alcalin",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Alpes occidentales (France, Italie)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/8555/wd/details",
+    "https://taxref.mnhn.fr/taxref-web/taxa/83924"
+   ],
+   "certitude": "source",
+   "notes": "Indigène dans les Alpes du Sud françaises ; craint l'humidité hivernale."
+  },
+  "Koeleria glauca": {
+   "expo": "Soleil",
+   "sol": "Léger, sableux",
+   "humidite": "Sec",
+   "ph": "Neutre à alcalin",
+   "feuillage": "semi-persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe à Asie centrale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/9771/koeleria-glauca/details"
+   ],
+   "certitude": "source",
+   "notes": "Pelouses sableuses ; très rare à l'état sauvage en France ; tolère un peu d'acidité selon la RHS."
+  },
+  "Leymus arenarius": {
+   "expo": "Soleil",
+   "sol": "Léger, sableux",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "semi-persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe du Nord et côtes atlantiques",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/leymus-arenarius/common-name/european-dune-grass/",
+    "https://www.bethchatto.co.uk/a-z-plants/leymus-arenarius.htm"
+   ],
+   "certitude": "source",
+   "notes": "Graminée des dunes du littoral nord, très traçante, tolère le sel."
+  },
+  "Lolium perenne": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie, Afrique du Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/10423/lolium-perenne/details"
+   ],
+   "certitude": "source",
+   "notes": "Base des gazons ; pollen allergisant."
+  },
+  "Lagurus ovatus": {
+   "expo": "Soleil",
+   "sol": "Léger, sableux",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Bassin méditerranéen, côtes atlantiques",
+   "sources": [
+    "https://www.rhs.org.uk/plants/105691/wd/details",
+    "https://plants.ces.ncsu.edu/plants/lagurus-ovatus/common-name/harestail-grass/"
+   ],
+   "certitude": "source",
+   "notes": "Graminée annuelle des sables littoraux."
+  },
+  "Phalaris arundinacea": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Détrempé ou vaseux",
+   "humidite": "Humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "régions tempérées de l'hémisphère Nord",
+   "sources": [
+    "https://www.rhs.org.uk/plants/12619/wd/details",
+    "https://upick.beefresearch.ca/forages/reed-canarygrass/"
+   ],
+   "certitude": "source",
+   "notes": "Très traçante ; la forme panachée 'Picta' est la plus cultivée."
+  },
+  "Poa pratensis": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Eurasie",
+   "sources": [
+    "https://plants.usda.gov/DocumentLibrary/factsheet/pdf/fs_popr.pdf"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Pseudosasa japonica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Japon, Corée",
+   "sources": [
+    "https://www.rhs.org.uk/plants/14080/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Bambou cespiteux pouvant devenir traçant en conditions favorables."
+  },
+  "Holcus lanatus": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Tous sols",
+   "humidite": "Frais à humide",
+   "ph": "Acide à neutre",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale, Afrique du Nord",
+   "sources": [
+    "https://ahdb.org.uk/knowledge-library/distribution-and-biology-of-yorkshire-fog-weeds-in-the-uk",
+    "https://www.gardenorganic.org.uk/expert-advice/garden-management/weeds/weed-datasheets/yorkshire-fog"
+   ],
+   "certitude": "source",
+   "notes": "Humidité et pH corrigés : AHDB/Garden Organic indiquent sols frais à humides, faiblement acides (pH 5-7)."
+  },
+  "Schoenoplectus lacustris": {
+   "expo": "Soleil",
+   "sol": "Détrempé ou vaseux",
+   "humidite": "Aquatique",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "quasi cosmopolite",
+   "sources": [
+    "https://www.rhs.org.uk/plants/62982/schoenoplectus-lacustris/details",
+    "https://plants.ces.ncsu.edu/plants/schoenoplectus-lacustris/"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Cyperus longus": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Détrempé ou vaseux",
+   "humidite": "Humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Afrique, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/5205/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Plante de berge (jusqu'à 30 cm d'eau), traçante ; la RHS la dit persistante mais le feuillage brunit en hiver froid."
+  },
+  "Anthoxanthum odoratum": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Frais",
+   "ph": "Acide à neutre",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Eurasie",
+   "sources": [
+    "https://www.rhs.org.uk/plants/1344/wd/details",
+    "https://temperate.theferns.info/plant/Anthoxanthum+odoratum"
+   ],
+   "certitude": "source",
+   "notes": "Odeur de coumarine (foin coupé) ; préfère les sols acides."
+  },
+  "Arrhenatherum elatius": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale, Afrique du Nord",
+   "sources": [
+    "https://ecocrop.apps.fao.org/ecocrop/srv/en/dataSheet?id=3387",
+    "https://www.infoflora.ch/en/flora/arrhenatherum-elatius.html"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Bromus erectus": {
+   "expo": "Soleil",
+   "sol": "Pauvre, caillouteux, très drainé",
+   "humidite": "Sec",
+   "ph": "Neutre à alcalin",
+   "feuillage": "herbacée persistante",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Afrique du Nord, Asie occidentale",
+   "sources": [
+    "https://bsbi.org/taxa/2cd4p9h.f2w/bromopsis-erecta"
+   ],
+   "certitude": "source",
+   "notes": "Graminée typique des pelouses calcaires sèches."
+  },
+  "Cynodon dactylon": {
+   "expo": "Soleil",
+   "sol": "Léger, sableux",
+   "humidite": "Sec",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "régions chaudes de l'Ancien Monde",
+   "sources": [
+    "https://inpn.mnhn.fr/espece/listeEspeces/Cynodon%20dactylon?lg=en",
+    "https://taxref.mnhn.fr/taxref-web/taxa/94997"
+   ],
+   "certitude": "source",
+   "notes": "Jaunit en hiver (dormance) ; très traçant et résistant à la sécheresse."
+  },
+  "Tilia × euchlora": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Crimée, Caucase",
+   "sources": [
+    "https://www.rhs.org.uk/plants/92313/tilia-x-euchlora/details"
+   ],
+   "certitude": "source",
+   "notes": "Peu attaqué par les pucerons, donc pas de miellat : apprécié en alignement."
+  },
+  "Ulmus × hollandica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe (hybride naturel U. glabra × U. minor)",
+   "sources": [
+    "https://worldplants.ca/display.php?id=3995"
+   ],
+   "certitude": "source",
+   "notes": "Sensible à la graphiose."
+  },
+  "Jacaranda mimosifolia": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "semi-persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Argentine, Bolivie",
+   "sources": [
+    "https://www.rhs.org.uk/plants/9429/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Gélif (H1C) : seulement en climat méditerranéen très doux."
+  },
+  "Erythrina crista-galli": {
+   "expo": "Soleil",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "caduc",
+   "toxicite": "toxique",
+   "toxicite_parties": "graines et écorce",
+   "indigene": "exotique",
+   "origine": "Amérique du Sud (Argentine, Uruguay, Brésil)",
+   "sources": [
+    "https://www.rhs.org.uk/Plants/32582/wd/Details",
+    "https://plantpono.org/pono-plants/erythrina-crista-galli/"
+   ],
+   "certitude": "source",
+   "notes": "Rabattue par le gel, repart de la souche sous paillage épais."
+  },
+  "Taxus × media": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "très toxique",
+   "toxicite_parties": "toute la plante sauf l'arille rouge (graines, feuilles)",
+   "indigene": "exotique",
+   "origine": "hybride horticole (T. baccata × T. cuspidata)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/518671/taxus-x-media-groenland/details",
+    "https://www.rhs.org.uk/plants/93746/taxus-x-media-hicksii-f/details"
+   ],
+   "certitude": "source",
+   "notes": "Tolère aussi l'ombre dense ; craint l'excès d'eau."
+  },
+  "Ligustrum japonicum": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Tous sols",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "toxique",
+   "toxicite_parties": "baies et feuilles",
+   "indigene": "exotique",
+   "origine": "Japon, Corée, Chine",
+   "sources": [
+    "https://www.rhs.org.uk/plants/77548/ligustrum-japonicum/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Viburnum × burkwoodii": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Frais et drainé",
+   "humidite": "Frais",
+   "ph": "Tous pH",
+   "feuillage": "semi-persistant",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "baies",
+   "indigene": "exotique",
+   "origine": "hybride horticole (V. carlesii × V. utile)",
+   "sources": [
+    "https://www.rhs.org.uk/plants/91671/viburnum-x-burkwoodii/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Polygala myrtifolia": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Afrique du Sud",
+   "sources": [
+    "https://gardenersworld.com/plants/polygala-myrtifolia-var-grandiflora",
+    "https://www.rhs.org.uk/Plants/56000/Polygala-x-dalmaisiana/Details"
+   ],
+   "certitude": "source",
+   "notes": "Peu rustique : réservé aux régions littorales douces ou à la culture en pot."
+  },
+  "Salvia microphylla": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "semi-persistant",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "exotique",
+   "origine": "Mexique, sud-ouest des États-Unis",
+   "sources": [
+    "https://www.rhs.org.uk/plants/16349/wd/details"
+   ],
+   "certitude": "source",
+   "notes": "Craint l'humidité hivernale."
+  },
+  "Knautia arvensis": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Neutre à alcalin",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/9742/wd/details",
+    "https://www.rhs.org.uk/plants/knautia"
+   ],
+   "certitude": "source",
+   "notes": "pH corrigé : RHS indique sol neutre à alcalin (calcaire), plein soleil, drainé."
+  },
+  "Lychnis flos-cuculi": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Riche et frais",
+   "humidite": "Frais à humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Caucase, Russie",
+   "sources": [
+    "https://rhs.org.uk/plants/10605/lychnis-flos-cuculi/details"
+   ],
+   "certitude": "source",
+   "notes": "Indice du genre trompeur : plante des prairies humides, pas des sols secs ; nom actuel Silene flos-cuculi."
+  },
+  "Lotus corniculatus": {
+   "expo": "Soleil",
+   "sol": "Tous sols",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "peu toxique",
+   "toxicite_parties": "parties aériennes (hétérosides cyanogènes)",
+   "indigene": "indigène en France",
+   "origine": "Eurasie, Afrique du Nord",
+   "sources": [
+    "https://bsbi.org/in-your-area/local-botany/co-fermanagh/fermanagh-species-accounts/lotus-corniculatus-l",
+    "https://www.canada.ca/en/health-canada/services/chemical-substances/fact-sheets/chemicals-glance/lotus-corniculatus-extract.html"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Malva sylvestris": {
+   "expo": "Soleil",
+   "sol": "Drainé",
+   "humidite": "Sec à frais",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Afrique du Nord, Asie",
+   "sources": [
+    "https://www.rhs.org.uk/plants/10799/malva-sylvestris/details"
+   ],
+   "certitude": "source",
+   "notes": ""
+  },
+  "Mentha aquatica": {
+   "expo": "Soleil à mi-ombre",
+   "sol": "Détrempé ou vaseux",
+   "humidite": "Humide",
+   "ph": "Tous pH",
+   "feuillage": "herbacée caduque",
+   "toxicite": "non toxique",
+   "toxicite_parties": "",
+   "indigene": "indigène en France",
+   "origine": "Europe, Afrique, Asie occidentale",
+   "sources": [
+    "https://www.rhs.org.uk/plants/75995/wd/details",
+    "https://www.waitrosegarden.com/plants/_/mentha-aquatica/classid.2000045747/"
+   ],
+   "certitude": "source",
+   "notes": "Plante de berge, supporte quelques centimètres d'eau."
+  }
+ }
+}

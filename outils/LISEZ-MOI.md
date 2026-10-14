@@ -27,6 +27,8 @@ Les contrôles des comptes demandent en plus `npm i -g @electric-sql/pglite @sup
 | `controle_supabase_sql.js` | Comptes : exécute `supabase/schema.sql` sur une vraie base PostgreSQL embarquée (PGlite) ; parcours complet et règles de sécurité. |
 | `controle_mesures.js` | Mesures d'usage anonymes de bout en bout (faux Supabase) : visite, écrans ouverts, session, réussite par photo, photo signalée, erreur, réglages, base pas à jour. |
 | `controle_defi.js [dossier]` | Défi du jour : même série sur deux appareils, questions et photo imposées, reprise après rechargement, résultat, partage, pas de seconde partie, progression sans acquisition, classement du profil. Avec un dossier : captures. |
+| `controle_milieux.js` | Chaque espèce a son propre milieu dans le vocabulaire de l'appli ; `donnees/milieux-especes.json` (sourcé) est bien reporté par `outils/milieux_vers_appli.py`. |
+| `controle_anecdotes.js` | Phrases « À découvrir » corrigées reportées ; curiosités sourcées affichées dans la fiche à la suite de « À découvrir », avec leur source, jamais celles en réserve ; aucune ne nomme sa plante. Données : `donnees/anecdotes-especes.json`, reportées par `outils/anecdotes_vers_appli.py`. |
 | `controle_coulisses.js [dossier]` | Page `coulisses.html` : connexion, accès réservé aux administrateurs, chiffres sur données d'exemple, périodes, téléphone et ordinateur, thème sombre. Avec un dossier : captures. |
 | `controle_comptes.js [fichier] [dossier]` | Comptes de bout en bout : vraie bibliothèque supabase-js, faux Supabase local (`supabase/faux_supabase.js`), deux appareils, amis, tableau du jour, reprise de la progression. |
 | `simulation_memoire.js [jours] [graines]` | Simulation de progression avec le vrai code de l'appli (étape 6). |
