@@ -55,7 +55,7 @@ const svg=n=>`<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><
   const res=await p.evaluate(()=>({s:$('dfr').querySelector('.dfs b').textContent,g:$('dfr').querySelectorAll('.dfg i').length,o:$('dfr').querySelectorAll('.dfg i.o').length,l:$('dfr').querySelectorAll('.dfv li').length,qc:$('qc').hidden}));
   ok(res.s==='7'&&res.g===10&&res.o===7&&res.l===10&&res.qc,'résultat : 7 / 10, grille de 10 cases, 10 plantes à revoir '+JSON.stringify(res));
   if(CAPT)await p.screenshot({path:path.join(CAPT,'defi-3-resultat.png'),fullPage:true});
-  ok(await p.evaluate(()=>!$('dfr').querySelector('.tbl,[data-cv]')&&/Crée un compte/.test($('dfr').textContent)),'fin du défi : aucun classement affiché (ils restent dans le profil), invitation à créer un compte');
+  ok(await p.evaluate(()=>!$('dfr').querySelector('.tbl,[data-cv]')&&/Crée un compte/.test($('dfr').textContent)),'fin du défi sans compte : pas de classement, invitation à créer un compte');
   await p.click('#df-pa');await p.waitForTimeout(200);
   const txt=await p.evaluate(()=>window.__copie);
   ok(/Défi du \d+ \S+/.test(txt)&&txt.includes('🟩🟥🟩🟩🟥🟩🟩🟩🟥🟩 7/10')&&!/Quercus|[A-Z][a-z]+ [a-z]+ \(/.test(txt.split('\n')[1]),'partage : date, grille et score, sans le nom des plantes');
@@ -79,7 +79,7 @@ const svg=n=>`<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><
   ok(JSON.stringify(cl.rangs)===JSON.stringify(['1 Lucie 9','2 moi 7','2 Paul 7','· Marco –'])&&cl.grille===3,'classement du défi : par score, ex æquo au même rang, « pas encore joué » en bas '+JSON.stringify(cl.rangs));
   ok(cl.perA&&cl.selA==='true','profil : « Assiduité » garde aujourd\'hui, semaine et mois');
   if(CAPT){await p.evaluate(async()=>{const c=await (sbVue='',sbCl());const d=document.createElement('div');d.className='card';d.style.cssText='position:fixed;inset:60px 12px auto;z-index:999';d.innerHTML=c.h;document.body.append(d)});await p.screenshot({path:path.join(CAPT,'defi-4-classement.png')})}
-  ok(await p.evaluate(async()=>{await dfResultat();const b=$('df-vc');const r=!!b&&!$('dfr').querySelector('.tbl,[data-cv]');$('df-ret').click();return r}),'avec un compte : bouton « Voir le classement de mes amis » vers le profil, pas de classement sur le résultat');
+  ok(await p.evaluate(async()=>{await dfResultat();const c=$('df-cl'),r=!!c&&c.querySelectorAll('.tbl li').length===4&&/Lucie/.test(c.textContent)&&!$('dfr').querySelector('[data-cv],[data-per]');$('df-ret').click();return r}),'avec un compte : classement du défi du jour seulement (ni Assiduité, ni périodes)');
   await p.waitForTimeout(400);
   const jeu=await p.evaluate(()=>window.__jk);
   ok(jeu.length&&jeu.some(k=>k.endsWith('|defi')),'statistiques de jeu : réponses notées en mode « defi »');
