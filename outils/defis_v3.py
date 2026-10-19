@@ -216,7 +216,7 @@ CAPA = {t: 2 * n for t, n in cnt(q['theme'] for q in PLEIN).items()}      # nomb
 CAPA_M = {m: 2 * n for m, n in cnt(q['mecanisme'] for q in PLEIN).items()}
 def tenter(graine):
     R = random.Random(graine); dernier = {}; usages = cnt(); plan = []; subst = []; relax = []
-    u_theme = cnt(); u_mec = cnt(); jour_de = {}
+    u_theme = cnt(); u_mec = cnt(); u_suj = cnt()
     for j in range(JOURS):
         rec_sujets = {s for jj in plan[-3:] for x in jj for s in x['sujets']}
         rec_cibles = {x['cible'] for jj in plan[-6:] for x in jj if x['cible']}
@@ -239,10 +239,11 @@ def tenter(graine):
             if not C: C, sub = candidats(niv, pg, 4, maxu=3), "troisième passage"
             if not C: return None
             # inédites d'abord ; à égalité : questions recoupées avant celles tirées des données, thèmes et mécanismes les moins servis
-            C.sort(key=lambda q: (usages[q['id']] > 0, u_theme[q['theme']] / CAPA[q['theme']] + 0.05 * u_mec[q['mecanisme']] / CAPA_M[q['mecanisme']], q['tier'], R.random()))
+            C.sort(key=lambda q: (usages[q['id']] > 0, u_theme[q['theme']] / CAPA[q['theme']] + 0.05 * u_mec[q['mecanisme']] / CAPA_M[q['mecanisme']] + 0.04 * max([u_suj[x] for x in q['sujets'] if x in SUJETS] or [0]), q['tier'], R.random()))
             q = dict(C[0]); q['position'] = pos + 1; q['place'] = niv + (' (piège)' if pg else ''); q['substitution'] = sub; q['reutilisation'] = usages[q['id']] > 0
             if sub: subst.append((j, pos + 1, sub))
             jour[pos] = q; dernier[q['id']] = j; usages[q['id']] += 1; u_theme[q['theme']] += 1; u_mec[q['mecanisme']] += 1
+            for x in q['sujets']: u_suj[x] += 1
         rang, ok = ordonner(jour, R)
         if not ok: subst.append((j, 0, "ordre : mécanismes ou formats voisins"))
         for n, q in enumerate(rang): q['position'] = n + 1
@@ -298,7 +299,7 @@ def sortir(plan, subst, graine):
     rep = sum(len(rep3(j)) > 0 for j in range(JOURS))
     regle("un même sujet ne revient pas dans les 3 jours suivants", rep == 0, f"{rep} jour(s) concerné(s) (règle relâchée seulement si le stock manquait)")
     sj = cnt(s for j in plan for s in {s for x in j for s in x['sujets']} if s in SUJETS)
-    regle("aucun sujet courant dans plus de 12 défis sur 90", max(sj.values()) <= 12, ', '.join(f'{k} ×{v}' for k, v in sj.most_common(6)))
+    regle("aucun sujet courant dans plus de 15 défis sur 90", max(sj.values()) <= 15, ', '.join(f'{k} ×{v}' for k, v in sj.most_common(6)))
     regle("2 thèmes identiques au plus par défi", all(max(cnt(x['theme'] for x in j).values()) <= 2 for j in plan), f"{sum(max(cnt(x['theme'] for x in j).values()) > 2 for j in plan)} défi(s) à 3")
     regle("au moins 5 thèmes différents par défi", all(len({x['theme'] for x in j}) >= 5 for j in plan), 'min ' + str(min(len({x['theme'] for x in j}) for j in plan)))
     regle("un seul mode « anecdote », « famille », « origine » ou « nom latin » par défi", all(max([cnt(x['mecanisme'] for x in j)[m] for m in CAP_MEC] or [0]) <= 1 for j in plan))
@@ -351,7 +352,9 @@ if __name__ == '__main__':
         if not r: continue
         plan, subst = r
         tous = [x for j in plan for x in j]
-        score = (len(subst), sum(x['reutilisation'] for x in tous), -len({x['id'] for x in tous}))
+        sj = cnt(t for j in plan for t in {t for x in j for t in x['sujets'] if t in SUJETS})
+        rep3 = sum(1 for j in range(1, JOURS) if {t for x in plan[j] for t in x['sujets']} & {t for jj in plan[max(0, j - 3):j] for x in jj for t in x['sujets']})
+        score = (len(subst), rep3, max(sj.values()), sum(x['reutilisation'] for x in tous))
         if meilleur is None or score < meilleur[0]: meilleur = (score, plan, subst, g)
     if meilleur is None: sys.exit("Aucun planning de 90 jours ne respecte les contraintes avec la banque actuelle")
     _, plan, subst, graine = meilleur

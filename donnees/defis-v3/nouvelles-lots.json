@@ -7234,6 +7234,912 @@
     "note": "connaissance de base (cynorrhodon, akènes velus).",
     "sources_recoupement": []
    }
+  },
+  {
+   "id": "NU00",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quelle couleur la gaude, ou réséda des teinturiers, donnait-elle aux étoffes de soie ?",
+   "choix": [
+    "Un bleu indigo",
+    "Un rouge vif",
+    "Un jaune solide",
+    "Un violet pourpre"
+   ],
+   "bonne": 2,
+   "explication": "La gaude (Reseda luteola), riche en lutéoline, donnait un jaune très solide ; associée au pastel bleu, elle servait aussi à obtenir des verts.",
+   "sources": [
+    "https://www.techno-science.net/fr/definitions/gaude"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (techno-science, résultats concordants sur le jaune lutéoline et l'usage sur soie).",
+    "sources_recoupement": [
+     "https://www.techno-science.net/fr/definitions/gaude"
+    ]
+   }
+  },
+  {
+   "id": "NU01",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quelle teinte donne le brou de noix, enveloppe verte du fruit du noyer, utilisé pour teinter le bois ?",
+   "choix": [
+    "Un brun chaud",
+    "Un bleu pâle",
+    "Un rose tendre",
+    "Un vert vif"
+   ],
+   "bonne": 0,
+   "explication": "Le brou du noyer (Juglans regia), riche en juglone et tanins, s'oxyde à l'air et brunit : on l'emploie comme teinture brune du bois, de la laine et comme encre.",
+   "sources": [
+    "https://franco.wiki/fr/Brou_de_noix.html"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (plusieurs fiches : juglone, tanins, teinture brune).",
+    "sources_recoupement": [
+     "https://franco.wiki/fr/Brou_de_noix.html"
+    ]
+   }
+  },
+  {
+   "id": "NU02",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quel bois, riche en tanins et très durable au contact du sol, sert traditionnellement à faire des piquets de vigne et de clôture ?",
+   "choix": [
+    "Le hêtre",
+    "Le peuplier",
+    "Le tilleul",
+    "Le châtaignier"
+   ],
+   "bonne": 3,
+   "explication": "Le bois de châtaignier (Castanea sativa), imputrescible grâce à ses tanins, fournit depuis longtemps échalas, piquets et merrains, notamment en vignoble.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NU03",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Les brins souples utilisés en vannerie sous le nom d'osier proviennent de quel arbre ou arbuste ?",
+   "choix": [
+    "Du tilleul",
+    "Du saule",
+    "De l'aulne",
+    "Du peuplier"
+   ],
+   "bonne": 1,
+   "explication": "L'osier désigne les jeunes rameaux souples de certains saules (Salix viminalis, S. purpurea), recépés chaque année pour produire des brins longs et droits.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NU04",
+   "theme": "Usages et histoire",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "Le nom latin du robinier, Robinia, rend hommage à quel personnage ?",
+   "choix": [
+    "Nicolas Robert, peintre de fleurs de Louis XIV",
+    "Robert Brown, botaniste écossais",
+    "Jean Robin, arboriste d'Henri IV",
+    "Pierre Belon, naturaliste du XVIe siècle"
+   ],
+   "bonne": 2,
+   "explication": "Linné a nommé le genre Robinia d'après Jean Robin, qui planta à Paris en 1601 le robinier du square Viviani, aujourd'hui considéré comme le plus vieil arbre de la ville.",
+   "sources": [
+    "https://www.paris.fr/pages/si-le-plus-vieil-arbre-de-paris-le-robinier-du-square-viviani-nous-contait-son-histoire-6586"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (paris.fr et Paris Zigzag concordent ; 1601 ou 1602 selon les sources).",
+    "sources_recoupement": [
+     "https://www.paris.fr/pages/si-le-plus-vieil-arbre-de-paris-le-robinier-du-square-viviani-nous-contait-son-histoire-6586"
+    ]
+   }
+  },
+  {
+   "id": "NU05",
+   "theme": "Usages et histoire",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "Arrivé d'Amérique du Nord en Europe au XVIe siècle, le tournesol y a d'abord été cultivé surtout comme...",
+   "choix": [
+    "plante ornementale",
+    "plante fourragère",
+    "plante textile",
+    "plante oléagineuse"
+   ],
+   "bonne": 0,
+   "explication": "Introduit par les Espagnols au XVIe siècle, le tournesol resta longtemps ornemental ; son essor comme oléagineux date surtout du XIXe siècle, en Russie.",
+   "sources": [
+    "https://www.larousse.fr/encyclopedie/divers/tournesol/82742",
+    "https://fr.wiktionary.org/wiki/tournesol"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (Larousse : introduction XVIe s. ; Wiktionnaire : usage ornemental d'abord).",
+    "sources_recoupement": [
+     "https://www.larousse.fr/encyclopedie/divers/tournesol/82742",
+     "https://fr.wiktionary.org/wiki/tournesol"
+    ]
+   }
+  },
+  {
+   "id": "NU06",
+   "theme": "Usages et histoire",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Le « miel d'acacia » vendu en France est produit à partir des fleurs de quel arbre ?",
+   "choix": [
+    "Du mimosa d'hiver",
+    "Du cytise commun",
+    "De l'acacia gommier",
+    "Du robinier faux-acacia"
+   ],
+   "bonne": 3,
+   "explication": "Le « miel d'acacia » provient du robinier faux-acacia (Robinia pseudoacacia), arbre nord-américain naturalisé ; les vrais acacias (Acacia) sont d'autres plantes.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NU07",
+   "theme": "Usages et histoire",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quel arbre au bois dense et élastique fournissait traditionnellement les arcs de guerre du Moyen Âge ?",
+   "choix": [
+    "Le tilleul",
+    "L'if",
+    "Le peuplier",
+    "Le hêtre"
+   ],
+   "bonne": 1,
+   "explication": "Le bois d'if (Taxus baccata), à la fois dur et élastique, était le bois d'arc par excellence. Attention : l'arbre est très toxique, à l'exception de l'arille rouge.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NU08",
+   "theme": "Usages et histoire",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Les « baies » de genièvre, épice du gibier et de la choucroute, sont botaniquement...",
+   "choix": [
+    "de vraies baies à pépins",
+    "des drupes à gros noyau",
+    "des cônes charnus, ou galbules",
+    "des akènes très sucrés"
+   ],
+   "bonne": 2,
+   "explication": "Le genévrier (Juniperus communis) est un conifère : ses « baies » sont des cônes devenus charnus (galbules), qui mettent deux à trois ans à mûrir.",
+   "sources": [
+    "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/resineux/le-genevrier-commun-juniperus-communis",
+    "https://franco.wiki/fr/Genévrier.html"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (waldwissen, franco.wiki : galbules, cônes charnus, maturation 2-3 ans).",
+    "sources_recoupement": [
+     "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/resineux/le-genevrier-commun-juniperus-communis",
+     "https://franco.wiki/fr/Genévrier.html"
+    ]
+   }
+  },
+  {
+   "id": "NU09",
+   "theme": "Usages et histoire",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "D'où le marronnier d'Inde, introduit à Paris au début du XVIIe siècle, est-il originaire ?",
+   "choix": [
+    "Des Balkans",
+    "De l'Inde",
+    "De Chine",
+    "D'Amérique du Nord"
+   ],
+   "bonne": 0,
+   "explication": "Malgré son nom, Aesculus hippocastanum vient des Balkans ; il serait arrivé de Constantinople en Europe au XVIe siècle, à Paris vers 1612-1615.",
+   "sources": [
+    "https://www.humanite-biodiversite.fr/articles/119550-le-marronnier-d-inde-aesculus-hippocastanum",
+    "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/feuillus/le-marronnier-aesculus-hippocastanum"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (origine balkanique concordante ; date parisienne 1612 ou 1615 selon les sources, non utilisée dans la question).",
+    "sources_recoupement": [
+     "https://www.humanite-biodiversite.fr/articles/119550-le-marronnier-d-inde-aesculus-hippocastanum",
+     "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/feuillus/le-marronnier-aesculus-hippocastanum"
+    ]
+   }
+  },
+  {
+   "id": "NU10",
+   "theme": "Usages et histoire",
+   "niveau": "difficile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Pourquoi le safran (Crocus sativus) ne se multiplie-t-il que par division de ses cormes et jamais par semis ?",
+   "choix": [
+    "Ses graines exigent dix ans de froid",
+    "Ses fleurs sont toutes strictement mâles",
+    "Aucun insecte ne le visite en France",
+    "C'est une espèce triploïde et stérile"
+   ],
+   "bonne": 3,
+   "explication": "Le safran est triploïde (3x = 24) et stérile : il ne produit pas de graines viables et se propage par cormes filles. Les stigmates récoltés fournissent l'épice.",
+   "sources": [
+    "https://agris.fao.org/search/ar/records/685179b6aab9439e79fcd0cb"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (étude agris : triploïde stérile, multiplication par cormes ; autres sources concordantes).",
+    "sources_recoupement": [
+     "https://agris.fao.org/search/ar/records/685179b6aab9439e79fcd0cb"
+    ]
+   }
+  },
+  {
+   "id": "NU11",
+   "theme": "Usages et histoire",
+   "niveau": "difficile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Le génépi des Alpes, liqueur de montagne, est préparé à partir de petites plantes de quel genre ?",
+   "choix": [
+    "Gentiana (gentianes)",
+    "Artemisia (armoises alpines)",
+    "Juniperus (genévriers)",
+    "Leontopodium (edelweiss)"
+   ],
+   "bonne": 1,
+   "explication": "Le génépi vient d'armoises alpines (Artemisia genipi, A. umbelliformis, A. glacialis) des éboulis d'altitude, à ne pas confondre avec la gentiane.",
+   "sources": [
+    "https://geonature2.vanoise-parcnational.fr/geonature/api/media/taxhub/84053_44_Artemisia_umbelliformis.pdf",
+    "https://info.agriculture.gouv.fr/boagri/document_administratif-858983f7-0cc9-48c3-b5ae-672d9700bd78/telechargement"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (fiche Parc de la Vanoise et cahier des charges ministériel : genre Artemisia).",
+    "sources_recoupement": [
+     "https://geonature2.vanoise-parcnational.fr/geonature/api/media/taxhub/84053_44_Artemisia_umbelliformis.pdf",
+     "https://info.agriculture.gouv.fr/boagri/document_administratif-858983f7-0cc9-48c3-b5ae-672d9700bd78/telechargement"
+    ]
+   }
+  },
+  {
+   "id": "NU12",
+   "theme": "Usages et histoire",
+   "niveau": "difficile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Le platane commun des routes (Platanus × hispanica) est classiquement considéré comme...",
+   "choix": [
+    "une espèce native des Pyrénées",
+    "une variété du platane d'Orient seul",
+    "un hybride du platane d'Orient et du platane d'Amérique",
+    "un hybride de platane et d'érable"
+   ],
+   "bonne": 2,
+   "explication": "Le platane commun est un hybride fertile, apparu en Europe aux XVIIe-XVIIIe siècles, entre le platane d'Orient et celui d'Amérique (parenté américaine discutée récemment).",
+   "sources": [
+    "https://www.techno-science.net/fr/definitions/platane-commun"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "une source ou détail à relire",
+    "note": "Recoupé par recherche web (techno-science, fiche Saint-Cyr, Carnets botaniques 2024 qui nuance le parent américain).",
+    "sources_recoupement": [
+     "https://www.techno-science.net/fr/definitions/platane-commun"
+    ]
+   }
+  },
+  {
+   "id": "NU13",
+   "theme": "Usages et histoire",
+   "niveau": "difficile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quelle partie de l'iris de Florence (Iris pallida) est séchée pendant des années avant de fournir le « beurre d'iris » des parfumeurs ?",
+   "choix": [
+    "Le rhizome",
+    "Les pétales",
+    "Les graines",
+    "Les feuilles"
+   ],
+   "bonne": 0,
+   "explication": "Le beurre d'iris est extrait de rhizomes de l'Iris pallida, récoltés après plusieurs années de culture puis séchés et vieillis deux à trois ans ; la Toscane est la zone phare.",
+   "sources": [
+    "https://premierepeau.com/fr/pages/glossary-terms/iris-butter"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (plusieurs pages parfumerie concordantes sur le rhizome ; durées variables, donc non chiffrées dans la question).",
+    "sources_recoupement": [
+     "https://premierepeau.com/fr/pages/glossary-terms/iris-butter"
+    ]
+   }
+  },
+  {
+   "id": "NU14",
+   "theme": "Saisons",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quel arbuste originaire de Chine, aux fleurs jaune cireux très parfumées, fleurit en plein hiver sur ses rameaux nus ?",
+   "choix": [
+    "Le seringat",
+    "Le deutzia",
+    "Le weigela",
+    "Le chimonanthe"
+   ],
+   "bonne": 3,
+   "explication": "Le chimonanthe précoce (Chimonanthus praecox), dit « jasmin d'hiver », fleurit de décembre à mars et parfume le jardin même par temps froid.",
+   "sources": [
+    "https://www.gerbeaud.com/jardin/fiches/chimonanthe-odorant.php"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (fiches concordantes sur origine chinoise, floraison hivernale parfumée).",
+    "sources_recoupement": [
+     "https://www.gerbeaud.com/jardin/fiches/chimonanthe-odorant.php"
+    ]
+   }
+  },
+  {
+   "id": "NU15",
+   "theme": "Saisons",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "À quelle saison fleurit principalement le cyclamen de Naples (Cyclamen hederifolium) ?",
+   "choix": [
+    "Au printemps",
+    "En automne",
+    "En été",
+    "À la fin de l'hiver"
+   ],
+   "bonne": 1,
+   "explication": "Le cyclamen de Naples fleurit de la fin de l'été à novembre, souvent avant ses feuilles marbrées ; c'est le cyclamen coum qui fleurit plutôt en fin d'hiver.",
+   "sources": [
+    "https://www.immobilier.ch/fr/actualite/les-cyclamens-incontournables-de-l-automne-6964"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (floraison septembre-novembre ; Truffaut aoûtoctobre).",
+    "sources_recoupement": [
+     "https://www.immobilier.ch/fr/actualite/les-cyclamens-incontournables-de-l-automne-6964"
+    ]
+   }
+  },
+  {
+   "id": "NU16",
+   "theme": "Saisons",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quel arbuste de jardin porte en plein hiver des fleurs en fins rubans jaune orangé ou cuivrés ?",
+   "choix": [
+    "Le sureau",
+    "Le fusain",
+    "L'hamamélis",
+    "Le cornouiller"
+   ],
+   "bonne": 2,
+   "explication": "L'hamamélis (Hamamelis × intermedia) fleurit de janvier à mars, parfois dès fin décembre, ses pétales étroits en lanières sortant avant les feuilles.",
+   "sources": [
+    "https://www.jardiner-malin.fr/fiche/hamamelis.html"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (plusieurs fiches : pétales en rubans, janvier-mars).",
+    "sources_recoupement": [
+     "https://www.jardiner-malin.fr/fiche/hamamelis.html"
+    ]
+   }
+  },
+  {
+   "id": "NU18",
+   "theme": "Saisons",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Quelle forme du lierre grimpant produit les ombelles de fleurs d'octobre, précieuses pour les insectes d'arrière-saison ?",
+   "choix": [
+    "Les jeunes tiges rampant au sol",
+    "Les tiges juvéniles collées aux murs",
+    "Toutes les tiges, dès la deuxième année",
+    "La forme adulte arborescente, sans crampons"
+   ],
+   "bonne": 3,
+   "explication": "Seul le lierre adulte (Hedera helix), arrivé en pleine lumière, fleurit en septembre-octobre ; l'abeille solitaire collète du lierre en dépend presque exclusivement.",
+   "sources": [
+    "https://www.provincedeliege.be:443/sites/default/files/media/10952/Lierre%20grimpant%20%28Hedera%20helix%29.pdf",
+    "https://www.agglo-agen.net/fileadmin/user_upload_agglo/pdf/06-Mes_loisirs/Trotte_lapin/fiches-nature/FICHE_ESPECE_FAUNE_COLLETE_DU_LIERRE_OCTOBRE.pdf"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (fiches Province de Liège, LPO, Agen : forme arborescente seule fleurit, septembre-novembre).",
+    "sources_recoupement": [
+     "https://www.provincedeliege.be:443/sites/default/files/media/10952/Lierre%20grimpant%20%28Hedera%20helix%29.pdf",
+     "https://www.agglo-agen.net/fileadmin/user_upload_agglo/pdf/06-Mes_loisirs/Trotte_lapin/fiches-nature/FICHE_ESPECE_FAUNE_COLLETE_DU_LIERRE_OCTOBRE.pdf"
+    ]
+   }
+  },
+  {
+   "id": "NU19",
+   "theme": "Saisons",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quand le bois-gentil (Daphne mezereum) ouvre-t-il ses fleurs roses parfumées ?",
+   "choix": [
+    "En juin, avec les feuilles",
+    "En fin d'hiver, avant les feuilles",
+    "En août, après la moisson",
+    "En novembre, juste après les fruits"
+   ],
+   "bonne": 1,
+   "explication": "Le bois-gentil fleurit en février-mars sur bois nu. Ses baies rouges, mûres en été, sont très toxiques pour l'humain, alors que les oiseaux les disséminent.",
+   "sources": [
+    "https://www.jardiner-malin.fr/fiche/daphne.html"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (fleurs février-mars avant les feuilles, drupes rouges mûres l'été, toxicité).",
+    "sources_recoupement": [
+     "https://www.jardiner-malin.fr/fiche/daphne.html"
+    ]
+   }
+  },
+  {
+   "id": "NU20",
+   "theme": "Saisons",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quelle particularité l'arbousier présente-t-il en automne ?",
+   "choix": [
+    "Il perd toutes ses feuilles d'un coup",
+    "Il ne fleurit qu'après la première gelée",
+    "Il porte à la fois fleurs et fruits mûrs",
+    "Il change de sexe d'une année à l'autre"
+   ],
+   "bonne": 2,
+   "explication": "Chez l'arbousier (Arbutus unedo), les fruits mettent un an à mûrir : en automne, les clochettes de l'année côtoient les arbouses issues de la floraison précédente.",
+   "sources": [
+    "https://www.futura-sciences.com/planete/definitions/botanique-arbouse-19661/"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (Futura, franco.wiki : fleurs et fruits simultanés, maturité un an après).",
+    "sources_recoupement": [
+     "https://www.futura-sciences.com/planete/definitions/botanique-arbouse-19661/"
+    ]
+   }
+  },
+  {
+   "id": "NU21",
+   "theme": "Saisons",
+   "niveau": "difficile",
+   "piege": false,
+   "format": "qcm",
+   "question": "La viorne de Bodnant, aux fleurs roses parfumées de la fin de l'automne à l'hiver, est un hybride entre quelles espèces ?",
+   "choix": [
+    "V. farreri et V. grandiflorum",
+    "V. tinus et V. opulus",
+    "V. lantana et V. carlesii",
+    "V. davidii et V. plicatum"
+   ],
+   "bonne": 0,
+   "explication": "Viburnum × bodnantense naît du croisement de V. farreri et V. grandiflorum (1933 à Édimbourg, puis à Bodnant), d'où le nom ; son cultivar 'Dawn' est le plus connu.",
+   "sources": [
+    "https://treesandshrubsonline.org/articles/viburnum/viburnum-x-bodnantense/",
+    "https://www.botanic.cam.ac.uk/the-garden/plant-list/viburnum-x-bodnantense-dawn"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (Trees and Shrubs Online, jardin botanique de Cambridge : parents, 1933-35, floraison hivernale).",
+    "sources_recoupement": [
+     "https://treesandshrubsonline.org/articles/viburnum/viburnum-x-bodnantense/",
+     "https://www.botanic.cam.ac.uk/the-garden/plant-list/viburnum-x-bodnantense-dawn"
+    ]
+   }
+  },
+  {
+   "id": "NU22",
+   "theme": "Écologie",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quel organisme forme les nodules fixateurs d'azote sur les racines de l'aulne glutineux ?",
+   "choix": [
+    "Rhizobium, bactérie des légumineuses",
+    "Un champignon mycorhizien",
+    "Une algue bleue du sol",
+    "Frankia, une actinobactérie"
+   ],
+   "bonne": 3,
+   "explication": "L'aulne (Alnus glutinosa) vit en symbiose avec Frankia, qui forme des nodules (actinorhizes) ; les légumineuses, elles, s'associent aux rhizobiums.",
+   "sources": [
+    "https://www.ville-boussy.fr/botanique/GROUPE C/planche c2.pdf"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (fiche botanique et revue sur actinorhizes ; Frankia est bien une actinobactérie).",
+    "sources_recoupement": [
+     "https://www.ville-boussy.fr/botanique/GROUPE C/planche c2.pdf"
+    ]
+   }
+  },
+  {
+   "id": "NU23",
+   "theme": "Écologie",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "Introduite vers 1830 dans le Lez, à Montpellier, la jussie, plante aquatique envahissante, est originaire de...",
+   "choix": [
+    "Asie du Sud-Est",
+    "Amérique du Sud",
+    "Afrique de l'Ouest",
+    "Australie"
+   ],
+   "bonne": 1,
+   "explication": "Les jussies (Ludwigia grandiflora et L. peploides), originaires d'Amérique du Sud, ont été introduites vers 1830 ; leur vente est interdite en France depuis 2007.",
+   "sources": [
+    "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/Depliant-jussie-BaT.pdf"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "une source ou détail à relire",
+    "note": "Recoupé par recherche web (dépliant EEE, CBNFC : origine sud-américaine ; 1823-1830 selon les sources).",
+    "sources_recoupement": [
+     "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/Depliant-jussie-BaT.pdf"
+    ]
+   }
+  },
+  {
+   "id": "NU24",
+   "theme": "Écologie",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quel insecte pollinise les fleurs cachées à l'intérieur des figues du figuier sauvage (caprifiguier) ?",
+   "choix": [
+    "Une abeille domestique",
+    "Un papillon de nuit",
+    "Une petite guêpe, le blastophage",
+    "Une mouche des fruits"
+   ],
+   "bonne": 2,
+   "explication": "Le blastophage (Blastophaga psenes) entre dans la figue par l'ostiole, pond et transporte le pollen : figuier et guêpe dépendent l'un de l'autre.",
+   "sources": [
+    "https://revues.cirad.fr/index.php/fruits/article/download/34747/33980/37245"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (CIRAD, Phytopathology 1998 : rôle du blastophage et du caprifiguier).",
+    "sources_recoupement": [
+     "https://revues.cirad.fr/index.php/fruits/article/download/34747/33980/37245"
+    ]
+   }
+  },
+  {
+   "id": "NU25",
+   "theme": "Écologie",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "Après la floraison du cyclamen de Naples, que fait le pédoncule de la fleur fécondée ?",
+   "choix": [
+    "Il s'enroule en tire-bouchon vers le sol",
+    "Il se dessèche et tombe",
+    "Il se redresse pour libérer les graines",
+    "Il se met à fleurir à nouveau"
+   ],
+   "bonne": 0,
+   "explication": "Le pédoncule s'enroule en spirale et pose la capsule au sol ; les graines, à élaiosome sucré, sont ensuite dispersées par les fourmis.",
+   "sources": [
+    "https://www.techno-science.net/fr/definitions/cyclamen"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (techno-science, jardiner-malin, Truffaut : spirale du pédoncule).",
+    "sources_recoupement": [
+     "https://www.techno-science.net/fr/definitions/cyclamen"
+    ]
+   }
+  },
+  {
+   "id": "NU26",
+   "theme": "Écologie",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quel est le rôle de la longue bractée attachée au pédoncule des fruits du tilleul ?",
+   "choix": [
+    "Elle attire les abeilles",
+    "Elle protège les graines du gel",
+    "Elle accroche les fruits à la fourrure",
+    "Elle sert de voile pour le vent"
+   ],
+   "bonne": 3,
+   "explication": "Cette bractée allongée agit comme une aile : le vent emporte l'ensemble pédoncule-fruits (anémochorie), loin de l'arbre-mère.",
+   "sources": [
+    "https://www.techno-science.net/fr/definitions/tilleul-a-grandes-feuilles"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (techno-science, Universalis, cours de prépa concordants).",
+    "sources_recoupement": [
+     "https://www.techno-science.net/fr/definitions/tilleul-a-grandes-feuilles"
+    ]
+   }
+  },
+  {
+   "id": "NU27",
+   "theme": "Écologie",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "Chez le fusain d'Europe, qui disperse les graines à arille orange dévoilées par les capsules roses d'automne ?",
+   "choix": [
+    "Le vent",
+    "Les oiseaux",
+    "Les fourmis",
+    "L'eau de pluie"
+   ],
+   "bonne": 1,
+   "explication": "Les capsules roses du fusain (Euonymus europaeus) s'ouvrent sur des graines à arille orange que les oiseaux avalent puis rejettent. Le fruit est toxique pour l'humain.",
+   "sources": [
+    "https://musees.aurillac.fr/wp-content/uploads/2021/02/Fiche-espece-fusain.pdf"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (fiche Aurillac, Universalis : arille, dissémination par les oiseaux).",
+    "sources_recoupement": [
+     "https://musees.aurillac.fr/wp-content/uploads/2021/02/Fiche-espece-fusain.pdf"
+    ]
+   }
+  },
+  {
+   "id": "NU28",
+   "theme": "Écologie",
+   "niveau": "difficile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Laquelle de ces espèces ligneuses ne fixe PAS l'azote de l'air grâce à des symbiotes racinaires ?",
+   "choix": [
+    "Le genêt à balais",
+    "L'aulne glutineux",
+    "Le frêne commun",
+    "L'argousier"
+   ],
+   "bonne": 2,
+   "explication": "Genêt (rhizobiums), aulne et argousier (Frankia) fixent l'azote ; le frêne (Fraxinus excelsior) n'a pas ce partenaire et préfère les sols riches.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NU29",
+   "theme": "Écologie",
+   "niveau": "difficile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Comment le séneçon du Cap, originaire d'Afrique du Sud, est-il arrivé en France dans les années 1930 ?",
+   "choix": [
+    "Par des graines dans des laines importées",
+    "Comme plante d'ornement des jardins publics",
+    "Avec des céréales importées pour les moulins",
+    "Par des oiseaux migrateurs venus d'Afrique"
+   ],
+   "bonne": 0,
+   "explication": "Les graines du séneçon du Cap (Senecio inaequidens) sont arrivées dans des laines brutes sud-africaines traitées notamment à Mazamet, d'où son second nom.",
+   "sources": [
+    "https://www.cbnbrest.fr/site/pdf/senecon.pdf",
+    "https://environnement.public.lu/dam-assets/documents/natur/biodiversite/especes_invasives/fiches-identification/Senecon-du-Cap-FR.pdf"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (fiches CBN Brest, Luxembourg : laine, Mazamet ; date 1930-1936 selon les sources).",
+    "sources_recoupement": [
+     "https://www.cbnbrest.fr/site/pdf/senecon.pdf",
+     "https://environnement.public.lu/dam-assets/documents/natur/biodiversite/especes_invasives/fiches-identification/Senecon-du-Cap-FR.pdf"
+    ]
+   }
+  },
+  {
+   "id": "NU30",
+   "theme": "Vocabulaire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Que signifie « dioïque », comme chez le houx ?",
+   "choix": [
+    "Fleurs mâles et femelles sur le même pied",
+    "Fleurs à la fois mâles et femelles (hermaphrodites)",
+    "Fleurs absentes, reproduction par spores",
+    "Fleurs mâles et femelles sur des pieds distincts"
+   ],
+   "bonne": 3,
+   "explication": "Chez une espèce dioïque comme le houx (Ilex aquifolium), seuls les pieds femelles portent des baies rouges, à condition qu'un pied mâle soit à proximité.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NU31",
+   "theme": "Vocabulaire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Que désigne le mot « ripisylve » ?",
+   "choix": [
+    "Une forêt de montagne en altitude",
+    "La forêt qui borde un cours d'eau",
+    "Une plantation de résineux alignés",
+    "Un bois pâturé en pente douce"
+   ],
+   "bonne": 1,
+   "explication": "La ripisylve est la végétation boisée des berges (saules, aulnes, frênes, peupliers) ; elle stabilise les rives et abrite une riche faune.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NU34",
+   "theme": "Vocabulaire",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "Le fruit sec ailé du frêne, contenant une seule graine et tournoyant au vent, s'appelle...",
+   "choix": [
+    "une gousse",
+    "un follicule",
+    "un akène",
+    "une samare"
+   ],
+   "bonne": 3,
+   "explication": "La samare est un fruit sec indéhiscent muni d'une aile (frêne, orme, érable en double). Un akène, lui, n'a pas d'aile.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NU35",
+   "theme": "Vocabulaire",
+   "niveau": "difficile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Comment nomme-t-on le fait que les fleurs naissent directement sur le tronc et les grosses branches, comme chez l'arbre de Judée ?",
+   "choix": [
+    "La marcescence",
+    "La cauliflorie",
+    "La myrmécochorie",
+    "L'anémogamie"
+   ],
+   "bonne": 1,
+   "explication": "Chez l'arbre de Judée (Cercis siliquastrum), des fleurs roses jaillissent du bois vieux, au printemps avant les feuilles : c'est la cauliflorie.",
+   "sources": [
+    "https://www.jardiner-malin.fr/fiche/arbre-de-judee-cercis.html"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par recherche web (jardiner-malin, Provence7 : fleurs sur le tronc, avant les feuilles).",
+    "sources_recoupement": [
+     "https://www.jardiner-malin.fr/fiche/arbre-de-judee-cercis.html"
+    ]
+   }
   }
  ]
 }
