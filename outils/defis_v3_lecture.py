@@ -8,6 +8,7 @@ B = json.load(open(os.path.join(D, 'banque.json'), encoding='utf8'))['questions'
 P = json.load(open(os.path.join(D, 'planning-90j.json'), encoding='utf8'))
 PH = json.load(open(os.path.join(RAC, 'donnees', 'photos.json'), encoding='utf8'))['especes']
 STAT = {'validee': 'validée (recoupée par recherche web)', 'relue': 'relue (non recoupée)', 'donnees': 'issue des données de l\'appli (non recoupée)', 'a_verifier': 'à vérifier', 'ecartee': 'écartée'}
+JOURS_FR = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche']
 NIV = {'facile': 'facile', 'intermediaire': 'intermédiaire', 'difficile': 'difficile'}
 def choix(q):
     out = []
@@ -35,7 +36,7 @@ L = ['# Les 90 défis du jour, question par question\n',
      "↻ = question déjà vue plus tôt dans le planning (rejeu au moins 28 jours après).\n", '## Sommaire\n']
 L += [f"- [Jour {j + 1} : {datetime.date.fromisoformat(d['date']).strftime('%d/%m')}](#jour-{j + 1})" for j, d in enumerate(P['jours'])] + ['']
 for j, jour in enumerate(P['jours']):
-    L += [f'<a id="jour-{j + 1}"></a>', f"## Jour {j + 1} : {datetime.date.fromisoformat(jour['date']).strftime('%A %d/%m/%Y')}\n"]
+    L += [f'<a id="jour-{j + 1}"></a>', f"## Jour {j + 1} : {JOURS_FR[datetime.date.fromisoformat(jour['date']).weekday()]} {datetime.date.fromisoformat(jour['date']).strftime('%d/%m/%Y')}\n"]
     for x in jour['questions']:
         niv = NIV[x['niveau']] + (' (piège)' if x['piege'] and x['niveau'] == 'intermediaire' else '')
         L += fiche(x, f"### J{j + 1} · Q{x['position']} · {niv} · {x['theme']} · {'photos' if x['format'] == 'images' else 'texte'}{' · ↻' if x.get('reutilisation') else ''}")

@@ -97,7 +97,7 @@ Du 20/10/2026 au 17/01/2027 · 10 questions par jour · bonne réponse en gras a
 - [Jour 90 : 17/01](#jour-90)
 
 <a id="jour-1"></a>
-## Jour 1 : Tuesday 20/10/2026
+## Jour 1 : mardi 20/10/2026
 
 ### J1 · Q1 · facile · Écologie · texte
 
@@ -237,7 +237,7 @@ Le colchique et le crocus renouvellent chaque année une réserve souterraine, q
 *validée (recoupée par recherche web) · id NP25*
 
 <a id="jour-2"></a>
-## Jour 2 : Wednesday 21/10/2026
+## Jour 2 : mercredi 21/10/2026
 
 ### J2 · Q1 · facile · Écologie · photos
 
@@ -378,7 +378,7 @@ Face à l'orchidée de Madagascar Angraecum sesquipedale, à éperon de 30 cm, D
 *validée (recoupée par recherche web) · id NA30*
 
 <a id="jour-3"></a>
-## Jour 3 : Thursday 22/10/2026
+## Jour 3 : jeudi 22/10/2026
 
 ### J3 · Q1 · facile · Écologie · photos
 
@@ -520,7 +520,7 @@ Laquelle de ces plantes cache cette histoire ?
 *validée (recoupée par recherche web) · id 427531b8cd*
 
 <a id="jour-4"></a>
-## Jour 4 : Friday 23/10/2026
+## Jour 4 : vendredi 23/10/2026
 
 ### J4 · Q1 · facile · Vocabulaire · texte
 
@@ -659,7 +659,7 @@ Quel est le nom scientifique de : Euphorbe maritime ?
 *issue des données de l'appli (non recoupée) · id 989eb5aeb4*
 
 <a id="jour-5"></a>
-## Jour 5 : Saturday 24/10/2026
+## Jour 5 : samedi 24/10/2026
 
 ### J5 · Q1 · facile · Usages et histoire · texte
 
@@ -799,7 +799,7 @@ Quel est le nom scientifique de : Sauge arbustive ?
 *issue des données de l'appli (non recoupée) · id d53ea08ad6*
 
 <a id="jour-6"></a>
-## Jour 6 : Sunday 25/10/2026
+## Jour 6 : dimanche 25/10/2026
 
 ### J6 · Q1 · facile · Écologie · photos
 
@@ -941,7 +941,7 @@ Quel est le nom scientifique de : Tremble ?
 *issue des données de l'appli (non recoupée) · id 90f22ca0d4*
 
 <a id="jour-7"></a>
-## Jour 7 : Monday 26/10/2026
+## Jour 7 : lundi 26/10/2026
 
 ### J7 · Q1 · facile · Familles · texte
 
@@ -1080,7 +1080,7 @@ Quel est le nom scientifique de : Fusain de Fortune ?
 *issue des données de l'appli (non recoupée) · id 4346c3014f*
 
 <a id="jour-8"></a>
-## Jour 8 : Tuesday 27/10/2026
+## Jour 8 : mardi 27/10/2026
 
 ### J8 · Q1 · facile · Familles · texte
 
@@ -1219,7 +1219,7 @@ Quel est le nom scientifique de : Laîche élevée ?
 *issue des données de l'appli (non recoupée) · id f5f7c69b8b*
 
 <a id="jour-9"></a>
-## Jour 9 : Wednesday 28/10/2026
+## Jour 9 : mercredi 28/10/2026
 
 ### J9 · Q1 · facile · Familles · texte
 
@@ -1358,7 +1358,7 @@ Quel est le nom scientifique de : Géranium sanguin ?
 *issue des données de l'appli (non recoupée) · id e2f9a6cfe6*
 
 <a id="jour-10"></a>
-## Jour 10 : Thursday 29/10/2026
+## Jour 10 : jeudi 29/10/2026
 
 ### J10 · Q1 · facile · Vocabulaire · texte
 
@@ -1498,7 +1498,7 @@ Quel est le nom scientifique de : Bouleau noir ?
 *issue des données de l'appli (non recoupée) · id 8ab47f1a15*
 
 <a id="jour-11"></a>
-## Jour 11 : Friday 30/10/2026
+## Jour 11 : vendredi 30/10/2026
 
 ### J11 · Q1 · facile · Familles · texte
 
@@ -1640,7 +1640,7 @@ Quel est le nom scientifique de : Orme champêtre ?
 *issue des données de l'appli (non recoupée) · id ad2abdb5c3*
 
 <a id="jour-12"></a>
-## Jour 12 : Saturday 31/10/2026
+## Jour 12 : samedi 31/10/2026
 
 ### J12 · Q1 · facile · Idées reçues · texte
 
@@ -1780,7 +1780,7 @@ Quel est le nom scientifique de : Laurier du Portugal ?
 *issue des données de l'appli (non recoupée) · id 9422513659*
 
 <a id="jour-13"></a>
-## Jour 13 : Sunday 01/11/2026
+## Jour 13 : dimanche 01/11/2026
 
 ### J13 · Q1 · facile · Usages et histoire · texte
 
@@ -1922,7 +1922,7 @@ Quel est le nom scientifique de : Chèvrefeuille de Henry ?
 *issue des données de l'appli (non recoupée) · id a24aaaf8fe*
 
 <a id="jour-14"></a>
-## Jour 14 : Monday 02/11/2026
+## Jour 14 : lundi 02/11/2026
 
 ### J14 · Q1 · facile · Usages et histoire · texte
 
@@ -2062,7 +2062,7 @@ Quel est le nom scientifique de : Cornouiller des pagodes ?
 *issue des données de l'appli (non recoupée) · id a73916527c*
 
 <a id="jour-15"></a>
-## Jour 15 : Tuesday 03/11/2026
+## Jour 15 : mardi 03/11/2026
 
 ### J15 · Q1 · facile · Vocabulaire · texte
 
@@ -2202,7 +2202,7 @@ Quel est le nom scientifique de : Viorne odorante ?
 *issue des données de l'appli (non recoupée) · id 83aab5d00f*
 
 <a id="jour-16"></a>
-## Jour 16 : Wednesday 04/11/2026
+## Jour 16 : mercredi 04/11/2026
 
 ### J16 · Q1 · facile · Usages et histoire · texte
 
@@ -2342,7 +2342,7 @@ Quel est le nom scientifique de : Laîche des sables ?
 *issue des données de l'appli (non recoupée) · id 2fb4e1e521*
 
 <a id="jour-17"></a>
-## Jour 17 : Thursday 05/11/2026
+## Jour 17 : jeudi 05/11/2026
 
 ### J17 · Q1 · facile · Saisons · texte
 
@@ -2482,7 +2482,7 @@ Quel est le nom scientifique de : Prunier ?
 *issue des données de l'appli (non recoupée) · id 2566abcec7*
 
 <a id="jour-18"></a>
-## Jour 18 : Friday 06/11/2026
+## Jour 18 : vendredi 06/11/2026
 
 ### J18 · Q1 · facile · Saisons · texte
 
@@ -2622,7 +2622,7 @@ Quel est le nom scientifique de : Troène de Californie ?
 *issue des données de l'appli (non recoupée) · id 71d7356b76*
 
 <a id="jour-19"></a>
-## Jour 19 : Saturday 07/11/2026
+## Jour 19 : samedi 07/11/2026
 
 ### J19 · Q1 · facile · Saisons · texte
 
@@ -2762,7 +2762,7 @@ Quel est le nom scientifique de : Fétuque élevée ?
 *issue des données de l'appli (non recoupée) · id 447a205da1*
 
 <a id="jour-20"></a>
-## Jour 20 : Sunday 08/11/2026
+## Jour 20 : dimanche 08/11/2026
 
 ### J20 · Q1 · facile · Fruits et toxicité · texte
 
@@ -2902,7 +2902,7 @@ Quel est le nom scientifique de : Épicéa du Colorado ?
 *issue des données de l'appli (non recoupée) · id f9204a5940*
 
 <a id="jour-21"></a>
-## Jour 21 : Monday 09/11/2026
+## Jour 21 : lundi 09/11/2026
 
 ### J21 · Q1 · facile · Fruits et toxicité · texte
 
@@ -3042,7 +3042,7 @@ Quel est le nom scientifique de : Merisier à grappes ?
 *issue des données de l'appli (non recoupée) · id aaad1b2ffb*
 
 <a id="jour-22"></a>
-## Jour 22 : Tuesday 10/11/2026
+## Jour 22 : mardi 10/11/2026
 
 ### J22 · Q1 · facile · Vocabulaire · texte
 
@@ -3182,7 +3182,7 @@ Quel est le nom scientifique de : Géranium brun ?
 *issue des données de l'appli (non recoupée) · id 9522cb8ba9*
 
 <a id="jour-23"></a>
-## Jour 23 : Wednesday 11/11/2026
+## Jour 23 : mercredi 11/11/2026
 
 ### J23 · Q1 · facile · Familles · texte
 
@@ -3322,7 +3322,7 @@ Quel est le nom scientifique de : Ciste ladanifère ?
 *issue des données de l'appli (non recoupée) · id 6922345393*
 
 <a id="jour-24"></a>
-## Jour 24 : Thursday 12/11/2026
+## Jour 24 : jeudi 12/11/2026
 
 ### J24 · Q1 · facile · Vocabulaire · texte
 
@@ -3464,7 +3464,7 @@ Laquelle de ces plantes appartient à la famille des Lamiacées ?
 *validée (recoupée par recherche web) · id 770f05969a*
 
 <a id="jour-25"></a>
-## Jour 25 : Friday 13/11/2026
+## Jour 25 : vendredi 13/11/2026
 
 ### J25 · Q1 · facile · Idées reçues · texte
 
@@ -3606,7 +3606,7 @@ Laquelle de ces plantes appartient à la famille des Fabacées ?
 *validée (recoupée par recherche web) · id 6d01562d16*
 
 <a id="jour-26"></a>
-## Jour 26 : Saturday 14/11/2026
+## Jour 26 : samedi 14/11/2026
 
 ### J26 · Q1 · facile · Saisons · texte
 
@@ -3746,7 +3746,7 @@ Le cœur-de-Marie (cœur saignant), longtemps rangé chez les fumeterres, est cl
 *validée (recoupée par recherche web) · id NF33*
 
 <a id="jour-27"></a>
-## Jour 27 : Sunday 15/11/2026
+## Jour 27 : dimanche 15/11/2026
 
 ### J27 · Q1 · facile · Saisons · texte
 
@@ -3886,7 +3886,7 @@ La digitale pourpre, toxique, est classée aujourd'hui dans la famille…
 *validée (recoupée par recherche web) · id NF30*
 
 <a id="jour-28"></a>
-## Jour 28 : Monday 16/11/2026
+## Jour 28 : lundi 16/11/2026
 
 ### J28 · Q1 · facile · Usages et histoire · texte
 
@@ -4026,7 +4026,7 @@ Chez le fusain d'Europe, qui disperse les graines à arille orange dévoilées p
 *validée (recoupée par recherche web) · id NU27*
 
 <a id="jour-29"></a>
-## Jour 29 : Tuesday 17/11/2026
+## Jour 29 : mardi 17/11/2026
 
 ### J29 · Q1 · facile · Saisons · texte
 
@@ -4166,7 +4166,7 @@ De quelle plante parle-t-on ?
 *issue des données de l'appli (non recoupée) · id bed7e2a61d*
 
 <a id="jour-30"></a>
-## Jour 30 : Wednesday 18/11/2026
+## Jour 30 : mercredi 18/11/2026
 
 ### J30 · Q1 · facile · Vocabulaire · texte
 
@@ -4306,7 +4306,7 @@ De quelle plante parle-t-on ?
 *issue des données de l'appli (non recoupée) · id aca9b82386*
 
 <a id="jour-31"></a>
-## Jour 31 : Thursday 19/11/2026
+## Jour 31 : jeudi 19/11/2026
 
 ### J31 · Q1 · facile · Vocabulaire · texte
 
@@ -4446,7 +4446,7 @@ De quelle plante parle-t-on ?
 *issue des données de l'appli (non recoupée) · id f8da36a20d*
 
 <a id="jour-32"></a>
-## Jour 32 : Friday 20/11/2026
+## Jour 32 : vendredi 20/11/2026
 
 ### J32 · Q1 · facile · Milieux · texte
 
@@ -4586,7 +4586,7 @@ Quel arbre de nos avenues est un cousin éloigné du lotus sacré ?
 *validée (recoupée par recherche web) · id NF32*
 
 <a id="jour-33"></a>
-## Jour 33 : Saturday 21/11/2026
+## Jour 33 : samedi 21/11/2026
 
 ### J33 · Q1 · facile · Saisons · texte
 
@@ -4726,7 +4726,7 @@ De quelle plante parle-t-on ?
 *issue des données de l'appli (non recoupée) · id 048a384ed3*
 
 <a id="jour-34"></a>
-## Jour 34 : Sunday 22/11/2026
+## Jour 34 : dimanche 22/11/2026
 
 ### J34 · Q1 · facile · Fruits et toxicité · texte
 
@@ -4866,7 +4866,7 @@ Les graines de la violette odorante portent un petit appendice riche en lipides.
 *validée (recoupée par recherche web) · id NE03*
 
 <a id="jour-35"></a>
-## Jour 35 : Monday 23/11/2026
+## Jour 35 : lundi 23/11/2026
 
 ### J35 · Q1 · facile · Usages et histoire · texte
 
@@ -5006,7 +5006,7 @@ Le micocoulier de Provence, longtemps rangé chez les ormes, est aujourd'hui un 
 *validée (recoupée par recherche web) · id NF29*
 
 <a id="jour-36"></a>
-## Jour 36 : Tuesday 24/11/2026
+## Jour 36 : mardi 24/11/2026
 
 ### J36 · Q1 · facile · Écologie · texte
 
@@ -5146,7 +5146,7 @@ Le sureau noir est classé aujourd'hui dans la même famille que…
 *validée (recoupée par recherche web) · id NF31*
 
 <a id="jour-37"></a>
-## Jour 37 : Wednesday 25/11/2026
+## Jour 37 : mercredi 25/11/2026
 
 ### J37 · Q1 · facile · Familles · texte
 
@@ -5286,7 +5286,7 @@ De quelle plante parle-t-on ?
 *issue des données de l'appli (non recoupée) · id 5d5cffc71f*
 
 <a id="jour-38"></a>
-## Jour 38 : Thursday 26/11/2026
+## Jour 38 : jeudi 26/11/2026
 
 ### J38 · Q1 · facile · Familles · photos
 
@@ -5428,7 +5428,7 @@ Les chenilles du papillon Citron se nourrissent des feuilles de :
 *validée (recoupée par recherche web) · id 81dcc3ade9*
 
 <a id="jour-39"></a>
-## Jour 39 : Friday 27/11/2026
+## Jour 39 : vendredi 27/11/2026
 
 ### J39 · Q1 · facile · Familles · texte
 
@@ -5568,7 +5568,7 @@ L'ailante libère dans le sol des substances qui freinent ses voisines. Ce phén
 *validée (recoupée par recherche web) · id 42dedd3336*
 
 <a id="jour-40"></a>
-## Jour 40 : Saturday 28/11/2026
+## Jour 40 : samedi 28/11/2026
 
 ### J40 · Q1 · facile · Familles · texte
 
@@ -5708,7 +5708,7 @@ Comment le séneçon du Cap, originaire d'Afrique du Sud, est-il arrivé en Fran
 *validée (recoupée par recherche web) · id NU29*
 
 <a id="jour-41"></a>
-## Jour 41 : Sunday 29/11/2026
+## Jour 41 : dimanche 29/11/2026
 
 ### J41 · Q1 · facile · Fruits et toxicité · texte
 
@@ -5848,7 +5848,7 @@ Les graines de la chélidoine portent un appendice charnu. Qui les disperse ?
 *validée (recoupée par recherche web) · id b418a15c5c*
 
 <a id="jour-42"></a>
-## Jour 42 : Monday 30/11/2026
+## Jour 42 : lundi 30/11/2026
 
 ### J42 · Q1 · facile · Familles · texte
 
@@ -5990,7 +5990,7 @@ Lequel de ces arbustes colonise les dunes littorales et fixe l'azote de l'air ?
 *validée (recoupée par recherche web) · id 6faa3bc87a*
 
 <a id="jour-43"></a>
-## Jour 43 : Tuesday 01/12/2026
+## Jour 43 : mardi 01/12/2026
 
 ### J43 · Q1 · facile · Familles · texte
 
@@ -6130,7 +6130,7 @@ Chez la sauge des prés, comment le pollen se dépose-t-il sur le bourdon ?
 *validée (recoupée par recherche web) · corrigée · id 9e2834e6d3*
 
 <a id="jour-44"></a>
-## Jour 44 : Wednesday 02/12/2026
+## Jour 44 : mercredi 02/12/2026
 
 ### J44 · Q1 · facile · Fruits et toxicité · texte
 
@@ -6270,7 +6270,7 @@ Dans la classification actuelle, le muguet est un proche cousin de…
 *validée (recoupée par recherche web) · id NF34*
 
 <a id="jour-45"></a>
-## Jour 45 : Thursday 03/12/2026
+## Jour 45 : jeudi 03/12/2026
 
 ### J45 · Q1 · facile · Saisons · texte · ↻
 
@@ -6410,7 +6410,7 @@ Quelle substance du noyer freine la germination d'autres plantes ?
 *validée (recoupée par recherche web) · id 542cff937f*
 
 <a id="jour-46"></a>
-## Jour 46 : Friday 04/12/2026
+## Jour 46 : vendredi 04/12/2026
 
 ### J46 · Q1 · facile · Familles · photos
 
@@ -6554,7 +6554,7 @@ Lequel de ces arbres fleurit au printemps avant ses feuilles, jusque sur le tron
 *validée (recoupée par recherche web) · id 26865f64ba*
 
 <a id="jour-47"></a>
-## Jour 47 : Saturday 05/12/2026
+## Jour 47 : samedi 05/12/2026
 
 ### J47 · Q1 · facile · Écologie · texte · ↻
 
@@ -6694,7 +6694,7 @@ Le gui, hémiparasite des peupliers et des pommiers, est de la même famille que
 *validée (recoupée par recherche web) · id NF28*
 
 <a id="jour-48"></a>
-## Jour 48 : Sunday 06/12/2026
+## Jour 48 : dimanche 06/12/2026
 
 ### J48 · Q1 · facile · Familles · texte
 
@@ -6834,7 +6834,7 @@ Quel organe permet à l'iris des marais de former des tapis denses sur la vase d
 *relue (non recoupée) · id NM23*
 
 <a id="jour-49"></a>
-## Jour 49 : Monday 07/12/2026
+## Jour 49 : lundi 07/12/2026
 
 ### J49 · Q1 · facile · Écologie · texte · ↻
 
@@ -6974,7 +6974,7 @@ Le nom latin du robinier, Robinia, rend hommage à quel personnage ?
 *validée (recoupée par recherche web) · id NU04*
 
 <a id="jour-50"></a>
-## Jour 50 : Tuesday 08/12/2026
+## Jour 50 : mardi 08/12/2026
 
 ### J50 · Q1 · facile · Familles · texte
 
@@ -7113,7 +7113,7 @@ Comment nomme-t-on le passage au froid humide qui lève la dormance de certaines
 *validée (recoupée par recherche web) · id 9430c5ee47*
 
 <a id="jour-51"></a>
-## Jour 51 : Wednesday 09/12/2026
+## Jour 51 : mercredi 09/12/2026
 
 ### J51 · Q1 · facile · Familles · texte
 
@@ -7252,7 +7252,7 @@ Le tamier commun, liane aux baies rouges toxiques, est un proche parent…
 *validée (recoupée par recherche web) · id 2ad9e1eb8e*
 
 <a id="jour-52"></a>
-## Jour 52 : Thursday 10/12/2026
+## Jour 52 : jeudi 10/12/2026
 
 ### J52 · Q1 · facile · Familles · texte
 
@@ -7391,7 +7391,7 @@ Que sont tous les peupliers d'Italie (Populus nigra 'Italica') plantés en align
 *validée (recoupée par recherche web) · id NP30*
 
 <a id="jour-53"></a>
-## Jour 53 : Friday 11/12/2026
+## Jour 53 : vendredi 11/12/2026
 
 ### J53 · Q1 · facile · Familles · texte
 
@@ -7531,7 +7531,7 @@ Combien d'espèces d'abeilles vit-il en France métropolitaine ?
 *validée (recoupée par recherche web) · id 22b729eea8*
 
 <a id="jour-54"></a>
-## Jour 54 : Saturday 12/12/2026
+## Jour 54 : samedi 12/12/2026
 
 ### J54 · Q1 · facile · Familles · texte
 
@@ -7670,7 +7670,7 @@ Le génépi des Alpes, liqueur de montagne, est préparé à partir de petites p
 *validée (recoupée par recherche web) · id NU11*
 
 <a id="jour-55"></a>
-## Jour 55 : Sunday 13/12/2026
+## Jour 55 : dimanche 13/12/2026
 
 ### J55 · Q1 · facile · Milieux · texte · ↻
 
@@ -7809,7 +7809,7 @@ Chez le fragon, les baies rouges semblent posées sur une feuille. Cette « feui
 *validée (recoupée par recherche web) · id fc918e4b03*
 
 <a id="jour-56"></a>
-## Jour 56 : Monday 14/12/2026
+## Jour 56 : lundi 14/12/2026
 
 ### J56 · Q1 · facile · Familles · texte
 
@@ -7948,7 +7948,7 @@ Pour freiner le vent sur la plus grande distance, quelle haie est la plus effica
 *validée (recoupée par recherche web) · id NM33*
 
 <a id="jour-57"></a>
-## Jour 57 : Tuesday 15/12/2026
+## Jour 57 : mardi 15/12/2026
 
 ### J57 · Q1 · facile · Familles · texte
 
@@ -8088,7 +8088,7 @@ Laquelle de ces plantes fleurit en plein hiver ?
 *validée (recoupée par recherche web) · id N20*
 
 <a id="jour-58"></a>
-## Jour 58 : Wednesday 16/12/2026
+## Jour 58 : mercredi 16/12/2026
 
 ### J58 · Q1 · facile · Fruits et toxicité · texte · ↻
 
@@ -8227,7 +8227,7 @@ Sous l'eau, comment sont les feuilles de la renoncule aquatique ?
 *validée (recoupée par recherche web) · id NM29*
 
 <a id="jour-59"></a>
-## Jour 59 : Thursday 17/12/2026
+## Jour 59 : jeudi 17/12/2026
 
 ### J59 · Q1 · facile · Anecdotes · texte
 
@@ -8366,7 +8366,7 @@ Chez la sagittaire, plante de berges et de mares, quelle forme ont les feuilles 
 *validée (recoupée par recherche web) · une seule source, à relire · id NM30*
 
 <a id="jour-60"></a>
-## Jour 60 : Friday 18/12/2026
+## Jour 60 : vendredi 18/12/2026
 
 ### J60 · Q1 · facile · Anecdotes · texte
 
@@ -8505,7 +8505,7 @@ Le genre Metasequoia a d'abord été décrit en 1941…
 *validée (recoupée par recherche web) · corrigée · id 0a9839ee06*
 
 <a id="jour-61"></a>
-## Jour 61 : Saturday 19/12/2026
+## Jour 61 : samedi 19/12/2026
 
 ### J61 · Q1 · facile · Saisons · texte
 
@@ -8645,7 +8645,7 @@ Laquelle de ces espèces ligneuses ne fixe PAS l'azote de l'air grâce à des sy
 *relue (non recoupée) · id NU28*
 
 <a id="jour-62"></a>
-## Jour 62 : Sunday 20/12/2026
+## Jour 62 : dimanche 20/12/2026
 
 ### J62 · Q1 · facile · Anecdotes · texte
 
@@ -8784,7 +8784,7 @@ Quelle molécule de la grande absinthe fut accusée de rendre fous les buveurs d
 *validée (recoupée par recherche web) · id ee8367776a*
 
 <a id="jour-63"></a>
-## Jour 63 : Monday 21/12/2026
+## Jour 63 : lundi 21/12/2026
 
 ### J63 · Q1 · facile · Anecdotes · texte
 
@@ -8923,7 +8923,7 @@ Quel médecin anglais publia en 1785 un traité sur l'usage de la digitale contr
 *validée (recoupée par recherche web) · id f9a492e111*
 
 <a id="jour-64"></a>
-## Jour 64 : Tuesday 22/12/2026
+## Jour 64 : mardi 22/12/2026
 
 ### J64 · Q1 · facile · Usages et histoire · texte · ↻
 
@@ -9063,7 +9063,7 @@ Tilleul à grandes feuilles : à quelle famille appartient cette plante ?
 *validée (recoupée par recherche web) · id ab9c412508*
 
 <a id="jour-65"></a>
-## Jour 65 : Wednesday 23/12/2026
+## Jour 65 : mercredi 23/12/2026
 
 ### J65 · Q1 · facile · Familles · texte
 
@@ -9202,7 +9202,7 @@ Pourquoi un cerisier ne débourre-t-il pas lors d'une douce parenthèse en plein
 *validée (recoupée par recherche web) · id NE22*
 
 <a id="jour-66"></a>
-## Jour 66 : Thursday 24/12/2026
+## Jour 66 : jeudi 24/12/2026
 
 ### J66 · Q1 · facile · Anecdotes · texte
 
@@ -9342,7 +9342,7 @@ Une vaste roselière compte des milliers de tiges de roseau. Elle peut en réali
 *validée (recoupée par recherche web) · une seule source, à relire · id NM32*
 
 <a id="jour-67"></a>
-## Jour 67 : Friday 25/12/2026
+## Jour 67 : vendredi 25/12/2026
 
 ### J67 · Q1 · facile · Anecdotes · texte
 
@@ -9482,7 +9482,7 @@ Quelle partie de l'iris de Florence (Iris pallida) est séchée pendant des ann�
 *validée (recoupée par recherche web) · id NU13*
 
 <a id="jour-68"></a>
-## Jour 68 : Saturday 26/12/2026
+## Jour 68 : samedi 26/12/2026
 
 ### J68 · Q1 · facile · Anecdotes · texte
 
@@ -9622,7 +9622,7 @@ La viorne de Bodnant, aux fleurs roses parfumées de la fin de l'automne à l'hi
 *validée (recoupée par recherche web) · id NU21*
 
 <a id="jour-69"></a>
-## Jour 69 : Sunday 27/12/2026
+## Jour 69 : dimanche 27/12/2026
 
 ### J69 · Q1 · facile · Vocabulaire · texte · ↻
 
@@ -9761,7 +9761,7 @@ Pourquoi le safran (Crocus sativus) ne se multiplie-t-il que par division de ses
 *validée (recoupée par recherche web) · id NU10*
 
 <a id="jour-70"></a>
-## Jour 70 : Monday 28/12/2026
+## Jour 70 : lundi 28/12/2026
 
 ### J70 · Q1 · facile · Anecdotes · texte
 
@@ -9901,7 +9901,7 @@ Le châtaignier évite le calcaire, mais on en voit parfois sur un sol issu de r
 *validée (recoupée par recherche web) · id NM31*
 
 <a id="jour-71"></a>
-## Jour 71 : Tuesday 29/12/2026
+## Jour 71 : mardi 29/12/2026
 
 ### J71 · Q1 · facile · Saisons · texte · ↻
 
@@ -10041,7 +10041,7 @@ Le genre Robinia rend hommage à Jean Robin. Qui était-il ?
 *validée (recoupée par recherche web) · id 0d40b08d11*
 
 <a id="jour-72"></a>
-## Jour 72 : Wednesday 30/12/2026
+## Jour 72 : mercredi 30/12/2026
 
 ### J72 · Q1 · facile · Vocabulaire · texte · ↻
 
@@ -10181,7 +10181,7 @@ Selon la classification de Raunkiær, comment une géophyte passe-t-elle l'hiver
 *validée (recoupée par recherche web) · id 8b504b5493*
 
 <a id="jour-73"></a>
-## Jour 73 : Thursday 31/12/2026
+## Jour 73 : jeudi 31/12/2026
 
 ### J73 · Q1 · facile · Vocabulaire · texte · ↻
 
@@ -10320,7 +10320,7 @@ Le colchique d'automne est souvent appelé « crocus d'automne ». À quelle fam
 *validée (recoupée par recherche web) · id NP15*
 
 <a id="jour-74"></a>
-## Jour 74 : Friday 01/01/2027
+## Jour 74 : vendredi 01/01/2027
 
 ### J74 · Q1 · facile · Anecdotes · texte
 
@@ -10460,7 +10460,7 @@ Quelle description oppose correctement le frêne commun au sorbier des oiseleurs
 *validée (recoupée par recherche web) · id NP11*
 
 <a id="jour-75"></a>
-## Jour 75 : Saturday 02/01/2027
+## Jour 75 : samedi 02/01/2027
 
 ### J75 · Q1 · facile · Anecdotes · texte
 
@@ -10600,7 +10600,7 @@ Sous les feuilles du tilleul à petites feuilles, que remarque-t-on aux aisselle
 *validée (recoupée par recherche web) · id NP04*
 
 <a id="jour-76"></a>
-## Jour 76 : Sunday 03/01/2027
+## Jour 76 : dimanche 03/01/2027
 
 ### J76 · Q1 · facile · Saisons · texte · ↻
 
@@ -10740,7 +10740,7 @@ Laquelle de ces enveloppes épineuses ou écailleuses est la paroi même du frui
 *validée (recoupée par recherche web) · id 803a030023*
 
 <a id="jour-77"></a>
-## Jour 77 : Monday 04/01/2027
+## Jour 77 : lundi 04/01/2027
 
 ### J77 · Q1 · facile · Anecdotes · texte
 
@@ -10880,7 +10880,7 @@ La mûre du mûrier noir, contrairement à celle de la ronce, provient…
 *validée (recoupée par recherche web) · id fe0c5f6303*
 
 <a id="jour-78"></a>
-## Jour 78 : Tuesday 05/01/2027
+## Jour 78 : mardi 05/01/2027
 
 ### J78 · Q1 · facile · Familles · texte
 
@@ -11019,7 +11019,7 @@ Quel âge avait le tissu de fruit sibérien à partir duquel des chercheurs russ
 *validée (recoupée par recherche web) · id NA32*
 
 <a id="jour-79"></a>
-## Jour 79 : Wednesday 06/01/2027
+## Jour 79 : mercredi 06/01/2027
 
 ### J79 · Q1 · facile · Usages et histoire · texte · ↻
 
@@ -11158,7 +11158,7 @@ Selon les Métamorphoses d'Ovide, en quel arbre Attis, compagnon de Cybèle, fut
 *validée (recoupée par recherche web) · id 4b486a3086*
 
 <a id="jour-80"></a>
-## Jour 80 : Thursday 07/01/2027
+## Jour 80 : jeudi 07/01/2027
 
 ### J80 · Q1 · facile · Fruits et toxicité · texte · ↻
 
@@ -11298,7 +11298,7 @@ De quelle plante parle-t-on ?
 *validée (recoupée par recherche web) · id f3780e0991*
 
 <a id="jour-81"></a>
-## Jour 81 : Friday 08/01/2027
+## Jour 81 : vendredi 08/01/2027
 
 ### J81 · Q1 · facile · Usages et histoire · texte · ↻
 
@@ -11437,7 +11437,7 @@ Combien de feuilles le welwitschia, plante du désert du Namib vieille de plusie
 *validée (recoupée par recherche web) · id NA34*
 
 <a id="jour-82"></a>
-## Jour 82 : Saturday 09/01/2027
+## Jour 82 : samedi 09/01/2027
 
 ### J82 · Q1 · facile · Milieux · texte · ↻
 
@@ -11576,7 +11576,7 @@ Le platane commun des routes (Platanus × hispanica) est classiquement considér
 *validée (recoupée par recherche web) · une seule source, à relire · id NU12*
 
 <a id="jour-83"></a>
-## Jour 83 : Sunday 10/01/2027
+## Jour 83 : dimanche 10/01/2027
 
 ### J83 · Q1 · facile · Vocabulaire · texte · ↻
 
@@ -11716,7 +11716,7 @@ Le cœur-de-Marie (cœur saignant), longtemps rangé chez les fumeterres, est cl
 *validée (recoupée par recherche web) · id NF33*
 
 <a id="jour-84"></a>
-## Jour 84 : Monday 11/01/2027
+## Jour 84 : lundi 11/01/2027
 
 ### J84 · Q1 · facile · Usages et histoire · texte · ↻
 
@@ -11856,7 +11856,7 @@ De quelle plante parle-t-on ?
 *issue des données de l'appli (non recoupée) · id d207de647e*
 
 <a id="jour-85"></a>
-## Jour 85 : Tuesday 12/01/2027
+## Jour 85 : mardi 12/01/2027
 
 ### J85 · Q1 · facile · Vocabulaire · texte · ↻
 
@@ -11996,7 +11996,7 @@ Légumes dans l'assiette, la courgette et le concombre sont botaniquement…
 *validée (recoupée par recherche web) · id NP23*
 
 <a id="jour-86"></a>
-## Jour 86 : Wednesday 13/01/2027
+## Jour 86 : mercredi 13/01/2027
 
 ### J86 · Q1 · facile · Usages et histoire · texte · ↻
 
@@ -12135,7 +12135,7 @@ Comment le chêne vert traverse-t-il un été très sec ?
 *validée (recoupée par recherche web) · id NM34*
 
 <a id="jour-87"></a>
-## Jour 87 : Thursday 14/01/2027
+## Jour 87 : jeudi 14/01/2027
 
 ### J87 · Q1 · facile · Usages et histoire · texte · ↻
 
@@ -12275,7 +12275,7 @@ De quelle plante parle-t-on ?
 *issue des données de l'appli (non recoupée) · id 048a384ed3*
 
 <a id="jour-88"></a>
-## Jour 88 : Friday 15/01/2027
+## Jour 88 : vendredi 15/01/2027
 
 ### J88 · Q1 · facile · Fruits et toxicité · texte · ↻
 
@@ -12415,7 +12415,7 @@ Le « miel d'acacia » vendu en France provient surtout de quel arbre ?
 *validée (recoupée par recherche web) · id 18ee1266e9*
 
 <a id="jour-89"></a>
-## Jour 89 : Saturday 16/01/2027
+## Jour 89 : samedi 16/01/2027
 
 ### J89 · Q1 · facile · Vocabulaire · texte
 
@@ -12555,7 +12555,7 @@ De quelle plante parle-t-on ?
 *issue des données de l'appli (non recoupée) · id 15324abe15*
 
 <a id="jour-90"></a>
-## Jour 90 : Sunday 17/01/2027
+## Jour 90 : dimanche 17/01/2027
 
 ### J90 · Q1 · facile · Familles · texte
 
