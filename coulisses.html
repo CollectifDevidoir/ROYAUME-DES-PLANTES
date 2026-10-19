@@ -69,6 +69,8 @@ pre.sql{background:var(--soft);border-radius:10px;padding:10px 12px;overflow-x:a
 .vb .g{stroke:var(--grid);stroke-width:1}
 .vb rect.b{fill:var(--ac)}
 .vb rect.h{fill:transparent;cursor:default}
+.vb g[tabindex]:focus-visible{outline:none}
+.vb g[tabindex]:focus-visible rect.h{stroke:var(--ac);stroke-width:2;rx:3}
 .vb rect.h:hover+rect.b,.vb g.on rect.b{fill:var(--ac2)}
 /* tableaux */
 .tw{overflow-x:auto;border:1px solid var(--bd);border-radius:12px}
@@ -141,7 +143,8 @@ function vbar(rows,pas,lib){if(!rows.length||!rows.some(r=>+r.v))return '<p clas
   const W=Math.max(300,Math.min(1120,vue.clientWidth-38)),H=W<500?180:220,g=36,b=22,n=rows.length,max=Math.max(...rows.map(r=>+r.v||0)),e=Math.pow(10,Math.floor(Math.log10(max))),top=Math.ceil(max/e)*e||1;
   const bw=(W-g-8)/n,y=v=>H-b-(H-b-12)*v/top,ticks=[0,top/2,top];
   return `<div class="vb"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(lib)}">${ticks.map(t=>`<line class="g" x1="${g}" x2="${W-4}" y1="${y(t)}" y2="${y(t)}"/><text x="${g-6}" y="${y(t)+4}" text-anchor="end">${nb(t)}</text>`).join('')}
-${rows.map((r,i)=>{const x=g+i*bw,h=H-b-y(+r.v||0);return `<g tabindex="0" data-tip="${esc(r.tip)}"><rect class="h" x="${x}" y="8" width="${bw}" height="${H-b-8}"/><rect class="b" x="${(x+Math.min(1,bw*.12)).toFixed(1)}" y="${(H-b-Math.max(h,+r.v?2:0)).toFixed(1)}" width="${Math.max(1,bw-2*Math.min(1,bw*.12)).toFixed(1)}" height="${Math.max(h,+r.v?2:0).toFixed(1)}" rx="${Math.min(4,bw/3).toFixed(1)}"/>${i%pas===0||i===n-1&&n<=31?`<text x="${(i===n-1?x+bw:i===0?x:x+bw/2).toFixed(1)}" y="${H-6}" text-anchor="${i===n-1?'end':i===0?'start':'middle'}">${esc(r.x)}</text>`:''}</g>`}).join('')}</svg></div>`}
+${rows.map((r,i)=>{const x=g+i*bw,h=H-b-y(+r.v||0);return `<g tabindex="0" data-tip="${esc(r.tip)}"><rect class="h" x="${x}" y="8" width="${bw}" height="${H-b-8}"/><rect class="b" x="${(x+Math.min(1,bw*.12)).toFixed(1)}" y="${(H-b-Math.max(h,+r.v?2:0)).toFixed(1)}" width="${Math.max(1,bw-2*Math.min(1,bw*.12)).toFixed(1)}" height="${Math.max(h,+r.v?2:0).toFixed(1)}" rx="${Math.min(4,bw/3).toFixed(1)}"/></g>`}).join('')}
+${rows.map((r,i)=>i%pas===0||i===n-1&&n<=31?`<text x="${(i===n-1?g+n*bw:i===0?g:g+i*bw+bw/2).toFixed(1)}" y="${H-6}" text-anchor="${i===n-1?'end':i===0?'start':'middle'}">${esc(r.x)}</text>`:'').join('')}</svg></div>`}
 const tableau=(tete,lignes)=>lignes.length?`<div class="tw"><table><thead><tr>${tete.map(t=>`<th${t[1]?' class="n"':''}>${t[0]}</th>`).join('')}</tr></thead><tbody>${lignes.map(l=>`<tr>${l.map((c,i)=>`<td${tete[i][1]?' class="n"':''}>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`:'<p class="vide">Pas encore de données.</p>';
 const carte=(t,c,cls,note)=>`<section class="card${cls?' '+cls:''}"><h2>${t}</h2>${c}${note?`<p class="note">${note}</p>`:''}</section>`;
 // ---------- rendu ----------
@@ -152,7 +155,8 @@ function rendu(d){derniers=d;
   const kpis=`<div class="kpis">${kp(nb(R.appareils),'appareils différents',nb(R.nouveaux)+' nouveaux')}${kp(nb(R.joueurs),'ont joué',nb(R.exercices)+' exercices, '+pc(R.reussite)+' de réussite')}
 ${kp(pc(d.retours&&d.retours.j7),'reviennent après 7 jours',`après 1 jour ${pc(d.retours&&d.retours.j1)} · après 30 jours ${pc(d.retours&&d.retours.j30)}`)}
 ${kp(R.minutes_mediane===null?'–':nb(R.minutes_mediane)+' min','par session (médiane)',R.exos_mediane===null?nb(R.sessions)+' sessions':nb(R.exos_mediane)+' exercices par session · '+nb(R.sessions)+' sessions')}
-${kp(pc(R.telephone),'sur téléphone',pc(R.installee)+' ont installé l\'appli')}</div>`;
+${kp(pc(R.telephone),'sur téléphone',pc(R.installee)+' ont installé l\'appli')}
+${kp(R.comptes===undefined?'–':nb(R.comptes),'comptes utilisateurs',R.comptes===undefined?'relance supabase/schema.sql pour ce chiffre':nb(R.comptes_pseudo)+' avec un pseudo · total depuis le début, hors période')}</div>`;
   const jours=vbar(J.map(x=>({x:jcourt(x.jour),v:x.appareils,tip:`<b>${jcourt(x.jour)}</b><br>${nb(x.appareils)} appareils dont ${nb(x.nouveaux)} nouveaux<br>${nb(x.ouvertures)} ouvertures · ${nb(x.joueurs)} joueurs<br>${nb(x.exercices)} exercices${x.reussite!==null?', '+x.reussite+' % de réussite':''}`})),pas,'Appareils par jour');
   const exos=vbar(J.map(x=>({x:jcourt(x.jour),v:x.exercices,tip:`<b>${jcourt(x.jour)}</b><br>${nb(x.exercices)} exercices${x.reussite!==null?' · '+x.reussite+' % de réussite':''}<br>${nb(x.joueurs)} joueurs`})),pas,'Exercices par jour');
   const coh=(d.cohortes||[]).slice(-12),cell=v=>v===null||v===undefined?'<td class="c"><span class="note">–</span></td>':`<td class="c" style="background:color-mix(in srgb,var(--ac) ${Math.round(Math.min(100,v)*.85)}%,var(--card));color:${v>=55?'var(--on)':'var(--fg)'}">${v} %</td>`;

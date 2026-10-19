@@ -566,6 +566,8 @@ begin
       'nouveaux', (select count(*) from prem where debut between d and f),
       'ouvertures', (select coalesce(sum(ouvertures), 0) from vis),
       'avec_compte', (select count(distinct appareil) from vis where compte),
+      'comptes', (select count(*) from auth.users),
+      'comptes_pseudo', (select count(*) from profils),
       'joueurs', (select count(distinct appareil) from jx),
       'exercices', (select coalesce(sum(vues), 0) from jx),
       'reussite', (select round(100.0 * sum(justes) / nullif(sum(vues), 0)) from jx),

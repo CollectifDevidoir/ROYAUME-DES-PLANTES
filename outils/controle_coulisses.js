@@ -60,6 +60,8 @@ async function remplir(db){
   const t=await p.textContent('#vue');
   for(const s of ['appareils différents','reviennent après 7 jours','Fréquentation','Fidélité','Fonctions utilisées','Sessions','Appareils','Heures de jeu','Plantes les plus ratées','Confusions','Photos qui piègent','Photos signalées','Erreurs techniques','Réglages choisis'])ok(t.includes(s),'section affichée : '+s);
   ok(await p.evaluate(()=>document.querySelector('#per button[aria-pressed="true"]').dataset.n==='30'),'période par défaut : 30 jours');
+  ok(await p.evaluate(()=>[...document.querySelectorAll('.kpi')].some(k=>/^2comptesutilisateurs/.test(k.textContent.replace(/\s/g,'')))),'indicateur : 2 comptes utilisateurs (les deux comptes de test)');
+  ok(await p.evaluate(()=>{const g=document.querySelector('.vb svg').querySelectorAll('g[data-tip]'),r=g[g.length-1].getBoundingClientRect(),h=g[g.length-1].querySelector('rect.h').getBoundingClientRect();return Math.abs(r.width-h.width)<1}),'dernière barre : la zone de sélection (focus) a la largeur de la colonne, pas celle de l\'étiquette');
   ok(await p.evaluate(()=>document.querySelectorAll('.vb svg g[data-tip]').length)>=30+30+24,'graphiques : une barre par jour (deux graphiques) et par heure');
   ok(/Carex testacea/.test(await p.textContent('.grid'))&&/Sapin de Corée/.test(await p.textContent('.grid')),'plantes les plus ratées, avec leur nom commun (Carex testacea, Abies koreana : Sapin de Corée)');
   ok(await p.evaluate(()=>[...document.querySelectorAll('.ph .im')].some(x=>/photos\/10778\/square\.jpg/.test(x.style.backgroundImage))),'vignette de la photo tirée de l\'index de l\'appli');
