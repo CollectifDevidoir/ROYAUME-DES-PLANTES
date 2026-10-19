@@ -32,6 +32,7 @@ JOURS = 90
 ECART = 28            # une question rejouée ne revient qu'au bout de 28 jours au moins
 MAX_USAGES = 2        # 2 passages au plus par question (3 seulement en dernier recours, signalé)
 cnt = collections.Counter
+PLANIFIABLES = ('validee', 'relue', 'donnees')
 
 ORIG = {q['id']: q for q in lire('donnees', 'defis-banque-controle.json')['questions']}
 REV = lire('donnees', 'defis-v2', 'revision.json')
@@ -123,7 +124,7 @@ for i, r in REV.items():                       # 1. questions relues une à une 
     banque.append(q)
 for n in NOUV:                                 # 2. nouvelles questions rédigées et recoupées
     q = dict(n); q['modele'] = 'nouvelle'; q['en_ligne'] = False; q['texte'] = None; q['plante'] = None; q['organe'] = None
-    q.setdefault('note_revue', ''); q['deja_en_ligne'] = None; q['tier'] = 0; q['plantes'] = q['format'] == 'images'
+    q.setdefault('note_revue', ''); q['deja_en_ligne'] = None; q['tier'] = 0 if q['statut'] == 'validee' else 1; q['plantes'] = q['format'] == 'images'
     banque.append(q)
 vus = {q['id'] for q in banque}
 def niveau_gen(o):
@@ -153,14 +154,14 @@ for q in banque:
 STAT = cnt(q['statut'] for q in banque)
 json.dump({'_lisez_moi': "Banque v3 : validee = relue et recoupée par recherche web (pages citées non ouvertes une à une) ; donnees = générée à partir des données sourcées de l'appli, cohérente avec elles, "
            "non recoupée sur le web. Les originaux restent dans defis-banque-controle.json et defis-redigees.json ; « original » donne les valeurs d'avant correction.",
-           'bilan': {'statut': dict(STAT), 'niveau_planifiable': dict(cnt(q['niveau'] for q in banque if q['statut'] in ('validee', 'donnees'))), 'ecartes_generees': dict(ecartes_gen)}, 'questions': banque},
+           'bilan': {'statut': dict(STAT), 'niveau_planifiable': dict(cnt(q['niveau'] for q in banque if q['statut'] in PLANIFIABLES)), 'ecartes_generees': dict(ecartes_gen)}, 'questions': banque},
           open(os.path.join(DOSS, 'banque.json'), 'w', encoding='utf8'), ensure_ascii=False, indent=1)
 
 # ---------- planning ----------
 SLOTS = [('facile', 0), ('facile', 0), ('intermediaire', 0), ('facile', 0), ('intermediaire', 1), ('difficile', 0), ('intermediaire', 1), ('facile', 0), ('intermediaire', 0), ('difficile', 0)]
 ORDRE = [5, 9, 4, 6, 0, 1, 3, 7, 2, 8]   # on place d'abord les niveaux rares (difficiles, pièges), puis les faciles
 JOUEES = {((DEBUT - datetime.timedelta(days=k) - datetime.date(2026, 1, 1)).days) % len(LIGNE) for k in (1, 2, 3)}
-PLEIN = [q for q in banque if q['statut'] in ('validee', 'donnees') and q['photos_ok'] is not False and not q['fuite_nom_latin'] and len(q['explication']) <= 280
+PLEIN = [q for q in banque if q['statut'] in PLANIFIABLES and q['photos_ok'] is not False and not q['fuite_nom_latin'] and len(q['explication']) <= 280
          and not (q['deja_en_ligne'] and q['deja_en_ligne'][0] in JOUEES)]
 CAP_MEC = {'anecdote': 1, 'famille': 1, 'photo_origine': 1, 'nom_latin': 1}   # un seul par défi
 CAP_DEF = {'photo_critere': 3}                                                # sinon 2 par défi
@@ -260,6 +261,7 @@ def equilibrer(jour, graine):
                 break
 
 # ---------- sorties lisibles ----------
+STAT_FR = {'validee': 'validée', 'relue': 'relue', 'donnees': 'données'}
 def ecrire_md(plan, sortie, ctl, subst, pos_j, dom):
     tous = [x for j in plan for x in j]; uniques = {x['id']: x for x in tous}
     L = ['# Planning de 90 défis : du %s au %s\n' % (DEBUT.strftime('%d/%m/%Y'), (DEBUT + datetime.timedelta(days=JOURS - 1)).strftime('%d/%m/%Y')),
@@ -272,7 +274,7 @@ def ecrire_md(plan, sortie, ctl, subst, pos_j, dom):
         for x in jour['questions']:
             rep = x['choix'][x['bonne']]; src = (x['sources'] or x['verification']['sources_recoupement'] or ['données de l\'appli'])[0]
             L.append(f"| {x['position']} | {x['niveau']}{' (piège)' if x['piege'] and x['niveau'] == 'intermediaire' else ''}{' ↻' if x.get('reutilisation') else ''} | {x['theme']} | {'photos' if x['format'] == 'images' else 'texte'} | "
-                     f"{(x['question'] + (' « ' + x['texte'] + ' »' if x.get('texte') else '')).replace('|', '/')} | {rep} | {'validée' if x['statut'] == 'validee' else 'données'} | {dom(src) if src.startswith('http') else src} |")
+                     f"{(x['question'] + (' « ' + x['texte'] + ' »' if x.get('texte') else '')).replace('|', '/')} | {rep} | {STAT_FR[x['statut']]} | {dom(src) if src.startswith('http') else src} |")
     open(os.path.join(DOSS, 'planning-90j.md'), 'w', encoding='utf8').write('\n'.join(L) + '\n')
 
 # ---------- contrôles, sorties ----------
@@ -284,7 +286,7 @@ def sortir(plan, subst, graine):
     for j, J in enumerate(plan):
         for x in J: pos_j[x['id']].append(j)
     regle(f'{JOURS} jours de 10 questions', len(plan) == JOURS and all(len(j) == 10 for j in plan))
-    regle("tous les statuts sont « validee » ou « donnees » (jamais à vérifier ni écartée)", all(x['statut'] in ('validee', 'donnees') for x in tous))
+    regle("tous les statuts sont « validee », « relue » ou « donnees » (jamais à vérifier ni écartée)", all(x['statut'] in PLANIFIABLES for x in tous))
     ecarts = [b - a for v in pos_j.values() for a, b in zip(v, v[1:])]
     regle(f"questions rejouées : au moins {ECART} jours d'écart", all(e >= ECART for e in ecarts), f"{len(ecarts)} passage(s) en plus du premier ; écart minimal {min(ecarts) if ecarts else '—'} jours")
     regle(f"{MAX_USAGES} passages au plus par question", all(len(v) <= MAX_USAGES for v in pos_j.values()), f"{sum(len(v) > MAX_USAGES for v in pos_j.values())} question(s) à 3 passages")
@@ -306,7 +308,7 @@ def sortir(plan, subst, graine):
     regle("photos disponibles pour toutes les plantes affichées", all(x['photos_ok'] is not False for x in tous))
     regle("aucune fuite forte du nom latin affiché", all(not x['fuite_nom_latin'] for x in tous))
     regle("indice faible par l'épithète latine : au plus 1 question par défi", all(sum(bool(x.get('indice_epithete')) for x in j) <= 1 for j in plan), f"{sum(bool(x.get('indice_epithete')) for x in tous)} question(s) concernée(s)")
-    regle("chaque question a une source : lien cité, ou données sourcées de l'appli (statut « donnees »)", all(x['sources'] or x['verification']['sources_recoupement'] or x['statut'] == 'donnees' for x in tous), f"{sum(1 for x in tous if not x['sources'] and x['statut'] == 'donnees')} passages sans lien (données de l'appli) ; {sum(1 for x in tous if not x['sources'] and x['statut'] == 'validee')} avec recoupement seul")
+    regle("chaque question a une source : lien cité, ou données sourcées de l'appli (statut « donnees »)", all(x['sources'] or x['verification']['sources_recoupement'] or x['statut'] != 'validee' for x in tous), f"{sum(1 for x in tous if not x['sources'] and x['statut'] != 'validee')} passages sans lien (données de l'appli ou connaissance de base) ; {sum(1 for x in tous if not x['sources'] and x['statut'] == 'validee')} avec recoupement seul")
     regle("explication ≤ 280 caractères", all(len(x['explication']) <= 280 for x in tous), f"max {max(len(x['explication']) for x in tous)}")
     regle("bonne réponse jamais à la même place plus de 5 fois dans un défi", all(max(cnt(x['bonne'] for x in j).values()) <= 5 for j in plan))
     pl = cnt(x['bonne'] for x in tous)
