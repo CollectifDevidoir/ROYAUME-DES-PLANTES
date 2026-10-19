@@ -1,5 +1,6 @@
 // Défi du jour et compte, sans réseau (faux Supabase adossé à PGlite, comme controle_comptes.js) :
-// - les réponses au défi ne comptent pas dans le classement d'Assiduité (jour, et jours passés renvoyés au compte) ;
+// - mode à part : les réponses au défi ne comptent ni pour l'objectif du jour, ni pour Progrès / Régularité,
+//   ni pour le classement d'Assiduité (jour, et jours passés renvoyés au compte) ;
 // - défi terminé sur ordinateur → téléphone connecté au même compte : pas de seconde partie, résultat de la première ;
 // - même quand la progression sauvegardée sur le compte ne contient pas le défi (seul le résultat publié fait foi),
 //   et même si l'on touche « Défi du jour » dès l'ouverture, avant la fin de la connexion.
@@ -30,13 +31,16 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   await A.p.evaluate(()=>{for(let i=0;i<10;i++){dfRepond(i%2?0:dfSerie(dfJour())[i].bonne);if(i<9)dfQuestion()}});
   await att(A.p,()=>dfFait()&&dfEtat().pub===1);await A.p.evaluate(()=>dfResultat());
   const hA=await A.p.evaluate(()=>({h:st.hist[today()],b:monBilan(),s:dfScore(dfEtat())}));
-  ok(hA.h.n===12&&hA.h.dn===10&&hA.b.ex===2,'ordinateur : objectif du jour 12 réponses (2 exercices + 10 du défi), Assiduité 2 exercices '+JSON.stringify(hA.h));
+  ok(hA.h.n===2&&hA.h.dn===undefined&&hA.b.ex===2,'ordinateur : après le défi, objectif du jour et Assiduité à 2 exercices (le défi n\'y compte pas) '+JSON.stringify(hA.h));
+  ok(await A.p.evaluate(()=>{pro();return /\b2\b/.test($('pro').innerText)&&!/\b12\b/.test($('pro').innerText)}),'Progrès : 2 exercices aujourd\'hui, pas 12');
   await A.p.evaluate(()=>sbEnvoi());
-  let J=await jours();ok(J.length===1&&J[0].exercices===2&&J[0].justes===hA.h.ok-hA.h.dok,'classement d\'Assiduité du jour (serveur) : 2 exercices, le défi n\'y est pas '+JSON.stringify(J));
+  let J=await jours();ok(J.length===1&&J[0].exercices===2&&J[0].justes===hA.h.ok,'classement d\'Assiduité du jour (serveur) : 2 exercices, le défi n\'y est pas '+JSON.stringify(J));
   const cl=await A.p.evaluate(async()=>{sbVue='a';sbPer='j';sbTab=null;const c=await sbCl();const d=document.createElement('div');d.innerHTML=c.h;return d.querySelector('.tbl li.moi .tbs b').textContent});
   ok(cl==='2','profil, Assiduité « Aujourd\'hui » : 2 exercices affichés');
-  // jours passés : un jour avec 5 exercices dont 3 du défi, un jour avec seulement le défi
-  await A.p.evaluate(()=>{st.hist[dstr(Date.now()-864e5)]={n:5,ok:4,dn:3,dok:3};st.hist[dstr(Date.now()-2*864e5)]={n:10,ok:7,dn:10,dok:7};save();sbJk=''});await A.p.evaluate(()=>sbEnvoi());
+  // jours enregistrés par la version précédente (défi compté à part : dn, dok) : 5 réponses dont 3 du défi, puis un jour de défi seul ;
+  // nettoyés au chargement de la progression
+  await A.p.evaluate(()=>{st.hist[dstr(Date.now()-864e5)]={n:5,ok:4,dn:3,dok:3};st.hist[dstr(Date.now()-2*864e5)]={n:10,ok:7,dn:10,dok:7};fix();save();sbJk=''});
+  ok(await A.p.evaluate(()=>{const a=st.hist[dstr(Date.now()-864e5)],b=st.hist[dstr(Date.now()-2*864e5)];return a.n===2&&a.ok===1&&!('dn' in a)&&b.n===0}),'ancienne progression : les réponses au défi sont retirées de l\'historique');await A.p.evaluate(()=>sbEnvoi());
   J=await jours();const hier=J.find(x=>x.j===(new Date(Date.now()-864e5)).toISOString().slice(0,10))||J[J.length-2];
   ok(J.length===2&&hier&&hier.exercices===2&&hier.justes===1,'jours passés : seuls les exercices ordinaires sont renvoyés ; un jour de défi seul ne compte pas comme jour joué '+JSON.stringify(J));
   const sem=await A.p.evaluate(async()=>{const r=await sbRpc('tableau_periode',{p_debut:dstr(Date.now()-3*864e5),p_fin:today()});return r.find(x=>x.moi)});
