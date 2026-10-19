@@ -1,5 +1,6 @@
 // Famille du jour : chaque famille proposée a ses repères de reconnaissance et une curiosité sourcée,
-// et ses 4 cartes tiennent sur un petit téléphone (360×640) sans texte coupé.
+// ses cartes (4, ou 3 sans page des genres pour une famille d'un seul genre) tiennent sur un petit téléphone (360×640)
+// sans texte coupé, et les chiffres affichés sont ceux de la liste du jeu.
 // Usage : node outils/controle_familles.js   (variable F = autre fichier html)
 const {open}=require('./banc_essai.js');
 let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
@@ -21,6 +22,11 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   }
   await p.evaluate(()=>$('fam').close());
   ok(!deb.length,'360×640 : toutes les cartes tiennent sans défiler '+deb.join(' ; '));
+  const chif=await p.evaluate(()=>FE().filter(f=>{openFamily(f);const sp=S.filter(s=>FAM[gen(s[0])]===f),ng=new Set(sp.map(s=>gen(s[0]))).size,
+      b=[...document.querySelectorAll('#fz .fst b')].map(e=>e.textContent),n=document.querySelectorAll('#fz .fcard').length,
+      ty=[...document.querySelectorAll('#fz .fty li b')].reduce((a,e)=>a+ +e.textContent,0);
+    return b[0]!==String(sp.length)||b[1]!==String(ng)||(FW[f]&&b[2].replace(/\s/g,'')!=='≈'+FW[f].replace(/\s/g,''))||ty!==sp.length||n!==(ng>1?4:3)}));
+  ok(!chif.length,'chiffres de la carte 1 (espèces, genres, monde, types) et nombre de cartes conformes aux données '+chif.join(', '));
   ok(await p.evaluate(()=>{openFamily(FE()[0]);return document.querySelectorAll('#fdots i').length===document.querySelectorAll('#fz .fcard').length}),'autant de points que de cartes');
   ok(await p.evaluate(()=>{const a=document.querySelector('#fz .fsrc a');return !!a&&a.target==='_blank'&&a.rel.includes('noopener')}),'la source s\'ouvre dans un nouvel onglet');
   ok(p.errs.length===0,'aucune erreur JavaScript '+JSON.stringify(p.errs));

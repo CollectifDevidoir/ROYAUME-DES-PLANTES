@@ -558,7 +558,7 @@ html:has(#fam[open]){overflow:hidden}
 .fcard h3 span{margin-left:8px;font:600 .8rem var(--fx);color:var(--mu)}
 .f1{align-items:center;justify-content:center;text-align:center;gap:6px;color:#14281a;background:linear-gradient(165deg,hsl(var(--h) 75% 94%),hsl(var(--h) 60% 80%))}
 .f1 small{color:#14281a;opacity:.7}
-.f1 .tgi{width:104px;height:104px;margin-bottom:10px}
+.f1>.tgi{width:72px;height:72px;margin-bottom:6px}
 .f1 h2{font:600 2.4rem/1.05 var(--ft);margin:2px 0;color:#14281a}
 .f1 p{margin:0;font:italic 1.05rem var(--ft);opacity:.75}
 
@@ -586,6 +586,45 @@ html:has(#fam[open]){overflow:hidden}
 .fcu{margin:2px 0 8px;padding:16px;border-radius:16px;background:rgba(47,107,63,.10);font:1.08rem/1.5 var(--ft)}
 
 .fsrc{margin:0 0 14px;font-size:.78rem;color:var(--mu)}.fsrc a{color:var(--ac)}
+/* fiche famille, carte 1 : chiffres clés et types de plantes, sur le fond coloré de la famille */
+.f1{gap:0}
+.fst{display:flex;gap:8px;width:100%;margin:20px 0 0}
+.fst>div{flex:1 1 0;min-width:0;padding:12px 4px 10px;border-radius:16px;background:rgba(255,255,255,.45)}
+.fst>.fst-a{background:rgba(255,255,255,.8);box-shadow:0 6px 16px -10px rgba(20,40,26,.5)}
+.fst b{display:block;font:600 1.85rem/1 var(--ft);color:#14281a;white-space:nowrap}
+.fst>.fst-a b{font-size:2.3rem}
+.fst>.fst-w b{font-size:1.5rem;line-height:1.25}
+.fst span{display:block;margin-top:6px;font:600 .64rem/1.25 var(--fx);letter-spacing:.06em;text-transform:uppercase;color:#14281a;opacity:.72}
+.fty{width:100%;margin-top:14px}
+.fbar{display:flex;gap:3px;height:10px;margin:0 0 10px;border-radius:5px;overflow:hidden}
+.fbar i,.fty li>i{background:#14281a;opacity:.82}
+.fbar i:nth-child(2),.fty li:nth-child(2)>i{opacity:.55}.fbar i:nth-child(3),.fty li:nth-child(3)>i{opacity:.36}.fbar i:nth-child(4),.fty li:nth-child(4)>i{opacity:.22}.fbar i:nth-child(5),.fty li:nth-child(5)>i{opacity:.12}
+.fty ul{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 14px;margin:0;padding:0;list-style:none;font-size:.9rem;color:#14281a}
+.fty li{display:flex;align-items:center;gap:4px}
+.fty li>i{width:8px;height:8px;border-radius:2px}
+.fty .tgi{width:26px;height:26px;margin:0}
+.f1 .fds{margin:16px 0 34px;max-width:28em;font:italic 1rem/1.4 var(--ft);color:#14281a;opacity:.8}
+/* carte 3 : genres les mieux représentés dans le jeu, puis la curiosité sourcée */
+.fgn{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:0 0 10px;padding:0;list-style:none}
+.fgn li{display:grid;grid-template-columns:38px 1fr;column-gap:8px;align-items:center;min-width:0;padding:5px;border-radius:14px;background:rgba(47,107,63,.08)}
+.fgp{grid-row:1/3;position:relative;width:38px;height:38px;border-radius:10px;overflow:hidden;background:#dfe7d6}
+.fgp img{width:100%;height:100%;object-fit:cover;display:block}
+.fgn b{align-self:end;min-width:0;-webkit-hyphens:auto;hyphens:auto;overflow-wrap:anywhere;font-size:1rem;line-height:1.15}
+.fgn li small{align-self:start;font:600 .74rem var(--fx);letter-spacing:0;text-transform:none;color:var(--mu)}
+.fgr{margin:0 0 14px;font-size:.86rem;line-height:1.4;color:var(--mu)}
+.fsv>b{display:block;margin-bottom:6px;font:600 11px/1.3 var(--fx);letter-spacing:.08em;text-transform:uppercase;color:var(--mu)}
+.fsv .fcu{font-size:1rem;line-height:1.45;padding:12px 14px;margin-bottom:6px}
+.fsv .fsrc{margin-bottom:6px}
+.fgn b.fgl{font-size:.8rem}
+@media (max-width:380px){.fgn li{grid-template-columns:32px 1fr;column-gap:7px;padding:4px}.fgp{width:32px;height:32px;border-radius:8px}}
+@media (max-width:340px){.fgn li{grid-template-columns:1fr;padding:6px 8px}.fgp{display:none}.fst{gap:5px}.fst>div{padding-inline:2px}.fst>.fst-w b{font-size:1.1rem}}
+.fc4>.fsv{margin-bottom:12px}.fc4>.fsv .fcu{font-size:.95rem;padding:10px 12px}
+/* carte 4 : progression et espèces rangées par type */
+.fpr{height:8px;margin:-4px 0 14px;border-radius:4px;background:var(--bd);overflow:hidden}
+.fpr i{display:block;height:100%;min-width:0;border-radius:4px;background:var(--ac)}
+.fgh{grid-column:1/-1;margin:8px 0 0;font:600 11px/1.3 var(--fx);letter-spacing:.08em;text-transform:uppercase;color:var(--mu)}
+.fgh:first-child{margin-top:0}
+@media (max-height:700px){.fst>.fst-w b{font-size:1.3rem;line-height:1.25}.f1>.tgi{width:52px;height:52px}.f1 h2{font-size:2.1rem}.fst{margin-top:14px}.fst b{font-size:1.6rem}.fst>.fst-a b{font-size:1.95rem}.f1 .fds{margin-top:12px;font-size:.95rem}.fgn li{padding:4px}.fsv .fcu{padding:10px 12px;font-size:.95rem}}
 @media (max-height:700px){.fc2 .frx{padding:10px 12px;margin-bottom:8px;font-size:1rem}.fc2 h3{margin-bottom:8px}.fo li{padding:6px 0}.fo p{font-size:.9rem}.fc2 .fdi{padding:9px 12px;margin-bottom:4px}.fc2 .fnx{padding:6px 18px}}
 @media(prefers-color-scheme:dark){.fdi{background:rgba(212,167,44,.14)}.fdi b{color:#e2b85a}.fcu{background:rgba(143,207,159,.10)}}
 /* fond sombre et flou : fiche ouverte, cartes, menus */
@@ -1223,6 +1262,8 @@ dialog h4{font:600 1.2rem/1.2 var(--ft)!important;color:var(--fg)!important;marg
   .fav .tgi{width:18px;height:18px}
   .fav.fpv{left:10px}.fav.fnv{right:10px}
   .fav[hidden]{display:none}
+  /* carte centrée : les flèches passent hors de la carte pour ne pas couvrir le texte */
+  @media (min-width:760px) and (min-height:600px){#fam{overflow:visible}.fav.fpv{left:-58px}.fav.fnv{right:-58px}}
   .fz{cursor:grab}.fz.tire{cursor:grabbing;user-select:none}
 }
 
@@ -3518,14 +3559,30 @@ const cap=x=>{x=String(x||'').trim();return x?x[0].toUpperCase()+x.slice(1):x};
 function openFamily(f){usage('famille_jour');
   const d=$('fam'),z=$('fz'),sp=S.filter(s=>FAM[gen(s[0])]===f),own=s=>(st.sp[s[0]]||{b:0}).b>=4,info=FI[f],got=sp.filter(own).length;
   famCur=f;shTok++;st.fd={d:today()};save();stats();
-  const nx='<button class="fnx" type="button">Suivant '+ico('chev-r','ic-in')+'</button>';
-  z.innerHTML=`<section class="fcard f1" style="--h:${famHue(f)}"><span class="tgi">${BULB}</span><small>Famille du jour</small><h2>${f}</h2><p>${frFam(f)}</p>${nx}</section>`+
-   `<section class="fcard fc2"><small>Reconnaître la famille</small><h3>${f}</h3><p class="frx"><b>Le réflexe</b>${cap(info[1])}</p><ul class="fo">${[['Feuilles','feuilles',info[2]],['Fleurs','fleurs',info[3]],['Fruits','fruits',info[4]]].map(([t,k,v])=>`<li class="fo-${k}"><span>${t}</span><p>${cap(v)}</p></li>`).join('')}</ul>${info[5]?`<p class="fdi"><b>Le piège</b>${cap(info[5])}</p>`:''}${nx}</section>`+
-   `<section class="fcard fc3"><small>Le saviez-vous ?</small><h3>${frFam(f)}</h3>${FC[f]?`<p class="fcu">${esc(FC[f][0])}</p><p class="fsrc">Source : <a href="${FC[f][2]}" target="_blank" rel="noopener">${esc(FC[f][1])}</a></p>`:''}${FX[f]&&FX[f][0]?`<p class="fds">${esc(FX[f][0])}</p>`:''}${FW[f]?`<p class="fwd"><b>≈ ${FW[f]}</b> espèces dans le monde</p>`:''}${nx}</section>`+
-   `<section class="fcard"><small>Dans le jeu</small><h3>${sp.length} espèces<span>${got} acquise${got>1?'s':''} ${ico('coche','ic-in')}</span></h3><div class="fgrid" id="fam-grid">${sp.map(s=>`<div class="pk${own(s)?' ok':''}" data-l="${s[0]}" title="${s[0]}" tabindex="0" role="button"><b>${s[1]}</b></div>`).join('')}</div><button class="big" id="fam-go" type="button">S'exercer sur cette famille</button></section>`;
+  const nx='<button class="fnx" type="button">Suivant '+ico('chev-r','ic-in')+'</button>',pl=(n,m)=>n+' '+m+(n>1?'s':''),nb=x=>String(x).replace(/ /g,' ');
+  // tout est compté sur la liste du jeu : types (arbre, arbuste…), genres, espèces acquises
+  const ty=Object.keys(T).filter(k=>k!=='tout').map(k=>[k,sp.filter(s=>s[2]===k)]).filter(x=>x[1].length),
+    tyl=(k,n)=>{const t=T[k].toLowerCase();return n>1?t:t.replace(/s$/,'')},
+    gs={};sp.forEach(s=>{const g=gen(s[0]);(gs[g]=gs[g]||[]).push(s)});
+  const gl=Object.entries(gs).sort((a,b)=>b[1].length-a[1].length||a[0].localeCompare(b[0])),gt=gl.slice(0,6),gr=gl.slice(6);
+  const sv=FC[f]?`<div class="fsv"><b>Le saviez-vous ?</b><p class="fcu">${esc(FC[f][0])}</p><p class="fsrc">Source : <a href="${FC[f][2]}" target="_blank" rel="noopener">${esc(FC[f][1])}</a></p></div>`:'';
+  const tile=s=>`<div class="pk${own(s)?' ok':''}" data-l="${s[0]}" title="${s[0]}" tabindex="0" role="button"><b>${s[1]}</b></div>`;
+  z.innerHTML=`<section class="fcard f1" style="--h:${famHue(f)}"><span class="tgi">${BULB}</span><small>Famille du jour</small><h2>${f}</h2><p>${frFam(f)}</p>`+
+     `<div class="fst"><div class="fst-a"><b>${sp.length}</b><span>espèces dans le jeu</span></div><div><b>${gl.length}</b><span>${gl.length>1?'genres':'genre'}</span></div>${FW[f]?`<div class="fst-w"><b>≈ ${nb(FW[f])}</b><span>espèces dans le monde</span></div>`:''}</div>`+
+     `<div class="fty"><div class="fbar" aria-hidden="true">${ty.map(([k,a])=>`<i style="flex:${a.length}"></i>`).join('')}</div><ul>${ty.map(([k,a])=>`<li><i aria-hidden="true"></i><span class="tgi">${catIcon(k)}</span><b>${a.length}</b> ${tyl(k,a.length)}</li>`).join('')}</ul></div>`+
+     `${FX[f]&&FX[f][0]?`<p class="fds">${esc(FX[f][0])}</p>`:''}${nx}</section>`+
+   `<section class="fcard fc2"><small>Reconnaître la famille</small><h3>${f}</h3><p class="frx"><b>Le réflexe</b>${cap(info[1])}</p><ul class="fo">${[['Feuilles','feuilles',info[2]],['Fleurs','fleurs',info[3]],['Fruits','fruits',info[4]]].map(([t,k,v])=>`<li class="fo-${k}"><span>${t}</span><p>${cap(v)}</p></li>`).join('')}</ul>${info[5]?`<p class="fdi"><b>Ne pas confondre</b>${cap(info[5])}</p>`:''}${nx}</section>`+
+   // un seul genre : pas de page des genres, la curiosité passe en tête de la collection
+   (gl.length>1?`<section class="fcard fc3"><small>Les genres du jeu</small><h3>${gl.length>gt.length?'Les mieux représentés':pl(gl.length,'genre')}</h3>`+
+     `<ul class="fgn">${gt.map(([g,a])=>`<li><span class="fgp" data-l="${a[0][0]}"></span><b${g.length>10?' class="fgl"':''}><em>${g}</em></b><small>${pl(a.length,'espèce')}</small></li>`).join('')}</ul>`+
+     `${gr.length?`<p class="fgr">Et ${gr.length} ${gr.length>1?'autres genres':'autre genre'} : ${gr.slice(0,6).map(([g])=>`<em>${g}</em>`).join(', ')}${gr.length>6?'…':''}</p>`:''}`+
+     `${sv}${nx}</section>`:'')+
+   `<section class="fcard fc4">${gl.length>1?'':sv}<small>Ta collection</small><h3>${got} / ${sp.length}<span>${got>1?'acquises':'acquise'} ${ico('coche','ic-in')}</span></h3><div class="fpr" role="progressbar" aria-label="Espèces acquises" aria-valuemin="0" aria-valuemax="${sp.length}" aria-valuenow="${got}"><i style="width:${Math.round(got/sp.length*100)}%"></i></div>`+
+     `<div class="fgrid" id="fam-grid">${ty.length>1?ty.map(([k,a])=>`<p class="fgh">${T[k]} · ${a.length}</p>${a.map(tile).join('')}`).join(''):sp.map(tile).join('')}</div><button class="big" id="fam-go" type="button">S'exercer sur cette famille</button></section>`;
+  $('fdots').innerHTML=[...z.children].map((_,i)=>i?'<i></i>':'<i class="on"></i>').join('');
   if(d.showModal){if(!d.open)d.showModal()}else d.setAttribute('open','');
   z.scrollLeft=0;famDots(0);
-  [...document.querySelectorAll('#fam-grid .pk')].forEach((e,i)=>setTimeout(()=>tileImg(e),i*80));
+  [...document.querySelectorAll('#fz .fgp,#fam-grid .pk')].forEach((e,i)=>setTimeout(()=>tileImg(e),i*80));
 }
 const famDots=i=>{document.querySelectorAll('#fdots i').forEach((e,k)=>e.classList.toggle('on',k===i));const z=$('fz'),n=z.children.length,p=document.querySelector('#fam .fpv'),q=document.querySelector('#fam .fnv');if(p)p.hidden=i<=0;if(q)q.hidden=i>=n-1};
 // ordinateur : les cartes se feuillettent aussi en glissant à la souris, avec les flèches ‹ › ou celles du clavier
