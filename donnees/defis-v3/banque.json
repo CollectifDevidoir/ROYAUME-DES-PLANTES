@@ -322,6 +322,7 @@
    "mecanisme": "qcm_toxicite_fruit",
    "cible": null,
    "sujets": [
+    "cônes",
     "genévrier"
    ],
    "genre": null,
@@ -1512,6 +1513,7 @@
     "metasequoia",
     "metasequoia glyptostroboides",
     "metaséquoia",
+    "mélèze",
     "séquoia"
    ],
    "genre": "Metasequoia",
@@ -1717,7 +1719,8 @@
    "cible": "Laurus nobilis",
    "sujets": [
     "laurier",
-    "laurus nobilis"
+    "laurus nobilis",
+    "viorne"
    ],
    "genre": "Laurus",
    "fuite_nom_latin": null,
@@ -2398,6 +2401,7 @@
    "sujets": [
     "cycas",
     "cycas revoluta",
+    "cônes",
     "palmier"
    ],
    "genre": "Cycas",
@@ -2604,6 +2608,7 @@
    "mecanisme": "qcm_idee_recue",
    "cible": null,
    "sujets": [
+    "cônes",
     "sapin"
    ],
    "genre": null,
@@ -2970,7 +2975,8 @@
    "mecanisme": "photo_critere",
    "cible": "Viburnum × bodnantense",
    "sujets": [
-    "viburnum  bodnantense"
+    "viburnum  bodnantense",
+    "viorne"
    ],
    "genre": "Viburnum",
    "fuite_nom_latin": null,
@@ -3020,7 +3026,9 @@
    "plantes": false,
    "mecanisme": "qcm_saison",
    "cible": null,
-   "sujets": [],
+   "sujets": [
+    "bisannuelle"
+   ],
    "genre": null,
    "fuite_nom_latin": null,
    "indice_epithete": null,
@@ -3176,6 +3184,7 @@
    "cible": "Larix decidua",
    "sujets": [
     "larix decidua",
+    "mélèze",
     "pin",
     "sapin"
    ],
@@ -3374,7 +3383,9 @@
    "plantes": false,
    "mecanisme": "qcm_saison",
    "cible": null,
-   "sujets": [],
+   "sujets": [
+    "bisannuelle"
+   ],
    "genre": null,
    "fuite_nom_latin": null,
    "indice_epithete": null,
@@ -3748,6 +3759,7 @@
    "mecanisme": "qcm_saison",
    "cible": null,
    "sujets": [
+    "bisannuelle",
     "lunaire"
    ],
    "genre": null,
@@ -4751,7 +4763,8 @@
    "cible": null,
    "sujets": [
     "chene",
-    "chêne"
+    "chêne",
+    "liège"
    ],
    "genre": null,
    "fuite_nom_latin": null,
@@ -4910,7 +4923,9 @@
    "plantes": false,
    "mecanisme": "qcm_usage_histoire",
    "cible": null,
-   "sujets": [],
+   "sujets": [
+    "absinthe"
+   ],
    "genre": null,
    "fuite_nom_latin": null,
    "indice_epithete": null,
@@ -4961,6 +4976,7 @@
    "cible": "Quercus suber",
    "sujets": [
     "chêne",
+    "liège",
     "quercus suber"
    ],
    "genre": "Quercus",
@@ -5426,7 +5442,9 @@
    "plantes": false,
    "mecanisme": "qcm_usage_histoire",
    "cible": null,
-   "sujets": [],
+   "sujets": [
+    "absinthe"
+   ],
    "genre": null,
    "fuite_nom_latin": null,
    "indice_epithete": null,
@@ -5627,6 +5645,7 @@
    "mecanisme": "qcm_vocabulaire",
    "cible": null,
    "sujets": [
+    "cônes",
     "pomme",
     "sapin"
    ],
@@ -5833,7 +5852,8 @@
    "mecanisme": "photo_critere",
    "cible": "Bougainvillea glabra",
    "sujets": [
-    "bougainvillea glabra"
+    "bougainvillea glabra",
+    "bougainvillier"
    ],
    "genre": "Bougainvillea",
    "fuite_nom_latin": null,
@@ -6189,6 +6209,7 @@
    "mecanisme": "qcm_vocabulaire",
    "cible": null,
    "sujets": [
+    "aiguillon",
     "rose",
     "rosier"
    ],
@@ -6759,6 +6780,7 @@
    "cible": "Abies nordmanniana",
    "sujets": [
     "abies nordmanniana",
+    "cônes",
     "pin",
     "sapin"
    ],
@@ -6816,6 +6838,7 @@
    "cible": "Pinus cembra",
    "sujets": [
     "meleze",
+    "mélèze",
     "pin",
     "pinus cembra"
    ],
@@ -7028,6 +7051,7 @@
    "cible": "Salix caprea",
    "sujets": [
     "abeille",
+    "câpre",
     "salix caprea",
     "saule"
    ],
@@ -7239,6 +7263,7 @@
    "mecanisme": "qcm_ecologie",
    "cible": null,
    "sujets": [
+    "brou",
     "noyer"
    ],
    "genre": null,
@@ -7717,7 +7742,8 @@
    "mecanisme": "qcm_ecologie",
    "cible": null,
    "sujets": [
-    "trefle"
+    "trefle",
+    "trèfle"
    ],
    "genre": null,
    "fuite_nom_latin": null,
@@ -7873,7 +7899,8 @@
    "mecanisme": "photo_critere",
    "cible": "Alnus glutinosa",
    "sujets": [
-    "alnus glutinosa"
+    "alnus glutinosa",
+    "trèfle"
    ],
    "genre": "Alnus",
    "fuite_nom_latin": null,
@@ -9066,7 +9093,8 @@
    "cible": "Hamamelis mollis",
    "sujets": [
     "hamamelis",
-    "hamamelis mollis"
+    "hamamelis mollis",
+    "hamamélis"
    ],
    "genre": "Hamamelis",
    "fuite_nom_latin": null,
@@ -9764,6 +9792,7 @@
    "cible": "Ruscus aculeatus",
    "sujets": [
     "fragon",
+    "hamamélis",
     "houx",
     "ruscus aculeatus"
    ],
@@ -10218,6 +10247,7 @@
    "mecanisme": "photo_critere",
    "cible": "Tiarella cordifolia",
    "sujets": [
+    "absinthe",
     "tiarella cordifolia"
    ],
    "genre": "Tiarella",
@@ -10556,7 +10586,8 @@
    "mecanisme": "qcm_toxicite_fruit",
    "cible": null,
    "sujets": [
-    "amandier/abricot"
+    "amandier/abricot",
+    "amygdaline"
    ],
    "genre": null,
    "fuite_nom_latin": null,
@@ -11428,7 +11459,9 @@
    "plantes": false,
    "mecanisme": "qcm_usage_histoire",
    "cible": null,
-   "sujets": [],
+   "sujets": [
+    "girofle"
+   ],
    "genre": null,
    "fuite_nom_latin": null,
    "indice_epithete": null,
@@ -14428,6 +14461,7 @@
    "mecanisme": "famille",
    "cible": null,
    "sujets": [
+    "arbousier",
     "bruyère"
    ],
    "genre": null,
@@ -15268,7 +15302,8 @@
    "cible": null,
    "sujets": [
     "frêne",
-    "sureau"
+    "sureau",
+    "viorne"
    ],
    "genre": null,
    "fuite_nom_latin": null,
@@ -16574,7 +16609,9 @@
    "plantes": false,
    "mecanisme": "anecdote",
    "cible": null,
-   "sujets": [],
+   "sujets": [
+    "bougainvillier"
+   ],
    "genre": null,
    "fuite_nom_latin": null,
    "indice_epithete": null,
@@ -17676,6 +17713,7 @@
    "mecanisme": "qcm_usage_histoire",
    "cible": null,
    "sujets": [
+    "cônes",
     "houblon"
    ],
    "genre": null,
@@ -17724,6 +17762,7 @@
    "mecanisme": "qcm_usage_histoire",
    "cible": null,
    "sujets": [
+    "cônes",
     "houblon"
    ],
    "genre": null,
@@ -19505,6 +19544,7 @@
    "sujets": [
     "cypres",
     "cyprès",
+    "cônes",
     "thuya"
    ],
    "genre": null,
@@ -19553,6 +19593,7 @@
    "mecanisme": "qcm_idee_recue",
    "cible": null,
    "sujets": [
+    "cônes",
     "epicea",
     "sapin"
    ],
@@ -20093,6 +20134,7 @@
    "mecanisme": "qcm_toxicite_fruit",
    "cible": null,
    "sujets": [
+    "brou",
     "noyer"
    ],
    "genre": null,
@@ -20341,6 +20383,7 @@
    "cible": null,
    "sujets": [
     "acacia",
+    "aiguillon",
     "robinier"
    ],
    "genre": null,
@@ -21307,7 +21350,9 @@
    "plantes": false,
    "mecanisme": "qcm_vocabulaire",
    "cible": null,
-   "sujets": [],
+   "sujets": [
+    "girofle"
+   ],
    "genre": null,
    "fuite_nom_latin": null,
    "indice_epithete": null,
@@ -21354,6 +21399,7 @@
    "mecanisme": "qcm_saison",
    "cible": null,
    "sujets": [
+    "bisannuelle",
     "blé",
     "carotte"
    ],
@@ -21886,7 +21932,8 @@
    "mecanisme": "qcm_usage_histoire",
    "cible": null,
    "sujets": [
-    "chêne"
+    "chêne",
+    "liège"
    ],
    "genre": null,
    "fuite_nom_latin": null,
@@ -22637,6 +22684,7 @@
    "mecanisme": "qcm_vocabulaire",
    "cible": null,
    "sujets": [
+    "cônes",
     "pin",
     "pomme",
     "pommier"
@@ -23033,7 +23081,9 @@
    "plantes": false,
    "mecanisme": "qcm_idee_recue",
    "cible": null,
-   "sujets": [],
+   "sujets": [
+    "muscade"
+   ],
    "genre": null,
    "fuite_nom_latin": null,
    "indice_epithete": null,
@@ -23079,7 +23129,9 @@
    "plantes": false,
    "mecanisme": "qcm_idee_recue",
    "cible": null,
-   "sujets": [],
+   "sujets": [
+    "gingembre"
+   ],
    "genre": null,
    "fuite_nom_latin": null,
    "indice_epithete": null,
@@ -23221,6 +23273,7 @@
    "mecanisme": "qcm_usage_histoire",
    "cible": null,
    "sujets": [
+    "girofle",
     "rose"
    ],
    "genre": null,
@@ -23364,7 +23417,9 @@
    "plantes": false,
    "mecanisme": "qcm_usage_histoire",
    "cible": null,
-   "sujets": [],
+   "sujets": [
+    "câpre"
+   ],
    "genre": null,
    "fuite_nom_latin": null,
    "indice_epithete": null,
@@ -23459,7 +23514,8 @@
    "mecanisme": "qcm_ecologie",
    "cible": null,
    "sujets": [
-    "trefle"
+    "trefle",
+    "trèfle"
    ],
    "genre": null,
    "fuite_nom_latin": null,
@@ -23599,7 +23655,8 @@
    "mecanisme": "qcm_saison",
    "cible": null,
    "sujets": [
-    "meleze"
+    "meleze",
+    "mélèze"
    ],
    "genre": null,
    "fuite_nom_latin": null,
@@ -23821,6 +23878,7 @@
    "mecanisme": "qcm_usage_histoire",
    "cible": null,
    "sujets": [
+    "gaude",
     "pastel"
    ],
    "genre": null,
@@ -23867,6 +23925,7 @@
    "mecanisme": "qcm_usage_histoire",
    "cible": null,
    "sujets": [
+    "brou",
     "noyer"
    ],
    "genre": null,
@@ -24178,6 +24237,7 @@
    "mecanisme": "qcm_usage_histoire",
    "cible": null,
    "sujets": [
+    "cônes",
     "genévrier"
    ],
    "genre": null,
@@ -24320,7 +24380,9 @@
    "plantes": false,
    "mecanisme": "qcm_usage_histoire",
    "cible": null,
-   "sujets": [],
+   "sujets": [
+    "génépi"
+   ],
    "genre": null,
    "fuite_nom_latin": null,
    "indice_epithete": null,
@@ -24551,7 +24613,8 @@
    "mecanisme": "qcm_saison",
    "cible": null,
    "sujets": [
-    "hamamelis"
+    "hamamelis",
+    "hamamélis"
    ],
    "genre": null,
    "fuite_nom_latin": null,
@@ -24647,6 +24710,7 @@
    "cible": null,
    "sujets": [
     "daphne",
+    "daphné",
     "ronce"
    ],
    "genre": null,
@@ -24787,7 +24851,8 @@
    "mecanisme": "qcm_ecologie",
    "cible": null,
    "sujets": [
-    "aulne"
+    "aulne",
+    "trèfle"
    ],
    "genre": null,
    "fuite_nom_latin": null,
@@ -24832,7 +24897,9 @@
    "plantes": false,
    "mecanisme": "qcm_ecologie",
    "cible": null,
-   "sujets": [],
+   "sujets": [
+    "jussie"
+   ],
    "genre": null,
    "fuite_nom_latin": null,
    "indice_epithete": null,
@@ -25105,7 +25172,9 @@
    "plantes": false,
    "mecanisme": "qcm_ecologie",
    "cible": null,
-   "sujets": [],
+   "sujets": [
+    "séneçon"
+   ],
    "genre": null,
    "fuite_nom_latin": null,
    "indice_epithete": null,
@@ -26423,7 +26492,8 @@
    "mecanisme": "anecdote",
    "cible": "Viburnum opulus",
    "sujets": [
-    "viburnum opulus"
+    "viburnum opulus",
+    "viorne"
    ],
    "genre": "Viburnum",
    "fuite_nom_latin": null,
@@ -26742,7 +26812,8 @@
    "mecanisme": "anecdote",
    "cible": "Larix decidua",
    "sujets": [
-    "larix decidua"
+    "larix decidua",
+    "mélèze"
    ],
    "genre": "Larix",
    "fuite_nom_latin": null,
@@ -27112,7 +27183,8 @@
    "cible": "Daphne laureola",
    "sujets": [
     "abeille",
-    "daphne laureola"
+    "daphne laureola",
+    "daphné"
    ],
    "genre": "Daphne",
    "fuite_nom_latin": null,
@@ -27477,7 +27549,8 @@
    "mecanisme": "anecdote",
    "cible": "Viburnum × burkwoodii",
    "sujets": [
-    "viburnum  burkwoodii"
+    "viburnum  burkwoodii",
+    "viorne"
    ],
    "genre": "Viburnum",
    "fuite_nom_latin": null,
@@ -27568,6 +27641,7 @@
    "mecanisme": "anecdote",
    "cible": "Juniperus virginiana",
    "sujets": [
+    "cônes",
     "juniperus virginiana"
    ],
    "genre": "Juniperus",
@@ -29300,7 +29374,8 @@
    "mecanisme": "anecdote",
    "cible": "Viburnum carlesii",
    "sujets": [
-    "viburnum carlesii"
+    "viburnum carlesii",
+    "viorne"
    ],
    "genre": "Viburnum",
    "fuite_nom_latin": null,
@@ -29483,7 +29558,8 @@
    "mecanisme": "anecdote",
    "cible": "Larix kaempferi",
    "sujets": [
-    "larix kaempferi"
+    "larix kaempferi",
+    "mélèze"
    ],
    "genre": "Larix",
    "fuite_nom_latin": null,
@@ -30626,6 +30702,7 @@
    "sujets": [
     "bruyère",
     "chêne",
+    "liège",
     "quercus macrocarpa"
    ],
    "genre": "Quercus",
@@ -30901,6 +30978,7 @@
    "sujets": [
     "bruyère",
     "chêne",
+    "liège",
     "quercus phellos"
    ],
    "genre": "Quercus",
@@ -32816,7 +32894,8 @@
    "mecanisme": "anecdote",
    "cible": "Viburnum lantana",
    "sujets": [
-    "viburnum lantana"
+    "viburnum lantana",
+    "viorne"
    ],
    "genre": "Viburnum",
    "fuite_nom_latin": null,
@@ -33863,7 +33942,8 @@
    "mecanisme": "anecdote",
    "cible": "Viburnum × bodnantense",
    "sujets": [
-    "viburnum  bodnantense"
+    "viburnum  bodnantense",
+    "viorne"
    ],
    "genre": "Viburnum",
    "fuite_nom_latin": null,
@@ -34044,6 +34124,7 @@
    "mecanisme": "anecdote",
    "cible": "Artemisia absinthium",
    "sujets": [
+    "absinthe",
     "artemisia absinthium"
    ],
    "genre": "Artemisia",
@@ -35818,7 +35899,8 @@
    "mecanisme": "anecdote",
    "cible": "Viburnum davidii",
    "sujets": [
-    "viburnum davidii"
+    "viburnum davidii",
+    "viorne"
    ],
    "genre": "Viburnum",
    "fuite_nom_latin": null,
@@ -36003,7 +36085,8 @@
    "mecanisme": "anecdote",
    "cible": "Hamamelis × intermedia",
    "sujets": [
-    "hamamelis  intermedia"
+    "hamamelis  intermedia",
+    "hamamélis"
    ],
    "genre": "Hamamelis",
    "fuite_nom_latin": null,
@@ -36230,7 +36313,8 @@
    "mecanisme": "anecdote",
    "cible": "Viburnum tinus",
    "sujets": [
-    "viburnum tinus"
+    "viburnum tinus",
+    "viorne"
    ],
    "genre": "Viburnum",
    "fuite_nom_latin": null,
@@ -36455,7 +36539,8 @@
    "mecanisme": "anecdote",
    "cible": "Viburnum rhytidophyllum",
    "sujets": [
-    "viburnum rhytidophyllum"
+    "viburnum rhytidophyllum",
+    "viorne"
    ],
    "genre": "Viburnum",
    "fuite_nom_latin": null,
@@ -38555,6 +38640,7 @@
    "mecanisme": "anecdote",
    "cible": "Cyclamen hederifolium",
    "sujets": [
+    "cyclamen",
     "cyclamen hederifolium"
    ],
    "genre": "Cyclamen",
@@ -39553,7 +39639,8 @@
    "mecanisme": "anecdote",
    "cible": "Bignonia capreolata",
    "sujets": [
-    "bignonia capreolata"
+    "bignonia capreolata",
+    "câpre"
    ],
    "genre": "Bignonia",
    "fuite_nom_latin": null,
@@ -39735,7 +39822,8 @@
    "mecanisme": "anecdote",
    "cible": "Daphne mezereum",
    "sujets": [
-    "daphne mezereum"
+    "daphne mezereum",
+    "daphné"
    ],
    "genre": "Daphne",
    "fuite_nom_latin": null,
@@ -40327,6 +40415,7 @@
    "mecanisme": "anecdote",
    "cible": "Sophora japonica",
    "sujets": [
+    "jussie",
     "sophora japonica"
    ],
    "genre": "Sophora",
@@ -40418,7 +40507,8 @@
    "mecanisme": "anecdote",
    "cible": "Bougainvillea glabra",
    "sujets": [
-    "bougainvillea glabra"
+    "bougainvillea glabra",
+    "bougainvillier"
    ],
    "genre": "Bougainvillea",
    "fuite_nom_latin": null,
@@ -48055,7 +48145,8 @@
    "mecanisme": "famille",
    "cible": "Larix decidua",
    "sujets": [
-    "larix decidua"
+    "larix decidua",
+    "mélèze"
    ],
    "genre": "Larix",
    "fuite_nom_latin": null,
@@ -54310,7 +54401,8 @@
    "mecanisme": "nom_latin",
    "cible": "Viburnum opulus",
    "sujets": [
-    "viburnum opulus"
+    "viburnum opulus",
+    "viorne"
    ],
    "genre": "Viburnum",
    "fuite_nom_latin": null,
@@ -54485,7 +54577,8 @@
    "mecanisme": "nom_latin",
    "cible": "Viburnum odoratissimum",
    "sujets": [
-    "viburnum odoratissimum"
+    "viburnum odoratissimum",
+    "viorne"
    ],
    "genre": "Viburnum",
    "fuite_nom_latin": null,
@@ -55016,6 +55109,7 @@
    "mecanisme": "nom_latin",
    "cible": "Salix caprea",
    "sujets": [
+    "câpre",
     "salix caprea",
     "saule"
    ],
@@ -55061,6 +55155,7 @@
    "cible": "Quercus suber",
    "sujets": [
     "chêne",
+    "liège",
     "quercus suber"
    ],
    "genre": "Quercus",
@@ -55192,7 +55287,8 @@
    "mecanisme": "nom_latin",
    "cible": "Viburnum lantana",
    "sujets": [
-    "viburnum lantana"
+    "viburnum lantana",
+    "viorne"
    ],
    "genre": "Viburnum",
    "fuite_nom_latin": null,
@@ -57070,7 +57166,8 @@
    "mecanisme": "nom_latin",
    "cible": "Viburnum carlesii",
    "sujets": [
-    "viburnum carlesii"
+    "viburnum carlesii",
+    "viorne"
    ],
    "genre": "Viburnum",
    "fuite_nom_latin": null,
@@ -57601,7 +57698,8 @@
    "cible": "Viburnum tinus",
    "sujets": [
     "laurier",
-    "viburnum tinus"
+    "viburnum tinus",
+    "viorne"
    ],
    "genre": "Viburnum",
    "fuite_nom_latin": null,
@@ -57998,7 +58096,8 @@
    "mecanisme": "nom_latin",
    "cible": "Viburnum rhytidophyllum",
    "sujets": [
-    "viburnum rhytidophyllum"
+    "viburnum rhytidophyllum",
+    "viorne"
    ],
    "genre": "Viburnum",
    "fuite_nom_latin": null,
@@ -58394,7 +58493,8 @@
    "mecanisme": "nom_latin",
    "cible": "Viburnum plicatum",
    "sujets": [
-    "viburnum plicatum"
+    "viburnum plicatum",
+    "viorne"
    ],
    "genre": "Viburnum",
    "fuite_nom_latin": null,
@@ -59008,7 +59108,8 @@
    "mecanisme": "nom_latin",
    "cible": "Viburnum davidii",
    "sujets": [
-    "viburnum davidii"
+    "viburnum davidii",
+    "viorne"
    ],
    "genre": "Viburnum",
    "fuite_nom_latin": null,
@@ -62879,6 +62980,7 @@
    "mecanisme": "photo_origine",
    "cible": "Cyclamen hederifolium",
    "sujets": [
+    "cyclamen",
     "cyclamen hederifolium"
    ],
    "genre": "Cyclamen",
