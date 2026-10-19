@@ -19,6 +19,11 @@ JOURS, PAR_JOUR = 30, 10
 # ordre des niveaux dans une série (3 simples, 3 pièges, 4 difficiles) : on monte doucement, les pièges sont glissés partout
 GABARIT = ['simple', 'simple', 'piege', 'simple', 'difficile', 'piege', 'difficile', 'piege', 'difficile', 'difficile']
 
+# --banque FICHIER : sans plafonds de génération, écrit toute la réserve de questions candidates (avant répartition en séries)
+# dans FICHIER et s'arrête, sans toucher ni aux séries ni à index.html (voir outils/defis_controle.py)
+BANQUE = sys.argv[sys.argv.index('--banque') + 1] if '--banque' in sys.argv else None
+BIG = 10 ** 6
+
 D = json.load(open(sys.argv[1], encoding='utf8'))
 M = json.load(open(os.path.join(RAC, 'donnees', 'milieux-especes.json'), encoding='utf8'))['especes']
 A = json.load(open(os.path.join(RAC, 'donnees', 'anecdotes-especes.json'), encoding='utf8'))['especes']
@@ -85,7 +90,7 @@ def milieu(theme, question, cible, contre, expl, niv_f=None, organe='', meme_typ
     R.shuffle(cs)
     k = 0
     for l in cs:
-        if k >= n: break
+        if k >= (BIG if BANQUE else n): break
         d = tire([x for x, v in Ms.items() if contre(v) and x != l and (not meme_type or typ(x) == typ(l) or {typ(x), typ(l)} <= {'arbre', 'arbuste'})], 3)
         if not d: continue
         tous_faciles = facile(l) and all(facile(x) for x in d)
@@ -169,7 +174,7 @@ for f in ['Rosaceae', 'Fabaceae', 'Lamiaceae', 'Oleaceae', 'Betulaceae', 'Fagace
     R.shuffle(membres)
     k = 0
     for l in membres:
-        if k >= 2: break
+        if k >= (BIG if BANQUE else 2): break
         sos = [x for x in LOOK[l] if fam(x) != f]
         d = tire(sos[:1] + [x for x in S if fam(x) != f and typ(x) == typ(l) and fam(x)], 3)
         if not d: continue
@@ -205,7 +210,7 @@ for l in S:
 hiver = [l for l, m in flo.items() if m <= {11, 12, 1, 2, 3} and m & {12, 1, 2}]
 ete = [l for l, m in flo.items() if m <= {6, 7, 8, 9}]
 R.shuffle(hiver)
-for l in hiver[:12]:
+for l in hiver[:(BIG if BANQUE else 12)]:
     d = tire([x for x in ete if typ(x) == typ(l) or {typ(x), typ(l)} <= {'arbre', 'arbuste'}], 3)
     if not d: continue
     c, b = melange(l, d)
@@ -217,7 +222,7 @@ une = [(l, s) for l, m in flo.items() for s, ms in SAISON.items() if m <= ms]
 R.shuffle(une)
 k = collections.Counter()
 for l, s in une:
-    if k[s] >= 5: continue
+    if k[s] >= (BIG if BANQUE else 5): continue
     piege = (s in ('En hiver', 'En automne')) and facile(l) or gen(l) in ('Hedera', 'Hamamelis', 'Colchicum')
     ajoute({'theme': 'Saisons', 'niveau': 'piege' if piege else ('simple' if facile(l) else 'difficile'), 'format': 'qcm', 'plantes': False,
             'question': f"{nom(l)} : quand fleurit cette plante ?", 'choix': list(SAISON), 'bonne': list(SAISON).index(s), 'plante': l,
@@ -233,11 +238,11 @@ cands = [l for l in S if ' ' in l and '×' not in l and "'" not in l]
 R.shuffle(cands)
 ns = nd = 0
 for l in cands:
-    if len(par_genre[gen(l)]) >= 4 and nd < 14:
+    if len(par_genre[gen(l)]) >= 4 and nd < (BIG if BANQUE else 14):
         d = tire([x for x in par_genre[gen(l)] if x != l], 3) or None
         d = [x for x in par_genre[gen(l)] if x != l]
         R.shuffle(d); d = d[:3]; niv = 'difficile'; nd += 1
-    elif facile(l) and ns < 10:
+    elif facile(l) and ns < (BIG if BANQUE else 10):
         d = tire([x for x in cands if typ(x) == typ(l) and fam(x) != fam(l)], 3); niv = 'simple'; ns += 1
     else: continue
     if not d or len(d) < 3: continue
@@ -264,6 +269,11 @@ cle = lambda q: q['question'] + '|' + q.get('texte', '') + '|' + ','.join(q['cho
 EXCL = os.path.join(RAC, 'donnees', 'defis-exclues.json')
 EX = set(json.load(open(EXCL, encoding='utf8'))) if os.path.exists(EXCL) else set()
 POOL = [q for q in POOL if cle(q) not in EX]
+
+if BANQUE:
+    json.dump(POOL, open(BANQUE, 'w', encoding='utf8'), ensure_ascii=False)
+    print('banque de candidates :', len(POOL), dict(collections.Counter(q['origine'] for q in POOL)), '->', BANQUE)
+    raise SystemExit
 
 # ---------- répartition en 30 séries ----------
 # thèmes servis à parts à peu près égales ; les noms latins un peu moins souvent
