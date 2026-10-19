@@ -2783,7 +2783,10 @@ function trUI(){stickUI();const t=curTrain||dfOn;$('trn').hidden=!t;$('chips').h
 const rate=p=>p.s?(p.s-p.e)/p.s:0;
 const wS=p=>{if(!p)return 1;const n=Date.now();let w=1+6*(1-rate(p))+.3*p.e;if(p.b>=4)w*=p.b>=6?.14:p.b>=5?.25:.45;if(p.d>n)w*=.6;else if(p.b<=3)w*=1.4;return w};
 function cfN(n){let c=0;for(const k in st.cf){const q=k.split('|');if(q[0]===n||q[1]===n)c+=st.cf[k]}return c}
-function wt(a){const w=a.map(s=>wS(st.sp[s[0]])*(1+.45*Math.min(cfN(s[0]),4)));let r=Math.random()*w.reduce((x,y)=>x+y,0);for(let i=0;i<a.length;i++){r-=w[i];if(r<=0)return a[i]}return a[0]}
+const CN={};S.forEach(s=>{CN[s[2]]=(CN[s[2]]||0)+1});
+// en mode Classique, chaque catégorie pèse selon sa taille dans le catalogue (et non selon le nombre de plantes déjà travaillées) : une catégorie très jouée ne monopolise pas les révisions
+function wt(a){const cc={};if(mode==='tout')a.forEach(s=>{cc[s[2]]=(cc[s[2]]||0)+1});
+  const w=a.map(s=>wS(st.sp[s[0]])*(1+.45*Math.min(cfN(s[0]),4))*(mode==='tout'?CN[s[2]]/cc[s[2]]:1));let r=Math.random()*w.reduce((x,y)=>x+y,0);for(let i=0;i<a.length;i++){r-=w[i];if(r<=0)return a[i]}return a[0]}
 const CM=new Set('Quercus Acer Tilia Fagus Carpinus Betula Fraxinus Platanus Prunus Malus Pinus Cedrus Taxus Hedera Buxus Rosa Lavandula Viburnum Cornus Hydrangea Salvia Geranium Euphorbia Sedum Hosta Iris Clematis Wisteria Vitis Parthenocissus Miscanthus Stipa Carex Festuca Aesculus Populus Salix Alnus Corylus Sambucus Crataegus Ligustrum Forsythia Lonicera Spiraea Philadelphus Weigela Ilex Laurus Photinia Choisya Rhododendron Magnolia Robinia Sorbus Ulmus Thuja Juniperus Pyracantha Cotoneaster Berberis Buddleja Syringa Bellis Urtica Trifolium Primula Viola Narcissus Lavatera Rosmarinus Pittosporum Prunus Ceanothus Hibiscus Cercis Liquidambar Ginkgo Pyrus Castanea Juglans'.split(' ')),SJ={};
 const GC={};S.forEach(s=>{const g=gen(s[0]);GC[g]=(GC[g]||0)+1});
 const seenN=()=>Object.keys(st.sp).length;
@@ -2803,7 +2806,9 @@ function pick(){
   if(replay&&replay.length){const x=replay.shift(),f=S.find(s=>s[0]===x);if(f)return f}
   const P0=S.filter(s=>(mode==='tout'||s[2]===mode)&&!bad.has(s[0])&&!bad.has(s[0]+organ)&&s[0]!==last&&s!==cur);
   let P=P0.filter(s=>!recent.includes(s[0]));if(P.length<6)P=P0; // pas de répétition rapprochée
-  const now=Date.now(),seen=P.filter(s=>st.sp[s[0]]),fresh=P.filter(s=>!st.sp[s[0]]);
+  // en Classique, on tire d'abord une catégorie (proportionnelle à sa taille dans le catalogue) : le retard accumulé dans une catégorie très jouée ne prive pas les autres de révisions ni de nouvelles espèces
+  let PC=P;if(mode==='tout'){const cs=[...new Set(P.map(x=>x[2]))];let r=Math.random()*cs.reduce((x,c)=>x+CN[c],0),ct=cs[0];for(const c of cs){r-=CN[c];if(r<=0){ct=c;break}}PC=P.filter(x=>x[2]===ct)}
+  const now=Date.now(),seen=PC.filter(s=>st.sp[s[0]]),fresh=PC.filter(s=>!st.sp[s[0]]);
   let s=null;
   const di=soon.findIndex(x=>x.q<=qN&&P0.some(y=>y[0]===x.n)); // 1) ancrage : revoir une plante tout juste vue (ou ratée) 3 à 6 questions plus tard
   if(di>=0){const n=soon.splice(di,1)[0].n;s=P0.find(y=>y[0]===n)}
@@ -2967,8 +2972,9 @@ async function wpMedia(s){
 function buildCar(s,im,one){
   const p=$('pic');p.className='pic';
   p.innerHTML='<div class="car" tabindex="0" aria-label="Photos du végétal, à faire défiler"></div><div class="dots"></div><button class="ar l" aria-label="Photo précédente">'+ico('chev-l')+'</button><button class="ar r" aria-label="Photo suivante">'+ico('chev-r')+'</button>';
-  const car=p.querySelector('.car');let n=0;const seenK=new Set();
-  const dots=()=>{const k=car.children.length;p.querySelector('.dots').innerHTML=k>1?Array.from({length:k},(_,j)=>`<i${j===Math.round(car.scrollLeft/car.clientWidth)?' class="on"':''}></i>`).join(''):'';p.classList.toggle('one',k<2)};
+  const car=p.querySelector('.car'),dt=p.querySelector('.dots');let n=0;const seenK=new Set();
+  // appelée aussi après coup (photo perdue, défilement, photos Wikipédia) : la question a pu changer entre-temps et remplacer ce bloc
+  const dots=()=>{if(!dt.isConnected)return;const k=car.children.length;dt.innerHTML=k>1?Array.from({length:k},(_,j)=>`<i${j===Math.round(car.scrollLeft/car.clientWidth)?' class="on"':''}></i>`).join(''):'';p.classList.toggle('one',k<2)};
   const add=x=>{const kk=pid(x.src);if(seenK.has(kk))return;seenK.add(kk);const f=n===0,d=document.createElement('div'),i=new Image();d.className='sl';i.alt='Photo du végétal à identifier';i.referrerPolicy='no-referrer';i.decoding='async';i.onload=()=>d.classList.add('ld');setTimeout(()=>d.classList.add('ld'),4000);i.src=x.src;if(!f)i.loading='lazy';
     // photo principale perdue après la réponse : on ne coupe pas la correction
     i.onerror=()=>{if(f&&cur===s&&!done){bad.add(s[0]);next()}else if(!f){d.remove();dots()}};d.append(i);
@@ -3545,7 +3551,7 @@ function startFamily(f){
 }
 function restart(){last=null;cur=null;pre=null;preN=null;replay=null;chips();next()}
 function chips(){
-  const pick=k=>{mode=k;firstQ=true;try{localStorage.setItem('qp.mode',k)}catch(e){}restart()};
+  const pick=k=>{if(k!==mode)soon=[];mode=k;firstQ=true;try{localStorage.setItem('qp.mode',k)}catch(e){}restart()};
   const own=s=>(st.sp[s[0]]||{b:0}).b>=4,cpt=k=>{const a=k==='tout'?S:S.filter(s=>s[2]===k);return a.filter(own).length+'/'+a.length};
   const nom=k=>k==='tout'?'Classique':T[k],sous=k=>k==='tout'?'toutes les plantes mélangées':cpt(k)+' acquises · changer de mode';
   const a=$('cAll'),g=$('cats'),ch=$('chips');
@@ -3919,7 +3925,9 @@ $('shg').onclick=()=>setSh(shS()==='full'?'mid':'full');
 (()=>{let y0=0;const h=$('sh').querySelector('.shh');
   h.addEventListener('touchstart',e=>{y0=e.touches[0].clientY},{passive:true});
   h.addEventListener('touchend',e=>{const dy=e.changedTouches[0].clientY-y0;if(dy<-30)setSh(shS()==='peek'?'mid':'full');else if(dy>30)setSh(shS()==='full'?'mid':'peek')},{passive:true})})();
-document.addEventListener('click',e=>{const x=e.target.closest&&e.target.closest('[data-sp],.pk[data-l]');if(!x)return;const s=S.find(y=>y[0]===(x.dataset.sp||x.dataset.l));if(s)openSheet(s,null,{})});
+document.addEventListener('click',e=>{const x=e.target.closest&&e.target.closest('[data-sp],.pk[data-l]');if(!x)return;const s=S.find(y=>y[0]===(x.dataset.sp||x.dataset.l));if(s){const q=$('herb-search');
+  if(q&&document.activeElement===q){q.blur();setTimeout(()=>{window.scrollTo(0,window.scrollY);openSheet(s,null,{})},350)}   // iPhone : on attend la fin de l'animation du clavier (zone visible encore réduite), sinon la fiche reste coincée en bas de page
+  else openSheet(s,null,{})}});
 $('rplay').onclick=()=>startReplay(st.tm.l.slice(),'Mes erreurs du jour');
 $('fday').onclick=()=>openFamily(famDay());$('defi').onclick=dfLancer;
 $('trq').onclick=()=>{if(dfOn){dfQuitter();return}replay=null;pre=preN;preN=null;wasTrain=false;curTrain=false;famFocus=null;trUI();next()};
