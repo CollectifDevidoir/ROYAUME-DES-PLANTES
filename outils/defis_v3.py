@@ -165,7 +165,7 @@ PLEIN = [q for q in banque if q['statut'] in PLANIFIABLES and q['photos_ok'] is 
          and not (q['deja_en_ligne'] and q['deja_en_ligne'][0] in JOUEES)]
 CAP_MEC = {'anecdote': 1, 'famille': 1, 'photo_origine': 1, 'nom_latin': 1}   # un seul par défi
 CAP_DEF = {'photo_critere': 3}                                                # sinon 2 par défi
-BUDGET_ENONCE = 16                                                           # un même énoncé de photos (« Laquelle de ces plantes perd ses feuilles… ») au plus 16 fois sur 90 jours
+BUDGET_ENONCE = 22                                                           # un même énoncé de photos (« Laquelle de ces plantes perd ses feuilles… ») au plus 16 fois sur 90 jours
 BUDGET = {'nom_latin': 22}                                                    # question de pure mémoire : réservée aux difficiles, à petite dose
 
 def voisin_ok(q, pos, jour):
@@ -188,7 +188,7 @@ def faisable(q, pos, jour, rec_sujets, rec_cibles, rec_genres, rel):
     if rel < 1 and set(q['sujets']) & rec_sujets: return False
     if rel < 3 and q['genre'] and q['genre'] in rec_genres: return False
     if q['format'] == 'images' and sum(x['format'] == 'images' for x in deja) >= 5: return False
-    if q['format'] == 'qcm' and sum(x['format'] == 'qcm' for x in deja) >= 6: return False
+    if q['format'] == 'qcm' and sum(x['format'] == 'qcm' for x in deja) >= 7: return False
     if q.get('indice_epithete') and sum(bool(x.get('indice_epithete')) for x in deja) >= 1: return False
     return True
 
@@ -225,9 +225,9 @@ def tenter(graine):
         jour = {}
         for pos in ORDRE:
             niv, pg = SLOTS[pos]
-            def candidats(niv_, pg_, rel, ecart=ECART, maxu=MAX_USAGES):
+            def candidats(niv_, pg_, rel, ecart=ECART, maxu=MAX_USAGES, libre=False):
                 return [q for q in PLEIN if usages[q['id']] < maxu and dernier.get(q['id'], -999) <= j - ecart and q['niveau'] == niv_ and (not pg_ or q['piege'])
-                        and u_mec[q['mecanisme']] < BUDGET.get(q['mecanisme'], 10**6) and (q['format'] != 'images' or u_enonce[q['question']] < BUDGET_ENONCE) and faisable(q, pos, jour, rec_sujets, rec_cibles, rec_genres, rel)]
+                        and u_mec[q['mecanisme']] < BUDGET.get(q['mecanisme'], 10**6) and (libre or q['format'] != 'images' or u_enonce[q['question']] < BUDGET_ENONCE) and faisable(q, pos, jour, rec_sujets, rec_cibles, rec_genres, rel)]
             C, sub = candidats(niv, pg, 0), None
             if not C:
                 for rel, txt in ((1, "même sujet que dans les 3 jours précédents"), (2, "3 questions du même thème"), (3, "même genre botanique à moins de 2 jours"), (4, "même mécanisme voisin")):
@@ -236,9 +236,13 @@ def tenter(graine):
             if not C and niv == 'facile': C, sub = candidats('intermediaire', 0, 3), "facile → intermédiaire accessible"
             if not C and niv == 'intermediaire' and pg: C, sub = candidats('intermediaire', 0, 3), "piège → intermédiaire ordinaire"
             if not C and niv == 'difficile': C, sub = candidats('intermediaire', 1, 3), "difficile → intermédiaire piège"
-            if not C: C, sub = candidats(niv, pg, 4, ecart=14), "réutilisation à moins de 28 jours"
+            if not C: C, sub = candidats(niv, pg, 4, libre=True), "énoncé de photos déjà très servi"
+            if not C and niv == 'facile': C, sub = candidats('intermediaire', 0, 4, libre=True), "facile → intermédiaire accessible ; énoncé de photos déjà très servi"
+            if not C: C, sub = candidats(niv, pg, 4, ecart=14, libre=True), "réutilisation à moins de 28 jours"
             if not C: C, sub = candidats(niv, pg, 4, maxu=3), "troisième passage"
-            if not C: return None
+            if not C:
+                if os.environ.get('DEFIS_DEBUG'): print('échec', graine, 'jour', j + 1, 'pos', pos + 1, niv, pg)
+                return None
             # inédites d'abord ; à égalité : questions recoupées avant celles tirées des données, thèmes et mécanismes les moins servis
             C.sort(key=lambda q: (usages[q['id']] > 0, u_theme[q['theme']] / CAPA[q['theme']] + 0.05 * u_mec[q['mecanisme']] / CAPA_M[q['mecanisme']] + 0.04 * max([u_suj[x] for x in q['sujets'] if x in SUJETS] or [0]), q['tier'], R.random()))
             q = dict(C[0]); q['position'] = pos + 1; q['place'] = niv + (' (piège)' if pg else ''); q['substitution'] = sub; q['reutilisation'] = usages[q['id']] > 0
