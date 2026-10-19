@@ -521,6 +521,10 @@ small.fm{color:var(--mu);font-size:.72rem}
 #df-nx{scroll-margin-bottom:120px}
 .dfr .dfo.ph{grid-auto-rows:auto}
 .dfr .dfo.ph>button{aspect-ratio:4/3;height:auto;min-height:0}
+/* Défi, 4 photos : nom latin sous chaque photo ; la photo garde son format 4/3, la carte s'allonge du nom (2 lignes au plus) */
+.dfr .dfo.ph>button{display:flex;flex-direction:column;align-items:stretch;gap:0;aspect-ratio:auto}
+.dfr .dfo.ph .dfi{position:relative;display:block;flex:none;aspect-ratio:4/3}
+.dfr .dfo.ph .dfl{flex:1 0 auto;padding:0;border:solid var(--card);border-width:4px 8px 6px;background:var(--card);color:var(--mu);font:italic .8rem/1.25 var(--ft);text-align:center;overflow-wrap:anywhere;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
 .dfv li{display:flex;gap:8px;align-items:baseline;padding:8px;border-bottom:1px solid var(--bd);line-height:1.35}
 .dfv li small{color:var(--mu)}
 @media (prefers-color-scheme:dark){.dfr .dft{color:#e7b956}}
@@ -2380,8 +2384,20 @@ const dfEtat=()=>st.df&&st.df.d===dfJour()?st.df:null;
 const dfFait=()=>{const e=dfEtat();return !!e&&e.r.length>=10};
 const dfScore=e=>e.r.reduce((a,b)=>a+b,0);
 const dfSp=l=>S.find(s=>s[0]===l);
+// Compte connecté : le résultat enregistré sur le serveur (une seule partie par compte et par jour) fait foi,
+// même si cet appareil n'a pas encore reçu la progression sauvegardée par l'autre ; on attend donc la connexion.
+let dfVerif=null;
+async function dfCompte(){
+  if(dfFait()||!sbOn())return;let ses=false;try{ses=!!localStorage.getItem('qp.sb')}catch(e){}if(!ses&&!sbU)return;
+  try{if(!sb){await sbLib();if(!sbU){const {data}=await sb.auth.getSession();sbU=data.session&&data.session.user||null}}
+    if(sbU&&!sbP)await sbConnecte();if(!(sbU&&sbP)||dfFait())return;
+    const d=dfJour(),m=(await sbRpc('tableau_defi',{p_jour:d})||[]).find(x=>x.moi);
+    if(m&&m.score!=null&&/^[01]{10}$/.test(m.reponses||'')){st.df={d,r:m.reponses.split('').map(Number),v:[],pub:1};save();stats()}}
+  catch(e){}   // hors ligne : on ne bloque pas ; le serveur ne gardera de toute façon que le premier résultat envoyé
+}
 async function dfLancer(){
-  usage('defi');const d=dfJour();if(!dfSerie(d)){toast('Défi indisponible pour l\'instant.');return}
+  if(dfVerif)return;usage('defi');const d=dfJour();if(!dfSerie(d)){toast('Défi indisponible pour l\'instant.');return}
+  if(!dfFait()){dfVerif=dfCompte();try{await dfVerif}finally{dfVerif=null}}
   if(!dfEtat()){st.df={d,r:[],v:[]};save()}
   dfOn=true;tabTo('quiz');if(dfFait())dfResultat();else dfQuestion();
 }
@@ -2402,8 +2418,9 @@ function dfQuestion(){
 <div class="opts dfo${img?' ph':''}" id="df-o" role="group" aria-labelledby="df-q"></div><div id="df-fb" aria-live="polite"></div>`;
   const o=$('df-o');
   q.choix.forEach((x,k)=>{const b=document.createElement('button');b.type='button';b.dataset.n=k+1;b.style.setProperty('--i',k);
-    if(img){const s=dfSp(x);b.setAttribute('aria-label','Photo '+(k+1));b.innerHTML=`<span class="cap">${s?esc(s[1])+'<br>':''}<i>${esc(x)}</i></span>`;
-      if(s)dfPhoto(s,q.organe).then(u=>{if(u&&b.isConnected){const im=new Image();im.alt='';im.src=u;b.prepend(im)}})}
+    // photo, puis le nom latin dessous, visible dès la question ; le nom français s'ajoute sur la photo à la correction
+    if(img){const s=dfSp(x);b.setAttribute('aria-label','Photo '+(k+1)+' : '+x);b.innerHTML=`<span class="dfi">${s?`<span class="cap">${esc(s[1])}</span>`:''}</span><i class="dfl">${esc(x)}</i>`;
+      if(s)dfPhoto(s,q.organe).then(u=>{if(u&&b.isConnected){const im=new Image();im.alt='';im.src=u;b.querySelector('.dfi').prepend(im)}})}
     else b.innerHTML=`<span>${dfChoixTxt(q,x)}</span>`;
     b.onclick=()=>dfRepond(k);o.append(b)});
   stats();
@@ -2411,8 +2428,9 @@ function dfQuestion(){
 function dfRepond(k){
   const e=dfEtat();if(!e||dfRep||e.r.length>=10)return;const q=dfSerie(e.d)[e.r.length],good=k===q.bonne;dfRep=true;
   e.r.push(good?1:0);e.v.push(k);if(e.r.length>=10)e.fin=Date.now();
-  // compte pour l'objectif du jour, comme un exercice ordinaire (sans faire avancer une plante dans l'herbier)
-  const h=st.hist[today()]||(st.hist[today()]={n:0,ok:0});h.n++;if(good)h.ok++;save();if(h.n===goal())goalAnim();
+  // compte pour l'objectif du jour, comme un exercice ordinaire (sans faire avancer une plante dans l'herbier) ;
+  // dn/dok : la part du défi, retirée du classement d'Assiduité
+  const h=st.hist[today()]||(st.hist[today()]={n:0,ok:0});h.n++;h.dn=(h.dn||0)+1;if(good){h.ok++;h.dok=(h.dok||0)+1}save();if(h.n===goal())goalAnim();
   const o=$('df-o');o.classList.add('rv');o.querySelectorAll('button').forEach((b,i)=>{b.disabled=true;if(i===q.bonne)b.classList.add('ok');else if(i===k)b.classList.add('ko')});
   vib(good?15:[30,40,30]);
   const bon=q.format==='images'||q.plantes?(dfSp(q.choix[q.bonne])||[,q.choix[q.bonne]])[1]:q.choix[q.bonne];
@@ -3754,7 +3772,7 @@ async function sbRpc(f,a){const {data,error}=await sb.rpc(f,a||{});if(error)thro
 function monBilan(){
   let n=0,ok=0,s=0;for(let k=0;k<14;k++){const h=st.hist[dstr(Date.now()-k*864e5)];if(h){n+=h.n;ok+=h.ok}}
   for(let k=st.hist[today()]&&st.hist[today()].n?0:1;k<3650;k++){const h=st.hist[dstr(Date.now()-k*864e5)];if(h&&h.n>0)s++;else break}
-  const h=st.hist[today()]||{n:0,ok:0};return {rang:rk(),acquises:known(),reussite:n?Math.round(100*ok/n):0,serie:s,ex:h.n,justes:h.ok,nouvelles:h.na||0};
+  const h=st.hist[today()]||{n:0,ok:0};return {rang:rk(),acquises:known(),reussite:n?Math.round(100*ok/n):0,serie:s,ex:h.n-(h.dn||0),justes:h.ok-(h.dok||0),nouvelles:h.na||0};   // Assiduité : sans les réponses au défi du jour
 }
 // Fusion avec la progression du compte : pour chaque plante, la fiche la plus travaillée ; pour chaque jour, le plus rempli
 function fusion(a,b){
@@ -3764,6 +3782,9 @@ function fusion(a,b){
   for(const k in b.cf||{})r.cf[k]=Math.max(r.cf[k]||0,b.cf[k]||0);
   // jokers du jour : le plus grand nombre utilisé (5 par jour, tous appareils et onglets confondus)
   if(b.jk&&b.jk.d){const x=r.jk;if(!x||!x.d||x.d<b.jk.d)r.jk={d:b.jk.d,n:b.jk.n||0};else if(x.d===b.jk.d)r.jk={d:x.d,n:Math.max(x.n||0,b.jk.n||0)}}
+  // défi du jour : le plus récent, et pour un même jour la tentative la plus avancée (jouée sur un autre appareil du compte)
+  if(b.df&&b.df.d&&Array.isArray(b.df.r)){const x=r.df,nb=b.df.r.length;
+    if(!x||!x.d||x.d<b.df.d||(x.d===b.df.d&&nb>(x.r||[]).length))r.df={...b.df,r:[...b.df.r],v:[...(b.df.v||[])],pub:(x&&x.d===b.df.d&&x.pub)||b.df.pub}}
   r.best=Math.max(r.best||0,b.best||0);return r;
 }
 // Autre onglet, ou appli de l'écran d'accueil restée ouverte à côté : on reprend ce qu'il a enregistré avant de continuer,
@@ -3783,7 +3804,7 @@ function sbConnecte(){const uid=sbU&&sbU.id||null;if(sbCx&&sbCxU===uid)return sb
       catch(e){sbMsg=sbErr(e);p=undefined}}   // undefined : profil inconnu (réseau), à ne pas confondre avec null (pas encore de pseudo)
     if((sbU&&sbU.id||null)!==uid)return;   // l'utilisateur a changé entre-temps : une autre connexion prend le relais
     if(uid){sbMode='in';try{localStorage.setItem('qp.sbm','in')}catch(e){}}
-    sbP=p;if(p)await sbEnvoi();
+    sbP=p;if(p){await sbEnvoi();dfCompte()}   // défi déjà joué sur un autre appareil : le bouton de l'accueil l'affiche
     if(sbCx===run)sbCx=null;
     if($('prf').open)ami();
     else if(uid&&p===null&&sbRetour){sbRetour=false;openProfil()}   // retour d'un lien reçu par e-mail : choisir son pseudo
@@ -3802,7 +3823,8 @@ async function sbEnvoi(){
     const b=monBilan(),raz=sbRaz;
     await sbRpc('publier',{p_jour:today(),p_exercices:b.ex,p_justes:b.justes,p_nouvelles:b.nouvelles,p_rang:b.rang,p_acquises:b.acquises,p_reussite:b.reussite,p_serie:b.serie});
     // jours passés (35 derniers) : pour les totaux de la semaine et du mois ; renvoyés seulement s'ils ont changé
-    const pj=Object.keys(st.hist).filter(d=>d<today()&&d>=dstr(Date.now()-35*864e5)&&st.hist[d].n>0).sort().map(d=>({j:d,n:st.hist[d].n,ok:st.hist[d].ok||0,na:st.hist[d].na||0})),pk=JSON.stringify(pj);
+    // sans les réponses au défi du jour (dn, dok), comme le jour même
+    const pj=Object.keys(st.hist).filter(d=>d<today()&&d>=dstr(Date.now()-35*864e5)&&st.hist[d].n-(st.hist[d].dn||0)>0).sort().map(d=>({j:d,n:st.hist[d].n-(st.hist[d].dn||0),ok:(st.hist[d].ok||0)-(st.hist[d].dok||0),na:st.hist[d].na||0})),pk=JSON.stringify(pj);
     if(pj.length&&pk!==sbJk){try{await sbRpc('publier_jours',{p_jours:pj});sbJk=pk;sbTab=null}catch(e){}}
     await sbRpc('sauver_progression',{p_donnees:st});if(raz)sbRaz=false;sbSync=Date.now();if(sbP)Object.assign(sbP,{rang:b.rang,acquises:b.acquises,reussite:b.reussite,serie:b.serie})}catch(e){}})();
   try{await sbEnv}finally{sbEnv=null}
