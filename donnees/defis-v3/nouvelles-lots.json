@@ -681,9 +681,9 @@
     "https://iucngisd.org/gisd/species.php?sc=873"
    ],
    "origine": "nouvelle",
-   "statut": "validee",
+   "statut": "relue",
    "verification": {
-    "recoupement": "confirmé",
+    "recoupement": "connaissance de base, non recoupée",
     "note": "Rhizome très épais rampant, fragments qui repartent, bords d'eau et mares : CBN de Brest et Global Invasive Species Database.",
     "sources_recoupement": [
      "https://www.cbnbrest.fr/files/Fiche_ZH_BZH_Iris_pseudacorus_20230112.pdf",
@@ -5179,9 +5179,9 @@
     "https://www.bretagne-vivante.org/kit-feuilles-darbres-bretagne-vivante"
    ],
    "origine": "nouvelle",
-   "statut": "validee",
+   "statut": "relue",
    "verification": {
-    "recoupement": "confirmé",
+    "recoupement": "connaissance de base, non recoupée",
     "note": "Bourgeon axillaire à la base de la feuille, absent à la base des folioles : Techno-Science et Bretagne Vivante.",
     "sources_recoupement": [
      "https://www.techno-science.net/fr/definitions/feuille",
@@ -5877,6 +5877,1362 @@
      "https://www.letemps.ch/sciences/le-froid-une-bonne-nouvelle-pour-les-arbres-fruitiers",
      "https://revues.cirad.fr/index.php/fruits/article/download/34827/35834/39339"
     ]
+   }
+  },
+  {
+   "id": "NY00",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "La vanille utilisée en pâtisserie provient de quelle partie de la plante ?",
+   "choix": [
+    "La racine séchée d'un arbuste",
+    "Le fruit allongé d'une orchidée",
+    "L'écorce d'un petit arbre",
+    "La feuille d'un grand roseau"
+   ],
+   "bonne": 1,
+   "explication": "La gousse est le fruit d'une orchidée grimpante. Sa fleur ne dure qu'une matinée : on la féconde à la main, geste mis au point en 1841 par Edmond Albius à La Réunion.",
+   "sources": [
+    "https://linnean.org/news/2019/10/16/edmond-albius"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé : Linnean Society + ENS Planet-Vie (via recherche)",
+    "sources_recoupement": [
+     "https://linnean.org/news/2019/10/16/edmond-albius"
+    ]
+   }
+  },
+  {
+   "id": "NY01",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Où poussent les cabosses du cacaoyer, qui renferment les fèves de cacao ?",
+   "choix": [
+    "À l'extrémité des plus fines brindilles feuillées",
+    "Enterrées dans le sol au pied de l'arbre",
+    "Suspendues à des lianes qui grimpent dessus",
+    "Directement sur le tronc et les branches"
+   ],
+   "bonne": 3,
+   "explication": "Chez le cacaoyer, fleurs et fruits naissent à même le tronc (cauliflorie). Chaque cabosse contient 20 à 50 fèves, qui sont fermentées, séchées puis torréfiées pour faire le chocolat.",
+   "sources": [
+    "https://www.museeduchocolat.fr/fichiers/ecoles/Choco-Story_Kit_Pedagogique_A2.pdf"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé par plusieurs documents pédagogiques (recherche)",
+    "sources_recoupement": [
+     "https://www.museeduchocolat.fr/fichiers/ecoles/Choco-Story_Kit_Pedagogique_A2.pdf"
+    ]
+   }
+  },
+  {
+   "id": "NY02",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quelle affirmation est exacte sur les poivres noir, blanc et vert ?",
+   "choix": [
+    "Ils viennent tous du même poivrier",
+    "Ce sont trois espèces de plantes distinctes",
+    "Seul le noir vient d'un poivrier",
+    "Le blanc est un poivre noir décoloré chimiquement"
+   ],
+   "bonne": 0,
+   "explication": "Poivre vert : baie cueillie avant maturité ; noir : baie séchée ; blanc : baie mûre dont on retire l'enveloppe. Le « poivre rose » (baie rose) vient d'une autre plante.",
+   "sources": [
+    "https://www.quechoisir.org/decryptage-poivre-decryptage-n5231/"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé Que Choisir + Consoglobe (recherche)",
+    "sources_recoupement": [
+     "https://www.quechoisir.org/decryptage-poivre-decryptage-n5231/"
+    ]
+   }
+  },
+  {
+   "id": "NY03",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Que torréfie-t-on pour obtenir le café ?",
+   "choix": [
+    "Les feuilles séchées d'un arbuste tropical",
+    "Les racines d'une plante vivace d'altitude",
+    "Les graines de la cerise du caféier",
+    "Les fleurs jaunes d'un arbre à pollen"
+   ],
+   "bonne": 2,
+   "explication": "Le caféier produit des « cerises » rouges contenant deux graines : les grains de café verts. C'est leur torréfaction qui leur donne couleur et arôme.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY04",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Thé vert et thé noir : quelle est leur différence essentielle ?",
+   "choix": [
+    "Ils viennent de deux arbustes très différents",
+    "Le même théier, traité autrement",
+    "Le noir est fait avec les racines du théier",
+    "Le vert est fait avec les fleurs du théier"
+   ],
+   "bonne": 1,
+   "explication": "Tous les thés viennent du théier. Le thé vert est peu oxydé ; le thé noir a des feuilles roulées et laissées s'oxyder, ce qui les fonce et change le goût.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY05",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "De quelle partie du tournesol extrait-on l'huile de tournesol ?",
+   "choix": [
+    "Des pétales jaunes finement pressés",
+    "De la tige moelleuse et fibreuse",
+    "Des racines profondes de la plante",
+    "Des graines contenues dans le capitule"
+   ],
+   "bonne": 3,
+   "explication": "Le capitule (la grande « fleur ») est en réalité formé de centaines de petites fleurs, chacune donnant une graine. Ce sont ces graines, riches en huile, qui sont pressées.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY06",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Pour obtenir l'huile essentielle de lavande, que distille-t-on ?",
+   "choix": [
+    "Les épis de fleurs",
+    "Les racines charnues",
+    "Les tiges ligneuses uniquement",
+    "Les graines noires"
+   ],
+   "bonne": 0,
+   "explication": "On distille à la vapeur d'eau les sommités fleuries (épis) de lavande, récoltées en été. La lavande fine de Haute-Provence bénéficie d'une AOP pour son huile essentielle.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY07",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Pourquoi le pop-corn éclate-t-il à la chaleur ?",
+   "choix": [
+    "Le grain contient de l'air comprimé",
+    "Le sucre du grain explose en brûlant",
+    "L'eau du grain se change en vapeur",
+    "L'enveloppe fond et libère un gaz"
+   ],
+   "bonne": 2,
+   "explication": "Seules certaines variétés de maïs éclatent : leur enveloppe est étanche et résistante, la vapeur monte en pression jusqu'à la rupture, et l'amidon gonfle en mousse.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY08",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "De quelle partie de l'arbre tire-t-on le liège des bouchons ?",
+   "choix": [
+    "Du bois de cœur du tronc",
+    "De l'écorce du chêne-liège",
+    "Des feuilles persistantes",
+    "Des glands pressés"
+   ],
+   "bonne": 1,
+   "explication": "On lève l'écorce du chêne-liège environ tous les 9 à 12 ans sans abattre l'arbre, qui en reforme une nouvelle. Le liège est léger, imperméable et élastique.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY09",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Pour la tisane de tilleul, que fait-on infuser ?",
+   "choix": [
+    "Les fruits ronds uniquement",
+    "Les feuilles en forme de cœur seules",
+    "L'écorce râpée du tronc",
+    "Les fleurs avec leur longue bractée"
+   ],
+   "bonne": 3,
+   "explication": "Les inflorescences du tilleul portent une bractée en forme de languette, qui s'infuse avec les fleurs. On les cueille en juin-juillet ; la tisane est réputée calmante.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY11",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Olive verte et olive noire : quelle est la différence principale ?",
+   "choix": [
+    "Elles viennent d'arbres différents",
+    "L'une est un fruit, l'autre une graine",
+    "Leur degré de maturité à la récolte",
+    "L'une pousse en altitude seulement"
+   ],
+   "bonne": 2,
+   "explication": "Une olive verte est cueillie avant maturité, une noire est plus mûre (certaines olives noires du commerce sont aussi oxydées). Les deux viennent de l'olivier.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY12",
+   "theme": "Saisons",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "À quelle saison fleurit le mimosa sur la Côte d'Azur ?",
+   "choix": [
+    "En plein été, de juin à août",
+    "En hiver, de janvier à mars",
+    "À l'automne, en octobre-novembre",
+    "Au printemps, en mai-juin"
+   ],
+   "bonne": 1,
+   "explication": "Le mimosa, originaire d'Australie, fleurit en plein hiver et offre ses pompons jaunes alors que la plupart des plantes sommeillent. Bormes-les-Mimosas lui consacre une fête.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY13",
+   "theme": "Saisons",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quand le noisetier fleurit-il, avec ses longs chatons jaunes pendants ?",
+   "choix": [
+    "En été, en juillet-août",
+    "À l'automne, après les noisettes",
+    "À la fin du printemps, en mai",
+    "En plein hiver, dès janvier-février"
+   ],
+   "bonne": 3,
+   "explication": "Le noisetier fleurit avant ses feuilles : le vent emporte le pollen des chatons mâles jusqu'aux minuscules fleurs femelles rouges. Les noisettes mûrissent en septembre.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY14",
+   "theme": "Saisons",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "À quelle période fleurissent les jonquilles dans les jardins ?",
+   "choix": [
+    "À la fin de l'hiver et au début du printemps",
+    "En plein été, en juillet-août",
+    "À l'automne, en octobre-novembre",
+    "Toute l'année sans interruption"
+   ],
+   "bonne": 0,
+   "explication": "Les narcisses et jonquilles fleurissent de février à avril selon les variétés. Leurs bulbes se plantent à l'automne et la plante repart de sa réserve souterraine.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY15",
+   "theme": "Saisons",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quand les champs de lavande sont-ils le plus colorés en Provence ?",
+   "choix": [
+    "En avril, au printemps",
+    "En octobre, à l'automne",
+    "En juillet, au cœur de l'été",
+    "En février, à la fin de l'hiver"
+   ],
+   "bonne": 2,
+   "explication": "La floraison de la lavande culmine en été, de fin juin à août, selon l'altitude et la variété. La récolte suit dès que les épis sont bien épanouis.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY16",
+   "theme": "Saisons",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "À quelle période les marrons d'Inde tombent-ils des marronniers ?",
+   "choix": [
+    "En mars, au sortir de l'hiver",
+    "En septembre-octobre, à l'automne",
+    "En juillet, en plein été",
+    "En décembre, en plein hiver"
+   ],
+   "bonne": 1,
+   "explication": "Le marronnier d'Inde fleurit en avril-mai en « chandelles » blanches ; ses fruits, des capsules épineuses vertes, tombent et s'ouvrent à l'automne en libérant le marron brillant.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY17",
+   "theme": "Saisons",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "À quelle période se vendangent les raisins en France ?",
+   "choix": [
+    "En mai-juin, au printemps",
+    "En décembre-janvier, au cœur de l'hiver",
+    "En mars-avril, après les gelées",
+    "Généralement en septembre-octobre"
+   ],
+   "bonne": 3,
+   "explication": "Les vendanges ont lieu de la fin de l'été au début de l'automne, parfois dès la mi-août lors d'étés chauds. Elles marquent la maturité du raisin du vignoble.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY18",
+   "theme": "Saisons",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "À quelle période le pollen de bouleau provoque-t-il le plus d'allergies ?",
+   "choix": [
+    "Au printemps, en mars-avril",
+    "En plein été, en juillet-août",
+    "À l'automne, en octobre-novembre",
+    "En plein hiver, en janvier"
+   ],
+   "bonne": 0,
+   "explication": "Les chatons du bouleau libèrent des quantités énormes de pollen dès les premiers beaux jours. Le bouleau est l'un des arbres les plus allergisants en France.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY19",
+   "theme": "Saisons",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "À quelle période moissonne-t-on le blé en France ?",
+   "choix": [
+    "En mars, en sortant de l'hiver",
+    "En octobre, à l'automne",
+    "Principalement en juillet",
+    "En décembre, avant Noël"
+   ],
+   "bonne": 2,
+   "explication": "Le blé d'hiver est semé à l'automne puis récolté l'été suivant, quand les épis sont dorés et secs. La moisson a lieu surtout en juillet, parfois début août.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY20",
+   "theme": "Fruits et toxicité",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Que dit-on de la fraise sur le plan botanique ?",
+   "choix": [
+    "C'est une baie au sens strict, comme le raisin",
+    "La partie rouge est un faux fruit, les vrais fruits étant les akènes",
+    "C'est un fruit à noyau, comme la cerise",
+    "C'est un légume-racine sucré et rouge"
+   ],
+   "bonne": 1,
+   "explication": "La chair rouge est le réceptacle de la fleur devenu charnu. Les petits grains en surface sont des akènes : ce sont eux, les vrais fruits du fraisier.",
+   "sources": [
+    "https://www.futura-sciences.com/planete/questions-reponses/botanique-fraise-nest-pas-fruit-14182/"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé Futura Sciences (recherche)",
+    "sources_recoupement": [
+     "https://www.futura-sciences.com/planete/questions-reponses/botanique-fraise-nest-pas-fruit-14182/"
+    ]
+   }
+  },
+  {
+   "id": "NY21",
+   "theme": "Fruits et toxicité",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Que faut-il savoir du marron du marronnier d'Inde des parcs ?",
+   "choix": [
+    "Il n'est pas comestible et peut rendre malade",
+    "Il remplace la châtaigne dans la crème de marrons",
+    "Il est bon cru, avec un goût de noisette",
+    "Il est comestible dès qu'il est bouilli"
+   ],
+   "bonne": 0,
+   "explication": "Le marron d'Inde contient de l'escine, qui provoque des troubles digestifs. Il se distingue de la châtaigne (châtaignier) : la bogue du châtaignier est hérissée de piquants fins.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY22",
+   "theme": "Fruits et toxicité",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quel danger présente le muguet pour les enfants et les animaux ?",
+   "choix": [
+    "Seules ses clochettes blanches sont toxiques",
+    "Seules ses racines souterraines sont toxiques",
+    "Il n'est toxique qu'une fois séché",
+    "Toutes ses parties sont toxiques, y compris l'eau du vase"
+   ],
+   "bonne": 3,
+   "explication": "Le muguet contient des hétérosides cardiotoniques. Les baies rouges attirent les jeunes enfants ; il faut se laver les mains après l'avoir manipulé et ne jamais le consommer.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY23",
+   "theme": "Fruits et toxicité",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Pourquoi ne faut-il pas manger les haricots secs crus ?",
+   "choix": [
+    "Ils sont trop durs pour être avalés sans dents",
+    "Ils provoquent surtout des allergies au pollen",
+    "Ils contiennent une toxine détruite par la cuisson",
+    "Ils sont sans danger, mais seulement fades"
+   ],
+   "bonne": 2,
+   "explication": "Les haricots crus renferment de la phytohémagglutinine (phasine), qui provoque nausées et vomissements. Une cuisson complète à ébullition la détruit.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY24",
+   "theme": "Fruits et toxicité",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Pourquoi les olives fraîchement cueillies sont-elles immangeables ?",
+   "choix": [
+    "Elles sont toxiques à tout moment de l'année",
+    "Elles sont très amères à cause de l'oleuropéine",
+    "Elles sont aussi acides qu'un citron vert",
+    "Elles contiennent un noyau très empoisonné"
+   ],
+   "bonne": 1,
+   "explication": "L'oleuropéine donne une amertume extrême aux olives crues. On l'élimine par saumure, trempage dans l'eau ou séchage au sel avant de les consommer.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY25",
+   "theme": "Fruits et toxicité",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quel arbuste, très planté sur les ronds-points, est toxique dans toutes ses parties ?",
+   "choix": [
+    "Le laurier-sauce",
+    "Le romarin",
+    "Le thym",
+    "Le laurier-rose"
+   ],
+   "bonne": 3,
+   "explication": "Le laurier-rose renferme des glucosides cardiotoxiques (oléandrine) dans ses feuilles, fleurs et sève. Il ne faut pas le confondre avec le laurier-sauce de la cuisine.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY26",
+   "theme": "Vocabulaire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Comment appelle-t-on chaque « gousse » d'une tête d'ail ?",
+   "choix": [
+    "Un tubercule",
+    "Un rhizome",
+    "Un caïeu",
+    "Un stolon"
+   ],
+   "bonne": 2,
+   "explication": "Une tête d'ail est un bulbe composé de plusieurs caïeux, appelés « gousses » en cuisine. Le mot « gousse » désigne botaniquement le fruit des légumineuses, pas l'ail.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY27",
+   "theme": "Vocabulaire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quel est le terme botanique pour la « pomme de pin » ?",
+   "choix": [
+    "Un cône",
+    "Un capitule",
+    "Un épi",
+    "Une gousse"
+   ],
+   "bonne": 0,
+   "explication": "Le cône porte les graines des conifères (pin, sapin, épicéa). Les écailles s'écartent à maturité pour libérer des graines souvent ailées.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY28",
+   "theme": "Vocabulaire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quel mot désigne les grappes pendantes de petites fleurs du noisetier ?",
+   "choix": [
+    "Les ombelles",
+    "Les chatons",
+    "Les capitules",
+    "Les panicules"
+   ],
+   "bonne": 1,
+   "explication": "Le chaton est une inflorescence qui tombe d'un bloc après avoir répandu son pollen. Bouleau, saule, chêne et noisetier en portent.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY29",
+   "theme": "Vocabulaire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Comment nomme-t-on les feuilles d'une fougère ?",
+   "choix": [
+    "Des frondes",
+    "Des aiguilles",
+    "Des thalles",
+    "Des écailles"
+   ],
+   "bonne": 0,
+   "explication": "Les jeunes frondes sont enroulées en crosse. Sous les frondes mûres, des sores abritent des spores : la fougère n'a ni fleurs ni graines.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY30",
+   "theme": "Idées reçues",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Que fait réellement le tournesol adulte quant au soleil ?",
+   "choix": [
+    "Il suit le soleil toute la journée",
+    "Il se tourne vers le nord",
+    "Il baisse la tête vers le sol à midi",
+    "Il reste fixe, tourné vers l'est"
+   ],
+   "bonne": 3,
+   "explication": "Seuls les jeunes plants en croissance suivent le soleil, via la croissance de la tige. Une fois adulte, le capitule se fige, orienté vers l'est, ce qui attire les pollinisateurs.",
+   "sources": [
+    "https://www.futura-sciences.com/planete/questions-reponses/plante-tournesols-suivent-direction-soleil-vrai-faux-20921/"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé Futura Sciences + Le Tribunal du Net (recherche)",
+    "sources_recoupement": [
+     "https://www.futura-sciences.com/planete/questions-reponses/plante-tournesols-suivent-direction-soleil-vrai-faux-20921/"
+    ]
+   }
+  },
+  {
+   "id": "NY31",
+   "theme": "Idées reçues",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Le bambou est-il un arbre ?",
+   "choix": [
+    "Non, c'est une graminée géante",
+    "Oui, un arbre à croissance rapide",
+    "Non, c'est une fougère arborescente",
+    "Non, c'est un cactus"
+   ],
+   "bonne": 0,
+   "explication": "Le bambou appartient à la famille des graminées, comme le blé. Sa tige, le chaume, est creuse, et certaines espèces fleurissent très rarement, parfois une fois par siècle.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY33",
+   "theme": "Idées reçues",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "À quel groupe appartient le champignon ?",
+   "choix": [
+    "Au règne des plantes, version sans fleurs",
+    "À un règne à part, celui des Fungi",
+    "À celui des animaux, version sans organes",
+    "À celui des algues vivant hors de l'eau"
+   ],
+   "bonne": 1,
+   "explication": "Les champignons n'ont pas de chlorophylle : ils ne font pas de photosynthèse et se nourrissent de matière organique. Génétiquement, ils sont plus proches des animaux que des plantes.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY34",
+   "theme": "Idées reçues",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "La mousse pousse-t-elle toujours du côté nord des troncs ?",
+   "choix": [
+    "Non, elle pousse là où il y a de l'humidité et de l'ombre",
+    "Oui, c'est une boussole naturelle fiable",
+    "Oui, mais seulement en forêt dense",
+    "Non, elle ne pousse que du côté sud"
+   ],
+   "bonne": 0,
+   "explication": "Les mousses n'ont pas de vraies racines et dépendent de l'humidité. Selon l'exposition locale, elles peuvent couvrir toutes les faces d'un tronc : elles ne remplacent pas une boussole.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NY35",
+   "theme": "Idées reçues",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Les carottes mangées en cuisine sont-elles des racines ?",
+   "choix": [
+    "Non, c'est une tige souterraine",
+    "Non, c'est un bulbe d'écailles",
+    "Oui, une racine renflée",
+    "Non, c'est un fruit enterré"
+   ],
+   "bonne": 2,
+   "explication": "La carotte est une racine pivotante renflée qui stocke des réserves, ce qui lui permet de passer l'hiver : la plante, bisannuelle, fleurit la 2e année. La pomme de terre, elle, est une tige.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NQ04",
+   "theme": "Idées reçues",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Le « poivre rose » vendu en épicerie vient du faux-poivrier. À quelle famille appartient cet arbre ?",
+   "choix": [
+    "Les Pipéracées, famille du poivre noir",
+    "Les Lauracées, famille du laurier et de la cannelle",
+    "Les Anacardiacées, famille du manguier et de la noix de cajou",
+    "Les Myrtacées, famille du giroflier et de l'eucalyptus"
+   ],
+   "bonne": 2,
+   "explication": "Le poivre rose (Schinus) n'est pas un poivre : c'est une Anacardiacée, famille de la cajou et de la mangue. D'où d'éventuelles allergies croisées. Dans le doute, s'abstenir.",
+   "sources": [
+    "https://premierepeau.com/fr/pages/glossary-terms/pink-pepper",
+    "https://www.techno-science.net/fr/definitions/faux-poivrier-odorant"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé : deux sources (famille Anacardiaceae, pas Piperaceae).",
+    "sources_recoupement": [
+     "https://premierepeau.com/fr/pages/glossary-terms/pink-pepper",
+     "https://www.techno-science.net/fr/definitions/faux-poivrier-odorant"
+    ]
+   }
+  },
+  {
+   "id": "NQ05",
+   "theme": "Idées reçues",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "La noix de muscade, malgré son nom, est :",
+   "choix": [
+    "la graine du muscadier, entourée du macis",
+    "un fruit à coque proche de la noix",
+    "le bouton floral séché du muscadier",
+    "un morceau de l'écorce du muscadier"
+   ],
+   "bonne": 0,
+   "explication": "Pas une vraie noix : c'est la graine de Myristica fragrans. L'arille rouge qui l'enveloppe, le macis, est une autre épice issue du même fruit.",
+   "sources": [
+    "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/2095326/noix-de-muscade",
+    "https://www.universalis.fr/dictionnaire/macis/"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé : OQLF et Universalis (graine ; macis = arille).",
+    "sources_recoupement": [
+     "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/2095326/noix-de-muscade",
+     "https://www.universalis.fr/dictionnaire/macis/"
+    ]
+   }
+  },
+  {
+   "id": "NQ08",
+   "theme": "Idées reçues",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Le gingembre qu'on râpe en cuisine est :",
+   "choix": [
+    "une racine pivotante renflée",
+    "un bulbe formé d'écailles",
+    "une tige souterraine (rhizome)",
+    "une graine de la plante"
+   ],
+   "bonne": 2,
+   "explication": "Le « gingembre » n'est pas une racine : c'est un rhizome, tige souterraine horizontale qui émet racines et pousses, d'où ses nœuds et ses bourgeons visibles.",
+   "sources": [
+    "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/26576400/rhizome",
+    "https://www.futura-sciences.com/maison/questions-reponses/jardinage-astuces-pratiques-faire-pousser-gingembre-facilement-chez-soi-24580/"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé : OQLF (définition de rhizome) et Futura (gingembre = rhizome).",
+    "sources_recoupement": [
+     "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/26576400/rhizome",
+     "https://www.futura-sciences.com/maison/questions-reponses/jardinage-astuces-pratiques-faire-pousser-gingembre-facilement-chez-soi-24580/"
+    ]
+   }
+  },
+  {
+   "id": "NQ10",
+   "theme": "Idées reçues",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Pourquoi ne voit-on jamais les fleurs du figuier ?",
+   "choix": [
+    "Elles s'ouvrent la nuit puis se flétrissent",
+    "Il n'en a pas, les figues se forment sans",
+    "Elles naissent sous l'écorce du tronc",
+    "Elles sont cachées à l'intérieur de la figue"
+   ],
+   "bonne": 3,
+   "explication": "La figue est une inflorescence en urne (sycone) : des centaines de minuscules fleurs tapissent l'intérieur, accessibles par l'ostiole, où entre la guêpe pollinisatrice.",
+   "sources": [
+    "https://www.techno-science.net/fr/definitions/figue"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé : Techno-Science et résultats Futura/Espace pour la vie (sycone, ostiole).",
+    "sources_recoupement": [
+     "https://www.techno-science.net/fr/definitions/figue"
+    ]
+   }
+  },
+  {
+   "id": "NQ11",
+   "theme": "Idées reçues",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "L'herbe à chat (cataire), qui rend les chats joueurs, appartient à la famille :",
+   "choix": [
+    "des Poacées, celle des graminées",
+    "des Lamiacées, celle de la menthe",
+    "des Valérianacées, celle de la valériane",
+    "des Apiacées, celle de la carotte"
+   ],
+   "bonne": 1,
+   "explication": "Malgré son nom, Nepeta cataria n'est pas une graminée : c'est une Lamiacée, tige carrée comme la menthe. Sa népétalactone agit sur beaucoup de chats, pas sur tous.",
+   "sources": [
+    "https://espacepourlavie.ca/herbe-chat-utilisations-et-reactions-des-animaux",
+    "https://www.aroma-zone.com/page/la-cataire-nepeta-cataria-origines-bienfaits-et-conseils-pratiques"
+   ],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "Recoupé : Espace pour la vie et Aroma-Zone (népétalactone, Lamiaceae) ; tige carrée : connaissance de base.",
+    "sources_recoupement": [
+     "https://espacepourlavie.ca/herbe-chat-utilisations-et-reactions-des-animaux",
+     "https://www.aroma-zone.com/page/la-cataire-nepeta-cataria-origines-bienfaits-et-conseils-pratiques"
+    ]
+   }
+  },
+  {
+   "id": "NQ12",
+   "theme": "Usages et histoire",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Le clou de girofle, épice de cuisine, est :",
+   "choix": [
+    "un fruit immature séché du giroflier",
+    "un morceau de brindille du giroflier",
+    "un bouton floral séché, récolté avant l'ouverture",
+    "une graine entourée d'une enveloppe"
+   ],
+   "bonne": 2,
+   "explication": "Le clou est le bouton floral du giroflier (Syzygium aromaticum), cueilli rose-rouge avant épanouissement puis séché. Sa forme de clou vient du calice et des pétales fermés.",
+   "sources": [
+    "https://tramil.net/fr/plant/syzygium-aromaticum",
+    "https://www.pharma-gdd.com/fr/les-bienfaits-du-clou-de-girofle"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé : TRAMIL et Pharma GDD (boutons récoltés avant épanouissement).",
+    "sources_recoupement": [
+     "https://tramil.net/fr/plant/syzygium-aromaticum",
+     "https://www.pharma-gdd.com/fr/les-bienfaits-du-clou-de-girofle"
+    ]
+   }
+  },
+  {
+   "id": "NQ13",
+   "theme": "Usages et histoire",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Le safran, épice la plus chère au monde, correspond à :",
+   "choix": [
+    "les stigmates séchés d'un crocus",
+    "les pétales violets séchés du crocus",
+    "les étamines jaunes d'un crocus",
+    "le bulbe broyé d'un crocus"
+   ],
+   "bonne": 0,
+   "explication": "Seuls les stigmates rouges de Crocus sativus sont récoltés à la main, fleur par fleur : il en faut environ 150 à 200 pour obtenir un gramme de safran sec.",
+   "sources": [
+    "https://www.alimentarium.org/fr/magazine/saveurs-du-monde/le-safran-une-%C3%A9pice-fascinante",
+    "https://www.franceagrimer.fr/content/download/21314/document/2.2%20-%20Safran.pdf"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé : Alimentarium et FranceAgriMer (stigmates ; 150 à 300 fleurs par gramme selon source).",
+    "sources_recoupement": [
+     "https://www.alimentarium.org/fr/magazine/saveurs-du-monde/le-safran-une-%C3%A9pice-fascinante",
+     "https://www.franceagrimer.fr/content/download/21314/document/2.2%20-%20Safran.pdf"
+    ]
+   }
+  },
+  {
+   "id": "NQ14",
+   "theme": "Usages et histoire",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Hors d'Amérique centrale, pourquoi féconde-t-on à la main les fleurs du vanillier ?",
+   "choix": [
+    "Leurs fleurs sont stériles hors de leur région",
+    "Le vent ne disperse pas ce pollen lourd",
+    "La fécondation naturelle donne des gousses amères",
+    "Leur insecte pollinisateur naturel y est absent"
+   ],
+   "bonne": 3,
+   "explication": "Le vanillier est une orchidée : sans son pollinisateur d'origine, pas de gousse. En 1841, Edmond Albius, jeune esclave à La Réunion, mit au point le geste rapide, encore utilisé.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Edmond_Albius",
+    "https://linnean.org/news/2019/10/16/edmond-albius"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé : Wikipedia et Linnean Society (1841, absence de pollinisateur hors aire naturelle).",
+    "sources_recoupement": [
+     "https://en.wikipedia.org/wiki/Edmond_Albius",
+     "https://linnean.org/news/2019/10/16/edmond-albius"
+    ]
+   }
+  },
+  {
+   "id": "NQ15",
+   "theme": "Usages et histoire",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Les câpres de l'apéritif sont :",
+   "choix": [
+    "des baies vertes du câprier, confites au sel",
+    "des boutons floraux du câprier, conservés au vinaigre",
+    "des graines du câprier, séchées au soleil",
+    "des bourgeons de feuilles du câprier"
+   ],
+   "bonne": 1,
+   "explication": "La câpre est le bouton floral non éclos du câprier (Capparis spinosa), arbrisseau méditerranéen. Plus elle est petite, plus elle est fine ; le fruit, lui, est le cornichon de câpre.",
+   "sources": [
+    "https://fr.vikidia.org/wiki/C%C3%A2pre",
+    "https://www.techno-science.net/fr/definitions/caprier"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé : Vikidia et Techno-Science (bouton floral).",
+    "sources_recoupement": [
+     "https://fr.vikidia.org/wiki/C%C3%A2pre",
+     "https://www.techno-science.net/fr/definitions/caprier"
+    ]
+   }
+  },
+  {
+   "id": "NQ17",
+   "theme": "Usages et histoire",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Quelle cannelle contient le plus de coumarine, d'où l'avis de la consommer avec modération ?",
+   "choix": [
+    "La cassia, dite cannelle de Chine",
+    "La cannelle de Ceylan, du Sri Lanka",
+    "Les deux en quantités équivalentes",
+    "Aucune, la coumarine n'est pas présente"
+   ],
+   "bonne": 0,
+   "explication": "La vraie cannelle de Ceylan (Cinnamomum verum) est plus pauvre en coumarine que la cassia, moins chère et plus courante dans le commerce. Mieux vaut la varier.",
+   "sources": [
+    "https://www.futura-sciences.com/planete/definitions/botanique-cannelle-17838/",
+    "https://www.techno-science.net/fr/definitions/cannelle-ecorce"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé : plusieurs sources (cassia plus riche en coumarine).",
+    "sources_recoupement": [
+     "https://www.futura-sciences.com/planete/definitions/botanique-cannelle-17838/",
+     "https://www.techno-science.net/fr/definitions/cannelle-ecorce"
+    ]
+   }
+  },
+  {
+   "id": "NQ20",
+   "theme": "Écologie",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Pourquoi le trèfle enrichit-il le sol en azote ?",
+   "choix": [
+    "Ses feuilles très riches en azote se décomposent vite",
+    "Ses racines libèrent des nitrates tirés de la roche",
+    "Des bactéries de ses nodosités fixent l'azote de l'air",
+    "Il absorbe l'azote en excès et le restitue purifié"
+   ],
+   "bonne": 2,
+   "explication": "Les légumineuses abritent dans des nodosités racinaires des Rhizobium qui transforment l'azote de l'air en ammoniac assimilable, contre des sucres. D'où leur usage en engrais verts.",
+   "sources": [
+    "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8467406/nodosite",
+    "https://natadges.hub.inrae.fr/content/download/3539/34274?version=1"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé : OQLF et INRAE (nodosités, Rhizobium).",
+    "sources_recoupement": [
+     "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8467406/nodosite",
+     "https://natadges.hub.inrae.fr/content/download/3539/34274?version=1"
+    ]
+   }
+  },
+  {
+   "id": "NQ21",
+   "theme": "Écologie",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Dans une mycorhize, que reçoit le champignon de l'arbre ?",
+   "choix": [
+    "Des sucres issus de sa photosynthèse",
+    "De l'eau puisée dans ses racines",
+    "Des sels minéraux prélevés dans son sol",
+    "Des spores pour se reproduire"
+   ],
+   "bonne": 0,
+   "explication": "L'arbre cède au champignon des sucres (jusqu'à environ 20 % de sa production) ; en échange, les hyphes lui apportent eau, azote et phosphore puisés dans les micropores du sol.",
+   "sources": [
+    "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/ecologie-vegetale/les-mycorhizes-une-fascinante-biocenose"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé : Waldwissen et résultats Chambre d'agriculture (sucres contre eau et minéraux).",
+    "sources_recoupement": [
+     "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/ecologie-vegetale/les-mycorhizes-une-fascinante-biocenose"
+    ]
+   }
+  },
+  {
+   "id": "NQ22",
+   "theme": "Écologie",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Qu'est-ce qui fait virer un hortensia au bleu en sol acide ?",
+   "choix": [
+    "Le fer, bloqué par un sol calcaire",
+    "L'azote, lessivé par la pluie",
+    "Le potassium, apporté par l'engrais",
+    "L'aluminium, rendu assimilable par le pH bas"
+   ],
+   "bonne": 3,
+   "explication": "En sol acide, l'aluminium devient soluble et absorbé par les racines : il bleuit les pigments de l'Hydrangea macrophylla. En sol calcaire, il reste bloqué et les fleurs restent roses.",
+   "sources": [
+    "https://www.jardiner-malin.fr/fiche/obtenir-hortensia-bleu.html",
+    "https://www.consoglobe.com/changer-la-couleur-des-fleurs-des-hortensias-cg"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé : Jardiner Malin et Consoglobe (aluminium, pH).",
+    "sources_recoupement": [
+     "https://www.jardiner-malin.fr/fiche/obtenir-hortensia-bleu.html",
+     "https://www.consoglobe.com/changer-la-couleur-des-fleurs-des-hortensias-cg"
+    ]
+   }
+  },
+  {
+   "id": "NQ27",
+   "theme": "Saisons",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "En automne, quel conifère de nos montagnes perd ses aiguilles ?",
+   "choix": [
+    "Le sapin, qui renouvelle toutes ses aiguilles",
+    "Le mélèze, qui jaunit puis se dénude",
+    "Le pin sylvestre, qui jaunit en octobre",
+    "L'épicéa, qui rougit puis se dénude"
+   ],
+   "bonne": 1,
+   "explication": "Le mélèze d'Europe est un conifère caduc : ses aiguilles dorent en octobre et tombent. Il évite ainsi la sécheresse physiologique d'un sol gelé en hiver.",
+   "sources": [
+    "https://www.futura-sciences.com/planete/questions-reponses/arbre-existe-t-il-coniferes-caducs-14522/"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé : Futura et résultats Espace pour la vie / Écrins (mélèze caduc).",
+    "sources_recoupement": [
+     "https://www.futura-sciences.com/planete/questions-reponses/arbre-existe-t-il-coniferes-caducs-14522/"
+    ]
+   }
+  },
+  {
+   "id": "NQ28",
+   "theme": "Saisons",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Quand fleurit le lierre grimpant, au grand bonheur des insectes ?",
+   "choix": [
+    "En avril, avec les arbres fruitiers",
+    "En juin, au solstice d'été",
+    "De septembre à novembre, en fin de saison",
+    "En janvier, en plein hiver"
+   ],
+   "bonne": 2,
+   "explication": "Le lierre fleurit à l'automne et fructifie au printemps : ses baies noires mûrissent en fin d'hiver. Sa floraison tardive nourrit les derniers butineurs avant l'hiver.",
+   "sources": [
+    "https://www.provincedeliege.be:443/sites/default/files/media/10952/Lierre%20grimpant%20%28Hedera%20helix%29.pdf",
+    "https://www.futura-sciences.com/planete/definitions/botanique-lierre-10291/"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé : Province de Liège et résultats Futura (floraison automnale, fructification printanière).",
+    "sources_recoupement": [
+     "https://www.provincedeliege.be:443/sites/default/files/media/10952/Lierre%20grimpant%20%28Hedera%20helix%29.pdf",
+     "https://www.futura-sciences.com/planete/definitions/botanique-lierre-10291/"
+    ]
+   }
+  },
+  {
+   "id": "NQ30",
+   "theme": "Saisons",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Un jeune hêtre garde ses feuilles brunes tout l'hiver. Que traduit cela ?",
+   "choix": [
+    "Une maladie qui tue l'arbre",
+    "Un hêtre pourpre, car cette espèce est persistante",
+    "Un arbre à feuilles persistantes mais desséché",
+    "Une marcescence : les feuilles mortes restent attachées"
+   ],
+   "bonne": 3,
+   "explication": "La marcescence est normale chez le hêtre, le charme ou certains chênes : l'abscission est incomplète et les feuilles sèches tombent au printemps, à la poussée des bourgeons.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base (marcescence, hêtre et charme).",
+    "sources_recoupement": []
+   }
+  },
+  {
+   "id": "NQ31",
+   "theme": "Fruits et toxicité",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "La « baie » rouge de l'if est en réalité :",
+   "choix": [
+    "une baie vraie contenant plusieurs graines",
+    "une graine entourée d'un arille charnu",
+    "une drupe à noyau comme une cerise",
+    "un faux fruit issu de la fleur entière"
+   ],
+   "bonne": 1,
+   "explication": "L'arille rouge n'est pas un vrai fruit : il coiffe une graine, très toxique, comme le reste de l'arbre (taxine). Dans le doute, ne jamais consommer, surtout pas avec des enfants.",
+   "sources": [
+    "https://www.cap.chu-lille.fr/2021/01/26/if"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Recoupé : CAP CHU Lille (arille, graine et feuilles toxiques) ; avertissement de prudence ajouté.",
+    "sources_recoupement": [
+     "https://www.cap.chu-lille.fr/2021/01/26/if"
+    ]
+   }
+  },
+  {
+   "id": "NQ35",
+   "theme": "Fruits et toxicité",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Dans le fruit rouge de l'églantier, les poils « à gratter » entourent :",
+   "choix": [
+    "les graines, nues sans enveloppe",
+    "les vrais fruits, des akènes",
+    "les étamines desséchées de la fleur",
+    "des spores du champignon de l'églantier"
+   ],
+   "bonne": 1,
+   "explication": "Le cynorrhodon est un faux fruit : un réceptacle charnu fermé qui renferme de nombreux petits fruits secs, des akènes, entourés de poils irritants pour la peau.",
+   "sources": [],
+   "origine": "nouvelle",
+   "statut": "relue",
+   "verification": {
+    "recoupement": "connaissance de base, non recoupée",
+    "note": "connaissance de base (cynorrhodon, akènes velus).",
+    "sources_recoupement": []
    }
   }
  ]
