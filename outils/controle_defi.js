@@ -1,6 +1,6 @@
 // Défi du jour, de bout en bout (index des photos réel, photos générées) : 30 séries de 10 questions bien formées,
 // même série pour deux appareils, QCM ou 4 photos, une seule réponse, correction expliquée, reprise après rechargement,
-// résultat, partage, pas de seconde partie, objectif du jour sans toucher à l'herbier, classement du volet profil.
+// résultat, partage, pas de seconde partie, réponses hors objectif du jour et herbier, classement du volet profil.
 // Usage : NODE_PATH=$(npm root -g) node outils/controle_defi.js [dossier où enregistrer des captures]
 const {chromium}=require('playwright');const path=require('path'),fs=require('fs');
 const {open}=require('./banc_essai.js');
@@ -82,9 +82,9 @@ const svg=n=>`<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><
   await p.click('#defi');await p.waitForSelector('#dfr:not([hidden]) .dfs');
   ok(await p.evaluate(()=>dfEtat().r.length===10&&$('dfr').querySelector('.dfs b').textContent==='7'),'second appui : le résultat s\'affiche, pas de nouvelle partie');
   await p.click('#df-ret');await p.waitForTimeout(400);
-  // progression : les 10 réponses comptent pour l'objectif du jour, sans toucher aux plantes de l'herbier
+  // mode à part : les 10 réponses ne comptent ni pour l'objectif du jour (historique), ni pour les plantes de l'herbier
   const pr=await p.evaluate(()=>({n:(st.hist[today()]||{n:0}).n,sp:JSON.stringify(st.sp)}));
-  ok(pr.n-h0===10,'objectif du jour : les 10 réponses du défi comptent ('+(pr.n-h0)+')');
+  ok(pr.n===h0,'objectif du jour, Progrès, Régularité : les réponses du défi ne comptent pas ('+(pr.n-h0)+')');
   ok(pr.sp===sp0,'herbier : le défi ne fait ni avancer ni acquérir de plante');
   // classement du volet profil (données d'exemple) : défi du jour sans périodes, ex æquo, amis pas encore joué en bas
   const cl=await p.evaluate(async()=>{sbU={id:'x'};sbP={pseudo:'moi'};sbRpc=async f=>f==='tableau_defi'?[{pseudo:'Lucie',moi:false,rang:7,score:9,reponses:'1111111110'},{pseudo:'moi',moi:true,rang:4,score:7,reponses:'1011011101'},{pseudo:'Paul',moi:false,rang:5,score:7,reponses:'1110111010'},{pseudo:'Marco',moi:false,rang:2,score:null,reponses:null}]:f==='tableau'?[{pseudo:'moi',moi:true,rang:4,exercices:10,justes:7},{pseudo:'Lucie',moi:false,rang:7,exercices:4,justes:3}]:f==='tableau_periode'?[]:null;
