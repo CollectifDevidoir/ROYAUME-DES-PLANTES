@@ -3919,7 +3919,7 @@ $('shg').onclick=()=>setSh(shS()==='full'?'mid':'full');
 (()=>{let y0=0;const h=$('sh').querySelector('.shh');
   h.addEventListener('touchstart',e=>{y0=e.touches[0].clientY},{passive:true});
   h.addEventListener('touchend',e=>{const dy=e.changedTouches[0].clientY-y0;if(dy<-30)setSh(shS()==='peek'?'mid':'full');else if(dy>30)setSh(shS()==='full'?'mid':'peek')},{passive:true})})();
-document.addEventListener('click',e=>{const x=e.target.closest&&e.target.closest('[data-sp],.pk[data-l]');if(!x)return;const s=S.find(y=>y[0]===(x.dataset.sp||x.dataset.l));if(s)openSheet(s,null,{})});
+document.addEventListener('click',e=>{const x=e.target.closest&&e.target.closest('[data-sp],.pk[data-l]');if(!x)return;const s=S.find(y=>y[0]===(x.dataset.sp||x.dataset.l));if(s){const q=$('herb-search');if(q&&document.activeElement===q)q.blur();openSheet(s,null,{})}});   // iPhone : clavier de la recherche fermé avant la fiche, sinon elle reste coincée en bas de page
 $('rplay').onclick=()=>startReplay(st.tm.l.slice(),'Mes erreurs du jour');
 $('fday').onclick=()=>openFamily(famDay());$('defi').onclick=dfLancer;
 $('trq').onclick=()=>{if(dfOn){dfQuitter();return}replay=null;pre=preN;preN=null;wasTrain=false;curTrain=false;famFocus=null;trUI();next()};
