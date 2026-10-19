@@ -165,6 +165,7 @@ PLEIN = [q for q in banque if q['statut'] in PLANIFIABLES and q['photos_ok'] is 
          and not (q['deja_en_ligne'] and q['deja_en_ligne'][0] in JOUEES)]
 CAP_MEC = {'anecdote': 1, 'famille': 1, 'photo_origine': 1, 'nom_latin': 1}   # un seul par défi
 CAP_DEF = {'photo_critere': 3}                                                # sinon 2 par défi
+BUDGET_ENONCE = 16                                                           # un même énoncé de photos (« Laquelle de ces plantes perd ses feuilles… ») au plus 16 fois sur 90 jours
 BUDGET = {'nom_latin': 22}                                                    # question de pure mémoire : réservée aux difficiles, à petite dose
 
 def voisin_ok(q, pos, jour):
@@ -216,7 +217,7 @@ CAPA = {t: 2 * n for t, n in cnt(q['theme'] for q in PLEIN).items()}      # nomb
 CAPA_M = {m: 2 * n for m, n in cnt(q['mecanisme'] for q in PLEIN).items()}
 def tenter(graine):
     R = random.Random(graine); dernier = {}; usages = cnt(); plan = []; subst = []; relax = []
-    u_theme = cnt(); u_mec = cnt(); u_suj = cnt()
+    u_theme = cnt(); u_mec = cnt(); u_suj = cnt(); u_enonce = cnt()
     for j in range(JOURS):
         rec_sujets = {s for jj in plan[-3:] for x in jj for s in x['sujets']}
         rec_cibles = {x['cible'] for jj in plan[-6:] for x in jj if x['cible']}
@@ -226,7 +227,7 @@ def tenter(graine):
             niv, pg = SLOTS[pos]
             def candidats(niv_, pg_, rel, ecart=ECART, maxu=MAX_USAGES):
                 return [q for q in PLEIN if usages[q['id']] < maxu and dernier.get(q['id'], -999) <= j - ecart and q['niveau'] == niv_ and (not pg_ or q['piege'])
-                        and u_mec[q['mecanisme']] < BUDGET.get(q['mecanisme'], 10**6) and faisable(q, pos, jour, rec_sujets, rec_cibles, rec_genres, rel)]
+                        and u_mec[q['mecanisme']] < BUDGET.get(q['mecanisme'], 10**6) and (q['format'] != 'images' or u_enonce[q['question']] < BUDGET_ENONCE) and faisable(q, pos, jour, rec_sujets, rec_cibles, rec_genres, rel)]
             C, sub = candidats(niv, pg, 0), None
             if not C:
                 for rel, txt in ((1, "même sujet que dans les 3 jours précédents"), (2, "3 questions du même thème"), (3, "même genre botanique à moins de 2 jours"), (4, "même mécanisme voisin")):
@@ -244,6 +245,7 @@ def tenter(graine):
             if sub: subst.append((j, pos + 1, sub))
             jour[pos] = q; dernier[q['id']] = j; usages[q['id']] += 1; u_theme[q['theme']] += 1; u_mec[q['mecanisme']] += 1
             for x in q['sujets']: u_suj[x] += 1
+            if q['format'] == 'images': u_enonce[q['question']] += 1
         rang, ok = ordonner(jour, R)
         if not ok: subst.append((j, 0, "ordre : mécanismes ou formats voisins"))
         for n, q in enumerate(rang): q['position'] = n + 1
