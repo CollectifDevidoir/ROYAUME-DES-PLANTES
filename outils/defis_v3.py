@@ -62,11 +62,17 @@ SUJETS = {'ginkgo': r'ginkgo', 'metaséquoia': r'm[ée]tas[ée]quoia|metasequoia
   'pommier': r'pommier|pomme\b', 'poirier': r'poirier', 'thuya': r'thuya', 'buis': r'\bbuis\b', 'menthe': r'menthe', 'thym': r'\bthym\b', 'sauge': r'sauge', 'châtaignier': r'ch[âa]taign',
   'orchidée': r'orchid', 'carotte': r'carotte', 'ronce': r'\bronce|mûre', 'mûrier': r'm[ûu]rier', 'aubépine': r'aub[ée]pine|crataegus', 'sorbier': r'sorbier|sorbus', 'lis': r'\blis\b|lilium',
   'bruyère': r'bruy[èe]re|calluna|erica', 'genêt': r'gen[êe]t|cytisus', 'ajonc': r'ajonc', 'fougère': r'foug[èe]re', 'mousse': r'\bmousses?\b', 'champignon': r'champignon|mycorhiz',
-  'cactus': r'cactus|cactée', 'palmier': r'palmier', 'maïs': r'\bma[ïi]s\b', 'blé': r'\bbl[ée]\b|c[ée]r[ée]ale', 'riz': r'\briz\b', 'café': r'\bcaf[ée]', 'thé': r'\bth[ée]\b|camellia', 'cacao': r'cacao',
-  'coton': r'\bcoton', 'chanvre': r'chanvre', 'lin': r'\blin\b', 'tabac': r'tabac', 'pavot': r'pavot|opium', 'violette': r'violette', 'primevère': r'primev[èe]re|coucou'}
+  'cactus': r'cactus|cactée', 'palmier': r'palmier', 'blé': r'\bbl[ée]\b|c[ée]r[ée]ale', 'riz': r'\briz\b', 'café': r'\bcaf[ée]', 'thé': r'\bth[ée]\b|camellia', 'cacao': r'cacao',
+  'coton': r'\bcoton', 'chanvre': r'chanvre', 'lin': r'\blin\b', 'tabac': r'tabac', 'pavot': r'pavot|opium', 'violette': r'violette', 'primevère': r'primev[èe]re|coucou',
+  'artichaut': r'artichaut', 'coquelicot': r'coquelicot', 'houblon': r'houblon|lupuline', 'courgette': r'courgette|concombre|p[ée]pon', 'baie vraie': r'vraie baie|baie vraie|bananier', 'cacahuète': r'cacahu[èe]te|arachide',
+  'pastel': r'pastel|cocagne|isatis', 'garance': r'garance|alizarine', 'iris': r'\biris\b', 'nénuphar': r'n[ée]nuphar', 'roseau': r'roseau|roseli[èe]re', 'platane': r'platane', 'cytise': r'cytise|laburnum',
+  'digitale': r'digitale', 'chicorée': r'chicor[ée]e', 'aconit': r'aconit', 'buddleia': r'buddle', 'cannelle': r'cannell', 'darwin': r'darwin', 'newton': r'newton', 'ricin': r'\bricin', 'belladone': r'belladone',
+  'datura': r'datura', 'dionée': r'dion[ée]e', 'tourbière': r'tourbi[èe]re|sphaigne', 'lichen': r'lichen', 'orpin': r'orpin|joubarbe|sedum', 'chêne vert': r'chêne vert', 'fusain': r'fusain', 'pomme': r'\bpomme\b|pommes\b'}
+RAW = {'maïs': r'\bmaïs\b'}   # « mais » (la conjonction) ne doit pas compter : testé avant retrait des accents
 def sujets(q, fiche=True):
+    brut = (q['question'] + ' ' + (q.get('texte') or '') + ' ' + q['choix'][q['bonne']] + (' ' + q['explication'] if fiche else '')).lower()
     t = norm(q['question'] + ' ' + (q.get('texte') or '') + ' ' + q['choix'][q['bonne']] + (' ' + q['explication'] if fiche else ''))
-    s = {k for k, rx in SUJETS.items() if re.search(norm(rx), t)}
+    s = {k for k, rx in SUJETS.items() if re.search(norm(rx), t)} | {k for k, rx in RAW.items() if re.search(rx, brut)}
     if fiche:
         for w in set(re.findall(r'[a-z]{4,}', norm(q['question'] + ' ' + q['choix'][q['bonne']]))):
             if w in NOMS_FR and w not in ('plante', 'arbre'): s.add(w)
@@ -175,15 +181,38 @@ def faisable(q, pos, jour, rec_sujets, rec_cibles, rec_genres, rel):
     if sum(x['mecanisme'] == q['mecanisme'] for x in deja) >= CAP_MEC.get(q['mecanisme'], CAP_DEF.get(q['mecanisme'], 2)): return False
     if set(q['sujets']) & {s for x in deja for s in x['sujets']}: return False
     if q['genre'] and q['genre'] in {x['genre'] for x in deja}: return False
+    if (q['question'], q.get('texte') or '') in {(x['question'], x.get('texte') or '') for x in deja}: return False
     if q['cible'] and q['cible'] in rec_cibles: return False
     if rel < 1 and set(q['sujets']) & rec_sujets: return False
     if rel < 3 and q['genre'] and q['genre'] in rec_genres: return False
     if q['format'] == 'images' and sum(x['format'] == 'images' for x in deja) >= 5: return False
     if q['format'] == 'qcm' and sum(x['format'] == 'qcm' for x in deja) >= 6: return False
     if q.get('indice_epithete') and sum(bool(x.get('indice_epithete')) for x in deja) >= 1: return False
-    if rel < 4 and not voisin_ok(q, pos, jour): return False
     return True
 
+def ordre_ok(qs):
+    if qs[0]['niveau'] != 'facile' or qs[-1]['niveau'] == 'facile': return False
+    for a, b in zip(qs, qs[1:]):
+        if a['mecanisme'] == b['mecanisme'] or (a['niveau'] == b['niveau'] == 'difficile'): return False
+    return not any(a['format'] == b['format'] == c['format'] for a, b, c in zip(qs, qs[1:], qs[2:]))
+def ordonner(jour, R):
+    """les 10 questions du jour sont choisies par niveau ; on les range ensuite pour éviter deux mécanismes identiques côte à côte
+    et trois questions de même format d'affilée, en restant le plus près possible de la progression habituelle (faciles d'abord)"""
+    base = [jour[k] for k in range(10)]
+    if ordre_ok(base): return base, True
+    meilleur = None
+    for _ in range(4000):
+        perm = list(range(10))
+        for _ in range(R.randint(1, 6)):
+            a, b = R.sample(range(10), 2); perm[a], perm[b] = perm[b], perm[a]
+        qs = [base[i] for i in perm]
+        if ordre_ok(qs):
+            cout = sum(abs(i - k) for k, i in enumerate(perm))
+            if meilleur is None or cout < meilleur[0]: meilleur = (cout, qs)
+    return (meilleur[1], True) if meilleur else (base, False)
+
+CAPA = {t: 2 * n for t, n in cnt(q['theme'] for q in PLEIN).items()}      # nombre de passages que le thème peut fournir
+CAPA_M = {m: 2 * n for m, n in cnt(q['mecanisme'] for q in PLEIN).items()}
 def tenter(graine):
     R = random.Random(graine); dernier = {}; usages = cnt(); plan = []; subst = []; relax = []
     u_theme = cnt(); u_mec = cnt(); jour_de = {}
@@ -209,11 +238,14 @@ def tenter(graine):
             if not C: C, sub = candidats(niv, pg, 4, maxu=3), "troisième passage"
             if not C: return None
             # inédites d'abord ; à égalité : questions recoupées avant celles tirées des données, thèmes et mécanismes les moins servis
-            C.sort(key=lambda q: (usages[q['id']] > 0, q['tier'], u_theme[q['theme']] + 0.5 * u_mec[q['mecanisme']], R.random()))
+            C.sort(key=lambda q: (usages[q['id']] > 0, u_theme[q['theme']] / CAPA[q['theme']] + 0.05 * u_mec[q['mecanisme']] / CAPA_M[q['mecanisme']], q['tier'], R.random()))
             q = dict(C[0]); q['position'] = pos + 1; q['place'] = niv + (' (piège)' if pg else ''); q['substitution'] = sub; q['reutilisation'] = usages[q['id']] > 0
             if sub: subst.append((j, pos + 1, sub))
             jour[pos] = q; dernier[q['id']] = j; usages[q['id']] += 1; u_theme[q['theme']] += 1; u_mec[q['mecanisme']] += 1
-        plan.append([jour[k] for k in range(10)])
+        rang, ok = ordonner(jour, R)
+        if not ok: subst.append((j, 0, "ordre : mécanismes ou formats voisins"))
+        for n, q in enumerate(rang): q['position'] = n + 1
+        plan.append(rang)
     return plan, subst
 
 def equilibrer(jour, graine):
@@ -226,6 +258,22 @@ def equilibrer(jour, graine):
                 ch = list(x['choix']); ch[cible], ch[x['bonne']] = ch[x['bonne']], ch[cible]
                 x['choix'] = ch; x['bonne'] = cible; x['ordre_modifie'] = True
                 break
+
+# ---------- sorties lisibles ----------
+def ecrire_md(plan, sortie, ctl, subst, pos_j, dom):
+    tous = [x for j in plan for x in j]; uniques = {x['id']: x for x in tous}
+    L = ['# Planning de 90 défis : du %s au %s\n' % (DEBUT.strftime('%d/%m/%Y'), (DEBUT + datetime.timedelta(days=JOURS - 1)).strftime('%d/%m/%Y')),
+         "**Non publié** : le défi du jour et les séries en ligne ne sont pas touchés. Statut « validée » : relue et fait recoupé par recherche web (pages citées non ouvertes une à une) ; « données » : générée à partir des données sourcées de l'appli, non recoupée sur le web.\n",
+         '## Contrôles\n', '| Contrôle | Résultat | Détail |\n|---|---|---|'] + [f"| {c['controle']} | {'✅' if c['ok'] else '⚠️'} | {c['detail']} |" for c in ctl]
+    if subst: L.append('\nRègles relâchées (jour, question) : ' + ' ; '.join(f"J{j + 1} Q{p or '–'} ({t})" for j, p, t in subst))
+    for j, jour in enumerate(sortie):
+        L.append(f"\n## Jour {j + 1} : {datetime.date.fromisoformat(jour['date']).strftime('%a %d/%m/%Y')}\n")
+        L.append('| # | Niveau | Thème | Format | Question | Bonne réponse | Statut | Source |\n|---|---|---|---|---|---|---|---|')
+        for x in jour['questions']:
+            rep = x['choix'][x['bonne']]; src = (x['sources'] or x['verification']['sources_recoupement'] or ['données de l\'appli'])[0]
+            L.append(f"| {x['position']} | {x['niveau']}{' (piège)' if x['piege'] and x['niveau'] == 'intermediaire' else ''}{' ↻' if x.get('reutilisation') else ''} | {x['theme']} | {'photos' if x['format'] == 'images' else 'texte'} | "
+                     f"{(x['question'] + (' « ' + x['texte'] + ' »' if x.get('texte') else '')).replace('|', '/')} | {rep} | {'validée' if x['statut'] == 'validee' else 'données'} | {dom(src) if src.startswith('http') else src} |")
+    open(os.path.join(DOSS, 'planning-90j.md'), 'w', encoding='utf8').write('\n'.join(L) + '\n')
 
 # ---------- contrôles, sorties ----------
 def sortir(plan, subst, graine):
@@ -258,7 +306,7 @@ def sortir(plan, subst, graine):
     regle("photos disponibles pour toutes les plantes affichées", all(x['photos_ok'] is not False for x in tous))
     regle("aucune fuite forte du nom latin affiché", all(not x['fuite_nom_latin'] for x in tous))
     regle("indice faible par l'épithète latine : au plus 1 question par défi", all(sum(bool(x.get('indice_epithete')) for x in j) <= 1 for j in plan), f"{sum(bool(x.get('indice_epithete')) for x in tous)} question(s) concernée(s)")
-    regle("chaque question a au moins une source", all(x['sources'] for x in tous), f"{sum(1 for x in tous if not x['sources'])} sans source")
+    regle("chaque question a une source : lien cité, ou données sourcées de l'appli (statut « donnees »)", all(x['sources'] or x['verification']['sources_recoupement'] or x['statut'] == 'donnees' for x in tous), f"{sum(1 for x in tous if not x['sources'] and x['statut'] == 'donnees')} passages sans lien (données de l'appli) ; {sum(1 for x in tous if not x['sources'] and x['statut'] == 'validee')} avec recoupement seul")
     regle("explication ≤ 280 caractères", all(len(x['explication']) <= 280 for x in tous), f"max {max(len(x['explication']) for x in tous)}")
     regle("bonne réponse jamais à la même place plus de 5 fois dans un défi", all(max(cnt(x['bonne'] for x in j).values()) <= 5 for j in plan))
     pl = cnt(x['bonne'] for x in tous)
@@ -288,6 +336,8 @@ def sortir(plan, subst, graine):
         if x.get('plante') or (x['format'] == 'images' and x['cible']): d['plante'] = x.get('plante') or x['cible']
         return d
     json.dump([[vers_dq(x) for x in j] for j in plan], open(os.path.join(DOSS, 'planning-90j-format-DQ.json'), 'w', encoding='utf8'), ensure_ascii=False)
+    ecrire_md(plan, sortie, ctl, subst, pos_j, dom)
+    print('relâchements :', dict(cnt(t for _, _, t in subst)))
     for c in ctl: print(('OK ' if c['ok'] else '!! ') + c['controle'], '|', c['detail'])
     return ctl, sortie
 
