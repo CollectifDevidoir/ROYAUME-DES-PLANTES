@@ -2972,8 +2972,9 @@ async function wpMedia(s){
 function buildCar(s,im,one){
   const p=$('pic');p.className='pic';
   p.innerHTML='<div class="car" tabindex="0" aria-label="Photos du végétal, à faire défiler"></div><div class="dots"></div><button class="ar l" aria-label="Photo précédente">'+ico('chev-l')+'</button><button class="ar r" aria-label="Photo suivante">'+ico('chev-r')+'</button>';
-  const car=p.querySelector('.car');let n=0;const seenK=new Set();
-  const dots=()=>{const k=car.children.length;p.querySelector('.dots').innerHTML=k>1?Array.from({length:k},(_,j)=>`<i${j===Math.round(car.scrollLeft/car.clientWidth)?' class="on"':''}></i>`).join(''):'';p.classList.toggle('one',k<2)};
+  const car=p.querySelector('.car'),dt=p.querySelector('.dots');let n=0;const seenK=new Set();
+  // appelée aussi après coup (photo perdue, défilement, photos Wikipédia) : la question a pu changer entre-temps et remplacer ce bloc
+  const dots=()=>{if(!dt.isConnected)return;const k=car.children.length;dt.innerHTML=k>1?Array.from({length:k},(_,j)=>`<i${j===Math.round(car.scrollLeft/car.clientWidth)?' class="on"':''}></i>`).join(''):'';p.classList.toggle('one',k<2)};
   const add=x=>{const kk=pid(x.src);if(seenK.has(kk))return;seenK.add(kk);const f=n===0,d=document.createElement('div'),i=new Image();d.className='sl';i.alt='Photo du végétal à identifier';i.referrerPolicy='no-referrer';i.decoding='async';i.onload=()=>d.classList.add('ld');setTimeout(()=>d.classList.add('ld'),4000);i.src=x.src;if(!f)i.loading='lazy';
     // photo principale perdue après la réponse : on ne coupe pas la correction
     i.onerror=()=>{if(f&&cur===s&&!done){bad.add(s[0]);next()}else if(!f){d.remove();dots()}};d.append(i);
