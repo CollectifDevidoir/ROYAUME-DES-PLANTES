@@ -6,7 +6,7 @@ const {chromium}=require('playwright');const {open}=require('./banc_essai.js');c
 let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
 (async()=>{
   const b=await chromium.launch({executablePath:process.env.CHROMIUM||'/opt/pw-browsers/chromium'});
-  const o=await open({browser:b,w:390,h:844,touch:true,seed:true}),p=o.p;
+  const o=await open({browser:b,w:390,h:844,touch:true,seed:true,http:true}),p=o.p;
   const pret=async pg=>{await pg.waitForFunction(()=>typeof jkS==='function');await pg.evaluate(()=>{const s=document.getElementById('splash');if(s)s.click()});await pg.waitForTimeout(1700)};
   const reste=pg=>pg.evaluate(()=>5-jkS().n);
   const joker=async pg=>{await lance(pg,'typed');await pg.click('#jk');await pg.waitForTimeout(150);await pg.fill('#q-input','x');await pg.click('#q-form button:not(#jk)');await pg.waitForTimeout(300)};

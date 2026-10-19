@@ -5,7 +5,7 @@
 const {open}=require('./banc_essai.js');
 let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
 const W=+process.argv[2]||360,H=+process.argv[3]||640;
-(async()=>{const {b,p}=await open({w:W,h:H,touch:true,fresh:true,file:process.env.F});
+(async()=>{const {b,p}=await open({w:W,h:H,touch:true,fresh:true,file:process.env.F,http:true});
   const prete=()=>p.waitForFunction(()=>(pvSet||!$('pic').classList.contains('sk'))&&(document.querySelectorAll('#opts button').length>=4||!!$('q-input'))&&!done,null,{timeout:20000}).then(()=>true).catch(()=>false);
   ok(await prete(),'ouverture : une plante et ses réponses');
   ok(await p.evaluate(()=>/^Bienvenue/.test($('q').textContent)),'le débutant sait quoi faire : « Bienvenue ! Quelle est cette plante ? »');

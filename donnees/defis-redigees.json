@@ -1,0 +1,3379 @@
+[
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Lequel de ces arbres produit les glands ?",
+  "choix": [
+   "Quercus robur",
+   "Fagus sylvatica",
+   "Castanea sativa",
+   "Corylus avellana"
+  ],
+  "bonne": 0,
+  "explication": "Le gland, fruit du chêne, est un akène posé dans une cupule écailleuse. Le hêtre donne des faînes, le châtaignier des châtaignes, le noisetier des noisettes.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Gland_(botanique)"
+  ],
+  "organe": "Fruits"
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "Comment appelle-t-on le fruit sec et ailé des érables ?",
+  "choix": [
+   "Une gousse",
+   "Une samare",
+   "Une capsule",
+   "Une cenelle"
+  ],
+  "bonne": 1,
+  "explication": "Les érables portent des samares réunies par deux (disamares) : l'aile fait tournoyer le fruit, qui s'éloigne de l'arbre porté par le vent.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Samare"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Quel arbuste épineux de nos haies donne les prunelles, petits fruits bleu-noir ?",
+  "choix": [
+   "Crataegus monogyna",
+   "Rosa canina",
+   "Prunus spinosa",
+   "Sambucus nigra"
+  ],
+  "bonne": 2,
+  "explication": "La prunelle est la petite drupe très âpre du prunellier. Dans les mêmes haies, l'aubépine donne des cenelles, l'églantier des cynorrhodons et le sureau des baies noires.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Prunellier"
+  ],
+  "organe": "Fruits"
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "Comment nomme-t-on le fruit rouge de l'églantier ?",
+  "choix": [
+   "La cenelle",
+   "La prunelle",
+   "La sorbe",
+   "Le cynorrhodon"
+  ],
+  "bonne": 3,
+  "explication": "Le cynorrhodon est un faux-fruit : son enveloppe charnue renferme les vrais fruits, des akènes couverts de poils irritants, d'où le surnom de « gratte-cul ».",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Cynorhodon"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Quel arbuste garde en hiver des boules blanches, à ne pas manger ?",
+  "choix": [
+   "Symphoricarpos albus",
+   "Ligustrum vulgare",
+   "Viburnum opulus",
+   "Sambucus nigra"
+  ],
+  "bonne": 0,
+  "explication": "La symphorine porte des baies blanches spongieuses qui éclatent sous le pied. Elles sont faiblement toxiques : en quantité, leurs saponines irritent le tube digestif.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Symphoricarpos_albus",
+   "https://www.cap.chu-lille.fr/2021/01/05/symphorine"
+  ],
+  "organe": "Fruits"
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Quelle liane de nos haies se couvre en hiver de touffes de fruits plumeux blancs ?",
+  "choix": [
+   "Hedera helix",
+   "Clematis vitalba",
+   "Lonicera periclymenum",
+   "Humulus lupulus"
+  ],
+  "bonne": 1,
+  "explication": "La clématite des haies, ou « barbe de vieillard », porte des akènes prolongés d'une longue plume soyeuse qui les aide à voyager au vent.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Cl%C3%A9matite_des_haies"
+  ],
+  "organe": "Fruits"
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Lequel de ces arbres donne les châtaignes ?",
+  "choix": [
+   "Aesculus hippocastanum",
+   "Aesculus × carnea",
+   "Castanea sativa",
+   "Fagus sylvatica"
+  ],
+  "bonne": 2,
+  "explication": "Le marron d'Inde, toxique si ingéré, ressemble à la châtaigne mais vient du marronnier. Selon l'Anses, cette confusion représente environ 11 % des confusions de plantes signalées aux centres antipoison.",
+  "sources": [
+   "https://www.anses.fr/fr/content/marrons-dinde-et-chataignes-ne-pas-les-confondre-pour-eviter-les-intoxications",
+   "https://www.quechoisir.org/actualite-marron-chataigne-ou-marron-d-inde-gare-aux-confusions-n71287/",
+   "https://bfcnature.fr/fichiers/20130512-marrons-chataignes_1487152794.pdf"
+  ],
+  "organe": "Fruits"
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Le laurier-cerise, toxique si ingéré, appartient à quelle famille ?",
+  "choix": [
+   "Les Lauracées",
+   "Les Apocynacées",
+   "Les Oléacées",
+   "Les Rosacées"
+  ],
+  "bonne": 3,
+  "explication": "Malgré son nom, le laurier-cerise est un Prunus, cousin du cerisier. Feuilles et graines contiennent des composés cyanogènes. Seul le laurier sauce est une Lauracée.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/laurier-cerise",
+   "https://vd.ch/fileadmin/user_upload/themes/environnement/biodiversite/fichiers_pdf/Fiche_F3_-07_-_Laurier-cerise_-_Description.pdf"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Lequel de ces « lauriers » est le laurier sauce, le seul sans danger en cuisine ?",
+  "choix": [
+   "Laurus nobilis",
+   "Nerium oleander",
+   "Prunus laurocerasus",
+   "Viburnum tinus"
+  ],
+  "bonne": 0,
+  "explication": "Le laurier sauce (Laurus nobilis) est le seul de ces « lauriers » à utiliser sans risque. Le laurier-rose et le laurier-cerise sont toxiques ; le laurier-tin est en fait une viorne.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Laurus_nobilis",
+   "https://www.techno-science.net/fr/definitions/laurier-cerise"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Chez la fraise, où se trouvent les vrais fruits ?",
+  "choix": [
+   "Dans la chair rouge",
+   "Les petits grains en surface",
+   "Dans la collerette verte",
+   "Au cœur blanc du fruit"
+  ],
+  "bonne": 1,
+  "explication": "La chair est le réceptacle floral gonflé : la fraise est un faux-fruit. Les vrais fruits sont les akènes, ces petits « grains » posés sur sa peau.",
+  "sources": [
+   "https://www.futura-sciences.com/planete/questions-reponses/botanique-fraise-nest-pas-fruit-14182/"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Botaniquement, une framboise est…",
+  "choix": [
+   "Une baie",
+   "Un faux-fruit à akènes",
+   "Un ensemble de petites drupes",
+   "Une infrutescence"
+  ],
+  "bonne": 2,
+  "explication": "Chaque grain de la framboise est une drupéole, petite drupe à noyau issue d'un carpelle d'une même fleur : c'est une polydrupe, pas une baie.",
+  "sources": [
+   "https://fac.umc.edu.dz/vet/Cours_Ligne/cours_23_24/Alimentation_A2/classification_fruit.pdf",
+   "https://www.futura-sciences.com/planete/questions-reponses/botanique-fraise-nest-pas-fruit-14182/"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "La « baie » de genièvre est en réalité…",
+  "choix": [
+   "Une vraie baie",
+   "Une drupe",
+   "Un arille",
+   "Un cône à écailles charnues"
+  ],
+  "bonne": 3,
+  "explication": "Le genévrier est un conifère : ses écailles soudées forment une boule charnue, le galbule. Sans ovaire, pas de vrai fruit, donc pas de baie au sens strict.",
+  "sources": [
+   "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/17498896/baie-de-genievre",
+   "https://www.lequotidiendupharmacien.fr/archives/galbule-0"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Le tamier commun, liane aux baies rouges toxiques, est un proche parent…",
+  "choix": [
+   "De l'igname",
+   "De la vigne",
+   "De la bryone",
+   "Du houblon"
+  ],
+  "bonne": 0,
+  "explication": "Le tamier (Dioscorea communis) est une Dioscoréacée, comme l'igname. On le confond avec la bryone, autre liane toxique, mais de la famille des Cucurbitacées.",
+  "sources": [
+   "https://www.cap.chu-lille.fr/2021/01/05/tamier",
+   "https://species.wikimedia.org/wiki/Dioscorea_communis"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "La bryone dioïque, liane toxique de nos haies, est de la même famille que…",
+  "choix": [
+   "La vigne",
+   "La courgette",
+   "Le liseron",
+   "Le chèvrefeuille"
+  ],
+  "bonne": 1,
+  "explication": "La bryone est une Cucurbitacée, comme les courges et courgettes. Ses baies rouges et sa grosse racine, le « navet du diable », sont toxiques si ingérées.",
+  "sources": [
+   "https://www.cap.chu-lille.fr/2021/01/26/bryone-dioique"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "L'oranger des Osages (Maclura pomifera) est de la même famille que…",
+  "choix": [
+   "Les agrumes",
+   "Les pommiers",
+   "Les mûriers",
+   "Les courges"
+  ],
+  "bonne": 2,
+  "explication": "Sa grosse boule verte n'est pas une orange : c'est une infrutescence de Moracée, née de nombreuses fleurs comme la mûre du mûrier. Elle est jugée non comestible.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/oranger-des-osages",
+   "https://gobotany.nativeplanttrust.org/species/maclura/pomifera/"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Lequel de ces cornouillers donne les cornouilles, drupes rouges acidulées ?",
+  "choix": [
+   "Cornus sanguinea",
+   "Cornus alba",
+   "Cornus sericea",
+   "Cornus mas"
+  ],
+  "bonne": 3,
+  "explication": "Malgré son nom, le cornouiller mâle porte bien des fruits : les cornouilles, rouges, utilisées en confiture. Le cornouiller sanguin a des fruits noirs non comestibles.",
+  "sources": [
+   "https://botanique.vd.ch/fileadmin/groups/11/images/Animations/Plante_du_mois/Plante_du_mois_Cornus_-_mai.pdf",
+   "https://www.techno-science.net/fr/definitions/cornouiller-male"
+  ],
+  "organe": "Fruits"
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Botaniquement, une figue est…",
+  "choix": [
+   "Une inflorescence devenue charnue",
+   "Une baie à pépins",
+   "Une drupe charnue",
+   "Une capsule charnue"
+  ],
+  "bonne": 0,
+  "explication": "La figue est un sycone : une urne charnue tapissée à l'intérieur de minuscules fleurs. Ses « grains » sont les vrais fruits, des akènes.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/figue",
+   "https://torontobotanicalgarden.ca/blog/word-of-the-week/botanical-nerd-word-syconium/"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Chez le tilleul, la languette qui emporte les fruits au vent est…",
+  "choix": [
+   "Une aile du fruit",
+   "Une bractée",
+   "Un sépale agrandi",
+   "Une stipule"
+  ],
+  "bonne": 1,
+  "explication": "Les petits fruits secs du tilleul pendent sous une bractée membraneuse liée au pédoncule : elle donne prise au vent et favorise leur dispersion.",
+  "sources": [
+   "https://www.universalis.fr/dictionnaire/accrescence/",
+   "https://cahier-de-prepa.fr/bcpst2-lechesnoy/download?id=1247"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Le lierre fleurit en automne. Quand ses fruits noirs, toxiques, mûrissent-ils ?",
+  "choix": [
+   "Dès l'automne",
+   "En plein été",
+   "De la fin d'hiver au printemps",
+   "Au début de l'hiver"
+  ],
+  "bonne": 2,
+  "explication": "Les baies du lierre mûrissent de la fin de l'hiver au printemps et nourrissent les oiseaux quand les fruits sont rares. Elles sont toxiques pour l'homme.",
+  "sources": [
+   "https://occitanie.lpo.fr/wp-content/uploads/2020/04/ficherefugeslpo_lierre_br.pdf"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Selon l'Anses, quelle plante confondue avec l'ail des ours a causé 2 décès en 2020-2022 ?",
+  "choix": [
+   "Le muguet",
+   "Le gouet (arum)",
+   "Le sceau-de-Salomon",
+   "Le colchique"
+  ],
+  "bonne": 3,
+  "explication": "Le colchique, riche en colchicine, a causé 28 intoxications dont 2 mortelles. Muguet et gouet sont d'autres confusions classiques. Dans le doute, ne rien consommer.",
+  "sources": [
+   "https://www.anses.fr/fr/content/actu-confusion-colchique-ail-des-ours"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Botaniquement, la « baie » rouge de l'if est…",
+  "choix": [
+   "Un arille",
+   "Une baie",
+   "Une drupe",
+   "Un cône charnu"
+  ],
+  "bonne": 0,
+  "explication": "L'if, conifère sans ovaire, n'a pas de vrai fruit : la coupe rouge est un arille qui entoure une graine très toxique, tout comme le feuillage.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/if-botanique",
+   "https://www.cap.chu-lille.fr/2021/01/26/if"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Chez le ginkgo, les boules jaunes malodorantes des arbres femelles sont…",
+  "choix": [
+   "Des drupes",
+   "Des graines",
+   "Des baies",
+   "Des cônes charnus"
+  ],
+  "bonne": 1,
+  "explication": "Le ginkgo n'a ni fleur ni fruit : la « prune » est une graine dont l'enveloppe externe charnue (sarcotesta) sent le beurre rance, à cause de l'acide butyrique.",
+  "sources": [
+   "https://craven.ces.ncsu.edu/2020/12/do-ginkgo-trees-produce-fruit",
+   "https://www.techno-science.net/fr/actualites/le-ginkgo-l-arbre-qui-pondait-des-ufs-26324"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Laquelle de ces enveloppes épineuses ou écailleuses est la paroi même du fruit ?",
+  "choix": [
+   "La bogue de la châtaigne",
+   "La cupule de la faîne",
+   "La coque du marron d'Inde",
+   "La cupule du gland"
+  ],
+  "bonne": 2,
+  "explication": "Le marron d'Inde est une graine dans une capsule, le vrai fruit. La bogue de la châtaigne est une cupule, comme celle du gland : elle enveloppe les fruits.",
+  "sources": [
+   "https://bfcnature.fr/fichiers/20130512-marrons-chataignes_1487152794.pdf"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "La mûre du mûrier noir, contrairement à celle de la ronce, provient…",
+  "choix": [
+   "D'une seule fleur",
+   "D'un réceptacle charnu",
+   "D'un seul carpelle",
+   "De nombreuses fleurs"
+  ],
+  "bonne": 3,
+  "explication": "La mûre du mûrier est une infrutescence : chaque « grain » vient d'une fleur distincte. La mûre de la ronce est une polydrupe issue d'une seule fleur.",
+  "sources": [
+   "https://www.portcros-parcnational.fr/sites/portcros-parcnational.fr/files/documents/downloads/53afe1571ae64dba545ea113b6db4212.pdf",
+   "https://fac.umc.edu.dz/vet/Cours_Ligne/cours_23_24/Alimentation_A2/classification_fruit.pdf"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Comment nomme-t-on le type de fruit du grenadier ?",
+  "choix": [
+   "Une balauste",
+   "Une hespéride",
+   "Un pépon",
+   "Un sycone"
+  ],
+  "bonne": 0,
+  "explication": "La balauste est un fruit à écorce dure, couronné par le calice, à loges pleines de graines juteuses. L'hespéride est l'agrume, le pépon la courge, le sycone la figue.",
+  "sources": [
+   "https://www.lalanguefrancaise.com/dictionnaire/definition/balauste"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Chez le fragon, les baies rouges semblent posées sur une feuille. Cette « feuille » est…",
+  "choix": [
+   "Une bractée",
+   "Un cladode",
+   "Une stipule",
+   "Une foliole"
+  ],
+  "bonne": 1,
+  "explication": "Les « feuilles » piquantes du fragon sont des cladodes, rameaux aplatis qui portent les fleurs puis les baies rouges, toxiques si ingérées.",
+  "sources": [
+   "https://www.calanques-parcnational.fr/fr/fragon-petit-houx",
+   "https://www.agglo-agen.net/fileadmin/user_upload_agglo/pdf/06-Mes_loisirs/Trotte_lapin/fiches-nature/FICHE_ESPECE_FLORE_FRAGON_PIQUANT.pdf"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Lequel de ces feuillages est celui de l'ail des ours ?",
+  "choix": [
+   "Convallaria majalis",
+   "Arum italicum",
+   "Allium ursinum",
+   "Polygonatum multiflorum"
+  ],
+  "bonne": 2,
+  "explication": "L'ail des ours dégage une odeur d'ail quand on froisse ses feuilles. Muguet et gouet, avec lesquels on le confond, sont toxiques : dans le doute, ne rien consommer.",
+  "sources": [
+   "https://www.anses.fr/fr/content/actu-confusion-colchique-ail-des-ours",
+   "https://www.pourquoidocteur.fr/Articles/Question-d-actu/47614-Intoxications-attention-confondre-l-ail-ours-muguet"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Lequel porte des baies orange serrées sur des rameaux épineux, aux feuilles étroites argentées ?",
+  "choix": [
+   "Pyracantha coccinea",
+   "Sorbus aucuparia",
+   "Berberis vulgaris",
+   "Hippophae rhamnoides"
+  ],
+  "bonne": 3,
+  "explication": "L'argousier, arbuste dioïque des dunes et des torrents de montagne, porte des baies acidulées serrées sur les rameaux. Le buisson ardent a des feuilles vertes.",
+  "sources": [
+   "https://uses.plantnet-project.org/fr/Hippophae_rhamnoides",
+   "https://ecophytopic.fr/sites/default/files/2024-11/Fiche_technique_Argousier.pdf"
+  ],
+  "organe": "Fruits"
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Lequel de ces arbustes porte des gousses gonflées comme de petites vessies ?",
+  "choix": [
+   "Colutea arborescens",
+   "Laburnum anagyroides",
+   "Cytisus scoparius",
+   "Spartium junceum"
+  ],
+  "bonne": 0,
+  "explication": "Le baguenaudier, ou « arbre à vessies », a des gousses renflées qui deviennent comme du papier en séchant. Ses graines sont considérées comme toxiques.",
+  "sources": [
+   "https://nymf.bbg.org/genus/132",
+   "https://openobs.mnhn.fr/redirect/inpn/datasets/86010?view=mapr"
+  ],
+  "organe": "Fruits"
+ },
+ {
+  "theme": "Fruits et toxicité",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Quelle plante dresse en été un épi serré de baies rouges, toxiques, souvent sans feuilles ?",
+  "choix": [
+   "Polygonatum multiflorum",
+   "Arum italicum",
+   "Convallaria majalis",
+   "Ruscus aculeatus"
+  ],
+  "bonne": 1,
+  "explication": "Le gouet d'Italie perd ses feuilles en été et ne garde qu'un épi de baies orange-rouge. Toxiques si ingérées, elles provoquent des brûlures de la bouche.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/arum-italicum",
+   "https://inchem.org/documents/pims/plant/pimg06fr.htm"
+  ],
+  "organe": "Fruits"
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "À quelle famille botanique appartiennent les bambous ?",
+  "choix": [
+   "Les Arécacées (palmiers)",
+   "Les Fabacées (légumineuses)",
+   "Les Poacées (graminées)",
+   "Les Berbéridacées"
+  ],
+  "bonne": 2,
+  "explication": "Les bambous sont des graminées géantes, de la même famille que le blé ou le gazon : les Poacées. Leurs tiges creuses à nœuds sont des chaumes.",
+  "sources": [
+   "https://animals.sandiegozoo.org/node/470"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Lequel de ces conifères perd toutes ses aiguilles en hiver ?",
+  "choix": [
+   "Pinus sylvestris",
+   "Abies alba",
+   "Larix decidua",
+   "Cedrus atlantica"
+  ],
+  "bonne": 2,
+  "explication": "Le mélèze est un conifère caduc : ses aiguilles jaunissent à l'automne puis tombent. Un conifère n'est donc pas forcément « toujours vert ».",
+  "sources": [
+   "https://spot.creamontblanc.org/fiches-especes/meleze-d-europe",
+   "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/resineux/le-meleze"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "Le « mimosa » jaune vendu en bouquets en hiver appartient en réalité au genre…",
+  "choix": [
+   "Acacia",
+   "Robinia",
+   "Genista",
+   "Laburnum"
+  ],
+  "bonne": 0,
+  "explication": "Le mimosa des fleuristes est un vrai Acacia (Acacia dealbata). À l'inverse, l'arbre qu'on appelle couramment « acacia » est un robinier.",
+  "sources": [
+   "https://franco.wiki/fr/Robinia.html"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "Pourquoi le cyprès chauve (Taxodium) est-il dit « chauve » ?",
+  "choix": [
+   "Son tronc perd son écorce",
+   "Sa cime meurt avec l'âge",
+   "Il pousse sur sol nu",
+   "Il perd ses aiguilles en hiver"
+  ],
+  "bonne": 3,
+  "explication": "Contrairement à presque tous les conifères, le cyprès chauve est caduc : ses aiguilles roussissent à l'automne puis tombent, laissant l'arbre nu.",
+  "sources": [
+   "https://fr.vikidia.org/wiki/Cypr%C3%A8s_chauve",
+   "https://www.futura-sciences.com/planete/definitions/botanique-cypres-chauve-8503/"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Lequel de ces arbres appartient vraiment au genre botanique Acacia ?",
+  "choix": [
+   "Robinia pseudoacacia",
+   "Albizia julibrissin",
+   "Laburnum anagyroides",
+   "Acacia dealbata"
+  ],
+  "bonne": 3,
+  "explication": "Le vrai Acacia ici est le mimosa (Acacia dealbata). Le robinier, appelé « acacia » à tort, n'en est qu'un « pseudo-acacia », comme l'indique son nom.",
+  "sources": [
+   "https://franco.wiki/fr/Robinia.html",
+   "https://www.jardinbotaniquedenancy.eu/fileadmin/CJBN/Plante_du_mois/07.26.robinia_pseudoacacia.pdf"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Le ginkgo, avec ses feuilles en éventail qui jaunissent à l'automne, est…",
+  "choix": [
+   "Un feuillu proche des érables",
+   "Une fougère arborescente",
+   "Une gymnosperme, comme les conifères",
+   "Un palmier primitif"
+  ],
+  "bonne": 2,
+  "explication": "Malgré ses feuilles plates et caduques, le ginkgo est une gymnosperme. C'est le seul survivant de son embranchement, les Ginkgophytes.",
+  "sources": [
+   "https://espacepourlavie.ca/carnet-horticole/ginkgo",
+   "https://www.britannica.com/print/article/233931"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Les « géraniums » rouges des balcons, gélifs, appartiennent au genre…",
+  "choix": [
+   "Pelargonium",
+   "Geranium",
+   "Begonia",
+   "Impatiens"
+  ],
+  "bonne": 0,
+  "explication": "Ce sont des pélargoniums, sensibles au gel. Les vrais Geranium, comme le géranium sanguin, sont surtout des vivaces rustiques aux fleurs régulières.",
+  "sources": [
+   "https://franco.wiki/fr/Geranium.html",
+   "https://seedsandplants.co.za/gardening-tips/the-differences-between-pelargonium-and-geranium"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Ces arbres ont tous des feuilles palmées. Lequel n'est PAS un érable ?",
+  "choix": [
+   "Acer pseudoplatanus",
+   "Acer saccharum",
+   "Acer platanoides",
+   "Platanus × hispanica"
+  ],
+  "bonne": 3,
+  "explication": "Le platane a des feuilles alternes et des fruits en boules ; les érables ont des feuilles opposées et des samares ailées. Ils ne sont pas proches parents.",
+  "sources": [
+   "https://www.inaturalist.org/guide_taxa/16357",
+   "https://www.techno-science.net/fr/definitions/platane-commun"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "En France, l'arbre qu'on appelle couramment « sycomore » est en réalité…",
+  "choix": [
+   "Un érable",
+   "Un platane",
+   "Un figuier",
+   "Un tilleul"
+  ],
+  "bonne": 0,
+  "explication": "C'est l'érable sycomore (Acer pseudoplatanus). Le sycomore de la Bible est un figuier, Ficus sycomorus, et en Amérique « sycamore » désigne un platane.",
+  "sources": [
+   "https://www.inaturalist.org/guide_taxa/16357",
+   "https://fr.vikidia.org/wiki/%C3%89rable_sycomore"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Lequel de ces conifères perd ses aiguilles chaque automne ?",
+  "choix": [
+   "Sequoia sempervirens",
+   "Cryptomeria japonica",
+   "Metasequoia glyptostroboides",
+   "Thuja plicata"
+  ],
+  "bonne": 2,
+  "explication": "Le métaséquoia ressemble au séquoia, mais il est caduc, comme les mélèzes et le cyprès chauve. Le séquoia, lui, est persistant (« sempervirens »).",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/metasequoia-glyptostroboides"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Lequel est le vrai laurier, celui dont on met les feuilles dans la sauce ?",
+  "choix": [
+   "Prunus laurocerasus",
+   "Viburnum tinus",
+   "Laurus nobilis",
+   "Prunus lusitanica"
+  ],
+  "bonne": 2,
+  "explication": "Seul Laurus nobilis est un vrai laurier (Lauracées). Le laurier-cerise et le laurier du Portugal sont des Prunus, toxiques si ingérés ; le laurier-tin est une viorne.",
+  "sources": [
+   "https://www.cap.chu-lille.fr/2021/01/26/laurier-cerise",
+   "https://www.infoflora.ch/assets/content/documents/neophytes/inva_prun_lau_f.pdf"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Le laurier-cerise des haies est botaniquement plus proche…",
+  "choix": [
+   "Du laurier-sauce",
+   "Du laurier-tin",
+   "Du laurier-rose",
+   "Du cerisier"
+  ],
+  "bonne": 3,
+  "explication": "C'est un Prunus, de la famille des Rosacées, comme le cerisier. Ses feuilles froissées sentent l'amande amère : elles sont toxiques si ingérées.",
+  "sources": [
+   "https://www.cap.chu-lille.fr/2021/01/26/laurier-cerise",
+   "https://www.vd.ch/fileadmin/user_upload/themes/environnement/faune_nature/fichiers_pdf/Bo%C3%AEte_%C3%A0_outils_pour_les_communes/Fiche_F3-7_-_Laurier-cerise_-_Description.pdf"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Lequel de ces végétaux n'est PAS un palmier ?",
+  "choix": [
+   "Trachycarpus fortunei",
+   "Chamaerops humilis",
+   "Phoenix canariensis",
+   "Cycas revoluta"
+  ],
+  "bonne": 3,
+  "explication": "Le cycas, parfois vendu comme « palmier », est une gymnosperme : il ne fleurit pas et porte des cônes, comme les conifères. Les trois autres sont de vrais palmiers.",
+  "sources": [
+   "https://plants.ces.ncsu.edu/plants/cycas-revoluta",
+   "https://blogs.ifas.ufl.edu/nassauco/?p=680"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Lequel de ces végétaux n'est PAS un vrai bambou ?",
+  "choix": [
+   "Nandina domestica",
+   "Phyllostachys nigra",
+   "Fargesia murielae",
+   "Pseudosasa japonica"
+  ],
+  "bonne": 0,
+  "explication": "Le nandina, dit « bambou sacré », n'a de bambou que l'allure : c'est un arbuste de la famille de l'épine-vinette (Berbéridacées), pas une graminée.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Nandina",
+   "https://animals.sandiegozoo.org/node/470"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Le marronnier d'Inde est originaire…",
+  "choix": [
+   "De l'Inde",
+   "De l'Himalaya",
+   "Des Balkans",
+   "D'Afrique du Nord"
+  ],
+  "bonne": 2,
+  "explication": "Malgré son nom, il vient des montagnes des Balkans (Grèce, Albanie, Macédoine du Nord, Bulgarie). Ses « marrons » sont toxiques si ingérés, contrairement aux châtaignes.",
+  "sources": [
+   "https://www.euforgen.org/species/aesculus-hippocastanum",
+   "https://espacepourlavie.ca/carnet-horticole/marronnier-dinde"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Lequel de ces arbres produit les « marrons » vendus grillés ou glacés ?",
+  "choix": [
+   "Aesculus hippocastanum",
+   "Aesculus × carnea",
+   "Castanea sativa",
+   "Aesculus flava"
+  ],
+  "bonne": 2,
+  "explication": "Les marrons du commerce sont des châtaignes, fruits du châtaignier. Les marrons d'Inde, fruits des Aesculus, sont toxiques si ingérés.",
+  "sources": [
+   "https://bfcnature.fr/fichiers/20130512-marrons-chataignes_1487152794.pdf",
+   "https://espacepourlavie.ca/carnet-horticole/marronnier-dinde"
+  ],
+  "organe": "Fruits"
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Le lierre qui grimpe le long d'un tronc d'arbre…",
+  "choix": [
+   "Pompe la sève de l'arbre",
+   "Vit en symbiose avec ses racines",
+   "Se nourrit de son écorce",
+   "S'en sert seulement de support"
+  ],
+  "bonne": 3,
+  "explication": "Le lierre n'est pas un parasite : ses crampons servent à s'accrocher, sans rien absorber. Il puise eau et sels minéraux par ses racines dans le sol.",
+  "sources": [
+   "https://www.provincedeliege.be:443/sites/default/files/media/10952/Lierre%20grimpant%20%28Hedera%20helix%29.pdf",
+   "https://www.futura-sciences.com/planete/definitions/botanique-lierre-10291/"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Le lierre terrestre, petite plante rampante à fleurs violettes, est de la famille…",
+  "choix": [
+   "De la menthe",
+   "Du lierre grimpant",
+   "De la violette",
+   "De la pervenche"
+  ],
+  "bonne": 0,
+  "explication": "Glechoma hederacea est une Lamiacée, comme la menthe : tige carrée, feuilles opposées et odeur aromatique au froissement. Rien à voir avec le lierre.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/lierre-terrestre",
+   "https://taxref.mnhn.fr/taxref-web/taxa/87342"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Lequel de ces arbustes est un vrai lilas (genre Syringa) ?",
+  "choix": [
+   "Lagerstroemia indica",
+   "Buddleja davidii",
+   "Melia azedarach",
+   "Syringa vulgaris"
+  ],
+  "bonne": 3,
+  "explication": "Seul Syringa vulgaris est un vrai lilas (Oléacées). Le « lilas des Indes » (Lagerstroemia, Lythracées), le « lilas de Perse » (Melia, Méliacées) et le « lilas d'été » (buddleia) ne doivent ce nom qu'à leurs fleurs.",
+  "sources": [
+   "https://www.futura-sciences.com/planete/definitions/botanique-lagerstroemia-11521/",
+   "https://www.techno-science.net/fr/definitions/lagerstroemia"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Le saule pleureur (Salix babylonica) est originaire…",
+  "choix": [
+   "De Mésopotamie",
+   "D'Égypte",
+   "De Chine",
+   "Du Caucase"
+  ],
+  "bonne": 2,
+  "explication": "Il vient de Chine. Linné l'a nommé « babylonica » en croyant y reconnaître les saules du psaume de Babylone : une erreur de botaniste.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/saule-pleureur",
+   "https://areq.net/lang/fr/Saule_pleureur.html"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Pour qu'un hortensia à fleurs roses devienne bleu, il faut surtout un sol…",
+  "choix": [
+   "Calcaire et bien drainé",
+   "Très riche en azote",
+   "Enrichi de clous rouillés (fer)",
+   "Acide, avec de l'aluminium disponible"
+  ],
+  "bonne": 3,
+  "explication": "C'est l'aluminium, absorbé seulement en sol acide, qui bleuit les fleurs d'Hydrangea macrophylla. En sol calcaire, elles restent roses.",
+  "sources": [
+   "https://www.rhs.org.uk/plants/hydrangea/shrubby",
+   "https://rhs.org.uk/plants/hydrangea/shrubby/by-colour"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Laquelle de ces plantes est un vrai jasmin (genre Jasminum) ?",
+  "choix": [
+   "Jasminum officinale",
+   "Trachelospermum jasminoides",
+   "Solanum jasminoides",
+   "Philadelphus coronarius"
+  ],
+  "bonne": 0,
+  "explication": "Seul Jasminum officinale est un vrai jasmin (Oléacées). Le jasmin étoilé (Trachelospermum) est une Apocynacée, la morelle faux-jasmin (Solanum) une Solanacée et le seringat ou « jasmin des poètes » (Philadelphus) une Hydrangéacée.",
+  "sources": [
+   "https://www.futura-sciences.com/planete/definitions/botanique-jasmin-etoile-20145/",
+   "https://www.futura-sciences.com/planete/definitions/plante-seringat-19526/"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Le genre Metasequoia a d'abord été décrit en 1941…",
+  "choix": [
+   "À partir de fossiles",
+   "D'après un arbre de jardin japonais",
+   "D'après des graines rapportées d'Amérique",
+   "Comme une variété de séquoia"
+  ],
+  "bonne": 0,
+  "explication": "Shigeru Miki l'a décrit d'après des fossiles, le croyant éteint. Des arbres vivants ont ensuite été trouvés en Chine : un vrai « fossile vivant ».",
+  "sources": [
+   "https://arboretum.harvard.edu/stories/how-metasequoia-the-living-fossil-was-discovered-in-china",
+   "https://en.wikipedia.org/wiki/Metasequoia_glyptostroboides"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Sous un vrai sapin (Abies), on ne trouve presque jamais de cônes entiers. Pourquoi ?",
+  "choix": [
+   "Les écureuils les emportent tous",
+   "Ils se désarticulent sur l'arbre",
+   "Ils restent accrochés des années",
+   "Le sapin ne forme pas de cônes"
+  ],
+  "bonne": 1,
+  "explication": "Les cônes du sapin, dressés sur les rameaux, perdent écailles et graines sur l'arbre. Les cônes ramassés entiers viennent souvent d'épicéas, qui les laissent tomber.",
+  "sources": [
+   "https://jardin-botanique.unistra.fr/websites/sciencesvie/EMB/jardin-botanique/Documents/Poster_conniferes-alsace-light.pdf",
+   "https://tela-botanica.org/sites/botanique/fr/documents/biblio/articles_en_ligne/abres_lozere/gymnospermes.pdf"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Lequel est un vrai sapin, aux cônes dressés sur les rameaux ?",
+  "choix": [
+   "Picea abies",
+   "Pseudotsuga menziesii",
+   "Abies nordmanniana",
+   "Tsuga canadensis"
+  ],
+  "bonne": 2,
+  "explication": "Parmi ces quatre, seul le sapin (Abies) porte des cônes dressés. L'épicéa, le douglas et la pruche, souvent appelés « sapins », ont des cônes pendants.",
+  "sources": [
+   "https://spot.creamontblanc.org/fiches-especes/sapin-pectine",
+   "https://spot.creamontblanc.org/fiches-especes/epicea-picea-abies"
+  ],
+  "organe": "Fruits"
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Le faux-poivrier, qui donne des « baies roses », appartient à la famille…",
+  "choix": [
+   "Des Pipéracées, comme le poivre",
+   "Des Anacardiacées, comme le pistachier",
+   "Des Myrtacées, comme le myrte",
+   "Des Lauracées, comme le laurier"
+  ],
+  "bonne": 1,
+  "explication": "Schinus molle est une Anacardiacée, famille de la mangue et du pistachier, et non une Pipéracée comme le vrai poivre (Piper nigrum).",
+  "sources": [
+   "https://jardin-thuret.hub.inrae.fr/content/download/6704/54892?version=1",
+   "https://premierepeau.com/fr/pages/glossary-terms/pink-pepper-schinus-molle"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Lequel de ces arbres appartient à la famille des magnolias ?",
+  "choix": [
+   "Catalpa bignonioides",
+   "Paulownia tomentosa",
+   "Aesculus × carnea",
+   "Liriodendron tulipifera"
+  ],
+  "bonne": 3,
+  "explication": "Le tulipier de Virginie, aux fleurs en forme de tulipe, est une Magnoliacée. Son nom vient seulement de la forme de ses fleurs.",
+  "sources": [
+   "https://www.futura-sciences.com/planete/definitions/botanique-tulipier-virginie-8670/",
+   "https://www.saint-cyr-sur-loire.com/content/download/16757/262714/version/2/file/FICHES_BOTANIQUES_Tulipier-de-Virginie.pdf"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Le robinier « faux-acacia » doit son nom de genre à Jean Robin, qui était…",
+  "choix": [
+   "Botaniste du roi Henri IV",
+   "Explorateur du Canada",
+   "Jardinier de Versailles",
+   "Médecin de Louis XIV"
+  ],
+  "bonne": 0,
+  "explication": "Jean Robin, botaniste d'Henri IV, l'a planté à Paris en 1601. L'arbre vient de l'est de l'Amérique du Nord, et Linné a nommé le genre Robinia en son honneur.",
+  "sources": [
+   "https://www.jardinbotaniquedenancy.eu/fileadmin/CJBN/Plante_du_mois/07.26.robinia_pseudoacacia.pdf",
+   "https://www.techno-science.net/fr/definitions/robinier-faux-acacia"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Les « saules » de Babylone cités dans le psaume 137 étaient sans doute…",
+  "choix": [
+   "Des saules pleureurs",
+   "Des peupliers de l'Euphrate",
+   "Des saules blancs",
+   "Des tamaris"
+  ],
+  "bonne": 1,
+  "explication": "Linné a cru les reconnaître dans le saule pleureur, venu en fait de Chine. Le psaume évoquait plutôt Populus euphratica, le peuplier de l'Euphrate.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/saule-pleureur",
+   "https://areq.net/lang/fr/Saule_pleureur.html"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Idées reçues et faux-amis",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Le « tronc » d'un bananier est formé…",
+  "choix": [
+   "De bois tendre et fibreux",
+   "De gaines de feuilles emboîtées",
+   "D'une tige creuse lignifiée",
+   "De racines aériennes soudées"
+  ],
+  "bonne": 1,
+  "explication": "Le bananier est une herbe géante, sans bois. Sa vraie tige est souterraine ; le « tronc » est un pseudo-tronc fait des bases de feuilles enroulées.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/bananier",
+   "https://www.larousse.fr/encyclopedie/divers/bananier/25436"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Laquelle de ces plantes a des feuilles composées pennées ?",
+  "choix": [
+   "Fagus sylvatica",
+   "Tilia cordata",
+   "Fraxinus excelsior",
+   "Quercus robur"
+  ],
+  "bonne": 2,
+  "explication": "Le frêne porte de grandes feuilles composées de 7 à 15 folioles disposées de part et d'autre d'un axe, comme les barbes d'une plume.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Fraxinus_excelsior"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Laquelle de ces plantes a des feuilles opposées ?",
+  "choix": [
+   "Acer campestre",
+   "Tilia cordata",
+   "Fagus sylvatica",
+   "Carpinus betulus"
+  ],
+  "bonne": 0,
+  "explication": "Les érables ont des feuilles opposées, insérées par deux face à face sur le rameau ; tilleul, hêtre et charme ont des feuilles alternes.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/%C3%89rable_champ%C3%AAtre"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Laquelle de ces plantes produit des samares ?",
+  "choix": [
+   "Quercus robur",
+   "Castanea sativa",
+   "Corylus avellana",
+   "Acer pseudoplatanus"
+  ],
+  "bonne": 3,
+  "explication": "La samare est un fruit sec muni d'une aile. Chez l'érable sycomore, elles vont par deux et tournoient comme des hélices en tombant.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/%C3%89rable_sycomore"
+  ],
+  "organe": "Fruits"
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Lequel de ces chênes garde un feuillage vert toute l'année ?",
+  "choix": [
+   "Quercus robur",
+   "Quercus ilex",
+   "Quercus rubra",
+   "Quercus petraea"
+  ],
+  "bonne": 1,
+  "explication": "Le chêne vert est persistant : ses feuilles coriaces vivent plusieurs années, adaptation au climat méditerranéen.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Ch%C3%AAne_vert"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Laquelle de ces plantes pousse à partir d'un bulbe ?",
+  "choix": [
+   "Iris germanica",
+   "Convallaria majalis",
+   "Narcissus pseudonarcissus",
+   "Paeonia lactiflora"
+  ],
+  "bonne": 2,
+  "explication": "La jonquille forme un bulbe, bourgeon souterrain entouré d'écailles charnues ; l'iris et le muguet ont un rhizome, tige souterraine.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Narcissus_pseudonarcissus"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Laquelle de ces plantes a des feuilles composées palmées ?",
+  "choix": [
+   "Platanus × hispanica",
+   "Acer platanoides",
+   "Liquidambar styraciflua",
+   "Aesculus hippocastanum"
+  ],
+  "bonne": 3,
+  "explication": "Le marronnier a 5 à 7 folioles séparées partant d'un même point. Platane, érable et copalme ont une feuille simple, seulement lobée.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Marronnier_commun"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Laquelle de ces plantes produit de vraies gousses ?",
+  "choix": [
+   "Catalpa bignonioides",
+   "Cercis siliquastrum",
+   "Paulownia tomentosa",
+   "Koelreuteria paniculata"
+  ],
+  "bonne": 1,
+  "explication": "L'arbre de Judée, une Fabacée, donne des gousses. Les longs « haricots » du catalpa sont en réalité des capsules qui s'ouvrent en deux valves.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Catalpa_bignonioides",
+   "https://www.futura-sciences.com/planete/definitions/botanique-catalpa-8937/"
+  ],
+  "organe": "Fruits"
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Lequel de ces érables a des feuilles composées ?",
+  "choix": [
+   "Acer palmatum",
+   "Acer platanoides",
+   "Acer negundo",
+   "Acer campestre"
+  ],
+  "bonne": 2,
+  "explication": "L'érable negundo a des feuilles composées de 3 à 7 folioles. Celles de l'érable du Japon, très découpées, restent des feuilles simples.",
+  "sources": [
+   "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/erable_negundo.pdf"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Chez laquelle de ces plantes les parties colorées ne sont-elles pas des pétales mais des bractées ?",
+  "choix": [
+   "Hibiscus syriacus",
+   "Nerium oleander",
+   "Lagerstroemia indica",
+   "Bougainvillea glabra"
+  ],
+  "bonne": 3,
+  "explication": "Chez le bougainvillier, les « fleurs » colorées sont des bractées, feuilles modifiées entourant de petites vraies fleurs blanchâtres.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/bougainvillee"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Laquelle de ces plantes produit des samares ?",
+  "choix": [
+   "Ulmus minor",
+   "Tilia cordata",
+   "Castanea sativa",
+   "Platanus × hispanica"
+  ],
+  "bonne": 0,
+  "explication": "L'orme donne des samares : fruit sec dont la graine centrale est entourée d'une aile membraneuse. Le tilleul a des fruits ronds suspendus à une bractée, qui n'est pas une aile du fruit.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ulmus_minor"
+  ],
+  "organe": "Fruits"
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Lequel de ces cornouillers a des feuilles alternes ?",
+  "choix": [
+   "Cornus sanguinea",
+   "Cornus controversa",
+   "Cornus mas",
+   "Cornus kousa"
+  ],
+  "bonne": 1,
+  "explication": "Presque tous les cornouillers ont des feuilles opposées. Le cornouiller des pagodes (C. controversa) fait exception, d'où son nom « controversé ».",
+  "sources": [
+   "https://landscapeplants.oregonstate.edu/plants/cornus-controversa",
+   "https://plants.ces.ncsu.edu/plants/cornus-controversa/"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Laquelle de ces plantes est dioïque ?",
+  "choix": [
+   "Liriodendron tulipifera",
+   "Liquidambar styraciflua",
+   "Magnolia grandiflora",
+   "Ginkgo biloba"
+  ],
+  "bonne": 3,
+  "explication": "Le ginkgo est dioïque : arbres mâles et femelles séparés. Seules les femelles portent les graines charnues à l'odeur de beurre rance.",
+  "sources": [
+   "https://landscapeplants.oregonstate.edu/plants/ginkgo-biloba",
+   "https://craven.ces.ncsu.edu/2020/12/do-ginkgo-trees-produce-fruit"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Laquelle porte de vraies épines, et non des aiguillons ?",
+  "choix": [
+   "Rosa canina",
+   "Rubus idaeus",
+   "Crataegus monogyna",
+   "Rosa rugosa"
+  ],
+  "bonne": 2,
+  "explication": "Les épines de l'aubépine sont des rameaux transformés. Rosiers et framboisier ont des aiguillons, simples excroissances de l'écorce qui se détachent.",
+  "sources": [
+   "https://cbnfc-ori.org/sites/default/files/2023-04/Article3_Mars2023_Le-Genre-Rosa_CBNFC-ORI-TCN_WEB_0.pdf",
+   "https://www.techno-science.net/fr/actualites/pourquoi-les-roses-ont-elles-des-epines-25474"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Lequel de ces conifères porte ses cônes dressés sur les rameaux ?",
+  "choix": [
+   "Picea abies",
+   "Pseudotsuga menziesii",
+   "Pinus nigra",
+   "Abies nordmanniana"
+  ],
+  "bonne": 3,
+  "explication": "Les sapins (Abies) ont des cônes dressés qui se désagrègent sur l'arbre ; l'épicéa et le douglas ont des cônes pendants, le pin noir des cônes étalés, qui tombent entiers.",
+  "sources": [
+   "https://tela-botanica.org/sites/botanique/fr/documents/biblio/articles_en_ligne/abres_lozere/gymnospermes.pdf",
+   "https://www.newmexicoflora.polyploid.net/pages/Abies_conc.html"
+  ],
+  "organe": "Fruits"
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Lequel de ces sorbiers a des feuilles composées pennées ?",
+  "choix": [
+   "Sorbus aria",
+   "Sorbus aucuparia",
+   "Sorbus torminalis",
+   "Sorbus intermedia"
+  ],
+  "bonne": 1,
+  "explication": "Le sorbier des oiseleurs a des feuilles pennées à folioles dentées. L'alisier blanc, l'alisier torminal et le sorbier de Suède ont des feuilles simples.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Sorbier_des_oiseleurs"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Laquelle de ces grimpantes a des feuilles composées palmées ?",
+  "choix": [
+   "Hedera helix",
+   "Vitis vinifera",
+   "Parthenocissus quinquefolia",
+   "Vitis coignetiae"
+  ],
+  "bonne": 2,
+  "explication": "La vigne vierge de Virginie porte des feuilles composées de cinq folioles rayonnantes (d'où « quinquefolia ») ; lierre et vignes ont des feuilles simples.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/vigne-vierge-de-virginie",
+   "https://www.infoflora.ch/en/flora/parthenocissus-quinquefolia.html"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Laquelle a des feuilles à la fois composées pennées et opposées ?",
+  "choix": [
+   "Sambucus nigra",
+   "Robinia pseudoacacia",
+   "Sorbus aucuparia",
+   "Juglans regia"
+  ],
+  "bonne": 0,
+  "explication": "Le sureau noir a des feuilles pennées opposées. Robinier, sorbier et noyer ont aussi des feuilles pennées, mais alternes.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Sureau_noir"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Lequel de ces conifères perd ses aiguilles en hiver ?",
+  "choix": [
+   "Sequoia sempervirens",
+   "Sequoiadendron giganteum",
+   "Metasequoia glyptostroboides",
+   "Cryptomeria japonica"
+  ],
+  "bonne": 2,
+  "explication": "Le métaséquoia est un conifère caduc : ses aiguilles et ses petits rameaux tombent en automne après avoir roussi. Les séquoias sont persistants, de même que le cryptomeria, qui peut bronzer en hiver sans perdre ses aiguilles.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Metasequoia_glyptostroboides",
+   "https://beanstreesandshrubs.org/browse/metasequoia/"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Lequel de ces arbres a un feuillage marcescent ?",
+  "choix": [
+   "Tilia cordata",
+   "Fraxinus excelsior",
+   "Betula pendula",
+   "Quercus pubescens"
+  ],
+  "bonne": 3,
+  "explication": "Marcescent : les feuilles sèchent mais restent sur l'arbre tout l'hiver. Le chêne pubescent ne les perd qu'au départ des nouvelles pousses.",
+  "sources": [
+   "https://calanques-parcnational.fr/fr/chene-pubescent"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "Un houx ne porte jamais de baies rouges, alors qu'un autre houx voisin en est couvert chaque hiver. Quelle en est l'explication la plus probable ?",
+  "choix": [
+   "C'est un pied mâle",
+   "Il manque d'engrais",
+   "Il est trop à l'ombre",
+   "Il a été taillé trop court"
+  ],
+  "bonne": 0,
+  "explication": "Le houx est le plus souvent dioïque : seuls les pieds femelles portent des fruits, et seulement si un pied mâle pousse à proximité.",
+  "sources": [
+   "https://botanique.vd.ch/fileadmin/groups/11/images/Animations/Plante_du_mois/Plante_du_mois_houx.pdf"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "Pourquoi plante-t-on souvent un kiwi « mâle » près des kiwis femelles ?",
+  "choix": [
+   "Pour éloigner les insectes",
+   "Pour polliniser les fleurs",
+   "Pour servir de support",
+   "Pour protéger du gel"
+  ],
+  "bonne": 1,
+  "explication": "Le kiwi (Actinidia deliciosa) est dioïque : sans pollen d'un pied mâle, les pieds femelles ne donnent pas de fruits (sauf variétés autofertiles).",
+  "sources": [
+   "https://www.infoflora.ch/assets/content/documents/neophytes/inva_acti_chi_f.pdf"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "Qu'a de particulier le mélèze (Larix decidua) parmi les conifères ?",
+  "choix": [
+   "Il n'a pas de cônes",
+   "Il a des feuilles larges",
+   "Il perd ses aiguilles",
+   "Il fleurit en été"
+  ],
+  "bonne": 2,
+  "explication": "Le mélèze est un conifère caduc : ses aiguilles jaunissent à l'automne et tombent, puis repoussent au printemps, en bouquets sur des rameaux courts.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/M%C3%A9l%C3%A8ze_d%27Europe"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Botaniquement, ce qui pique sur la tige d'un rosier, ce sont…",
+  "choix": [
+   "des épines",
+   "des aiguillons",
+   "des stipules",
+   "des vrilles"
+  ],
+  "bonne": 1,
+  "explication": "Les « épines » du rosier sont des aiguillons, excroissances de l'épiderme qui se détachent net ; une vraie épine est un rameau ou une feuille modifiée.",
+  "sources": [
+   "https://www.techno-science.net/fr/actualites/pourquoi-les-roses-ont-elles-des-epines-25474",
+   "https://www.lalanguefrancaise.com/dictionnaire/definition/epine"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Sur une fraise, que sont les petits grains de la surface ?",
+  "choix": [
+   "Des graines nues",
+   "Des pépins",
+   "Des akènes, les vrais fruits",
+   "Des poils durcis"
+  ],
+  "bonne": 2,
+  "explication": "Chaque grain est un akène, petit fruit sec contenant une graine. La chair rouge vient du réceptacle de la fleur : la fraise est un faux-fruit.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/fraise-fruit"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "La « baie de genièvre » du genévrier commun est botaniquement…",
+  "choix": [
+   "un cône",
+   "une baie",
+   "une drupe",
+   "un arille"
+  ],
+  "bonne": 0,
+  "explication": "C'est un galbule : un cône femelle dont les écailles sont devenues charnues et soudées. Le genévrier est un conifère, il ne fait pas de vrais fruits.",
+  "sources": [
+   "https://www.ema.europa.eu/en/medicines/herbal/juniperi-pseudo-fructus-galbulus",
+   "https://www.lequotidiendupharmacien.fr/archives/galbule-0"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Chez l'hortensia (Hydrangea macrophylla), les grands « pétales » colorés sont…",
+  "choix": [
+   "des pétales",
+   "des bractées",
+   "des sépales",
+   "des étamines"
+  ],
+  "bonne": 2,
+  "explication": "Ce sont les sépales agrandis des fleurs stériles ; les vraies petites fleurs fertiles, discrètes, sont au centre chez les hortensias « dentelle ».",
+  "sources": [
+   "https://hortflora.rbg.vic.gov.au/taxon/e7b94b7a-c0fe-40f3-be3a-d06ba65f41ab"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Pourquoi le cyprès chauve (Taxodium distichum) porte-t-il ce nom ?",
+  "choix": [
+   "Son tronc perd l'écorce",
+   "Il perd ses aiguilles",
+   "Il pousse sans branches",
+   "Il ne fait pas de cônes"
+  ],
+  "bonne": 1,
+  "explication": "Contrairement à presque tous les conifères, il est caduc : ses aiguilles roussissent puis tombent en automne, laissant l'arbre « chauve ».",
+  "sources": [
+   "https://fr.vikidia.org/wiki/Cypr%C3%A8s_chauve",
+   "https://www.universalis.fr/dictionnaire/taxodium/"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Chez le fragon (Ruscus aculeatus), les « feuilles » piquantes sont en réalité…",
+  "choix": [
+   "des stipules",
+   "des bractées",
+   "des épines",
+   "des cladodes"
+  ],
+  "bonne": 3,
+  "explication": "Ce sont des cladodes, rameaux aplatis qui font la photosynthèse. Preuve : les fleurs puis les baies naissent au milieu de ces fausses feuilles.",
+  "sources": [
+   "https://calanques-parcnational.fr/fr/fragon",
+   "https://en.wikipedia.org/wiki/Ruscus_aculeatus"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "La boule jaune et malodorante du ginkgo femelle est botaniquement…",
+  "choix": [
+   "une graine",
+   "une baie",
+   "une drupe",
+   "un cône"
+  ],
+  "bonne": 0,
+  "explication": "Le ginkgo est une gymnosperme, sans ovaire donc sans fruit : c'est une graine dont l'enveloppe charnue (sarcotesta) sent le beurre rance.",
+  "sources": [
+   "https://landscapeplants.oregonstate.edu/plants/ginkgo-biloba",
+   "https://craven.ces.ncsu.edu/2020/12/do-ginkgo-trees-produce-fruit"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Vocabulaire et morphologie",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Pourquoi ne ramasse-t-on presque jamais de cône de sapin (Abies) entier au sol ?",
+  "choix": [
+   "Les écureuils les mangent",
+   "Ils restent fermés en haut",
+   "Ils se désagrègent sur l'arbre",
+   "Ils fondent en résine"
+  ],
+  "bonne": 2,
+  "explication": "Dressés sur les rameaux, les cônes de sapin perdent leurs écailles sur l'arbre ; seul l'axe central reste. Les « pommes de sapin » sont souvent d'épicéa.",
+  "sources": [
+   "https://tela-botanica.org/sites/botanique/fr/documents/biblio/articles_en_ligne/abres_lozere/gymnospermes.pdf",
+   "https://www.newmexicoflora.polyploid.net/pages/Abies_conc.html"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "Quelle plante a donné son nom à la « fée verte », boisson interdite en France en 1915 ?",
+  "choix": [
+   "L'absinthe",
+   "L'anis vert",
+   "La menthe poivrée",
+   "La gentiane jaune"
+  ],
+  "bonne": 0,
+  "explication": "La grande absinthe (Artemisia absinthium) parfumait cette liqueur. La loi du 16 mars 1915 en interdit la fabrication et la vente en France.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Absinthe_(spiritueux)",
+   "https://tile.loc.gov/storage-services/service/ll/llglrd/2019670640/2019670640.pdf"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Lequel de ces arbres est surnommé « arbre aux quarante écus » ?",
+  "choix": [
+   "Liriodendron tulipifera",
+   "Liquidambar styraciflua",
+   "Ginkgo biloba",
+   "Acer palmatum"
+  ],
+  "bonne": 2,
+  "explication": "Selon une anecdote souvent rapportée, un amateur français, M. de Pétigny, aurait payé 40 écus pièce des jeunes ginkgos achetés en Angleterre à la fin du XVIIIe siècle, parmi les premiers cultivés en France.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Ginkgo_biloba",
+   "https://fr.vikidia.org/wiki/Ginkgo_biloba",
+   "https://www.arbredefer.fr/wp-content/uploads/2014/08/ginkgo.pdf"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "Dans quel bois taille-t-on traditionnellement la table d'harmonie d'un violon ?",
+  "choix": [
+   "Épicéa",
+   "Chêne",
+   "Noyer",
+   "Hêtre"
+  ],
+  "bonne": 0,
+  "explication": "L'épicéa allie légèreté, élasticité et résistance : il transmet bien les vibrations des cordes. Les épicéas choisis pour la lutherie sont dits « bois de résonance ».",
+  "sources": [
+   "https://www.waldwissen.net/fr/economie-forestiere/filiere-bois/transformation-du-bois/bois-de-resonance-depicea",
+   "https://fr.wikipedia.org/wiki/Table_d%27harmonie"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Lequel de ces arbres fournit le liège des bouchons ?",
+  "choix": [
+   "Quercus ilex",
+   "Quercus robur",
+   "Olea europaea",
+   "Quercus suber"
+  ],
+  "bonne": 3,
+  "explication": "Le chêne-liège porte une épaisse écorce de liège que l'on lève sans abattre l'arbre ; l'écorce se reforme ensuite. La toute première récolte s'appelle le démasclage.",
+  "sources": [
+   "https://www.pefc-france.org/wp-content/uploads/Referentiel-Recolte-Liege-ST-1003-1_2025.pdf",
+   "https://fr.wikipedia.org/wiki/Ch%C3%AAne-li%C3%A8ge"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "En forêt, que récoltait-on par le « gemmage » ?",
+  "choix": [
+   "La sève des bouleaux",
+   "La résine des pins",
+   "L'écorce des chênes",
+   "Le latex des figuiers"
+  ],
+  "bonne": 1,
+  "explication": "Le gemmeur entaillait le tronc des pins et recueillait la résine dans un pot de terre ; elle servait à fabriquer colles, vernis et produits pharmaceutiques.",
+  "sources": [
+   "https://www.tourismelandes.com/?p=84965",
+   "https://fr.wikipedia.org/wiki/Gemmage"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "Selon Ovide, en quel arbre Apollon changea-t-il Cyparissus, inconsolable d'avoir tué son cerf ?",
+  "choix": [
+   "Le laurier",
+   "Le peuplier",
+   "Le cyprès",
+   "Le saule"
+  ],
+  "bonne": 2,
+  "explication": "Dans les Métamorphoses (livre X), le jeune Cyparissus dépérit de chagrin ; Apollon le change en cyprès, arbre resté associé au deuil.",
+  "sources": [
+   "https://finto.fi/ic/en/page/97A4?clang=fr",
+   "https://fr.wikipedia.org/wiki/Cyparissos"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "simple",
+  "format": "images",
+  "question": "De laquelle de ces plantes la galantamine, médicament de la maladie d'Alzheimer, tire-t-elle son nom ?",
+  "choix": [
+   "Convallaria majalis",
+   "Galanthus nivalis",
+   "Helleborus niger",
+   "Hyacinthoides non-scripta"
+  ],
+  "bonne": 1,
+  "explication": "La galantamine est un alcaloïde isolé des bulbes de perce-neige (Galanthus), devenu médicament contre certains symptômes d'Alzheimer. Le bulbe est toxique si ingéré.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Galantamine",
+   "https://garden.rcplondon.ac.uk/Plant/Details/1534"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Le mot « aspirine » vient de l'ancien nom latin de laquelle de ces plantes ?",
+  "choix": [
+   "Salix alba",
+   "Tilia cordata",
+   "Filipendula ulmaria",
+   "Achillea millefolium"
+  ],
+  "bonne": 2,
+  "explication": "Pas du saule ! « spir » vient de Spiraea ulmaria, ancien nom de la reine-des-prés, dont on tirait l'« acide spirique », identique à l'acide salicylique.",
+  "sources": [
+   "https://www.etymonline.com/fr/word/aspirin",
+   "https://fr.wikipedia.org/wiki/Acide_ac%C3%A9tylsalicylique"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Lequel de ces conifères détient le record du plus grand arbre du monde en hauteur ?",
+  "choix": [
+   "Sequoiadendron giganteum",
+   "Sequoia sempervirens",
+   "Pseudotsuga menziesii",
+   "Cedrus libani"
+  ],
+  "bonne": 1,
+  "explication": "Le séquoia géant est le plus massif, mais le plus haut est un séquoia à feuilles d'if : Hyperion, découvert en 2006 en Californie, dépasse 115 m.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Hyperion_(tree)",
+   "https://fr.wikipedia.org/wiki/Sequoia_sempervirens"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Le chêne noir d'Amérique, dit « chêne des teinturiers », fournissait un colorant de quelle couleur ?",
+  "choix": [
+   "Noir",
+   "Rouge",
+   "Jaune",
+   "Bleu"
+  ],
+  "bonne": 2,
+  "explication": "Malgré son nom de chêne noir, son écorce interne donnait le quercitron, colorant jaune employé en teinture jusqu'au XXe siècle ; Chevreul en décrivit la matière colorante, la quercitrine, en 1830.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/quercus-velutina",
+   "https://cameo.mfa.org/wiki/Black_oak"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "D'où provenait le rouge « kermès », associé au chêne kermès des garrigues ?",
+  "choix": [
+   "De ses racines",
+   "De ses glands",
+   "D'un petit insecte",
+   "De son écorce"
+  ],
+  "bonne": 2,
+  "explication": "Il venait des femelles d'une cochenille (Kermes vermilio) vivant sur ce chêne, séchées puis broyées. La cochenille du Mexique, moins chère, causa son déclin.",
+  "sources": [
+   "https://calanques-parcnational.fr/fr/chene-kermes",
+   "https://www.techno-science.net/fr/definitions/chene-kermes"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "D'où le marronnier d'Inde est-il originaire ?",
+  "choix": [
+   "Des Balkans",
+   "De l'Inde",
+   "De Chine",
+   "D'Amérique du Nord"
+  ],
+  "bonne": 0,
+  "explication": "Il pousse à l'état sauvage dans les montagnes des Balkans (Grèce, Albanie). Le nom « d'Inde » est trompeur : l'arbre a gagné l'Europe de l'Ouest via Constantinople.",
+  "sources": [
+   "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/feuillus/le-marronnier-aesculus-hippocastanum",
+   "https://fr.wikipedia.org/wiki/Marronnier_commun"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "D'où le saule pleureur, Salix babylonica, est-il originaire ?",
+  "choix": [
+   "De Mésopotamie",
+   "D'Égypte",
+   "De Turquie",
+   "De Chine"
+  ],
+  "bonne": 3,
+  "explication": "Linné l'a nommé en croyant à tort qu'il s'agissait du saule biblique des rives de Babylone. L'arbre est en réalité originaire de Chine.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/saule-pleureur",
+   "https://fr.wikipedia.org/wiki/Saule_pleureur"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Que sont les « mille pertuis » qui ont donné son nom au millepertuis perforé ?",
+  "choix": [
+   "Des glandes translucides",
+   "Des trous faits par des insectes",
+   "Des pores respiratoires",
+   "Des épines minuscules"
+  ],
+  "bonne": 0,
+  "explication": "« Pertuis » signifie trou en ancien français. À contre-jour, la feuille semble percée, mais ce sont de petites poches d'huile essentielle translucides.",
+  "sources": [
+   "https://inpn.mnhn.fr/espece/cd_nom/103312",
+   "https://www.techno-science.net/fr/definitions/millepertuis"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Que désigne le « liège mâle » récolté sur le chêne-liège ?",
+  "choix": [
+   "Le liège des arbres mâles",
+   "Le liège de la 1re récolte",
+   "Le liège le plus épais",
+   "Le liège des racines"
+  ],
+  "bonne": 1,
+  "explication": "Le chêne-liège n'a pas de pieds mâles. Le liège mâle, vierge et crevassé, est enlevé au démasclage ; le « liège femelle » qui repousse est plus homogène.",
+  "sources": [
+   "https://www.pefc-france.org/wp-content/uploads/Referentiel-Recolte-Liege-ST-1003-1_2025.pdf",
+   "https://ofme.org/documents/Sylvi/SRGS_suberaie.pdf"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "piege",
+  "format": "images",
+  "question": "De quelle espèce est le plus vieil arbre de Paris, planté vers 1601 et visible square René-Viviani ?",
+  "choix": [
+   "Robinia pseudoacacia",
+   "Platanus × hispanica",
+   "Aesculus hippocastanum",
+   "Tilia × europaea"
+  ],
+  "bonne": 0,
+  "explication": "Ni platane ni marronnier : c'est un robinier faux-acacia, arbre venu d'Amérique du Nord, planté selon la tradition par Jean Robin. Il est considéré comme le plus vieil arbre de Paris.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Locust_of_Square_Ren%C3%A9-Viviani",
+   "https://fr.wikipedia.org/wiki/Robinier_du_square_Ren%C3%A9-Viviani"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Dans laquelle de ces « bruyères » taille-t-on les pipes dites en bruyère ?",
+  "choix": [
+   "Calluna vulgaris",
+   "Erica cinerea",
+   "Erica arborea",
+   "Erica carnea"
+  ],
+  "bonne": 2,
+  "explication": "Les pipes sont taillées dans le broussin, renflement à la base de la bruyère arborescente, arbuste du maquis méditerranéen ; on le récolte sur des souches âgées de plusieurs décennies.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Erica_arborea",
+   "https://fr.wikipedia.org/wiki/Pipe_(tabac)"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Quel médecin anglais publia en 1785 un traité sur l'usage de la digitale contre l'hydropisie ?",
+  "choix": [
+   "Edward Jenner",
+   "Thomas Sydenham",
+   "William Harvey",
+   "William Withering"
+  ],
+  "bonne": 3,
+  "explication": "Parti d'un remède populaire, William Withering décrivit les effets et la toxicité de Digitalis purpurea. La plante est très toxique si ingérée.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/William_Withering",
+   "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5545334/"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "De quel conifère européen extrait-on le précurseur de l'anticancéreux docétaxel ?",
+  "choix": [
+   "Abies alba",
+   "Juniperus communis",
+   "Thuja occidentalis",
+   "Taxus baccata"
+  ],
+  "bonne": 3,
+  "explication": "La 10-désacétylbaccatine III, extraite des aiguilles de l'if commun, sert de point de départ à l'hémisynthèse du docétaxel. L'if est très toxique si ingéré.",
+  "sources": [
+   "https://www.outsourcing-pharma.com/Article/2006/09/19/Bioxel-gears-up-for-supply-of-docetaxel-to-generic-drugmakers",
+   "https://fr.wikipedia.org/wiki/Doc%C3%A9taxel"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "D'où vient le nom du « bois de Sainte-Lucie » (Prunus mahaleb) ?",
+  "choix": [
+   "De l'île de Sainte-Lucie",
+   "D'un couvent de Lorraine",
+   "Du quartier Santa Lucia de Naples",
+   "De la fête du 13 décembre"
+  ],
+  "bonne": 1,
+  "explication": "Il vient du couvent des Minimes de Sainte-Lucie, près de Sampigny (Meuse), où l'on façonnait au XVIIe siècle des objets dans ce bois odorant.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/bois-de-sainte-lucie",
+   "https://lempertz.com/en/catalogues/lot/1244-2/826-a-museum-quality-pair-of-carved-wood-candlesticks.html"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Selon le référentiel PEFC France de récolte du liège, quel délai minimal doit séparer deux levées sur un même chêne-liège ?",
+  "choix": [
+   "3 ans",
+   "6 ans",
+   "9 ans",
+   "15 ans"
+  ],
+  "bonne": 2,
+  "explication": "Le référentiel PEFC (2025) impose au moins 9 ans entre deux levées, le temps que l'arbre reforme une couche de liège exploitable ; en pratique, on attend souvent 10 à 12 ans selon les régions.",
+  "sources": [
+   "https://www.pefc-france.org/wp-content/uploads/Referentiel-Recolte-Liege-ST-1003-1_2025.pdf",
+   "https://ofme.org/documents/Sylvi/Subericulture_ASL.pdf"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Chez Ovide, Philémon devient un chêne. En quel arbre est changée son épouse Baucis ?",
+  "choix": [
+   "Un olivier",
+   "Un orme",
+   "Un tilleul",
+   "Un laurier"
+  ],
+  "bonne": 2,
+  "explication": "Pour récompenser leur hospitalité, Jupiter exauce le vœu du vieux couple de mourir ensemble : ils deviennent un chêne et un tilleul (Métamorphoses, livre VIII).",
+  "sources": [
+   "https://finto.fi/ic/en/page/97A?clang=fr",
+   "https://cla.cambridgescp.com/files/cscp/cla/weblinks/s54.html"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Selon les Métamorphoses d'Ovide, en quel arbre Attis, compagnon de Cybèle, fut-il changé ?",
+  "choix": [
+   "Un cyprès",
+   "Un pin",
+   "Un olivier",
+   "Un chêne vert"
+  ],
+  "bonne": 1,
+  "explication": "Ovide cite le pin, « cher à la mère des dieux » : c'est sous cette forme qu'Attis quitta son corps humain. Le pin resta l'arbre sacré de Cybèle.",
+  "sources": [
+   "https://finto.fi/ic/en/page/97A?clang=fr",
+   "https://fr.wikipedia.org/wiki/Attis"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Le nom Geranium vient d'un mot grec désignant un oiseau. Lequel ?",
+  "choix": [
+   "La grue",
+   "La cigogne",
+   "Le héron",
+   "L'ibis"
+  ],
+  "bonne": 0,
+  "explication": "Du grec géranos, la grue : le fruit allongé et pointu évoque son bec, d'où le nom populaire de « bec-de-grue ». Linné reprit ce nom pour le genre en 1753.",
+  "sources": [
+   "https://www.etymonline.com/fr/word/geranium",
+   "https://new.societechimiquedefrance.fr/wp-content/uploads/woocommerce_uploads/2025/02/Etymo-HD-ne09zr.pdf"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Le genre Robinia rend hommage à Jean Robin. Qui était-il ?",
+  "choix": [
+   "Un navigateur explorateur",
+   "Un médecin de Louis XIV",
+   "Le jardinier des rois de France",
+   "Un évêque naturaliste"
+  ],
+  "bonne": 2,
+  "explication": "Herboriste, il fut jardinier d'Henri III, Henri IV et Louis XIII. Linné dédia le genre à lui et à son fils Vespasien, qui planta un robinier au Jardin du roi en 1636.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Jean_Robin_(botanist)",
+   "https://www.lequotidiendupharmacien.fr/le-mag/histoire-de-la-pharmacie/la-vraie-histoire-du-faux-acacia-de-lapothicaire-jean-robin"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Lequel de ces arbres détient le record du plus gros arbre à tronc unique du monde, en volume de bois ?",
+  "choix": [
+   "Sequoia sempervirens",
+   "Taxodium distichum",
+   "Sequoiadendron giganteum",
+   "Cedrus libani"
+  ],
+  "bonne": 2,
+  "explication": "Le « General Sherman », séquoia géant de Californie, est le plus gros arbre à tronc unique connu : près de 1 500 m³ de bois pour environ 84 m de haut.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/General_Sherman_(tree)",
+   "https://fr.wikipedia.org/wiki/S%C3%A9quoia_g%C3%A9ant"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Dans lequel de ces arbres taille-t-on traditionnellement le fond et les éclisses d'un violon ?",
+  "choix": [
+   "Fagus sylvatica",
+   "Acer pseudoplatanus",
+   "Juglans regia",
+   "Prunus avium"
+  ],
+  "bonne": 1,
+  "explication": "L'érable, souvent sycomore à fil ondé, est choisi pour le fond, les éclisses et le manche des instruments de la famille du violon, notamment pour son bel aspect moiré.",
+  "sources": [
+   "https://www.waldwissen.net/fr/economie-forestiere/filiere-bois/transformation-du-bois/bois-de-resonance-depicea",
+   "https://fr.wikipedia.org/wiki/%C3%89rable_sycomore"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Quelle molécule de la grande absinthe fut accusée de rendre fous les buveurs d'absinthe ?",
+  "choix": [
+   "La coumarine",
+   "La salicine",
+   "L'atropine",
+   "La thuyone"
+  ],
+  "bonne": 3,
+  "explication": "On accusait la thuyone de provoquer folie et crimes ; ce lien est aujourd'hui jugé mal fondé, mais sa teneur reste réglementée dans les boissons.",
+  "sources": [
+   "https://questions.assemblee-nationale.fr/dyn/8/questions/QANR5L8QE28723.pdf",
+   "https://fr.wikipedia.org/wiki/Thuyone"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Quelle ville du Jura est, avec Cogolin, un grand centre français de fabrication de pipes en bruyère ?",
+  "choix": [
+   "Saint-Claude",
+   "Morez",
+   "Dole",
+   "Lons-le-Saunier"
+  ],
+  "bonne": 0,
+  "explication": "Depuis le milieu du XIXe siècle, Saint-Claude taille des pipes dans la souche de bruyère arborescente, bois dur qui résiste très bien à la chaleur.",
+  "sources": [
+   "https://areq.net/lang/fr/Pipe.html",
+   "https://fr.wikipedia.org/wiki/Saint-Claude_(Jura)"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Usages, histoire et culture",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Quel pin fut massivement gemmé pour sa résine dans la forêt des Landes ?",
+  "choix": [
+   "Pinus sylvestris",
+   "Pinus nigra",
+   "Pinus pinea",
+   "Pinus pinaster"
+  ],
+  "bonne": 3,
+  "explication": "La forêt landaise, largement dominée par le pin maritime, a fait vivre des générations de résiniers jusqu'au déclin du gemmage au XXe siècle.",
+  "sources": [
+   "https://www.tourismelandes.com/?p=68",
+   "https://www.tourismelandes.com/?p=84965"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "Sur quelle plante la femelle du Paon-du-jour pond-elle surtout ses œufs ?",
+  "choix": [
+   "Ortie dioïque",
+   "Lavande vraie",
+   "Arbre aux papillons",
+   "Trèfle blanc"
+  ],
+  "bonne": 0,
+  "explication": "Les chenilles noires et épineuses du Paon-du-jour vivent en groupe sur la grande ortie. Laisser un coin d'orties au jardin, c'est offrir une nurserie aux papillons.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/paon-du-jour",
+   "https://occitanie.lpo.fr/wp-content/uploads/2026/07/plantes-hotes-et-plantes-nourricieres-chenilles-et-papillons.pdf"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Lequel de ces arbres européens peut vivre plus de 2 000 ans ?",
+  "choix": [
+   "Betula pendula",
+   "Populus tremula",
+   "Taxus baccata",
+   "Salix alba"
+  ],
+  "bonne": 2,
+  "explication": "L'if est l'un des arbres les plus longévifs d'Europe : l'if de Fortingall, en Écosse, aurait au moins 2 000 ans. Son cœur creux rend toutefois la datation incertaine.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Fortingall_Yew",
+   "https://www.guinnessworldrecords.com/world-records/93355-oldest-yew"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "Comment le trèfle enrichit-il le sol en azote ?",
+  "choix": [
+   "Grâce à des bactéries de ses racines",
+   "Grâce à des champignons de ses feuilles",
+   "Grâce aux fourmis qui l'habitent",
+   "Grâce aux vers de terre qu'il attire"
+  ],
+  "bonne": 0,
+  "explication": "Comme les autres Fabacées, le trèfle abrite dans des nodosités de ses racines des bactéries (rhizobiums) qui fixent l'azote de l'air. Un engrais vert gratuit !",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Rhizobium",
+   "https://fr.wikipedia.org/wiki/Trèfle_blanc"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "En quelle saison fleurit le lierre grimpant, ressource précieuse pour les insectes ?",
+  "choix": [
+   "En automne",
+   "Au printemps",
+   "Au début de l'été",
+   "En plein hiver"
+  ],
+  "bonne": 0,
+  "explication": "Le lierre fleurit de septembre à novembre, quand les fleurs se font rares : abeilles, syrphes et papillons viennent y faire le plein de nectar avant l'hiver.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Lierre_grimpant"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Quelle graminée plante-t-on pour fixer le sable des dunes du littoral ?",
+  "choix": [
+   "Festuca glauca",
+   "Miscanthus sinensis",
+   "Cortaderia selloana",
+   "Ammophila arenaria"
+  ],
+  "bonne": 3,
+  "explication": "L'oyat retient le sable grâce à ses longs rhizomes et repousse quand il est ensablé. On le plante, souvent à l'abri de ganivelles, pour stabiliser les dunes du littoral.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Oyat"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "Quel conifère des Alpes perd ses aiguilles chaque automne ?",
+  "choix": [
+   "Épicéa commun",
+   "Mélèze d'Europe",
+   "Pin cembro",
+   "Sapin pectiné"
+  ],
+  "bonne": 1,
+  "explication": "Le mélèze est le seul conifère indigène de France à feuillage caduc : ses aiguilles jaunissent en automne puis tombent, ce qui l'aide à supporter les grands froids d'altitude.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Mélèze_d'Europe"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Lequel de ces arbres est indigène en France ?",
+  "choix": [
+   "Liriodendron tulipifera",
+   "Fagus sylvatica",
+   "Liquidambar styraciflua",
+   "Ginkgo biloba"
+  ],
+  "bonne": 1,
+  "explication": "Le hêtre est un grand arbre spontané des forêts françaises. Le tulipier et le copalme viennent d'Amérique du Nord, le ginkgo de Chine.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Hêtre_commun"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Lequel de ces arbres fleurit dès la fin de l'hiver, offrant un pollen précoce aux abeilles ?",
+  "choix": [
+   "Tilia platyphyllos",
+   "Castanea sativa",
+   "Salix caprea",
+   "Catalpa bignonioides"
+  ],
+  "bonne": 2,
+  "explication": "Les chatons du saule marsault s'ouvrent dès mars, parfois fin février : c'est l'une des premières sources de pollen et de nectar pour les abeilles et les bourdons au sortir de l'hiver.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Saule_marsault"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Le « miel d'acacia » vendu en France provient surtout de quel arbre ?",
+  "choix": [
+   "Mimosa argenté",
+   "Robinier faux-acacia",
+   "Févier d'Amérique",
+   "Arbre à soie"
+  ],
+  "bonne": 1,
+  "explication": "Ce miel clair vient des fleurs blanches du robinier, arbre nord-américain planté à Paris vers 1601 par Jean Robin. Il n'appartient pas au genre Acacia.",
+  "sources": [
+   "https://www.jardinbotaniquedenancy.eu/fileadmin/CJBN/Plante_du_mois/07.26.robinia_pseudoacacia.pdf",
+   "https://www.infoflora.ch/assets/content/documents/neophytes/inva_robi_pse_f.pdf"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Le mimosa qui dore le massif du Tanneron en hiver est originaire de :",
+  "choix": [
+   "Provence",
+   "Mexique",
+   "Afrique du Sud",
+   "Australie"
+  ],
+  "bonne": 3,
+  "explication": "Le mimosa argenté vient d'Australie. Introduit sur la Côte d'Azur au XIXe siècle, il s'est échappé des jardins et il est aujourd'hui envahissant dans l'Esterel.",
+  "sources": [
+   "https://reporterre.net/Star-des-jardins-le-mimosa-fragilise-des-ecosystemes-locaux",
+   "https://esterelcotedazur-agglo.fr/wp-content/uploads/2022/12/CP-debrouissallement-mimosa_La-Louve.pdf"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Quel arbre détient le record mondial de hauteur, avec plus de 115 m ?",
+  "choix": [
+   "Séquoia géant",
+   "Séquoia à feuilles d'if",
+   "Douglas",
+   "Cèdre du Liban"
+  ],
+  "bonne": 1,
+  "explication": "Hyperion, un séquoia à feuilles d'if de Californie, mesure environ 115,5 m. Le séquoia géant (General Sherman) est lui le plus volumineux, pas le plus haut.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Hyperion_(arbre)",
+   "https://en.wikipedia.org/wiki/Hyperion_(tree)"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "À l'état naturel, le cyprès de Provence est originaire de :",
+  "choix": [
+   "La Provence",
+   "La Méditerranée orientale",
+   "L'Amérique du Nord",
+   "L'Himalaya"
+  ],
+  "bonne": 1,
+  "explication": "Malgré son nom, Cupressus sempervirens vient de l'est méditerranéen (Grèce, Turquie, Chypre, Proche-Orient…). Planté depuis l'Antiquité, il s'est naturalisé ailleurs.",
+  "sources": [
+   "https://www.inaturalist.org/guide_taxa/495144",
+   "https://landscapeplants.oregonstate.edu/plants/cupressus-sempervirens"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Quelle couleur l'abeille domestique ne perçoit-elle pas ?",
+  "choix": [
+   "Le bleu",
+   "L'ultraviolet",
+   "Le rouge",
+   "Le jaune"
+  ],
+  "bonne": 2,
+  "explication": "L'œil de l'abeille voit l'ultraviolet, le bleu et le vert, mais pas le rouge, qu'elle confond avec le noir. Les fleurs rouges sont souvent visitées par des papillons ou oiseaux.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Abeille_domestique",
+   "https://fr.wikipedia.org/wiki/Apis_mellifera"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "Pour nourrir les pollinisateurs, quel rosier vaut-il mieux planter ?",
+  "choix": [
+   "Un rosier à grosses fleurs doubles",
+   "Un rosier à fleurs simples",
+   "Un rosier à fleurs pleines très parfumées",
+   "Un rosier à fleurs rouge vif"
+  ],
+  "bonne": 1,
+  "explication": "Le rosier offre surtout du pollen, presque pas de nectar. Chez les fleurs doubles, les étamines sont en grande partie transformées en pétales : peu ou pas de pollen. Une fleur simple, comme celle de l'églantier, nourrit bien mieux les abeilles.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Fleur_double",
+   "https://fr.wikipedia.org/wiki/Rosa_canina"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Entre la truffe noire et le chêne, quelle est la relation ?",
+  "choix": [
+   "La truffe parasite le chêne",
+   "La truffe décompose ses racines",
+   "Une symbiose à bénéfice mutuel",
+   "Aucune, simple voisinage"
+  ],
+  "bonne": 2,
+  "explication": "La truffe forme des mycorhizes avec les racines du chêne : elle lui apporte eau et sels minéraux, et reçoit en échange des sucres issus de la photosynthèse.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Tuber_melanosporum",
+   "https://fr.wikipedia.org/wiki/Mycorhize"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Laquelle de ces plantes aux fleurs spectaculaires est indigène en France ?",
+  "choix": [
+   "Hemerocallis fulva",
+   "Crocosmia × crocosmiiflora",
+   "Kniphofia uvaria",
+   "Lilium martagon"
+  ],
+  "bonne": 3,
+  "explication": "Malgré son allure exotique, le lis martagon pousse spontanément dans les bois et prairies de montagne. L'hémérocalle fauve vient d'Asie, le tritome d'Afrique du Sud, et le montbrétia est un hybride horticole d'espèces sud-africaines.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Lis_martagon",
+   "https://en.wikipedia.org/wiki/Crocosmia_%C3%97_crocosmiiflora"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Lequel de ces arbres, très commun en France, n'y est pas indigène ?",
+  "choix": [
+   "Aesculus hippocastanum",
+   "Tilia cordata",
+   "Carpinus betulus",
+   "Fraxinus excelsior"
+  ],
+  "bonne": 0,
+  "explication": "Le marronnier d'Inde ne vient pas d'Inde mais des Balkans (Grèce, Albanie…). Introduit en France au XVIIe siècle, il orne parcs et avenues mais n'est pas indigène.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Marronnier_commun"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Lequel de ces arbres enrichit le sol en azote grâce à des bactéries logées dans ses racines ?",
+  "choix": [
+   "Betula pendula",
+   "Alnus glutinosa",
+   "Carpinus betulus",
+   "Fagus sylvatica"
+  ],
+  "bonne": 1,
+  "explication": "Sans être une légumineuse, l'aulne glutineux fixe l'azote de l'air grâce à une bactérie, Frankia, logée dans des nodosités de ses racines. Il colonise ainsi les sols pauvres et humides.",
+  "sources": [
+   "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8951365/",
+   "https://images.cnrs.fr/en/node/39965"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Les chenilles du papillon Citron se nourrissent des feuilles de :",
+  "choix": [
+   "Cornus sanguinea",
+   "Viburnum opulus",
+   "Ligustrum vulgare",
+   "Frangula alnus"
+  ],
+  "bonne": 3,
+  "explication": "Le Citron pond près des bourgeons de la bourdaine et des nerpruns, seules plantes hôtes de sa chenille. Planter une bourdaine dans une haie, c'est accueillir ce papillon.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/citron-papillon",
+   "https://observatoire.shna-ofab.fr/fichiers/bnhs13-cahiers-ld-p168-169-citron_1456132391.pdf"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Laquelle de ces fleurs des prés humides est une plante hôte majeure du papillon Aurore ?",
+  "choix": [
+   "Ranunculus repens",
+   "Cardamine pratensis",
+   "Caltha palustris",
+   "Lychnis flos-cuculi"
+  ],
+  "bonne": 1,
+  "explication": "L'Aurore pond au pied des boutons floraux de la cardamine des prés ; ses chenilles en mangent les siliques. Elle utilise aussi d'autres Brassicacées comme l'alliaire.",
+  "sources": [
+   "https://ressources.shna-ofab.fr/fichiers/bnhs13-cahiers-ld-p192-193-aurore_1455631211.pdf",
+   "https://www.picardie-nature.org/IMG/pdf/picnat2021_enquete_fiche04_aurore.pdf"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Quelle substance du noyer freine la germination d'autres plantes ?",
+  "choix": [
+   "La coumarine",
+   "La salicine",
+   "La juglone",
+   "La caféine"
+  ],
+  "bonne": 2,
+  "explication": "Feuilles, brou et racines du noyer contiennent des précurseurs de la juglone, une naphtoquinone qui inhibe la germination et la croissance de nombreuses plantes : c'est l'allélopathie.",
+  "sources": [
+   "https://ishs.org/ishs-article/1365_14/",
+   "https://journals.ukim.mk/index.php/jafes/article/view/1420"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "L'ailante libère dans le sol des substances qui freinent ses voisines. Ce phénomène est :",
+  "choix": [
+   "Le commensalisme",
+   "Le mutualisme",
+   "Le phototropisme",
+   "L'allélopathie"
+  ],
+  "bonne": 3,
+  "explication": "L'écorce des racines d'ailante produit l'ailanthone, molécule herbicide qui freine la croissance des plantes voisines. Cette allélopathie aide cet arbre chinois à envahir les friches.",
+  "sources": [
+   "https://pure.psu.edu/en/publications/identification-of-an-allelopathic-compound-from-ailanthus-altissi/",
+   "https://www.rjas.ro/paper_detail/1698"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Combien d'espèces d'abeilles vit-il en France métropolitaine ?",
+  "choix": [
+   "Environ 100",
+   "Près de 1 000",
+   "Environ 5 000",
+   "Environ 20 000"
+  ],
+  "bonne": 1,
+  "explication": "La France métropolitaine compte près de 1 000 espèces d'abeilles (983 dans une liste récente), presque toutes sauvages. Environ 20 000, c'est le total mondial.",
+  "sources": [
+   "https://lasef.org/wp-content/uploads/BSEF/126-1/2176_Le-Divelec.pdf",
+   "https://www.humanite-biodiversite.fr/articles/177014-les-abeilles-sauvages-en-france"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Chez la sauge des prés, comment le pollen se dépose-t-il sur le dos du bourdon ?",
+  "choix": [
+   "Par une explosion de la fleur",
+   "Par un levier formé par les étamines",
+   "Par la vibration des ailes du bourdon",
+   "Par une pluie de pollen au vent"
+  ],
+  "bonne": 1,
+  "explication": "Quand le bourdon pousse sa tête vers le nectar, il appuie sur une plaque qui fait basculer les étamines : elles s'abaissent et frottent leur pollen sur son dos.",
+  "sources": [
+   "https://pubmed.ncbi.nlm.nih.gov/17522077",
+   "https://doaj.org/article/d68d39f84110466695cb11fbf1cbcdb2"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Les graines de la chélidoine portent un appendice charnu. Qui les disperse ?",
+  "choix": [
+   "Les merles",
+   "Les mulots",
+   "Les fourmis",
+   "Les escargots"
+  ],
+  "bonne": 2,
+  "explication": "Cet appendice, l'élaïosome, est riche en lipides : les fourmis emportent les graines au nid, mangent l'élaïosome puis rejettent la graine intacte, qui peut germer plus loin.",
+  "sources": [
+   "https://comptes-rendus.academie-sciences.fr/biologies/item/10.1016/j.crvi.2008.02.002.pdf",
+   "https://www.provincedeliege.be/sites/default/files/media/10952/Grande%20ch%C3%A9lidoine%20%28Ch%C3%A9lidonium%20majus%29.pdf"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Quels insectes le gouet d'Italie retient-il un jour dans sa chambre florale ?",
+  "choix": [
+   "Des petites mouches",
+   "Des abeilles domestiques",
+   "Des papillons de nuit",
+   "Des coccinelles"
+  ],
+  "bonne": 0,
+  "explication": "Chaleur et odeur attirent de petites mouches (psychodes) qui tombent dans la chambre florale ; des poils les retiennent environ 24 h, le temps de se couvrir de pollen.",
+  "sources": [
+   "https://www.aroidsociety.org/gallery/gibernau/2009p/A.%20italicum%20pollination%20-%20Albre%20et%20al%202003.pdf",
+   "https://hal.sorbonne-universite.fr/UNIV-CORSE-SPE/hal-05127910v1"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Lequel de ces arbres, venu d'Amérique du Nord, envahit la forêt de Compiègne ?",
+  "choix": [
+   "Prunus padus",
+   "Prunus avium",
+   "Prunus serotina",
+   "Prunus mahaleb"
+  ],
+  "bonne": 2,
+  "explication": "Introduit au XIXe siècle, le cerisier tardif occupe aujourd'hui une grande partie de la forêt de Compiègne, où il concurrence chênes et hêtres. Les trois autres sont indigènes.",
+  "sources": [
+   "https://gd.eppo.int/reporting/article-70",
+   "https://hal.inrae.fr/hal-02665393"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Lequel de ces pins forme, avec le mélèze, les forêts situées le plus haut en altitude dans les Alpes ?",
+  "choix": [
+   "Pinus sylvestris",
+   "Pinus cembra",
+   "Pinus nigra",
+   "Pinus pinaster"
+  ],
+  "bonne": 1,
+  "explication": "Le pin cembro, aux aiguilles groupées par cinq, peuple l'étage subalpin entre 1 800 et 2 500 m, en limite supérieure des forêts. Le casse-noix moucheté dissémine ses graines.",
+  "sources": [
+   "https://inpn.mnhn.fr/docs/cahab/habitats-declines/9420.pdf",
+   "https://www.techno-science.net/fr/definitions/pin-cembro"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Lequel de ces arbustes colonise les dunes littorales et fixe l'azote de l'air ?",
+  "choix": [
+   "Pyracantha coccinea",
+   "Berberis vulgaris",
+   "Euonymus europaeus",
+   "Hippophae rhamnoides"
+  ],
+  "bonne": 3,
+  "explication": "L'argousier, aux baies orange, supporte sel et sécheresse ; ses racines hébergent la bactérie Frankia qui fixe l'azote. Il peut même envahir les dunes ouvertes.",
+  "sources": [
+   "https://www.floraveg.eu/en/factsheet/default/118878",
+   "https://agris.fao.org/search/en/records/65de4cd56eef00c2cea04ab9"
+  ],
+  "organe": "Fruits"
+ },
+ {
+  "theme": "Écologie et jardin",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Laquelle de ces plantes épineuses pousse naturellement sur le sable des dunes ?",
+  "choix": [
+   "Eryngium maritimum",
+   "Eryngium planum",
+   "Eryngium bourgatii",
+   "Echinops ritro"
+  ],
+  "bonne": 0,
+  "explication": "Le panicaut maritime, bleuté et coriace, résiste au sel et au vent des dunes. Le panicaut de Bourgat est une plante de montagne des Pyrénées, le panicaut plane vient d'Europe de l'Est.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Panicaut_maritime"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Laquelle de ces plantes fleurit en plein hiver, parfois à travers la neige ?",
+  "choix": [
+   "Paeonia lactiflora",
+   "Lilium martagon",
+   "Galanthus nivalis",
+   "Echinacea purpurea"
+  ],
+  "bonne": 2,
+  "explication": "Le perce-neige ouvre ses clochettes blanches dès janvier-février. Pivoine, lis martagon et échinacée fleurissent, eux, à la fin du printemps ou en été.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Perce-neige"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Lequel de ces conifères perd ses aiguilles chaque automne ?",
+  "choix": [
+   "Larix decidua",
+   "Picea abies",
+   "Pinus sylvestris",
+   "Abies alba"
+  ],
+  "bonne": 0,
+  "explication": "Le mélèze est un conifère caduc : ses aiguilles jaunissent puis tombent en automne. Épicéa, pin sylvestre et sapin pectiné gardent les leurs.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/M%C3%A9l%C3%A8ze_d%27Europe"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Quel arbuste se couvre de fleurs jaunes avant ses feuilles, à la fin de l'hiver ?",
+  "choix": [
+   "Hypericum calycinum",
+   "Forsythia × intermedia",
+   "Potentilla fruticosa",
+   "Rudbeckia fulgida"
+  ],
+  "bonne": 1,
+  "explication": "Le forsythia fleurit en mars sur rameaux nus, avant la sortie des feuilles. Millepertuis, potentille et rudbeckia fleurissent en été, feuillage déjà développé.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Forsythia"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Quel arbre couvre de pompons jaunes les collines du Midi en plein hiver ?",
+  "choix": [
+   "Laburnum anagyroides",
+   "Koelreuteria paniculata",
+   "Spartium junceum",
+   "Acacia dealbata"
+  ],
+  "bonne": 3,
+  "explication": "Le mimosa argenté fleurit de janvier à mars, avec un pic en février sur la Côte d'Azur. Cytise, savonnier et spartier fleurissent de la fin du printemps à l'été.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/acacia-dealbata",
+   "https://fr.wikipedia.org/wiki/Acacia_dealbata"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "simple",
+  "format": "images",
+  "question": "Lequel de ces arbres prend de flamboyantes teintes rouge pourpre en automne ?",
+  "choix": [
+   "Ginkgo biloba",
+   "Betula pendula",
+   "Liquidambar styraciflua",
+   "Populus nigra"
+  ],
+  "bonne": 2,
+  "explication": "Le copalme d'Amérique est planté pour ses couleurs d'automne rouges à pourpres. Ginkgo, bouleau et peuplier noir virent au jaune.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Liquidambar_styraciflua"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "Qu'appelle-t-on une plante vivace ?",
+  "choix": [
+   "Une plante qui vit plusieurs années",
+   "Une plante qui vit un seul été",
+   "Une plante qui vit deux ans puis meurt",
+   "Une plante qui ne vit qu'en serre"
+  ],
+  "bonne": 0,
+  "explication": "Une vivace vit plus de deux ans et refleurit d'année en année, souvent en repartant de sa souche. L'annuelle vit une saison, la bisannuelle deux.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Plante_vivace"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "Comment qualifie-t-on le feuillage d'un arbre qui perd toutes ses feuilles en hiver ?",
+  "choix": [
+   "Persistant",
+   "Caduc",
+   "Sempervirent",
+   "Résineux"
+  ],
+  "bonne": 1,
+  "explication": "Caduc vient du latin cadere, « tomber ». Un feuillage persistant (ou sempervirent) reste vert toute l'année ; « résineux » désigne un groupe d'arbres.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Feuillage_caduc"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "simple",
+  "format": "qcm",
+  "question": "Quel pigment vert, dégradé à l'automne, laisse apparaître les autres couleurs des feuilles ?",
+  "choix": [
+   "Le carotène",
+   "L'anthocyane",
+   "La chlorophylle",
+   "La xanthophylle"
+  ],
+  "bonne": 2,
+  "explication": "En automne, l'arbre dégrade sa chlorophylle et en récupère les éléments. Les pigments jaunes et orangés qu'elle masquait deviennent alors visibles.",
+  "sources": [
+   "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/le-mystere-des-couleurs-du-feuillage-en-automne",
+   "https://espacepourlavie.ca/les-couleurs-dautomne-des-arbres"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Laquelle de ces plantes est la « rose de Noël » ?",
+  "choix": [
+   "Rosa canina",
+   "Rosa sempervirens",
+   "Helleborus niger",
+   "Rosa gallica"
+  ],
+  "bonne": 2,
+  "explication": "La rose de Noël n'est pas une rose : c'est l'hellébore noir, une renonculacée à fleurs blanches qui fleurit en hiver. Plante toxique si ingérée.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/rose-de-noel",
+   "https://www.jardinbotaniquedenancy.eu/fileadmin/CJBN/Plante_du_mois/03.25.Helleborus_1.pdf"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Lequel de ces « jasmins » fleurit en plein hiver ?",
+  "choix": [
+   "Jasminum officinale",
+   "Trachelospermum jasminoides",
+   "Solanum jasminoides",
+   "Jasminum nudiflorum"
+  ],
+  "bonne": 3,
+  "explication": "Le jasmin d'hiver ouvre ses fleurs jaunes de décembre à mars sur rameaux nus. Jasmin officinal, jasmin étoilé et morelle faux-jasmin fleurissent en été.",
+  "sources": [
+   "https://www.infoflora.ch/en/flora/jasminum-nudiflorum.html",
+   "https://luberon.fr/luberon/parc-naturel-regional/flore/annu+jasmin-d-hiver+2332.html"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "piege",
+  "format": "images",
+  "question": "Lequel de ces arbustes de haie fleurit en blanc avant l'apparition de ses feuilles ?",
+  "choix": [
+   "Crataegus monogyna",
+   "Prunus spinosa",
+   "Sambucus nigra",
+   "Viburnum opulus"
+  ],
+  "bonne": 1,
+  "explication": "Le prunellier fleurit dès mars sur bois nu. L'aubépine, souvent confondue avec lui, fleurit plus tard, en avril-mai, une fois ses feuilles sorties.",
+  "sources": [
+   "https://entresambreetmeuse.natagora.be/fileadmin/Natagora_Entre-Sambre-et-Meuse/ClIN_d_OEIL/Clin_d_Oeil_13/Prunelier.pdf",
+   "https://fr.wikipedia.org/wiki/Aub%C3%A9pine_%C3%A0_un_style"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Malgré son nom, la Lunaire annuelle (monnaie-du-pape) se comporte le plus souvent comme une plante…",
+  "choix": [
+   "Bisannuelle",
+   "Vivace à rhizome",
+   "Arbustive",
+   "Bulbeuse"
+  ],
+  "bonne": 0,
+  "explication": "Semée au printemps, la lunaire forme des feuilles la 1re année et fleurit la 2e, puis meurt après ses « écus » argentés. Son synonyme Lunaria biennis le rappelle.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lunaria_annua",
+   "https://www.techno-science.net/fr/definitions/lunaire"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Une plante bisannuelle est une plante qui…",
+  "choix": [
+   "Fleurit une année sur deux",
+   "Fleurit deux fois par an",
+   "Fleurit la 2e année puis meurt",
+   "Vit deux ans sans jamais fleurir"
+  ],
+  "bonne": 2,
+  "explication": "La bisannuelle accomplit son cycle en deux ans : rosette de feuilles la 1re année, floraison et graines la 2e, puis elle meurt. Ex. : molène bouillon-blanc.",
+  "sources": [
+   "https://www.ontario.ca/fr/document/guide-dindentification-des-mauvaises-herbes-agricoles-de-lontario/grande-molene",
+   "https://fr.wikipedia.org/wiki/Plante_bisannuelle"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "D'où viennent les jaunes et les orangés des feuilles d'automne ?",
+  "choix": [
+   "De pigments fabriqués par le froid",
+   "De pigments déjà présents tout l'été",
+   "Du gel qui brûle les feuilles",
+   "De champignons qui les colonisent"
+  ],
+  "bonne": 1,
+  "explication": "Les caroténoïdes jaunes et orangés sont présents toute la saison mais masqués par la chlorophylle. Ils apparaissent quand celle-ci est dégradée à l'automne.",
+  "sources": [
+   "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/le-mystere-des-couleurs-du-feuillage-en-automne",
+   "https://espacepourlavie.ca/les-couleurs-dautomne-des-arbres"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Que sont les chatons jaunes qui pendent du noisetier dès janvier-février ?",
+  "choix": [
+   "Des fruits encore immatures",
+   "Des bourgeons de feuilles",
+   "Des fleurs mâles",
+   "Des galles d'insectes"
+  ],
+  "bonne": 2,
+  "explication": "Les chatons sont des grappes de fleurs mâles qui libèrent leur pollen avant la feuillaison. Les fleurs femelles, minuscules, ont des stigmates rouges.",
+  "sources": [
+   "https://www.tela-botanica.org/wp-content/uploads/2026/02/Floraison-Noisetier-ODS.pdf",
+   "https://spot.creamontblanc.org/en/fiches-especes/noisetier"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "En quelle saison fleurit le Lierre grimpant (Hedera helix) ?",
+  "choix": [
+   "Au printemps",
+   "En été",
+   "En automne",
+   "Il ne fleurit jamais"
+  ],
+  "bonne": 2,
+  "explication": "Le lierre adulte fleurit en septembre-octobre : ses fleurs très mellifères nourrissent les insectes tardifs, et ses fruits noirs mûrissent en fin d'hiver.",
+  "sources": [
+   "https://occitanie.lpo.fr/wp-content/uploads/2020/04/ficherefugeslpo_lierre_br.pdf",
+   "https://fr.wikipedia.org/wiki/Lierre_grimpant"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "Un arbre à feuillage persistant, comme le chêne vert…",
+  "choix": [
+   "Garde chaque feuille toute sa vie",
+   "Renouvelle ses feuilles peu à peu",
+   "Perd toutes ses feuilles un hiver sur deux",
+   "Change de feuilles une fois par siècle"
+  ],
+  "bonne": 1,
+  "explication": "Persistant ne veut pas dire éternel : chaque feuille vit en général 2 à 3 ans puis tombe, mais l'arbre les remplace progressivement et n'est jamais dénudé.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Feuillage_persistant"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "piege",
+  "format": "qcm",
+  "question": "En hiver, un jeune hêtre garde ses feuilles mortes et sèches. Son feuillage est en réalité…",
+  "choix": [
+   "Persistant",
+   "Caduc, mais marcescent",
+   "Malade",
+   "Semi-persistant"
+  ],
+  "bonne": 1,
+  "explication": "Le hêtre est caduc. Chez les jeunes sujets, les feuilles fanées restent accrochées tout l'hiver : c'est la marcescence, connue aussi chez le charme et des chênes.",
+  "sources": [
+   "https://www.lalanguefrancaise.com/dictionnaire/definition/marcescent",
+   "https://extension.umd.edu/resource/mystery-marcescence"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Lequel de ces conifères géants perd ses feuilles en hiver ?",
+  "choix": [
+   "Sequoia sempervirens",
+   "Metasequoia glyptostroboides",
+   "Sequoiadendron giganteum",
+   "Cryptomeria japonica"
+  ],
+  "bonne": 1,
+  "explication": "Le métaséquoia, « fossile vivant » redécouvert en Chine dans les années 1940, est caduc : ses aiguilles prennent une teinte fauve puis tombent en automne.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Metasequoia_glyptostroboides",
+   "https://espacepourlavie.ca/node/1667"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Lequel de ces arbres fleurit au printemps avant ses feuilles, jusque sur le tronc ?",
+  "choix": [
+   "Robinia pseudoacacia",
+   "Catalpa bignonioides",
+   "Laburnum anagyroides",
+   "Cercis siliquastrum"
+  ],
+  "bonne": 3,
+  "explication": "L'arbre de Judée se couvre de fleurs roses avant la feuillaison, sur les rameaux et même sur le tronc (cauliflorie). Les trois autres fleurissent feuillés.",
+  "sources": [
+   "https://www.futura-sciences.com/planete/definitions/botanique-arbre-judee-11815/",
+   "https://fr.wikipedia.org/wiki/Arbre_de_Jud%C3%A9e"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Laquelle de ces plantes fleurit de la fin de l'été à l'automne, souvent avant ses feuilles ?",
+  "choix": [
+   "Cyclamen hederifolium",
+   "Primula vulgaris",
+   "Pulmonaria officinalis",
+   "Convallaria majalis"
+  ],
+  "bonne": 0,
+  "explication": "Le cyclamen de Naples fleurit d'août à novembre, avant ou avec ses feuilles marbrées, qui tapissent le sol l'hiver puis disparaissent l'été.",
+  "sources": [
+   "https://www.rhs.org.uk/plants/5145/cyclamen-hederifolium/details",
+   "https://en.wikipedia.org/wiki/Cyclamen_hederifolium"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Laquelle de ces plantes est bisannuelle : rosette la 1re année, hampe fleurie la 2e ?",
+  "choix": [
+   "Achillea millefolium",
+   "Origanum vulgare",
+   "Verbascum thapsus",
+   "Leucanthemum vulgare"
+  ],
+  "bonne": 2,
+  "explication": "La molène bouillon-blanc forme une rosette laineuse la 1re année, puis une hampe de 1 à 2 m la 2e, et meurt après la grenaison. Les trois autres sont vivaces.",
+  "sources": [
+   "https://www.ontario.ca/fr/document/guide-dindentification-des-mauvaises-herbes-agricoles-de-lontario/grande-molene",
+   "https://www.rhs.org.uk/plants/18807/verbascum-thapsus/details"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Les feuilles tombées de quel arbre sentent le caramel à l'automne ?",
+  "choix": [
+   "Parrotia persica",
+   "Cercidiphyllum japonicum",
+   "Liquidambar styraciflua",
+   "Nyssa sylvatica"
+  ],
+  "bonne": 1,
+  "explication": "Les feuilles d'automne de l'arbre à caramel (katsura) dégagent une odeur de sucre brûlé, due au maltol libéré quand elles brunissent et commencent à se décomposer.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Cercidiphyllum_japonicum",
+   "https://www.rhs.org.uk/plants/343130/cercidiphyllum-japonicum-glowball-jww4-pbr/details"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Lequel de ces magnolias garde ses feuilles en hiver ?",
+  "choix": [
+   "Magnolia × soulangeana",
+   "Magnolia kobus",
+   "Magnolia stellata",
+   "Magnolia grandiflora"
+  ],
+  "bonne": 3,
+  "explication": "Le magnolia à grandes fleurs a des feuilles persistantes, coriaces et luisantes. Les magnolias de Soulange, kobus et étoilé sont caducs et fleurissent sur bois nu.",
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Magnolia_grandiflora",
+   "https://fr.wikipedia.org/wiki/Magnolia_stellata"
+  ],
+  "organe": "Feuillage"
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Laquelle de ces viornes fleurit en hiver, parfumée, sur des rameaux nus ?",
+  "choix": [
+   "Viburnum opulus",
+   "Viburnum × bodnantense",
+   "Viburnum plicatum",
+   "Viburnum lantana"
+  ],
+  "bonne": 1,
+  "explication": "La viorne de Bodnant ouvre ses bouquets roses parfumés d'octobre à mars sur bois nu. Viorne obier, du Japon et mancienne fleurissent au printemps, d'avril à juin, feuillées.",
+  "sources": [
+   "https://www.rhs.org.uk/plants/trials-awards/using-award-winning-plants/10-award-winning-winter-flowering-shrubs",
+   "https://fr.wikipedia.org/wiki/Viorne_de_Bodnant"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Lequel de ces cornouillers fleurit en jaune dès février, avant ses feuilles ?",
+  "choix": [
+   "Cornus sanguinea",
+   "Cornus kousa",
+   "Cornus mas",
+   "Cornus alba"
+  ],
+  "bonne": 2,
+  "explication": "Le cornouiller mâle fleurit en février-mars sur rameaux nus, précieux pour les insectes. Les cornouillers sanguin, blanc et du Japon fleurissent blanc, feuillés.",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/cornouiller-male",
+   "https://fr.wikipedia.org/wiki/Cornus_sanguinea"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "difficile",
+  "format": "images",
+  "question": "Laquelle de ces fleurs jaunes sort de terre avant ses feuilles, à la fin de l'hiver ?",
+  "choix": [
+   "Ranunculus repens",
+   "Ficaria verna",
+   "Caltha palustris",
+   "Tussilago farfara"
+  ],
+  "bonne": 3,
+  "explication": "Le tussilage fleurit de février à avril sur des tiges écailleuses, avant ses feuilles : on le surnommait filius ante patrem, « le fils avant le père ».",
+  "sources": [
+   "https://www.techno-science.net/fr/definitions/tussilage",
+   "https://spot.creamontblanc.org/fiches-especes/tussilage"
+  ],
+  "organe": "Fleurs"
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "À quels pigments, fabriqués surtout à l'automne, doit-on les rouges des érables ou des sumacs ?",
+  "choix": [
+   "Aux carotènes",
+   "Aux anthocyanes",
+   "Aux xanthophylles",
+   "À la chlorophylle b"
+  ],
+  "bonne": 1,
+  "explication": "Les anthocyanes rouges sont produites surtout à l'automne, à partir des sucres de la feuille, favorisées par les journées ensoleillées et les nuits fraîches.",
+  "sources": [
+   "https://espacepourlavie.ca/les-couleurs-dautomne-des-arbres",
+   "https://www.techno-science.net/fr/definitions/changement-de-couleur-des-feuilles"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Comment nomme-t-on le passage au froid humide qui lève la dormance de certaines graines ?",
+  "choix": [
+   "La scarification",
+   "La vernalisation",
+   "La stratification",
+   "Le forçage"
+  ],
+  "bonne": 2,
+  "explication": "La stratification imite l'hiver : graines humides gardées quelques semaines au froid. La scarification, elle, use le tégument dur de la graine.",
+  "sources": [
+   "https://espacepourlavie.ca/traitements-pour-stimuler-la-germination-des-semences?mode=liste",
+   "https://www.universalis.fr/encyclopedie/dormances-vegetales/"
+  ],
+  "organe": ""
+ },
+ {
+  "theme": "Saisons et cycles",
+  "niveau": "difficile",
+  "format": "qcm",
+  "question": "Selon la classification de Raunkiær, comment une géophyte passe-t-elle l'hiver ?",
+  "choix": [
+   "Par ses bourgeons sous terre",
+   "Uniquement sous forme de graine",
+   "Par ses bourgeons au ras du sol",
+   "Par ses bourgeons haut perchés"
+  ],
+  "bonne": 0,
+  "explication": "Les géophytes (perce-neige, muguet…) gardent leurs bourgeons sous terre, sur un bulbe, un tubercule ou un rhizome. Les annuelles, survivant en graine, sont des thérophytes.",
+  "sources": [
+   "https://www.futura-sciences.com/planete/definitions/botanique-therophyte-6809/",
+   "https://www.pacificbulbsociety.org/pbswiki/index.php/Geophyte"
+  ],
+  "organe": ""
+ }
+]

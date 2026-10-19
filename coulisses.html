@@ -121,7 +121,7 @@ let sb=null,per=(()=>{try{return +localStorage.getItem('qp.coul.per')||30}catch(
 // noms communs et photos de l'index de l'appli (facultatif : la page marche sans)
 const index=fetch('donnees/photos.json').then(r=>r.json()).then(j=>{for(const[l,e]of Object.entries(j.especes||{})){noms[l]=e[1];for(const p of e[5]||[]){const m=String(p[0]).match(/^(\d+)\.(\w+)$/);if(m)photos[m[1]]='https://inaturalist-open-data.s3.amazonaws.com/photos/'+m[1]+'/square.'+m[2]}}}).catch(()=>{});
 const nomL=l=>`<i>${esc(l)}</i>${noms[l]?` <small>${esc(noms[l])}</small>`:''}`;
-const NOMS={herbier:'Herbier',progres:'Progrès',profil:'Profil et amis',reglages:'Réglages',aide:'Aide',fiche:'Fiches des plantes',famille_jour:'Famille du jour',entrainement:'Entraînement',joker:'Jokers',zoom:'Photo agrandie',
+const NOMS={herbier:'Herbier',progres:'Progrès',profil:'Profil et amis',reglages:'Réglages',aide:'Aide',fiche:'Fiches des plantes',famille_jour:'Famille du jour',entrainement:'Entraînement',joker:'Jokers',zoom:'Photo agrandie',defi:'Défi du jour',defi_partage:'Partage du défi',
   quiz:'Quiz',fenetre:'Une fenêtre (aide, famille…)',telephone:'Téléphone',tablette:'Tablette',ordi:'Ordinateur',inconnu:'Inconnu',
   qcm:'QCM',saisie:'Nom à écrire',photos:'4 photos',plante:'Plante entière',feuillage:'Feuillage',fleurs:'Fleurs',fruits:'Fruits',autre:'Autre photo',
   classique:'Classique',tout:'Classique',arbre:'Arbres',arbuste:'Arbustes',vivace:'Vivaces',grimpante:'Grimpantes','graminée':'Graminées','conifère':'Conifères',famille:'Famille du jour',erreurs:'Mes erreurs',revoir:'Plantes à revoir',paire:'Paire de confusion'};
@@ -193,6 +193,7 @@ ${carte('Confusions',conf,'large','Plante montrée, et plante répondue à la pl
 ${carte('Photos qui piègent',pieges,'large','Photos vues 6 fois au moins dont la réussite est inférieure d\'au moins 20 points à celle de leur plante. Touchez une photo pour l\'ouvrir sur iNaturalist.')}
 ${carte('Photos signalées',sig,'large','Signalées avec « Photo douteuse ? » depuis l\'agrandissement de la photo du quiz.')}
 ${carte('Erreurs techniques',err,'large','Messages nettoyés : ni adresse, ni nombre, ni identifiant d\'appareil.')}
+${carte('Défi du jour',(d.defis||[]).length?vbar(d.defis.map(x=>({x:jcourt(x.jour),v:x.joueurs,tip:`<b>${jcourt(x.jour)}</b><br>${nb(x.joueurs)} comptes ont joué · ${String(x.score_moyen).replace('.',',')}/10 en moyenne<br>${nb(x.sans_faute)} sans faute`})),pas,'Joueurs du défi par jour'):'<p class="vide">Pas encore de défi joué.</p>','large','Comptes ayant publié un résultat (les joueurs sans compte n\'apparaissent que dans les exercices, mode « Défi du jour »).')}
 ${carte('Réglages choisis',`<div class="duo"><div><b>${pc(rg.vibrations)}</b><span>gardent les vibrations</span></div><div><b>${pc(rg.sombre)}</b><span>ont l'appareil en mode sombre</span></div></div><h3>Objectif du jour</h3>${obj}<h3>Mode de jeu choisi</h3>${mod}`)}
 </div>`;
   $('pied').hidden=false;$('pied').textContent=`Du ${jcourt(d.periode.debut)} au ${jcourt(d.periode.fin)} · mis à jour à ${new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}. Données effacées automatiquement après 13 mois.`;

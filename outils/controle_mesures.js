@@ -14,7 +14,7 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   const q=async(sql,pr)=>(await db.query(sql,pr)).rows;
   const cacher=p=>p.evaluate(()=>{Object.defineProperty(document,'hidden',{value:true,configurable:true});document.dispatchEvent(new Event('visibilitychange'))});
   const montrer=p=>p.evaluate(()=>{Object.defineProperty(document,'hidden',{value:false,configurable:true})});
-  const o=await open({browser:b,w:390,h:844,touch:true,seed:true,file:F}),p=o.p,j=[];await brancher(p,db,URL_SB,j);
+  const o=await open({browser:b,w:390,h:844,touch:true,seed:true,file:F,http:true}),p=o.p,j=[];await brancher(p,db,URL_SB,j);
   await p.reload();await p.waitForTimeout(400);await p.evaluate(()=>{const s=document.getElementById('splash');if(s)s.click()});await p.waitForTimeout(5800);
   const ap=await p.evaluate(()=>localStorage.getItem('qp.app'));
   const vi=(await q('select * from public.visites where appareil=$1',[ap]))[0];
@@ -62,7 +62,7 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   ok(await p.evaluate(()=>{setPanel='priv';setRender('priv');return /effacées après 13 mois/.test(document.querySelector('#set').textContent)}),'confidentialité : statistiques anonymes et durée de conservation annoncées');
   // base pas encore mise à jour : la visite passe par l'ancienne fonction, les mesures sont refusées sans gêner l'appli
   const db2=await base();await db2.exec('drop function public.noter_visite(uuid, date, boolean, text, int, boolean, text); drop function public.envoyer_mesures(uuid, jsonb);');
-  const o2=await open({browser:b,w:1280,h:800,seed:true,file:F}),j2=[];await brancher(o2.p,db2,URL_SB,j2);
+  const o2=await open({browser:b,w:1280,h:800,seed:true,file:F,http:true}),j2=[];await brancher(o2.p,db2,URL_SB,j2);
   await o2.p.reload();await o2.p.waitForTimeout(400);await o2.p.evaluate(()=>{const s=document.getElementById('splash');if(s)s.click()});await o2.p.waitForTimeout(5800);
   ok((await db2.query('select count(*)::int n from public.visites')).rows[0].n===1,'base ancienne : visite comptée par compter_visite');
   await lance(o2.p,'mcq');await o2.p.click('#opts button');await cacher(o2.p);await o2.p.waitForTimeout(800);

@@ -1,7 +1,7 @@
 // Étape 6 : simulation de la progression (vrai code de l'appli + joueur simulé qui apprend et oublie).
 // Compare la version actuelle et des variantes qui ne touchent qu'aux niveaux 1 à 3.
 // Usage : node outils/simulation_memoire.js [jours=30] [graines=8]
-const {chromium}=require('playwright');const path=require('path');
+const {chromium}=require('playwright');const {adresse,LOCAL}=require('./banc_essai.js');const path=require('path');
 const JOURS=+process.argv[2]||30,GRAINES=+process.argv[3]||8,PAR_JOUR=40;
 // Variantes : remplacements dans la fonction srs() de l'appli
 const VARIANTES={
@@ -54,9 +54,9 @@ const SIM=function(o){
 };
 (async()=>{
   const b=await chromium.launch({executablePath:process.env.CHROMIUM||'/opt/pw-browsers/chromium'});
-  const ctx=await b.newContext();await ctx.route(/^https?:/,r=>r.abort());
+  const ctx=await b.newContext();await ctx.route(/^https?:/,r=>LOCAL.test(r.request().url())?r.continue():r.abort());
   const p=await ctx.newPage();
-  await p.goto('file://'+path.resolve(__dirname,'..','index.html'));await p.waitForTimeout(800);
+  await p.goto(await adresse(path.resolve(__dirname,'..','index.html')));await p.waitForTimeout(800);
   const res={};
   for(const[nom,rep]of Object.entries(VARIANTES)){
     const r=[];for(let g=1;g<=GRAINES;g++){await p.reload();await p.waitForTimeout(300);r.push(await p.evaluate(`(${SIM.toString()})(${JSON.stringify({graine:g,rep,jours:JOURS,parJour:PAR_JOUR})})`))}

@@ -1,14 +1,14 @@
 // Étape 4 : contrôle du volet Réglages (Playwright). Usage : node outils/controle_reglages.js [index.html]
 // Variable CHROMIUM facultative : chemin d'un Chromium local.
-const {chromium}=require('playwright');
+const {chromium}=require('playwright');const {adresse,LOCAL}=require('./banc_essai.js');
 const ok=(c,m)=>console.log((c?'OK   ':'ÉCHEC ')+m);
 (async()=>{
 const b=await chromium.launch({executablePath:process.env.CHROMIUM||undefined});
 const ctx=await b.newContext({viewport:{width:360,height:640},deviceScaleFactor:2});
-await ctx.route(/^https?:/,r=>r.abort());
+await ctx.route(/^https?:/,r=>LOCAL.test(r.request().url())?r.continue():r.abort());   // page servie en local (rechargements fiables)
 const p=await ctx.newPage();const errs=[];p.on('pageerror',e=>errs.push(e.message));
 await p.addInitScript(()=>{window.__vib=[];navigator.vibrate=v=>{window.__vib.push(v);return true}});
-await p.goto('file://'+require('path').resolve(process.argv[2]||'index.html'));await p.waitForTimeout(600);
+await p.goto(await adresse(process.argv[2]||require('path').resolve(__dirname,'..','index.html')));await p.waitForTimeout(600);
 await p.click('#splash');await p.waitForTimeout(1700);
 ok(await p.textContent('#gt')==='/ 40','anneau : objectif 40 par défaut');
 await p.click('#ring');await p.waitForTimeout(400);
