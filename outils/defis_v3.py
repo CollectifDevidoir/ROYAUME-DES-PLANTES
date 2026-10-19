@@ -338,7 +338,7 @@ def sortir(plan, subst, graine):
     def vers_dq(x):
         d = {'theme': x['theme'], 'niveau': {'facile': 'simple', 'difficile': 'difficile'}.get(x['niveau'], 'piege' if x['piege'] else 'intermediaire'), 'format': x['format'], 'question': x['question']}   # le jeu n'utilise pas « niveau » : simple métadonnée
         if x.get('texte'): d['texte'] = x['texte']
-        d.update({'choix': x['choix'], 'bonne': x['bonne'], 'explication': x['explication'], 'sources': x['sources'][:2]})
+        d.update({'choix': x['choix'], 'bonne': x['bonne'], 'explication': x['explication'], 'sources': [u.replace(' ', '%20') for u in x['sources'][:2]]})
         if x.get('organe'): d['organe'] = x['organe']
         d['plantes'] = bool(x['plantes'])
         if x.get('latin'): d['latin'] = True
@@ -353,7 +353,7 @@ def sortir(plan, subst, graine):
 if __name__ == '__main__':
     meilleur = None
     NB = int(os.environ.get('DEFIS_GRAINES', 12))
-    for g in range(NB):
+    for g in ([int(os.environ['DEFIS_GRAINE'])] if os.environ.get('DEFIS_GRAINE') else range(NB)):
         r = tenter(g)
         if not r: continue
         plan, subst = r

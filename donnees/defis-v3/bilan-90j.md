@@ -24,54 +24,54 @@ Origine des validées et relues : rédigées avant 170 (dont 34 corrigées), nou
 | Usages et histoire | 36 | 30 (18) | 13 | 79 |
 | Milieux | 14 | 45 (9) | 8 | 67 |
 | Vocabulaire | 26 | 16 (9) | 13 | 55 |
-| Idées reçues | 12 | 32 (31) | 10 | 54 |
 | Fruits et toxicité | 21 | 22 (20) | 11 | 54 |
+| Idées reçues | 12 | 32 (31) | 10 | 54 |
 | **Total** | **317** | **711 (137)** | **389** | **1417** |
 
 ## Planning : 900 passages
 
-- Questions distinctes utilisées : **640** ; inédites jouées une seule fois : 380 ; rejouées une fois (au moins 28 jours plus tard) : 260 ; passages de rejeu : 260 sur 900.
-- Statut des passages : validée 579, relue 72, données 249.
-- Questions nouvelles (rédigées dans cette phase) : 442 passages ; corrigées : 41 ; photos : 279 ; pièges : 235.
-- Déjà présentes dans les 300 séries en ligne : 206 passages.
+- Questions distinctes utilisées : **639** ; inédites jouées une seule fois : 378 ; rejouées une fois (au moins 28 jours plus tard) : 261 ; passages de rejeu : 261 sur 900.
+- Statut des passages : validée 579, relue 74, données 247.
+- Questions nouvelles (rédigées dans cette phase) : 446 passages ; corrigées : 41 ; photos : 281 ; pièges : 232.
+- Déjà présentes dans les 300 séries en ligne : 202 passages.
 
 | Thème | Passages | Part |
 |---|---|---|
-| Saisons | 163 | 18 % |
-| Usages et histoire | 111 | 12 % |
-| Écologie | 99 | 11 % |
-| Milieux | 91 | 10 % |
-| Anecdotes | 90 | 10 % |
+| Saisons | 159 | 18 % |
+| Usages et histoire | 113 | 13 % |
+| Écologie | 102 | 11 % |
+| Milieux | 92 | 10 % |
 | Familles | 90 | 10 % |
-| Vocabulaire | 80 | 9 % |
+| Anecdotes | 90 | 10 % |
+| Vocabulaire | 79 | 9 % |
 | Fruits et toxicité | 78 | 9 % |
-| Idées reçues | 76 | 8 % |
+| Idées reçues | 75 | 8 % |
 | Noms latins | 22 | 2 % |
 
-Niveaux : facile 354, intermédiaire 366, difficile 180 (cible 360 / 360 / 180).
+Niveaux : facile 357, intermédiaire 363, difficile 180 (cible 360 / 360 / 180).
 
 | Mécanisme | Passages |
 |---|---|
-| photo_critere | 201 |
-| qcm_usage_histoire | 94 |
-| anecdote | 90 |
+| photo_critere | 200 |
+| qcm_usage_histoire | 96 |
 | famille | 90 |
-| qcm_saison | 68 |
-| qcm_idee_recue | 68 |
+| anecdote | 90 |
+| qcm_idee_recue | 67 |
+| qcm_saison | 66 |
 | qcm_toxicite_fruit | 65 |
-| qcm_vocabulaire | 59 |
-| qcm_milieu | 53 |
-| qcm_ecologie | 53 |
-| photo_origine | 37 |
+| qcm_vocabulaire | 58 |
+| qcm_ecologie | 54 |
+| qcm_milieu | 54 |
+| photo_origine | 38 |
 | nom_latin | 22 |
 
 ## Écarts au format, signalés
 
-- énoncé de photos déjà très servi : 18 fois (jours : 79, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90)
-- même sujet que dans les 3 jours précédents : 14 fois (jours : 55, 58, 59, 65, 75, 76, 77, 79, 83, 87, 89, 90)
-- facile → intermédiaire accessible : 6 fois (jours : 68, 69, 74, 77, 82, 90)
-- 3 questions du même thème : 2 fois (jours : 78, 85)
-- même genre botanique à moins de 2 jours : 1 fois (jours : 88)
+- énoncé de photos déjà très servi : 18 fois (jours : 78, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90)
+- même sujet que dans les 3 jours précédents : 14 fois (jours : 68, 69, 75, 76, 78, 87, 88, 89, 90)
+- 3 questions du même thème : 5 fois (jours : 76, 79, 81, 82, 87)
+- facile → intermédiaire accessible : 3 fois (jours : 75, 78, 86)
+- même genre botanique à moins de 2 jours : 1 fois (jours : 74)
 
 Contrôles : ÉCART — un même sujet ne revient pas dans les 3 jours suivants ; ÉCART — aucun sujet courant dans plus de 15 défis sur 90 ; ÉCART — 2 thèmes identiques au plus par défi ; ÉCART — format 4 faciles / 4 intermédiaires / 2 difficiles respecté
 
