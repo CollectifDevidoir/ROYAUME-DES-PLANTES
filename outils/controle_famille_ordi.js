@@ -5,7 +5,8 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
 (async()=>{const b=await chromium.launch({executablePath:process.env.CHROMIUM||'/opt/pw-browsers/chromium'});
  for(const [w,h] of [[1366,800],[1024,700]]){
   const {ctx,p}=await open({browser:b,w,h,seed:true});
-  await p.evaluate(()=>openFamily(famDay()));await p.waitForTimeout(500);
+  // une famille à plusieurs genres a 4 cartes (la famille du jour change chaque jour et peut n'en avoir que 3)
+  await p.evaluate(()=>openFamily('Rosaceae'));await p.waitForTimeout(500);
   const carte=()=>p.evaluate(()=>{const z=$('fz');return Math.round(z.scrollLeft/(z.clientWidth+10))});
   // le défilement est animé : on attend que la carte attendue soit en place (4 s au plus) plutôt qu'un délai fixe
   const attend=n=>p.waitForFunction(n=>{const z=$('fz');return Math.abs(z.scrollLeft-n*(z.clientWidth+10))<2},n,{timeout:4000}).then(()=>p.waitForTimeout(150),()=>{});
