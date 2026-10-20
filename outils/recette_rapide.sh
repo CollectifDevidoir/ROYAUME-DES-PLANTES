@@ -4,7 +4,7 @@
 # Demande playwright, @electric-sql/pglite et @supabase/supabase-js@2.117.3 (même version que SB_LIB dans index.html).
 # Usage, depuis la racine du dépôt : NODE_PATH=$(npm root -g) bash outils/recette_rapide.sh
 cd "$(dirname "$0")/.." || exit 1
-CONTROLES="recette controle_memoire controle_niveaux controle_saisie controle_sources_cles controle_distracteurs controle_fige controle_reglages controle_herbier controle_entrainement controle_jeu controle_rangs controle_synonymes controle_anecdotes controle_defi controle_defi_planning controle_mesures controle_comptes controle_defi_compte controle_supabase_sql"
+CONTROLES="recette controle_memoire controle_niveaux controle_saisie controle_sources_cles controle_distracteurs controle_fige controle_fluidite controle_reglages controle_herbier controle_entrainement controle_jeu controle_rangs controle_synonymes controle_anecdotes controle_defi controle_defi_planning controle_mesures controle_comptes controle_defi_compte controle_supabase_sql"
 ech=""
 for c in $CONTROLES; do
   echo "::group::$c"
