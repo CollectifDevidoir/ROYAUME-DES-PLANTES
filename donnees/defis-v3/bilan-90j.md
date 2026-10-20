@@ -30,48 +30,47 @@ Origine des validées et relues : rédigées avant 170 (dont 34 corrigées), nou
 
 ## Planning : 900 passages
 
-- Questions distinctes utilisées : **639** ; inédites jouées une seule fois : 378 ; rejouées une fois (au moins 28 jours plus tard) : 261 ; passages de rejeu : 261 sur 900.
-- Statut des passages : validée 579, relue 74, données 247.
-- Questions nouvelles (rédigées dans cette phase) : 446 passages ; corrigées : 41 ; photos : 281 ; pièges : 232.
-- Déjà présentes dans les 300 séries en ligne : 202 passages.
+- Questions distinctes utilisées : **644** ; inédites jouées une seule fois : 388 ; rejouées une fois (au moins 28 jours plus tard) : 256 ; passages de rejeu : 256 sur 900.
+- Statut des passages : validée 578, relue 74, données 248.
+- Questions nouvelles (rédigées dans cette phase) : 443 passages ; corrigées : 41 ; photos : 280 ; pièges : 234.
+- Déjà présentes dans les 300 séries en ligne : 204 passages.
 
 | Thème | Passages | Part |
 |---|---|---|
-| Saisons | 159 | 18 % |
-| Usages et histoire | 113 | 13 % |
-| Écologie | 102 | 11 % |
-| Milieux | 92 | 10 % |
-| Familles | 90 | 10 % |
+| Saisons | 162 | 18 % |
+| Usages et histoire | 110 | 12 % |
+| Écologie | 106 | 12 % |
+| Milieux | 91 | 10 % |
 | Anecdotes | 90 | 10 % |
-| Vocabulaire | 79 | 9 % |
-| Fruits et toxicité | 78 | 9 % |
-| Idées reçues | 75 | 8 % |
+| Familles | 90 | 10 % |
+| Vocabulaire | 78 | 9 % |
+| Fruits et toxicité | 77 | 9 % |
+| Idées reçues | 74 | 8 % |
 | Noms latins | 22 | 2 % |
 
-Niveaux : facile 357, intermédiaire 363, difficile 180 (cible 360 / 360 / 180).
+Niveaux : facile 356, intermédiaire 364, difficile 180 (cible 360 / 360 / 180).
 
 | Mécanisme | Passages |
 |---|---|
 | photo_critere | 200 |
-| qcm_usage_histoire | 96 |
-| famille | 90 |
+| qcm_usage_histoire | 94 |
 | anecdote | 90 |
-| qcm_idee_recue | 67 |
-| qcm_saison | 66 |
-| qcm_toxicite_fruit | 65 |
+| famille | 90 |
+| qcm_idee_recue | 68 |
+| qcm_saison | 68 |
+| qcm_toxicite_fruit | 64 |
 | qcm_vocabulaire | 58 |
-| qcm_ecologie | 54 |
-| qcm_milieu | 54 |
+| qcm_ecologie | 55 |
+| qcm_milieu | 53 |
 | photo_origine | 38 |
 | nom_latin | 22 |
 
 ## Écarts au format, signalés
 
-- énoncé de photos déjà très servi : 18 fois (jours : 78, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90)
-- même sujet que dans les 3 jours précédents : 14 fois (jours : 68, 69, 75, 76, 78, 87, 88, 89, 90)
-- 3 questions du même thème : 5 fois (jours : 76, 79, 81, 82, 87)
-- facile → intermédiaire accessible : 3 fois (jours : 75, 78, 86)
-- même genre botanique à moins de 2 jours : 1 fois (jours : 74)
+- énoncé de photos déjà très servi : 21 fois (jours : 78, 79, 80, 81, 82, 84, 85, 86, 87, 88, 89, 90)
+- même sujet que dans les 3 jours précédents : 8 fois (jours : 67, 71, 72, 75, 77, 80, 88, 90)
+- facile → intermédiaire accessible : 4 fois (jours : 77, 78, 79, 80)
+- 3 questions du même thème : 3 fois (jours : 78, 82, 83)
 
 Contrôles : ÉCART — un même sujet ne revient pas dans les 3 jours suivants ; ÉCART — aucun sujet courant dans plus de 15 défis sur 90 ; ÉCART — 2 thèmes identiques au plus par défi ; ÉCART — format 4 faciles / 4 intermédiaires / 2 difficiles respecté
 

@@ -17,7 +17,7 @@ Quelle plante porte la plus grande fleur isolée du monde, large d'environ un m�
 
 **Explication :** Rafflesia arnoldii, d'Indonésie, parasite des lianes : sans feuilles, tige ni racines. Sa fleur à odeur de charogne ne dure qu'environ une semaine.
 **Source :** <https://en.wikipedia.org/wiki/Rafflesia_arnoldii>, <https://www.guinnessworldrecords.com/world-records/66511-largest-single-flower>
-*validée (recoupée par recherche web) · id NA00 · jours 62*
+*validée (recoupée par recherche web) · id NA00 · jours 56*
 
 #### Au XIXe siècle, quel remède a finalement sauvé le vignoble français du phylloxéra ?
 
@@ -56,7 +56,7 @@ Quelle est la plus lourde graine du monde, pouvant peser jusqu'à 25 kg et produ
 
 **Explication :** Le coco de mer (Lodoicea maldivica), endémique des Seychelles, porte la plus grosse graine du monde. Le fruit met plusieurs années à mûrir.
 **Source :** <https://www.guinnessworldrecords.com/world-records/66399-largest-seed>, <https://www.discoverwildlife.com/plant-facts/trees/coco-de-mer-seeds-large>
-*validée (recoupée par recherche web) · id NA05 · jours 59*
+*validée (recoupée par recherche web) · id NA05 · jours 1*
 
 #### De quelle divinité la morphine, premier alcaloïde isolé du pavot, tire-t-elle son nom ?
 
@@ -95,7 +95,7 @@ Pour que la dionée attrape-mouche referme son piège, que faut-il ?
 
 **Explication :** Ce double contrôle évite les fausses alertes. Le piège claque en moins d'une seconde ; la plante n'est sauvage qu'en Caroline du Nord et du Sud.
 **Source :** <https://en.wikipedia.org/wiki/Venus_flytrap>, <https://floranorthamerica.org/Dionaea%20muscipula>
-*validée (recoupée par recherche web) · id NA09 · jours 63*
+*validée (recoupée par recherche web) · id NA09 · jours 60*
 
 #### Quel arbre solitaire du désert du Ténéré, au Niger, fut renversé par un camion en 1973 ?
 
@@ -108,7 +108,7 @@ Quel arbre solitaire du désert du Ténéré, au Niger, fut renversé par un cam
 
 **Explication :** Repère des caravanes, vieux d'environ 300 ans, il a été remplacé sur place par une sculpture métallique. Ses restes sont conservés au musée de Niamey.
 **Source :** <https://atlasobscura.com/places/tree-of-tenere>, <https://www.routard.com/fr/guide/afrique/niger/sahara/desert-du-tenere>
-*validée (recoupée par recherche web) · id NA11 · jours 60*
+*validée (recoupée par recherche web) · id NA11 · jours 61*
 
 #### De quelle plante parle-t-on ?
 
@@ -122,7 +122,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Petite pervenche. Couvre-sol persistant aux fleurs bleu violet au printemps ; elle tolère l'ombre.
 **Source :** <https://www.rousseauonline.ch/pdf/rousseauonline-0076.pdf>
-*issue des données de l'appli (non recoupée) · id 00d2da1776 · jours 77*
+*issue des données de l'appli (non recoupée) · id 00d2da1776*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -138,7 +138,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Muguet. Clochettes parfumées du 1er mai ; toute la plante est toxique.
 **Source :** <https://www.tendance-parfums.com/dior-diorissimo-eau-de-toilette.html>
-*issue des données de l'appli (non recoupée) · id 036a169fe5 · jours 72*
+*issue des données de l'appli (non recoupée) · id 036a169fe5 · jours 73*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -242,7 +242,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Althéa. Floraison en fin d'été quand les autres arbustes sont défleuris ; feuillage tardif.
 **Source :** <https://linguasia.com/national-flower-korea-mugunghwa>
-*issue des données de l'appli (non recoupée) · id 130021770d*
+*issue des données de l'appli (non recoupée) · id 130021770d · jours 68*
 
 #### De quelle plante parle-t-on ?
 
@@ -330,7 +330,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Massette à larges feuilles. Épi brun cylindrique de bord d'eau, qui éclate en duvet.
 **Source :** <https://www.usni.org/magazines/proceedings/1946/october/buoyant-materials-navy-life-preservers-world-war-ii>
-*issue des données de l'appli (non recoupée) · id 1a35f832b2 · jours 66*
+*issue des données de l'appli (non recoupée) · id 1a35f832b2*
 
 #### De quelle plante parle-t-on ?
 
@@ -386,7 +386,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Aucuba du Japon. Aucuba : feuilles luisantes tachetées de jaune ; baies rouges sur les pieds femelles.
 **Source :** <https://en.wikipedia.org/wiki/Aucuba_japonica>
-*issue des données de l'appli (non recoupée) · id 25951297e7*
+*issue des données de l'appli (non recoupée) · id 25951297e7 · jours 65*
 
 #### De quelle plante parle-t-on ?
 
@@ -522,7 +522,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Arbre à perruque. Panicules plumeuses roses ; feuilles pourpres ou rouges à l'automne.
 **Source :** <https://thesaurus.inha.fr/thesaurus/resource/ark:/54721/11b28533-9077-4f2e-9808-95377c740964>
-*issue des données de l'appli (non recoupée) · id 337fb3221a · jours 71*
+*issue des données de l'appli (non recoupée) · id 337fb3221a*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -538,7 +538,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Troène du Japon. Persistant au feuillage très brillant, pour haies denses ou petit arbre taillé en tige.
 **Source :** <https://en.wikipedia.org/wiki/Ligustrum_japonicum>
-*issue des données de l'appli (non recoupée) · id 3533d09cab*
+*issue des données de l'appli (non recoupée) · id 3533d09cab · jours 76*
 
 #### De quelle plante parle-t-on ?
 
@@ -598,7 +598,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Épine-vinette commune. Épines à trois branches et baies rouges acides ; hôte de la rouille du blé.
 **Source :** <https://bioger.versailles-saclay.hub.inrae.fr/media/files/pages-perso/page-perso-suffert-frederic/pdf-publis/valade-2022>
-*issue des données de l'appli (non recoupée) · id 3e56b00413 · jours 76*
+*issue des données de l'appli (non recoupée) · id 3e56b00413*
 
 #### De quelle plante parle-t-on ?
 
@@ -696,7 +696,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Poirier commun. Nombreuses variétés fruitières ; fleurs blanches en avril.
 **Source :** <https://en.wikipedia.org/wiki/Poire_Williams>
-*issue des données de l'appli (non recoupée) · id 53a291a9af*
+*issue des données de l'appli (non recoupée) · id 53a291a9af · jours 72*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -728,7 +728,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Primevère acaule. Fleurs jaune pâle isolées sur feuilles en rosette dès février.
 **Source :** <https://en.wikipedia.org/wiki/Primrose_Day>
-*issue des données de l'appli (non recoupée) · id 5b7fa052b3 · jours 64*
+*issue des données de l'appli (non recoupée) · id 5b7fa052b3*
 
 #### De quelle plante parle-t-on ?
 
@@ -862,7 +862,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Clématite des haies. Long grimpeur aux aigrettes plumeuses en hiver, appelé « herbe aux gueux ».
 **Source :** <https://www.fr.ch/mhnf/actualites/lherbe-aux-mendiants>
-*issue des données de l'appli (non recoupée) · id 7194871e7a · jours 75*
+*issue des données de l'appli (non recoupée) · id 7194871e7a · jours 64*
 
 #### De quelle plante parle-t-on ?
 
@@ -904,7 +904,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Gainier du Canada. Floraison rose sur le bois avant les feuilles ; plus rustique que l'arbre de Judée.
 **Source :** <https://www.nps.gov/places/eastern-redbud-cercis-canadensis.htm>
-*issue des données de l'appli (non recoupée) · id 779232800e · jours 70*
+*issue des données de l'appli (non recoupée) · id 779232800e*
 
 #### De quelle plante parle-t-on ?
 
@@ -918,7 +918,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Buis. Taillé en haies et topiaires depuis l'Antiquité ; menacé par la pyrale du buis et le Cylindrocladium.
 **Source :** <https://www.universalis.fr/encyclopedie/thomas-bewick/>
-*issue des données de l'appli (non recoupée) · id 77a0b8609b · jours 68*
+*issue des données de l'appli (non recoupée) · id 77a0b8609b*
 
 #### De quelle plante parle-t-on ?
 
@@ -974,7 +974,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Poirier à feuilles en cœur. Poirier sauvage épineux de l'ouest atlantique, en haies et lisières ; petits fruits ronds.
 **Source :** <https://woodlandtrust.org.uk/trees-woods-and-wildlife/british-trees/a-z-of-british-trees/plymouth-pear>
-*issue des données de l'appli (non recoupée) · id 84155c430d · jours 67*
+*issue des données de l'appli (non recoupée) · id 84155c430d*
 
 #### De quelle plante parle-t-on ?
 
@@ -1018,7 +1018,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Noyer noir. Bois très recherché, noix à coque très dure ; il libère de la juglone.
 **Source :** <https://www.ontario.ca/page/horses-and-black-walnut-shavings>
-*issue des données de l'appli (non recoupée) · id 8d8e8b475d*
+*issue des données de l'appli (non recoupée) · id 8d8e8b475d · jours 66*
 
 #### De quelle plante parle-t-on ?
 
@@ -1032,7 +1032,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Vigne vierge de Boston. Feuilles à trois lobes, très colorées à l'automne ; s'accroche aux murs.
 **Source :** <https://baseballhall.org/discover-more/stories/baseball-history/wrigley-field-ivy>
-*issue des données de l'appli (non recoupée) · id 8e490d55ad*
+*issue des données de l'appli (non recoupée) · id 8e490d55ad · jours 62*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -1208,7 +1208,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Pavot d'Orient. Grandes coupes orange rouge en mai, feuillage qui disparaît l'été.
 **Source :** <https://bioone.org/journals/candollea/volume-74/issue-1/c2019v741a7/The-discovery-and-naming-of-Papaver-orientale-sl-Papaveraceae-with/10.15553/c2019v741a7.full>
-*issue des données de l'appli (non recoupée) · id a6e8faaeed*
+*issue des données de l'appli (non recoupée) · id a6e8faaeed · jours 74*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -1266,7 +1266,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Pittosporum à feuilles ténues. Petit feuillage ondulé luisant, taillé en haie douce ; il craint le gel fort.
 **Source :** <https://ngaitahu.iwi.nz/our_stories/kohuhu-striking-show-stopper>
-*issue des données de l'appli (non recoupée) · id b19e7bf015*
+*issue des données de l'appli (non recoupée) · id b19e7bf015 · jours 69*
 
 #### De quelle plante parle-t-on ?
 
@@ -1446,7 +1446,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Pommier domestique. Des milliers de variétés cultivées ; floraison blanc rosé en avril.
 **Source :** <https://applesandpeople.org.uk/stories/heavenly-mountains/>
-*issue des données de l'appli (non recoupée) · id e852b71b47*
+*issue des données de l'appli (non recoupée) · id e852b71b47 · jours 70*
 
 #### De quelle plante parle-t-on ?
 
@@ -1490,7 +1490,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Platane d'Orient. Feuilles profondément découpées ; très grand arbre qui vit longtemps.
 **Source :** <https://lexundria.com/hdt/7.31/mcly>
-*issue des données de l'appli (non recoupée) · id f263cd7f06 · jours 74*
+*issue des données de l'appli (non recoupée) · id f263cd7f06*
 
 #### De quelle plante parle-t-on ?
 
@@ -1645,7 +1645,7 @@ Le mot « mimosa » désignait d'abord non les pompons jaunes de l'hiver, mais q
 
 **Explication :** Du latin mimus (mime) : la sensitive (Mimosa pudica) « mime » un être sensible. Les mimosas du Midi, des acacias australiens, ont repris le nom.
 **Source :** <https://www.techno-science.net/fr/definitions/mimosa>, <https://www.techno-science.net/fr/definitions/sensitive>
-*validée (recoupée par recherche web) · une seule source, à relire · id NA12 · jours 55*
+*validée (recoupée par recherche web) · une seule source, à relire · id NA12 · jours 57*
 
 #### Pourquoi le Lauragais fut-il appelé « pays de Cocagne » au XVIe siècle ?
 
@@ -1671,7 +1671,7 @@ Dans le récit de William Stukeley (1752), la plus ancienne source sur la pomme 
 
 **Explication :** Newton, âgé, raconte à Stukeley la scène sous les pommiers : il voit une pomme tomber. Aucun choc sur la tête dans ce récit : cette version est un enjolivement ultérieur.
 **Source :** <https://www.scientificamerican.com/blog/observations/whats-the-real-story-with-newton-and-the-apple-see-for-yourself>, <https://blogs.nature.com/blog/newtons_apples_the_truth/>
-*validée (recoupée par recherche web) · id NA14 · jours 65*
+*validée (recoupée par recherche web) · id NA14 · jours 67*
 
 #### D'où le pêcher, dont le nom latin persica évoque la Perse, est-il originaire ? · piège
 
@@ -1684,7 +1684,7 @@ D'où le pêcher, dont le nom latin persica évoque la Perse, est-il originaire 
 
 **Explication :** Les Romains disaient malum persicum, « pomme de Perse », car le fruit leur parvenait par là. L'espèce est pourtant originaire de Chine, où elle est cultivée depuis très longtemps.
 **Source :** <https://franco.wiki/fr/Pêcher.html>, <https://www.techno-science.net/fr/definitions/peche-fruit>
-*validée (recoupée par recherche web) · id NA15 · jours 73*
+*validée (recoupée par recherche web) · id NA15 · jours 71*
 
 #### Phytophthora infestans, agent du mildiou de la pomme de terre et de la famine irlandaise, … · piège
 
@@ -1697,7 +1697,7 @@ Phytophthora infestans, agent du mildiou de la pomme de terre et de la famine ir
 
 **Explication :** Les oomycètes ne sont pas des champignons mais des straménopiles. Le mildiou ravagea l'Europe à partir de 1845 ; en Irlande, la famine fit environ un million de morts.
 **Source :** <https://hal.inrae.fr/hal-04231037v1/document>, <https://ucanr.edu/node/114198>
-*validée (recoupée par recherche web) · id NA16 · jours 69*
+*validée (recoupée par recherche web) · id NA16 · jours 75*
 
 #### Quelle variété de banane dominait le commerce mondial jusqu'aux années 1950, avant d'être … · piège
 
@@ -1710,7 +1710,7 @@ Quelle variété de banane dominait le commerce mondial jusqu'aux années 1950, 
 
 **Explication :** Fusarium oxysporum, souche TR1, l'a éliminée ; la Cavendish, résistante, l'a remplacée. Une nouvelle souche, TR4, menace désormais la Cavendish.
 **Source :** <https://www.tastingtable.com/1054903/heres-what-happened-to-the-gros-michel-banana>, <https://bigthink.com/surprising-science/cavendish-bananas-doomed>
-*validée (recoupée par recherche web) · id NA17 · jours 50, 79*
+*validée (recoupée par recherche web) · id NA17 · jours 49, 81*
 
 #### Le chancre coloré qui tue les platanes du canal du Midi serait arrivé en Europe pendant la…
 
@@ -1749,7 +1749,7 @@ Pando, la « forêt » de trembles de l'Utah, est en réalité...
 
 **Explication :** Ce clone de Populus tremuloides couvre 43 ha pour environ 6 000 t estimées. Son unicité génétique fut confirmée en 2008 ; son âge reste très débattu.
 **Source :** <https://www.guinnessworldrecords.com/world-records/66415-most-massive-plant>, <https://www.futura-sciences.com/planete/actualites/terre-cet-etre-vivant-survit-depuis-moins-80-000-ans-117441/>
-*validée (recoupée par recherche web) · id NA20 · jours 56*
+*validée (recoupée par recherche web) · id NA20 · jours 54*
 
 #### Pourquoi les tulipes striées ou flammées qui valaient des fortunes avant le krach de févri… · piège
 
@@ -1762,7 +1762,7 @@ Pourquoi les tulipes striées ou flammées qui valaient des fortunes avant le kr
 
 **Explication :** Ce virus de la mosaïque produisait des stries spectaculaires mais affaiblissait les bulbes : moins de bourgeons et une durée de vie plus courte.
 **Source :** <https://en.wikipedia.org/wiki/Tulip_mania>, <https://penelope.uchicago.edu/encyclopaedia_romana/aconite/semperaugustus.html>
-*validée (recoupée par recherche web) · id NA21 · jours 54, 86*
+*validée (recoupée par recherche web) · id NA21 · jours 50, 87*
 
 #### Quel naturaliste de l'expédition de Bougainville a rapporté le bougainvillier du Brésil et… · piège
 
@@ -1775,7 +1775,7 @@ Quel naturaliste de l'expédition de Bougainville a rapporté le bougainvillier 
 
 **Explication :** Commerson observa la plante au Brésil vers 1767 et la dédia à Bougainville. Son assistante Jeanne Baret, déguisée en homme, fut la première femme à faire le tour du monde.
 **Source :** <https://wonderground.press/culture/bougainvillea-jeanne-baret>, <https://exploration.marinersmuseum.org/subject/jeanne-baret/>
-*validée (recoupée par recherche web) · une seule source, à relire · id NA22 · jours 51, 82*
+*validée (recoupée par recherche web) · une seule source, à relire · id NA22 · jours 53, 83*
 
 #### Un bambou japonais, Phyllostachys bambusoides, fleurit en masse et en même temps, sur des …
 
@@ -4270,7 +4270,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Cyprès hinoki. Cyprès hinoki, utilisé dans les jardins japonais ; croissance lente.
 **Source :** <https://www.mlit.go.jp/tagengo-db/en/H30-00745.html>
-*issue des données de l'appli (non recoupée) · id a64fdfb398 · jours 1*
+*issue des données de l'appli (non recoupée) · id a64fdfb398*
 
 #### De quelle plante parle-t-on ?
 
@@ -5316,7 +5316,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Arum d'Éthiopie. Spathe blanche, plante de bord de bassin ; toxique.
 **Source :** <https://pza.sanbi.org/node/11125>
-*validée (recoupée par recherche web) · corrigée · id 191ce27869 · jours 48*
+*validée (recoupée par recherche web) · corrigée · id 191ce27869 · jours 46*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -5332,7 +5332,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Figuier rampant. Forme des feuilles minuscules sur les murs et de grandes feuilles quand il fructifie.
 **Source :** <https://en.wikipedia.org/wiki/Ficus_pumila_var._awkeotsang>
-*validée (recoupée par recherche web) · id 427531b8cd · jours 3*
+*validée (recoupée par recherche web) · id 427531b8cd · jours 47*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -5348,7 +5348,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Marguerite d'été. Grandes marguerites blanches tout l'été, bonne fleur à couper ; massifs ensoleillés.
 **Source :** <https://en.wikipedia.org/wiki/Leucanthemum_%C3%97_superbum>
-*validée (recoupée par recherche web) · id 7a0eeff2de · jours 6*
+*validée (recoupée par recherche web) · id 7a0eeff2de · jours 51*
 
 #### En 1848, quel botaniste écossais sortit illégalement de Chine des milliers de plants de th…
 
@@ -5361,7 +5361,7 @@ En 1848, quel botaniste écossais sortit illégalement de Chine des milliers de 
 
 **Explication :** Il les expédia vers Darjeeling, dans des caisses de Ward, mais peu survécurent. Les théiers sauvages d'Assam, découverts par Robert Bruce, fournirent l'autre moitié du succès.
 **Source :** <https://undiscoveredscotland.co.uk/usbiography/f/robertfortune.html>, <https://historyofceylontea.com/ceylon-publications/ceylon-tea-articles/robert-fortune-how-the-scottish-botanist-changed-the-fortune-of-darjeeling-with-tea.html>
-*validée (recoupée par recherche web) · id NA28 · jours 9*
+*validée (recoupée par recherche web) · id NA28 · jours 6*
 
 #### À quel botaniste suédois, élève de Linné, le dahlia doit-il son nom, donné en 1791 par l'E…
 
@@ -5374,7 +5374,7 @@ En 1848, quel botaniste écossais sortit illégalement de Chine des milliers de 
 
 **Explication :** Plante mexicaine dont les Aztèques mangeaient les tubercules. Cavanilles espérait qu'ils fussent un légume comme la pomme de terre ; les premiers arrivèrent à Madrid en 1789.
 **Source :** <https://en.wikipedia.org/wiki/Anders_Dahl>, <https://www.etymonline.com/word/dahlia>
-*validée (recoupée par recherche web) · une seule source, à relire · id NA29 · jours 52*
+*validée (recoupée par recherche web) · une seule source, à relire · id NA29 · jours 3*
 
 #### Face à l'orchidée de Madagascar Angraecum sesquipedale, à éperon de 30 cm, Darwin prédit e…
 
@@ -5400,7 +5400,7 @@ Quel âge avait le tissu de fruit sibérien à partir duquel des chercheurs russ
 
 **Explication :** Daté au radiocarbone à 31 800 ans (± 300), le tissu fut cultivé in vitro. La plante n'a pas disparu : Silene stenophylla pousse toujours en Sibérie.
 **Source :** <https://www.sci.news/biology/article00194.html>, <https://www.guinnessworldrecords.com/world-records/102261-oldest-regenerated-plant>
-*validée (recoupée par recherche web) · id NA32 · jours 8, 78*
+*validée (recoupée par recherche web) · id NA32 · jours 9, 77*
 
 #### Combien de feuilles le welwitschia, plante du désert du Namib vieille de plusieurs siècles…
 
@@ -5413,7 +5413,7 @@ Combien de feuilles le welwitschia, plante du désert du Namib vieille de plusie
 
 **Explication :** Ces deux feuilles croissent sans cesse, dépassent 5 m et s'effilochent. Certains individus vivraient plus de 1 500 ans.
 **Source :** <https://conservatory.cals.cornell.edu/plants/welwitschia-mirabilis>, <https://www.futura-sciences.com/planete/actualites/plante-secret-cette-plante-vivre-plus-1000-ans-milieu-aride-92835/>
-*validée (recoupée par recherche web) · id NA34 · jours 7, 81*
+*validée (recoupée par recherche web) · id NA34 · jours 5, 79*
 
 #### En 1914, le rouge des pantalons de l'infanterie française, hérité de la garance, était obt…
 
@@ -5426,7 +5426,7 @@ En 1914, le rouge des pantalons de l'infanterie française, hérité de la garan
 
 **Explication :** Adopté en 1829, le rouge devait soutenir la garance, mais l'alizarine de synthèse avait ruiné les garanciers. Le pantalon fut gardé jusqu'en août 1914.
 **Source :** <https://en.wikipedia.org/wiki/Pantalon_rouge>, <https://www.lechevron.fr/images/articles/publications/lettre/lettre_MSO_014.pdf>
-*validée (recoupée par recherche web) · id NA35 · jours 4*
+*validée (recoupée par recherche web) · id NA35 · jours 43*
 
 #### De quelle plante parle-t-on ?
 
@@ -5440,7 +5440,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Jasmin d'hiver. Fleurs jaunes sans parfum sur tiges vertes, en pleine saison froide.
 **Source :** <https://beanstreesandshrubs.org/browse/jasminum/jasminum-nudiflorum-lindl/>
-*validée (recoupée par recherche web) · corrigée · id b5882d8a6c · jours 44*
+*validée (recoupée par recherche web) · corrigée · id b5882d8a6c · jours 4*
 
 #### De quelle plante parle-t-on ?
 
@@ -5454,7 +5454,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Tilleul argenté. Dessous des feuilles blanc ; supporte mieux la chaleur et la sécheresse.
 **Source :** <https://vkm.no/english/riskassessments/allpublications/isthereaconnectionbetweenlindentreesandbumblebeedeath.4.2375207615dac0245aee1696.html>
-*validée (recoupée par recherche web) · id ccac3103b2 · jours 49*
+*validée (recoupée par recherche web) · id ccac3103b2 · jours 52*
 
 #### De quelle plante parle-t-on ?
 
@@ -5468,7 +5468,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Fuchsia de Magellan. Fleurs rouge pourpre pendantes, rustique et florifère de l'été aux gelées.
 **Source :** <https://en.wikipedia.org/wiki/Fuchsia_magellanica>
-*validée (recoupée par recherche web) · id f3780e0991 · jours 10, 80*
+*validée (recoupée par recherche web) · id f3780e0991 · jours 7, 80*
 
 #### De quelle plante parle-t-on ?
 
@@ -5482,7 +5482,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Groseillier à maquereau. Tiges épineuses et baies velues ou lisses, vertes à rouges.
 **Source :** <https://www.guinnessworldrecords.com/world-records/heaviest-gooseberry/>
-*validée (recoupée par recherche web) · id ff0ead9d93 · jours 5, 83*
+*validée (recoupée par recherche web) · id ff0ead9d93 · jours 8, 78*
 
 #### De quelle plante parle-t-on ?
 
@@ -5496,7 +5496,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Ivraie vivace. La graminée du gazon et de la prairie ; plantule vite installée.
 **Source :** <https://wildlifetrusts.org/node/632>
-*issue des données de l'appli (non recoupée) · id 048a384ed3 · jours 33, 87*
+*issue des données de l'appli (non recoupée) · id 048a384ed3 · jours 11*
 
 #### De quelle plante parle-t-on ?
 
@@ -5510,7 +5510,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Panic érigé. Touffe dressée, nuages de fleurs fins en été, teintes dorées à l'automne.
 **Source :** <https://farm-energy.extension.org/switchgrass-panicum-virgatum-for-biofuel-production/>
-*issue des données de l'appli (non recoupée) · id 07c722201f · jours 61*
+*issue des données de l'appli (non recoupée) · id 07c722201f · jours 55*
 
 #### De quelle plante parle-t-on ?
 
@@ -5524,7 +5524,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Baldingère faux-roseau. Baldingère : graminée de berges, forme panachée très utilisée ; traçante.
 **Source :** <https://www.fs.usda.gov/database/feis/plants/graminoid/phaaru/all.html>
-*issue des données de l'appli (non recoupée) · id 15324abe15 · jours 18, 89*
+*issue des données de l'appli (non recoupée) · id 15324abe15 · jours 18*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -5540,7 +5540,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Herbe aux écouvillons pourpre. Épis roses arqués ; souvent cultivée comme annuelle.
 **Source :** <https://www.legislation.gov.uk/eur/2017/1263/data.html>
-*issue des données de l'appli (non recoupée) · id 1f779d6adc · jours 24*
+*issue des données de l'appli (non recoupée) · id 1f779d6adc · jours 31*
 
 #### De quelle plante parle-t-on ?
 
@@ -5554,7 +5554,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Gaillarde. Floraison chaude rouge et jaune tout l'été, très résistante à la sécheresse ; sol drainé.
 **Source :** <https://powo.science.kew.org/taxon/208360-1>
-*issue des données de l'appli (non recoupée) · id 224d7b0c96 · jours 53*
+*issue des données de l'appli (non recoupée) · id 224d7b0c96 · jours 59*
 
 #### De quelle plante parle-t-on ?
 
@@ -5568,7 +5568,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Sorghastre penché. Plumeaux dorés de 1,5 m, couleur orange à l'automne.
 **Source :** <https://en.wikipedia.org/wiki/List_of_U.S._state_grasses>
-*issue des données de l'appli (non recoupée) · id 2fc1f747f8 · jours 21, 90*
+*issue des données de l'appli (non recoupée) · id 2fc1f747f8 · jours 17*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -5584,7 +5584,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Corynéphore blanchâtre. Petites touffes gris argenté des sables nus et dunes grises ; pionnière des sols très secs.
 **Source :** <https://www.spektrum.de/lexikon/biologie/silbergras/61553>
-*issue des données de l'appli (non recoupée) · id 40d7e3c5fe · jours 34*
+*issue des données de l'appli (non recoupée) · id 40d7e3c5fe · jours 23*
 
 #### De quelle plante parle-t-on ?
 
@@ -5598,7 +5598,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Avoine bleue. Touffe sphérique bleu acier ; épis fins qui dépassent en été.
 **Source :** <https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:404631-1/general-information>
-*issue des données de l'appli (non recoupée) · id 5166e9d101 · jours 36*
+*issue des données de l'appli (non recoupée) · id 5166e9d101 · jours 41*
 
 #### De quelle plante parle-t-on ?
 
@@ -5612,7 +5612,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Bambou doré. Chaumes jaunes, entre-nœuds raccourcis à la base ; rhizomes traçants.
 **Source :** <https://prosea-bamboos.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=95696>
-*issue des données de l'appli (non recoupée) · id 5d4307dbef · jours 22*
+*issue des données de l'appli (non recoupée) · id 5d4307dbef · jours 21, 82*
 
 #### De quelle plante parle-t-on ?
 
@@ -5626,7 +5626,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Canne de Provence. Tiges de 3 à 5 m, vigoureux, utilisée pour les anches d'instruments ; envahissante en bord d'eau.
 **Source :** <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12299341/>
-*issue des données de l'appli (non recoupée) · id 5d5cffc71f · jours 37*
+*issue des données de l'appli (non recoupée) · id 5d5cffc71f · jours 14*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -5642,7 +5642,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Jonc glauque. Tiges bleu-gris, finement striées ; prairies humides et sols tassés.
 **Source :** <https://www.cbnbrest.fr/files/Fiche_ZH_BZH_Juncus_inflexus_20230112.pdf>
-*issue des données de l'appli (non recoupée) · id 5ea6467e76 · jours 42*
+*issue des données de l'appli (non recoupée) · id 5ea6467e76 · jours 40*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -5658,7 +5658,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Herbe à sang japonaise. Le cultivar 'Red Baron' a des feuilles rouges ; rhizomes à surveiller.
 **Source :** <https://plant-directory.ifas.ufl.edu/site/assets/files/1113/impcyl.pdf>
-*issue des données de l'appli (non recoupée) · id 5f1971dad9 · jours 11*
+*issue des données de l'appli (non recoupée) · id 5f1971dad9 · jours 33*
 
 #### De quelle plante parle-t-on ?
 
@@ -5672,7 +5672,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Épicéa de Sitka. Le plus grand des épicéas, planté en forêt dans l'ouest de l'Europe.
 **Source :** <https://oregonencyclopedia.org/articles/sitka_spruce/>
-*issue des données de l'appli (non recoupée) · id 5fdf0fa085 · jours 35*
+*issue des données de l'appli (non recoupée) · id 5fdf0fa085 · jours 27*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -5688,7 +5688,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Marisque. Grande cypéracée (pas un carex) des marais et bords d'étangs, en peuplements denses ; feuilles aux bords coupants.
 **Source :** <https://en.wikipedia.org/wiki/Wicken_Fen>
-*issue des données de l'appli (non recoupée) · id 65d7d4ca27 · jours 43*
+*issue des données de l'appli (non recoupée) · id 65d7d4ca27 · jours 42*
 
 #### De quelle plante parle-t-on ?
 
@@ -5702,7 +5702,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Houlque laineuse. Plante entièrement velue, panicule rosée ; prairies fraîches.
 **Source :** <https://agris.fao.org/search/ar/records/65dfd3bd7c7033e84bef12f7>
-*issue des données de l'appli (non recoupée) · id 6670d39b47 · jours 38*
+*issue des données de l'appli (non recoupée) · id 6670d39b47 · jours 32*
 
 #### De quelle plante parle-t-on ?
 
@@ -5716,7 +5716,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Koelérie glauque. Petite graminée bleue des sables ; touffe dense.
 **Source :** <https://inpn.mnhn.fr/espece/cd_nom/104602/tab/habitats?lg=fr>
-*issue des données de l'appli (non recoupée) · id 68fba636b6 · jours 20*
+*issue des données de l'appli (non recoupée) · id 68fba636b6 · jours 24*
 
 #### De quelle plante parle-t-on ?
 
@@ -5730,7 +5730,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Épicéa de Serbie. Silhouette étroite, branches retombantes et revers bleutés ; supporte la pollution.
 **Source :** <https://www.treesandshrubsonline.org/articles/picea/picea-omorika>
-*issue des données de l'appli (non recoupée) · id 6a6ac1dfce · jours 41*
+*issue des données de l'appli (non recoupée) · id 6a6ac1dfce · jours 35, 85*
 
 #### De quelle plante parle-t-on ?
 
@@ -5744,7 +5744,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Agrostide de Curtis. Graminée fine des landes atlantiques acides ; touffes serrées parmi bruyères et ajoncs.
 **Source :** <https://gd.eppo.int/taxon/AGSSE>
-*issue des données de l'appli (non recoupée) · id 7d982ca195 · jours 19*
+*issue des données de l'appli (non recoupée) · id 7d982ca195 · jours 25, 88*
 
 #### De quelle plante parle-t-on ?
 
@@ -5758,7 +5758,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Molinie bleue. Touffe aérée, panicules violettes et jaune d'or à l'automne ; sols acides.
 **Source :** <https://www.wissen.de//lexikon/pfeifengras>
-*issue des données de l'appli (non recoupée) · id 82dab11c40 · jours 25*
+*issue des données de l'appli (non recoupée) · id 82dab11c40 · jours 16*
 
 #### De quelle plante parle-t-on ?
 
@@ -5786,7 +5786,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Sapin de Nordmann. Le sapin de Noël le plus vendu en Europe, car il perd peu ses aiguilles.
 **Source :** <https://cbw.ge/culture/the-guardian-to-publish-the-article-about-export-of-fir-cones-seeds-from-ambrolauri-to-europe>
-*issue des données de l'appli (non recoupée) · id 8ca890dd16 · jours 45*
+*issue des données de l'appli (non recoupée) · id 8ca890dd16 · jours 48*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -5802,7 +5802,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Hamamélis hybride. Fleurs en rubans jaunes à rouges en plein hiver, puis belles couleurs d'automne.
 **Source :** <https://www.treesandshrubsonline.org/articles/hamamelis/hamamelis-x-intermedia/>
-*issue des données de l'appli (non recoupée) · id 924b6e342b · jours 46*
+*issue des données de l'appli (non recoupée) · id 924b6e342b · jours 45*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -5818,7 +5818,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Spirée bleue. Fleurs bleu vif en fin d'été, très butinées.
 **Source :** <https://www.treesandshrubsonline.org/articles/caryopteris/caryopteris-x-clandonensis/>
-*issue des données de l'appli (non recoupée) · id 929a8b112d · jours 27*
+*issue des données de l'appli (non recoupée) · id 929a8b112d · jours 37*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -5834,7 +5834,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Fromental élevé. Fromental : graminée de prairies de fauche, haut et précoce.
 **Source :** <https://www.delta-intkey.com/grass/www/arrhenat.htm>
-*issue des données de l'appli (non recoupée) · id 96595ed4d9 · jours 39*
+*issue des données de l'appli (non recoupée) · id 96595ed4d9 · jours 29*
 
 #### De quelle plante parle-t-on ?
 
@@ -5848,7 +5848,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Élyme des sables. Graminée glauque qui fixe les dunes par ses rhizomes.
 **Source :** <https://ethnobiology.org/sites/default/files/pdfs/JoE/1-2/Griffin_Rowlett.pdf>
-*issue des données de l'appli (non recoupée) · id 96f62ad412 · jours 28*
+*issue des données de l'appli (non recoupée) · id 96f62ad412 · jours 10*
 
 #### De quelle plante parle-t-on ?
 
@@ -5862,7 +5862,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Mélique uniflore. Graminée légère des sous-bois clairs ; épillets pourpres en grains de riz au printemps.
 **Source :** <https://biosphere.im/uploads/wood-melick-bap-april-2025.pdf>
-*issue des données de l'appli (non recoupée) · id 9f20bb121e · jours 47*
+*issue des données de l'appli (non recoupée) · id 9f20bb121e · jours 44*
 
 #### De quelle plante parle-t-on ?
 
@@ -5876,7 +5876,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Osmanthe de Burkwood. Persistant dense aux fleurs blanches très parfumées en avril, idéal en haie libre.
 **Source :** <https://treesandshrubsonline.org/articles/osmanthus/osmanthus-x-burkwoodii/>
-*issue des données de l'appli (non recoupée) · id ac8240de3f · jours 23*
+*issue des données de l'appli (non recoupée) · id ac8240de3f · jours 12*
 
 #### De quelle plante parle-t-on ?
 
@@ -5890,7 +5890,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Chalef d'Ebbing. Feuilles argentées dessous, persistant, fleurs discrètes très parfumées en automne.
 **Source :** <https://www.havlis.cz/catalogue/elaeagnus-x-ebbingei-e-x-submacrophylla-lannou-eleador-evergreen-silverthorn>
-*issue des données de l'appli (non recoupée) · id aca9b82386 · jours 30*
+*issue des données de l'appli (non recoupée) · id aca9b82386 · jours 34, 86*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -5906,7 +5906,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Sporobole. Touffe fine dont les fleurs sentent le pop-corn ou la coriandre.
 **Source :** <https://cornellbotanicgardens.org/?p=16921>
-*issue des données de l'appli (non recoupée) · id b310367ecd · jours 12, 85*
+*issue des données de l'appli (non recoupée) · id b310367ecd · jours 19*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -5922,7 +5922,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Chiendent rampant. Graminée à longs rhizomes qui envahit les cultures ; difficile à éliminer.
 **Source :** <https://www.ema.europa.eu/en/documents/herbal-report/assessment-report-agropyron-repens-l-p-beauv-rhizoma-revision-1_en.pdf>
-*issue des données de l'appli (non recoupée) · id bbdbdaa7a7 · jours 14*
+*issue des données de l'appli (non recoupée) · id bbdbdaa7a7 · jours 26, 84*
 
 #### De quelle plante parle-t-on ?
 
@@ -5936,7 +5936,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Flouve odorante. Elle donne l'odeur du foin coupé, grâce à la coumarine.
 **Source :** <https://oro.open.ac.uk/2293>
-*issue des données de l'appli (non recoupée) · id bed7e2a61d · jours 29*
+*issue des données de l'appli (non recoupée) · id bed7e2a61d · jours 20*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -5952,7 +5952,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Groseillier à fleurs. Grappes roses dès le début du printemps ; arbuste très rustique.
 **Source :** <https://www.treesandshrubsonline.org/articles/ribes/ribes-sanguineum/>
-*issue des données de l'appli (non recoupée) · id c184628173 · jours 13*
+*issue des données de l'appli (non recoupée) · id c184628173 · jours 39*
 
 #### De quelle plante parle-t-on ?
 
@@ -5966,7 +5966,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Abélia. Fleurit de juillet aux gelées, calices rosés qui restent après la floraison.
 **Source :** <https://www.treesandshrubsonline.org/articles/abelia/abelia-x-grandiflora/>
-*issue des données de l'appli (non recoupée) · id c1a19a326e · jours 26*
+*issue des données de l'appli (non recoupée) · id c1a19a326e · jours 30*
 
 #### De quelle plante parle-t-on ?
 
@@ -5980,7 +5980,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Cyprès de Leyland. Croissance très rapide, d'où des haies qui deviennent vite très hautes.
 **Source :** <https://www.forestresearch.gov.uk/?p=131567>
-*issue des données de l'appli (non recoupée) · id d207de647e · jours 32, 84*
+*issue des données de l'appli (non recoupée) · id d207de647e · jours 38*
 
 #### De quelle plante parle-t-on ?
 
@@ -5994,7 +5994,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Calamagrostis de Karl Foerster. Calamagrostis 'Karl Foerster' : port dressé très régulier, épis plumeux dès juin.
 **Source :** <https://plants.ces.ncsu.edu/plants/calamagrostis-x-acutiflora-karl-foerster/common-name/feather-reed-grass-karl-foerster/>
-*issue des données de l'appli (non recoupée) · id e161c82827 · jours 57*
+*issue des données de l'appli (non recoupée) · id e161c82827 · jours 63*
 
 #### De quelle plante parle-t-on ?
 
@@ -6008,7 +6008,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Montbrétia. Épis orange en été, souvent naturalisé le long des chemins.
 **Source :** <https://en.wikipedia.org/wiki/Crocosmia_%C3%97_crocosmiiflora>
-*issue des données de l'appli (non recoupée) · id ea177a7e7f · jours 40*
+*issue des données de l'appli (non recoupée) · id ea177a7e7f · jours 22, 89*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -6024,7 +6024,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Népéta de Faassen. Épis bleu lavande, odeur proche de la menthe ; attire les chats.
 **Source :** <https://plants.ces.ncsu.edu/plants/nepeta-x-faassenii/common-name/blue-catmint/>
-*issue des données de l'appli (non recoupée) · id f3e637f918 · jours 17*
+*issue des données de l'appli (non recoupée) · id f3e637f918 · jours 36*
 
 #### Laquelle de ces plantes cache cette histoire ?
 
@@ -6040,7 +6040,7 @@ Laquelle de ces plantes cache cette histoire ?
 
 **Explication :** C'est : Oyat. La graminée qui fixe les dunes littorales ; touffes glauques et épis denses sur le sable.
 **Source :** <https://pure.knaw.nl/portal/en/publications/harmful-soil-organisms-in-coastal-foredunes-involved-in-degenerat-2/>
-*issue des données de l'appli (non recoupée) · id f88c122963 · jours 16, 88*
+*issue des données de l'appli (non recoupée) · id f88c122963 · jours 28, 90*
 
 #### De quelle plante parle-t-on ?
 
@@ -6054,7 +6054,7 @@ De quelle plante parle-t-on ?
 
 **Explication :** C'est : Barbon à balais. Touffe bleutée virant au cuivre à l'automne, graines duveteuses.
 **Source :** <https://en.wikipedia.org/wiki/List_of_U.S._state_grasses>
-*issue des données de l'appli (non recoupée) · id f8da36a20d · jours 31*
+*issue des données de l'appli (non recoupée) · id f8da36a20d · jours 13*
 
 ## Familles
 
@@ -6071,7 +6071,7 @@ Hortensia : à quelle famille appartient cette plante ?
 
 **Explication :** Hortensia fait partie des Hydrangéacées. Traits fréquents dans la famille : feuilles opposées, grandes inflorescences (hortensia) ou fleurs blanches (seringat, deutzia).
 **Source :** <https://franco.wiki/fr/Hydrangea.html>, <https://www.gbif.org/taxon/B82>
-*validée (recoupée par recherche web) · id 57b5401dbf · jours 68*
+*validée (recoupée par recherche web) · id 57b5401dbf · jours 69*
 
 #### Échinacée pourpre : à quelle famille appartient cette plante ?
 
@@ -6084,7 +6084,7 @@ Hortensia : à quelle famille appartient cette plante ?
 
 **Explication :** Échinacée pourpre fait partie des Astéracées. Traits fréquents dans la famille : la « fleur » est un capitule de petits fleurons entourés de bractées.
 **Source :** <https://en.wikipedia.org/wiki/Echinacea_purpurea>
-*validée (recoupée par recherche web) · id 5deb6c01e4 · jours 11*
+*validée (recoupée par recherche web) · id 5deb6c01e4 · jours 19*
 
 #### Églantier : à quelle famille appartient cette plante ?
 
@@ -6097,7 +6097,7 @@ Hortensia : à quelle famille appartient cette plante ?
 
 **Explication :** Églantier fait partie des Rosacées. Traits fréquents dans la famille : 5 pétales libres autour de nombreuses étamines, feuilles alternes à stipules.
 **Source :** <https://dictionnaire-academie.fr/article/A9R2949>
-*validée (recoupée par recherche web) · id 676d78cbbe · jours 9*
+*validée (recoupée par recherche web) · id 676d78cbbe · jours 23*
 
 #### L'olivier appartient à la famille…
 
@@ -6110,7 +6110,7 @@ L'olivier appartient à la famille…
 
 **Explication :** Le nom de la famille vient de l'olivier (Olea). Elle compte aussi le frêne, le lilas, le jasmin et le forsythia.
 **Source :** <https://franco.wiki/fr/Oleaceae.html>, <https://www.techno-science.net/fr/definitions/oleaceae>
-*validée (recoupée par recherche web) · id E11 · jours 90*
+*validée (recoupée par recherche web) · id E11*
 
 #### Les botanistes disaient autrefois « Ombellifères » pour la famille de la carotte, du persi…
 
@@ -6123,7 +6123,7 @@ Les botanistes disaient autrefois « Ombellifères » pour la famille de la caro
 
 **Explication :** Nom tiré du genre Apium (le céleri). Repères : fleurs en ombelles, tiges creuses, fruits doubles. Famille qui compte aussi des plantes mortelles, comme la grande ciguë.
 **Source :** <https://areq.net/lang/fr/Apiaceae.html>, <https://fr.vikidia.org/wiki/Apiac%C3%A9es>
-*validée (recoupée par recherche web) · id NF00 · jours 63*
+*validée (recoupée par recherche web) · id NF00 · jours 67*
 
 #### Les anciennes « Crucifères » (chou, radis, moutarde) portent aujourd'hui le nom de…
 
@@ -6136,7 +6136,7 @@ Les anciennes « Crucifères » (chou, radis, moutarde) portent aujourd'hui le n
 
 **Explication :** Nom tiré de Brassica, le chou. Les fleurs ont quatre pétales disposés en croix, d'où l'ancien nom. Famille du colza, du raifort, du wasabi et de la roquette.
 **Source :** <https://fr.vikidia.org/wiki/Brassicac%C3%A9es>, <https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8357164/brassicacees>
-*validée (recoupée par recherche web) · id NF01 · jours 23*
+*validée (recoupée par recherche web) · id NF01 · jours 11*
 
 #### L'artichaut, la laitue et le pissenlit sont réunis dans une même famille. Laquelle ?
 
@@ -6149,7 +6149,7 @@ L'artichaut, la laitue et le pissenlit sont réunis dans une même famille. Laqu
 
 **Explication :** Ce qu'on prend pour une fleur est un capitule de nombreuses petites fleurs. Autres repères : étamines soudées par les anthères, fruit à aigrette. Ancien nom : Composées.
 **Source :** <https://www.techno-science.net/fr/definitions/asteraceae>, <https://fr.vikidia.org/wiki/Ast%C3%A9rac%C3%A9es>
-*validée (recoupée par recherche web) · id NF02 · jours 53*
+*validée (recoupée par recherche web) · id NF02 · jours 52*
 
 #### Le lamier blanc, surnommé « ortie blanche », ne pique pas. À quelle famille appartient-il …
 
@@ -6162,7 +6162,7 @@ Le lamier blanc, surnommé « ortie blanche », ne pique pas. À quelle famille 
 
 **Explication :** Tige carrée, feuilles opposées décussées et fleurs bilabiées en verticilles sont typiques des Lamiacées. L'ortie vraie (Urtica) est d'une tout autre famille.
 **Source :** <https://www.techno-science.net/fr/definitions/ortie-blanche>
-*validée (recoupée par recherche web) · id NF03 · jours 76*
+*validée (recoupée par recherche web) · id NF03 · jours 75*
 
 #### Pomme de terre, tabac et belladone sont réunis dans la même famille. Laquelle ?
 
@@ -6188,7 +6188,7 @@ La cacahuète, dont le fruit mûrit sous terre, appartient à la famille des…
 
 **Explication :** Le fruit est une gousse : la tige florale se courbe vers le sol et enfouit l'ovaire (gynophore). Famille des lentilles et des pois chiches, aussi appelée légumineuses.
 **Source :** <https://fr.vikidia.org/wiki/Arachide>, <https://www.compagnie-des-sens.fr/cacahuetes/>
-*validée (recoupée par recherche web) · id NF05 · jours 37*
+*validée (recoupée par recherche web) · id NF05 · jours 18*
 
 #### Le noisetier est de la même famille que…
 
@@ -6227,7 +6227,7 @@ La joubarbe et l'orpin, aux feuilles charnues qui retiennent l'eau, sont cousins
 
 **Explication :** Le genre Sempervivum (joubarbe) et le genre Sedum (orpin) sont des Crassulacées. Rosettes charnues, très résistantes à la sécheresse et au froid.
 **Source :** <https://www.futura-sciences.com/maison/definitions/jardinage-joubarbe-17385/>, <https://franco.wiki/fr/Joubarbe.html>
-*validée (recoupée par recherche web) · id NF09 · jours 52*
+*validée (recoupée par recherche web) · id NF09 · jours 36*
 
 #### La pensée et la violette odorante appartiennent à la même famille. Laquelle ?
 
@@ -6240,7 +6240,7 @@ La pensée et la violette odorante appartiennent à la même famille. Laquelle ?
 
 **Explication :** Fleur irrégulière à cinq pétales, dont l'inférieur forme un éperon. Violette : deux pétales vers le haut, trois vers le bas ; pensée : quatre vers le haut, un vers le bas.
 **Source :** <https://www.techno-science.net/fr/definitions/violaceae>, <https://www.jardiner-malin.fr/fiche/pensee-saison.html>
-*validée (recoupée par recherche web) · id NF10 · jours 7*
+*validée (recoupée par recherche web) · id NF10 · jours 22*
 
 #### Le noyer commun appartient à la famille des…
 
@@ -6253,7 +6253,7 @@ Le noyer commun appartient à la famille des…
 
 **Explication :** Fleurs mâles en chatons allongés, fleurs femelles groupées par 2 à 4 sur le même arbre. Le pacanier, d'Amérique, appartient à la même famille.
 **Source :** <https://www.techno-science.net/fr/definitions/noyer-commun>, <https://areq.net/lang/fr/Noyer.html>
-*validée (recoupée par recherche web) · id NF11 · jours 8*
+*validée (recoupée par recherche web) · id NF11 · jours 57*
 
 #### Le laurier-sauce, le cannelier et l'avocatier sont réunis dans la famille des…
 
@@ -6266,7 +6266,7 @@ Le laurier-sauce, le cannelier et l'avocatier sont réunis dans la famille des�
 
 **Explication :** Famille qui compte plus de 2 000 espèces tropicales et méditerranéennes à feuilles aromatiques et coriaces. Le laurier-sauce en est le représentant européen.
 **Source :** <https://www.techno-science.net/fr/definitions/lauraceae>, <https://www.techno-science.net/fr/definitions/laurier-sauce>
-*validée (recoupée par recherche web) · id NF13 · jours 72*
+*validée (recoupée par recherche web) · id NF13 · jours 70*
 
 #### Laquelle de ces plantes appartient à la famille des Lamiacées ?
 
@@ -6307,7 +6307,7 @@ Buisson ardent : à quelle famille appartient cette plante ?
 
 **Explication :** Buisson ardent fait partie des Rosacées. Traits fréquents dans la famille : 5 pétales libres autour de nombreuses étamines, feuilles alternes à stipules.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 0aa9122771 · jours 50*
+*issue des données de l'appli (non recoupée) · id 0aa9122771 · jours 40*
 
 #### Hellébore d'Orient : à quelle famille appartient cette plante ?
 
@@ -6320,7 +6320,7 @@ Hellébore d'Orient : à quelle famille appartient cette plante ?
 
 **Explication :** Hellébore d'Orient fait partie des Renonculacées. Traits fréquents dans la famille : nombreuses étamines et pistils libres, feuilles découpées, sève acre.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 0ca7707751 · jours 43*
+*issue des données de l'appli (non recoupée) · id 0ca7707751 · jours 49*
 
 #### Cotonéaster horizontal : à quelle famille appartient cette plante ?
 
@@ -6333,7 +6333,7 @@ Cotonéaster horizontal : à quelle famille appartient cette plante ?
 
 **Explication :** Cotonéaster horizontal fait partie des Rosacées. Traits fréquents dans la famille : 5 pétales libres autour de nombreuses étamines, feuilles alternes à stipules.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 136aade4bd · jours 65*
+*issue des données de l'appli (non recoupée) · id 136aade4bd · jours 71*
 
 #### Saule blanc : à quelle famille appartient cette plante ?
 
@@ -6346,7 +6346,7 @@ Saule blanc : à quelle famille appartient cette plante ?
 
 **Explication :** Saule blanc fait partie des Salicacées. Traits fréquents dans la famille : chatons dressés (saule) ou pendants (peuplier), arbres de berge.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 14a924e4ae*
+*issue des données de l'appli (non recoupée) · id 14a924e4ae · jours 83*
 
 #### Géranium sanguin : à quelle famille appartient cette plante ?
 
@@ -6372,7 +6372,7 @@ Bouleau verruqueux : à quelle famille appartient cette plante ?
 
 **Explication :** Bouleau verruqueux fait partie des Bétulacées. Traits fréquents dans la famille : chatons et feuille doublement dentée à nervures marquées.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 42439edcd3 · jours 67*
+*issue des données de l'appli (non recoupée) · id 42439edcd3 · jours 74*
 
 #### Euphorbe des garrigues : à quelle famille appartient cette plante ?
 
@@ -6398,7 +6398,7 @@ Févier d'Amérique : à quelle famille appartient cette plante ?
 
 **Explication :** Févier d'Amérique fait partie des Fabacées. Traits fréquents dans la famille : fleur papilionacée et fruit en gousse.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 46f65a41be · jours 39*
+*issue des données de l'appli (non recoupée) · id 46f65a41be · jours 38*
 
 #### Châtaignier : à quelle famille appartient cette plante ?
 
@@ -6424,7 +6424,7 @@ Sapin pectiné : à quelle famille appartient cette plante ?
 
 **Explication :** Sapin pectiné fait partie des Pinacées. Traits fréquents dans la famille : aiguilles en touffe, en rosette ou par 2 à 5 dans une gaine, cônes ligneux.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 6ccf8d1ea5 · jours 77*
+*issue des données de l'appli (non recoupée) · id 6ccf8d1ea5 · jours 87*
 
 #### Cyprès de Provence : à quelle famille appartient cette plante ?
 
@@ -6437,7 +6437,7 @@ Cyprès de Provence : à quelle famille appartient cette plante ?
 
 **Explication :** Cyprès de Provence fait partie des Cupressacées. Traits fréquents dans la famille : feuillage en écailles imbriquées, ou aiguilles piquantes par 3 (genévrier).
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 849a7aac91 · jours 78*
+*issue des données de l'appli (non recoupée) · id 849a7aac91 · jours 80*
 
 #### Spirée du Japon : à quelle famille appartient cette plante ?
 
@@ -6450,7 +6450,7 @@ Spirée du Japon : à quelle famille appartient cette plante ?
 
 **Explication :** Spirée du Japon fait partie des Rosacées. Traits fréquents dans la famille : 5 pétales libres autour de nombreuses étamines, feuilles alternes à stipules.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 8844c7f251 · jours 40*
+*issue des données de l'appli (non recoupée) · id 8844c7f251 · jours 37*
 
 #### Laquelle de ces plantes appartient à la famille des Oléacées ?
 
@@ -6480,7 +6480,7 @@ Laquelle de ces plantes appartient à la famille des Lamiacées ?
 
 **Explication :** Romarin fait partie des Lamiacées. Traits fréquents dans la famille : tige carrée et feuilles opposées croisées.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id a1620e5a99 · jours 38*
+*issue des données de l'appli (non recoupée) · id a1620e5a99 · jours 50*
 
 #### Pin sylvestre : à quelle famille appartient cette plante ?
 
@@ -6506,7 +6506,7 @@ Séquoia géant : à quelle famille appartient cette plante ?
 
 **Explication :** Séquoia géant fait partie des Cupressacées. Traits fréquents dans la famille : feuillage en écailles imbriquées, ou aiguilles piquantes par 3 (genévrier).
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id b8934685bb · jours 74*
+*issue des données de l'appli (non recoupée) · id b8934685bb · jours 78*
 
 #### Alchémille molle : à quelle famille appartient cette plante ?
 
@@ -6547,7 +6547,7 @@ Orme champêtre : à quelle famille appartient cette plante ?
 
 **Explication :** Orme champêtre fait partie des Ulmacées. Traits fréquents dans la famille : base de feuille asymétrique, bord doublement denté, fruit ailé.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id dd4dd63819 · jours 57*
+*issue des données de l'appli (non recoupée) · id dd4dd63819 · jours 60*
 
 #### Laquelle de ces plantes appartient à la famille des Rosacées ?
 
@@ -6562,7 +6562,7 @@ Laquelle de ces plantes appartient à la famille des Rosacées ?
 
 **Explication :** Merisier fait partie des Rosacées. Traits fréquents dans la famille : 5 pétales libres autour de nombreuses étamines, feuilles alternes à stipules.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id e74fcd3319 · jours 46*
+*issue des données de l'appli (non recoupée) · id e74fcd3319 · jours 41*
 
 #### Laquelle de ces plantes appartient à la famille des Astéracées ?
 
@@ -6577,7 +6577,7 @@ Laquelle de ces plantes appartient à la famille des Astéracées ?
 
 **Explication :** Pâquerette fait partie des Astéracées. Traits fréquents dans la famille : la « fleur » est un capitule de petits fleurons entourés de bractées.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id e7a387cfb2 · jours 41*
+*issue des données de l'appli (non recoupée) · id e7a387cfb2 · jours 46*
 
 #### Épicéa commun : à quelle famille appartient cette plante ?
 
@@ -6590,7 +6590,7 @@ Laquelle de ces plantes appartient à la famille des Astéracées ?
 
 **Explication :** Épicéa commun fait partie des Pinacées. Traits fréquents dans la famille : aiguilles en touffe, en rosette ou par 2 à 5 dans une gaine, cônes ligneux.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id ea4d4669a4 · jours 51*
+*issue des données de l'appli (non recoupée) · id ea4d4669a4 · jours 39*
 
 #### Laquelle de ces plantes appartient à la famille des Fabacées ?
 
@@ -6620,7 +6620,7 @@ Laquelle de ces plantes appartient à la famille des Rosacées ?
 
 **Explication :** Aubépine fait partie des Rosacées. Traits fréquents dans la famille : 5 pétales libres autour de nombreuses étamines, feuilles alternes à stipules.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id ecf21dc8b0 · jours 70*
+*issue des données de l'appli (non recoupée) · id ecf21dc8b0 · jours 76*
 
 #### Mélèze d'Europe : à quelle famille appartient cette plante ?
 
@@ -6633,7 +6633,7 @@ Mélèze d'Europe : à quelle famille appartient cette plante ?
 
 **Explication :** Mélèze d'Europe fait partie des Pinacées. Traits fréquents dans la famille : aiguilles en touffe, en rosette ou par 2 à 5 dans une gaine, cônes ligneux.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id f3af1a16c7 · jours 56*
+*issue des données de l'appli (non recoupée) · id f3af1a16c7 · jours 62*
 
 ### Familles · intermédiaire (135)
 
@@ -6648,7 +6648,7 @@ Forsythia : à quelle famille appartient cette plante ?
 
 **Explication :** Forsythia fait partie des Oléacées. Traits fréquents dans la famille : feuilles opposées, fleur à 4 lobes et 2 étamines seulement.
 **Source :** <https://franco.wiki/fr/Oleaceae.html>, <https://www.techno-science.net/fr/definitions/oleaceae>
-*validée (recoupée par recherche web) · id 29b6e315ea · jours 2, 49*
+*validée (recoupée par recherche web) · id 29b6e315ea · jours 1, 47*
 
 #### Laquelle de ces plantes appartient à la famille des Bétulacées ?
 
@@ -6676,7 +6676,7 @@ Le sarrasin, dont on fait des galettes, n'est pas une graminée. De quelle plant
 
 **Explication :** Polygonacées : sarrasin, rhubarbe, oseille et renouées. Repère : une fine membrane, l'ochréa, entoure chaque nœud de la tige.
 **Source :** <https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/26556862/polygonacees>, <https://fr.vikidia.org/wiki/Rhubarbe>
-*validée (recoupée par recherche web) · id NF07 · jours 4, 59*
+*validée (recoupée par recherche web) · id NF07 · jours 4, 55*
 
 #### Malgré son nom, la rose trémière n'est pas une rose. Avec quelle plante partage-t-elle sa … · piège
 
@@ -6689,7 +6689,7 @@ Malgré son nom, la rose trémière n'est pas une rose. Avec quelle plante parta
 
 **Explication :** Malvacées : rose trémière, mauves, hibiscus et cotonnier. Son nom vient de « rose d'outre-mer » : elle n'est pas originaire de France.
 **Source :** <https://www.futura-sciences.com/planete/definitions/botanique-rose-tremiere-20658/>, <https://www.lalanguefrancaise.com/dictionnaire/definition/rose-tremiere>
-*validée (recoupée par recherche web) · id NF12 · jours 33, 75*
+*validée (recoupée par recherche web) · id NF12 · jours 2, 77*
 
 #### Les myrtilles et les airelles font partie de quelle famille ? · piège
 
@@ -6702,7 +6702,7 @@ Les myrtilles et les airelles font partie de quelle famille ?
 
 **Explication :** Pas des Myrtacées malgré le nom : cousines de la bruyère, du rhododendron et de l'arbousier. Plantes acidophiles de sols pauvres et acides.
 **Source :** <https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/26502249/ericacees>, <https://fr.vikidia.org/wiki/Myrtille>
-*validée (recoupée par recherche web) · id NF14 · jours 17, 71*
+*validée (recoupée par recherche web) · id NF14 · jours 13, 81*
 
 #### Dans la classification actuelle (APG), le cacaoyer partage sa famille avec… · piège
 
@@ -6715,7 +6715,7 @@ Dans la classification actuelle (APG), le cacaoyer partage sa famille avec…
 
 **Explication :** Les Malvacées (APG) ont absorbé les Sterculiacées, Tiliacées et Bombacacées : cacaoyer, tilleul, hibiscus et cotonnier y cohabitent. Le caféier est une Rubiacée.
 **Source :** <https://species.wikimedia.org/wiki/Theobroma_cacao>, <https://en.wikipedia.org/wiki/Malvales>
-*validée (recoupée par recherche web) · id NF15 · jours 13, 69*
+*validée (recoupée par recherche web) · id NF15 · jours 21, 65*
 
 #### Quelles plantes de nos haies et prairies sont de la famille du caféier ? · piège
 
@@ -6728,7 +6728,7 @@ Quelles plantes de nos haies et prairies sont de la famille du caféier ?
 
 **Explication :** Rubiacées : famille surtout tropicale et arbustive, mais presque toutes herbacées en France (gaillets, garance des teinturiers). Elle doit son nom au genre Rubia.
 **Source :** <https://areq.net/lang/fr/Rubiaceae.html>, <https://www.universalis.fr/encyclopedie/rubiales/2-les-rubiacees/>
-*validée (recoupée par recherche web) · id NF16 · jours 22, 62*
+*validée (recoupée par recherche web) · id NF16 · jours 5, 59*
 
 #### La patate douce n'est pas une cousine de la pomme de terre. De quelle plante est-elle proc… · piège
 
@@ -6741,7 +6741,7 @@ La patate douce n'est pas une cousine de la pomme de terre. De quelle plante est
 
 **Explication :** Convolvulacées, famille des liserons. Elle est dans le même ordre (Solanales) que les Solanacées, d'où la confusion, mais pas dans la même famille.
 **Source :** <https://inpn.mnhn.fr/espece/cd_nom/445573>, <https://www.futura-sciences.com/planete/definitions/botanique-patate-douce-19965/>
-*validée (recoupée par recherche web) · id NF17 · jours 18*
+*validée (recoupée par recherche web) · id NF17 · jours 12, 79*
 
 #### La capucine a des feuilles et fleurs au goût poivré de cresson. Dans quelle famille est-el… · piège
 
@@ -6754,7 +6754,7 @@ La capucine a des feuilles et fleurs au goût poivré de cresson. Dans quelle fa
 
 **Explication :** Famille à part, de l'ordre des Brassicales mais distincte des Brassicacées (cresson, chou). Plante d'origine péruvienne, nom dû à l'éperon en forme de capuchon.
 **Source :** <https://www.futura-sciences.com/planete/definitions/fleurs-capucine-19518/>, <https://www.techno-science.net/fr/definitions/tropaeolaceae>
-*validée (recoupée par recherche web) · id NF18 · jours 15, 61*
+*validée (recoupée par recherche web) · id NF18 · jours 7, 53*
 
 #### La vigne vierge, qui rougit à l'automne sur les murs, est de la même famille que… · piège
 
@@ -6767,7 +6767,7 @@ La vigne vierge, qui rougit à l'automne sur les murs, est de la même famille q
 
 **Explication :** Vitacées : Parthenocissus et vigne à vin, mais baies non comestibles chez la vigne vierge. Son autre nom « lierre vierge » prête à confusion : le lierre est un Araliacée.
 **Source :** <https://www.rtbf.be/article/les-conseils-de-virginie-pour-une-belle-vigne-vierge-11437340>, <https://www.monherbier.com/site/genres/32531>
-*validée (recoupée par recherche web) · id NF19 · jours 19, 73*
+*validée (recoupée par recherche web) · id NF19 · jours 14, 68*
 
 #### Le sorbier des oiseleurs a des feuilles composées comme le frêne. À quelle famille apparti… · piège
 
@@ -6780,7 +6780,7 @@ Le sorbier des oiseleurs a des feuilles composées comme le frêne. À quelle fa
 
 **Explication :** Surprenant, mais ses fleurs blanches en corymbes trahissent une Rosacée. Les baies crues sont toxiques ; cuites ou fermentées, elles servent aux gelées.
 **Source :** <https://www.techno-science.net/fr/definitions/sorbus>, <https://www.lalanguefrancaise.com/dictionnaire/definition/sorbier-des-oiseleurs>
-*validée (recoupée par recherche web) · id NF20 · jours 6, 66*
+*validée (recoupée par recherche web) · id NF20 · jours 8, 64*
 
 #### La pivoine, jadis rangée chez les Renonculacées, est aujourd'hui placée… · piège
 
@@ -6793,7 +6793,7 @@ La pivoine, jadis rangée chez les Renonculacées, est aujourd'hui placée…
 
 **Explication :** Paeoniacées : une famille d'une quarantaine d'espèces, toutes du genre Paeonia. Ses nombreuses différences avec les renoncules ont justifié la séparation.
 **Source :** <https://www.jardiner-malin.fr/fiche/pivoine.html>, <https://www.techno-science.net/fr/definitions/pivoine>
-*validée (recoupée par recherche web) · id NF21 · jours 3, 60*
+*validée (recoupée par recherche web) · id NF21 · jours 3, 56*
 
 #### La rose de Noël (hellébore) n'a rien d'un rosier. À quelle famille appartient-elle ? · piège
 
@@ -6806,7 +6806,7 @@ La rose de Noël (hellébore) n'a rien d'un rosier. À quelle famille appartient
 
 **Explication :** Famille des renoncules et des clématites. L'hellébore est très toxique, comme beaucoup de ses cousines renonculacées. Le nom « rose » ne reflète aucune parenté.
 **Source :** <https://www.larousse.fr/dictionnaires/francais/ellebore>, <https://www.jardinbotaniquedenancy.eu/fileadmin/CJBN/Plante_du_mois/03.25.Helleborus_1.pdf>
-*validée (recoupée par recherche web) · id NF22 · jours 20, 86*
+*validée (recoupée par recherche web) · id NF22 · jours 20, 73*
 
 #### Le marronnier d'Inde est aujourd'hui rangé dans la même famille que… · piège
 
@@ -6819,7 +6819,7 @@ Le marronnier d'Inde est aujourd'hui rangé dans la même famille que…
 
 **Explication :** Sapindacées (APG) : érables et marronniers, jadis dans des familles distinctes (Aceracées, Hippocastanacées). Les « marrons » du châtaignier sont une Fagacée.
 **Source :** <https://www.techno-science.net/fr/definitions/sapindaceae>, <https://eflorasys.univ-lorraine.fr/index.php/en/species/view/80334>
-*validée (recoupée par recherche web) · id NF23 · jours 14*
+*validée (recoupée par recherche web) · id NF23 · jours 17, 66*
 
 #### La pervenche, couvre-sol à fleurs bleues, est une proche cousine de… · piège
 
@@ -6832,7 +6832,7 @@ La pervenche, couvre-sol à fleurs bleues, est une proche cousine de…
 
 **Explication :** Apocynacées : plantes souvent toxiques, riches en alcaloïdes et en hétérosides cardiotoniques. Le myosotis bleu est une Boraginacée.
 **Source :** <https://areq.net/lang/fr/Apocynaceae.html>, <https://www.randozone.com/flore/petite-pervenche/>
-*validée (recoupée par recherche web) · id NF24 · jours 16, 79*
+*validée (recoupée par recherche web) · id NF24 · jours 16*
 
 #### L'ail et les autres Allium, longtemps classés chez les Liliacées, relèvent aujourd'hui de …
 
@@ -6858,7 +6858,7 @@ Les laîches (carex) ressemblent à des graminées mais ont souvent une tige tri
 
 **Explication :** Tige pleine, souvent triangulaire, feuilles coupantes ; graminées : tige ronde et creuse. Critère utile mais non infaillible. Carex vient du grec « couper ».
 **Source :** <https://www.techno-science.net/fr/definitions/cyperaceae>, <https://www.plantpref.co.uk/carex.html>
-*validée (recoupée par recherche web) · id NF26 · jours 5, 55*
+*validée (recoupée par recherche web) · id NF26 · jours 9, 51*
 
 #### Le lierre grimpant est un cousin de… · piège
 
@@ -6871,7 +6871,7 @@ Le lierre grimpant est un cousin de…
 
 **Explication :** Araliacées, famille surtout de lianes tropicales. Le lierre fleurit en septembre-octobre ; ce n'est pas un parent de la vigne vierge (Vitacées).
 **Source :** <https://www.futura-sciences.com/planete/definitions/botanique-lierre-10291/>, <https://fr.vikidia.org/wiki/Lierre>
-*validée (recoupée par recherche web) · id NF27 · jours 12, 82*
+*validée (recoupée par recherche web) · id NF27 · jours 6, 72*
 
 #### Tilleul à grandes feuilles : à quelle famille appartient cette plante ? · piège
 
@@ -6884,7 +6884,7 @@ Tilleul à grandes feuilles : à quelle famille appartient cette plante ?
 
 **Explication :** Tilleul à grandes feuilles fait partie des Malvacées. Traits fréquents dans la famille : étamines soudées en colonne, feuilles alternes palmées ou en cœur.
 **Source :** <https://en.wikipedia.org/wiki/Tilioideae>, <https://plantaedb.com/taxa/phylum/angiosperms/order/malvales/family/malvaceae/genus/tilia>
-*validée (recoupée par recherche web) · id ab9c412508 · jours 21, 64*
+*validée (recoupée par recherche web) · id ab9c412508 · jours 15, 61*
 
 #### Sophora du Japon : à quelle famille appartient cette plante ?
 
@@ -8623,7 +8623,7 @@ Laquelle de ces plantes appartient à la famille des Fabacées ?
 
 **Explication :** Chicot du Canada fait partie des Fabacées. Traits fréquents dans la famille : fleur papilionacée et fruit en gousse.
 **Source :** <https://www.saint-cyr-sur-loire.com/content/download/16741/262586/version/2/file/FICHES_BOTANIQUES_Chicot-du-Canada.pdf>
-*validée (recoupée par recherche web) · id 6d01562d16 · jours 25, 80*
+*validée (recoupée par recherche web) · id 6d01562d16 · jours 26, 85*
 
 #### Laquelle de ces plantes appartient à la famille des Lamiacées ?
 
@@ -8638,7 +8638,7 @@ Laquelle de ces plantes appartient à la famille des Lamiacées ?
 
 **Explication :** Romarin d'Australie fait partie des Lamiacées. Traits fréquents dans la famille : tige carrée et feuilles opposées croisées.
 **Source :** <https://gd.eppo.int/taxon/WESRO>, <https://en.wikipedia.org/wiki/Westringia_fruticosa>
-*validée (recoupée par recherche web) · id 770f05969a · jours 24, 81*
+*validée (recoupée par recherche web) · id 770f05969a · jours 25, 82*
 
 #### Le gui, hémiparasite des peupliers et des pommiers, est de la même famille que…
 
@@ -8651,7 +8651,7 @@ Le gui, hémiparasite des peupliers et des pommiers, est de la même famille que
 
 **Explication :** Santalacées (APG), qui absorbent les anciennes Viscacées : le gui est un parent du bois de santal. Une base française cite encore Viscacées.
 **Source :** <https://www.techno-science.net/fr/definitions/santalaceae>, <https://plantaedb.com/taxa/phylum/angiosperms/order/santalales/family/santalaceae/genus/viscum>
-*validée (recoupée par recherche web) · id NF28 · jours 47*
+*validée (recoupée par recherche web) · id NF28 · jours 63*
 
 #### Le micocoulier de Provence, longtemps rangé chez les ormes, est aujourd'hui un cousin…
 
@@ -8664,7 +8664,7 @@ Le micocoulier de Provence, longtemps rangé chez les ormes, est aujourd'hui un 
 
 **Explication :** Cannabacées (APG) : Celtis rejoint le chanvre et le houblon, quittant les Ulmacées. Les ormes (Ulmus) restent seuls chez les Ulmacées.
 **Source :** <https://arbres.academiedenimes.org/wp-content/uploads/2025/04/Etude-complete-du-micocoulier.pdf>, <https://www.techno-science.net/fr/definitions/micocoulier-de-provence>
-*validée (recoupée par recherche web) · id NF29 · jours 35*
+*validée (recoupée par recherche web) · id NF29 · jours 32*
 
 #### La digitale pourpre, toxique, est classée aujourd'hui dans la famille…
 
@@ -8677,7 +8677,7 @@ La digitale pourpre, toxique, est classée aujourd'hui dans la famille…
 
 **Explication :** Plantaginacées (APG) : Digitalis a quitté les Scrophulariacées, famille démembrée. Elle contient digitoxine et digoxine, cardiotoniques à très forte toxicité.
 **Source :** <https://www.techno-science.net/fr/definitions/digitale-pourpre>, <https://www.techno-science.net/fr/definitions/digitale>
-*validée (recoupée par recherche web) · id NF30 · jours 27*
+*validée (recoupée par recherche web) · id NF30 · jours 34*
 
 #### Le sureau noir est classé aujourd'hui dans la même famille que…
 
@@ -8690,7 +8690,7 @@ Le sureau noir est classé aujourd'hui dans la même famille que…
 
 **Explication :** Adoxacées (APG IV), anciennement Caprifoliacées. Le sureau a des feuilles composées, les viornes des feuilles simples. Piège : le frêne a aussi des feuilles composées.
 **Source :** <https://www.techno-science.net/fr/definitions/sureau>, <https://inpn.mnhn.fr/espece/cd_nom/120717>
-*validée (recoupée par recherche web) · id NF31 · jours 36*
+*validée (recoupée par recherche web) · id NF31 · jours 44*
 
 #### Quel arbre de nos avenues est un cousin éloigné du lotus sacré ?
 
@@ -8703,7 +8703,7 @@ Quel arbre de nos avenues est un cousin éloigné du lotus sacré ?
 
 **Explication :** Lotus (Nelumbonacées) et platane (Platanacées) sont dans l'ordre des Protéales. Le lotus, jadis rangé avec les nénuphars, en est séparé par la génétique.
 **Source :** <https://www.britannica.com/plant/Proteales>, <https://pmc.ncbi.nlm.nih.gov/articles/PMC4290595>
-*validée (recoupée par recherche web) · id NF32 · jours 32*
+*validée (recoupée par recherche web) · id NF32 · jours 33*
 
 #### Le cœur-de-Marie (cœur saignant), longtemps rangé chez les fumeterres, est classé aujourd'…
 
@@ -8716,7 +8716,7 @@ Le cœur-de-Marie (cœur saignant), longtemps rangé chez les fumeterres, est cl
 
 **Explication :** Dans APG III, les Fumariacées sont intégrées aux Papavéracées. Le genre Lamprocapnos, avec une seule espèce, est ancien Dicentra spectabilis.
 **Source :** <https://franco.wiki/fr/Papaveraceae.html>, <https://www.techno-science.net/fr/definitions/papaveraceae>
-*validée (recoupée par recherche web) · id NF33 · jours 26, 83*
+*validée (recoupée par recherche web) · id NF33 · jours 24, 84*
 
 #### Dans la classification actuelle, le muguet est un proche cousin de…
 
@@ -8729,7 +8729,7 @@ Dans la classification actuelle, le muguet est un proche cousin de…
 
 **Explication :** Asparagacées (APG IV), ex-Liliacées. Le muguet est classé avec l'asperge, pas avec le lis. Ses baies rouges sont toxiques.
 **Source :** <https://floraoftheworld.org/families/Asparagaceae/genera/Convallaria>, <https://plantaedb.com/taxa/phylum/angiosperms/order/asparagales/family/asparagaceae/genus/convallaria>
-*validée (recoupée par recherche web) · id NF34 · jours 44*
+*validée (recoupée par recherche web) · id NF34 · jours 35*
 
 #### Dans la classification phylogénétique, le séquoia géant est classé avec…
 
@@ -8742,7 +8742,7 @@ Dans la classification phylogénétique, le séquoia géant est classé avec…
 
 **Explication :** Cupressacées, qui ont absorbé les anciennes Taxodiacées : le séquoia géant en fait partie, avec les autres Sequoioideae (séquoia toujours vert, métaséquoia).
 **Source :** <https://www.techno-science.net/fr/definitions/sequoia-geant>, <https://www.techno-science.net/fr/definitions/cupressaceae>
-*validée (recoupée par recherche web) · id NF35 · jours 1*
+*validée (recoupée par recherche web) · id NF35 · jours 43*
 
 #### Laquelle de ces plantes appartient à la famille des Lamiacées ?
 
@@ -8757,7 +8757,7 @@ Laquelle de ces plantes appartient à la famille des Lamiacées ?
 
 **Explication :** Népéta de Faassen fait partie des Lamiacées. Traits fréquents dans la famille : tige carrée et feuilles opposées croisées.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 05576b8bf8 · jours 31, 89*
+*issue des données de l'appli (non recoupée) · id 05576b8bf8 · jours 29*
 
 #### Laquelle de ces plantes appartient à la famille des Astéracées ?
 
@@ -8772,7 +8772,7 @@ Laquelle de ces plantes appartient à la famille des Astéracées ?
 
 **Explication :** Gaillarde fait partie des Astéracées. Traits fréquents dans la famille : la « fleur » est un capitule de petits fleurons entourés de bractées.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 7599ef2a49 · jours 30, 85*
+*issue des données de l'appli (non recoupée) · id 7599ef2a49 · jours 27, 88*
 
 #### Laquelle de ces plantes appartient à la famille des Lamiacées ?
 
@@ -8787,7 +8787,7 @@ Laquelle de ces plantes appartient à la famille des Lamiacées ?
 
 **Explication :** Menthe poivrée fait partie des Lamiacées. Traits fréquents dans la famille : tige carrée et feuilles opposées croisées.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 8e0460e3fa · jours 29, 87*
+*issue des données de l'appli (non recoupée) · id 8e0460e3fa · jours 31, 89*
 
 #### Laquelle de ces plantes appartient à la famille des Renonculacées ?
 
@@ -8802,7 +8802,7 @@ Laquelle de ces plantes appartient à la famille des Renonculacées ?
 
 **Explication :** Anémone du Japon fait partie des Renonculacées. Traits fréquents dans la famille : nombreuses étamines et pistils libres, feuilles découpées, sève acre.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id a2a0e21f12 · jours 28, 88*
+*issue des données de l'appli (non recoupée) · id a2a0e21f12 · jours 30, 86*
 
 #### Laquelle de ces plantes appartient à la famille des Lamiacées ?
 
@@ -8817,7 +8817,7 @@ Laquelle de ces plantes appartient à la famille des Lamiacées ?
 
 **Explication :** Spirée bleue fait partie des Lamiacées. Traits fréquents dans la famille : tige carrée et feuilles opposées croisées.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id d85d19a9f9 · jours 34, 84*
+*issue des données de l'appli (non recoupée) · id d85d19a9f9 · jours 28, 90*
 
 ## Fruits et toxicité
 
@@ -8836,7 +8836,7 @@ Quel arbuste épineux de nos haies donne les prunelles, petits fruits bleu-noir 
 
 **Explication :** La prunelle est la petite drupe très âpre du prunellier. Dans les mêmes haies, l'aubépine donne des cenelles, l'églantier des cynorrhodons et le sureau des baies noires.
 **Source :** <https://fr.wikipedia.org/wiki/Prunellier>
-*validée (recoupée par recherche web) · id 4d3eeb72ef · jours 26, 59*
+*validée (recoupée par recherche web) · id 4d3eeb72ef · jours 24, 59*
 
 #### Quelle liane de nos haies se couvre en hiver de touffes de fruits plumeux blancs ?
 
@@ -8851,7 +8851,7 @@ Quelle liane de nos haies se couvre en hiver de touffes de fruits plumeux blancs
 
 **Explication :** La clématite des haies porte des akènes prolongés d'une longue plume soyeuse qui persiste tout l'hiver et les aide à voyager au vent.
 **Source :** <https://fr.wikipedia.org/wiki/Cl%C3%A9matite_des_haies>
-*validée (recoupée par recherche web) · corrigée · id 64f661c618 · jours 7, 53*
+*validée (recoupée par recherche web) · corrigée · id 64f661c618 · jours 4, 57*
 
 #### Comment nomme-t-on le fruit rouge de l'églantier ?
 
@@ -8864,7 +8864,7 @@ Comment nomme-t-on le fruit rouge de l'églantier ?
 
 **Explication :** Le cynorrhodon est un faux-fruit : son enveloppe charnue renferme les vrais fruits, des akènes couverts de poils irritants, d'où le surnom de « gratte-cul ».
 **Source :** <https://fr.wikipedia.org/wiki/Cynorhodon>
-*validée (recoupée par recherche web) · id 9f8125659c · jours 16, 56*
+*validée (recoupée par recherche web) · id 9f8125659c · jours 20, 51*
 
 #### Que faut-il savoir sur le muguet du 1er mai ?
 
@@ -8877,7 +8877,7 @@ Que faut-il savoir sur le muguet du 1er mai ?
 
 **Explication :** Fleurs, feuilles et baies contiennent des glycosides qui agissent sur le cœur, comme ceux de la digitale. Dans le doute, ne rien consommer.
 **Source :** <https://www.bfr.bund.de/en/risk-communication/dialog-formats/bfr-poisonous-plants-garden/lily-of-the-valley/>, <https://www.techno-science.net/fr/definitions/muguet-de-mai>
-*validée (recoupée par recherche web) · id E05 · jours 33, 84*
+*validée (recoupée par recherche web) · id E05 · jours 21, 85*
 
 #### Quelle partie de la rhubarbe se mange ?
 
@@ -8890,7 +8890,7 @@ Quelle partie de la rhubarbe se mange ?
 
 **Explication :** On ne mange que les côtes (pétioles), de préférence cuites. Les feuilles contiennent beaucoup d'acide oxalique et sont toxiques : dans le doute, ne rien consommer.
 **Source :** <https://www.futura-sciences.com/planete/definitions/botanique-rhubarbe-19382/>, <https://www.aroma-zone.com/page/rhubarbe-definitions-bienfaits>
-*validée (recoupée par recherche web) · id N01 · jours 30, 74*
+*validée (recoupée par recherche web) · id N01 · jours 30, 76*
 
 #### Quelle plante ornementale aux grandes feuilles palmées, cultivée aussi pour son huile, por…
 
@@ -8903,7 +8903,7 @@ Quelle plante ornementale aux grandes feuilles palmées, cultivée aussi pour so
 
 **Explication :** Trois graines peuvent être fatales à un enfant : la toxine est surtout libérée quand la graine est croquée. À tenir hors de portée des enfants.
 **Source :** <https://pmc.ncbi.nlm.nih.gov/articles/PMC3210461>, <https://sfmu.org/upload/30_vieprofessionnelle/4_outils_pro/1_protocoles/05_corpusNRBC/Fiche_synthèse_Ricine_2020.pdf>
-*validée (recoupée par recherche web) · id NX00 · jours 12, 63*
+*validée (recoupée par recherche web) · id NX00 · jours 1, 61*
 
 #### Quelle plante sauvage porte des baies noires luisantes, au goût sucré mais redoutables pou…
 
@@ -8916,7 +8916,7 @@ Quelle plante sauvage porte des baies noires luisantes, au goût sucré mais red
 
 **Explication :** Le goût sucré est trompeur : 2 à 5 baies peuvent intoxiquer un enfant. Atropine, hyoscyamine et scopolamine dilatent les pupilles et accélèrent le cœur.
 **Source :** <https://www.cap.chu-lille.fr/2021/01/26/belladone>, <https://www.anses.fr/fr/content/cet-ete-quelles-plantes-faire-attention-pour-eviter-les-intoxications>
-*validée (recoupée par recherche web) · id NX01 · jours 4, 64*
+*validée (recoupée par recherche web) · id NX01 · jours 23, 64*
 
 #### Quelle plante de montagne, à fleurs bleu-violet en forme de casque, contient l'aconitine, …
 
@@ -8929,7 +8929,7 @@ Quelle plante de montagne, à fleurs bleu-violet en forme de casque, contient l'
 
 **Explication :** Racine et feuilles sont très toxiques. Les rares intoxications viennent surtout de confusions avec des plantes comestibles : dans le doute, ne rien consommer.
 **Source :** <https://cbnfc-ori.org/sites/default/files/2024-03/PLantes-toxiques-botanique_WEB.pdf>, <https://www.techno-science.net/fr/definitions/aconit-napel>
-*validée (recoupée par recherche web) · id NX02 · jours 22, 62*
+*validée (recoupée par recherche web) · id NX02 · jours 13, 65*
 
 #### Quel petit arbre de jardin, aux grappes jaunes pendantes, porte des gousses noires dont le…
 
@@ -8942,7 +8942,7 @@ Quel petit arbre de jardin, aux grappes jaunes pendantes, porte des gousses noir
 
 **Explication :** Toute la plante contient de la cytisine, alcaloïde proche de la nicotine, surtout les graines. Le cultivar 'Vossii' en produit peu ou pas.
 **Source :** <https://www.jardiner-malin.fr/fiche/cytise.html>, <https://equine-vets.com/health/l/laburnum-poisoning>
-*validée (recoupée par recherche web) · id NX03 · jours 30, 75*
+*validée (recoupée par recherche web) · id NX03 · jours 31, 77*
 
 #### En décembre, les baies rouges du houx ornent maisons et tables. Que faut-il savoir à leur …
 
@@ -8955,7 +8955,7 @@ En décembre, les baies rouges du houx ornent maisons et tables. Que faut-il sav
 
 **Explication :** Les baies du houx attirent les jeunes enfants, surtout autour des fêtes de fin d'année. En cas d'ingestion, appeler un centre antipoison.
 **Source :** <https://www.larevuedupraticien.fr/exercice/un-enfant-ingere-des-baies-de-houx-est-ce-grave>, <https://www.cap.chu-lille.fr/2021/01/26/houx>
-*validée (recoupée par recherche web) · id NX04 · jours 35, 80*
+*validée (recoupée par recherche web) · id NX04 · jours 32, 81*
 
 #### Quelle plante annuelle à grandes trompettes blanches porte des capsules hérissées d'épines…
 
@@ -8968,7 +8968,7 @@ Quelle plante annuelle à grandes trompettes blanches porte des capsules hériss
 
 **Explication :** Les alcaloïdes sont surtout concentrés dans les fleurs et les graines ; une capsule contient jusqu'à 500 graines. Quelques grammes de feuilles peuvent être mortels.
 **Source :** <https://medecine-generale.lequotidiendumedecin.fr/specialites/gastro-enterologie/l-intoxication-au-datura>, <https://www.futura-sciences.com/sante/definitions/medecine-datura-10384/>
-*validée (recoupée par recherche web) · id NX05 · jours 21, 62*
+*validée (recoupée par recherche web) · id NX05 · jours 23, 63*
 
 #### Que mange-t-on dans un brocoli ?
 
@@ -8981,7 +8981,7 @@ Que mange-t-on dans un brocoli ?
 
 **Explication :** Mal conservé, le brocoli laisse éclore de petites fleurs jaunes : on mange bien des boutons floraux, avec leur tige et quelques feuilles.
 **Source :** <https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/2084016/brocoli>, <https://www.futura-sciences.com/planete/questions-reponses/botanique-chou-fleur-il-fleur-15052/>
-*validée (recoupée par recherche web) · id NX06 · jours 17, 50*
+*validée (recoupée par recherche web) · id NX06 · jours 24, 55*
 
 #### Quelle partie de la fleur d'artichaut mange-t-on dans le « fond d'artichaut » ?
 
@@ -8994,7 +8994,7 @@ Quelle partie de la fleur d'artichaut mange-t-on dans le « fond d'artichaut » 
 
 **Explication :** On mange le capitule récolté avant l'épanouissement des fleurs. Le « foin » central, non comestible, est l'ensemble des fleurons à retirer.
 **Source :** <https://www.techno-science.net/fr/definitions/artichaut>, <https://inao.gouv.fr/node/1635/printable/pdf>
-*validée (recoupée par recherche web) · id NX07 · jours 20, 79*
+*validée (recoupée par recherche web) · id NX07 · jours 9, 79*
 
 #### Que dit-on de la fraise sur le plan botanique ?
 
@@ -9007,7 +9007,7 @@ Que dit-on de la fraise sur le plan botanique ?
 
 **Explication :** La chair rouge est le réceptacle de la fleur devenu charnu. Les petits grains en surface sont des akènes : ce sont eux, les vrais fruits du fraisier.
 **Source :** <https://www.futura-sciences.com/planete/questions-reponses/botanique-fraise-nest-pas-fruit-14182/>
-*validée (recoupée par recherche web) · id NY20 · jours 34, 81*
+*validée (recoupée par recherche web) · id NY20 · jours 35, 83*
 
 #### Quel arbuste garde en hiver des boules blanches, à ne pas manger ?
 
@@ -9022,7 +9022,7 @@ Quel arbuste garde en hiver des boules blanches, à ne pas manger ?
 
 **Explication :** La symphorine porte des baies blanches spongieuses qui éclatent sous le pied. Elles sont considérées comme toxiques (irritantes pour le tube digestif), même si elles sont peu dangereuses en petite quantité.
 **Source :** <https://fr.wikipedia.org/wiki/Symphoricarpos_albus>, <https://www.cap.chu-lille.fr/2021/01/05/symphorine>
-*validée (recoupée par recherche web) · corrigée · id dff6c3e757 · jours 1, 47*
+*validée (recoupée par recherche web) · corrigée · id dff6c3e757 · jours 7, 44*
 
 #### Lequel de ces arbres produit les glands ?
 
@@ -9037,7 +9037,7 @@ Lequel de ces arbres produit les glands ?
 
 **Explication :** Le gland, fruit du chêne, est un akène posé dans une cupule écailleuse. Le hêtre donne des faînes, le châtaignier des châtaignes, le noisetier des noisettes.
 **Source :** <https://fr.wikipedia.org/wiki/Gland_(botanique)>
-*validée (recoupée par recherche web) · id f624dfa743 · jours 48*
+*validée (recoupée par recherche web) · id f624dfa743 · jours 58*
 
 #### Que faut-il savoir du marron du marronnier d'Inde des parcs ?
 
@@ -9050,7 +9050,7 @@ Que faut-il savoir du marron du marronnier d'Inde des parcs ?
 
 **Explication :** Le marron d'Inde contient de l'escine, qui provoque des troubles digestifs. Il se distingue de la châtaigne (châtaignier) : la bogue du châtaignier est hérissée de piquants fins.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY21 · jours 41, 88*
+*relue (non recoupée) · id NY21 · jours 49*
 
 #### Quel danger présente le muguet pour les enfants et les animaux ?
 
@@ -9063,7 +9063,7 @@ Quel danger présente le muguet pour les enfants et les animaux ?
 
 **Explication :** Le muguet contient des hétérosides cardiotoniques. Les baies rouges attirent les jeunes enfants ; il faut se laver les mains après l'avoir manipulé et ne jamais le consommer.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY22 · jours 39, 88*
+*relue (non recoupée) · id NY22 · jours 39, 89*
 
 #### Pourquoi ne faut-il pas manger les haricots secs crus ?
 
@@ -9076,7 +9076,7 @@ Pourquoi ne faut-il pas manger les haricots secs crus ?
 
 **Explication :** Les haricots crus renferment de la phytohémagglutinine (phasine), qui provoque nausées et vomissements. Une cuisson complète à ébullition la détruit.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY23 · jours 24, 57*
+*relue (non recoupée) · id NY23 · jours 25, 56*
 
 #### Pourquoi les olives fraîchement cueillies sont-elles immangeables ?
 
@@ -9089,7 +9089,7 @@ Pourquoi les olives fraîchement cueillies sont-elles immangeables ?
 
 **Explication :** L'oleuropéine donne une amertume extrême aux olives crues. On l'élimine par saumure, trempage dans l'eau ou séchage au sel avant de les consommer.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY24 · jours 23, 58*
+*relue (non recoupée) · id NY24 · jours 25, 57*
 
 #### Quel arbuste, très planté sur les ronds-points, est toxique dans toutes ses parties ?
 
@@ -9102,7 +9102,7 @@ Quel arbuste, très planté sur les ronds-points, est toxique dans toutes ses pa
 
 **Explication :** Le laurier-rose renferme des glucosides cardiotoxiques (oléandrine) dans ses feuilles, fleurs et sève. Il ne faut pas le confondre avec le laurier-sauce de la cuisine.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY25 · jours 44, 90*
+*relue (non recoupée) · id NY25 · jours 48, 86*
 
 ### Fruits et toxicité · intermédiaire (22)
 
@@ -9130,7 +9130,7 @@ Botaniquement, une figue est…
 
 **Explication :** La figue est un sycone : une urne charnue tapissée à l'intérieur de minuscules fleurs. Ses « grains » sont les vrais fruits, des akènes.
 **Source :** <https://www.techno-science.net/fr/definitions/figue>, <https://torontobotanicalgarden.ca/blog/word-of-the-week/botanical-nerd-word-syconium/>
-*validée (recoupée par recherche web) · id 37bc96af2a*
+*validée (recoupée par recherche web) · id 37bc96af2a · jours 35*
 
 #### Selon l'Anses, quelle plante confondue avec l'ail des ours a causé 2 décès en 2020-2022 ? · piège
 
@@ -9143,7 +9143,7 @@ Selon l'Anses, quelle plante confondue avec l'ail des ours a causé 2 décès en
 
 **Explication :** Le colchique, riche en colchicine, a causé 28 intoxications dont 2 mortelles. Muguet et gouet sont d'autres confusions classiques. Dans le doute, ne rien consommer.
 **Source :** <https://www.anses.fr/fr/content/actu-confusion-colchique-ail-des-ours>
-*validée (recoupée par recherche web) · id 3d27f94de7 · jours 29*
+*validée (recoupée par recherche web) · id 3d27f94de7 · jours 52*
 
 #### La « baie » de genièvre est en réalité… · piège
 
@@ -9156,7 +9156,7 @@ La « baie » de genièvre est en réalité…
 
 **Explication :** Le genévrier est un conifère : ses écailles soudées forment une boule charnue, le galbule. Sans ovaire, pas de vrai fruit, donc pas de baie au sens strict.
 **Source :** <https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/17498896/baie-de-genievre>, <https://www.lequotidiendupharmacien.fr/archives/galbule-0>
-*validée (recoupée par recherche web) · id 3de57f00c4 · jours 38*
+*validée (recoupée par recherche web) · id 3de57f00c4*
 
 #### Botaniquement, une framboise est… · piège
 
@@ -9169,7 +9169,7 @@ Botaniquement, une framboise est…
 
 **Explication :** Chaque grain de la framboise est une drupéole, petite drupe à noyau issue d'un carpelle d'une même fleur : c'est une polydrupe, pas une baie.
 **Source :** <https://fac.umc.edu.dz/vet/Cours_Ligne/cours_23_24/Alimentation_A2/classification_fruit.pdf>, <https://www.futura-sciences.com/planete/questions-reponses/botanique-fraise-nest-pas-fruit-14182/>
-*validée (recoupée par recherche web) · id 558d0a8b9a · jours 2, 74*
+*validée (recoupée par recherche web) · id 558d0a8b9a · jours 16, 73*
 
 #### Lequel porte des baies orange serrées sur des rameaux épineux, aux feuilles étroites argen…
 
@@ -9184,7 +9184,7 @@ Lequel porte des baies orange serrées sur des rameaux épineux, aux feuilles é
 
 **Explication :** L'argousier, arbuste dioïque des dunes et des torrents de montagne, porte des baies acidulées serrées sur les rameaux. Le buisson ardent a des feuilles vertes.
 **Source :** <https://uses.plantnet-project.org/fr/Hippophae_rhamnoides>, <https://ecophytopic.fr/sites/default/files/2024-11/Fiche_technique_Argousier.pdf>
-*validée (recoupée par recherche web) · id 75bc628b1e · jours 18, 66*
+*validée (recoupée par recherche web) · id 75bc628b1e · jours 14, 68*
 
 #### Lequel de ces cornouillers donne les cornouilles, drupes rouges acidulées ? · piège
 
@@ -9199,7 +9199,7 @@ Lequel de ces cornouillers donne les cornouilles, drupes rouges acidulées ?
 
 **Explication :** Malgré son nom, le cornouiller mâle porte bien des fruits : les cornouilles, rouges, utilisées en confiture. Le cornouiller sanguin a des fruits noirs non comestibles.
 **Source :** <https://botanique.vd.ch/fileadmin/groups/11/images/Animations/Plante_du_mois/Plante_du_mois_Cornus_-_mai.pdf>, <https://www.techno-science.net/fr/definitions/cornouiller-male>
-*validée (recoupée par recherche web) · id 79920157d8 · jours 28, 68*
+*validée (recoupée par recherche web) · id 79920157d8 · jours 31, 71*
 
 #### Chez la fraise, où se trouvent les vrais fruits ? · piège
 
@@ -9212,7 +9212,7 @@ Chez la fraise, où se trouvent les vrais fruits ?
 
 **Explication :** La chair est le réceptacle floral gonflé : la fraise est un faux-fruit. Les vrais fruits sont les akènes, ces petits « grains » posés sur sa peau.
 **Source :** <https://www.futura-sciences.com/planete/questions-reponses/botanique-fraise-nest-pas-fruit-14182/>
-*validée (recoupée par recherche web) · id 7be20eddf6 · jours 6*
+*validée (recoupée par recherche web) · id 7be20eddf6 · jours 40*
 
 #### Pourquoi écarte-t-on les parties verdies d'une pomme de terre ? · piège
 
@@ -9225,7 +9225,7 @@ Pourquoi écarte-t-on les parties verdies d'une pomme de terre ?
 
 **Explication :** Le vert vient de la chlorophylle, inoffensive, mais il signale souvent beaucoup de solanine, une toxine que la cuisson ne détruit pas : on épluche largement ou on jette.
 **Source :** <https://www.larevuedupraticien.fr/article/intoxication-la-solanine>, <https://chimie-paris.org/docs/lapatate.pdf>
-*validée (recoupée par recherche web) · id N02 · jours 39*
+*validée (recoupée par recherche web) · id N02 · jours 59*
 
 #### Pourquoi ne mange-t-on pas les haricots secs crus ? · piège
 
@@ -9238,7 +9238,7 @@ Pourquoi ne mange-t-on pas les haricots secs crus ?
 
 **Explication :** Les haricots secs, surtout les rouges, contiennent des lectines toxiques : il faut les tremper, puis les faire bouillir à gros bouillons au moins 10 minutes (plus longtemps par prudence).
 **Source :** <https://www.canada.ca/fr/sante-canada/services/aliments-nutrition/salubrite-aliments/contaminants-chimiques/toxines-naturelles/lectines-legumineuses.html>, <https://www.quechoisir.org/actualite-legumineuses-une-preparation-longue-mais-indispensable-n174746/>
-*validée (recoupée par recherche web) · id N03 · jours 9, 72*
+*validée (recoupée par recherche web) · id N03 · jours 10, 74*
 
 #### Botaniquement, une tomate est… · piège
 
@@ -9251,7 +9251,7 @@ Botaniquement, une tomate est…
 
 **Explication :** La tomate est une baie charnue ; « légume » est une catégorie de cuisine. C'est une Solanacée, comme la pomme de terre et l'aubergine.
 **Source :** <https://www.alimentarium.org/fr/node/1223>, <https://www.jardiner-malin.fr/fiche/solanacees-famille.html>
-*validée (recoupée par recherche web) · id N04 · jours 77*
+*validée (recoupée par recherche web) · id N04 · jours 42*
 
 #### Pourquoi l'Anses déconseille-t-elle de croquer des amandes de noyaux d'abricot ?
 
@@ -9264,7 +9264,7 @@ Pourquoi l'Anses déconseille-t-elle de croquer des amandes de noyaux d'abricot 
 
 **Explication :** Ces amandes amères contiennent de l'amygdaline : à la digestion, elle libère du cyanure. Le risque vient surtout de celles que l'on croque en grande quantité.
 **Source :** <https://www.anses.fr/fr/content/amandes-dabricots-un-risque-dintoxication-au-cyanure>, <https://www.vidal.fr/actualites/22811-les-amandes-de-noyaux-d-abricots-ne-sont-pas-anti-cancer-et-peuvent-etre-toxiques.html>
-*validée (recoupée par recherche web) · id N24 · jours 10*
+*validée (recoupée par recherche web) · id N24 · jours 44*
 
 #### Quel est le fruit du fusain d'Europe, aux teintes roses en automne ? · piège
 
@@ -9277,7 +9277,7 @@ Quel est le fruit du fusain d'Europe, aux teintes roses en automne ?
 
 **Explication :** Le fusain (Euonymus europaeus) porte des capsules roses à 4 loges, qui s'ouvrent sur des graines à arille orange. Toute la plante est toxique : dans le doute, ne pas consommer.
 **Source :** <https://fr.vikidia.org/wiki/Fusain_d%27Europe>, <https://www.mairie-bruges.fr/uploads/files/Ma_Ville/Environnement_et_nature/Fiche_espece_Fusain_dEurope.pdf>
-*validée (recoupée par recherche web) · id NP16 · jours 35, 83*
+*validée (recoupée par recherche web) · id NP16 · jours 12, 82*
 
 #### Laquelle de ces plantes donne une vraie baie au sens botanique ? · piège
 
@@ -9290,7 +9290,7 @@ Laquelle de ces plantes donne une vraie baie au sens botanique ?
 
 **Explication :** Baie vraie : fruit charnu d'un seul ovaire, graines dans la pulpe (banane). Fraise : faux-fruit (réceptacle) ; framboise et mûre : agrégats de petites drupes.
 **Source :** <https://www.letribunaldunet.fr/le-saviez-vous/pourquoi-framboise-mure-pas-baie-banane.html>, <https://fr.vikidia.org/wiki/Baie_(botanique)>
-*validée (recoupée par recherche web) · id NP20 · jours 58*
+*validée (recoupée par recherche web) · id NP20 · jours 6*
 
 #### Chez la pomme, quelle partie correspond au vrai fruit, au sens botanique ? · piège
 
@@ -9303,7 +9303,7 @@ Chez la pomme, quelle partie correspond au vrai fruit, au sens botanique ?
 
 **Explication :** La pomme est un faux-fruit : sa chair vient du réceptacle floral qui enveloppe l'ovaire. Le vrai fruit est le trognon, loge des pépins.
 **Source :** <https://areq.net/lang/fr/Pomme.html>, <https://franco.wiki/fr/Faux-fruit.html>
-*validée (recoupée par recherche web) · id NP22 · jours 57*
+*validée (recoupée par recherche web) · id NP22 · jours 50*
 
 #### Légumes dans l'assiette, la courgette et le concombre sont botaniquement… · piège
 
@@ -9316,7 +9316,7 @@ Légumes dans l'assiette, la courgette et le concombre sont botaniquement…
 
 **Explication :** Les Cucurbitacées donnent des baies à écorce plus ou moins dure, les pépons. Courgette et concombre sont donc des fruits, consommés comme légumes.
 **Source :** <https://www.techno-science.net/fr/definitions/cucurbitaceae>, <https://www.techno-science.net/fr/definitions/courgette>
-*validée (recoupée par recherche web) · id NP23 · jours 13, 85*
+*validée (recoupée par recherche web) · id NP23 · jours 18, 84*
 
 #### Les « graines » de tournesol que l'on grignote sont, botaniquement… · piège
 
@@ -9329,7 +9329,7 @@ Les « graines » de tournesol que l'on grignote sont, botaniquement…
 
 **Explication :** Chaque akène est un fruit sec indéhiscent : la coque est le péricarpe, l'amande la graine. Le grand « disque » est une inflorescence de petites fleurs.
 **Source :** <https://www.futura-sciences.com/planete/definitions/botanique-akene-9544/>, <https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/17015064/graine-de-tournesol>
-*validée (recoupée par recherche web) · id NP24 · jours 48*
+*validée (recoupée par recherche web) · id NP24 · jours 47*
 
 #### La « baie » rouge de l'if est en réalité : · piège
 
@@ -9342,7 +9342,7 @@ La « baie » rouge de l'if est en réalité :
 
 **Explication :** L'arille rouge n'est pas un vrai fruit : il coiffe une graine, très toxique, comme le reste de l'arbre (taxine). Dans le doute, ne jamais consommer, surtout pas avec des enfants.
 **Source :** <https://www.cap.chu-lille.fr/2021/01/26/if>
-*validée (recoupée par recherche web) · id NQ31 · jours 45*
+*validée (recoupée par recherche web) · id NQ31 · jours 2*
 
 #### Le lierre fleurit en automne. Quand ses fruits noirs, toxiques, mûrissent-ils ? · piège
 
@@ -9355,7 +9355,7 @@ Le lierre fleurit en automne. Quand ses fruits noirs, toxiques, mûrissent-ils ?
 
 **Explication :** Les baies du lierre mûrissent de la fin de l'hiver au printemps et nourrissent les oiseaux quand les fruits sont rares. Elles sont toxiques pour l'homme.
 **Source :** <https://occitanie.lpo.fr/wp-content/uploads/2020/04/ficherefugeslpo_lierre_br.pdf>
-*validée (recoupée par recherche web) · id a0da9dd7d9 · jours 52*
+*validée (recoupée par recherche web) · id a0da9dd7d9 · jours 46*
 
 #### L'oranger des Osages (Maclura pomifera) est de la même famille que… · piège
 
@@ -9368,7 +9368,7 @@ L'oranger des Osages (Maclura pomifera) est de la même famille que…
 
 **Explication :** Sa grosse boule verte n'est pas une orange : c'est une infrutescence de Moracée, née de nombreuses fleurs comme la mûre du mûrier. Elle est jugée non comestible.
 **Source :** <https://www.techno-science.net/fr/definitions/oranger-des-osages>, <https://gobotany.nativeplanttrust.org/species/maclura/pomifera/>
-*validée (recoupée par recherche web) · id b364643f76 · jours 53*
+*validée (recoupée par recherche web) · id b364643f76 · jours 41*
 
 #### Botaniquement, la « baie » rouge de l'if est… · piège
 
@@ -9381,7 +9381,7 @@ Botaniquement, la « baie » rouge de l'if est…
 
 **Explication :** L'if, conifère sans ovaire, n'a pas de vrai fruit : la coupe rouge est un arille qui entoure une graine très toxique, tout comme le feuillage.
 **Source :** <https://www.techno-science.net/fr/definitions/if-botanique>, <https://www.cap.chu-lille.fr/2021/01/26/if>
-*validée (recoupée par recherche web) · id f7e64c71b3 · jours 41*
+*validée (recoupée par recherche web) · id f7e64c71b3 · jours 43*
 
 #### Dans le fruit rouge de l'églantier, les poils « à gratter » entourent : · piège
 
@@ -9394,7 +9394,7 @@ Dans le fruit rouge de l'églantier, les poils « à gratter » entourent :
 
 **Explication :** Le cynorrhodon est un faux fruit : un réceptacle charnu fermé qui renferme de nombreux petits fruits secs, des akènes, entourés de poils irritants pour la peau.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NQ35 · jours 15, 76*
+*relue (non recoupée) · id NQ35 · jours 19, 74*
 
 ### Fruits et toxicité · difficile (11)
 
@@ -9409,7 +9409,7 @@ Le tamier commun, liane aux baies rouges toxiques, est un proche parent…
 
 **Explication :** Le tamier (Dioscorea communis) est une Dioscoréacée, comme l'igname. On le confond avec la bryone, autre liane toxique, mais de la famille des Cucurbitacées.
 **Source :** <https://www.cap.chu-lille.fr/2021/01/05/tamier>, <https://species.wikimedia.org/wiki/Dioscorea_communis>
-*validée (recoupée par recherche web) · id 2ad9e1eb8e · jours 51*
+*validée (recoupée par recherche web) · id 2ad9e1eb8e · jours 56*
 
 #### Quelle plante dresse en été un épi serré de baies rouges, toxiques, souvent sans feuilles …
 
@@ -9437,7 +9437,7 @@ Laquelle de ces enveloppes épineuses ou écailleuses est la paroi même du frui
 
 **Explication :** Le marron d'Inde est une graine dans une capsule, le vrai fruit. La bogue de la châtaigne est une cupule, comme celle du gland : elle enveloppe les fruits.
 **Source :** <https://bfcnature.fr/fichiers/20130512-marrons-chataignes_1487152794.pdf>
-*validée (recoupée par recherche web) · id 803a030023 · jours 76*
+*validée (recoupée par recherche web) · id 803a030023 · jours 78*
 
 #### Comment nomme-t-on le type de fruit du grenadier ?
 
@@ -9450,7 +9450,7 @@ Comment nomme-t-on le type de fruit du grenadier ?
 
 **Explication :** La balauste est un fruit à écorce dure, couronné par le calice, à loges pleines de graines juteuses. L'hespéride est l'agrume, le pépon la courge, le sycone la figue.
 **Source :** <https://www.lalanguefrancaise.com/dictionnaire/definition/balauste>
-*validée (recoupée par recherche web) · id 813cd9374c · jours 71*
+*validée (recoupée par recherche web) · id 813cd9374c · jours 73*
 
 #### Lequel de ces arbustes porte des gousses gonflées comme de petites vessies ?
 
@@ -9465,7 +9465,7 @@ Lequel de ces arbustes porte des gousses gonflées comme de petites vessies ?
 
 **Explication :** Le baguenaudier, ou « arbre à vessies », doit son nom à ses gousses renflées et translucides à maturité.
 **Source :** <https://nymf.bbg.org/genus/132>, <https://openobs.mnhn.fr/redirect/inpn/datasets/86010?view=mapr>
-*validée (recoupée par recherche web) · corrigée · id 91a85ff031 · jours 50*
+*validée (recoupée par recherche web) · corrigée · id 91a85ff031 · jours 54*
 
 #### Les feuilles de la digitale pourpre sont parfois prises pour de la consoude ou de la bourr…
 
@@ -9491,7 +9491,7 @@ Botaniquement, quel est le fruit du noyer, la noix ?
 
 **Explication :** La noix est une drupe (brou + coque = noyau) ; la noisette, elle, est un akène, fruit sec indéhiscent. Les deux sont des « fruits à coque » en cuisine.
 **Source :** <https://franco.wiki/fr/Noix.html>, <https://www.futura-sciences.com/planete/definitions/fleurs-noix-19629/>
-*validée (recoupée par recherche web) · id NP21 · jours 73*
+*validée (recoupée par recherche web) · id NP21 · jours 72*
 
 #### La bryone dioïque, liane toxique de nos haies, est de la même famille que…
 
@@ -9530,7 +9530,7 @@ Chez le fragon, les baies rouges semblent posées sur une feuille. Cette « feui
 
 **Explication :** Les « feuilles » piquantes du fragon sont des cladodes, rameaux aplatis qui portent les fleurs puis les baies rouges, toxiques si ingérées.
 **Source :** <https://www.calanques-parcnational.fr/fr/fragon-petit-houx>, <https://www.agglo-agen.net/fileadmin/user_upload_agglo/pdf/06-Mes_loisirs/Trotte_lapin/fiches-nature/FICHE_ESPECE_FLORE_FRAGON_PIQUANT.pdf>
-*validée (recoupée par recherche web) · id fc918e4b03 · jours 55*
+*validée (recoupée par recherche web) · id fc918e4b03 · jours 62*
 
 #### La mûre du mûrier noir, contrairement à celle de la ronce, provient…
 
@@ -9543,7 +9543,7 @@ La mûre du mûrier noir, contrairement à celle de la ronce, provient…
 
 **Explication :** La mûre du mûrier est une infrutescence : chaque « grain » vient d'une fleur distincte. La mûre de la ronce est une polydrupe issue d'une seule fleur.
 **Source :** <https://www.portcros-parcnational.fr/sites/portcros-parcnational.fr/files/documents/downloads/53afe1571ae64dba545ea113b6db4212.pdf>, <https://fac.umc.edu.dz/vet/Cours_Ligne/cours_23_24/Alimentation_A2/classification_fruit.pdf>
-*validée (recoupée par recherche web) · id fe0c5f6303 · jours 77*
+*validée (recoupée par recherche web) · id fe0c5f6303 · jours 80*
 
 ## Idées reçues
 
@@ -9560,7 +9560,7 @@ Pourquoi le cyprès chauve (Taxodium) est-il dit « chauve » ?
 
 **Explication :** Contrairement à presque tous les conifères, le cyprès chauve est caduc : ses aiguilles roussissent à l'automne puis tombent, laissant l'arbre nu.
 **Source :** <https://fr.vikidia.org/wiki/Cypr%C3%A8s_chauve>, <https://www.futura-sciences.com/planete/definitions/botanique-cypres-chauve-8503/>
-*validée (recoupée par recherche web) · id 41510a4f99 · jours 34, 82*
+*validée (recoupée par recherche web) · id 41510a4f99 · jours 35, 88*
 
 #### À quelle famille botanique appartiennent les bambous ?
 
@@ -9573,7 +9573,7 @@ Pourquoi le cyprès chauve (Taxodium) est-il dit « chauve » ?
 
 **Explication :** Les bambous sont des graminées géantes, de la même famille que le blé ou le gazon : les Poacées. Leurs tiges creuses à nœuds sont des chaumes.
 **Source :** <https://animals.sandiegozoo.org/node/470>
-*validée (recoupée par recherche web) · id 955dcd0d69 · jours 4, 66*
+*validée (recoupée par recherche web) · id 955dcd0d69 · jours 25, 73*
 
 #### Qu'est-ce qu'une courgette, botaniquement ?
 
@@ -9586,7 +9586,7 @@ Qu'est-ce qu'une courgette, botaniquement ?
 
 **Explication :** Elle contient des graines : c'est le fruit de Cucurbita pepo, cueilli très tôt. Mûre, sa peau durcit et ses graines grossissent, comme une courge.
 **Source :** <https://fr.vikidia.org/wiki/Courgette>, <https://fr.wiktionary.org/wiki/courgette>
-*validée (recoupée par recherche web) · id NX38 · jours 25*
+*validée (recoupée par recherche web) · id NX38 · jours 53*
 
 #### Ce que l'on mange dans un chou-fleur est…
 
@@ -9599,7 +9599,7 @@ Ce que l'on mange dans un chou-fleur est…
 
 **Explication :** Laissé en place, ce bourgeon floral compact produit des tiges à fleurs ; on le récolte avant, sinon il devient impropre à la consommation.
 **Source :** <https://www.futura-sciences.com/planete/questions-reponses/botanique-chou-fleur-il-fleur-15052/>, <https://www.techno-science.net/fr/definitions/chou-fleur>
-*validée (recoupée par recherche web) · id NX39 · jours 12, 53*
+*validée (recoupée par recherche web) · id NX39 · jours 12, 52*
 
 #### Les bâtons de cannelle sont faits de…
 
@@ -9612,7 +9612,7 @@ Les bâtons de cannelle sont faits de…
 
 **Explication :** L'écorce fine, raclée sur les branches puis séchée, s'enroule d'elle-même en « bâton » ; la vraie cannelle vient de Cinnamomum verum.
 **Source :** <https://areq.net/lang/fr/Cannelle.html>, <https://revues.cirad.fr/index.php/fruits/article/download/35722/35956/39461>
-*validée (recoupée par recherche web) · id NX41 · jours 6, 60*
+*validée (recoupée par recherche web) · id NX41 · jours 3, 61*
 
 #### On croit que la plante bleue qu'est le pastel donne directement du bleu. Quand le bleu app…
 
@@ -9625,7 +9625,7 @@ On croit que la plante bleue qu'est le pastel donne directement du bleu. Quand l
 
 **Explication :** Le pigment bleu n'est pas visible dans la feuille verte : il naît de la macération, de la fermentation puis de l'oxydation.
 **Source :** <https://www.culture.gouv.fr/Media/Medias-creation-rapide/Les-savoir-faire-lies-a-la-teinture-au-pastel-en-pays-de-Cocagne.pdf>, <https://www.france.fr/fr/article/pastel-or-bleu-occitanie/>
-*validée (recoupée par recherche web) · id NX42 · jours 25, 65*
+*validée (recoupée par recherche web) · id NX42 · jours 6, 66*
 
 #### Pourquoi voit-on souvent des coquelicots surgir sur une terre fraîchement remuée (labour, …
 
@@ -9638,7 +9638,7 @@ Pourquoi voit-on souvent des coquelicots surgir sur une terre fraîchement remu�
 
 **Explication :** Plante messicole : une terre remuée suffit à faire lever ses graines, qui résistent bien à l'enfouissement ; d'où sa présence en bord de route.
 **Source :** <https://www.randozone.com/flore/coquelicot/>, <https://www.noovomoi.ca/style-et-maison/plantes-et-jardin/article.cultiver-coquelicot.1.1467840.html>
-*validée (recoupée par recherche web) · id NX43 · jours 15, 76*
+*validée (recoupée par recherche web) · id NX43 · jours 25, 73*
 
 #### Que fait réellement le tournesol adulte quant au soleil ?
 
@@ -9664,7 +9664,7 @@ Le bambou est-il un arbre ?
 
 **Explication :** Le bambou appartient à la famille des graminées, comme le blé. Sa tige, le chaume, est creuse, et certaines espèces fleurissent très rarement, parfois une fois par siècle.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY31 · jours 27, 79*
+*relue (non recoupée) · id NY31 · jours 37, 81*
 
 #### À quel groupe appartient le champignon ?
 
@@ -9677,7 +9677,7 @@ Le bambou est-il un arbre ?
 
 **Explication :** Les champignons n'ont pas de chlorophylle : ils ne font pas de photosynthèse et se nourrissent de matière organique. Génétiquement, ils sont plus proches des animaux que des plantes.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY33 · jours 38, 81*
+*relue (non recoupée) · id NY33 · jours 27, 84*
 
 #### La mousse pousse-t-elle toujours du côté nord des troncs ?
 
@@ -9690,7 +9690,7 @@ La mousse pousse-t-elle toujours du côté nord des troncs ?
 
 **Explication :** Les mousses n'ont pas de vraies racines et dépendent de l'humidité. Selon l'exposition locale, elles peuvent couvrir toutes les faces d'un tronc : elles ne remplacent pas une boussole.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY34 · jours 21, 62*
+*relue (non recoupée) · id NY34 · jours 22, 62*
 
 #### Les carottes mangées en cuisine sont-elles des racines ?
 
@@ -9703,7 +9703,7 @@ Les carottes mangées en cuisine sont-elles des racines ?
 
 **Explication :** La carotte est une racine pivotante renflée qui stocke des réserves, ce qui lui permet de passer l'hiver : la plante, bisannuelle, fleurit la 2e année. La pomme de terre, elle, est une tige.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY35 · jours 31, 77*
+*relue (non recoupée) · id NY35 · jours 30, 75*
 
 ### Idées reçues · intermédiaire (32)
 
@@ -9718,7 +9718,7 @@ Le lierre qui grimpe le long d'un tronc d'arbre…
 
 **Explication :** Le lierre n'est pas un parasite : ses crampons servent à s'accrocher, sans rien absorber. Il puise eau et sels minéraux par ses racines dans le sol.
 **Source :** <https://www.provincedeliege.be:443/sites/default/files/media/10952/Lierre%20grimpant%20%28Hedera%20helix%29.pdf>, <https://www.futura-sciences.com/planete/definitions/botanique-lierre-10291/>
-*validée (recoupée par recherche web) · id 15559d5b90 · jours 56*
+*validée (recoupée par recherche web) · id 15559d5b90 · jours 58*
 
 #### Les « géraniums » rouges des balcons, gélifs, appartiennent au genre… · piège
 
@@ -9731,7 +9731,7 @@ Les « géraniums » rouges des balcons, gélifs, appartiennent au genre…
 
 **Explication :** Ce sont des pélargoniums, sensibles au gel. Les vrais Geranium, comme le géranium sanguin, sont surtout des vivaces rustiques aux fleurs régulières.
 **Source :** <https://franco.wiki/fr/Geranium.html>, <https://seedsandplants.co.za/gardening-tips/the-differences-between-pelargonium-and-geranium>
-*validée (recoupée par recherche web) · id 317f55dbfe · jours 18, 66*
+*validée (recoupée par recherche web) · id 317f55dbfe · jours 19, 63*
 
 #### Lequel de ces végétaux n'est PAS un vrai bambou ? · piège
 
@@ -9746,7 +9746,7 @@ Lequel de ces végétaux n'est PAS un vrai bambou ?
 
 **Explication :** Le nandina, dit « bambou sacré », n'a de bambou que l'allure : c'est un arbuste de la famille de l'épine-vinette (Berbéridacées), pas une graminée.
 **Source :** <https://en.wikipedia.org/wiki/Nandina>, <https://animals.sandiegozoo.org/node/470>
-*validée (recoupée par recherche web) · id 38af785086 · jours 36, 70*
+*validée (recoupée par recherche web) · id 38af785086 · jours 7, 67*
 
 #### Lequel est le vrai laurier, celui dont on met les feuilles dans la sauce ? · piège
 
@@ -9761,7 +9761,7 @@ Lequel est le vrai laurier, celui dont on met les feuilles dans la sauce ?
 
 **Explication :** Seul Laurus nobilis est un vrai laurier (Lauracées). Le laurier-cerise et le laurier du Portugal sont des Prunus, toxiques si ingérés ; le laurier-tin est une viorne.
 **Source :** <https://www.cap.chu-lille.fr/2021/01/26/laurier-cerise>, <https://www.infoflora.ch/assets/content/documents/neophytes/inva_prun_lau_f.pdf>
-*validée (recoupée par recherche web) · id 3d8aaef9ea · jours 40, 75*
+*validée (recoupée par recherche web) · id 3d8aaef9ea · jours 28, 74*
 
 #### Le « tronc » d'un bananier est formé… · piège
 
@@ -9774,7 +9774,7 @@ Le « tronc » d'un bananier est formé…
 
 **Explication :** Le bananier est une herbe géante, sans bois. Sa vraie tige est souterraine ; le « tronc » est un pseudo-tronc fait des bases de feuilles enroulées.
 **Source :** <https://www.techno-science.net/fr/definitions/bananier>, <https://www.larousse.fr/encyclopedie/divers/bananier/25436>
-*validée (recoupée par recherche web) · id 4762308b17 · jours 17, 80*
+*validée (recoupée par recherche web) · id 4762308b17 · jours 37, 80*
 
 #### Lequel de ces arbres appartient à la famille des magnolias ?
 
@@ -9789,7 +9789,7 @@ Lequel de ces arbres appartient à la famille des magnolias ?
 
 **Explication :** Le tulipier de Virginie, aux fleurs en forme de tulipe, est une Magnoliacée. Son nom vient seulement de la forme de ses fleurs.
 **Source :** <https://www.futura-sciences.com/planete/definitions/botanique-tulipier-virginie-8670/>, <https://www.saint-cyr-sur-loire.com/content/download/16757/262714/version/2/file/FICHES_BOTANIQUES_Tulipier-de-Virginie.pdf>
-*validée (recoupée par recherche web) · id 776dd0b699 · jours 26, 67*
+*validée (recoupée par recherche web) · id 776dd0b699*
 
 #### Pour qu'un hortensia à fleurs roses devienne bleu, il faut surtout un sol… · piège
 
@@ -9802,7 +9802,7 @@ Pour qu'un hortensia à fleurs roses devienne bleu, il faut surtout un sol…
 
 **Explication :** C'est l'aluminium, absorbé seulement en sol acide, qui bleuit les fleurs d'Hydrangea macrophylla. En sol calcaire, elles restent roses.
 **Source :** <https://www.rhs.org.uk/plants/hydrangea/shrubby>, <https://rhs.org.uk/plants/hydrangea/shrubby/by-colour>
-*validée (recoupée par recherche web) · id 7be19a862c · jours 1*
+*validée (recoupée par recherche web) · id 7be19a862c · jours 34, 85*
 
 #### Lequel de ces arbres produit les « marrons » vendus grillés ou glacés ? · piège
 
@@ -9830,7 +9830,7 @@ En France, l'arbre qu'on appelle couramment « sycomore » est en réalité…
 
 **Explication :** C'est l'érable sycomore (Acer pseudoplatanus). Le sycomore de la Bible est un figuier, Ficus sycomorus, et en Amérique « sycamore » désigne un platane.
 **Source :** <https://www.inaturalist.org/guide_taxa/16357>, <https://fr.vikidia.org/wiki/%C3%89rable_sycomore>
-*validée (recoupée par recherche web) · id 9efc846bb9 · jours 46*
+*validée (recoupée par recherche web) · id 9efc846bb9 · jours 51*
 
 #### Le gui que l'on voit dans les peupliers est… · piège
 
@@ -9843,7 +9843,7 @@ Le gui que l'on voit dans les peupliers est…
 
 **Explication :** Le gui garde ses feuilles vertes et fait sa photosynthèse, mais ses suçoirs pompent l'eau et les sels minéraux de l'arbre : c'est un hémiparasite.
 **Source :** <https://www.techno-science.net/fr/definitions/gui-plante>, <https://www.humanite-biodiversite.fr/articles/70190-au-gui-l-an-neuf>
-*validée (recoupée par recherche web) · id N06 · jours 37*
+*validée (recoupée par recherche web) · id N06 · jours 36*
 
 #### La tulipe, symbole des Pays-Bas, est originaire… · piège
 
@@ -9856,7 +9856,7 @@ La tulipe, symbole des Pays-Bas, est originaire…
 
 **Explication :** La tulipe sauvage vient d'Asie centrale. Elle a gagné l'Europe par la Perse et l'Empire ottoman (vers 1550), bien avant la « tulipomanie » néerlandaise de 1636-1637.
 **Source :** <https://m.gardensbythebay.com.sg/content/dam/gbb-2021/documents/media-room/2016/FOR-WEBSITE-APPENDIX-A-Rediscover-the-Origins-of-the-Tulip.pdf>, <https://www.sarahraven.com/articles/the-history-of-the-tulip>
-*validée (recoupée par recherche web) · id N09 · jours 36, 90*
+*validée (recoupée par recherche web) · id N09 · jours 17, 76*
 
 #### Le vrai jasmin (genre Jasminum) est de la même famille que… · piège
 
@@ -9869,7 +9869,7 @@ Le vrai jasmin (genre Jasminum) est de la même famille que…
 
 **Explication :** Le vrai jasmin est une Oléacée, comme l'olivier, le frêne et le lilas. Le « jasmin étoilé » n'en est pas un : c'est une Apocynacée, comme la pervenche.
 **Source :** <https://plants.ces.ncsu.edu/plants/jasminum-officinale/common-name/true-jasmine/>, <https://franco.wiki/fr/Oleaceae.html>
-*validée (recoupée par recherche web) · id N29 · jours 48*
+*validée (recoupée par recherche web) · id N29 · jours 35*
 
 #### Quand le tournesol suit-il le soleil dans la journée ? · piège
 
@@ -9882,7 +9882,7 @@ Quand le tournesol suit-il le soleil dans la journée ?
 
 **Explication :** Les jeunes tournesols suivent le soleil d'est en ouest, grâce à une horloge interne. Adultes, ils cessent de bouger et restent tournés vers l'est.
 **Source :** <https://www.futura-sciences.com/planete/definitions/botanique-heliotropisme-19421/>, <https://www.techno-science.net/fr/actualites/comment-les-tournesols-voient-le-soleil-24004>
-*validée (recoupée par recherche web) · id N30 · jours 37*
+*validée (recoupée par recherche web) · id N30 · jours 39*
 
 #### Avant la floraison, les feuilles de l'ail des ours ressemblent à celles du muguet. Quel te… · piège
 
@@ -9895,7 +9895,7 @@ Avant la floraison, les feuilles de l'ail des ours ressemblent à celles du mugu
 
 **Explication :** Seul l'ail des ours sent l'ail quand on froisse la feuille ; muguet (coriace) et colchique sont très toxiques. Dans le doute, ne pas consommer.
 **Source :** <https://www.techno-science.net/fr/definitions/allium-ursinum>, <https://www.anses.fr/fr/content/actu-confusion-colchique-ail-des-ours>
-*validée (recoupée par recherche web) · id NP00 · jours 51*
+*validée (recoupée par recherche web) · id NP00 · jours 48*
 
 #### Quel critère est propre à la grande ciguë, souvent confondue avec le cerfeuil sauvage ou l… · piège
 
@@ -9908,7 +9908,7 @@ Quel critère est propre à la grande ciguë, souvent confondue avec le cerfeuil
 
 **Explication :** La grande ciguë a une tige creuse tachée de pourpre et sent l'urine de souris au froissement ; le cerfeuil sauvage a une tige verte, velue. Dans le doute, ne pas consommer.
 **Source :** <https://fr.vikidia.org/wiki/Grande_cigu%C3%AB>, <https://www.aroma-zone.com/page/tout-savoir-sur-la-grande-cigue>
-*validée (recoupée par recherche web) · id NP01 · jours 31, 81*
+*validée (recoupée par recherche web) · id NP01 · jours 15, 80*
 
 #### Quelle différence de port distingue le sureau yèble du sureau noir ? · piège
 
@@ -9921,7 +9921,7 @@ Quelle différence de port distingue le sureau yèble du sureau noir ?
 
 **Explication :** Le yèble (Sambucus ebulus) est une vivace herbacée de moins de 2 m qui disparaît l'hiver ; le sureau noir fait du bois. Baies du yèble toxiques : dans le doute, ne pas consommer.
 **Source :** <https://www.aroma-zone.com/page/sureau-hieble-sambucus-ebulus-definition-proprietes-et-bienfaits>, <https://www.techno-science.net/fr/definitions/sureau-noir>
-*validée (recoupée par recherche web) · id NP02 · jours 14, 87*
+*validée (recoupée par recherche web) · id NP02 · jours 14, 83*
 
 #### Parmi ces descriptions, laquelle correspond au cône du thuya (et non du cyprès) ? · piège
 
@@ -9934,7 +9934,7 @@ Parmi ces descriptions, laquelle correspond au cône du thuya (et non du cyprès
 
 **Explication :** Thuya : petit cône ovale (1-2 cm), écailles opposées, rameaux aplatis. Cyprès (Cupressus) : cône globuleux jusqu'à 4 cm, écailles polygonales en spirale.
 **Source :** <https://www.techno-science.net/fr/definitions/thuya>, <https://www.universalis.fr/encyclopedie/cupressales/2-les-cupressacees/>
-*validée (recoupée par recherche web) · id NP06 · jours 46*
+*validée (recoupée par recherche web) · id NP06 · jours 49*
 
 #### Quelle description correspond à l'épicéa commun, souvent appelé à tort « sapin » ? · piège
 
@@ -9947,7 +9947,7 @@ Quelle description correspond à l'épicéa commun, souvent appelé à tort « s
 
 **Explication :** Épicéa : aiguilles piquantes en losange, cônes pendants tombant entiers. Vrai sapin (Abies) : aiguilles plates à deux bandes blanches dessous, cônes dressés.
 **Source :** <https://www.truffaut.com/difference-sapin-epicea.html>, <https://tela-botanica.org/sites/botanique/fr/documents/biblio/articles_en_ligne/abres_lozere/gymnospermes.pdf>
-*validée (recoupée par recherche web) · id NP07 · jours 52*
+*validée (recoupée par recherche web) · id NP07 · jours 44*
 
 #### Le « lilas des Indes » (Lagerstroemia), si fleuri l'été, appartient à la famille… · piège
 
@@ -9960,7 +9960,7 @@ Le « lilas des Indes » (Lagerstroemia), si fleuri l'été, appartient à la fa
 
 **Explication :** Faux ami : Lagerstroemia (aussi dit lilas d'été ou myrte de crêpe) est une Lythracée. Le vrai lilas (Syringa) est une Oléacée, comme l'olivier et le frêne.
 **Source :** <https://www.futura-sciences.com/planete/definitions/botanique-lagerstroemia-11521/>, <https://www.techno-science.net/fr/definitions/lagerstroemia>
-*validée (recoupée par recherche web) · id NP08 · jours 42*
+*validée (recoupée par recherche web) · id NP08 · jours 48*
 
 #### Quelle bogue est celle du marronnier d'Inde, dont le fruit est toxique ? · piège
 
@@ -9973,7 +9973,7 @@ Quelle bogue est celle du marronnier d'Inde, dont le fruit est toxique ?
 
 **Explication :** Marron d'Inde : capsule à piquants courts, un seul gros fruit, feuilles palmées composées. Châtaignier : bogue très épineuse, 2-4 fruits, feuilles simples dentées. Dans le doute, ne pas consommer.
 **Source :** <https://www.futura-sciences.com/planete/actualites/botanique-difference-marron-chataigne-92075/>, <https://www.quechoisir.org/actualite-marron-chataigne-ou-marron-d-inde-gare-aux-confusions-n71287/>
-*validée (recoupée par recherche web) · id NP12 · jours 54*
+*validée (recoupée par recherche web) · id NP12 · jours 45*
 
 #### Pourquoi les feuilles du peuplier tremble s'agitent-elles au moindre souffle de vent ? · piège
 
@@ -9999,7 +9999,7 @@ Quel pin a ses aiguilles groupées par cinq ?
 
 **Explication :** Pin cembro et pin de Weymouth : aiguilles par 5. Pin sylvestre (comme noir, maritime, parasol) : aiguilles par 2. Compter les aiguilles par gaine est un critère clé.
 **Source :** <https://www.dicocitations.com/dico-mot-definition/149137/Pin.php>, <https://www.humanite-biodiversite.fr/articles/163960-les-pins-pinus-spp>
-*validée (recoupée par recherche web) · id NP14 · jours 44*
+*validée (recoupée par recherche web) · id NP14 · jours 45*
 
 #### Le « poivre rose » vendu en épicerie vient du faux-poivrier. À quelle famille appartient c… · piège
 
@@ -10012,7 +10012,7 @@ Le « poivre rose » vendu en épicerie vient du faux-poivrier. À quelle famill
 
 **Explication :** Le poivre rose (Schinus) n'est pas un poivre : c'est une Anacardiacée, famille de la cajou et de la mangue. D'où d'éventuelles allergies croisées. Dans le doute, s'abstenir.
 **Source :** <https://premierepeau.com/fr/pages/glossary-terms/pink-pepper>, <https://www.techno-science.net/fr/definitions/faux-poivrier-odorant>
-*validée (recoupée par recherche web) · id NQ04 · jours 3*
+*validée (recoupée par recherche web) · id NQ04 · jours 60*
 
 #### La noix de muscade, malgré son nom, est : · piège
 
@@ -10025,7 +10025,7 @@ La noix de muscade, malgré son nom, est :
 
 **Explication :** Pas une vraie noix : c'est la graine de Myristica fragrans. L'arille rouge qui l'enveloppe, le macis, est une autre épice issue du même fruit.
 **Source :** <https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/2095326/noix-de-muscade>, <https://www.universalis.fr/dictionnaire/macis/>
-*validée (recoupée par recherche web) · id NQ05 · jours 19, 68*
+*validée (recoupée par recherche web) · id NQ05 · jours 18, 70*
 
 #### Le gingembre qu'on râpe en cuisine est : · piège
 
@@ -10038,7 +10038,7 @@ Le gingembre qu'on râpe en cuisine est :
 
 **Explication :** Le « gingembre » n'est pas une racine : c'est un rhizome, tige souterraine horizontale qui émet racines et pousses, d'où ses nœuds et ses bourgeons visibles.
 **Source :** <https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/26576400/rhizome>, <https://www.futura-sciences.com/maison/questions-reponses/jardinage-astuces-pratiques-faire-pousser-gingembre-facilement-chez-soi-24580/>
-*validée (recoupée par recherche web) · id NQ08 · jours 11, 71*
+*validée (recoupée par recherche web) · id NQ08 · jours 10, 71*
 
 #### Pourquoi ne voit-on jamais les fleurs du figuier ? · piège
 
@@ -10051,7 +10051,7 @@ Pourquoi ne voit-on jamais les fleurs du figuier ?
 
 **Explication :** La figue est une inflorescence en urne (sycone) : des centaines de minuscules fleurs tapissent l'intérieur, accessibles par l'ostiole, où entre la guêpe pollinisatrice.
 **Source :** <https://www.techno-science.net/fr/definitions/figue>
-*validée (recoupée par recherche web) · id NQ10 · jours 30, 88*
+*validée (recoupée par recherche web) · id NQ10 · jours 4, 86*
 
 #### Beaucoup de gens confondent colchique et crocus. Combien d'étamines porte la fleur du colc… · piège
 
@@ -10064,7 +10064,7 @@ Beaucoup de gens confondent colchique et crocus. Combien d'étamines porte la fl
 
 **Explication :** Seul le colchique contient des alcaloïdes dangereux : une différence à connaître pour ne jamais confondre les deux.
 **Source :** <https://www.techno-science.net/fr/definitions/colchique-d-automne>, <https://www.rtbf.be/article/floraison-d-automne-et-si-on-plantait-des-colchiques-11600013>
-*validée (recoupée par recherche web) · id NX40 · jours 43, 90*
+*validée (recoupée par recherche web) · id NX40 · jours 36*
 
 #### Le ginkgo, avec ses feuilles en éventail qui jaunissent à l'automne, est… · piège
 
@@ -10077,7 +10077,7 @@ Le ginkgo, avec ses feuilles en éventail qui jaunissent à l'automne, est…
 
 **Explication :** Malgré ses feuilles plates et caduques, le ginkgo est une gymnosperme. C'est le seul représentant vivant des Ginkgophytes.
 **Source :** <https://espacepourlavie.ca/carnet-horticole/ginkgo>, <https://www.britannica.com/print/article/233931>
-*validée (recoupée par recherche web) · corrigée · id c0348fcfda · jours 29, 85*
+*validée (recoupée par recherche web) · corrigée · id c0348fcfda · jours 29, 90*
 
 #### Lequel de ces végétaux n'est PAS un palmier ? · piège
 
@@ -10092,7 +10092,7 @@ Lequel de ces végétaux n'est PAS un palmier ?
 
 **Explication :** Le cycas, parfois vendu comme « palmier », est une gymnosperme : il ne fleurit pas et porte des cônes, comme les conifères. Les trois autres sont de vrais palmiers.
 **Source :** <https://plants.ces.ncsu.edu/plants/cycas-revoluta>, <https://blogs.ifas.ufl.edu/nassauco/?p=680>
-*validée (recoupée par recherche web) · id e80c01b28a · jours 7, 69*
+*validée (recoupée par recherche web) · id e80c01b28a · jours 33, 77*
 
 #### Le saule pleureur (Salix babylonica) est originaire… · piège
 
@@ -10105,7 +10105,7 @@ Le saule pleureur (Salix babylonica) est originaire…
 
 **Explication :** Il vient de Chine. Linné l'a nommé « babylonica » en croyant y reconnaître les saules du psaume de Babylone : une erreur de botaniste.
 **Source :** <https://www.techno-science.net/fr/definitions/saule-pleureur>, <https://areq.net/lang/fr/Saule_pleureur.html>
-*validée (recoupée par recherche web) · id eeda23eedd · jours 42*
+*validée (recoupée par recherche web) · id eeda23eedd · jours 41*
 
 #### Le lierre terrestre, petite plante rampante à fleurs violettes, est de la famille… · piège
 
@@ -10118,7 +10118,7 @@ Le lierre terrestre, petite plante rampante à fleurs violettes, est de la famil
 
 **Explication :** Glechoma hederacea est une Lamiacée, comme la menthe : tige carrée, feuilles opposées et odeur aromatique au froissement. Rien à voir avec le lierre.
 **Source :** <https://www.techno-science.net/fr/definitions/lierre-terrestre>, <https://taxref.mnhn.fr/taxref-web/taxa/87342>
-*validée (recoupée par recherche web) · id fd4c512be5*
+*validée (recoupée par recherche web) · id fd4c512be5 · jours 54*
 
 #### L'herbe à chat (cataire), qui rend les chats joueurs, appartient à la famille : · piège
 
@@ -10131,7 +10131,7 @@ L'herbe à chat (cataire), qui rend les chats joueurs, appartient à la famille 
 
 **Explication :** Malgré son nom, Nepeta cataria n'est pas une graminée : c'est une Lamiacée, tige carrée comme la menthe. Sa népétalactone agit sur beaucoup de chats, pas sur tous.
 **Source :** <https://espacepourlavie.ca/herbe-chat-utilisations-et-reactions-des-animaux>, <https://www.aroma-zone.com/page/la-cataire-nepeta-cataria-origines-bienfaits-et-conseils-pratiques>
-*relue (non recoupée) · id NQ11 · jours 20, 72*
+*relue (non recoupée) · id NQ11 · jours 20, 78*
 
 ### Idées reçues · difficile (10)
 
@@ -10172,7 +10172,7 @@ Les « saules » de Babylone cités dans le psaume 137 étaient, selon l'hypoth�
 
 **Explication :** Linné a cru les reconnaître dans le saule pleureur, venu en fait de Chine. L'hypothèse la plus courante est que le psaume évoquait Populus euphratica, le peuplier de l'Euphrate, même si l'identification reste débattue.
 **Source :** <https://www.techno-science.net/fr/definitions/saule-pleureur>, <https://areq.net/lang/fr/Saule_pleureur.html>
-*validée (recoupée par recherche web) · corrigée · id 4be509c398 · jours 74*
+*validée (recoupée par recherche web) · corrigée · id 4be509c398 · jours 75*
 
 #### Quel érable fleurit en jaune-vert avant le développement de ses feuilles ?
 
@@ -10185,7 +10185,7 @@ Quel érable fleurit en jaune-vert avant le développement de ses feuilles ?
 
 **Explication :** L'érable plane (Acer platanoides) fleurit avant ses feuilles et a des bourgeons rouge violacé ; le sycomore fleurit après la feuillaison.
 **Source :** <https://www.futura-sciences.com/planete/definitions/botanique-erable-plane-9307/>, <https://www.techno-science.net/fr/definitions/erable-plane>
-*validée (recoupée par recherche web) · une seule source, à relire · id NP03 · jours 86*
+*validée (recoupée par recherche web) · une seule source, à relire · id NP03 · jours 87*
 
 #### Sous les feuilles du tilleul à petites feuilles, que remarque-t-on aux aisselles des nervu…
 
@@ -10198,7 +10198,7 @@ Sous les feuilles du tilleul à petites feuilles, que remarque-t-on aux aisselle
 
 **Explication :** Tilia cordata a des touffes de poils roux et un dessous glauque ; Tilia platyphyllos a des poils blanchâtres et de plus grandes feuilles (jusqu'à 20 cm).
 **Source :** <https://www.techno-science.net/fr/definitions/tilleul-a-petites-feuilles>, <https://www.techno-science.net/fr/definitions/tilleul-a-grandes-feuilles>
-*validée (recoupée par recherche web) · id NP04 · jours 75*
+*validée (recoupée par recherche web) · id NP04 · jours 1*
 
 #### Chez le chêne sessile (rouvre), comment sont les glands et les feuilles ?
 
@@ -10224,7 +10224,7 @@ Chez l'aubépine à un style (Crataegus monogyna), quelle combinaison est correc
 
 **Explication :** Monogyne : un style, un noyau, feuilles nettement lobées. Aubépine épineuse (C. laevigata) : 2-3 styles, 2 noyaux, feuilles peu lobées. Les deux s'hybrident souvent.
 **Source :** <https://www.techno-science.net/fr/definitions/aubepine-epineuse>, <https://www.techno-science.net/fr/definitions/epine-blanche>
-*validée (recoupée par recherche web) · id NP10 · jours 64*
+*validée (recoupée par recherche web) · id NP10 · jours 66*
 
 #### Quelle description oppose correctement le frêne commun au sorbier des oiseleurs, tous deux…
 
@@ -10250,7 +10250,7 @@ Le colchique d'automne est souvent appelé « crocus d'automne ». À quelle fam
 
 **Explication :** Faux ami : le colchique (Colchicaceae) n'est pas un crocus (Iridaceae) : 6 étamines et 3 styles contre 3 étamines, feuilles au printemps. Très toxique : dans le doute, ne pas consommer.
 **Source :** <https://www.americanmeadows.com/blogs/flower-bulbs/difference-crocus-vs-colchicum>, <https://gardenerspath.com/plants/flowers/grow-autumn-crocus/>
-*validée (recoupée par recherche web) · id NP15 · jours 73*
+*validée (recoupée par recherche web) · id NP15 · jours 71*
 
 #### Sous un vrai sapin (Abies), on ne trouve presque jamais de cônes entiers. Pourquoi ?
 
@@ -10280,7 +10280,7 @@ Quelle mousse, gorgée d'eau comme une éponge, caractérise les tourbières aci
 
 **Explication :** Les sphaignes retiennent l'eau, piègent les nutriments et acidifient leur milieu, ce qui les avantage. Leurs restes s'accumulent en tourbe.
 **Source :** <https://pole-lagunes.org/wp-content/uploads/sites/4/2023/12/1_CO_Coffinet_SNO_Tourbieres.pdf>, <https://www.biodiversite-centrevaldeloire.fr/sites/default/files/content/ressources/pdf/2025-11/Fiche_hab_tourbieres_acides_refonte.pdf>
-*validée (recoupée par recherche web) · id NM00 · jours 25, 78*
+*validée (recoupée par recherche web) · id NM00 · jours 26, 80*
 
 #### Laquelle de ces plantes pousse sur les vases des prés salés, régulièrement recouvertes par…
 
@@ -10293,7 +10293,7 @@ Laquelle de ces plantes pousse sur les vases des prés salés, régulièrement r
 
 **Explication :** La salicorne est une halophyte : ses organes aériens charnus sont gorgés d'eau. Elle forme des végétations pionnières sur vases salées et berges de lagunes.
 **Source :** <https://www.occitanie.developpement-durable.gouv.fr/IMG/pdf/1310_Vegetations_pionnieres_a_salicornes_cle7bf784.pdf>, <https://www.prefectures-regions.gouv.fr/normandie/Actualites/Environnement/Les-Salicornes-dans-le-departement-de-la-Manche>
-*validée (recoupée par recherche web) · id NM01 · jours 14, 55*
+*validée (recoupée par recherche web) · id NM01 · jours 15, 56*
 
 #### Comment le nénuphar blanc se maintient-il au fond d'une mare ?
 
@@ -10306,7 +10306,7 @@ Comment le nénuphar blanc se maintient-il au fond d'une mare ?
 
 **Explication :** Le rhizome charnu est enraciné dans le fond ; les pétioles, jusqu'à environ 2 m, portent les feuilles rondes à la surface. Des plantes comme la grenouillette flottent sans racine.
 **Source :** <https://biosphere-bassin-dordogne.fr/wp-content/uploads/2016/10/livret-hydrophytes.pdf>, <https://www.techno-science.net/fr/definitions/nenuphar-blanc>
-*validée (recoupée par recherche web) · id NM02 · jours 12, 64*
+*validée (recoupée par recherche web) · id NM02 · jours 7, 66*
 
 #### Pourquoi la joubarbe des toits supporte-t-elle le plein soleil sur un toit ou un muret de …
 
@@ -10319,7 +10319,7 @@ Pourquoi la joubarbe des toits supporte-t-elle le plein soleil sur un toit ou un
 
 **Explication :** Plante succulente : ses rosettes charnues servent de réservoir. Elle se contente d'un sol drainant, même sec et pauvre, d'où son usage en rocaille et sur les toits.
 **Source :** <https://www.futura-sciences.com/maison/definitions/jardinage-joubarbe-17385/>, <https://www.techno-science.net/fr/definitions/plante-succulente>
-*validée (recoupée par recherche web) · id NM03 · jours 32, 90*
+*validée (recoupée par recherche web) · id NM03 · jours 45*
 
 #### Laquelle de ces plantes typiques des landes et tourbières évite les sols calcaires ?
 
@@ -10332,7 +10332,7 @@ Laquelle de ces plantes typiques des landes et tourbières évite les sols calca
 
 **Explication :** Acidiphile, la callune domine landes et tourbières sur sols siliceux pauvres (pH autour de 4,5 à 6,5) et pousse mal à l'ombre.
 **Source :** <https://www.futura-sciences.com/planete/definitions/botanique-acidiphile-6446/>, <https://inpn.mnhn.fr/docs/cahab/habitats-declines/4030_18.pdf>
-*validée (recoupée par recherche web) · id NM04 · jours 33, 82*
+*validée (recoupée par recherche web) · id NM04 · jours 40, 84*
 
 #### Quel sol convient le mieux à la lavande vraie ?
 
@@ -10345,7 +10345,7 @@ Quel sol convient le mieux à la lavande vraie ?
 
 **Explication :** Plante de collines ensoleillées, elle apprécie les terrains calcaires, secs et pauvres en nutriments, avec un drainage impeccable.
 **Source :** <https://botanique.vd.ch/fileadmin/groups/11/images/Animations/Plante_du_mois/Plante_du_mois_-_juin.pdf>, <https://www.truffaut.com/lavandula-angustifolia-ctr-3-litres-74272.html>
-*validée (recoupée par recherche web) · id NM05 · jours 26, 82*
+*validée (recoupée par recherche web) · id NM05 · jours 27, 82*
 
 #### Quand les orties envahissent un coin de jardin, que révèle leur présence ?
 
@@ -10358,7 +10358,7 @@ Quand les orties envahissent un coin de jardin, que révèle leur présence ?
 
 **Explication :** Bio-indicatrice classique, la grande ortie s'installe sur d'anciens tas de fumier, abords d'habitations et friches enrichies en azote, phosphore et potassium.
 **Source :** <https://tela-botanica.org/wp-content/uploads/2020/07/Urtica_dioica.pdf>, <https://occitanie.lpo.fr/wp-content/uploads/2020/04/ortie.pdf>
-*validée (recoupée par recherche web) · id NM06 · jours 34, 80*
+*validée (recoupée par recherche web) · id NM06 · jours 33, 81*
 
 #### Lequel de ces arbres évite les sols calcaires ?
 
@@ -10371,7 +10371,7 @@ Lequel de ces arbres évite les sols calcaires ?
 
 **Explication :** Calcifuge, le châtaignier redoute le calcaire actif ; il préfère les sols faiblement acides (pH 4,5 à 6,5), profonds et bien drainés.
 **Source :** <https://dictionnaire-academie.fr/article/A9C0260>, <https://agriculture.gouv.fr/telecharger/82971>
-*validée (recoupée par recherche web) · id NM07 · jours 2, 83*
+*validée (recoupée par recherche web) · id NM07 · jours 6, 84*
 
 #### Pourquoi l'anémone sylvie et la ficaire fleurissent-elles dès février-mars sous les arbres…
 
@@ -10384,7 +10384,7 @@ Pourquoi l'anémone sylvie et la ficaire fleurissent-elles dès février-mars so
 
 **Explication :** Ces plantes vernales achèvent leur cycle tôt puis entrent en repos quand l'ombre s'installe. Ficaire de février à avril, anémone sylvie dès mars.
 **Source :** <https://www.jardiner-malin.fr/fiche/fleur-hiver-sous-bois-ombre.html>, <https://inpn.mnhn.fr/espece/cd_nom/82642?lg=en>
-*validée (recoupée par recherche web) · id NM08 · jours 18, 53*
+*validée (recoupée par recherche web) · id NM08 · jours 18, 55*
 
 #### Quel est le milieu typique du roseau commun ?
 
@@ -10397,7 +10397,7 @@ Quel est le milieu typique du roseau commun ?
 
 **Explication :** Hélophyte : rhizomes et racines dans un sol gorgé d'eau, peu oxygéné, tiges aériennes dehors. Ses rhizomes stabilisent les berges et épurent l'eau.
 **Source :** <https://luberon.fr/luberon/parc-naturel-regional/flore/annu+roseau-commun-dans-le-luberon+2305.html>, <https://www.quebec.ca/agriculture-environnement-et-ressources-naturelles/flore/fiches-especes-floristiques/roseau-commun>
-*validée (recoupée par recherche web) · id NM09 · jours 1, 71*
+*validée (recoupée par recherche web) · id NM09 · jours 14, 72*
 
 #### Pourquoi le revers blanc et duveteux des feuilles du chêne vert l'aide-t-il en été ?
 
@@ -10410,7 +10410,7 @@ Pourquoi le revers blanc et duveteux des feuilles du chêne vert l'aide-t-il en 
 
 **Explication :** Petites, coriaces (sclérophylles) et poilues dessous, ses feuilles réduisent la transpiration. L'arbre garde un feuillage vert en continu, renouvelé peu à peu.
 **Source :** <https://calanques-parcnational.fr/fr/chene-vert>, <https://agriculture.gouv.fr/telecharger/98531>
-*validée (recoupée par recherche web) · id NM10 · jours 40*
+*validée (recoupée par recherche web) · id NM10 · jours 42*
 
 #### Quelle plante aux feuilles en rosette plaquée au sol prospère sur les chemins piétinés et …
 
@@ -10423,7 +10423,7 @@ Quelle plante aux feuilles en rosette plaquée au sol prospère sur les chemins 
 
 **Explication :** Ses feuilles épaisses et élastiques résistent au piétinement. Sa présence signale un sol compacté.
 **Source :** <https://franco.wiki/fr/Grand_Plantain.html>, <https://entresambreetmeuse.natagora.be/fileadmin/Natagora_Entre-Sambre-et-Meuse/ClIN_d_OEIL/Clin_d_Oeil_12/CO_12_-_Plantain.pdf>
-*validée (recoupée par recherche web) · id NM11 · jours 7, 55*
+*validée (recoupée par recherche web) · id NM11 · jours 12, 58*
 
 #### Dans quel milieu l'ail des ours forme-t-il des tapis au printemps ?
 
@@ -10436,7 +10436,7 @@ Dans quel milieu l'ail des ours forme-t-il des tapis au printemps ?
 
 **Explication :** Plante de sous-bois ombragés et de vallons forestiers humides, souvent près des ruisseaux, elle affectionne les sols humifères.
 **Source :** <https://bx1.be/categories/news/lail-des-ours-de-retour-dans-les-forets-bruxelloises-la-cueillette-reste-interdite/>, <https://www.synonyme-du-mot.com/les-articles/ou-se-trouve-lail-des-ours>
-*validée (recoupée par recherche web) · id NM12 · jours 17, 79*
+*validée (recoupée par recherche web) · id NM12 · jours 1, 78*
 
 #### Dans une vallée de montagne, comment appelle-t-on le versant exposé au soleil, plus chaud …
 
@@ -10449,7 +10449,7 @@ Dans une vallée de montagne, comment appelle-t-on le versant exposé au soleil,
 
 **Explication :** L'adret, versant sud, est le plus chaud et le plus favorable aux cultures ; l'ubac (du latin opacus, « ombreux ») reste longtemps à l'ombre en hiver.
 **Source :** <https://www.universalis.fr/dictionnaire/adret/>, <https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/17566614/ubac>
-*validée (recoupée par recherche web) · id NM13 · jours 6, 54*
+*validée (recoupée par recherche web) · id NM13 · jours 2, 47*
 
 ### Milieux · intermédiaire (45)
 
@@ -10477,7 +10477,7 @@ Les bruyères passent pour exiger un sol acide. Laquelle fait exception en tolé
 
 **Explication :** Erica carnea vit en montagne sous des pins, sur substrat calcaire, et s'accommode d'un sol légèrement calcaire au jardin. La callune reste acidiphile.
 **Source :** <https://geonature2.vanoise-parcnational.fr/geonature/api/media/taxhub/96664_88_Erica_carnea.pdf>, <https://www.truffaut.com/quelle-bruyere-choisir-jardin.html>
-*validée (recoupée par recherche web) · id NM14 · jours 75*
+*validée (recoupée par recherche web) · id NM14 · jours 5*
 
 #### Du point de vue botanique, que sont les épines d'un cactus ? · piège
 
@@ -10490,7 +10490,7 @@ Du point de vue botanique, que sont les épines d'un cactus ?
 
 **Explication :** Elles naissent sur des aréoles (bourgeons axillaires condensés). La photosynthèse se fait dans la tige charnue ; les épines limitent la perte d'eau et dissuadent les herbivores.
 **Source :** <https://complete.bioone.org/journals/Adansonia/volume-38/issue-2/a2016n2a10/Areolar-structure-in-some-Opuntioideae--occurrence-of-mucilage-cells/10.5252/a2016n2a10.full>, <https://www.techno-science.net/fr/definitions/epine>
-*validée (recoupée par recherche web) · id NM16 · jours 5, 77*
+*validée (recoupée par recherche web) · id NM16 · jours 23, 77*
 
 #### Un carex ressemble à une graminée au premier coup d'œil. Quel indice le distingue le plus … · piège
 
@@ -10503,7 +10503,7 @@ Un carex ressemble à une graminée au premier coup d'œil. Quel indice le disti
 
 **Explication :** Règle pratique, pas infaillible : la plupart des cypéracées ont une tige florale triangulaire, la plupart des graminées une tige ronde et creuse. Le fruit des carex est un akène.
 **Source :** <https://espacepourlavie.ca/en/biodome-flora/sedges>, <https://www.plantpref.co.uk/carex.html>
-*validée (recoupée par recherche web) · id NM17 · jours 13, 70*
+*validée (recoupée par recherche web) · id NM17 · jours 22, 65*
 
 #### Certaines euphorbes africaines ressemblent trait pour trait à des cactus américains. Comme… · piège
 
@@ -10516,7 +10516,7 @@ Certaines euphorbes africaines ressemblent trait pour trait à des cactus améri
 
 **Explication :** Cactacées (Amérique) et euphorbiacées (Afrique) n'ont pas d'ancêtre commun récent : tiges succulentes et épines sont apparues indépendamment, comme chez Euphorbia horrida.
 **Source :** <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9027645/>, <https://www.cactus-art.biz/schede/EUPHORBIA/Euphorbia_horrida/Euphorbia_horrida/Euphorbia_horrida.htm>
-*validée (recoupée par recherche web) · id NM18 · jours 65*
+*validée (recoupée par recherche web) · id NM18 · jours 67*
 
 #### Lequel de ces chênes supporte le mieux un sol lourd, engorgé de façon permanente ? · piège
 
@@ -10529,7 +10529,7 @@ Lequel de ces chênes supporte le mieux un sol lourd, engorgé de façon permane
 
 **Explication :** Le pédonculé tolère l'engorgement et préfère les sols riches. Le sessile, plus frugal et plus résistant à la sécheresse d'été, ne supporte pas l'engorgement permanent.
 **Source :** <https://agriculture.gouv.fr/telecharger/132668>, <https://hal.inrae.fr/hal-03684713/document>
-*validée (recoupée par recherche web) · id NM19 · jours 60*
+*validée (recoupée par recherche web) · id NM19 · jours 70*
 
 #### Une pelouse calcaire sèche peut abriter plus de 200 espèces. Quelle caractéristique du sol… · piège
 
@@ -10542,7 +10542,7 @@ Une pelouse calcaire sèche peut abriter plus de 200 espèces. Quelle caractéri
 
 **Explication :** Les sols basiques pauvres (oligotrophes) favorisent des cortèges très diversifiés. L'abandon du pâturage laisse arbustes et arbres refermer le milieu.
 **Source :** <https://www.sarthe.fr/sites/default/files/2021-05/pelouses-seches-semi-naturelles-et-facies-d-embuissonnement-sur-calca.pdf>, <https://www.grand-est.developpement-durable.gouv.fr/IMG/pdf/vallee_de_la_Meholle_cle78ace6.pdf>
-*validée (recoupée par recherche web) · id NM20 · jours 11, 68*
+*validée (recoupée par recherche web) · id NM20 · jours 21, 69*
 
 #### Quel gaz, issu de la combustion du charbon et du fioul, a créé des « déserts lichéniques »… · piège
 
@@ -10555,7 +10555,7 @@ Quel gaz, issu de la combustion du charbon et du fioul, a créé des « déserts
 
 **Explication :** Très sensibles, les lichens absorbent directement les gaz : le SO2 forme des sulfites qui perturbent leur métabolisme. Ils servent donc de bioindicateurs de l'air.
 **Source :** <https://www.afl-lichenologie.fr/telecharger/Doc/Lichens-et-qualite-Air.pdf>, <https://assets.erudit.tech/fr/revue/natcan/2020/v144/n2/1071605ar.pdf>
-*validée (recoupée par recherche web) · id NM21 · jours 16, 76*
+*validée (recoupée par recherche web) · id NM21 · jours 13, 75*
 
 #### Une haie brise-vent de 5 m de haut protège les cultures, selon la règle courante, sur une …
 
@@ -10568,7 +10568,7 @@ Une haie brise-vent de 5 m de haut protège les cultures, selon la règle couran
 
 **Explication :** Règle courante : zone protégée égale à environ 10 fois la hauteur. Elle varie avec la porosité de la haie et le climat.
 **Source :** <https://www.agrireseau.net/bovinsboucherie/documents/Feuillet%2010901.pdf>, <https://www.agrireseau.net/banqueplans/feuillets/Feuillet%2010903.pdf>
-*validée (recoupée par recherche web) · id NM22 · jours 43*
+*validée (recoupée par recherche web) · id NM22 · jours 38*
 
 #### Sur un talus argileux fraîchement remué, quelle plante pionnière à rhizome apparaît volont…
 
@@ -10581,7 +10581,7 @@ Sur un talus argileux fraîchement remué, quelle plante pionnière à rhizome a
 
 **Explication :** Son rhizome persiste jusqu'à 20 cm de profondeur et repart après un travail du sol. Elle apprécie les sols lourds, argileux et humides.
 **Source :** <https://www.aroma-zone.com/page/tussilage-tussilago-farfara-definition-proprietes-et-bienfaits>, <https://spot.creamontblanc.org/fiches-especes/tussilage>
-*validée (recoupée par recherche web) · id NM24 · jours 44*
+*validée (recoupée par recherche web) · id NM24 · jours 38*
 
 #### Quelle fougère des sols acides et profonds envahit landes et clairières grâce à un long rh…
 
@@ -10594,7 +10594,7 @@ Quelle fougère des sols acides et profonds envahit landes et clairières grâce
 
 **Explication :** Son rhizome rampe à plusieurs dizaines de cm sous terre ; elle concurrence fortement les jeunes plants en reboisement. Toxique : ne pas la consommer.
 **Source :** <https://franco.wiki/fr/Pteridium_aquilinum.html>, <https://www.techno-science.net/fr/definitions/fougere-aigle>
-*validée (recoupée par recherche web) · id NM25 · jours 44*
+*validée (recoupée par recherche web) · id NM25 · jours 50*
 
 #### Une tourbière haute est gorgée d'eau toute l'année, pourtant ses plantes manquent d'élémen… · piège
 
@@ -10607,7 +10607,7 @@ Une tourbière haute est gorgée d'eau toute l'année, pourtant ses plantes manq
 
 **Explication :** Les haut-marais reçoivent des précipitations pauvres en minéraux, contrairement aux bas-marais alimentés par la nappe. D'où l'acidité et la rareté des nutriments.
 **Source :** <https://www.drieat.ile-de-france.developpement-durable.gouv.fr/IMG/pdf/Guide_Vegetaux-Tome_2-part_2_vegetations_tourbieres-Web.pdf>, <https://www.biodiversite-centrevaldeloire.fr/sites/default/files/content/ressources/pdf/2025-11/Fiche_hab_tourbieres_acides_refonte.pdf>
-*validée (recoupée par recherche web) · id NM26 · jours 41, 89*
+*validée (recoupée par recherche web) · id NM26 · jours 32, 89*
 
 #### Une lavande plantée en sol lourd dépérit souvent en hiver. Quelle est la cause la plus fré… · piège
 
@@ -10620,7 +10620,7 @@ Une lavande plantée en sol lourd dépérit souvent en hiver. Quelle est la caus
 
 **Explication :** Son pire ennemi est l'excès d'humidité hivernale, pas le froid : en sol très drainé, elle résiste bien au gel. D'où les sols caillouteux et la pouzzolane.
 **Source :** <https://www.lavenir.net/lifestyle/2026/09/04/comment-prendre-soin-de-ses-lavandes-et-lesquelles-choisir-pour-une-belle-floraison-les-conseils-de-marc-knaepen-4U7QOVC3W5H37LQBGSURZKPEQU/>, <https://botanique.vd.ch/fileadmin/groups/11/images/Animations/Plante_du_mois/Plante_du_mois_-_juin.pdf>
-*validée (recoupée par recherche web) · id NM27 · jours 39, 89*
+*validée (recoupée par recherche web) · id NM27 · jours 11, 88*
 
 #### Quel organe permet à l'iris des marais de former des tapis denses sur la vase d'une mare ?
 
@@ -10633,7 +10633,7 @@ Quel organe permet à l'iris des marais de former des tapis denses sur la vase d
 
 **Explication :** Son rhizome épais (1,5 à 3 cm) rampe dans la vase ; de petits fragments suffisent à repartir, ce qui le rend difficile à contenir en mare.
 **Source :** <https://www.cbnbrest.fr/files/Fiche_ZH_BZH_Iris_pseudacorus_20230112.pdf>, <https://iucngisd.org/gisd/species.php?sc=873>
-*relue (non recoupée) · id NM23 · jours 48*
+*relue (non recoupée) · id NM23 · jours 58*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -10648,7 +10648,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Jacinthe des bois pousse à la mi-ombre ou à l'ombre. Trèfle blanc, Yucca filamenteux, Verge d'or : plein soleil.
 **Source :** <https://www.rhs.org.uk/plants/8890/hyacinthoides-non-scripta/details>
-*issue des données de l'appli (non recoupée) · id 06ea7cbe29 · jours 33*
+*issue des données de l'appli (non recoupée) · id 06ea7cbe29 · jours 40*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -10663,7 +10663,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Aspérule odorante pousse à la mi-ombre ou à l'ombre. Hélénie, Origan, Mauve sylvestre : plein soleil.
 **Source :** <https://www.rhs.org.uk/plants/7595/wd/details>, <https://plants.ces.ncsu.edu/plants/galium-odoratum/>
-*issue des données de l'appli (non recoupée) · id 0f636a6133 · jours 45*
+*issue des données de l'appli (non recoupée) · id 0f636a6133 · jours 15*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -10678,7 +10678,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Fatsia du Japon pousse à la mi-ombre ou à l'ombre. Copalme d'Amérique, Palmier nain, Sumac de Virginie : plein soleil.
 **Source :** <https://www.rhs.org.uk/plants/7147/fatsia-japonica/details>
-*issue des données de l'appli (non recoupée) · id 101172fdc5 · jours 32*
+*issue des données de l'appli (non recoupée) · id 101172fdc5 · jours 29*
 
 #### Laquelle de ces plantes pousse en sol gorgé d'eau ?
 
@@ -10693,7 +10693,7 @@ Laquelle de ces plantes pousse en sol gorgé d'eau ?
 
 **Explication :** Trolle d'Europe aime les sols humides, voire l'eau. Anthémis des teinturiers, Ibéris, Armérie maritime : sols secs.
 **Source :** <https://www.rhs.org.uk/Plants/18449/Trollius-europaeus/Details>
-*issue des données de l'appli (non recoupée) · id 10c359605f · jours 37, 65*
+*issue des données de l'appli (non recoupée) · id 10c359605f · jours 8, 59*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -10708,7 +10708,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Oxalis petite oseille pousse à la mi-ombre ou à l'ombre. Jonc fleuri, Valériane rouge, Trèfle blanc : plein soleil.
 **Source :** <https://www.rhs.org.uk/plants/12040/wd/details>, <https://bsbi.org/in-your-area/local-botany/co-fermanagh/fermanagh-species-accounts/oxalis-acetosella-l>
-*issue des données de l'appli (non recoupée) · id 186d34277f · jours 22*
+*issue des données de l'appli (non recoupée) · id 186d34277f · jours 33*
 
 #### Laquelle de ces plantes supporte le mieux la sécheresse ?
 
@@ -10723,7 +10723,7 @@ Laquelle de ces plantes supporte le mieux la sécheresse ?
 
 **Explication :** Ibéris se contente d'un sol sec. Valériane officinale, Blechne en épi, Acore odorant : sols frais à humides.
 **Source :** <https://rhs.org.uk/Plants/9066/wd/Details>, <https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:285652-1>
-*issue des données de l'appli (non recoupée) · id 268c006e08 · jours 23, 61*
+*issue des données de l'appli (non recoupée) · id 268c006e08 · jours 34, 63*
 
 #### Laquelle de ces plantes supporte le mieux la sécheresse ?
 
@@ -10738,7 +10738,7 @@ Laquelle de ces plantes supporte le mieux la sécheresse ?
 
 **Explication :** Panicaut de Bourgat se contente d'un sol sec. Pétasite officinal, Nénuphar blanc, Nénuphar jaune : sols frais à humides.
 **Source :** <https://www.rhs.org.uk/plants/6780/wd/details>
-*issue des données de l'appli (non recoupée) · id 29a97dc27e · jours 29, 60*
+*issue des données de l'appli (non recoupée) · id 29a97dc27e · jours 20, 60*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -10753,7 +10753,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Sceau-de-Salomon pousse à la mi-ombre ou à l'ombre. Vipérine commune, Thym commun, Calament : plein soleil.
 **Source :** <https://mustila.fi/en/plants/polygonatummultiflorum/>, <https://www.ebben.nl/fr/treeebb/pomultif-polygonatum-multiflorum/pdf>
-*issue des données de l'appli (non recoupée) · id 2a9fd01b62 · jours 3*
+*issue des données de l'appli (non recoupée) · id 2a9fd01b62 · jours 35*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -10768,7 +10768,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Skimmia pousse à la mi-ombre ou à l'ombre. Immortelle d'Italie, Châtaignier, Faux-poivrier : plein soleil.
 **Source :** <https://www.rhs.org.uk/plants/17401/skimmia-japonica/details>
-*issue des données de l'appli (non recoupée) · id 3caff57b90 · jours 21*
+*issue des données de l'appli (non recoupée) · id 3caff57b90 · jours 48*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -10783,7 +10783,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Pulmonaire officinale pousse à la mi-ombre ou à l'ombre. Thym commun, Armérie maritime, Hélianthème commun : plein soleil.
 **Source :** <https://www.rhs.org.uk/plants/14153/wd/details>, <https://plants.ces.ncsu.edu/plants/pulmonaria-officinalis>
-*issue des données de l'appli (non recoupée) · id 3e34ed43e8 · jours 49*
+*issue des données de l'appli (non recoupée) · id 3e34ed43e8 · jours 32*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -10798,7 +10798,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Fougère femelle pousse à la mi-ombre ou à l'ombre. Calament, Trèfle blanc, Œil-de-bœuf : plein soleil.
 **Source :** <https://www.rhs.org.uk/plants/1897/wd/details>
-*issue des données de l'appli (non recoupée) · id 4026edb10a · jours 40*
+*issue des données de l'appli (non recoupée) · id 4026edb10a · jours 42*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -10813,7 +10813,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** If à prunier pousse à la mi-ombre ou à l'ombre. Pacanier, Ailante glanduleux, Laurier-rose : plein soleil.
 **Source :** <https://plants.ces.ncsu.edu/plants/cephalotaxus-harringtonia/>, <https://plants.ces.ncsu.edu/plants/cephalotaxus-harringtonia-duke-gardens/>
-*issue des données de l'appli (non recoupée) · id 52b8022ce0 · jours 52*
+*issue des données de l'appli (non recoupée) · id 52b8022ce0 · jours 53*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -10828,7 +10828,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Myosotis du Caucase pousse à la mi-ombre ou à l'ombre. Mauve musquée, Hélianthème commun, Œil-de-bœuf : plein soleil.
 **Source :** <https://www.rhs.org.uk/plants/2433/wd/details>
-*issue des données de l'appli (non recoupée) · id 53f5faf31f · jours 36*
+*issue des données de l'appli (non recoupée) · id 53f5faf31f · jours 19*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -10843,7 +10843,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Lamier maculé pousse à la mi-ombre ou à l'ombre. Tussilage, Thym commun, Mauve musquée : plein soleil.
 **Source :** <https://www.rhs.org.uk/plants/9812/wd/details>
-*issue des données de l'appli (non recoupée) · id 566e8093e0 · jours 19*
+*issue des données de l'appli (non recoupée) · id 566e8093e0*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -10858,7 +10858,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Fragon petit houx pousse à la mi-ombre ou à l'ombre. Caroubier, Feijoa, Séquoia géant : plein soleil.
 **Source :** <https://www.rhs.org.uk/plants/16177/wd/details>, <https://plants.ces.ncsu.edu/plants/ruscus-aculeatus>
-*issue des données de l'appli (non recoupée) · id 57d7f99044*
+*issue des données de l'appli (non recoupée) · id 57d7f99044 · jours 50*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -10873,7 +10873,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Blechne en épi pousse à la mi-ombre ou à l'ombre. Arabette des Alpes, Mauve musquée, Trèfle blanc : plein soleil.
 **Source :** <https://www.rhs.org.uk/Plants/2320/Blechnum-spicant/Details>
-*issue des données de l'appli (non recoupée) · id 5a695eb64d · jours 20*
+*issue des données de l'appli (non recoupée) · id 5a695eb64d · jours 45*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -10888,7 +10888,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Fleur des elfes pousse à la mi-ombre ou à l'ombre. Absinthe, Armérie maritime, Rose trémière : plein soleil.
 **Source :** <https://www.rhs.org.uk/plants/6480/epimedium-alpinum-barrenwort-alpine-barrenwort/details>
-*issue des données de l'appli (non recoupée) · id 5a78008ba5 · jours 9*
+*issue des données de l'appli (non recoupée) · id 5a78008ba5 · jours 51*
 
 #### Laquelle de ces plantes aime les sols calcaires ?
 
@@ -10903,7 +10903,7 @@ Laquelle de ces plantes aime les sols calcaires ?
 
 **Explication :** Germandrée arbustive pousse en sol neutre à calcaire. Andromède du Japon, Kalmia, Genêt à balais : sols acides.
 **Source :** <https://www.rhs.org.uk/plants/18060/wd/details>, <https://en.wikipedia.org/wiki/Teucrium_fruticans>
-*issue des données de l'appli (non recoupée) · id 5d066dd983 · jours 8, 63*
+*issue des données de l'appli (non recoupée) · id 5d066dd983 · jours 47, 75*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -10918,7 +10918,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Ficaire pousse à la mi-ombre ou à l'ombre. Épiaire laineuse, Calament, Delphinium : plein soleil.
 **Source :** <https://www.rhs.org.uk/plants/337208/wd/details>, <https://temperate.theferns.info/plant/Ranunculus+ficaria>
-*issue des données de l'appli (non recoupée) · id 5e995929ca · jours 47*
+*issue des données de l'appli (non recoupée) · id 5e995929ca · jours 30*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -10933,7 +10933,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Polystic à soies pousse à la mi-ombre ou à l'ombre. Hélénie, Pavot d'Orient, Hélianthème commun : plein soleil.
 **Source :** <https://www.rhs.org.uk/plants/13490/polystichum-setiferum/details>
-*issue des données de l'appli (non recoupée) · id 98f1f44e3e · jours 27*
+*issue des données de l'appli (non recoupée) · id 98f1f44e3e · jours 16*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -10948,7 +10948,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Aucuba du Japon pousse à la mi-ombre ou à l'ombre. Arbre au liège de l'Amour, Arbre aux papillons, Spartier à tiges de jonc : plein soleil.
 **Source :** <https://www.rhs.org.uk/plants/148757/aucuba-japonica/details>, <https://plants.ces.ncsu.edu/plants/aucuba-japonica/common-name/gold-dust/>
-*issue des données de l'appli (non recoupée) · id 9e6007ad4c · jours 39*
+*issue des données de l'appli (non recoupée) · id 9e6007ad4c · jours 9*
 
 #### Laquelle de ces plantes pousse en sol gorgé d'eau ?
 
@@ -10963,7 +10963,7 @@ Laquelle de ces plantes pousse en sol gorgé d'eau ?
 
 **Explication :** Acore odorant aime les sols humides, voire l'eau. Scabieuse colombaire, Absinthe, Armérie maritime : sols secs.
 **Source :** <https://www.rhs.org.uk/plants/396/wd/details>, <https://gardenuat.rcp.ac.uk/viewPlant?plantId=28>
-*issue des données de l'appli (non recoupée) · id a3d57b72e3 · jours 26, 58*
+*issue des données de l'appli (non recoupée) · id a3d57b72e3 · jours 26, 61*
 
 #### Laquelle de ces plantes supporte le mieux la sécheresse ?
 
@@ -10978,7 +10978,7 @@ Laquelle de ces plantes supporte le mieux la sécheresse ?
 
 **Explication :** Valériane rouge se contente d'un sol sec. Lobélie cardinale, Eupatoire chanvrine, Nénuphar jaune : sols frais à humides.
 **Source :** <https://www.rhs.org.uk/Plants/93739/Centranthus-ruber/Details>
-*issue des données de l'appli (non recoupée) · id b7225907bf · jours 27, 56*
+*issue des données de l'appli (non recoupée) · id b7225907bf · jours 35, 65*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -10993,7 +10993,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Muguet pousse à la mi-ombre ou à l'ombre. Lupin, Panicaut de Bourgat, Acore odorant : plein soleil.
 **Source :** <https://www.rhs.org.uk/plants/4327/Convallaria-majalis/Details>
-*issue des données de l'appli (non recoupée) · id d27ad7ecb1 · jours 29*
+*issue des données de l'appli (non recoupée) · id d27ad7ecb1 · jours 27*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -11008,7 +11008,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Asaret d'Europe pousse à la mi-ombre ou à l'ombre. Lotier corniculé, Yucca filamenteux, Delphinium : plein soleil.
 **Source :** <https://www.rhs.org.uk/plants/1680/asarum-europaeum/details>
-*issue des données de l'appli (non recoupée) · id d2c96a849b · jours 15*
+*issue des données de l'appli (non recoupée) · id d2c96a849b · jours 57*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -11023,7 +11023,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Pachysandre du Japon pousse à la mi-ombre ou à l'ombre. Échinacée pourpre, Ibéris, Absinthe : plein soleil.
 **Source :** <https://www.rhs.org.uk/plants/12099/pachysandra-terminalis-japanese-spurge/details>
-*issue des données de l'appli (non recoupée) · id d8241970f2 · jours 35*
+*issue des données de l'appli (non recoupée) · id d8241970f2 · jours 34*
 
 #### Laquelle de ces plantes aime les sols calcaires ?
 
@@ -11038,7 +11038,7 @@ Laquelle de ces plantes aime les sols calcaires ?
 
 **Explication :** Caroubier pousse en sol neutre à calcaire. Callune, Genêt à balais, Kalmia : sols acides.
 **Source :** <https://taxref.mnhn.fr/taxref-web/taxa/447038/groups>
-*issue des données de l'appli (non recoupée) · id e0ef1c1db4 · jours 45, 73*
+*issue des données de l'appli (non recoupée) · id e0ef1c1db4 · jours 39, 67*
 
 #### Laquelle de ces plantes supporte le mieux la sécheresse ?
 
@@ -11053,7 +11053,7 @@ Laquelle de ces plantes supporte le mieux la sécheresse ?
 
 **Explication :** Yucca filamenteux se contente d'un sol sec. Blechne en épi, Hélénie, Cardamine des prés : sols frais à humides.
 **Source :** <https://plants.ces.ncsu.edu/plants/all/yucca-filamentosa/>, <https://mgnv.org/wp-content/uploads/2026/08/Yucca_filamentosa.2026.pdf>
-*issue des données de l'appli (non recoupée) · id ea079f58b0 · jours 43, 71*
+*issue des données de l'appli (non recoupée) · id ea079f58b0 · jours 41, 69*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -11068,7 +11068,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Bugle rampant pousse à la mi-ombre ou à l'ombre. Thym commun, Molène bouillon-blanc, Nénuphar blanc : plein soleil.
 **Source :** <https://www.rhs.org.uk/plants/742/wd/details>
-*issue des données de l'appli (non recoupée) · id f92c4d1f38 · jours 50*
+*issue des données de l'appli (non recoupée) · id f92c4d1f38 · jours 3*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -11083,7 +11083,7 @@ Laquelle de ces plantes se plaît à l'ombre ?
 
 **Explication :** Buis de Noël pousse à la mi-ombre ou à l'ombre. Faux-poivrier, Savonnier, Myrte commun : plein soleil.
 **Source :** <https://www.rhs.org.uk/plants/16452/sarcococca-confusa/details>, <https://plants.ces.ncsu.edu/plants/sarcococca-confusa/common-name/fragrant-sarcococca>
-*issue des données de l'appli (non recoupée) · id fb8eec6696 · jours 48*
+*issue des données de l'appli (non recoupée) · id fb8eec6696 · jours 49*
 
 #### Laquelle de ces plantes se plaît à l'ombre ?
 
@@ -11113,7 +11113,7 @@ Où se trouvent les stomates d'une feuille de nénuphar flottante ?
 
 **Explication :** Seule la face supérieure touche l'air, à l'inverse de la plupart des plantes terrestres. Les stomates y sont reliés à des cavités intercellulaires qui facilitent les échanges gazeux.
 **Source :** <https://planet-vie.ens.fr/node/1434/download/pdf>, <https://vcbio.science.ru.nl/en/image-gallery/show/PL0336/print>
-*validée (recoupée par recherche web) · id NM28 · jours 68*
+*validée (recoupée par recherche web) · id NM28 · jours 70*
 
 #### Sous l'eau, comment sont les feuilles de la renoncule aquatique ?
 
@@ -11126,7 +11126,7 @@ Sous l'eau, comment sont les feuilles de la renoncule aquatique ?
 
 **Explication :** C'est l'hétérophyllie : fines lanières sous l'eau, favorables aux échanges gazeux et au courant ; les feuilles flottantes, quand elles existent, sont lobées.
 **Source :** <https://paysagae.olihost.com/assets/mare/identification/fiches-determination-flore/fiche-renoncule.pdf>, <https://www.rtbf.be/article/pourquoi-certaines-plantes-ont-differents-types-de-feuilles-les-secrets-de-l-heterophyllie-11590632>
-*validée (recoupée par recherche web) · id NM29 · jours 58*
+*validée (recoupée par recherche web) · id NM29 · jours 55*
 
 #### Chez la sagittaire, plante de berges et de mares, quelle forme ont les feuilles immergées …
 
@@ -11139,7 +11139,7 @@ Chez la sagittaire, plante de berges et de mares, quelle forme ont les feuilles 
 
 **Explication :** Seules les feuilles aériennes ont la forme de fer de flèche qui a donné son nom à la plante ; sous l'eau, les feuilles sont en rubans qui suivent le courant.
 **Source :** <https://www.rtbf.be/article/pourquoi-certaines-plantes-ont-differents-types-de-feuilles-les-secrets-de-l-heterophyllie-11590632>, <https://www.universalis.fr/encyclopedie/feuille-botanique/2-l-heterophyllie/>
-*validée (recoupée par recherche web) · une seule source, à relire · id NM30 · jours 59*
+*validée (recoupée par recherche web) · une seule source, à relire · id NM30 · jours 56*
 
 #### Le châtaignier évite le calcaire, mais on en voit parfois sur un sol issu de roche calcair…
 
@@ -11152,7 +11152,7 @@ Le châtaignier évite le calcaire, mais on en voit parfois sur un sol issu de r
 
 **Explication :** Le problème est le calcaire actif (carbonates). Un sol né d'une roche calcaire mais décarbonaté peut lui convenir, comme certaines enclaves décalcifiées.
 **Source :** <https://agriculture.gouv.fr/telecharger/82971>, <https://dictionnaire-academie.fr/article/A9C0260>
-*validée (recoupée par recherche web) · id NM31 · jours 70*
+*validée (recoupée par recherche web) · id NM31 · jours 74*
 
 #### Une vaste roselière compte des milliers de tiges de roseau. Elle peut en réalité reposer s…
 
@@ -11165,7 +11165,7 @@ Une vaste roselière compte des milliers de tiges de roseau. Elle peut en réali
 
 **Explication :** Les parties aériennes meurent chaque année, mais les rhizomes (3 à 4 ans) relancent des tiges, d'où colonies denses et berges stabilisées.
 **Source :** <https://www.quebec.ca/agriculture-environnement-et-ressources-naturelles/flore/fiches-especes-floristiques/roseau-commun>, <https://ville-lestrem.fr/wp-content/uploads/2024/03/Atlas-de-la-Biodiversite-P26-a-P33.pdf>
-*validée (recoupée par recherche web) · une seule source, à relire · id NM32 · jours 66*
+*validée (recoupée par recherche web) · une seule source, à relire · id NM32 · jours 64*
 
 #### Pour freiner le vent sur la plus grande distance, quelle haie est la plus efficace ?
 
@@ -11178,7 +11178,7 @@ Pour freiner le vent sur la plus grande distance, quelle haie est la plus effica
 
 **Explication :** Un écran opaque réduit fortement le vent sur très courte distance et crée des turbulences ; un obstacle poreux répartit la réduction sur une plus grande distance.
 **Source :** <https://www.agrireseau.net/banqueplans/feuillets/Feuillet%2010903.pdf>, <https://www.agrireseau.net/bovinsboucherie/documents/Feuillet%2010901.pdf>
-*validée (recoupée par recherche web) · id NM33 · jours 56*
+*validée (recoupée par recherche web) · id NM33 · jours 57*
 
 #### Comment le chêne vert traverse-t-il un été très sec ?
 
@@ -11191,7 +11191,7 @@ Comment le chêne vert traverse-t-il un été très sec ?
 
 **Explication :** Il bloque son activité pendant la sécheresse et la réactive au retour de l'eau, mais des mortalités liées aux sécheresses extrêmes sont observées. Les vieilles feuilles tombent début d'été.
 **Source :** <https://calanques-parcnational.fr/fr/chene-vert>, <https://agriculture.gouv.fr/telecharger/98531>
-*validée (recoupée par recherche web) · id NM34 · jours 86*
+*validée (recoupée par recherche web) · id NM34 · jours 79*
 
 #### Sur un sol à engorgement temporaire marqué, le chêne pédonculé s'installe plus facilement …
 
@@ -11204,7 +11204,7 @@ Sur un sol à engorgement temporaire marqué, le chêne pédonculé s'installe p
 
 **Explication :** La régénération du pédonculé est nettement plus facile en sol engorgé, mais sa croissance devient ensuite inférieure à celle du sessile.
 **Source :** <https://agriculture.gouv.fr/telecharger/132668>, <https://hal.inrae.fr/hal-03684713/document>
-*validée (recoupée par recherche web) · id NM35 · jours 78*
+*validée (recoupée par recherche web) · id NM35 · jours 87*
 
 ## Noms latins
 
@@ -11221,7 +11221,7 @@ Quel est le nom scientifique de : Prunellier ?
 
 **Explication :** Prunellier : Prunus spinosa. Les autres sont des espèces voisines du même genre : Cerisier tardif, Cerisier du Japon, Merisier à grappes.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 00794d73cc · jours 2*
+*issue des données de l'appli (non recoupée) · id 00794d73cc*
 
 #### Quel est le nom scientifique de : Clématite cirrheuse ?
 
@@ -11247,7 +11247,7 @@ Quel est le nom scientifique de : Pêcher ?
 
 **Explication :** Pêcher : Prunus persica. Les autres sont des espèces voisines du même genre : Cerisier acide, Bois de Sainte-Lucie, Laurier du Portugal.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 03a737218c*
+*issue des données de l'appli (non recoupée) · id 03a737218c · jours 21*
 
 #### Quel est le nom scientifique de : Chêne sessile ?
 
@@ -11325,7 +11325,7 @@ Quel est le nom scientifique de : Orme lisse ?
 
 **Explication :** Orme lisse : Ulmus laevis. Les autres sont des espèces voisines du même genre : Orme de montagne, Orme de Chine, Orme de Sibérie.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 0906259953*
+*issue des données de l'appli (non recoupée) · id 0906259953 · jours 4*
 
 #### Quel est le nom scientifique de : Érable plane ?
 
@@ -11494,7 +11494,7 @@ Quel est le nom scientifique de : Bouleau de l'Himalaya ?
 
 **Explication :** Bouleau de l'Himalaya : Betula utilis. Les autres sont des espèces voisines du même genre : Bouleau verruqueux, Bouleau noir, Bouleau à papier.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 151b55dd71*
+*issue des données de l'appli (non recoupée) · id 151b55dd71 · jours 9*
 
 #### Quel est le nom scientifique de : Saule pleureur ?
 
@@ -11650,7 +11650,7 @@ Quel est le nom scientifique de : Prunier ?
 
 **Explication :** Prunier : Prunus domestica. Les autres sont des espèces voisines du même genre : Cerisier du Japon, Merisier, Cerisier de Sargent.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 2566abcec7 · jours 17*
+*issue des données de l'appli (non recoupée) · id 2566abcec7*
 
 #### Quel est le nom scientifique de : Euphorbe des bois ?
 
@@ -11793,7 +11793,7 @@ Quel est le nom scientifique de : Laîche des sables ?
 
 **Explication :** Laîche des sables : Carex arenaria. Les autres sont des espèces voisines du même genre : Laîche élevée, Laîche glauque, Laîche pendante.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 2fb4e1e521 · jours 16*
+*issue des données de l'appli (non recoupée) · id 2fb4e1e521 · jours 19*
 
 #### Quel est le nom scientifique de : Pin sylvestre ?
 
@@ -11962,7 +11962,7 @@ Quel est le nom scientifique de : Érable sycomore ?
 
 **Explication :** Érable sycomore : Acer pseudoplatanus. Les autres sont des espèces voisines du même genre : Érable de Tartarie, Érable rouge, Érable argenté.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 3d6391ee16 · jours 3*
+*issue des données de l'appli (non recoupée) · id 3d6391ee16*
 
 #### Quel est le nom scientifique de : Lavande papillon ?
 
@@ -12001,7 +12001,7 @@ Quel est le nom scientifique de : Fusain de Fortune ?
 
 **Explication :** Fusain de Fortune : Euonymus fortunei. Les autres sont des espèces voisines du même genre : Fusain d'Europe, Fusain du Japon, Fusain ailé.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 4346c3014f · jours 7*
+*issue des données de l'appli (non recoupée) · id 4346c3014f*
 
 #### Quel est le nom scientifique de : Sauge des bois ?
 
@@ -12027,7 +12027,7 @@ Quel est le nom scientifique de : Fétuque élevée ?
 
 **Explication :** Fétuque élevée : Festuca arundinacea. Les autres sont des espèces voisines du même genre : Fétuque ovine, Fétuque bleue, Fétuque rouge.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 447a205da1 · jours 19*
+*issue des données de l'appli (non recoupée) · id 447a205da1*
 
 #### Quel est le nom scientifique de : Euphorbe petit-cyprès ?
 
@@ -12066,7 +12066,7 @@ Quel est le nom scientifique de : Sapin du Colorado ?
 
 **Explication :** Sapin du Colorado : Abies concolor. Les autres sont des espèces voisines du même genre : Sapin pectiné, Sapin de Vancouver, Sapin d'Espagne.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 46effd9861*
+*issue des données de l'appli (non recoupée) · id 46effd9861 · jours 5*
 
 #### Quel est le nom scientifique de : Pin ponderosa ?
 
@@ -12417,7 +12417,7 @@ Quel est le nom scientifique de : Ciste ladanifère ?
 
 **Explication :** Ciste ladanifère : Cistus ladanifer. Les autres sont des espèces voisines du même genre : Ciste cotonneux, Ciste à feuilles de sauge, Ciste de Montpellier.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 6922345393 · jours 23*
+*issue des données de l'appli (non recoupée) · id 6922345393*
 
 #### Quel est le nom scientifique de : Alisier de Suède ?
 
@@ -12521,7 +12521,7 @@ Quel est le nom scientifique de : Troène de Californie ?
 
 **Explication :** Troène de Californie : Ligustrum ovalifolium. Les autres sont des espèces voisines du même genre : Troène commun, Troène luisant, Troène du Japon.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 71d7356b76 · jours 18*
+*issue des données de l'appli (non recoupée) · id 71d7356b76 · jours 10*
 
 #### Quel est le nom scientifique de : Abricotier ?
 
@@ -12664,7 +12664,7 @@ Quel est le nom scientifique de : Viorne odorante ?
 
 **Explication :** Viorne odorante : Viburnum odoratissimum. Les autres sont des espèces voisines du même genre : Viorne de Carles, Viorne obier, Viorne mancienne.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 83aab5d00f · jours 15*
+*issue des données de l'appli (non recoupée) · id 83aab5d00f*
 
 #### Quel est le nom scientifique de : Œillet deltoïde ?
 
@@ -12781,7 +12781,7 @@ Quel est le nom scientifique de : Bouleau noir ?
 
 **Explication :** Bouleau noir : Betula nigra. Les autres sont des espèces voisines du même genre : Bouleau de l'Himalaya, Bouleau pubescent, Bouleau verruqueux.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 8ab47f1a15 · jours 10*
+*issue des données de l'appli (non recoupée) · id 8ab47f1a15*
 
 #### Quel est le nom scientifique de : Bois de Sainte-Lucie ?
 
@@ -12846,7 +12846,7 @@ Quel est le nom scientifique de : Tremble ?
 
 **Explication :** Tremble : Populus tremula. Les autres sont des espèces voisines du même genre : Peuplier blanc, Peuplier baumier, Peuplier deltoïde.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 90f22ca0d4 · jours 6*
+*issue des données de l'appli (non recoupée) · id 90f22ca0d4*
 
 #### Quel est le nom scientifique de : Genévrier écailleux ?
 
@@ -12898,7 +12898,7 @@ Quel est le nom scientifique de : Laurier du Portugal ?
 
 **Explication :** Laurier du Portugal : Prunus lusitanica. Les autres sont des espèces voisines du même genre : Prunier, Amandier, Pêcher.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 9422513659 · jours 12*
+*issue des données de l'appli (non recoupée) · id 9422513659*
 
 #### Quel est le nom scientifique de : Géranium brun ?
 
@@ -12911,7 +12911,7 @@ Quel est le nom scientifique de : Géranium brun ?
 
 **Explication :** Géranium brun : Geranium phaeum. Les autres sont des espèces voisines du même genre : Géranium sanguin, Géranium des prés, Herbe à Robert.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 9522cb8ba9 · jours 22*
+*issue des données de l'appli (non recoupée) · id 9522cb8ba9*
 
 #### Quel est le nom scientifique de : Amandier ?
 
@@ -12924,7 +12924,7 @@ Quel est le nom scientifique de : Amandier ?
 
 **Explication :** Amandier : Prunus dulcis. Les autres sont des espèces voisines du même genre : Cerisier de Sargent, Laurier-cerise, Cerisier du Japon.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 95368c180d*
+*issue des données de l'appli (non recoupée) · id 95368c180d · jours 15*
 
 #### Quel est le nom scientifique de : Frêne oxyphylle ?
 
@@ -12989,7 +12989,7 @@ Quel est le nom scientifique de : Euphorbe maritime ?
 
 **Explication :** Euphorbe maritime : Euphorbia paralias. Les autres sont des espèces voisines du même genre : Euphorbe des garrigues, Euphorbe des bois, Euphorbe petit-cyprès.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 989eb5aeb4 · jours 4*
+*issue des données de l'appli (non recoupée) · id 989eb5aeb4 · jours 18*
 
 #### Quel est le nom scientifique de : Cerisier tardif ?
 
@@ -13067,7 +13067,7 @@ Quel est le nom scientifique de : Chèvrefeuille de Henry ?
 
 **Explication :** Chèvrefeuille de Henry : Lonicera henryi. Les autres sont des espèces voisines du même genre : Chèvrefeuille arbustif, Chèvrefeuille du Japon, Chèvrefeuille des jardins.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id a24aaaf8fe · jours 13*
+*issue des données de l'appli (non recoupée) · id a24aaaf8fe · jours 17*
 
 #### Quel est le nom scientifique de : Orme de Sibérie ?
 
@@ -13132,7 +13132,7 @@ Quel est le nom scientifique de : Cornouiller des pagodes ?
 
 **Explication :** Cornouiller des pagodes : Cornus controversa. Les autres sont des espèces voisines du même genre : Cornouiller à fleurs, Cornouiller mâle, Cornouiller blanc.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id a73916527c · jours 14*
+*issue des données de l'appli (non recoupée) · id a73916527c*
 
 #### Quel est le nom scientifique de : Merisier à grappes ?
 
@@ -13145,7 +13145,7 @@ Quel est le nom scientifique de : Merisier à grappes ?
 
 **Explication :** Merisier à grappes : Prunus padus. Les autres sont des espèces voisines du même genre : Prunier, Amandier, Abricotier.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id aaad1b2ffb · jours 21*
+*issue des données de l'appli (non recoupée) · id aaad1b2ffb*
 
 #### Quel est le nom scientifique de : Sauge sclarée ?
 
@@ -13184,7 +13184,7 @@ Quel est le nom scientifique de : Orme champêtre ?
 
 **Explication :** Orme champêtre : Ulmus minor. Les autres sont des espèces voisines du même genre : Orme de Chine, Orme de montagne, Orme de Sibérie.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id ad2abdb5c3 · jours 11*
+*issue des données de l'appli (non recoupée) · id ad2abdb5c3*
 
 #### Quel est le nom scientifique de : Chêne à gros fruits ?
 
@@ -13210,7 +13210,7 @@ Quel est le nom scientifique de : Euphorbe polychrome ?
 
 **Explication :** Euphorbe polychrome : Euphorbia polychroma. Les autres sont des espèces voisines du même genre : Euphorbe des bois, Euphorbe petit-cyprès, Euphorbe maritime.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id ae4fc9f503*
+*issue des données de l'appli (non recoupée) · id ae4fc9f503 · jours 23*
 
 #### Quel est le nom scientifique de : Laîche pendante ?
 
@@ -13366,7 +13366,7 @@ Quel est le nom scientifique de : Ciste de Montpellier ?
 
 **Explication :** Ciste de Montpellier : Cistus monspeliensis. Les autres sont des espèces voisines du même genre : Ciste à feuilles de sauge, Ciste cotonneux, Ciste ladanifère.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id c16707ab95*
+*issue des données de l'appli (non recoupée) · id c16707ab95 · jours 16*
 
 #### Quel est le nom scientifique de : Euphorbe des garrigues ?
 
@@ -13483,7 +13483,7 @@ Quel est le nom scientifique de : Groseillier rouge ?
 
 **Explication :** Groseillier rouge : Ribes rubrum. Les autres sont des espèces voisines du même genre : Groseillier à maquereau, Groseillier des Alpes, Cassissier.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id c97f308a68*
+*issue des données de l'appli (non recoupée) · id c97f308a68 · jours 22*
 
 #### Quel est le nom scientifique de : Herbe à Robert ?
 
@@ -13548,7 +13548,7 @@ Quel est le nom scientifique de : Troène luisant ?
 
 **Explication :** Troène luisant : Ligustrum lucidum. Les autres sont des espèces voisines du même genre : Troène du Japon, Troène commun, Troène de Californie.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id cebe6dfe1b*
+*issue des données de l'appli (non recoupée) · id cebe6dfe1b · jours 7*
 
 #### Quel est le nom scientifique de : Cornouiller blanc ?
 
@@ -13574,7 +13574,7 @@ Quel est le nom scientifique de : Prunier myrobolan ?
 
 **Explication :** Prunier myrobolan : Prunus cerasifera. Les autres sont des espèces voisines du même genre : Cerisier acide, Merisier, Merisier à grappes.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id d0d57a69ab*
+*issue des données de l'appli (non recoupée) · id d0d57a69ab · jours 3*
 
 #### Quel est le nom scientifique de : Chêne chevelu ?
 
@@ -13639,7 +13639,7 @@ Quel est le nom scientifique de : Sauge arbustive ?
 
 **Explication :** Sauge arbustive : Salvia microphylla. Les autres sont des espèces voisines du même genre : Sauge des prés, Sauge officinale, Sauge sclarée.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id d53ea08ad6 · jours 5*
+*issue des données de l'appli (non recoupée) · id d53ea08ad6*
 
 #### Quel est le nom scientifique de : Campanule agglomérée ?
 
@@ -13704,7 +13704,7 @@ Quel est le nom scientifique de : Peuplier baumier ?
 
 **Explication :** Peuplier baumier : Populus balsamifera. Les autres sont des espèces voisines du même genre : Peuplier noir, Peuplier deltoïde, Peuplier blanc.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id d8a9f13039*
+*issue des données de l'appli (non recoupée) · id d8a9f13039 · jours 6*
 
 #### Quel est le nom scientifique de : Viorne à feuilles ridées ?
 
@@ -13743,7 +13743,7 @@ Quel est le nom scientifique de : Géranium sanguin ?
 
 **Explication :** Géranium sanguin : Geranium sanguineum. Les autres sont des espèces voisines du même genre : Géranium à gros rhizome, Herbe à Robert, Géranium brun.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id e2f9a6cfe6 · jours 9*
+*issue des données de l'appli (non recoupée) · id e2f9a6cfe6 · jours 20*
 
 #### Quel est le nom scientifique de : Cerisier du Japon ?
 
@@ -13756,7 +13756,7 @@ Quel est le nom scientifique de : Cerisier du Japon ?
 
 **Explication :** Cerisier du Japon : Prunus serrulata. Les autres sont des espèces voisines du même genre : Bois de Sainte-Lucie, Cerisier tardif, Laurier-cerise.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id e343851edc*
+*issue des données de l'appli (non recoupée) · id e343851edc · jours 12*
 
 #### Quel est le nom scientifique de : Rosier rugueux ?
 
@@ -13782,7 +13782,7 @@ Quel est le nom scientifique de : Cornouiller sanguin ?
 
 **Explication :** Cornouiller sanguin : Cornus sanguinea. Les autres sont des espèces voisines du même genre : Cornouiller du Japon, Cornouiller mâle, Cornouiller blanc.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id e4a0e47623*
+*issue des données de l'appli (non recoupée) · id e4a0e47623 · jours 11*
 
 #### Quel est le nom scientifique de : Orpin remarquable ?
 
@@ -13808,7 +13808,7 @@ Quel est le nom scientifique de : Genévrier cade ?
 
 **Explication :** Genévrier cade : Juniperus oxycedrus. Les autres sont des espèces voisines du même genre : Genévrier sabine, Genévrier rampant, Genévrier thurifère.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id e60550f7cb*
+*issue des données de l'appli (non recoupée) · id e60550f7cb · jours 13*
 
 #### Quel est le nom scientifique de : Genévrier rampant ?
 
@@ -13977,7 +13977,7 @@ Quel est le nom scientifique de : Laîche élevée ?
 
 **Explication :** Laîche élevée : Carex elata. Les autres sont des espèces voisines du même genre : Laîche glauque, Laîche des bois, Laîche des sables.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id f5f7c69b8b · jours 8*
+*issue des données de l'appli (non recoupée) · id f5f7c69b8b · jours 2*
 
 #### Quel est le nom scientifique de : Érable à écorce de papier ?
 
@@ -14016,7 +14016,7 @@ Quel est le nom scientifique de : Viorne de David ?
 
 **Explication :** Viorne de David : Viburnum davidii. Les autres sont des espèces voisines du même genre : Viorne du Japon, Viorne odorante, Laurier-tin.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id f7d9b3a1c6*
+*issue des données de l'appli (non recoupée) · id f7d9b3a1c6 · jours 8*
 
 #### Quel est le nom scientifique de : Épicéa du Colorado ?
 
@@ -14029,7 +14029,7 @@ Quel est le nom scientifique de : Épicéa du Colorado ?
 
 **Explication :** Épicéa du Colorado : Picea pungens. Les autres sont des espèces voisines du même genre : Épicéa commun, Épicéa de Serbie, Épicéa de Sitka.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id f9204a5940 · jours 20*
+*issue des données de l'appli (non recoupée) · id f9204a5940 · jours 14*
 
 #### Quel est le nom scientifique de : Clématite des Alpes ?
 
@@ -14111,7 +14111,7 @@ Que sont les chatons jaunes qui pendent du noisetier dès janvier-février ?
 
 **Explication :** Les chatons sont des grappes de fleurs mâles qui libèrent leur pollen avant la feuillaison. Les fleurs femelles, minuscules, ont des stigmates rouges.
 **Source :** <https://www.tela-botanica.org/wp-content/uploads/2026/02/Floraison-Noisetier-ODS.pdf>, <https://spot.creamontblanc.org/en/fiches-especes/noisetier>
-*validée (recoupée par recherche web) · id 1e445b086a · jours 26, 81*
+*validée (recoupée par recherche web) · id 1e445b086a · jours 26, 82*
 
 #### Quel pigment vert, dégradé à l'automne, laisse apparaître les autres couleurs des feuilles…
 
@@ -14124,7 +14124,7 @@ Quel pigment vert, dégradé à l'automne, laisse apparaître les autres couleur
 
 **Explication :** En automne, l'arbre dégrade sa chlorophylle et en récupère les éléments. Les pigments jaunes et orangés qu'elle masquait deviennent alors visibles.
 **Source :** <https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/le-mystere-des-couleurs-du-feuillage-en-automne>, <https://espacepourlavie.ca/les-couleurs-dautomne-des-arbres>
-*validée (recoupée par recherche web) · id 3ee234debe · jours 5, 45*
+*validée (recoupée par recherche web) · id 3ee234debe · jours 16, 46*
 
 #### Une plante bisannuelle est une plante qui…
 
@@ -14137,7 +14137,7 @@ Une plante bisannuelle est une plante qui…
 
 **Explication :** La bisannuelle accomplit son cycle en deux ans : rosette de feuilles la 1re année, floraison et graines la 2e, puis elle meurt. Ex. : molène bouillon-blanc.
 **Source :** <https://www.ontario.ca/fr/document/guide-dindentification-des-mauvaises-herbes-agricoles-de-lontario/grande-molene>, <https://fr.wikipedia.org/wiki/Plante_bisannuelle>
-*validée (recoupée par recherche web) · id 68935fdac5 · jours 26, 58*
+*validée (recoupée par recherche web) · id 68935fdac5 · jours 27, 59*
 
 #### Quel arbuste se couvre de fleurs jaunes avant ses feuilles, à la sortie de l'hiver ?
 
@@ -14152,7 +14152,7 @@ Quel arbuste se couvre de fleurs jaunes avant ses feuilles, à la sortie de l'hi
 
 **Explication :** Le forsythia fleurit en mars sur rameaux nus, avant la sortie des feuilles. Millepertuis, potentille et rudbeckia fleurissent en été, feuillage déjà développé.
 **Source :** <https://fr.wikipedia.org/wiki/Forsythia>
-*validée (recoupée par recherche web) · corrigée · id 69524ea63d · jours 9, 56*
+*validée (recoupée par recherche web) · corrigée · id 69524ea63d · jours 8, 56*
 
 #### Lequel de ces conifères perd ses aiguilles chaque automne ?
 
@@ -14167,7 +14167,7 @@ Lequel de ces conifères perd ses aiguilles chaque automne ?
 
 **Explication :** Le mélèze est un conifère caduc : ses aiguilles jaunissent puis tombent en automne. Épicéa, pin sylvestre et sapin pectiné gardent les leurs.
 **Source :** <https://fr.wikipedia.org/wiki/M%C3%A9l%C3%A8ze_d%27Europe>
-*validée (recoupée par recherche web) · id 7ae3ed3098 · jours 23, 68*
+*validée (recoupée par recherche web) · id 7ae3ed3098 · jours 31, 71*
 
 #### Quel arbre couvre de pompons jaunes les collines du Midi en plein hiver ?
 
@@ -14182,7 +14182,7 @@ Quel arbre couvre de pompons jaunes les collines du Midi en plein hiver ?
 
 **Explication :** Le mimosa argenté fleurit de janvier à mars, avec un pic en février sur la Côte d'Azur. Cytise, savonnier et spartier fleurissent de la fin du printemps à l'été.
 **Source :** <https://www.techno-science.net/fr/definitions/acacia-dealbata>, <https://fr.wikipedia.org/wiki/Acacia_dealbata>
-*validée (recoupée par recherche web) · id 86aaad2946 · jours 2, 51*
+*validée (recoupée par recherche web) · id 86aaad2946 · jours 2, 53*
 
 #### À l'automne, d'où vient le jaune de nombreux feuillages ?
 
@@ -14195,7 +14195,7 @@ Quel arbre couvre de pompons jaunes les collines du Midi en plein hiver ?
 
 **Explication :** Les caroténoïdes jaunes et orangés sont là tout l'été et apparaissent quand la chlorophylle se dégrade. Les rouges (anthocyanes), eux, sont fabriqués à l'automne.
 **Source :** <https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/le-mystere-des-couleurs-du-feuillage-en-automne>, <https://espacepourlavie.ca/les-couleurs-dautomne-des-arbres>
-*validée (recoupée par recherche web) · id NE20 · jours 15, 45*
+*validée (recoupée par recherche web) · id NE20 · jours 7, 45*
 
 #### Quel arbuste originaire de Chine, aux fleurs jaune cireux très parfumées, fleurit en plein…
 
@@ -14208,7 +14208,7 @@ Quel arbuste originaire de Chine, aux fleurs jaune cireux très parfumées, fleu
 
 **Explication :** Le chimonanthe précoce (Chimonanthus praecox), dit « jasmin d'hiver », fleurit de décembre à mars et parfume le jardin même par temps froid.
 **Source :** <https://www.gerbeaud.com/jardin/fiches/chimonanthe-odorant.php>
-*validée (recoupée par recherche web) · id NU14 · jours 25, 70*
+*validée (recoupée par recherche web) · id NU14 · jours 28, 67*
 
 #### À quelle saison fleurit principalement le cyclamen de Naples (Cyclamen hederifolium) ?
 
@@ -14221,7 +14221,7 @@ Quel arbuste originaire de Chine, aux fleurs jaune cireux très parfumées, fleu
 
 **Explication :** Le cyclamen de Naples fleurit de la fin de l'été à novembre, souvent avant ses feuilles marbrées ; c'est le cyclamen coum qui fleurit plutôt en fin d'hiver.
 **Source :** <https://www.immobilier.ch/fr/actualite/les-cyclamens-incontournables-de-l-automne-6964>
-*validée (recoupée par recherche web) · id NU15 · jours 17, 58*
+*validée (recoupée par recherche web) · id NU15 · jours 15, 59*
 
 #### Quel arbuste de jardin porte en plein hiver des fleurs en fins rubans jaune orangé ou cuiv…
 
@@ -14234,7 +14234,7 @@ Quel arbuste de jardin porte en plein hiver des fleurs en fins rubans jaune oran
 
 **Explication :** L'hamamélis (Hamamelis × intermedia) fleurit de janvier à mars, parfois dès fin décembre, ses pétales étroits en lanières sortant avant les feuilles.
 **Source :** <https://www.jardiner-malin.fr/fiche/hamamelis.html>
-*validée (recoupée par recherche web) · id NU16 · jours 27, 66*
+*validée (recoupée par recherche web) · id NU16 · jours 27, 67*
 
 #### À quelle période les coquelicots fleurissent-ils surtout dans les champs et au bord des ro…
 
@@ -14247,7 +14247,7 @@ Quel arbuste de jardin porte en plein hiver des fleurs en fins rubans jaune oran
 
 **Explication :** Plante messicole, compagne des moissons, il fleurit avant la fauche ; selon les régions, la floraison peut s'étaler d'avril à août.
 **Source :** <https://www.cbnbl.org/system/files/2025-07/Poster%20messicoles%202024.pdf>, <https://www.randozone.com/flore/coquelicot/>
-*validée (recoupée par recherche web) · id NX18 · jours 27, 66*
+*validée (recoupée par recherche web) · id NX18 · jours 8, 66*
 
 #### Quelle fleur rose-lilas jaillit du sol en automne, sans feuilles, alors que ses feuilles e…
 
@@ -14260,7 +14260,7 @@ Quelle fleur rose-lilas jaillit du sol en automne, sans feuilles, alors que ses 
 
 **Explication :** Les feuilles de printemps rechargent les réserves du corme pour la floraison suivante. Toute la plante contient des alcaloïdes dangereux.
 **Source :** <https://www.techno-science.net/fr/definitions/colchique-d-automne>, <https://www.rtbf.be/article/floraison-d-automne-et-si-on-plantait-des-colchiques-11600013>
-*validée (recoupée par recherche web) · id NX19 · jours 61*
+*validée (recoupée par recherche web) · id NX19 · jours 40, 90*
 
 #### Pourquoi surnomme-t-on l'aubépine « épine de mai » ?
 
@@ -14273,7 +14273,7 @@ Pourquoi surnomme-t-on l'aubépine « épine de mai » ?
 
 **Explication :** La floraison blanche et parfumée a lieu en mai-juin (parfois dès avril) ; les fruits rouges n'arrivent qu'en septembre-octobre.
 **Source :** <https://www.cap.chu-lille.fr/2021/01/26/aubepine>, <https://www.techno-science.net/fr/definitions/epine-blanche>
-*validée (recoupée par recherche web) · id NX20 · jours 18, 75*
+*validée (recoupée par recherche web) · id NX20 · jours 5, 71*
 
 #### Quelle plante de lande acide fleurit en rose-mauve de l'été à octobre, plus tard que les a…
 
@@ -14286,7 +14286,7 @@ Quelle plante de lande acide fleurit en rose-mauve de l'été à octobre, plus t
 
 **Explication :** Appelée bruyère d'été, elle prolonge la floraison des landes jusqu'en automne ; certains cultivars fleurissent jusqu'en décembre.
 **Source :** <https://www.truffaut.com/calluna-conteneur-1-l-37178.html>, <https://www.aroma-zone.com/page/callune-calluna-vulgaris-definition-proprietes-et-bienfaits>
-*validée (recoupée par recherche web) · id NX21 · jours 39*
+*validée (recoupée par recherche web) · id NX21 · jours 35*
 
 #### Quelle liane ornementale couvre les murs et rougit vivement à l'automne ?
 
@@ -14299,7 +14299,7 @@ Quelle liane ornementale couvre les murs et rougit vivement à l'automne ?
 
 **Explication :** Les vignes vierges passent du vert à l'orangé puis au rouge-pourpre ; la couleur est plus intense en plein soleil.
 **Source :** <https://www.truffaut.com/vigne-vierge-de-henry-parthenocissus-henryana-3l-90-120cm.html>, <https://www.manomano.fr/p/vigne-vierge-tricuspidata-veitchii-24060398>
-*validée (recoupée par recherche web) · id NX22 · jours 3, 69*
+*validée (recoupée par recherche web) · id NX22 · jours 33, 79*
 
 #### Quand fleurit le lilas commun dans nos jardins ?
 
@@ -14312,7 +14312,7 @@ Quand fleurit le lilas commun dans nos jardins ?
 
 **Explication :** Il fleurit sur le bois de l'année précédente : on le taille juste après la floraison, sinon on supprime les fleurs de l'année suivante.
 **Source :** <https://spot.creamontblanc.org/en/fiches-especes/lilas-commun>, <https://www.truffaut.com/syringa-vulgaris-40-60-cm-ctr-4-litres-1015016.html>
-*validée (recoupée par recherche web) · id NX23 · jours 14, 69*
+*validée (recoupée par recherche web) · id NX23 · jours 19, 70*
 
 #### Quelle fleur jaune d'or, parfumée, à cinq taches orangées au cœur, fleurit dans les prairi…
 
@@ -14325,7 +14325,7 @@ Quelle fleur jaune d'or, parfumée, à cinq taches orangées au cœur, fleurit d
 
 **Explication :** Appelée coucou, elle annonce le printemps (mars à mai). La primevère élevée, voisine, a un anneau orange clair au lieu de cinq taches.
 **Source :** <https://www.randozone.com/flore/primevere-vraie/>, <https://spot.creamontblanc.org/fiches-especes/primevere-officinale>
-*validée (recoupée par recherche web) · id NX24 · jours 19, 55*
+*validée (recoupée par recherche web) · id NX24 · jours 3, 58*
 
 #### Quand mûrissent en général les mûres sauvages de la ronce ?
 
@@ -14338,7 +14338,7 @@ Quand mûrissent en général les mûres sauvages de la ronce ?
 
 **Explication :** Les fruits passent du rouge au noir bleuté ; le pic de maturité se situe vers septembre, selon l'altitude et la météo.
 **Source :** <https://www.techno-science.net/fr/definitions/ronce-commune>, <https://www.alimentarium.org/fr/savoir/m%C3%BBre>
-*validée (recoupée par recherche web) · id NX25 · jours 40, 86*
+*validée (recoupée par recherche web) · id NX25 · jours 33, 89*
 
 #### Une ronce a été taillée à ras du sol l'an dernier. Pourquoi ne donnera-t-elle probablement…
 
@@ -14351,7 +14351,7 @@ Une ronce a été taillée à ras du sol l'an dernier. Pourquoi ne donnera-t-ell
 
 **Explication :** Chez la ronce commune, la tige de première année pousse seulement ; elle fleurit et fructifie la deuxième année. Garder des tiges de deux âges.
 **Source :** <https://www.techno-science.net/fr/definitions/ronce-commune>, <https://www.alimentarium.org/fr/savoir/m%C3%BBre>
-*validée (recoupée par recherche web) · id NX26 · jours 36, 89*
+*validée (recoupée par recherche web) · id NX26 · jours 37, 85*
 
 #### Les cerisiers couverts de fleurs blanches en avril donnent leurs cerises à quelle période …
 
@@ -14364,7 +14364,7 @@ Les cerisiers couverts de fleurs blanches en avril donnent leurs cerises à quel
 
 **Explication :** Selon les variétés, la récolte va de mai à fin juillet, parfois août pour les tardives ; la floraison ne dure que 10 à 15 jours.
 **Source :** <https://luberon.fr/luberon/parc-naturel-regional/flore/annu+cerisiers+4347.html>, <https://www.synonyme-du-mot.com/les-articles/quand-apparaissent-les-cerises>
-*validée (recoupée par recherche web) · id NX27 · jours 19, 59*
+*validée (recoupée par recherche web) · id NX27 · jours 26, 69*
 
 #### Lequel de ces arbres prend de flamboyantes teintes rouge pourpre en automne ?
 
@@ -14379,7 +14379,7 @@ Lequel de ces arbres prend de flamboyantes teintes rouge pourpre en automne ?
 
 **Explication :** Le copalme d'Amérique est planté pour ses couleurs d'automne, du jaune orangé au rouge pourpre.
 **Source :** <https://fr.wikipedia.org/wiki/Liquidambar_styraciflua>
-*validée (recoupée par recherche web) · corrigée · id ad5c31f104*
+*validée (recoupée par recherche web) · corrigée · id ad5c31f104 · jours 6, 43*
 
 #### Laquelle de ces plantes fleurit en plein hiver, parfois à travers la neige ?
 
@@ -14394,7 +14394,7 @@ Laquelle de ces plantes fleurit en plein hiver, parfois à travers la neige ?
 
 **Explication :** Le perce-neige ouvre ses clochettes blanches dès janvier-février. Pivoine, lis martagon et échinacée fleurissent, eux, à la fin du printemps ou en été.
 **Source :** <https://fr.wikipedia.org/wiki/Perce-neige>
-*validée (recoupée par recherche web) · id d85f3dce13 · jours 21, 54*
+*validée (recoupée par recherche web) · id d85f3dce13 · jours 20, 63*
 
 #### À quelle saison fleurit le mimosa sur la Côte d'Azur ?
 
@@ -14407,7 +14407,7 @@ Laquelle de ces plantes fleurit en plein hiver, parfois à travers la neige ?
 
 **Explication :** Le mimosa, originaire d'Australie, fleurit en plein hiver et offre ses pompons jaunes alors que la plupart des plantes sommeillent. Bormes-les-Mimosas lui consacre une fête.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY12 · jours 28, 76*
+*relue (non recoupée) · id NY12 · jours 29, 77*
 
 #### Quand le noisetier fleurit-il, avec ses longs chatons jaunes pendants ?
 
@@ -14420,7 +14420,7 @@ Quand le noisetier fleurit-il, avec ses longs chatons jaunes pendants ?
 
 **Explication :** Le noisetier fleurit avant ses feuilles : le vent emporte le pollen des chatons mâles jusqu'aux minuscules fleurs femelles rouges. Les noisettes mûrissent en septembre.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY13 · jours 33, 85*
+*relue (non recoupée) · id NY13 · jours 34, 86*
 
 #### À quelle période fleurissent les jonquilles dans les jardins ?
 
@@ -14433,7 +14433,7 @@ Quand le noisetier fleurit-il, avec ses longs chatons jaunes pendants ?
 
 **Explication :** Les narcisses et jonquilles fleurissent de février à avril selon les variétés. Leurs bulbes se plantent à l'automne et la plante repart de sa réserve souterraine.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY14 · jours 20, 50*
+*relue (non recoupée) · id NY14 · jours 20, 48*
 
 #### Quand les champs de lavande sont-ils le plus colorés en Provence ?
 
@@ -14446,7 +14446,7 @@ Quand les champs de lavande sont-ils le plus colorés en Provence ?
 
 **Explication :** La floraison de la lavande culmine en été, de fin juin à août, selon l'altitude et la variété. La récolte suit dès que les épis sont bien épanouis.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY15 · jours 32, 72*
+*relue (non recoupée) · id NY15 · jours 34, 72*
 
 #### À quelle période les marrons d'Inde tombent-ils des marronniers ?
 
@@ -14459,7 +14459,7 @@ Quand les champs de lavande sont-ils le plus colorés en Provence ?
 
 **Explication :** Le marronnier d'Inde fleurit en avril-mai en « chandelles » blanches ; ses fruits, des capsules épineuses vertes, tombent et s'ouvrent à l'automne en libérant le marron brillant.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY16 · jours 37, 84*
+*relue (non recoupée) · id NY16 · jours 41, 88*
 
 #### À quelle période se vendangent les raisins en France ?
 
@@ -14472,7 +14472,7 @@ Quand les champs de lavande sont-ils le plus colorés en Provence ?
 
 **Explication :** Les vendanges ont lieu de la fin de l'été au début de l'automne, parfois dès la mi-août lors d'étés chauds. Elles marquent la maturité du raisin du vignoble.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY17 · jours 20, 48*
+*relue (non recoupée) · id NY17 · jours 21, 51*
 
 #### À quelle période le pollen de bouleau provoque-t-il le plus d'allergies ?
 
@@ -14485,7 +14485,7 @@ Quand les champs de lavande sont-ils le plus colorés en Provence ?
 
 **Explication :** Les chatons du bouleau libèrent des quantités énormes de pollen dès les premiers beaux jours. Le bouleau est l'un des arbres les plus allergisants en France.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY18 · jours 29, 71*
+*relue (non recoupée) · id NY18 · jours 29, 68*
 
 #### À quelle période moissonne-t-on le blé en France ?
 
@@ -14498,7 +14498,7 @@ Quand les champs de lavande sont-ils le plus colorés en Provence ?
 
 **Explication :** Le blé d'hiver est semé à l'automne puis récolté l'été suivant, quand les épis sont dorés et secs. La moisson a lieu surtout en juillet, parfois début août.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY19 · jours 29, 60*
+*relue (non recoupée) · id NY19 · jours 19, 60*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -14513,7 +14513,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Weigela a un feuillage caduc. Griselinia, Cordyline d'Australie, Néflier du Japon : feuillage persistant.
 **Source :** <https://www.rhs.org.uk/plants/101006/wd/details>
-*issue des données de l'appli (non recoupée) · id 2555b8e6bd · jours 11, 43*
+*issue des données de l'appli (non recoupée) · id 2555b8e6bd · jours 12, 45*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -14528,7 +14528,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Copalme d'Amérique a un feuillage caduc. Polygala à feuilles de myrte, Buisson ardent, Cordyline d'Australie : feuillage persistant.
 **Source :** <https://www.rhs.org.uk/plants/10334/wd/details>
-*issue des données de l'appli (non recoupée) · id 3f3549e9c1 · jours 10, 44*
+*issue des données de l'appli (non recoupée) · id 3f3549e9c1 · jours 13, 50*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -14543,7 +14543,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Seringat a un feuillage caduc. Palmier nain, Andromède du Japon, Faux-poivrier : feuillage persistant.
 **Source :** <https://www.rhs.org.uk/plants/92563/wd/details>, <https://taxref.mnhn.fr/taxref-web/taxa/113138>
-*issue des données de l'appli (non recoupée) · id 6e7d90dbca · jours 8, 42*
+*issue des données de l'appli (non recoupée) · id 6e7d90dbca · jours 10, 46*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -14573,7 +14573,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Tulipier de Virginie a un feuillage caduc. Andromède du Japon, Escallonia, Aucuba du Japon : feuillage persistant.
 **Source :** <https://www.rhs.org.uk/plants/10338/wd/details>
-*issue des données de l'appli (non recoupée) · id 88ca2e1529 · jours 13, 41*
+*issue des données de l'appli (non recoupée) · id 88ca2e1529 · jours 14, 44*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -14588,7 +14588,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Févier d'Amérique a un feuillage caduc. Fragon petit houx, Germandrée arbustive, Olivier : feuillage persistant.
 **Source :** <https://www.rhs.org.uk/plants/33602/wd/details>, <https://plants.ces.ncsu.edu/plants/gleditsia-triacanthos>
-*issue des données de l'appli (non recoupée) · id 9d78a74053 · jours 6, 46*
+*issue des données de l'appli (non recoupée) · id 9d78a74053 · jours 9, 47*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -14603,7 +14603,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Arbre aux papillons a un feuillage caduc. Palmier de Californie, Santoline, Laurier-rose : feuillage persistant.
 **Source :** <https://ofb.gouv.fr/doc/retours-experience-de-gestion-buddleia-du-pere-david-buddleja-davidii>, <https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/fiche_espece_buddleia_vf.pdf>
-*issue des données de l'appli (non recoupée) · id ba4b3b024c · jours 22, 52*
+*issue des données de l'appli (non recoupée) · id ba4b3b024c · jours 21*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -14633,7 +14633,7 @@ En hiver, un jeune hêtre garde ses feuilles mortes et sèches. Son feuillage es
 
 **Explication :** Le hêtre est caduc. Chez les jeunes sujets, les feuilles fanées restent accrochées tout l'hiver : c'est la marcescence, connue aussi chez le charme et des chênes.
 **Source :** <https://www.lalanguefrancaise.com/dictionnaire/definition/marcescent>, <https://extension.umd.edu/resource/mystery-marcescence>
-*validée (recoupée par recherche web) · id 3003059d80 · jours 64*
+*validée (recoupée par recherche web) · id 3003059d80 · jours 62*
 
 #### Lequel de ces arbustes de haie fleurit en blanc avant l'apparition de ses feuilles ? · piège
 
@@ -14661,7 +14661,7 @@ Un arbre à feuillage persistant, comme le chêne vert…
 
 **Explication :** Persistant ne veut pas dire éternel : chaque feuille vit en général 2 à 3 ans puis tombe, mais l'arbre les remplace progressivement et n'est jamais dénudé.
 **Source :** <https://fr.wikipedia.org/wiki/Feuillage_persistant>
-*validée (recoupée par recherche web) · id 49564a9c4d · jours 1*
+*validée (recoupée par recherche web) · id 49564a9c4d · jours 66*
 
 #### Laquelle de ces plantes est la « rose de Noël » ? · piège
 
@@ -14676,7 +14676,7 @@ Laquelle de ces plantes est la « rose de Noël » ?
 
 **Explication :** La rose de Noël n'est pas une rose : c'est l'hellébore noir, une Renonculacée à fleurs blanches qui fleurit en hiver. Rose trémière et laurier-rose ne sont pas non plus de vraies roses ; seul l'églantier est un Rosa. Plante toxique si ingérée.
 **Source :** <https://www.techno-science.net/fr/definitions/rose-de-noel>, <https://www.jardinbotaniquedenancy.eu/fileadmin/CJBN/Plante_du_mois/03.25.Helleborus_1.pdf>
-*validée (recoupée par recherche web) · corrigée · id 953a3b17d3 · jours 49, 81*
+*validée (recoupée par recherche web) · corrigée · id 953a3b17d3 · jours 44, 80*
 
 #### Laquelle de ces plantes fleurit dès la fin de l'hiver ?
 
@@ -14691,7 +14691,7 @@ Laquelle de ces plantes fleurit dès la fin de l'hiver ?
 
 **Explication :** L'éranthe d'hiver fleurit de janvier à mars, parfois dans la neige. Les trois autres fleurissent plus tard, en été.
 **Source :** <https://rebus.us.edu.pl/bitstream/20.500.12128/15742/4/Hejnowicz_Temperature_dependent_changes.pdf>
-*validée (recoupée par recherche web) · corrigée · id 9dd5177900 · jours 11, 71*
+*validée (recoupée par recherche web) · corrigée · id 9dd5177900 · jours 3, 72*
 
 #### Qu'appelle-t-on « vernalisation » chez les plantes ?
 
@@ -14704,7 +14704,7 @@ Qu'appelle-t-on « vernalisation » chez les plantes ?
 
 **Explication :** Céréales d'hiver et bisannuelles (chou, carotte) ont besoin de quelques semaines à 3-9 °C pour fleurir. Ne pas confondre avec la levée de dormance, qui concerne la reprise de croissance.
 **Source :** <https://www.lalanguefrancaise.com/dictionnaire/definition/vernalisation>, <https://www.universalis.fr/encyclopedie/vernalisation/>
-*validée (recoupée par recherche web) · id NE19 · jours 85*
+*validée (recoupée par recherche web) · id NE19*
 
 #### Qu'est-ce qui signale avant tout aux arbres caducs qu'il est temps de se préparer à perdre… · piège
 
@@ -14717,7 +14717,7 @@ Qu'est-ce qui signale avant tout aux arbres caducs qu'il est temps de se prépar
 
 **Explication :** Ce n'est pas le froid mais la photopériode qui lance le processus : l'arbre forme une couche d'abscission à la base du pétiole. La température n'est qu'un facteur secondaire.
 **Source :** <https://www.futura-sciences.com/planete/questions-reponses/saison-feuilles-changent-couleur-parce-quil-fait-froid-vrai-faux-23661/>, <https://www.techno-science.net/fr/actualites/comment-les-arbres-savent-ils-qu-il-est-temps-de-perdre-leurs-feuilles-25843>
-*validée (recoupée par recherche web) · id NE21 · jours 8, 67*
+*validée (recoupée par recherche web) · id NE21 · jours 10, 63*
 
 #### En automne, quel conifère de nos montagnes perd ses aiguilles ? · piège
 
@@ -14730,7 +14730,7 @@ En automne, quel conifère de nos montagnes perd ses aiguilles ?
 
 **Explication :** Le mélèze d'Europe est un conifère caduc : ses aiguilles dorent en octobre et tombent. Il évite ainsi la sécheresse physiologique d'un sol gelé en hiver.
 **Source :** <https://www.futura-sciences.com/planete/questions-reponses/arbre-existe-t-il-coniferes-caducs-14522/>
-*validée (recoupée par recherche web) · id NQ27 · jours 10, 81*
+*validée (recoupée par recherche web) · id NQ27 · jours 11, 82*
 
 #### Quand fleurit le lierre grimpant, au grand bonheur des insectes ? · piège
 
@@ -14743,7 +14743,7 @@ Quand fleurit le lierre grimpant, au grand bonheur des insectes ?
 
 **Explication :** Le lierre fleurit à l'automne et fructifie au printemps : ses baies noires mûrissent en fin d'hiver. Sa floraison tardive nourrit les derniers butineurs avant l'hiver.
 **Source :** <https://www.provincedeliege.be:443/sites/default/files/media/10952/Lierre%20grimpant%20%28Hedera%20helix%29.pdf>, <https://www.futura-sciences.com/planete/definitions/botanique-lierre-10291/>
-*validée (recoupée par recherche web) · id NQ28 · jours 47*
+*validée (recoupée par recherche web) · id NQ28 · jours 42*
 
 #### Quelle forme du lierre grimpant produit les ombelles de fleurs d'octobre, précieuses pour … · piège
 
@@ -14756,7 +14756,7 @@ Quelle forme du lierre grimpant produit les ombelles de fleurs d'octobre, préci
 
 **Explication :** Seul le lierre adulte (Hedera helix), arrivé en pleine lumière, fleurit en septembre-octobre ; l'abeille solitaire collète du lierre en dépend presque exclusivement.
 **Source :** <https://www.provincedeliege.be:443/sites/default/files/media/10952/Lierre%20grimpant%20%28Hedera%20helix%29.pdf>, <https://www.agglo-agen.net/fileadmin/user_upload_agglo/pdf/06-Mes_loisirs/Trotte_lapin/fiches-nature/FICHE_ESPECE_FAUNE_COLLETE_DU_LIERRE_OCTOBRE.pdf>
-*validée (recoupée par recherche web) · id NU18 · jours 43*
+*validée (recoupée par recherche web) · id NU18 · jours 38*
 
 #### Quand le bois-gentil (Daphne mezereum) ouvre-t-il ses fleurs roses parfumées ?
 
@@ -14769,7 +14769,7 @@ Quand le bois-gentil (Daphne mezereum) ouvre-t-il ses fleurs roses parfumées ?
 
 **Explication :** Le bois-gentil fleurit en février-mars sur bois nu. Ses baies rouges, mûres en été, sont très toxiques pour l'humain, alors que les oiseaux les disséminent.
 **Source :** <https://www.jardiner-malin.fr/fiche/daphne.html>
-*validée (recoupée par recherche web) · id NU19*
+*validée (recoupée par recherche web) · id NU19 · jours 76*
 
 #### Quelle particularité l'arbousier présente-t-il en automne ?
 
@@ -14782,7 +14782,7 @@ Quelle particularité l'arbousier présente-t-il en automne ?
 
 **Explication :** Chez l'arbousier (Arbutus unedo), les fruits mettent un an à mûrir : en automne, les clochettes de l'année côtoient les arbouses issues de la floraison précédente.
 **Source :** <https://www.futura-sciences.com/planete/definitions/botanique-arbouse-19661/>
-*validée (recoupée par recherche web) · id NU20 · jours 13*
+*validée (recoupée par recherche web) · id NU20 · jours 43*
 
 #### Laquelle de ces plantes fleurit en plein hiver ?
 
@@ -14797,7 +14797,7 @@ Laquelle de ces plantes fleurit en plein hiver ?
 
 **Explication :** Le hamamélis de Chine fleurit de janvier à mars (parfois dès décembre). Les trois autres fleurissent plus tard, de la fin du printemps à l'été.
 **Source :** <https://www.treesandshrubsonline.org/articles/hamamelis/hamamelis-mollis/>
-*validée (recoupée par recherche web) · corrigée · id c6e58fef03 · jours 4, 79*
+*validée (recoupée par recherche web) · corrigée · id c6e58fef03 · jours 1, 77*
 
 #### Laquelle de ces plantes fleurit dès la fin de l'hiver ? · piège
 
@@ -14812,7 +14812,7 @@ Laquelle de ces plantes fleurit dès la fin de l'hiver ?
 
 **Explication :** Le noisetier de Byzance fleurit de février à mars, en chatons. Les trois autres fleurissent plus tard, de la fin du printemps à l'été.
 **Source :** <https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2021.813902/pdf>
-*validée (recoupée par recherche web) · corrigée · id c75254c813 · jours 5, 77*
+*validée (recoupée par recherche web) · corrigée · id c75254c813 · jours 5, 78*
 
 #### Malgré son nom, la Lunaire annuelle (monnaie-du-pape) se comporte le plus souvent comme un… · piège
 
@@ -14825,7 +14825,7 @@ Malgré son nom, la Lunaire annuelle (monnaie-du-pape) se comporte le plus souve
 
 **Explication :** Semée au printemps, la lunaire forme des feuilles la 1re année et fleurit la 2e, puis meurt après ses « écus » argentés. Son synonyme Lunaria biennis le rappelle.
 **Source :** <https://en.wikipedia.org/wiki/Lunaria_annua>, <https://www.techno-science.net/fr/definitions/lunaire>
-*validée (recoupée par recherche web) · id cbd72d2ba1 · jours 7, 78*
+*validée (recoupée par recherche web) · id cbd72d2ba1 · jours 2, 76*
 
 #### Lequel de ces « jasmins » fleurit en plein hiver ? · piège
 
@@ -14840,7 +14840,7 @@ Lequel de ces « jasmins » fleurit en plein hiver ?
 
 **Explication :** Le jasmin d'hiver ouvre ses fleurs jaunes, sans parfum, de décembre à mars sur rameaux nus. Les autres « jasmins » proposés fleurissent plus tard, en été.
 **Source :** <https://www.infoflora.ch/en/flora/jasminum-nudiflorum.html>, <https://luberon.fr/luberon/parc-naturel-regional/flore/annu+jasmin-d-hiver+2332.html>
-*validée (recoupée par recherche web) · corrigée · id d033556e39 · jours 2, 74*
+*validée (recoupée par recherche web) · corrigée · id d033556e39*
 
 #### Lequel de ces magnolias garde ses feuilles en hiver ?
 
@@ -14855,7 +14855,7 @@ Lequel de ces magnolias garde ses feuilles en hiver ?
 
 **Explication :** Le magnolia à grandes fleurs a des feuilles persistantes, coriaces et luisantes. Les magnolias de Soulange, kobus et étoilé sont caducs et fleurissent sur bois nu.
 **Source :** <https://fr.wikipedia.org/wiki/Magnolia_grandiflora>, <https://fr.wikipedia.org/wiki/Magnolia_stellata>
-*validée (recoupée par recherche web) · id ec73d07e26 · jours 3, 70*
+*validée (recoupée par recherche web) · id ec73d07e26 · jours 4, 64*
 
 #### Un jeune hêtre garde ses feuilles brunes tout l'hiver. Que traduit cela ? · piège
 
@@ -14868,7 +14868,7 @@ Un jeune hêtre garde ses feuilles brunes tout l'hiver. Que traduit cela ?
 
 **Explication :** La marcescence est normale chez le hêtre, le charme ou certains chênes : l'abscission est incomplète et les feuilles sèches tombent au printemps, à la poussée des bourgeons.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NQ30 · jours 38*
+*relue (non recoupée) · id NQ30 · jours 39, 90*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -14883,7 +14883,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Kalmia a un feuillage persistant. Cognassier, Baguenaudier, Châtaignier : feuillage caduc.
 **Source :** <https://www.rhs.org.uk/plants/9708/kalmia-latifolia/details>, <https://plants.ces.ncsu.edu/plants/kalmia-latifolia/common-name/mountain-laurel>
-*issue des données de l'appli (non recoupée) · id 09fd63e53f · jours 56*
+*issue des données de l'appli (non recoupée) · id 09fd63e53f · jours 61*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -14898,7 +14898,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Salsepareille a un feuillage persistant. Bignone de Virginie, Aristoloche à grandes feuilles, Schisandra : feuillage caduc.
 **Source :** <https://temperate.theferns.info/plant/Smilax+aspera>, <https://floraveg.eu/factsheet/default/132202>
-*issue des données de l'appli (non recoupée) · id 1498a3a391 · jours 59*
+*issue des données de l'appli (non recoupée) · id 1498a3a391 · jours 51*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -14913,7 +14913,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Néflier du Japon a un feuillage persistant. Sorbaria, Charme-houblon, Charme : feuillage caduc.
 **Source :** <https://www.rhs.org.uk/plants/6735/eriobotrya-japonica/details>
-*issue des données de l'appli (non recoupée) · id 1b4eb1eaba · jours 35*
+*issue des données de l'appli (non recoupée) · id 1b4eb1eaba · jours 28*
 
 #### Laquelle de ces plantes fleurit en plein hiver ?
 
@@ -14928,7 +14928,7 @@ Laquelle de ces plantes fleurit en plein hiver ?
 
 **Explication :** Rose de Noël fleurit de janvier à mars. Les trois autres fleurissent en été.
 **Source :** <https://blog.metmuseum.org/cloistersgardens/2010/03/24/hell-flowers/>
-*issue des données de l'appli (non recoupée) · id 2345d95aac · jours 31, 74*
+*issue des données de l'appli (non recoupée) · id 2345d95aac · jours 17, 73*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -14943,7 +14943,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Charme-houblon a un feuillage caduc. Ajonc d'Europe, Palmier des Canaries, Olivier : feuillage persistant.
 **Source :** <https://rhs.org.uk/Plants/12012/wd/Details>, <https://worldplants.ca/display.php?id=7042>
-*issue des données de l'appli (non recoupée) · id 28d5981358*
+*issue des données de l'appli (non recoupée) · id 28d5981358 · jours 41*
 
 #### Laquelle de ces plantes fleurit en plein hiver ?
 
@@ -14958,7 +14958,7 @@ Laquelle de ces plantes fleurit en plein hiver ?
 
 **Explication :** Aulne à feuilles en cœur fleurit de février à mars. Les trois autres fleurissent en été.
 **Source :** <https://agriculture.gouv.fr/sites/default/files/160420_aco_fiche.pdf>
-*issue des données de l'appli (non recoupée) · id 2fe1a258ab · jours 33, 77*
+*issue des données de l'appli (non recoupée) · id 2fe1a258ab · jours 52, 80*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -14973,7 +14973,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Fuchsia de Magellan a un feuillage caduc. Palmier de Chine, Osmanthe à feuilles de houx, Photinia : feuillage persistant.
 **Source :** <https://www.rhs.org.uk/plants/7494/wd/details>
-*issue des données de l'appli (non recoupée) · id 30baaabe01*
+*issue des données de l'appli (non recoupée) · id 30baaabe01 · jours 36*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -14988,7 +14988,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Santoline a un feuillage persistant. Tamaris de France, Baguenaudier, Ptérocaryer du Caucase : feuillage caduc.
 **Source :** <https://www.rhs.org.uk/Plants/19856/Santolina-chamaecyparissus/Details>
-*issue des données de l'appli (non recoupée) · id 3e66b7d909 · jours 61*
+*issue des données de l'appli (non recoupée) · id 3e66b7d909 · jours 58*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -15003,7 +15003,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Chimonanthe a un feuillage caduc. Palmier des Canaries, Germandrée arbustive, Photinia : feuillage persistant.
 **Source :** <https://www.rhs.org.uk/plants/29215/wd/details>
-*issue des données de l'appli (non recoupée) · id 427be4b0d0 · jours 86*
+*issue des données de l'appli (non recoupée) · id 427be4b0d0 · jours 52*
 
 #### Laquelle de ces plantes fleurit en plein hiver ?
 
@@ -15018,7 +15018,7 @@ Laquelle de ces plantes fleurit en plein hiver ?
 
 **Explication :** Mimosa argenté fleurit de janvier à mars. Les trois autres fleurissent en été.
 **Source :** données sourcées de l'appli
-*issue des données de l'appli (non recoupée) · id 4774b413e0 · jours 67*
+*issue des données de l'appli (non recoupée) · id 4774b413e0 · jours 64*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15033,7 +15033,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Fatsia du Japon a un feuillage persistant. Arbre de fer, Argousier, Châtaignier : feuillage caduc.
 **Source :** <https://www.rhs.org.uk/plants/7147/fatsia-japonica/details>
-*issue des données de l'appli (non recoupée) · id 4879b155ff · jours 55*
+*issue des données de l'appli (non recoupée) · id 4879b155ff · jours 36*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15048,7 +15048,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Céanothe a un feuillage persistant. Argousier, Buisson de beauté, Cytise : feuillage caduc.
 **Source :** <https://www.rhs.org.uk/plants/3278/wd/details>
-*issue des données de l'appli (non recoupée) · id 4b2cffa18b · jours 47*
+*issue des données de l'appli (non recoupée) · id 4b2cffa18b · jours 56*
 
 #### Laquelle de ces plantes fleurit en plein hiver ?
 
@@ -15063,7 +15063,7 @@ Laquelle de ces plantes fleurit en plein hiver ?
 
 **Explication :** Perce-neige fleurit de janvier à mars. Les trois autres fleurissent en été.
 **Source :** <https://sciencedaily.com/releases/2009/12/091220175319.htm>
-*issue des données de l'appli (non recoupée) · id 4ba7e8232b · jours 62, 90*
+*issue des données de l'appli (non recoupée) · id 4ba7e8232b · jours 54, 82*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15078,7 +15078,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Germandrée arbustive a un feuillage persistant. Buisson de beauté, Tamaris de France, Cognassier : feuillage caduc.
 **Source :** <https://www.rhs.org.uk/plants/18060/wd/details>, <https://en.wikipedia.org/wiki/Teucrium_fruticans>
-*issue des données de l'appli (non recoupée) · id 4bd5528491 · jours 17*
+*issue des données de l'appli (non recoupée) · id 4bd5528491 · jours 60*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15093,7 +15093,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Caroubier a un feuillage persistant. Tupélo, Corète du Japon, Charme : feuillage caduc.
 **Source :** <https://taxref.mnhn.fr/taxref-web/taxa/447038/groups>
-*issue des données de l'appli (non recoupée) · id 4bede8eead · jours 53*
+*issue des données de l'appli (non recoupée) · id 4bede8eead · jours 13*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15108,7 +15108,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Buisson ardent a un feuillage persistant. Érythrine crête-de-coq, Tupélo, Sophora du Japon : feuillage caduc.
 **Source :** <https://www.rhs.org.uk/plants/14208/pyracantha-coccinea/details>, <https://gd.eppo.int/taxon/PYECO>
-*issue des données de l'appli (non recoupée) · id 4f34eda67c · jours 31*
+*issue des données de l'appli (non recoupée) · id 4f34eda67c · jours 57*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -15123,7 +15123,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Mûrier à papier a un feuillage caduc. Buisson ardent, Griselinia, Palmier de Californie : feuillage persistant.
 **Source :** <https://plants.ces.ncsu.edu/plants/broussonetia-papyrifera>
-*issue des données de l'appli (non recoupée) · id 4fc59ff57a*
+*issue des données de l'appli (non recoupée) · id 4fc59ff57a · jours 88*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15138,7 +15138,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Faux-poivrier a un feuillage persistant. Fuchsia de Magellan, Arbre au liège de l'Amour, Arbre de fer : feuillage caduc.
 **Source :** <https://jardin-thuret.hub.inrae.fr/content/download/6704/54892?version=1>, <https://www.poisonsinfo.health.qld.gov.au/plants-and-mushrooms/pepperina-schinus-molle>
-*issue des données de l'appli (non recoupée) · id 593bffc703 · jours 52*
+*issue des données de l'appli (non recoupée) · id 593bffc703 · jours 42*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -15168,7 +15168,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Ajonc d'Europe a un feuillage persistant. Sassafras, Potentille arbustive, Érythrine crête-de-coq : feuillage caduc.
 **Source :** <https://www.rhs.org.uk/plants/18575/wd/details>
-*issue des données de l'appli (non recoupée) · id 65d47c0459 · jours 12*
+*issue des données de l'appli (non recoupée) · id 65d47c0459 · jours 18*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15183,7 +15183,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Bambou sacré a un feuillage persistant. Symphorine, Physocarpe, Cytise : feuillage caduc.
 **Source :** <https://fairfaxgardening.org/nandina/>, <https://plants.ces.ncsu.edu/plants/nandina-domestica-harbour-dwarf/common-name/harbour-dwarf-nandina>
-*issue des données de l'appli (non recoupée) · id 68459851af · jours 63*
+*issue des données de l'appli (non recoupée) · id 68459851af · jours 87*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15198,7 +15198,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Laurier-rose a un feuillage persistant. Tulipier de Virginie, Arbre à perruque, Kaki : feuillage caduc.
 **Source :** <https://sbocc.fr/wp-content/uploads/2025/05/Carnets-botaniques-n°252.pdf>
-*issue des données de l'appli (non recoupée) · id 6b696e4e3a · jours 62*
+*issue des données de l'appli (non recoupée) · id 6b696e4e3a · jours 16*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -15213,7 +15213,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Sumac de Virginie a un feuillage caduc. Mimosa argenté, Kalmia, Palmier de Californie : feuillage persistant.
 **Source :** <https://plants.ces.ncsu.edu/plants/rhus-typhina>, <https://www.rhs.org.uk/plants/105810/Rhus-typhina-Dissecta/Details>
-*issue des données de l'appli (non recoupée) · id 6fd02b075c · jours 14*
+*issue des données de l'appli (non recoupée) · id 6fd02b075c*
 
 #### Laquelle de ces plantes fleurit en plein hiver ?
 
@@ -15228,7 +15228,7 @@ Laquelle de ces plantes fleurit en plein hiver ?
 
 **Explication :** Tussilage fleurit de février à mars. Les trois autres fleurissent en été.
 **Source :** <https://go.marybaldwin.edu/wildflowerstudy/UPD/Asteraceae/Tussilago.html>
-*issue des données de l'appli (non recoupée) · id 7527dc2e4a · jours 21, 76*
+*issue des données de l'appli (non recoupée) · id 7527dc2e4a · jours 39, 74*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -15243,7 +15243,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Gattilier a un feuillage caduc. Troène du Japon, Laurier sauce, Griselinia : feuillage persistant.
 **Source :** <https://www.rhs.org.uk/plants/43844/wd/details>
-*issue des données de l'appli (non recoupée) · id 7aa3c8fb4b*
+*issue des données de l'appli (non recoupée) · id 7aa3c8fb4b · jours 23*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -15258,7 +15258,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Corète du Japon a un feuillage caduc. Olivier, Cordyline d'Australie, Caroubier : feuillage persistant.
 **Source :** <https://www.rhs.org.uk/plants/224031/kerria-japonica-(l-)-dc/details>
-*issue des données de l'appli (non recoupée) · id 8053596ac9 · jours 53*
+*issue des données de l'appli (non recoupée) · id 8053596ac9 · jours 11*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -15273,7 +15273,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Érythrine crête-de-coq a un feuillage caduc. Aucuba du Japon, Escallonia, Laurier-rose : feuillage persistant.
 **Source :** <https://www.rhs.org.uk/Plants/32582/wd/Details>, <https://plantpono.org/pono-plants/erythrina-crista-galli/>
-*issue des données de l'appli (non recoupée) · id 8053c29b77 · jours 36*
+*issue des données de l'appli (non recoupée) · id 8053c29b77 · jours 86*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15288,7 +15288,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Aucuba du Japon a un feuillage persistant. Baguenaudier, Physocarpe, Chicot du Canada : feuillage caduc.
 **Source :** <https://www.rhs.org.uk/plants/148757/aucuba-japonica/details>, <https://plants.ces.ncsu.edu/plants/aucuba-japonica/common-name/gold-dust/>
-*issue des données de l'appli (non recoupée) · id 8413e30a35 · jours 30*
+*issue des données de l'appli (non recoupée) · id 8413e30a35 · jours 22*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -15303,7 +15303,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Bourdaine a un feuillage caduc. Caroubier, Skimmia, Andromède du Japon : feuillage persistant.
 **Source :** <https://forest.jrc.ec.europa.eu/media/atlas/Frangula_alnus.pdf>, <https://bsbi.org/taxa/2cd4p9h.c18/frangula-alnus>
-*issue des données de l'appli (non recoupée) · id 86a08d03a6 · jours 51*
+*issue des données de l'appli (non recoupée) · id 86a08d03a6*
 
 #### Laquelle de ces plantes fleurit en plein hiver ?
 
@@ -15318,7 +15318,7 @@ Laquelle de ces plantes fleurit en plein hiver ?
 
 **Explication :** Orme champêtre fleurit de février à mars. Les trois autres fleurissent en été.
 **Source :** <https://revueforestierefrancaise.agroparistech.fr/article/download/7686/31299>
-*issue des données de l'appli (non recoupée) · id 88962323ed · jours 40, 75*
+*issue des données de l'appli (non recoupée) · id 88962323ed · jours 30, 75*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -15333,7 +15333,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Lilas des Indes a un feuillage caduc. Aucuba du Japon, Callune, Caroubier : feuillage persistant.
 **Source :** <https://www.rhs.org.uk/plants/363763/lagerstroemia-indica-centennial/details>
-*issue des données de l'appli (non recoupée) · id 894625243d · jours 24*
+*issue des données de l'appli (non recoupée) · id 894625243d*
 
 #### Laquelle de ces plantes fleurit en plein hiver ?
 
@@ -15348,7 +15348,7 @@ Laquelle de ces plantes fleurit en plein hiver ?
 
 **Explication :** Aulne blanc fleurit de février à mars. Les trois autres fleurissent en été.
 **Source :** <https://mustila.fi/en/plants/alnusincana/>
-*issue des données de l'appli (non recoupée) · id 8d962bda3a · jours 42, 78*
+*issue des données de l'appli (non recoupée) · id 8d962bda3a · jours 69*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15363,7 +15363,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Osmanthe à feuilles de houx a un feuillage persistant. Mûrier à papier, Ailante glanduleux, Érythrine crête-de-coq : feuillage caduc.
 **Source :** <https://www.rhs.org.uk/plants/11988/wd/details>, <https://plants.ces.ncsu.edu/plants/osmanthus-heterophyllus/common-name/holly-osmanthus/>
-*issue des données de l'appli (non recoupée) · id 934b908bb5 · jours 83*
+*issue des données de l'appli (non recoupée) · id 934b908bb5 · jours 23*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -15378,7 +15378,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Buisson de beauté a un feuillage caduc. Fragon petit houx, Palmier de Californie, Romarin : feuillage persistant.
 **Source :** <https://www.rhs.org.uk/plants/67708/kolkwitzia-amabilis-pink-cloud/details>, <https://plants.ces.ncsu.edu/plants/kolkwitzia-amabilis/common-name/beauty-bush/>
-*issue des données de l'appli (non recoupée) · id 980d5737e6 · jours 16*
+*issue des données de l'appli (non recoupée) · id 980d5737e6 · jours 84*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -15393,7 +15393,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Tamaris de France a un feuillage caduc. Escallonia, Troène du Japon, Feijoa : feuillage persistant.
 **Source :** <https://floraveg.eu/factsheet/default/103431>
-*issue des données de l'appli (non recoupée) · id 996249a83b · jours 80*
+*issue des données de l'appli (non recoupée) · id 996249a83b · jours 89*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15408,7 +15408,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Laurier sauce a un feuillage persistant. Amélanchier de Lamarck, Framboisier, Sophora du Japon : feuillage caduc.
 **Source :** <https://powo.science.kew.org/taxon/465049-1>, <https://sophy.tela-botanica.org/pltcli/PC3404.htm>
-*issue des données de l'appli (non recoupée) · id 99ef717c27 · jours 54*
+*issue des données de l'appli (non recoupée) · id 99ef717c27 · jours 55*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -15423,7 +15423,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Chicot du Canada a un feuillage caduc. Photinia, Palmier des Canaries, Fragon petit houx : feuillage persistant.
 **Source :** <https://plants.ces.ncsu.edu/plants/gymnocladus-dioicus/>, <https://www.canr.msu.edu/resources/kentucky_coffeetree>
-*issue des données de l'appli (non recoupée) · id 9d2cb755b7 · jours 89*
+*issue des données de l'appli (non recoupée) · id 9d2cb755b7 · jours 49*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15438,7 +15438,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Palmier de Californie a un feuillage persistant. Mûrier à papier, Amélanchier de Lamarck, Framboisier : feuillage caduc.
 **Source :** <https://gardenerspath.com/plants/landscape-trees/grow-california-fan-palm/>, <https://palmcentre.co.uk/products/outdoor-plants/garden-palm-trees/washingtonia-filifera/>
-*issue des données de l'appli (non recoupée) · id a6bc41d79b · jours 37*
+*issue des données de l'appli (non recoupée) · id a6bc41d79b · jours 15*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15468,7 +15468,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Aronia a un feuillage caduc. Escallonia, Aucuba du Japon, Immortelle d'Italie : feuillage persistant.
 **Source :** <https://www.rhs.org.uk/plants/1610/wd/details>
-*issue des données de l'appli (non recoupée) · id ae3d4cd249*
+*issue des données de l'appli (non recoupée) · id ae3d4cd249 · jours 79*
 
 #### Laquelle de ces plantes fleurit en plein hiver ?
 
@@ -15483,7 +15483,7 @@ Laquelle de ces plantes fleurit en plein hiver ?
 
 **Explication :** Noisetier fleurit de janvier à mars. Les trois autres fleurissent en été.
 **Source :** <https://dictionnaire-academie.fr/article/A9A3387>
-*issue des données de l'appli (non recoupée) · id b375d02542 · jours 57, 86*
+*issue des données de l'appli (non recoupée) · id b375d02542 · jours 70*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15498,7 +15498,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Polygala à feuilles de myrte a un feuillage persistant. Gattilier, Ailante glanduleux, Zelkova du Japon : feuillage caduc.
 **Source :** <https://gardenersworld.com/plants/polygala-myrtifolia-var-grandiflora>, <https://www.rhs.org.uk/Plants/56000/Polygala-x-dalmaisiana/Details>
-*issue des données de l'appli (non recoupée) · id b49a155f7e · jours 28*
+*issue des données de l'appli (non recoupée) · id b49a155f7e · jours 24*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15513,7 +15513,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Palmier nain a un feuillage persistant. Tulipier de Virginie, Aronia, Arbre à perruque : feuillage caduc.
 **Source :** <https://jardin-thuret.hub.inrae.fr/content/download/6000/48617?version=1>, <https://eflorasys.univ-lorraine.fr/index.php/en/species/view/90524>
-*issue des données de l'appli (non recoupée) · id b54cd42a14 · jours 84*
+*issue des données de l'appli (non recoupée) · id b54cd42a14 · jours 32*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15528,7 +15528,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Buis a un feuillage persistant. Paulownia, Amélanchier de Lamarck, Seringat : feuillage caduc.
 **Source :** <https://www.rhs.org.uk/plants/2579/Buxus-sempervirens/Details>
-*issue des données de l'appli (non recoupée) · id bb6b488061 · jours 41*
+*issue des données de l'appli (non recoupée) · id bb6b488061 · jours 54*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15543,7 +15543,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Skimmia a un feuillage persistant. Sophora du Japon, Mûrier à papier, Ailante glanduleux : feuillage caduc.
 **Source :** <https://www.rhs.org.uk/plants/17401/skimmia-japonica/details>
-*issue des données de l'appli (non recoupée) · id c5b55e2b57 · jours 65*
+*issue des données de l'appli (non recoupée) · id c5b55e2b57 · jours 85*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15558,7 +15558,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Sauge de Jérusalem a un feuillage persistant. Érythrine crête-de-coq, Sassafras, Arbre aux papillons : feuillage caduc.
 **Source :** <https://www.rhs.org.uk/Plants/12700/wd/Details>
-*issue des données de l'appli (non recoupée) · id cc66a89ad1 · jours 18*
+*issue des données de l'appli (non recoupée) · id cc66a89ad1 · jours 53*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15588,7 +15588,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Faux-pistachier a un feuillage caduc. Kalmia, Céanothe, Fragon petit houx : feuillage persistant.
 **Source :** <https://www.rhs.org.uk/plants/17753/wd/details>, <https://plants.ces.ncsu.edu/plants/staphylea-pinnata>
-*issue des données de l'appli (non recoupée) · id ddbd385e2b*
+*issue des données de l'appli (non recoupée) · id ddbd385e2b · jours 37*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -15603,7 +15603,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Stéphanandra a un feuillage caduc. Palmier de Chine, Caroubier, Céanothe : feuillage persistant.
 **Source :** <https://www.rhs.org.uk/plants/43659/stephanandra-incisa-prostrata/details>, <https://ccetompkins.org/resources/beautification-stephanandra>
-*issue des données de l'appli (non recoupée) · id e333b11bd1 · jours 15*
+*issue des données de l'appli (non recoupée) · id e333b11bd1 · jours 17*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15618,7 +15618,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Escallonia a un feuillage persistant. Seringat, Physocarpe, Corète du Japon : feuillage caduc.
 **Source :** <https://www.rhs.org.uk/plants/6861/wd/details>
-*issue des données de l'appli (non recoupée) · id e9a3d9c29a · jours 57*
+*issue des données de l'appli (non recoupée) · id e9a3d9c29a · jours 40*
 
 #### Laquelle de ces plantes fleurit en plein hiver ?
 
@@ -15633,7 +15633,7 @@ Laquelle de ces plantes fleurit en plein hiver ?
 
 **Explication :** Aulne glutineux fleurit de février à mars. Les trois autres fleurissent en été.
 **Source :** <https://www.futura-sciences.com/planete/definitions/botanique-aulne-glutineux-10464/>
-*issue des données de l'appli (non recoupée) · id f36032392b · jours 30, 73*
+*issue des données de l'appli (non recoupée) · id f36032392b · jours 55, 83*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -15648,7 +15648,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Cognassier du Japon a un feuillage caduc. Kalmia, Photinia, Skimmia : feuillage persistant.
 **Source :** <https://www.rhs.org.uk/plants/3461/chaenomeles-japonica/details>
-*issue des données de l'appli (non recoupée) · id f4f0234fda · jours 38*
+*issue des données de l'appli (non recoupée) · id f4f0234fda · jours 87*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -15663,7 +15663,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Pacanier a un feuillage caduc. Immortelle d'Italie, Laurier sauce, Caroubier : feuillage persistant.
 **Source :** <https://ag.missouristate.edu/PBTrewatha/pecan.htm>, <https://www.chicagobotanic.org/plant-information/plant-finder/carya-illinoinensis-pecan>
-*issue des données de l'appli (non recoupée) · id f4fd0602c2 · jours 83*
+*issue des données de l'appli (non recoupée) · id f4fd0602c2 · jours 81*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -15678,7 +15678,7 @@ Laquelle de ces plantes perd ses feuilles en hiver ?
 
 **Explication :** Framboisier a un feuillage caduc. Laurier sauce, Cordyline d'Australie, Immortelle d'Italie : feuillage persistant.
 **Source :** <https://www.rhs.org.uk/plants/16137/rubus-idaeus/details>
-*issue des données de l'appli (non recoupée) · id f5e9408970*
+*issue des données de l'appli (non recoupée) · id f5e9408970 · jours 31*
 
 #### Laquelle de ces plantes garde ses feuilles en hiver ?
 
@@ -15693,7 +15693,7 @@ Laquelle de ces plantes garde ses feuilles en hiver ?
 
 **Explication :** Cordyline d'Australie a un feuillage persistant. Sassafras, Mûrier à papier, Ailante glanduleux : feuillage caduc.
 **Source :** <https://www.rhs.org.uk/plants/4361/wd/details>
-*issue des données de l'appli (non recoupée) · id fc2304ec5c · jours 39*
+*issue des données de l'appli (non recoupée) · id fc2304ec5c · jours 12*
 
 #### Laquelle de ces plantes perd ses feuilles en hiver ?
 
@@ -15725,7 +15725,7 @@ Lequel de ces arbres fleurit au printemps avant ses feuilles, jusque sur le tron
 
 **Explication :** L'arbre de Judée se couvre de fleurs roses avant la feuillaison, sur les rameaux et même sur le tronc (cauliflorie). Les trois autres fleurissent feuillés.
 **Source :** <https://www.futura-sciences.com/planete/definitions/botanique-arbre-judee-11815/>, <https://fr.wikipedia.org/wiki/Arbre_de_Jud%C3%A9e>
-*validée (recoupée par recherche web) · id 26865f64ba · jours 46*
+*validée (recoupée par recherche web) · id 26865f64ba · jours 47*
 
 #### Laquelle de ces viornes fleurit en hiver, parfumée, sur des rameaux nus ?
 
@@ -15740,7 +15740,7 @@ Laquelle de ces viornes fleurit en hiver, parfumée, sur des rameaux nus ?
 
 **Explication :** La viorne de Bodnant ouvre ses bouquets roses parfumés de novembre à mars sur bois nu. Viorne obier, du Japon et mancienne fleurissent au printemps, feuillées.
 **Source :** <https://www.rhs.org.uk/plants/trials-awards/using-award-winning-plants/10-award-winning-winter-flowering-shrubs>, <https://fr.wikipedia.org/wiki/Viorne_de_Bodnant>
-*validée (recoupée par recherche web) · corrigée · id 6366f4ea71 · jours 64*
+*validée (recoupée par recherche web) · corrigée · id 6366f4ea71 · jours 62*
 
 #### Laquelle de ces fleurs jaunes sort de terre avant ses feuilles, à la fin de l'hiver ?
 
@@ -15755,7 +15755,7 @@ Laquelle de ces fleurs jaunes sort de terre avant ses feuilles, à la fin de l'h
 
 **Explication :** Le tussilage fleurit de février à avril sur des tiges écailleuses, avant ses feuilles : on le surnommait filius ante patrem, « le fils avant le père ».
 **Source :** <https://www.techno-science.net/fr/definitions/tussilage>, <https://spot.creamontblanc.org/fiches-especes/tussilage>
-*validée (recoupée par recherche web) · id 706b0a715c · jours 49*
+*validée (recoupée par recherche web) · id 706b0a715c · jours 48*
 
 #### Selon la classification de Raunkiær, comment une géophyte passe-t-elle l'hiver ?
 
@@ -15768,7 +15768,7 @@ Selon la classification de Raunkiær, comment une géophyte passe-t-elle l'hiver
 
 **Explication :** Les géophytes (perce-neige, muguet…) gardent leurs bourgeons sous terre, sur un bulbe, un tubercule ou un rhizome. Les annuelles, survivant en graine, sont des thérophytes.
 **Source :** <https://www.futura-sciences.com/planete/definitions/botanique-therophyte-6809/>, <https://www.pacificbulbsociety.org/pbswiki/index.php/Geophyte>
-*validée (recoupée par recherche web) · id 8b504b5493 · jours 72*
+*validée (recoupée par recherche web) · id 8b504b5493 · jours 73*
 
 #### Laquelle de ces plantes fleurit de la fin de l'été à l'automne, souvent avant ses feuilles…
 
@@ -15783,7 +15783,7 @@ Laquelle de ces plantes fleurit de la fin de l'été à l'automne, souvent avant
 
 **Explication :** Le cyclamen de Naples fleurit d'août à novembre, avant ou avec ses feuilles marbrées, qui tapissent le sol l'hiver puis disparaissent l'été.
 **Source :** <https://www.rhs.org.uk/plants/5145/cyclamen-hederifolium/details>, <https://en.wikipedia.org/wiki/Cyclamen_hederifolium>
-*validée (recoupée par recherche web) · id 94254219fb · jours 63*
+*validée (recoupée par recherche web) · id 94254219fb · jours 65*
 
 #### Comment nomme-t-on le passage au froid humide qui lève la dormance de certaines graines ?
 
@@ -15837,7 +15837,7 @@ Les feuilles tombées de quel arbre sentent le caramel à l'automne ?
 
 **Explication :** Les feuilles d'automne de l'arbre à caramel (katsura) dégagent une odeur de sucre brûlé ou de caramel, surtout par temps humide ; on l'attribue au maltol.
 **Source :** <https://en.wikipedia.org/wiki/Cercidiphyllum_japonicum>, <https://www.rhs.org.uk/plants/343130/cercidiphyllum-japonicum-glowball-jww4-pbr/details>
-*validée (recoupée par recherche web) · corrigée · id a4818d9dbb · jours 48*
+*validée (recoupée par recherche web) · corrigée · id a4818d9dbb · jours 49*
 
 #### À quels pigments, fabriqués surtout à l'automne, doit-on les rouges des érables ou des sum…
 
@@ -15850,7 +15850,7 @@ Les feuilles tombées de quel arbre sentent le caramel à l'automne ?
 
 **Explication :** Les anthocyanes rouges sont produites surtout à l'automne, à partir des sucres de la feuille, favorisées par les journées ensoleillées et les nuits fraîches.
 **Source :** <https://espacepourlavie.ca/les-couleurs-dautomne-des-arbres>, <https://www.techno-science.net/fr/definitions/changement-de-couleur-des-feuilles>
-*validée (recoupée par recherche web) · id c4664a0c43 · jours 76*
+*validée (recoupée par recherche web) · id c4664a0c43 · jours 81*
 
 #### Lequel de ces conifères géants perd ses feuilles en hiver ?
 
@@ -15880,7 +15880,7 @@ Lequel de ces cornouillers fleurit en jaune dès février, avant ses feuilles ?
 
 **Explication :** Le cornouiller mâle fleurit en février-mars sur rameaux nus, précieux pour les insectes. Les cornouillers sanguin, blanc et du Japon fleurissent blanc, feuillés.
 **Source :** <https://www.techno-science.net/fr/definitions/cornouiller-male>, <https://fr.wikipedia.org/wiki/Cornus_sanguinea>
-*validée (recoupée par recherche web) · id eae414b593 · jours 60*
+*validée (recoupée par recherche web) · id eae414b593 · jours 61*
 
 ## Usages et histoire
 
@@ -15897,7 +15897,7 @@ Dans quel bois taille-t-on traditionnellement la table d'harmonie d'un violon ?
 
 **Explication :** L'épicéa allie légèreté, élasticité et résistance : il transmet bien les vibrations des cordes. Les épicéas choisis pour la lutherie sont dits « bois de résonance ».
 **Source :** <https://www.waldwissen.net/fr/economie-forestiere/filiere-bois/transformation-du-bois/bois-de-resonance-depicea>, <https://fr.wikipedia.org/wiki/Table_d%27harmonie>
-*validée (recoupée par recherche web) · id 673651c50d · jours 8, 47*
+*validée (recoupée par recherche web) · id 673651c50d · jours 16, 51*
 
 #### Quelle plante a donné son nom à la « fée verte », boisson interdite en France en 1915 ?
 
@@ -15910,7 +15910,7 @@ Quelle plante a donné son nom à la « fée verte », boisson interdite en Fran
 
 **Explication :** La grande absinthe (Artemisia absinthium) parfumait cette liqueur. Une loi de mars 1915 en interdit la fabrication et la vente en France.
 **Source :** <https://fr.wikipedia.org/wiki/Absinthe_(spiritueux)>, <https://tile.loc.gov/storage-services/service/ll/llglrd/2019670640/2019670640.pdf>
-*validée (recoupée par recherche web) · corrigée · id 9897a76286 · jours 2, 57*
+*validée (recoupée par recherche web) · corrigée · id 9897a76286 · jours 17, 59*
 
 #### Lequel de ces arbres fournit le liège des bouchons ?
 
@@ -15925,7 +15925,7 @@ Lequel de ces arbres fournit le liège des bouchons ?
 
 **Explication :** Le chêne-liège porte une épaisse écorce de liège que l'on lève sans abattre l'arbre ; l'écorce se reforme ensuite. La toute première récolte s'appelle le démasclage.
 **Source :** <https://www.pefc-france.org/wp-content/uploads/Referentiel-Recolte-Liege-ST-1003-1_2025.pdf>, <https://fr.wikipedia.org/wiki/Ch%C3%AAne-li%C3%A8ge>
-*validée (recoupée par recherche web) · id 9eb4b2cf76 · jours 19, 73*
+*validée (recoupée par recherche web) · id 9eb4b2cf76 · jours 46, 75*
 
 #### Quelle partie de l'érable à sucre récolte-t-on au printemps pour faire du sirop ?
 
@@ -15938,7 +15938,7 @@ Quelle partie de l'érable à sucre récolte-t-on au printemps pour faire du sir
 
 **Explication :** On entaille le tronc au début du printemps, quand les nuits gèlent et les jours dégèlent. La sève, très peu sucrée, est concentrée par évaporation : il en faut environ 40 litres pour 1 litre de sirop.
 **Source :** <https://www.thecanadianencyclopedia.ca/fr/article/acericulture>, <https://fr.vikidia.org/wiki/Sirop_d'%C3%A9rable>
-*validée (recoupée par recherche web) · id E01 · jours 42, 90*
+*validée (recoupée par recherche web) · id E01 · jours 42*
 
 #### Le chocolat est fabriqué à partir de quelle partie du cacaoyer ?
 
@@ -15951,7 +15951,7 @@ Le chocolat est fabriqué à partir de quelle partie du cacaoyer ?
 
 **Explication :** Les fèves sont les graines contenues dans la cabosse, le fruit du cacaoyer. Elles sont fermentées, séchées, torréfiées puis broyées.
 **Source :** <https://www.alimentarium.org/fr/savoir/cacaoyer>, <https://www.lalanguefrancaise.com/dictionnaire/definition/cacaoyer>
-*validée (recoupée par recherche web) · id E02 · jours 24, 77*
+*validée (recoupée par recherche web) · id E02 · jours 13, 73*
 
 #### D'où vient la fibre de coton ?
 
@@ -15964,7 +15964,7 @@ D'où vient la fibre de coton ?
 
 **Explication :** Le coton est formé de poils fixés sur les graines du cotonnier ; ils sortent de la capsule mûre sous forme de touffe duveteuse.
 **Source :** <https://www.larousse.fr/dictionnaires/francais/coton>, <https://www.marques-de-france.fr/definition/coton/>
-*validée (recoupée par recherche web) · id E06 · jours 44*
+*validée (recoupée par recherche web) · id E06 · jours 49*
 
 #### Quel arbre fournit les pignons de pin ?
 
@@ -15977,7 +15977,7 @@ Quel arbre fournit les pignons de pin ?
 
 **Explication :** Les pignons sont les graines comestibles du pin parasol, que l'on libère en ouvrant ses grosses pommes de pin mûres.
 **Source :** <https://www.techno-science.net/fr/definitions/pin-parasol>, <https://fr.vikidia.org/wiki/Pin_parasol>
-*validée (recoupée par recherche web) · id E09 · jours 48*
+*validée (recoupée par recherche web) · id E09 · jours 90*
 
 #### Que met-on à infuser pour une tisane de tilleul ?
 
@@ -16003,7 +16003,7 @@ Quel arbre fournit le latex du caoutchouc naturel ?
 
 **Explication :** L'hévéa (Hevea brasiliensis), originaire d'Amazonie, donne un latex blanc récolté par saignée de l'écorce : plus de 90 % du caoutchouc naturel.
 **Source :** <https://www.techno-science.net/fr/definitions/hevea>, <https://www.futura-sciences.com/planete/definitions/botanique-hevea-12053/>
-*validée (recoupée par recherche web) · id N25 · jours 3, 46*
+*validée (recoupée par recherche web) · id N25 · jours 12, 47*
 
 #### Quelle plante rend de nombreux chats euphoriques grâce à la népétalactone ?
 
@@ -16016,7 +16016,7 @@ Quelle plante rend de nombreux chats euphoriques grâce à la népétalactone ?
 
 **Explication :** La népétalactone de la cataire excite ou apaise la plupart des chats (environ la moitié y sont sensibles). Les chiens et les rongeurs n'y réagissent pas.
 **Source :** <https://espacepourlavie.ca/herbe-chat-utilisations-et-reactions-des-animaux>, <https://premierepeau.com/fr/pages/glossary-terms/catnip>
-*validée (recoupée par recherche web) · id N28 · jours 14, 43*
+*validée (recoupée par recherche web) · id N28 · jours 14, 52*
 
 #### Quelle couleur la gaude, ou réséda des teinturiers, donnait-elle aux étoffes de soie ?
 
@@ -16029,7 +16029,7 @@ Quelle couleur la gaude, ou réséda des teinturiers, donnait-elle aux étoffes 
 
 **Explication :** La gaude (Reseda luteola), riche en lutéoline, donnait un jaune très solide ; associée au pastel bleu, elle servait aussi à obtenir des verts.
 **Source :** <https://www.techno-science.net/fr/definitions/gaude>
-*validée (recoupée par recherche web) · id NU00 · jours 13, 60*
+*validée (recoupée par recherche web) · id NU00 · jours 28, 60*
 
 #### Quelle teinte donne le brou de noix, enveloppe verte du fruit du noyer, utilisé pour teint…
 
@@ -16042,7 +16042,7 @@ Quelle teinte donne le brou de noix, enveloppe verte du fruit du noyer, utilisé
 
 **Explication :** Le brou du noyer (Juglans regia), riche en juglone et tanins, s'oxyde à l'air et brunit : on l'emploie comme teinture brune du bois, de la laine et comme encre.
 **Source :** <https://franco.wiki/fr/Brou_de_noix.html>
-*validée (recoupée par recherche web) · id NU01 · jours 28, 69*
+*validée (recoupée par recherche web) · id NU01 · jours 5, 68*
 
 #### De quelle partie du lin textile tire-t-on la fibre qui sert à fabriquer le tissu ?
 
@@ -16055,7 +16055,7 @@ De quelle partie du lin textile tire-t-on la fibre qui sert à fabriquer le tiss
 
 **Explication :** Les fibres sont logées dans le liber de la tige. La France est le premier exportateur mondial de lin non filé.
 **Source :** <https://www.larousse.fr/encyclopedie/divers/lin/66015>, <https://www.franceagrimer.fr/content/download/70369/document/FICHE_FILIERE_LIN_2023.pdf>
-*validée (recoupée par recherche web) · id NX08 · jours 4, 70*
+*validée (recoupée par recherche web) · id NX08 · jours 11, 61*
 
 #### Dans la préparation du lin textile, à quoi sert le rouissage des tiges ?
 
@@ -16068,7 +16068,7 @@ Dans la préparation du lin textile, à quoi sert le rouissage des tiges ?
 
 **Explication :** Au sol, humidité et micro-organismes dégradent le liant pectique ; le teillage mécanique sépare ensuite la filasse des parties ligneuses.
 **Source :** <https://www.larousse.fr/encyclopedie/divers/lin/66015>, <https://www.franceagrimer.fr/content/download/70369/document/FICHE_FILIERE_LIN_2023.pdf>
-*validée (recoupée par recherche web) · id NX09 · jours 22, 59*
+*validée (recoupée par recherche web) · id NX09 · jours 28, 68*
 
 #### Quelle partie de la garance des teinturiers fournissait le colorant rouge utilisé pour tei…
 
@@ -16081,7 +16081,7 @@ Quelle partie de la garance des teinturiers fournissait le colorant rouge utilis
 
 **Explication :** L'alizarine du « rouge garance » vient de la racine ; sa synthèse industrielle en 1869 a mis fin à la culture de la plante en France.
 **Source :** <https://www.lalanguefrancaise.com/dictionnaire/definition/garance>, <https://fr.vikidia.org/wiki/Garance_des_teinturiers>
-*validée (recoupée par recherche web) · id NX10 · jours 33, 73*
+*validée (recoupée par recherche web) · id NX10 · jours 29, 75*
 
 #### Pour brasser la bière, quels organes du houblon utilise-t-on ?
 
@@ -16094,7 +16094,7 @@ Pour brasser la bière, quels organes du houblon utilise-t-on ?
 
 **Explication :** Seuls les pieds femelles portent les cônes riches en lupuline, la résine jaune qui donne amertume et arôme ; les pieds mâles n'en contiennent pas.
 **Source :** <https://www.alimentarium.org/fr/savoir/houblon>, <https://www.quebec.ca/agriculture-environnement-et-ressources-naturelles/agriculture/agriculture-urbaine/quoi-planter/culture-houblon-en-ville>
-*validée (recoupée par recherche web) · id NX11 · jours 31, 88*
+*validée (recoupée par recherche web) · id NX11 · jours 37, 85*
 
 #### Dans les cônes de houblon, quelle poudre jaune résineuse donne son amertume et son arôme à…
 
@@ -16107,7 +16107,7 @@ Dans les cônes de houblon, quelle poudre jaune résineuse donne son amertume et
 
 **Explication :** Les glandes de lupuline contiennent les acides alpha (amertume) et les huiles essentielles (arôme). La bière se mesure en IBU, échelle d'amertume.
 **Source :** <https://www.alimentarium.org/fr/savoir/houblon>, <https://www.agridea.ch/fileadmin/AGRIDEA/Theme/Productions_vegetales/Agriculture_biologique/Projets/Fiche_thematique_culture_du_houblon_en_Suisse.pdf>
-*validée (recoupée par recherche web) · id NX12 · jours 42, 85*
+*validée (recoupée par recherche web) · id NX12 · jours 4, 89*
 
 #### Quelle partie de la chicorée, torréfiée et moulue, sert de succédané au café ?
 
@@ -16120,7 +16120,7 @@ Quelle partie de la chicorée, torréfiée et moulue, sert de succédané au caf
 
 **Explication :** Le café étant devenu rare à cause du blocus de 1806, la racine torréfiée en a pris la place ; elle sert encore aujourd'hui de boisson sans caféine.
 **Source :** <https://www.techno-science.net/fr/definitions/chicoree-a-cafe>, <https://www.slate.fr/story/223029/chicoree-remplace-cafe-interdiction-union-europeenne-deforestation>
-*validée (recoupée par recherche web) · id NX13 · jours 5, 80*
+*validée (recoupée par recherche web) · id NX13 · jours 34, 81*
 
 #### Comment obtient-on l'opium à partir du pavot somnifère ?
 
@@ -16133,7 +16133,7 @@ Comment obtient-on l'opium à partir du pavot somnifère ?
 
 **Explication :** Le suc blanc qui s'écoule brunit à l'air ; il contient morphine, codéine et thébaïne, d'où son usage médical et ses dangers.
 **Source :** <https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/26554557/opium>, <https://www.universalis.fr/encyclopedie/opium/>
-*validée (recoupée par recherche web) · id NX14 · jours 8, 61*
+*validée (recoupée par recherche web) · id NX14 · jours 15, 62*
 
 #### Que fait-on de l'écorce de chêne broyée, appelée « tan », depuis le Moyen Âge ?
 
@@ -16146,7 +16146,7 @@ Que fait-on de l'écorce de chêne broyée, appelée « tan », depuis le Moyen 
 
 **Explication :** Riche en tanins, elle transforme les protéines des peaux en cuir imputrescible ; les peaux restaient au moins un an dans les fosses à tan.
 **Source :** <https://www.techno-science.net/fr/definitions/tanin>, <https://www.universalis.fr/encyclopedie/tanins-tannins/>
-*validée (recoupée par recherche web) · id NX15 · jours 56*
+*validée (recoupée par recherche web) · id NX15 · jours 50*
 
 #### La galle du chêne, riche en tanins, est provoquée par…
 
@@ -16159,7 +16159,7 @@ La galle du chêne, riche en tanins, est provoquée par…
 
 **Explication :** Cette excroissance est la principale source d'extraction du tanin officinal ; l'écorce du chêne en contient 10 à 15 %.
 **Source :** <https://www.universalis.fr/encyclopedie/tanins-tannins/>, <https://www.techno-science.net/fr/definitions/tanin>
-*validée (recoupée par recherche web) · id NX17 · jours 52*
+*validée (recoupée par recherche web) · id NX17 · jours 2*
 
 #### La vanille utilisée en pâtisserie provient de quelle partie de la plante ?
 
@@ -16172,7 +16172,7 @@ La vanille utilisée en pâtisserie provient de quelle partie de la plante ?
 
 **Explication :** La gousse est le fruit d'une orchidée grimpante. Sa fleur ne dure qu'une matinée : on la féconde à la main, geste mis au point en 1841 par Edmond Albius à La Réunion.
 **Source :** <https://linnean.org/news/2019/10/16/edmond-albius>
-*validée (recoupée par recherche web) · id NY00 · jours 32, 81*
+*validée (recoupée par recherche web) · id NY00 · jours 32, 82*
 
 #### Où poussent les cabosses du cacaoyer, qui renferment les fèves de cacao ?
 
@@ -16185,7 +16185,7 @@ Où poussent les cabosses du cacaoyer, qui renferment les fèves de cacao ?
 
 **Explication :** Chez le cacaoyer, fleurs et fruits naissent à même le tronc (cauliflorie). Chaque cabosse contient 20 à 50 fèves, qui sont fermentées, séchées puis torréfiées pour faire le chocolat.
 **Source :** <https://www.museeduchocolat.fr/fichiers/ecoles/Choco-Story_Kit_Pedagogique_A2.pdf>
-*validée (recoupée par recherche web) · id NY01 · jours 34, 64*
+*validée (recoupée par recherche web) · id NY01 · jours 33, 77*
 
 #### Quelle affirmation est exacte sur les poivres noir, blanc et vert ?
 
@@ -16198,7 +16198,7 @@ Quelle affirmation est exacte sur les poivres noir, blanc et vert ?
 
 **Explication :** Poivre vert : baie cueillie avant maturité ; noir : baie séchée ; blanc : baie mûre dont on retire l'enveloppe. Le « poivre rose » (baie rose) vient d'une autre plante.
 **Source :** <https://www.quechoisir.org/decryptage-poivre-decryptage-n5231/>
-*validée (recoupée par recherche web) · id NY02 · jours 65*
+*validée (recoupée par recherche web) · id NY02 · jours 64*
 
 #### En forêt, que récoltait-on par le « gemmage » ?
 
@@ -16211,7 +16211,7 @@ En forêt, que récoltait-on par le « gemmage » ?
 
 **Explication :** Le gemmeur entaillait le tronc des pins et recueillait la résine dans un pot de terre ; elle servait à fabriquer colles, vernis et produits pharmaceutiques.
 **Source :** <https://www.tourismelandes.com/?p=84965>, <https://fr.wikipedia.org/wiki/Gemmage>
-*validée (recoupée par recherche web) · id bc38ec277a · jours 1, 87*
+*validée (recoupée par recherche web) · id bc38ec277a · jours 41, 86*
 
 #### Selon Ovide, en quel arbre Apollon changea-t-il Cyparissus, inconsolable d'avoir tué son c…
 
@@ -16224,7 +16224,7 @@ Selon Ovide, en quel arbre Apollon changea-t-il Cyparissus, inconsolable d'avoir
 
 **Explication :** Dans les Métamorphoses (livre X), le jeune Cyparissus dépérit de chagrin ; Apollon le change en cyprès, arbre resté associé au deuil.
 **Source :** <https://finto.fi/ic/en/page/97A4?clang=fr>, <https://fr.wikipedia.org/wiki/Cyparissos>
-*validée (recoupée par recherche web) · id ecbb84449b · jours 38, 86*
+*validée (recoupée par recherche web) · id ecbb84449b · jours 3, 84*
 
 #### Quel bois, riche en tanins et très durable au contact du sol, sert traditionnellement à fa…
 
@@ -16237,7 +16237,7 @@ Quel bois, riche en tanins et très durable au contact du sol, sert traditionnel
 
 **Explication :** Le bois de châtaignier (Castanea sativa), imputrescible grâce à ses tanins, fournit depuis longtemps échalas, piquets et merrains, notamment en vignoble.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NU02 · jours 36, 87*
+*relue (non recoupée) · id NU02 · jours 40, 88*
 
 #### Les brins souples utilisés en vannerie sous le nom d'osier proviennent de quel arbre ou ar…
 
@@ -16250,7 +16250,7 @@ Les brins souples utilisés en vannerie sous le nom d'osier proviennent de quel 
 
 **Explication :** L'osier désigne les jeunes rameaux souples de certains saules (Salix viminalis, S. purpurea), recépés chaque année pour produire des brins longs et droits.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NU03 · jours 35, 85*
+*relue (non recoupée) · id NU03 · jours 34, 87*
 
 #### Que torréfie-t-on pour obtenir le café ?
 
@@ -16263,7 +16263,7 @@ Que torréfie-t-on pour obtenir le café ?
 
 **Explication :** Le caféier produit des « cerises » rouges contenant deux graines : les grains de café verts. C'est leur torréfaction qui leur donne couleur et arôme.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY03 · jours 37, 84*
+*relue (non recoupée) · id NY03 · jours 39, 85*
 
 #### Thé vert et thé noir : quelle est leur différence essentielle ?
 
@@ -16276,7 +16276,7 @@ Thé vert et thé noir : quelle est leur différence essentielle ?
 
 **Explication :** Tous les thés viennent du théier. Le thé vert est peu oxydé ; le thé noir a des feuilles roulées et laissées s'oxyder, ce qui les fonce et change le goût.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY04 · jours 29, 61*
+*relue (non recoupée) · id NY04 · jours 30, 63*
 
 #### De quelle partie du tournesol extrait-on l'huile de tournesol ?
 
@@ -16289,7 +16289,7 @@ De quelle partie du tournesol extrait-on l'huile de tournesol ?
 
 **Explication :** Le capitule (la grande « fleur ») est en réalité formé de centaines de petites fleurs, chacune donnant une graine. Ce sont ces graines, riches en huile, qui sont pressées.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY05 · jours 28, 79*
+*relue (non recoupée) · id NY05 · jours 30, 79*
 
 #### Pour obtenir l'huile essentielle de lavande, que distille-t-on ?
 
@@ -16302,7 +16302,7 @@ Pour obtenir l'huile essentielle de lavande, que distille-t-on ?
 
 **Explication :** On distille à la vapeur d'eau les sommités fleuries (épis) de lavande, récoltées en été. La lavande fine de Haute-Provence bénéficie d'une AOP pour son huile essentielle.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY06 · jours 16, 78*
+*relue (non recoupée) · id NY06 · jours 38, 78*
 
 #### Pourquoi le pop-corn éclate-t-il à la chaleur ?
 
@@ -16315,7 +16315,7 @@ Pourquoi le pop-corn éclate-t-il à la chaleur ?
 
 **Explication :** Seules certaines variétés de maïs éclatent : leur enveloppe est étanche et résistante, la vapeur monte en pression jusqu'à la rupture, et l'amidon gonfle en mousse.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY07 · jours 16, 50*
+*relue (non recoupée) · id NY07 · jours 18, 55*
 
 #### De quelle partie de l'arbre tire-t-on le liège des bouchons ?
 
@@ -16328,7 +16328,7 @@ De quelle partie de l'arbre tire-t-on le liège des bouchons ?
 
 **Explication :** On lève l'écorce du chêne-liège environ tous les 9 à 12 ans sans abattre l'arbre, qui en reforme une nouvelle. Le liège est léger, imperméable et élastique.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY08 · jours 68*
+*relue (non recoupée) · id NY08 · jours 54*
 
 #### Pour la tisane de tilleul, que fait-on infuser ?
 
@@ -16341,7 +16341,7 @@ Pour la tisane de tilleul, que fait-on infuser ?
 
 **Explication :** Les inflorescences du tilleul portent une bractée en forme de languette, qui s'infuse avec les fleurs. On les cueille en juin-juillet ; la tisane est réputée calmante.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY09 · jours 40, 89*
+*relue (non recoupée) · id NY09 · jours 42, 90*
 
 #### Olive verte et olive noire : quelle est la différence principale ?
 
@@ -16354,7 +16354,7 @@ Olive verte et olive noire : quelle est la différence principale ?
 
 **Explication :** Une olive verte est cueillie avant maturité, une noire est plus mûre (certaines olives noires du commerce sont aussi oxydées). Les deux viennent de l'olivier.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY11 · jours 14, 49*
+*relue (non recoupée) · id NY11 · jours 17, 55*
 
 ### Usages et histoire · intermédiaire (30)
 
@@ -16384,7 +16384,7 @@ Dans laquelle de ces « bruyères » taille-t-on les pipes dites en bruyère ?
 
 **Explication :** Les pipes sont taillées dans le broussin, renflement à la base de la bruyère arborescente, arbuste du maquis méditerranéen ; on le récolte sur des souches âgées de plusieurs décennies.
 **Source :** <https://en.wikipedia.org/wiki/Erica_arborea>, <https://fr.wikipedia.org/wiki/Pipe_(tabac)>
-*validée (recoupée par recherche web) · id 71aa47c25a · jours 44, 76*
+*validée (recoupée par recherche web) · id 71aa47c25a · jours 43, 73*
 
 #### Lequel de ces conifères détient le record du plus grand arbre du monde en hauteur ? · piège
 
@@ -16399,7 +16399,7 @@ Lequel de ces conifères détient le record du plus grand arbre du monde en haut
 
 **Explication :** Le séquoia géant est le plus massif, mais le plus haut est un séquoia à feuilles d'if : Hyperion, découvert en 2006 en Californie, dépasse 115 m.
 **Source :** <https://en.wikipedia.org/wiki/Hyperion_(tree)>, <https://fr.wikipedia.org/wiki/Sequoia_sempervirens>
-*validée (recoupée par recherche web) · id 79daedab53 · jours 25, 75*
+*validée (recoupée par recherche web) · id 79daedab53 · jours 38, 72*
 
 #### Lequel de ces arbres est surnommé « arbre aux quarante écus » ?
 
@@ -16414,7 +16414,7 @@ Lequel de ces arbres est surnommé « arbre aux quarante écus » ?
 
 **Explication :** Selon l'anecdote, un riche amateur aurait payé 40 écus un jeune ginkgo à Montpellier en 1788, l'un des premiers cultivés en France.
 **Source :** <https://fr.wikipedia.org/wiki/Ginkgo_biloba>, <https://fr.vikidia.org/wiki/Ginkgo_biloba>
-*validée (recoupée par recherche web) · corrigée · id 81a5a79203 · jours 51, 79*
+*validée (recoupée par recherche web) · corrigée · id 81a5a79203 · jours 48, 78*
 
 #### Le mot « aspirine » vient de l'ancien nom latin de laquelle de ces plantes ? · piège
 
@@ -16429,7 +16429,7 @@ Le mot « aspirine » vient de l'ancien nom latin de laquelle de ces plantes ?
 
 **Explication :** Pas du saule ! « spir » vient de Spiraea ulmaria, ancien nom de la reine-des-prés, dont on tirait l'« acide spirique », identique à l'acide salicylique.
 **Source :** <https://www.etymonline.com/fr/word/aspirin>, <https://fr.wikipedia.org/wiki/Acide_ac%C3%A9tylsalicylique>
-*validée (recoupée par recherche web) · id 83674efd58 · jours 25, 68*
+*validée (recoupée par recherche web) · id 83674efd58 · jours 25, 71*
 
 #### Le nom Geranium vient d'un mot grec désignant un oiseau. Lequel ?
 
@@ -16442,7 +16442,7 @@ Le nom Geranium vient d'un mot grec désignant un oiseau. Lequel ?
 
 **Explication :** Du grec géranos, la grue : le fruit allongé et pointu évoque son bec.
 **Source :** <https://www.etymonline.com/fr/word/geranium>, <https://new.societechimiquedefrance.fr/wp-content/uploads/woocommerce_uploads/2025/02/Etymo-HD-ne09zr.pdf>
-*validée (recoupée par recherche web) · corrigée · id 850a17152e · jours 46*
+*validée (recoupée par recherche web) · corrigée · id 850a17152e · jours 43*
 
 #### De quelle espèce est le plus vieil arbre de Paris, planté vers 1601 et visible square René… · piège
 
@@ -16457,7 +16457,7 @@ De quelle espèce est le plus vieil arbre de Paris, planté vers 1601 et visible
 
 **Explication :** Ni platane ni marronnier : c'est un robinier faux-acacia, arbre venu d'Amérique du Nord, planté selon la tradition par Jean Robin. Il est considéré comme le plus vieil arbre de Paris.
 **Source :** <https://en.wikipedia.org/wiki/Locust_of_Square_Ren%C3%A9-Viviani>, <https://fr.wikipedia.org/wiki/Robinier_du_square_Ren%C3%A9-Viviani>
-*validée (recoupée par recherche web) · id 96abd16e04 · jours 6, 66*
+*validée (recoupée par recherche web) · id 96abd16e04 · jours 37, 79*
 
 #### Que sont les « mille pertuis » qui ont donné son nom au millepertuis perforé ?
 
@@ -16470,7 +16470,7 @@ Que sont les « mille pertuis » qui ont donné son nom au millepertuis perforé
 
 **Explication :** « Pertuis » signifie trou en ancien français. À contre-jour, la feuille semble percée, mais ce sont de petites poches d'huile essentielle translucides.
 **Source :** <https://inpn.mnhn.fr/espece/cd_nom/103312>, <https://www.techno-science.net/fr/definitions/millepertuis>
-*validée (recoupée par recherche web) · id 96e24bcf5c · jours 10*
+*validée (recoupée par recherche web) · id 96e24bcf5c · jours 8*
 
 #### La gousse de vanille est le fruit… · piège
 
@@ -16483,7 +16483,7 @@ La gousse de vanille est le fruit…
 
 **Explication :** La vanille vient d'une orchidée lianescente (Vanilla planifolia). Hors de son pays d'origine, ses fleurs sont fécondées à la main, une à une.
 **Source :** <https://www.techno-science.net/fr/definitions/vanille>, <https://planet-vie.ens.fr/node/1399/download/pdf>
-*validée (recoupée par recherche web) · id N11 · jours 26*
+*validée (recoupée par recherche web) · id N11 · jours 40*
 
 #### Le poivre vert, le noir et le blanc viennent… · piège
 
@@ -16496,7 +16496,7 @@ Le poivre vert, le noir et le blanc viennent…
 
 **Explication :** Tous trois viennent de Piper nigrum : le vert est cueilli avant maturité, le noir séché presque mûr, le blanc débarrassé de son enveloppe.
 **Source :** <https://www.quechoisir.org/decryptage-poivre-decryptage-n5231/>, <https://www.techno-science.net/fr/definitions/poivre>
-*validée (recoupée par recherche web) · id N12 · jours 34, 84*
+*validée (recoupée par recherche web) · id N12 · jours 24, 84*
 
 #### De l'écorce de quel arbre a-t-on isolé la quinine, contre le paludisme ?
 
@@ -16509,7 +16509,7 @@ De l'écorce de quel arbre a-t-on isolé la quinine, contre le paludisme ?
 
 **Explication :** Les Andins connaissaient déjà les vertus de l'écorce du quinquina (Cinchona) ; Pelletier et Caventou en ont isolé la quinine en 1820. Le saule, lui, a inspiré l'aspirine.
 **Source :** <https://www.techno-science.net/fr/definitions/cinchona>, <https://www.vidal.fr/actualites/24569/chloroquine_une_histoire_d_avenir/>
-*validée (recoupée par recherche web) · id N13 · jours 64*
+*validée (recoupée par recherche web) · id N13*
 
 #### Quelle plante est associée à la mort de Socrate, en 399 av. J.-C. ?
 
@@ -16522,7 +16522,7 @@ Quelle plante est associée à la mort de Socrate, en 399 av. J.-C. ?
 
 **Explication :** Selon la plupart des historiens, Socrate a bu un poison à base de grande ciguë (Conium maculatum), une Apiacée riche en coniine. La composition exacte reste discutée.
 **Source :** <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6150177/>, <https://fr.vikidia.org/wiki/Grande_cigu%C3%AB>
-*validée (recoupée par recherche web) · id N14 · jours 9*
+*validée (recoupée par recherche web) · id N14 · jours 45*
 
 #### En 1753, Linné publie Species plantarum. Que fixe-t-il pour nommer les plantes ?
 
@@ -16548,7 +16548,7 @@ Le safran est fait avec…
 
 **Explication :** Ce sont les trois stigmates rouges de la fleur de Crocus sativus, récoltés un par un à la main puis séchés.
 **Source :** <https://www.futura-sciences.com/planete/definitions/botanique-crocus-safran-9645/>, <https://agriculture.ec.europa.eu/farming/geographical-indications-and-quality-schemes/geographical-indications-food-and-drink/krokos-kozanis-pdo_fr>
-*validée (recoupée par recherche web) · id N26 · jours 26*
+*validée (recoupée par recherche web) · id N26 · jours 8*
 
 #### Le clou de girofle est…
 
@@ -16561,7 +16561,7 @@ Le clou de girofle est…
 
 **Explication :** C'est le bouton floral du giroflier (Syzygium aromaticum), cueilli avant de s'ouvrir, quand il passe du vert au rouge, puis séché.
 **Source :** <https://www.pharma-gdd.com/fr/les-bienfaits-du-clou-de-girofle>, <https://premierepeau.com/fr/pages/glossary-terms/clove>
-*validée (recoupée par recherche web) · id N27 · jours 11*
+*validée (recoupée par recherche web) · id N27 · jours 46*
 
 #### Le clou de girofle, épice de cuisine, est : · piège
 
@@ -16574,7 +16574,7 @@ Le clou de girofle, épice de cuisine, est :
 
 **Explication :** Le clou est le bouton floral du giroflier (Syzygium aromaticum), cueilli rose-rouge avant épanouissement puis séché. Sa forme de clou vient du calice et des pétales fermés.
 **Source :** <https://tramil.net/fr/plant/syzygium-aromaticum>, <https://www.pharma-gdd.com/fr/les-bienfaits-du-clou-de-girofle>
-*validée (recoupée par recherche web) · id NQ12 · jours 53*
+*validée (recoupée par recherche web) · id NQ12 · jours 56*
 
 #### Le safran, épice la plus chère au monde, correspond à : · piège
 
@@ -16587,7 +16587,7 @@ Le safran, épice la plus chère au monde, correspond à :
 
 **Explication :** Seuls les stigmates rouges de Crocus sativus sont récoltés à la main, fleur par fleur : il en faut environ 150 à 200 pour obtenir un gramme de safran sec.
 **Source :** <https://www.alimentarium.org/fr/magazine/saveurs-du-monde/le-safran-une-%C3%A9pice-fascinante>, <https://www.franceagrimer.fr/content/download/21314/document/2.2%20-%20Safran.pdf>
-*validée (recoupée par recherche web) · id NQ13 · jours 32*
+*validée (recoupée par recherche web) · id NQ13 · jours 24, 88*
 
 #### Hors d'Amérique centrale, pourquoi féconde-t-on à la main les fleurs du vanillier ? · piège
 
@@ -16600,7 +16600,7 @@ Hors d'Amérique centrale, pourquoi féconde-t-on à la main les fleurs du vanil
 
 **Explication :** Le vanillier est une orchidée : sans son pollinisateur d'origine, pas de gousse. En 1841, Edmond Albius, jeune esclave à La Réunion, mit au point le geste rapide, encore utilisé.
 **Source :** <https://en.wikipedia.org/wiki/Edmond_Albius>, <https://linnean.org/news/2019/10/16/edmond-albius>
-*validée (recoupée par recherche web) · id NQ14 · jours 40*
+*validée (recoupée par recherche web) · id NQ14 · jours 25*
 
 #### Les câpres de l'apéritif sont : · piège
 
@@ -16613,7 +16613,7 @@ Les câpres de l'apéritif sont :
 
 **Explication :** La câpre est le bouton floral non éclos du câprier (Capparis spinosa), arbrisseau méditerranéen. Plus elle est petite, plus elle est fine ; le fruit, lui, est le cornichon de câpre.
 **Source :** <https://fr.vikidia.org/wiki/C%C3%A2pre>, <https://www.techno-science.net/fr/definitions/caprier>
-*validée (recoupée par recherche web) · id NQ15 · jours 24, 78*
+*validée (recoupée par recherche web) · id NQ15 · jours 26, 78*
 
 #### Quelle cannelle contient le plus de coumarine, d'où l'avis de la consommer avec modération… · piège
 
@@ -16626,7 +16626,7 @@ Quelle cannelle contient le plus de coumarine, d'où l'avis de la consommer avec
 
 **Explication :** La vraie cannelle de Ceylan (Cinnamomum verum) est plus pauvre en coumarine que la cassia, moins chère et plus courante dans le commerce. Mieux vaut la varier.
 **Source :** <https://www.futura-sciences.com/planete/definitions/botanique-cannelle-17838/>, <https://www.techno-science.net/fr/definitions/cannelle-ecorce>
-*validée (recoupée par recherche web) · id NQ17 · jours 27, 80*
+*validée (recoupée par recherche web) · id NQ17 · jours 26, 79*
 
 #### Le nom latin du robinier, Robinia, rend hommage à quel personnage ?
 
@@ -16639,7 +16639,7 @@ Le nom latin du robinier, Robinia, rend hommage à quel personnage ?
 
 **Explication :** Linné a nommé le genre Robinia d'après Jean Robin, qui planta à Paris en 1601 le robinier du square Viviani, aujourd'hui considéré comme le plus vieil arbre de la ville.
 **Source :** <https://www.paris.fr/pages/si-le-plus-vieil-arbre-de-paris-le-robinier-du-square-viviani-nous-contait-son-histoire-6586>
-*validée (recoupée par recherche web) · id NU04 · jours 49*
+*validée (recoupée par recherche web) · id NU04 · jours 6*
 
 #### Arrivé d'Amérique du Nord en Europe au XVIe siècle, le tournesol y a d'abord été cultivé s…
 
@@ -16652,7 +16652,7 @@ Arrivé d'Amérique du Nord en Europe au XVIe siècle, le tournesol y a d'abord 
 
 **Explication :** Introduit par les Espagnols au XVIe siècle, le tournesol resta longtemps ornemental ; son essor comme oléagineux date surtout du XIXe siècle, en Russie.
 **Source :** <https://www.larousse.fr/encyclopedie/divers/tournesol/82742>, <https://fr.wiktionary.org/wiki/tournesol>
-*validée (recoupée par recherche web) · id NU05 · jours 72*
+*validée (recoupée par recherche web) · id NU05 · jours 66*
 
 #### Les « baies » de genièvre, épice du gibier et de la choucroute, sont botaniquement... · piège
 
@@ -16665,7 +16665,7 @@ Les « baies » de genièvre, épice du gibier et de la choucroute, sont botaniq
 
 **Explication :** Le genévrier (Juniperus communis) est un conifère : ses « baies » sont des cônes devenus charnus (galbules), qui mettent deux à trois ans à mûrir.
 **Source :** <https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/resineux/le-genevrier-commun-juniperus-communis>, <https://franco.wiki/fr/Genévrier.html>
-*validée (recoupée par recherche web) · id NU08 · jours 23*
+*validée (recoupée par recherche web) · id NU08 · jours 27*
 
 #### D'où le marronnier d'Inde, introduit à Paris au début du XVIIe siècle, est-il originaire ? · piège
 
@@ -16708,7 +16708,7 @@ Quel pin fut massivement gemmé pour sa résine dans la forêt des Landes ?
 
 **Explication :** La forêt landaise, largement dominée par le pin maritime, a fait vivre des générations de résiniers jusqu'au déclin du gemmage au XXe siècle.
 **Source :** <https://www.tourismelandes.com/?p=68>, <https://www.tourismelandes.com/?p=84965>
-*validée (recoupée par recherche web) · id c62978dc02 · jours 54, 82*
+*validée (recoupée par recherche web) · id c62978dc02 · jours 62*
 
 #### D'où le marronnier d'Inde est-il originaire ? · piège
 
@@ -16721,7 +16721,7 @@ D'où le marronnier d'Inde est-il originaire ?
 
 **Explication :** Il pousse à l'état sauvage dans les montagnes des Balkans (Grèce, Albanie). Le nom « d'Inde » est trompeur : l'arbre a gagné l'Europe de l'Ouest via Constantinople.
 **Source :** <https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/feuillus/le-marronnier-aesculus-hippocastanum>, <https://fr.wikipedia.org/wiki/Marronnier_commun>
-*validée (recoupée par recherche web) · id c8885b647b · jours 45*
+*validée (recoupée par recherche web) · id c8885b647b · jours 9*
 
 #### D'où provenait le rouge « kermès », associé au chêne kermès des garrigues ? · piège
 
@@ -16760,7 +16760,7 @@ Quel arbre au bois dense et élastique fournissait traditionnellement les arcs d
 
 **Explication :** Le bois d'if (Taxus baccata), à la fois dur et élastique, était le bois d'arc par excellence. Attention : l'arbre est très toxique, à l'exception de l'arille rouge.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NU07 · jours 88*
+*relue (non recoupée) · id NU07*
 
 ### Usages et histoire · difficile (13)
 
@@ -16790,7 +16790,7 @@ Dans lequel de ces arbres taille-t-on traditionnellement le fond et les éclisse
 
 **Explication :** L'érable, souvent sycomore à fil ondé, est choisi pour le fond, les éclisses et le manche des instruments de la famille du violon, notamment pour son bel aspect moiré.
 **Source :** <https://www.waldwissen.net/fr/economie-forestiere/filiere-bois/transformation-du-bois/bois-de-resonance-depicea>, <https://fr.wikipedia.org/wiki/%C3%89rable_sycomore>
-*validée (recoupée par recherche web) · id 21d56d289a · jours 82*
+*validée (recoupée par recherche web) · id 21d56d289a · jours 1*
 
 #### Chez Ovide, Philémon devient un chêne. En quel arbre est changée son épouse Baucis ?
 
@@ -16816,7 +16816,7 @@ Selon les Métamorphoses d'Ovide, en quel arbre Attis, compagnon de Cybèle, fut
 
 **Explication :** Ovide cite le pin, « cher à la mère des dieux » : c'est sous cette forme qu'Attis quitta son corps humain. Le pin resta l'arbre sacré de Cybèle.
 **Source :** <https://finto.fi/ic/en/page/97A?clang=fr>, <https://fr.wikipedia.org/wiki/Attis>
-*validée (recoupée par recherche web) · id 4b486a3086 · jours 79*
+*validée (recoupée par recherche web) · id 4b486a3086 · jours 76*
 
 #### D'où vient le nom du « bois de Sainte-Lucie » (Prunus mahaleb) ?
 
@@ -16842,7 +16842,7 @@ Pourquoi le safran (Crocus sativus) ne se multiplie-t-il que par division de ses
 
 **Explication :** Le safran est triploïde (3x = 24) et stérile : il ne produit pas de graines viables et se propage par cormes filles. Les stigmates récoltés fournissent l'épice.
 **Source :** <https://agris.fao.org/search/ar/records/685179b6aab9439e79fcd0cb>
-*validée (recoupée par recherche web) · id NU10 · jours 69*
+*validée (recoupée par recherche web) · id NU10 · jours 67*
 
 #### Le génépi des Alpes, liqueur de montagne, est préparé à partir de petites plantes de quel …
 
@@ -16855,7 +16855,7 @@ Le génépi des Alpes, liqueur de montagne, est préparé à partir de petites p
 
 **Explication :** Le génépi vient d'armoises alpines (Artemisia genipi, A. umbelliformis, A. glacialis) des éboulis d'altitude, à ne pas confondre avec la gentiane.
 **Source :** <https://geonature2.vanoise-parcnational.fr/geonature/api/media/taxhub/84053_44_Artemisia_umbelliformis.pdf>, <https://info.agriculture.gouv.fr/boagri/document_administratif-858983f7-0cc9-48c3-b5ae-672d9700bd78/telechargement>
-*validée (recoupée par recherche web) · id NU11 · jours 54*
+*validée (recoupée par recherche web) · id NU11 · jours 53*
 
 #### Le platane commun des routes (Platanus × hispanica) est classiquement considéré comme...
 
@@ -16868,7 +16868,7 @@ Le platane commun des routes (Platanus × hispanica) est classiquement considér
 
 **Explication :** Le platane commun est un hybride fertile, apparu en Europe aux XVIIe-XVIIIe siècles, entre le platane d'Orient et celui d'Amérique (parenté américaine discutée récemment).
 **Source :** <https://www.techno-science.net/fr/definitions/platane-commun>
-*validée (recoupée par recherche web) · une seule source, à relire · id NU12 · jours 82*
+*validée (recoupée par recherche web) · une seule source, à relire · id NU12 · jours 77*
 
 #### Quelle partie de l'iris de Florence (Iris pallida) est séchée pendant des années avant de …
 
@@ -16881,7 +16881,7 @@ Quelle partie de l'iris de Florence (Iris pallida) est séchée pendant des ann�
 
 **Explication :** Le beurre d'iris est extrait de rhizomes de l'Iris pallida, récoltés après plusieurs années de culture puis séchés et vieillis deux à trois ans ; la Toscane est la zone phare.
 **Source :** <https://premierepeau.com/fr/pages/glossary-terms/iris-butter>
-*validée (recoupée par recherche web) · id NU13 · jours 67*
+*validée (recoupée par recherche web) · id NU13 · jours 69*
 
 #### Lequel de ces arbres détient le record du plus gros arbre à tronc unique du monde, en volu…
 
@@ -16911,7 +16911,7 @@ De quel conifère européen extrait-on le précurseur de l'anticancéreux docét
 
 **Explication :** La 10-désacétylbaccatine III, extraite des aiguilles de l'if commun, sert de point de départ à l'hémisynthèse du docétaxel. L'if est très toxique si ingéré.
 **Source :** <https://www.outsourcing-pharma.com/Article/2006/09/19/Bioxel-gears-up-for-supply-of-docetaxel-to-generic-drugmakers>, <https://fr.wikipedia.org/wiki/Doc%C3%A9taxel>
-*validée (recoupée par recherche web) · id e36089f348 · jours 72*
+*validée (recoupée par recherche web) · id e36089f348 · jours 76*
 
 #### Quelle molécule de la grande absinthe fut accusée de rendre fous les buveurs d'absinthe ?
 
@@ -16924,7 +16924,7 @@ Quelle molécule de la grande absinthe fut accusée de rendre fous les buveurs d
 
 **Explication :** On accusait la thuyone de provoquer folie et crimes ; ce lien est aujourd'hui jugé mal fondé, mais sa teneur reste réglementée dans les boissons.
 **Source :** <https://questions.assemblee-nationale.fr/dyn/8/questions/QANR5L8QE28723.pdf>, <https://fr.wikipedia.org/wiki/Thuyone>
-*validée (recoupée par recherche web) · id ee8367776a · jours 62*
+*validée (recoupée par recherche web) · id ee8367776a · jours 64*
 
 #### Quel médecin anglais publia en 1785 un traité sur l'usage de la digitale contre l'hydropis…
 
@@ -16937,7 +16937,7 @@ Quel médecin anglais publia en 1785 un traité sur l'usage de la digitale contr
 
 **Explication :** Parti d'un remède populaire, William Withering décrivit les effets et la toxicité de Digitalis purpurea. La plante est très toxique si ingérée.
 **Source :** <https://en.wikipedia.org/wiki/William_Withering>, <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5545334/>
-*validée (recoupée par recherche web) · id f9a492e111 · jours 63*
+*validée (recoupée par recherche web) · id f9a492e111 · jours 61*
 
 ## Vocabulaire
 
@@ -16956,7 +16956,7 @@ Laquelle de ces plantes pousse à partir d'un bulbe ?
 
 **Explication :** La jonquille forme un bulbe, bourgeon souterrain entouré d'écailles charnues ; l'iris et le muguet ont un rhizome, tige souterraine.
 **Source :** <https://fr.wikipedia.org/wiki/Narcissus_pseudonarcissus>
-*validée (recoupée par recherche web) · id 3247581064 · jours 13, 61*
+*validée (recoupée par recherche web) · id 3247581064 · jours 28, 64*
 
 #### Laquelle de ces plantes produit des samares ?
 
@@ -16971,7 +16971,7 @@ Laquelle de ces plantes produit des samares ?
 
 **Explication :** La samare est un fruit sec muni d'une aile. Chez l'érable sycomore, elles vont par deux et tournoient comme des hélices en tombant.
 **Source :** <https://fr.wikipedia.org/wiki/%C3%89rable_sycomore>
-*validée (recoupée par recherche web) · id 43f4df5447 · jours 38, 67*
+*validée (recoupée par recherche web) · id 43f4df5447 · jours 38, 74*
 
 #### Lequel de ces chênes garde un feuillage vert toute l'année ?
 
@@ -16986,7 +16986,7 @@ Lequel de ces chênes garde un feuillage vert toute l'année ?
 
 **Explication :** Le chêne vert est persistant : ses feuilles coriaces vivent plusieurs années, adaptation au climat méditerranéen.
 **Source :** <https://fr.wikipedia.org/wiki/Ch%C3%AAne_vert>
-*validée (recoupée par recherche web) · id 46eb3b8168 · jours 44, 74*
+*validée (recoupée par recherche web) · id 46eb3b8168 · jours 18, 72*
 
 #### Pourquoi plante-t-on souvent un kiwi « mâle » près des kiwis femelles ?
 
@@ -16999,7 +16999,7 @@ Pourquoi plante-t-on souvent un kiwi « mâle » près des kiwis femelles ?
 
 **Explication :** Le kiwi (Actinidia deliciosa) est dioïque : sans pollen d'un pied mâle, les pieds femelles ne donnent pas de fruits (sauf variétés autofertiles).
 **Source :** <https://www.infoflora.ch/assets/content/documents/neophytes/inva_acti_chi_f.pdf>
-*validée (recoupée par recherche web) · id 84476223b0 · jours 16, 51*
+*validée (recoupée par recherche web) · id 84476223b0 · jours 22, 53*
 
 #### Combien de pétales libres ont les fleurs d'un églantier, d'un pommier ou d'un cerisier ?
 
@@ -17012,7 +17012,7 @@ Combien de pétales libres ont les fleurs d'un églantier, d'un pommier ou d'un 
 
 **Explication :** Les Rosacées ont des fleurs régulières à cinq pétales libres et cinq sépales : un bon repère pour reconnaître la famille.
 **Source :** <https://dictionnaire-academie.fr/article/A9R2949>, <https://www.techno-science.net/fr/definitions/rosaceae>
-*validée (recoupée par recherche web) · id E07 · jours 43, 88*
+*validée (recoupée par recherche web) · id E07 · jours 38*
 
 #### Comment s'appelle le « parachute » du fruit du pissenlit ?
 
@@ -17025,7 +17025,7 @@ Comment s'appelle le « parachute » du fruit du pissenlit ?
 
 **Explication :** L'aigrette (ou pappus) est une touffe de poils soyeux au sommet de l'akène : elle le porte au vent, comme un parachute.
 **Source :** <https://www.lequotidiendupharmacien.fr/pappus>, <https://www.futura-sciences.com/planete/definitions/botanique-akene-9544/>
-*validée (recoupée par recherche web) · id N17 · jours 23, 67*
+*validée (recoupée par recherche web) · id N17 · jours 7, 65*
 
 #### Les crampons qui accrochent le lierre à un mur ou à un tronc sont…
 
@@ -17038,7 +17038,7 @@ Les crampons qui accrochent le lierre à un mur ou à un tronc sont…
 
 **Explication :** Ces crampons sont des racines adventives, uniquement de fixation : le lierre n'est pas un parasite, contrairement au gui, qui possède des suçoirs.
 **Source :** <https://www.techno-science.net/fr/definitions/lierre-grimpant>, <https://occitanie.lpo.fr/wp-content/uploads/2020/04/ficherefugeslpo_lierre_br.pdf>
-*validée (recoupée par recherche web) · id NE10 · jours 4, 87*
+*validée (recoupée par recherche web) · id NE10 · jours 50*
 
 #### Les fleurs blanches et parfumées du robinier faux-acacia sont disposées en…
 
@@ -17051,7 +17051,7 @@ Les fleurs blanches et parfumées du robinier faux-acacia sont disposées en…
 
 **Explication :** Chez Robinia pseudoacacia, les fleurs forment des grappes pendantes de 10 à 25 cm de long, très mellifères, qui donnent le fameux miel dit « d'acacia ».
 **Source :** <https://www.techno-science.net/fr/definitions/robinier-faux-acacia>, <https://college-emile-zola.edu69.ac-lyon.fr/wp-content/uploads/sites/99/2024/04/12-ROBINIER-.pdf>
-*validée (recoupée par recherche web) · id NE11 · jours 37, 84*
+*validée (recoupée par recherche web) · id NE11 · jours 41, 89*
 
 #### Quel fruit sec allongé, qui s'ouvre par deux valves en laissant une cloison centrale, cara…
 
@@ -17064,7 +17064,7 @@ Quel fruit sec allongé, qui s'ouvre par deux valves en laissant une cloison cen
 
 **Explication :** La silique est propre aux Brassicacées : les deux valves tombent, les graines restent sur la cloison (replum). Courte et large, elle devient une silicule.
 **Source :** <https://torontobotanicalgarden.ca/blog/word-of-the-week/botanical-nerd-word-silique/>, <https://www.asturnatura.com/en/nature/dictionary/silique-939.html>
-*validée (recoupée par recherche web) · id NE18 · jours 30, 72*
+*validée (recoupée par recherche web) · id NE18 · jours 21, 71*
 
 #### Quel terme désigne un fruit charnu à noyau dur, comme la cerise, la prune ou l'olive ?
 
@@ -17077,7 +17077,7 @@ Quel terme désigne un fruit charnu à noyau dur, comme la cerise, la prune ou l
 
 **Explication :** Le noyau est l'endocarpe durci qui protège la graine ; chez une baie (raisin, tomate), les graines sont noyées dans la chair.
 **Source :** <https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8413440/drupe>, <https://espacepourlavie.ca/pepin-graine-ou-noyau>
-*validée (recoupée par recherche web) · id NX28 · jours 17, 63*
+*validée (recoupée par recherche web) · id NX28 · jours 16, 63*
 
 #### Quelle partie de la fleur, formée d'un filet et d'une anthère, produit le pollen ?
 
@@ -17090,7 +17090,7 @@ Quelle partie de la fleur, formée d'un filet et d'une anthère, produit le poll
 
 **Explication :** L'ensemble des étamines forme l'androcée, partie mâle ; le pollen est ensuite transporté jusqu'au stigmate du pistil.
 **Source :** <https://www.lalanguefrancaise.com/dictionnaire/definition/anthere>, <https://lewebpedagogique.com/coursdemmevieillard/files/2019/11/TP10-Organisation-et-d%C3%A9veloppement-de-la-fleur.pdf>
-*validée (recoupée par recherche web) · id NX29 · jours 15, 45*
+*validée (recoupée par recherche web) · id NX29 · jours 10, 44*
 
 #### Comment nomme-t-on l'organe femelle de la fleur, composé de l'ovaire, du style et du stigm…
 
@@ -17103,7 +17103,7 @@ Comment nomme-t-on l'organe femelle de la fleur, composé de l'ovaire, du style 
 
 **Explication :** Après la fécondation, l'ovaire se transforme en fruit et les ovules en graines.
 **Source :** <https://lewebpedagogique.com/coursdemmevieillard/files/2019/11/TP10-Organisation-et-d%C3%A9veloppement-de-la-fleur.pdf>, <https://www.lalanguefrancaise.com/dictionnaire/definition/anthere>
-*validée (recoupée par recherche web) · id NX30 · jours 22, 52*
+*validée (recoupée par recherche web) · id NX30 · jours 19, 47*
 
 #### Que signifie « plante vivace » ?
 
@@ -17116,7 +17116,7 @@ Que signifie « plante vivace » ?
 
 **Explication :** Souvent, la partie aérienne sèche à l'automne et la souche donne de nouvelles tiges au printemps ; yucca ou pachysandre gardent leur feuillage.
 **Source :** <https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8972634/plante-vivace>, <https://www.jardiner-malin.fr/fiche/plantation-vivace.html>
-*validée (recoupée par recherche web) · id NX31 · jours 18, 46*
+*validée (recoupée par recherche web) · id NX31 · jours 13, 43*
 
 #### Un oignon est, botaniquement…
 
@@ -17129,7 +17129,7 @@ Un oignon est, botaniquement…
 
 **Explication :** Les tuniques charnues, des bases de feuilles emboîtées autour d'une courte tige (le plateau), stockent les réserves.
 **Source :** <https://www.universalis.fr/encyclopedie/bulbes-botanique/>, <https://www.larousse.fr/dictionnaires/francais/bulbes>
-*validée (recoupée par recherche web) · id NX32 · jours 19, 49*
+*validée (recoupée par recherche web) · id NX32 · jours 17, 49*
 
 #### Lequel de ces fruits est une vraie baie, au sens botanique ?
 
@@ -17142,7 +17142,7 @@ Lequel de ces fruits est une vraie baie, au sens botanique ?
 
 **Explication :** Dans une baie, les graines sont noyées dans une chair entièrement charnue ; la fraise n'en est pas une, la framboise est un agrégat de petits fruits.
 **Source :** <https://www.synonyme-du-mot.com/les-articles/quel-fruit-nest-pas-une-baie>, <https://www.icem-pedagogie-freinet.org/sites/default/files/FTJ_18_les_baies_sauvages_0.pdf>
-*validée (recoupée par recherche web) · id NX33 · jours 29, 85*
+*validée (recoupée par recherche web) · id NX33 · jours 31, 87*
 
 #### Comment nomme-t-on la tige souterraine horizontale et renflée des iris, que l'on plante pr…
 
@@ -17155,7 +17155,7 @@ Comment nomme-t-on la tige souterraine horizontale et renflée des iris, que l'o
 
 **Explication :** Il se plante affleurant, sa partie haute à l'air libre ; on divise les touffes après la floraison, tous les 3 à 4 ans.
 **Source :** <https://www.futura-sciences.com/maison/questions-reponses/jardinage-planter-iris-19436/>, <https://www.truffaut.com/iris-plantation-entretien.html>
-*validée (recoupée par recherche web) · id NX34 · jours 28, 80*
+*validée (recoupée par recherche web) · id NX34 · jours 1, 80*
 
 #### Comment s'appelle la partie de la feuille qui relie le limbe à la tige ?
 
@@ -17168,7 +17168,7 @@ Comment s'appelle la partie de la feuille qui relie le limbe à la tige ?
 
 **Explication :** Le pédoncule porte la fleur, pas la feuille. Chez beaucoup de monocotylédones, le pétiole est absent.
 **Source :** <https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/26576195/petiole>, <https://www.techno-science.net/fr/definitions/feuille>
-*validée (recoupée par recherche web) · id NX35 · jours 10, 47*
+*validée (recoupée par recherche web) · id NX35 · jours 4, 44*
 
 #### Une feuille directement attachée à la tige, sans pétiole, est dite…
 
@@ -17181,7 +17181,7 @@ Une feuille directement attachée à la tige, sans pétiole, est dite…
 
 **Explication :** À ne pas confondre avec « opposée » (deux feuilles par nœud) ou « composée » (limbe divisé en folioles).
 **Source :** <https://www.techno-science.net/fr/definitions/feuille>, <https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/26576195/petiole>
-*validée (recoupée par recherche web) · id NX36 · jours 7, 49*
+*validée (recoupée par recherche web) · id NX36 · jours 14, 51*
 
 #### Les « feuilles » d'artichaut dont on mange la base sont en réalité des…
 
@@ -17194,7 +17194,7 @@ Les « feuilles » d'artichaut dont on mange la base sont en réalité des…
 
 **Explication :** Elles forment l'involucre autour du capitule ; le fond comestible est le réceptacle, et le foin non comestible l'ensemble des fleurons.
 **Source :** <https://www.techno-science.net/fr/definitions/artichaut>, <https://inao.gouv.fr/node/1635/printable/pdf>
-*validée (recoupée par recherche web) · id NX37 · jours 30, 73*
+*validée (recoupée par recherche web) · id NX37 · jours 31, 70*
 
 #### Laquelle de ces plantes a des feuilles composées pennées ?
 
@@ -17209,7 +17209,7 @@ Laquelle de ces plantes a des feuilles composées pennées ?
 
 **Explication :** Le frêne porte de grandes feuilles composées de 7 à 15 folioles disposées de part et d'autre d'un axe, comme les barbes d'une plume.
 **Source :** <https://fr.wikipedia.org/wiki/Fraxinus_excelsior>
-*validée (recoupée par recherche web) · id a8a05f72c7 · jours 20, 57*
+*validée (recoupée par recherche web) · id a8a05f72c7 · jours 22, 67*
 
 #### Que signifie « dioïque », comme chez le houx ?
 
@@ -17222,7 +17222,7 @@ Que signifie « dioïque », comme chez le houx ?
 
 **Explication :** Chez une espèce dioïque comme le houx (Ilex aquifolium), seuls les pieds femelles portent des baies rouges, à condition qu'un pied mâle soit à proximité.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NU30 · jours 31, 73*
+*relue (non recoupée) · id NU30 · jours 36, 74*
 
 #### Que désigne le mot « ripisylve » ?
 
@@ -17235,7 +17235,7 @@ Que désigne le mot « ripisylve » ?
 
 **Explication :** La ripisylve est la végétation boisée des berges (saules, aulnes, frênes, peupliers) ; elle stabilise les rives et abrite une riche faune.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NU31 · jours 24, 54*
+*relue (non recoupée) · id NU31 · jours 24, 57*
 
 #### Comment appelle-t-on chaque « gousse » d'une tête d'ail ?
 
@@ -17248,7 +17248,7 @@ Comment appelle-t-on chaque « gousse » d'une tête d'ail ?
 
 **Explication :** Une tête d'ail est un bulbe composé de plusieurs caïeux, appelés « gousses » en cuisine. Le mot « gousse » désigne botaniquement le fruit des légumineuses, pas l'ail.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY26 · jours 35, 83*
+*relue (non recoupée) · id NY26 · jours 32, 82*
 
 #### Quel est le terme botanique pour la « pomme de pin » ?
 
@@ -17261,7 +17261,7 @@ Quel est le terme botanique pour la « pomme de pin » ?
 
 **Explication :** Le cône porte les graines des conifères (pin, sapin, épicéa). Les écailles s'écartent à maturité pour libérer des graines souvent ailées.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY27 · jours 89*
+*relue (non recoupée) · id NY27 · jours 54*
 
 #### Quel mot désigne les grappes pendantes de petites fleurs du noisetier ?
 
@@ -17274,7 +17274,7 @@ Quel mot désigne les grappes pendantes de petites fleurs du noisetier ?
 
 **Explication :** Le chaton est une inflorescence qui tombe d'un bloc après avoir répandu son pollen. Bouleau, saule, chêne et noisetier en portent.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY28 · jours 39, 89*
+*relue (non recoupée) · id NY28 · jours 39, 90*
 
 #### Comment nomme-t-on les feuilles d'une fougère ?
 
@@ -17287,7 +17287,7 @@ Comment nomme-t-on les feuilles d'une fougère ?
 
 **Explication :** Les jeunes frondes sont enroulées en crosse. Sous les frondes mûres, des sores abritent des spores : la fougère n'a ni fleurs ni graines.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NY29 · jours 24, 69*
+*relue (non recoupée) · id NY29 · jours 24, 65*
 
 ### Vocabulaire · intermédiaire (16)
 
@@ -17302,7 +17302,7 @@ Un houx ne porte jamais de baies rouges, alors qu'un autre houx voisin en est co
 
 **Explication :** Le houx est le plus souvent dioïque : seuls les pieds femelles portent des fruits, et seulement si un pied mâle pousse à proximité.
 **Source :** <https://botanique.vd.ch/fileadmin/groups/11/images/Animations/Plante_du_mois/Plante_du_mois_houx.pdf>
-*validée (recoupée par recherche web) · id 05d8c9f88b · jours 12, 84*
+*validée (recoupée par recherche web) · id 05d8c9f88b · jours 9, 86*
 
 #### Lequel de ces érables a des feuilles composées ? · piège
 
@@ -17317,7 +17317,7 @@ Lequel de ces érables a des feuilles composées ?
 
 **Explication :** L'érable negundo a des feuilles composées de 3 à 7 folioles. Celles de l'érable du Japon, très découpées, restent des feuilles simples.
 **Source :** <https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/erable_negundo.pdf>
-*validée (recoupée par recherche web) · id 3d5938c170 · jours 34, 72*
+*validée (recoupée par recherche web) · id 3d5938c170 · jours 34, 77*
 
 #### Chez laquelle de ces plantes les parties colorées ne sont-elles pas des pétales mais des b… · piège
 
@@ -17332,7 +17332,7 @@ Chez laquelle de ces plantes les parties colorées ne sont-elles pas des pétale
 
 **Explication :** Chez le bougainvillier, les « fleurs » colorées sont des bractées, feuilles modifiées entourant de petites vraies fleurs blanchâtres.
 **Source :** <https://www.techno-science.net/fr/definitions/bougainvillee>
-*validée (recoupée par recherche web) · id 41fbd02898 · jours 2, 64*
+*validée (recoupée par recherche web) · id 41fbd02898 · jours 2, 66*
 
 #### Botaniquement, ce qui pique sur la tige d'un rosier, ce sont… · piège
 
@@ -17345,7 +17345,7 @@ Botaniquement, ce qui pique sur la tige d'un rosier, ce sont…
 
 **Explication :** Les « épines » du rosier sont des aiguillons, excroissances de l'épiderme qui se détachent net ; une vraie épine est un rameau ou une feuille modifiée.
 **Source :** <https://www.techno-science.net/fr/actualites/pourquoi-les-roses-ont-elles-des-epines-25474>, <https://www.lalanguefrancaise.com/dictionnaire/definition/epine>
-*validée (recoupée par recherche web) · id 7b4dc17511 · jours 57*
+*validée (recoupée par recherche web) · id 7b4dc17511 · jours 52*
 
 #### Laquelle de ces plantes a des feuilles opposées ?
 
@@ -17360,7 +17360,7 @@ Laquelle de ces plantes a des feuilles opposées ?
 
 **Explication :** Les érables ont des feuilles opposées, insérées par deux face à face sur le rameau ; tilleul, hêtre et charme ont des feuilles alternes.
 **Source :** <https://fr.wikipedia.org/wiki/%C3%89rable_champ%C3%AAtre>
-*validée (recoupée par recherche web) · id 87915f8977 · jours 59, 87*
+*validée (recoupée par recherche web) · id 87915f8977 · jours 70*
 
 #### Laquelle de ces plantes produit de vraies gousses ? · piège
 
@@ -17375,7 +17375,7 @@ Laquelle de ces plantes produit de vraies gousses ?
 
 **Explication :** L'arbre de Judée, une Fabacée, donne des gousses. Les longs « haricots » du catalpa sont en réalité des capsules qui s'ouvrent en deux valves.
 **Source :** <https://en.wikipedia.org/wiki/Catalpa_bignonioides>, <https://www.futura-sciences.com/planete/definitions/botanique-catalpa-8937/>
-*validée (recoupée par recherche web) · id 8c94b5b21e · jours 5, 55*
+*validée (recoupée par recherche web) · id 8c94b5b21e · jours 11, 59*
 
 #### Une marguerite est en réalité… · piège
 
@@ -17388,7 +17388,7 @@ Une marguerite est en réalité…
 
 **Explication :** Chaque « pétale » blanc est une petite fleur ligulée, et le disque jaune est formé de fleurons tubulés : la marguerite est un capitule, comme toutes les Astéracées.
 **Source :** <https://www.techno-science.net/fr/definitions/capitule-botanique>, <https://areq.net/lang/fr/Capitule_(botanique).html>
-*validée (recoupée par recherche web) · id N08 · jours 9, 70*
+*validée (recoupée par recherche web) · id N08 · jours 5, 64*
 
 #### La partie que l'on mange chez la pomme de terre est… · piège
 
@@ -17401,7 +17401,7 @@ La partie que l'on mange chez la pomme de terre est…
 
 **Explication :** C'est une tige souterraine gonflée de réserves, portée par des stolons : pas une racine.
 **Source :** <https://www.futura-sciences.com/planete/definitions/botanique-tubercule-2422/>, <https://areq.net/lang/fr/Pomme_de_terre.html>
-*validée (recoupée par recherche web) · id N10 · jours 61*
+*validée (recoupée par recherche web) · id N10 · jours 46*
 
 #### Les « coulants » du fraisier, qui forment de nouveaux plants, sont des…
 
@@ -17414,7 +17414,7 @@ Les « coulants » du fraisier, qui forment de nouveaux plants, sont des…
 
 **Explication :** Les stolons sont des tiges rampantes qui s'enracinent : chaque nouveau plant se détache ensuite de la plante mère. Un rhizome, lui, est souterrain.
 **Source :** <https://www.futura-sciences.com/planete/definitions/botanique-stolon-5183/>, <https://wwf.fr/sites/default/files/doc-2020-12/20211130_Fiche-pratique_04-Reproduction-vegetative_Veni-verdi-WWF.pdf>
-*validée (recoupée par recherche web) · id N18 · jours 50*
+*validée (recoupée par recherche web) · id N18 · jours 68*
 
 #### Le noisetier porte ses chatons mâles et ses fleurs femelles sur le même arbre : il est…
 
@@ -17453,7 +17453,7 @@ Une feuille décrite comme « pubescente » est…
 
 **Explication :** Pubescent : recouvert d'un duvet de poils fins. Le terme « tomenteux » désigne une pilosité encore plus dense, feutrée.
 **Source :** <https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/26576325/pubescent>, <https://www.futura-sciences.com/planete/definitions/botanique-pubescent-6464/>
-*validée (recoupée par recherche web) · id NE15 · jours 41*
+*validée (recoupée par recherche web) · id NE15 · jours 29*
 
 #### Une feuille composée « imparipennée » se termine par…
 
@@ -17481,7 +17481,7 @@ Laquelle de ces plantes a des feuilles composées palmées ?
 
 **Explication :** Le marronnier a 5 à 7 folioles séparées partant d'un même point. Platane, érable et copalme ont une feuille simple, seulement lobée.
 **Source :** <https://fr.wikipedia.org/wiki/Marronnier_commun>
-*validée (recoupée par recherche web) · id aea8257d45 · jours 50, 78*
+*validée (recoupée par recherche web) · id aea8257d45 · jours 55, 83*
 
 #### Chez l'hortensia (Hydrangea macrophylla), les grands « pétales » colorés sont… · piège
 
@@ -17494,7 +17494,7 @@ Chez l'hortensia (Hydrangea macrophylla), les grands « pétales » colorés son
 
 **Explication :** Ce sont les sépales agrandis des fleurs stériles ; les vraies petites fleurs fertiles, discrètes, sont au centre chez les hortensias « dentelle ».
 **Source :** <https://hortflora.rbg.vic.gov.au/taxon/e7b94b7a-c0fe-40f3-be3a-d06ba65f41ab>
-*validée (recoupée par recherche web) · id d70bb8df6a · jours 35, 87*
+*validée (recoupée par recherche web) · id d70bb8df6a · jours 30, 89*
 
 #### Le fruit sec ailé du frêne, contenant une seule graine et tournoyant au vent, s'appelle...
 
@@ -17507,7 +17507,7 @@ Le fruit sec ailé du frêne, contenant une seule graine et tournoyant au vent, 
 
 **Explication :** La samare est un fruit sec indéhiscent muni d'une aile (frêne, orme, érable en double). Un akène, lui, n'a pas d'aile.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NU34*
+*relue (non recoupée) · id NU34 · jours 90*
 
 ### Vocabulaire · difficile (13)
 
@@ -17524,7 +17524,7 @@ Laquelle de ces grimpantes a des feuilles composées palmées ?
 
 **Explication :** La vigne vierge de Virginie porte des feuilles composées de cinq folioles rayonnantes (d'où « quinquefolia ») ; lierre et vignes ont des feuilles simples.
 **Source :** <https://www.techno-science.net/fr/definitions/vigne-vierge-de-virginie>, <https://www.infoflora.ch/en/flora/parthenocissus-quinquefolia.html>
-*validée (recoupée par recherche web) · id 0d07aac00e · jours 77*
+*validée (recoupée par recherche web) · id 0d07aac00e · jours 83*
 
 #### Laquelle de ces plantes est dioïque ?
 
@@ -17554,7 +17554,7 @@ Lequel de ces sorbiers a des feuilles composées pennées ?
 
 **Explication :** Le sorbier des oiseleurs a des feuilles pennées à folioles dentées. L'alisier blanc, l'alisier torminal et le sorbier de Suède ont des feuilles simples.
 **Source :** <https://fr.wikipedia.org/wiki/Sorbier_des_oiseleurs>
-*validée (recoupée par recherche web) · id 62a82bde13 · jours 62*
+*validée (recoupée par recherche web) · id 62a82bde13 · jours 60*
 
 #### La boule jaune et malodorante du ginkgo femelle est botaniquement…
 
@@ -17567,7 +17567,7 @@ La boule jaune et malodorante du ginkgo femelle est botaniquement…
 
 **Explication :** Le ginkgo est une gymnosperme, sans ovaire donc sans fruit : c'est une graine dont l'enveloppe charnue (sarcotesta) sent le beurre rance.
 **Source :** <https://landscapeplants.oregonstate.edu/plants/ginkgo-biloba>, <https://craven.ces.ncsu.edu/2020/12/do-ginkgo-trees-produce-fruit>
-*validée (recoupée par recherche web) · id 995b601dde*
+*validée (recoupée par recherche web) · id 995b601dde · jours 72*
 
 #### Chez une euphorbe, ce qui ressemble à une petite fleur est en réalité…
 
@@ -17580,7 +17580,7 @@ Chez une euphorbe, ce qui ressemble à une petite fleur est en réalité…
 
 **Explication :** Le cyathium réunit une fleur femelle centrale réduite à un pistil et des fleurs mâles réduites à une étamine, dans un involucre à glandes nectarifères.
 **Source :** <https://www.techno-science.net/fr/definitions/cyathe>, <https://www.lalanguefrancaise.com/dictionnaire/definition/cyathe>
-*validée (recoupée par recherche web) · id NE14 · jours 56*
+*validée (recoupée par recherche web) · id NE14 · jours 54*
 
 #### Le colchique et le crocus renouvellent chaque année une réserve souterraine, qui est…
 
@@ -17593,7 +17593,7 @@ Le colchique et le crocus renouvellent chaque année une réserve souterraine, q
 
 **Explication :** Corme : base de tige renflée, pleine comme une pomme de terre. Le vrai bulbe (oignon, tulipe) est fait d'écailles charnues, des feuilles superposées.
 **Source :** <https://www.americanmeadows.com/blogs/flower-bulbs/difference-crocus-vs-colchicum>, <https://gardenerspath.com/?p=45288>
-*validée (recoupée par recherche web) · id NP25 · jours 1*
+*validée (recoupée par recherche web) · id NP25 · jours 83*
 
 #### Les paires d'épines à la base des feuilles du robinier faux-acacia sont des…
 
@@ -17619,7 +17619,7 @@ Comment nomme-t-on le fait que les fleurs naissent directement sur le tronc et l
 
 **Explication :** Chez l'arbre de Judée (Cercis siliquastrum), des fleurs roses jaillissent du bois vieux, au printemps avant les feuilles : c'est la cauliflorie.
 **Source :** <https://www.jardiner-malin.fr/fiche/arbre-de-judee-cercis.html>
-*validée (recoupée par recherche web) · id NU35 · jours 55*
+*validée (recoupée par recherche web) · id NU35 · jours 50*
 
 #### Lequel de ces cornouillers a des feuilles alternes ?
 
@@ -17649,7 +17649,7 @@ Laquelle a des feuilles à la fois composées pennées et opposées ?
 
 **Explication :** Le sureau noir a des feuilles pennées opposées. Robinier, sorbier et noyer ont aussi des feuilles pennées, mais alternes.
 **Source :** <https://fr.wikipedia.org/wiki/Sureau_noir>
-*validée (recoupée par recherche web) · id c1a9e6abef · jours 79*
+*validée (recoupée par recherche web) · id c1a9e6abef*
 
 #### Lequel de ces arbres a un feuillage marcescent ?
 
@@ -17679,7 +17679,7 @@ Lequel de ces conifères porte ses cônes dressés sur les rameaux ?
 
 **Explication :** Les sapins (Abies) ont des cônes dressés qui se désagrègent sur l'arbre ; l'épicéa et le douglas ont des cônes pendants, le pin noir des cônes étalés, qui tombent entiers.
 **Source :** <https://tela-botanica.org/sites/botanique/fr/documents/biblio/articles_en_ligne/abres_lozere/gymnospermes.pdf>, <https://www.newmexicoflora.polyploid.net/pages/Abies_conc.html>
-*validée (recoupée par recherche web) · id f3bf2a1b16*
+*validée (recoupée par recherche web) · id f3bf2a1b16 · jours 81*
 
 #### Comment distinguer une foliole d'une feuille simple très découpée ?
 
@@ -17692,7 +17692,7 @@ Comment distinguer une foliole d'une feuille simple très découpée ?
 
 **Explication :** Un bourgeon se trouve à l'aisselle de la feuille entière (simple ou composée), jamais à l'aisselle des folioles, portées par un axe commun, le rachis.
 **Source :** <https://www.techno-science.net/fr/definitions/feuille>, <https://www.bretagne-vivante.org/kit-feuilles-darbres-bretagne-vivante>
-*relue (non recoupée) · id NP27 · jours 59*
+*relue (non recoupée) · id NP27 · jours 57*
 
 ## Écologie
 
@@ -17709,7 +17709,7 @@ En quelle saison fleurit le lierre grimpant, ressource précieuse pour les insec
 
 **Explication :** Le lierre fleurit de septembre à novembre, quand les fleurs se font rares : abeilles, syrphes et papillons viennent y faire le plein de nectar avant l'hiver.
 **Source :** <https://fr.wikipedia.org/wiki/Lierre_grimpant>
-*validée (recoupée par recherche web) · id 73c24fd1a4 · jours 31, 65*
+*validée (recoupée par recherche web) · id 73c24fd1a4 · jours 29, 76*
 
 #### Quelle graminée plante-t-on pour fixer le sable des dunes du littoral ?
 
@@ -17724,7 +17724,7 @@ Quelle graminée plante-t-on pour fixer le sable des dunes du littoral ?
 
 **Explication :** L'oyat retient le sable grâce à ses longs rhizomes et repousse quand il est ensablé. On le plante, souvent à l'abri de ganivelles, pour stabiliser les dunes du littoral.
 **Source :** <https://fr.wikipedia.org/wiki/Oyat>
-*validée (recoupée par recherche web) · id 7daa4ce7ba*
+*validée (recoupée par recherche web) · id 7daa4ce7ba · jours 5, 43*
 
 #### Comment le trèfle enrichit-il le sol en azote ?
 
@@ -17737,7 +17737,7 @@ Comment le trèfle enrichit-il le sol en azote ?
 
 **Explication :** Comme les autres Fabacées, le trèfle abrite dans des nodosités de ses racines des bactéries (rhizobiums) qui fixent l'azote de l'air. Un engrais vert gratuit !
 **Source :** <https://fr.wikipedia.org/wiki/Rhizobium>, <https://fr.wikipedia.org/wiki/Trèfle_blanc>
-*validée (recoupée par recherche web) · id 9faa771a96 · jours 5, 47*
+*validée (recoupée par recherche web) · id 9faa771a96 · jours 3, 53*
 
 #### Quel oiseau enterre des glands et fait ainsi pousser de jeunes chênes ?
 
@@ -17750,7 +17750,7 @@ Quel oiseau enterre des glands et fait ainsi pousser de jeunes chênes ?
 
 **Explication :** Le geai cache des milliers de glands en automne. Ceux qu'il oublie, enfouis à quelques mètres ou quelques centaines de mètres de l'arbre, peuvent germer au printemps.
 **Source :** <https://luberon.fr/luberon/parc-naturel-regional/faune/annu+geai-des-chenes-dans-le-luberon+2274.html>, <https://www.waldwissen.net/fr/economie-forestiere/sylviculture/rajeunissement/semis-direct-une-option-pour-la-regeneration-des-forets>
-*validée (recoupée par recherche web) · id E03 · jours 27, 82*
+*validée (recoupée par recherche web) · id E03 · jours 26, 88*
 
 #### Pourquoi la drosera capture-t-elle des insectes ?
 
@@ -17763,7 +17763,7 @@ Pourquoi la drosera capture-t-elle des insectes ?
 
 **Explication :** Elle pousse dans des tourbières pauvres en azote : ses poils collants piègent les insectes, qu'elle digère pour s'en nourrir.
 **Source :** <https://www.techno-science.net/fr/definitions/drosera>, <https://www.futura-sciences.com/planete/dossiers/botanique-differents-mecanismes-intervenant-lors-capture-chez-drosera-capensis-172/>
-*validée (recoupée par recherche web) · id E04 · jours 3, 51*
+*validée (recoupée par recherche web) · id E04 · jours 8, 54*
 
 #### Quand on touche une capsule mûre de l'impatiente ne-me-touchez-pas, que se passe-t-il ?
 
@@ -17776,7 +17776,7 @@ Quand on touche une capsule mûre de l'impatiente ne-me-touchez-pas, que se pass
 
 **Explication :** Chez Impatiens noli-tangere, la capsule mûre éclate au moindre contact (déhiscence explosive) et lance les graines à quelques mètres : c'est la dispersion balistique.
 **Source :** <https://simple.wikipedia.com/wiki/Impatiens>, <https://libanswers.nybg.org/faq/336870>
-*validée (recoupée par recherche web) · id NE00 · jours 1, 71*
+*validée (recoupée par recherche web) · id NE00 · jours 23, 69*
 
 #### Sur quelle plante du potager ou des talus la chenille du machaon se nourrit-elle volontier…
 
@@ -17789,7 +17789,7 @@ Sur quelle plante du potager ou des talus la chenille du machaon se nourrit-elle
 
 **Explication :** Le machaon pond sur des Apiacées (ombellifères) : carotte sauvage, fenouil, aneth, persil. Le fauchage des talus raréfie la carotte sauvage, sa plante hôte principale.
 **Source :** <https://provincedeliege.be/sites/default/files/media/10952/Machaon%20(Papilio%20machaon).pdf>, <https://observatoire.shna-ofab.fr/fichiers/bnhs13-cahiers-ld-p114-117-machaon_1455726126.pdf>
-*validée (recoupée par recherche web) · id NE01 · jours 11, 41*
+*validée (recoupée par recherche web) · id NE01 · jours 11, 43*
 
 #### Sur une friche abandonnée, quel arbre s'installe en général parmi les premiers, bien avant…
 
@@ -17802,7 +17802,7 @@ Sur une friche abandonnée, quel arbre s'installe en général parmi les premier
 
 **Explication :** Le bouleau verruqueux est une essence pionnière héliophile : il colonise vite les milieux ouverts et son ombrage léger permet ensuite aux espèces forestières de germer.
 **Source :** <https://agriculture.gouv.fr/sites/minagri/files/documents//bouleaux_avril05.pdf>, <https://reseaunature.natagora.be/fileadmin/Projet_Reseau_Nature/Tresors_du_jardin/Tresors-jardin_Mag_82.pdf>
-*validée (recoupée par recherche web) · id NE02 · jours 36, 87*
+*validée (recoupée par recherche web) · id NE02 · jours 36, 83*
 
 #### Lequel de ces arbres est indigène en France ?
 
@@ -17817,7 +17817,7 @@ Lequel de ces arbres est indigène en France ?
 
 **Explication :** Le hêtre est un grand arbre spontané des forêts françaises. Le tulipier et le copalme viennent d'Amérique du Nord, le ginkgo de Chine.
 **Source :** <https://fr.wikipedia.org/wiki/Hêtre_commun>
-*validée (recoupée par recherche web) · id d364e84a1f · jours 2, 55*
+*validée (recoupée par recherche web) · id d364e84a1f · jours 2, 52*
 
 #### Sur quelle plante la femelle du Paon-du-jour pond-elle surtout ses œufs ?
 
@@ -17830,7 +17830,7 @@ Sur quelle plante la femelle du Paon-du-jour pond-elle surtout ses œufs ?
 
 **Explication :** Les chenilles noires et épineuses du Paon-du-jour vivent en groupe sur la grande ortie. Laisser un coin d'orties au jardin, c'est offrir une nurserie aux papillons.
 **Source :** <https://www.techno-science.net/fr/definitions/paon-du-jour>, <https://occitanie.lpo.fr/wp-content/uploads/2026/07/plantes-hotes-et-plantes-nourricieres-chenilles-et-papillons.pdf>
-*validée (recoupée par recherche web) · id da9fe18921 · jours 21, 49*
+*validée (recoupée par recherche web) · id da9fe18921 · jours 20, 48*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -17845,7 +17845,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Arbre à perruque est indigène en France. Pacanier : Centre-Sud des États-Unis, Mexique ; Andromède du Japon : Japon, est de la Chine, Taïwan ; Sassafras : Est de l'Amérique du Nord.
 **Source :** <https://www.rhs.org.uk/plants/4552/cotinus-coggygria-smoke-tree-american-smoke-tree/details>
-*issue des données de l'appli (non recoupée) · id 302cc8994d · jours 13*
+*issue des données de l'appli (non recoupée) · id 302cc8994d · jours 4, 87*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -17860,7 +17860,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** If commun est indigène en France. Céanothe : Californie, Oregon ; Polygala à feuilles de myrte : Afrique du Sud ; Faux-poivrier : Andes (Pérou, Bolivie, Chili, Argentine).
 **Source :** <https://www.rhs.org.uk/plants/18001/taxus-baccata/details>
-*issue des données de l'appli (non recoupée) · id 4394c29dcb · jours 10*
+*issue des données de l'appli (non recoupée) · id 4394c29dcb · jours 15*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -17890,7 +17890,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Charme est indigène en France. Arbre à caramel : Japon, Chine ; Arbre au liège de l'Amour : Nord-Est de l'Asie (Chine, Mandchourie, Corée, Japon) ; Fuchsia de Magellan : Chili, Argentine (Patagonie).
 **Source :** <https://www.rhs.org.uk/plants/3136/carpinus-betulus-common-hornbeam-charmille-european-hornbeam-horn-beech-horse-beech-hurst-beech-white-beech-yoke-elm-oestrywydden/details>
-*issue des données de l'appli (non recoupée) · id 75ba649f73 · jours 15*
+*issue des données de l'appli (non recoupée) · id 75ba649f73 · jours 17*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -17905,7 +17905,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Buisson ardent est indigène en France. Physocarpe : Est de l'Amérique du Nord ; Palmier des Canaries : Îles Canaries ; Arbre aux mouchoirs : Chine (Sichuan, Yunnan).
 **Source :** <https://www.rhs.org.uk/plants/14208/pyracantha-coccinea/details>, <https://gd.eppo.int/taxon/PYECO>
-*issue des données de l'appli (non recoupée) · id 76ab5ef875 · jours 12*
+*issue des données de l'appli (non recoupée) · id 76ab5ef875 · jours 10*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -17920,7 +17920,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Trèfle blanc est indigène en France. Myosotis du Caucase : Caucase ; Rodgersia : Chine (Yunnan, Sichuan) ; Gypsophile paniculée : Europe centrale et orientale, Asie centrale.
 **Source :** <https://www.rhs.org.uk/plants/88720/wd/details>
-*issue des données de l'appli (non recoupée) · id 8dff5e1d16 · jours 9*
+*issue des données de l'appli (non recoupée) · id 8dff5e1d16 · jours 8*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -17950,7 +17950,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Laurier sauce est indigène en France. Mûrier à papier : Asie de l'Est ; If hybride : hybride horticole (T. baccata × T. cuspidata) ; Séquoia à feuilles d'if : Côte de Californie et du sud de l'Oregon.
 **Source :** <https://powo.science.kew.org/taxon/465049-1>, <https://sophy.tela-botanica.org/pltcli/PC3404.htm>
-*issue des données de l'appli (non recoupée) · id bc850a2f1d · jours 5, 83*
+*issue des données de l'appli (non recoupée) · id bc850a2f1d · jours 9*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -17965,7 +17965,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Hêtre est indigène en France. Pin parasol du Japon : Japon ; Céanothe : Californie, Oregon ; Arbre aux faisans : Himalaya, Chine du Sud-Ouest.
 **Source :** <https://www.rhs.org.uk/plants/7127/fagus-sylvatica/details>
-*issue des données de l'appli (non recoupée) · id daf4c78fee · jours 18*
+*issue des données de l'appli (non recoupée) · id daf4c78fee · jours 16*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -17980,7 +17980,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Massette à larges feuilles est indigène en France. Herbe du Japon : Japon (Honshu) ; Calamagrostis de Karl Foerster : hybride horticole d'espèces eurasiatiques (C. arundinacea × C. epigejos) ; Bambou parapluie : Chine centrale (Hubei, Sichuan).
 **Source :** <https://soar.suny.edu/server/api/core/bitstreams/30b991c7-6ba5-44de-ba93-3d371217e5d1/content>
-*issue des données de l'appli (non recoupée) · id e9672e15b2 · jours 3*
+*issue des données de l'appli (non recoupée) · id e9672e15b2 · jours 5*
 
 ### Écologie · intermédiaire (100)
 
@@ -17995,7 +17995,7 @@ Le « miel d'acacia » vendu en France provient surtout de quel arbre ?
 
 **Explication :** Ce miel clair vient des fleurs blanches du robinier, arbre nord-américain planté à Paris vers 1601 par Jean Robin. Il n'appartient pas au genre Acacia.
 **Source :** <https://www.jardinbotaniquedenancy.eu/fileadmin/CJBN/Plante_du_mois/07.26.robinia_pseudoacacia.pdf>, <https://www.infoflora.ch/assets/content/documents/neophytes/inva_robi_pse_f.pdf>
-*validée (recoupée par recherche web) · id 18ee1266e9 · jours 31, 88*
+*validée (recoupée par recherche web) · id 18ee1266e9 · jours 31, 85*
 
 #### Lequel de ces arbres européens peut vivre plus de 2 000 ans ?
 
@@ -18010,7 +18010,7 @@ Lequel de ces arbres européens peut vivre plus de 2 000 ans ?
 
 **Explication :** L'if est l'arbre le plus longévif d'Europe : celui de Fortingall (Écosse) est estimé à au moins 2 000 ans, mais son cœur creux rend la datation incertaine.
 **Source :** <https://en.wikipedia.org/wiki/Fortingall_Yew>, <https://www.guinnessworldrecords.com/world-records/93355-oldest-yew>
-*validée (recoupée par recherche web) · corrigée · id 1c4a034550 · jours 32, 60*
+*validée (recoupée par recherche web) · corrigée · id 1c4a034550 · jours 27, 63*
 
 #### Lequel de ces arbres fleurit dès la fin de l'hiver, offrant un pollen précoce aux abeilles…
 
@@ -18025,7 +18025,7 @@ Lequel de ces arbres fleurit dès la fin de l'hiver, offrant un pollen précoce 
 
 **Explication :** Les chatons du saule marsault s'ouvrent dès mars, parfois fin février : c'est l'une des premières sources de pollen et de nectar pour les abeilles et les bourdons au sortir de l'hiver.
 **Source :** <https://fr.wikipedia.org/wiki/Saule_marsault>
-*validée (recoupée par recherche web) · id 2773be02fd · jours 4, 69*
+*validée (recoupée par recherche web) · id 2773be02fd · jours 6, 65*
 
 #### À l'état naturel, le cyprès de Provence est originaire de : · piège
 
@@ -18038,7 +18038,7 @@ Lequel de ces arbres fleurit dès la fin de l'hiver, offrant un pollen précoce 
 
 **Explication :** Malgré son nom, Cupressus sempervirens vient de l'est méditerranéen (Turquie, Crète, Chypre, Iran). Le cyprès en colonne des paysages provençaux est une forme cultivée depuis l'Antiquité.
 **Source :** <https://www.inaturalist.org/guide_taxa/495144>, <https://landscapeplants.oregonstate.edu/plants/cupressus-sempervirens>
-*validée (recoupée par recherche web) · corrigée · id 38c4e0d5fb · jours 23, 67*
+*validée (recoupée par recherche web) · corrigée · id 38c4e0d5fb · jours 23, 68*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18079,7 +18079,7 @@ Les graines de la violette odorante portent un petit appendice riche en lipides.
 
 **Explication :** Cet élaïosome, riche en graisses, attire les fourmis (myrmécochorie) : elles emportent la graine au nid, mangent l'appendice et abandonnent la graine intacte, parfois loin.
 **Source :** <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4587374/>, <https://link.springer.com/article/10.1007/s11829-009-9076-5>
-*validée (recoupée par recherche web) · id NE03 · jours 34*
+*validée (recoupée par recherche web) · id NE03 · jours 28*
 
 #### Comment les graines du gui se retrouvent-elles accrochées en hauteur sur les branches d'un… · piège
 
@@ -18092,7 +18092,7 @@ Comment les graines du gui se retrouvent-elles accrochées en hauteur sur les br
 
 **Explication :** La grive draine avale les baies ; les graines, enrobées de viscine collante, sont rejetées dans les fientes ou essuyées sur les branches. Le pigeon ramier, lui, les digère.
 **Source :** <https://www.ville-bois-guillaume.fr/wp-content/uploads/2023/08/Fiche_le-pommier-le-gui-et-les-oiseaux.pdf>, <https://bfcnature.fr/fichiers/20151227-gui_1483014199.pdf>
-*validée (recoupée par recherche web) · id NE04 · jours 28, 83*
+*validée (recoupée par recherche web) · id NE04 · jours 29, 87*
 
 #### Dans nos régions, comment la renouée du Japon progresse-t-elle surtout ? · piège
 
@@ -18105,7 +18105,7 @@ Dans nos régions, comment la renouée du Japon progresse-t-elle surtout ?
 
 **Explication :** La reproduction sexuée reste marginale : quelques grammes de rhizome suffisent à refaire un pied. Terres remblayées, crues et broyage dispersent les fragments.
 **Source :** <https://cbnfc-ori.org/sites/default/files/documentaton/files/CBNFC-ORI-125_Renouee_2016.pdf>, <https://metropole-rouen-normandie.fr/file-download/download/public/257672>
-*validée (recoupée par recherche web) · id NE05 · jours 10, 47*
+*validée (recoupée par recherche web) · id NE05 · jours 10, 57*
 
 #### Pourquoi garder de vieilles souches de chêne en lisière de bois profite-t-il au lucane cer…
 
@@ -18131,7 +18131,7 @@ Pourquoi garder de vieilles souches de chêne en lisière de bois profite-t-il a
 
 **Explication :** Sa floraison court de fin juillet à octobre, avec un pic de pollen en août-septembre, bien après le rhume des foins de mai-juin. Très peu de grains suffisent à déclencher l'allergie.
 **Source :** <https://www.auvergne-rhone-alpes.ars.sante.fr/ambroisie>, <https://www.nouvelle-aquitaine.ars.sante.fr/ambroisie-une-plante-hautement-allergisante-pour-lhomme>
-*validée (recoupée par recherche web) · id NE07 · jours 12*
+*validée (recoupée par recherche web) · id NE07 · jours 25, 76*
 
 #### Pourquoi l'« arbre à papillons » (buddleia) n'est-il pas un bon choix écologique ? · piège
 
@@ -18144,7 +18144,7 @@ Pourquoi l'« arbre à papillons » (buddleia) n'est-il pas un bon choix écolog
 
 **Explication :** Le buddleia (Buddleja davidii) colonise friches et voies ferrées et concurrence la flore indigène. Ses fleurs nourrissent les adultes, mais il soutient peu d'espèces locales.
 **Source :** <https://www.provincedeliege.be:443/sites/default/files/media/10919/Arbre%20aux%20papillons%20%28Buddleja%20davidii%29.pdf>, <https://magny-les-hameaux.fr/sites/magny-les-hameaux/files/document/2021-09/OOA_-_Arbre_aux_papillons.pdf>
-*validée (recoupée par recherche web) · id NP29 · jours 7, 62*
+*validée (recoupée par recherche web) · id NP29 · jours 1, 60*
 
 #### Pourquoi le trèfle enrichit-il le sol en azote ? · piège
 
@@ -18157,7 +18157,7 @@ Pourquoi le trèfle enrichit-il le sol en azote ?
 
 **Explication :** Les légumineuses abritent dans des nodosités racinaires des Rhizobium qui transforment l'azote de l'air en ammoniac assimilable, contre des sucres. D'où leur usage en engrais verts.
 **Source :** <https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8467406/nodosite>, <https://natadges.hub.inrae.fr/content/download/3539/34274?version=1>
-*validée (recoupée par recherche web) · id NQ20 · jours 24, 63*
+*validée (recoupée par recherche web) · id NQ20 · jours 28, 69*
 
 #### Dans une mycorhize, que reçoit le champignon de l'arbre ? · piège
 
@@ -18170,7 +18170,7 @@ Dans une mycorhize, que reçoit le champignon de l'arbre ?
 
 **Explication :** L'arbre cède au champignon des sucres (jusqu'à environ 20 % de sa production) ; en échange, les hyphes lui apportent eau, azote et phosphore puisés dans les micropores du sol.
 **Source :** <https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/ecologie-vegetale/les-mycorhizes-une-fascinante-biocenose>
-*validée (recoupée par recherche web) · id NQ21 · jours 8, 63*
+*validée (recoupée par recherche web) · id NQ21 · jours 7, 62*
 
 #### Qu'est-ce qui fait virer un hortensia au bleu en sol acide ? · piège
 
@@ -18183,7 +18183,7 @@ Qu'est-ce qui fait virer un hortensia au bleu en sol acide ?
 
 **Explication :** En sol acide, l'aluminium devient soluble et absorbé par les racines : il bleuit les pigments de l'Hydrangea macrophylla. En sol calcaire, il reste bloqué et les fleurs restent roses.
 **Source :** <https://www.jardiner-malin.fr/fiche/obtenir-hortensia-bleu.html>, <https://www.consoglobe.com/changer-la-couleur-des-fleurs-des-hortensias-cg>
-*validée (recoupée par recherche web) · id NQ22 · jours 21, 59*
+*validée (recoupée par recherche web) · id NQ22 · jours 4, 61*
 
 #### Quel organisme forme les nodules fixateurs d'azote sur les racines de l'aulne glutineux ?
 
@@ -18196,7 +18196,7 @@ Quel organisme forme les nodules fixateurs d'azote sur les racines de l'aulne gl
 
 **Explication :** L'aulne (Alnus glutinosa) vit en symbiose avec Frankia, qui forme des nodules (actinorhizes) ; les légumineuses, elles, s'associent aux rhizobiums.
 **Source :** <https://www.ville-boussy.fr/botanique/GROUPE%20C/planche%20c2.pdf>
-*validée (recoupée par recherche web) · id NU22 · jours 38*
+*validée (recoupée par recherche web) · id NU22 · jours 44*
 
 #### Introduite vers 1830 dans le Lez, à Montpellier, la jussie, plante aquatique envahissante,…
 
@@ -18209,7 +18209,7 @@ Introduite vers 1830 dans le Lez, à Montpellier, la jussie, plante aquatique en
 
 **Explication :** Les jussies (Ludwigia grandiflora et L. peploides), originaires d'Amérique du Sud, ont été introduites vers 1830 ; leur vente est interdite en France depuis 2007.
 **Source :** <https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/Depliant-jussie-BaT.pdf>
-*validée (recoupée par recherche web) · une seule source, à relire · id NU23 · jours 25*
+*validée (recoupée par recherche web) · une seule source, à relire · id NU23 · jours 26*
 
 #### Quel insecte pollinise les fleurs cachées à l'intérieur des figues du figuier sauvage (cap…
 
@@ -18222,7 +18222,7 @@ Quel insecte pollinise les fleurs cachées à l'intérieur des figues du figuier
 
 **Explication :** Le blastophage (Blastophaga psenes) entre dans la figue par l'ostiole, pond et transporte le pollen : figuier et guêpe dépendent l'un de l'autre.
 **Source :** <https://revues.cirad.fr/index.php/fruits/article/download/34747/33980/37245>
-*validée (recoupée par recherche web) · id NU24 · jours 42*
+*validée (recoupée par recherche web) · id NU24 · jours 31*
 
 #### Après la floraison du cyclamen de Naples, que fait le pédoncule de la fleur fécondée ?
 
@@ -18235,7 +18235,7 @@ Après la floraison du cyclamen de Naples, que fait le pédoncule de la fleur f�
 
 **Explication :** Le pédoncule s'enroule en spirale et pose la capsule au sol ; les graines, à élaiosome sucré, sont ensuite dispersées par les fourmis.
 **Source :** <https://www.techno-science.net/fr/definitions/cyclamen>
-*validée (recoupée par recherche web) · id NU25 · jours 34*
+*validée (recoupée par recherche web) · id NU25 · jours 37*
 
 #### Quel est le rôle de la longue bractée attachée au pédoncule des fruits du tilleul ?
 
@@ -18248,7 +18248,7 @@ Quel est le rôle de la longue bractée attachée au pédoncule des fruits du ti
 
 **Explication :** Cette bractée allongée agit comme une aile : le vent emporte l'ensemble pédoncule-fruits (anémochorie), loin de l'arbre-mère.
 **Source :** <https://www.techno-science.net/fr/definitions/tilleul-a-grandes-feuilles>
-*validée (recoupée par recherche web) · id NU26 · jours 6*
+*validée (recoupée par recherche web) · id NU26 · jours 47*
 
 #### Chez le fusain d'Europe, qui disperse les graines à arille orange dévoilées par les capsul…
 
@@ -18261,7 +18261,7 @@ Chez le fusain d'Europe, qui disperse les graines à arille orange dévoilées p
 
 **Explication :** Les capsules roses du fusain (Euonymus europaeus) s'ouvrent sur des graines à arille orange que les oiseaux avalent puis rejettent. Le fruit est toxique pour l'humain.
 **Source :** <https://musees.aurillac.fr/wp-content/uploads/2021/02/Fiche-espece-fusain.pdf>
-*validée (recoupée par recherche web) · id NU27 · jours 28*
+*validée (recoupée par recherche web) · id NU27 · jours 33*
 
 #### Le mimosa qui dore le massif du Tanneron en hiver est originaire de : · piège
 
@@ -18289,7 +18289,7 @@ Lequel de ces arbres enrichit le sol en azote grâce à des bactéries logées d
 
 **Explication :** Sans être une légumineuse, l'aulne glutineux fixe l'azote de l'air grâce à une bactérie, Frankia, logée dans des nodosités de ses racines. Il colonise ainsi les sols pauvres et humides.
 **Source :** <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8951365/>, <https://images.cnrs.fr/en/node/39965>
-*validée (recoupée par recherche web) · id b22952ae87*
+*validée (recoupée par recherche web) · id b22952ae87 · jours 21, 62*
 
 #### Quelle couleur l'abeille domestique ne perçoit-elle pas ? · piège
 
@@ -18302,7 +18302,7 @@ Quelle couleur l'abeille domestique ne perçoit-elle pas ?
 
 **Explication :** L'œil de l'abeille voit l'ultraviolet, le bleu et le vert, mais pas le rouge, qu'elle confond avec le noir. Les fleurs rouges sont souvent visitées par des papillons ou oiseaux.
 **Source :** <https://fr.wikipedia.org/wiki/Abeille_domestique>, <https://fr.wikipedia.org/wiki/Apis_mellifera>
-*validée (recoupée par recherche web) · id bcebe6b45a · jours 22, 74*
+*validée (recoupée par recherche web) · id bcebe6b45a · jours 22, 72*
 
 #### Pour nourrir les pollinisateurs, quel rosier vaut-il mieux planter ?
 
@@ -18330,7 +18330,7 @@ Laquelle de ces plantes aux fleurs spectaculaires est indigène en France ?
 
 **Explication :** Malgré son allure exotique, le lis martagon pousse spontanément dans les bois et prairies de montagne. Les trois autres ne sont pas indigènes en France.
 **Source :** <https://fr.wikipedia.org/wiki/Lis_martagon>, <https://en.wikipedia.org/wiki/Crocosmia_%C3%97_crocosmiiflora>
-*validée (recoupée par recherche web) · corrigée · id e1f48e0b43 · jours 4, 58*
+*validée (recoupée par recherche web) · corrigée · id e1f48e0b43 · jours 3, 56*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18360,7 +18360,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Joubarbe des toits est indigène en France. Renouée à feuilles embrassantes : Himalaya (Afghanistan à Chine) ; Heuchère sanguine : Sud-Ouest des États-Unis, nord du Mexique ; Scille de Sibérie : Russie méridionale, Caucase, Turquie.
 **Source :** <https://www.rhs.org.uk/plants/17164/Sempervivum-tectorum/Details>, <https://plants.ces.ncsu.edu/plants/sempervivum-tectorum>
-*issue des données de l'appli (non recoupée) · id 05ca01083a · jours 88*
+*issue des données de l'appli (non recoupée) · id 05ca01083a · jours 25*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18375,7 +18375,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Osmonde royale est indigène en France. Plumbago rustique : Chine occidentale ; Lobélie cardinale : Amérique du Nord ; Cœur-de-Marie : Chine, Corée, Sibérie.
 **Source :** <https://www.rhs.org.uk/plants/12001/osmunda-regalis/details>
-*issue des données de l'appli (non recoupée) · id 09888a04eb · jours 78*
+*issue des données de l'appli (non recoupée) · id 09888a04eb*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18420,7 +18420,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Sceau-de-Salomon est indigène en France. Coréopsis verticillé : Est du Canada au sud-est des États-Unis ; Balisier : Amérique tropicale ; Liriope : Chine, Japon, Taïwan.
 **Source :** <https://mustila.fi/en/plants/polygonatummultiflorum/>, <https://www.ebben.nl/fr/treeebb/pomultif-polygonatum-multiflorum/pdf>
-*issue des données de l'appli (non recoupée) · id 108b36319e*
+*issue des données de l'appli (non recoupée) · id 108b36319e · jours 78*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18450,7 +18450,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Nivéole de printemps est indigène en France. Cimicaire : Asie orientale (Russie orientale, Chine, Corée, Japon) ; Cœur-de-Marie : Chine, Corée, Sibérie ; Renouée à feuilles embrassantes : Himalaya (Afghanistan à Chine).
 **Source :** <https://plants.ces.ncsu.edu/plants/leucojum-vernum/>, <https://rhs.org.uk/Plants/10012/Leucojum-vernum/Details>
-*issue des données de l'appli (non recoupée) · id 15ddc4ba8b*
+*issue des données de l'appli (non recoupée) · id 15ddc4ba8b · jours 7*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18465,7 +18465,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Buis est indigène en France. Escallonia : Chili, Argentine ; Séquoia géant : Californie (Sierra Nevada) ; Andromède du Japon : Japon, est de la Chine, Taïwan.
 **Source :** <https://www.rhs.org.uk/plants/2579/Buxus-sempervirens/Details>
-*issue des données de l'appli (non recoupée) · id 1c5090e78c · jours 80*
+*issue des données de l'appli (non recoupée) · id 1c5090e78c · jours 90*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18480,7 +18480,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Lotier corniculé est indigène en France. Fleur des elfes : Europe du Sud (Italie, Balkans) ; Épiaire laineuse : Caucase à l'Iran ; Cimicaire : Asie orientale (Russie orientale, Chine, Corée, Japon).
 **Source :** <https://bsbi.org/in-your-area/local-botany/co-fermanagh/fermanagh-species-accounts/lotus-corniculatus-l>, <https://www.canada.ca/en/health-canada/services/chemical-substances/fact-sheets/chemicals-glance/lotus-corniculatus-extract.html>
-*issue des données de l'appli (non recoupée) · id 1cb2d118aa*
+*issue des données de l'appli (non recoupée) · id 1cb2d118aa · jours 86*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18525,7 +18525,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Myrte commun est indigène en France. Sauge de Jérusalem : Méditerranée centrale et orientale (Italie, Balkans, Turquie) ; Feijoa : Sud du Brésil, Uruguay, nord de l'Argentine ; Lilas des Indes : Chine, Corée, Asie du Sud-Est.
 **Source :** <https://www.rhs.org.uk/plants/11311/wd/details>
-*issue des données de l'appli (non recoupée) · id 27f9bd2ca8 · jours 81*
+*issue des données de l'appli (non recoupée) · id 27f9bd2ca8*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18540,7 +18540,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Baguenaudier est indigène en France. Sophora du Japon : Chine, Corée ; Kalmia : Est de l'Amérique du Nord ; Arbre aux faisans : Himalaya, Chine du Sud-Ouest.
 **Source :** <https://plants.ces.ncsu.edu/plants/colutea-arborescens/common-name/common-bladder-senna>, <https://temperate.theferns.info/plant/Colutea+arborescens>
-*issue des données de l'appli (non recoupée) · id 2dc7984d12 · jours 22*
+*issue des données de l'appli (non recoupée) · id 2dc7984d12*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18600,7 +18600,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Fougère femelle est indigène en France. Phlox paniculé : Est de l'Amérique du Nord ; Rodgersia : Chine (Yunnan, Sichuan) ; Gypsophile paniculée : Europe centrale et orientale, Asie centrale.
 **Source :** <https://www.rhs.org.uk/plants/1897/wd/details>
-*issue des données de l'appli (non recoupée) · id 3ce27470c1 · jours 8*
+*issue des données de l'appli (non recoupée) · id 3ce27470c1 · jours 88*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18630,7 +18630,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Tamaris de France est indigène en France. Zelkova du Japon : Japon, Corée, Chine ; Arbre à soie : Asie, de l'Iran à la Chine et au Japon ; Cognassier du Japon : Japon.
 **Source :** <https://floraveg.eu/factsheet/default/103431>
-*issue des données de l'appli (non recoupée) · id 3ed79c4580*
+*issue des données de l'appli (non recoupée) · id 3ed79c4580 · jours 81*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18675,7 +18675,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Immortelle d'Italie est indigène en France. Physocarpe : Est de l'Amérique du Nord ; Ginkgo : Chine ; Sorbaria : Asie du Nord-Est (Sibérie, Mandchourie, Corée, Japon).
 **Source :** <https://www.rhs.org.uk/plants/34062/Helichrysum-italicum/Details>
-*issue des données de l'appli (non recoupée) · id 4431d5e64a · jours 24*
+*issue des données de l'appli (non recoupée) · id 4431d5e64a*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18690,7 +18690,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Populage des marais est indigène en France. Astilbe : Hybride horticole (espèces d'Asie de l'Est) ; Pavot d'Orient : Caucase, nord-est de la Turquie, nord de l'Iran ; Lobélie cardinale : Amérique du Nord.
 **Source :** <https://www.rhs.org.uk/plants/97658/caltha-palustris-var-palustris/details>
-*issue des données de l'appli (non recoupée) · id 4aa8fde240*
+*issue des données de l'appli (non recoupée) · id 4aa8fde240 · jours 12*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18720,7 +18720,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Ibéris est indigène en France. Monarde : Est de l'Amérique du Nord ; Coréopsis verticillé : Est du Canada au sud-est des États-Unis ; Lobélie cardinale : Amérique du Nord.
 **Source :** <https://rhs.org.uk/Plants/9066/wd/Details>, <https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:285652-1>
-*issue des données de l'appli (non recoupée) · id 4c0abe9fb1 · jours 86*
+*issue des données de l'appli (non recoupée) · id 4c0abe9fb1*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18735,7 +18735,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Palmier nain est indigène en France. Buis de Noël : Chine (connue surtout en culture) ; Tilleul de Crimée : Crimée, Caucase ; Perovskia : Asie centrale (Afghanistan, Pakistan).
 **Source :** <https://jardin-thuret.hub.inrae.fr/content/download/6000/48617?version=1>, <https://eflorasys.univ-lorraine.fr/index.php/en/species/view/90524>
-*issue des données de l'appli (non recoupée) · id 55aeea1929*
+*issue des données de l'appli (non recoupée) · id 55aeea1929 · jours 79*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18810,7 +18810,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Armérie maritime est indigène en France. Cimicaire : Asie orientale (Russie orientale, Chine, Corée, Japon) ; Misère : Est des États-Unis ; Lobélie cardinale : Amérique du Nord.
 **Source :** <https://www.rhs.org.uk/plants/1597/wd/details>
-*issue des données de l'appli (non recoupée) · id 5f0862a7fd*
+*issue des données de l'appli (non recoupée) · id 5f0862a7fd · jours 18*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18825,7 +18825,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Polystic à soies est indigène en France. Gypsophile paniculée : Europe centrale et orientale, Asie centrale ; Anémone du Japon : Hybride horticole (espèces de Chine) ; Monarde : Est de l'Amérique du Nord.
 **Source :** <https://www.rhs.org.uk/plants/13490/polystichum-setiferum/details>
-*issue des données de l'appli (non recoupée) · id 60852c1d21 · jours 14*
+*issue des données de l'appli (non recoupée) · id 60852c1d21*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18855,7 +18855,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Jacinthe des bois est indigène en France. Épiaire laineuse : Caucase à l'Iran ; Ligulaire : Chine, Japon ; Hosta de Siebold : Japon.
 **Source :** <https://www.rhs.org.uk/plants/8890/hyacinthoides-non-scripta/details>
-*issue des données de l'appli (non recoupée) · id 626e151c0c*
+*issue des données de l'appli (non recoupée) · id 626e151c0c · jours 13*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18870,7 +18870,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Jonquille sauvage est indigène en France. Misère : Est des États-Unis ; Agapanthe : Afrique du Sud ; Monarde : Est de l'Amérique du Nord.
 **Source :** <https://www.rhs.org.uk/plants/11388/narcissus-pseudonarcissus-13/details>
-*issue des données de l'appli (non recoupée) · id 6286714550*
+*issue des données de l'appli (non recoupée) · id 6286714550 · jours 89*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18915,7 +18915,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Benoîte commune est indigène en France. Alchémille molle : Carpates, Caucase, Turquie ; Tiarelle : Est de l'Amérique du Nord ; Pachysandre du Japon : Japon, Chine.
 **Source :** <https://rhs.org.uk/Plants/7987/wd/Details>
-*issue des données de l'appli (non recoupée) · id 7005281c3b · jours 89*
+*issue des données de l'appli (non recoupée) · id 7005281c3b*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18945,7 +18945,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Vipérine commune est indigène en France. Rodgersia : Chine (Yunnan, Sichuan) ; Pavot d'Orient : Caucase, nord-est de la Turquie, nord de l'Iran ; Yucca filamenteux : Sud-Est des États-Unis.
 **Source :** <https://www.rhs.org.uk/plants/6298/wd/details>, <https://www.rhsplants.co.uk/plants/_/echium-vulgare/classid.2000018819>
-*issue des données de l'appli (non recoupée) · id 811ef78b85*
+*issue des données de l'appli (non recoupée) · id 811ef78b85 · jours 24*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -18960,7 +18960,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Calament est indigène en France. Coréopsis verticillé : Est du Canada au sud-est des États-Unis ; Gaura : Sud des États-Unis (Texas, Louisiane), Mexique ; Hosta de Siebold : Japon.
 **Source :** <https://www.rhs.org.uk/plants/2605/calamintha-nepeta/details>
-*issue des données de l'appli (non recoupée) · id 872f0a9d14 · jours 17*
+*issue des données de l'appli (non recoupée) · id 872f0a9d14 · jours 84*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -19005,7 +19005,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Jonc fleuri est indigène en France. Doronic : Sud-Est de l'Europe, Caucase, Turquie ; Heuchère sanguine : Sud-Ouest des États-Unis, nord du Mexique ; Misère : Est des États-Unis.
 **Source :** <https://www.rhs.org.uk/Plants/2567/wd/Details>, <https://www.rhsplants.co.uk/plants/_/butomus-umbellatus/classid.2000047983/>
-*issue des données de l'appli (non recoupée) · id 931e3b362e · jours 25*
+*issue des données de l'appli (non recoupée) · id 931e3b362e · jours 14*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -19020,7 +19020,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Fritillaire pintade est indigène en France. Rodgersia : Chine (Yunnan, Sichuan) ; Doronic : Sud-Est de l'Europe, Caucase, Turquie ; Pavot d'Orient : Caucase, nord-est de la Turquie, nord de l'Iran.
 **Source :** <https://www.rhs.org.uk/plants/7403/Fritillaria-meleagris/Details>, <https://www.nargs.org/plant-of-the-month/fritillaria-meleagris>
-*issue des données de l'appli (non recoupée) · id 951c5d60b1 · jours 20*
+*issue des données de l'appli (non recoupée) · id 951c5d60b1*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -19050,7 +19050,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Potentille arbustive est indigène en France. Lilas des Indes : Chine, Corée, Asie du Sud-Est ; Griselinia : Nouvelle-Zélande ; Ginkgo : Chine.
 **Source :** <https://www.rhs.org.uk/plants/13582/wd/details>
-*issue des données de l'appli (non recoupée) · id a167451a2e · jours 23*
+*issue des données de l'appli (non recoupée) · id a167451a2e*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -19065,7 +19065,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Matteuccie est indigène en France. Doronic : Sud-Est de l'Europe, Caucase, Turquie ; Rudbeckia : Est des États-Unis ; Heuchère sanguine : Sud-Ouest des États-Unis, nord du Mexique.
 **Source :** <https://www.rhs.org.uk/plants/10920/wd/details>
-*issue des données de l'appli (non recoupée) · id a2e40da9fe · jours 84*
+*issue des données de l'appli (non recoupée) · id a2e40da9fe*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -19080,7 +19080,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Tamier commun est indigène en France. Schisandra : Chine, Corée, Japon, Extrême-Orient russe ; Muehlenbeckia : Nouvelle-Zélande ; Morelle faux-jasmin : Brésil, Argentine, Paraguay.
 **Source :** <https://www.cap.chu-lille.fr/2021/01/05/tamier>
-*issue des données de l'appli (non recoupée) · id a57756c150 · jours 90*
+*issue des données de l'appli (non recoupée) · id a57756c150*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -19155,7 +19155,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Scolopendre est indigène en France. Pachysandre du Japon : Japon, Chine ; Rudbeckia : Est des États-Unis ; Tiarelle : Est de l'Amérique du Nord.
 **Source :** <https://www.rhs.org.uk/plants/25910/asplenium-scolopendrium/details>
-*issue des données de l'appli (non recoupée) · id b5d1c98a25*
+*issue des données de l'appli (non recoupée) · id b5d1c98a25 · jours 22*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -19200,7 +19200,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Barbe-de-bouc est indigène en France. Liriope : Chine, Japon, Taïwan ; Rodgersia : Chine (Yunnan, Sichuan) ; Monarde : Est de l'Amérique du Nord.
 **Source :** <https://www.rhs.org.uk/plants/128979/wd/details>, <https://www.jardiner-malin.fr/fiche/aruncus-dioicus-barbe-de-bouc.html>
-*issue des données de l'appli (non recoupée) · id ba99ac0e4c · jours 16*
+*issue des données de l'appli (non recoupée) · id ba99ac0e4c · jours 80*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -19230,7 +19230,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Chélidoine est indigène en France. Hélénie : Amérique du Nord ; Pachysandre du Japon : Japon, Chine ; Renouée à feuilles embrassantes : Himalaya (Afghanistan à Chine).
 **Source :** <https://www.rhs.org.uk/plants/3711/wd/details>, <https://www.ivis.org/library/guide-to-poisonous-house-and-garden-plants/chelidonium-majus-celandine>
-*issue des données de l'appli (non recoupée) · id bc159bdce1 · jours 19*
+*issue des données de l'appli (non recoupée) · id bc159bdce1 · jours 85*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -19245,7 +19245,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Bugle rampant est indigène en France. Gaura : Sud des États-Unis (Texas, Louisiane), Mexique ; Épiaire laineuse : Caucase à l'Iran ; Balisier : Amérique tropicale.
 **Source :** <https://www.rhs.org.uk/plants/742/wd/details>
-*issue des données de l'appli (non recoupée) · id bcc2e44ab9 · jours 7*
+*issue des données de l'appli (non recoupée) · id bcc2e44ab9*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -19320,7 +19320,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Fraxinelle est indigène en France. Myosotis du Caucase : Caucase ; Alchémille molle : Carpates, Caucase, Turquie ; Phlox paniculé : Est de l'Amérique du Nord.
 **Source :** <https://www.rhs.org.uk/plants/5799/dictamnus-albus/details>, <https://plants.ces.ncsu.edu/plants/dictamnus-albus>
-*issue des données de l'appli (non recoupée) · id d3c7563f17 · jours 87*
+*issue des données de l'appli (non recoupée) · id d3c7563f17 · jours 20*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -19335,7 +19335,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Liseron des haies est indigène en France. Jasmin étoilé : Chine, Japon, Corée, Vietnam ; Muehlenbeckia : Nouvelle-Zélande ; Morelle faux-jasmin : Brésil, Argentine, Paraguay.
 **Source :** <https://plants.ces.ncsu.edu/plants/calystegia-sepium/common-name/binghams-false-bindweed>, <https://hortsense.cahnrs.wsu.edu/fact-sheet/weeds-hedge-bindweed-calystegia-sepium/>
-*issue des données de l'appli (non recoupée) · id d929aa7f52 · jours 82*
+*issue des données de l'appli (non recoupée) · id d929aa7f52*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -19350,7 +19350,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Muguet est indigène en France. Népéta de Faassen : hybride horticole (parents du Caucase et d'Europe du Sud) ; Hosta de Siebold : Japon ; Gypsophile paniculée : Europe centrale et orientale, Asie centrale.
 **Source :** <https://www.rhs.org.uk/plants/4327/Convallaria-majalis/Details>
-*issue des données de l'appli (non recoupée) · id dc5eb2d243 · jours 85*
+*issue des données de l'appli (non recoupée) · id dc5eb2d243*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -19395,7 +19395,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Polypode commun est indigène en France. Pachysandre du Japon : Japon, Chine ; Rudbeckia : Est des États-Unis ; Gypsophile paniculée : Europe centrale et orientale, Asie centrale.
 **Source :** <https://www.rhs.org.uk/plants/13464/polypodium-vulgare/details>
-*issue des données de l'appli (non recoupée) · id f15af77053*
+*issue des données de l'appli (non recoupée) · id f15af77053 · jours 82*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -19425,7 +19425,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Ficaire est indigène en France. Heuchère sanguine : Sud-Ouest des États-Unis, nord du Mexique ; Agapanthe : Afrique du Sud ; Phlox paniculé : Est de l'Amérique du Nord.
 **Source :** <https://www.rhs.org.uk/plants/337208/wd/details>, <https://temperate.theferns.info/plant/Ranunculus+ficaria>
-*issue des données de l'appli (non recoupée) · id f35c3bd3de*
+*issue des données de l'appli (non recoupée) · id f35c3bd3de · jours 19*
 
 #### Laquelle de ces plantes est indigène en France ?
 
@@ -19440,7 +19440,7 @@ Laquelle de ces plantes est indigène en France ?
 
 **Explication :** Arabette des Alpes est indigène en France. Balisier : Amérique tropicale ; Heuchère sanguine : Sud-Ouest des États-Unis, nord du Mexique ; Lin de Nouvelle-Zélande : Nouvelle-Zélande.
 **Source :** <https://www.rhs.org.uk/plants/358096/arabis-alpina-subsp-caucasica-lotti-white/details>
-*issue des données de l'appli (non recoupée) · id fd1a71e457*
+*issue des données de l'appli (non recoupée) · id fd1a71e457 · jours 21*
 
 ### Écologie · difficile (33)
 
@@ -19457,7 +19457,7 @@ Lequel de ces pins forme, avec le mélèze, les forêts situées le plus haut en
 
 **Explication :** Le pin cembro, aux aiguilles groupées par cinq, peuple l'étage subalpin jusqu'à environ 2 500 m, en limite supérieure des forêts. Le casse-noix moucheté dissémine ses graines.
 **Source :** <https://inpn.mnhn.fr/docs/cahab/habitats-declines/9420.pdf>, <https://www.techno-science.net/fr/definitions/pin-cembro>
-*validée (recoupée par recherche web) · corrigée · id 15e53eafb9 · jours 65*
+*validée (recoupée par recherche web) · corrigée · id 15e53eafb9 · jours 68*
 
 #### Combien d'espèces d'abeilles vit-il en France métropolitaine ?
 
@@ -19470,7 +19470,7 @@ Combien d'espèces d'abeilles vit-il en France métropolitaine ?
 
 **Explication :** La France métropolitaine compte près de 1 000 espèces d'abeilles (983 dans une liste récente), presque toutes sauvages. Environ 20 000, c'est le total mondial.
 **Source :** <https://lasef.org/wp-content/uploads/BSEF/126-1/2176_Le-Divelec.pdf>, <https://www.humanite-biodiversite.fr/articles/177014-les-abeilles-sauvages-en-france>
-*validée (recoupée par recherche web) · id 22b729eea8 · jours 53*
+*validée (recoupée par recherche web) · id 22b729eea8 · jours 52*
 
 #### L'ailante libère dans le sol des substances qui freinent ses voisines. Ce phénomène est :
 
@@ -19483,7 +19483,7 @@ L'ailante libère dans le sol des substances qui freinent ses voisines. Ce phén
 
 **Explication :** L'écorce des racines d'ailante produit l'ailanthone, molécule herbicide qui freine la croissance des plantes voisines. Cette allélopathie aide cet arbre chinois à envahir les friches.
 **Source :** <https://pure.psu.edu/en/publications/identification-of-an-allelopathic-compound-from-ailanthus-altissi/>, <https://www.rjas.ro/paper_detail/1698>
-*validée (recoupée par recherche web) · id 42dedd3336 · jours 39*
+*validée (recoupée par recherche web) · id 42dedd3336 · jours 41*
 
 #### Quelle substance du noyer freine la germination d'autres plantes ?
 
@@ -19496,7 +19496,7 @@ Quelle substance du noyer freine la germination d'autres plantes ?
 
 **Explication :** Feuilles, brou et racines du noyer contiennent des précurseurs de la juglone, une naphtoquinone qui inhibe la germination et la croissance de nombreuses plantes : c'est l'allélopathie.
 **Source :** <https://ishs.org/ishs-article/1365_14/>, <https://journals.ukim.mk/index.php/jafes/article/view/1420>
-*validée (recoupée par recherche web) · id 542cff937f · jours 45*
+*validée (recoupée par recherche web) · id 542cff937f · jours 46*
 
 #### Lequel de ces arbustes colonise les dunes littorales et fixe l'azote de l'air ?
 
@@ -19511,7 +19511,7 @@ Lequel de ces arbustes colonise les dunes littorales et fixe l'azote de l'air ?
 
 **Explication :** L'argousier, aux baies orange, supporte sel et sécheresse ; ses racines hébergent la bactérie Frankia qui fixe l'azote. Il peut même envahir les dunes ouvertes.
 **Source :** <https://www.floraveg.eu/en/factsheet/default/118878>, <https://agris.fao.org/search/en/records/65de4cd56eef00c2cea04ab9>
-*validée (recoupée par recherche web) · id 6faa3bc87a · jours 42*
+*validée (recoupée par recherche web) · id 6faa3bc87a · jours 45*
 
 #### Lequel de ces arbres, venu d'Amérique du Nord, envahit la forêt de Compiègne ?
 
@@ -19541,7 +19541,7 @@ Les chenilles du papillon Citron se nourrissent des feuilles de :
 
 **Explication :** Le Citron pond près des bourgeons de la bourdaine et des nerpruns, seules plantes hôtes de sa chenille. Planter une bourdaine dans une haie, c'est accueillir ce papillon.
 **Source :** <https://www.techno-science.net/fr/definitions/citron-papillon>, <https://observatoire.shna-ofab.fr/fichiers/bnhs13-cahiers-ld-p168-169-citron_1456132391.pdf>
-*validée (recoupée par recherche web) · id 81dcc3ade9 · jours 38, 90*
+*validée (recoupée par recherche web) · id 81dcc3ade9 · jours 36*
 
 #### Laquelle de ces fleurs des prés humides est une plante hôte majeure du papillon Aurore ?
 
@@ -19556,7 +19556,7 @@ Laquelle de ces fleurs des prés humides est une plante hôte majeure du papillo
 
 **Explication :** L'Aurore pond sur des Brassicacées : la cardamine des prés, mais aussi l'alliaire, tout aussi prisée. Ses chenilles mangent surtout fleurs et siliques.
 **Source :** <https://ressources.shna-ofab.fr/fichiers/bnhs13-cahiers-ld-p192-193-aurore_1455631211.pdf>, <https://www.picardie-nature.org/IMG/pdf/picnat2021_enquete_fiche04_aurore.pdf>
-*validée (recoupée par recherche web) · corrigée · id 81fc36853a · jours 33*
+*validée (recoupée par recherche web) · corrigée · id 81fc36853a · jours 38*
 
 #### Chez la sauge des prés, comment le pollen se dépose-t-il sur le bourdon ?
 
@@ -19569,7 +19569,7 @@ Chez la sauge des prés, comment le pollen se dépose-t-il sur le bourdon ?
 
 **Explication :** Quand le bourdon pousse sa tête vers le nectar, il appuie sur une plaque qui fait basculer les étamines : elles s'abaissent et frottent leur pollen sur son corps.
 **Source :** <https://pubmed.ncbi.nlm.nih.gov/17522077>, <https://doaj.org/article/d68d39f84110466695cb11fbf1cbcdb2>
-*validée (recoupée par recherche web) · corrigée · id 9e2834e6d3 · jours 43*
+*validée (recoupée par recherche web) · corrigée · id 9e2834e6d3 · jours 39*
 
 #### À quoi servent les « genoux » qui sortent de l'eau autour du cyprès chauve ?
 
@@ -19582,7 +19582,7 @@ Chez la sauge des prés, comment le pollen se dépose-t-il sur le bourdon ?
 
 **Explication :** Ce sont des pneumatophores : des racines qui remontent à l'air libre pour apporter de l'oxygène aux racines immergées. Le cyprès chauve pousse naturellement dans des zones humides.
 **Source :** <https://www.futura-sciences.com/planete/definitions/botanique-cypres-chauve-8503/>, <https://fr.vikidia.org/wiki/Cypr%C3%A8s_chauve>
-*validée (recoupée par recherche web) · id N20 · jours 57*
+*validée (recoupée par recherche web) · id N20 · jours 58*
 
 #### L'ophrys abeille imite une femelle d'insecte pour attirer un mâle pollinisateur. Que fait …
 
@@ -19608,7 +19608,7 @@ Les graines d'orchidées sont presque microscopiques. Que leur apporte le champi
 
 **Explication :** Les graines d'orchidées ont un embryon minuscule, presque sans réserves : le champignon fournit carbone, azote et phosphore au jeune protocorme, sans quoi la germination échoue.
 **Source :** <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7763479/>, <https://entresambreetmeuse.natagora.be/fileadmin/Natagora_Entre-Sambre-et-Meuse/ClIN_d_OEIL/Clin_d_Oeil_3/CLIN_D_OEIL_03_orchidees.pdf>
-*validée (recoupée par recherche web) · id NE09 · jours 54*
+*validée (recoupée par recherche web) · id NE09 · jours 53*
 
 #### Que sont tous les peupliers d'Italie (Populus nigra 'Italica') plantés en alignement ?
 
@@ -19621,7 +19621,7 @@ Que sont tous les peupliers d'Italie (Populus nigra 'Italica') plantés en align
 
 **Explication :** Cultivar sélectionné en Lombardie au XVIIe siècle : un clone mâle, sans graines, propagé uniquement par boutures. Toute la population est génétiquement identique.
 **Source :** <https://en.wikipedia.org/wiki/Populus_nigra>, <https://landscapeplants.oregonstate.edu/plants/populus-nigra-italica>
-*validée (recoupée par recherche web) · id NP30 · jours 52*
+*validée (recoupée par recherche web) · id NP30 · jours 49*
 
 #### Comment le séneçon du Cap, originaire d'Afrique du Sud, est-il arrivé en France dans les a…
 
@@ -19662,7 +19662,7 @@ Les graines de la chélidoine portent un appendice charnu. Qui les disperse ?
 
 **Explication :** Cet appendice, l'élaïosome, est riche en lipides : les fourmis emportent les graines au nid, mangent l'élaïosome puis rejettent la graine intacte, qui peut germer plus loin.
 **Source :** <https://comptes-rendus.academie-sciences.fr/biologies/item/10.1016/j.crvi.2008.02.002.pdf>, <https://www.provincedeliege.be/sites/default/files/media/10952/Grande%20ch%C3%A9lidoine%20%28Ch%C3%A9lidonium%20majus%29.pdf>
-*validée (recoupée par recherche web) · id b418a15c5c · jours 41*
+*validée (recoupée par recherche web) · id b418a15c5c · jours 42*
 
 #### Laquelle de ces espèces ligneuses ne fixe PAS l'azote de l'air grâce à des symbiotes racin…
 
@@ -19675,7 +19675,7 @@ Laquelle de ces espèces ligneuses ne fixe PAS l'azote de l'air grâce à des sy
 
 **Explication :** Genêt (rhizobiums), aulne et argousier (Frankia) fixent l'azote ; le frêne (Fraxinus excelsior) n'a pas ce partenaire et préfère les sols riches.
 **Source :** connaissance de base (aucune source citée)
-*relue (non recoupée) · id NU28 · jours 61*
+*relue (non recoupée) · id NU28 · jours 59*
 
 #### Laquelle de ces plantes est indigène en France ?
 
