@@ -188,6 +188,11 @@ select heure, sum(vues) exercices, count(distinct appareil) joueurs from jeu whe
 
 Le résultat d'une requête peut être exporté en CSV (bouton d'export au-dessus du résultat) pour l'ouvrir dans un tableur.
 
+**Confusions réelles → sosies du jeu.** Les mauvaises réponses proposées s'appuient en premier sur les confusions des joueurs. Pour les mettre à jour :
+lancer `select plante_montree, reponse_donnee, fois, joueurs from confusions where joueurs >= 2 order by fois desc;`,
+exporter le résultat en CSV sous le nom `donnees/confusions-observees.csv`, puis `node outils/sosies.js --ecrire`.
+Le fichier ne contient que des totaux, sans identifiant d'appareil ; seules les paires vues par au moins 3 joueurs et 5 fois sont retenues.
+
 ## Coulisses : tous les chiffres sur une page
 
 `coulisses.html` affiche, sans écrire de SQL, la fréquentation, la fidélité, les fonctions utilisées, les sessions,
