@@ -14,7 +14,7 @@ Les contrôles des comptes demandent en plus `npm i -g @electric-sql/pglite @sup
 | `recette_rapide.sh` | Recette et contrôles principaux, l'un après l'autre (lancé aussi par le workflow « Recette »). |
 | `recette.js [fichier] [dossier]` | Recette complète sur les 7 tailles de référence (360×640 à 1920×1080) : accueil d'un habitué (les 4 réponses au-dessus de la barre d'onglets), tous les écrans, aucune erreur JavaScript, aucun défilement horizontal, boutons dans l'écran. Avec un dossier, enregistre les captures. Le hasard est figé pour pouvoir comparer deux passages. |
 | `controle_fige.js [largeur hauteur]` | Fiche de réponse : fond figé et flouté, photo jamais recouverte, la fiche défile mais pas le fond. Variable `F` : autre fichier HTML. |
-| `controle_clavier.js`, `controle_clavier_ordi.js` | Saisie sur mobile, raccourcis clavier sur ordinateur. |
+| `controle_clavier.js`, `controle_clavier_ordi.js` | Saisie sur mobile, raccourcis clavier sur ordinateur. `controle_clavier_ordi.js` est en partie périmé : 3 échecs, déjà présents sur la version publiée, qui décrivent l'ancienne mise en page ordinateur (voir `controle_ordinateur.js`). |
 | `controle_reglages.js` | Volet Réglages : objectif, vibration, sauvegarde, réinitialisation. |
 | `controle_herbier.js` | Ordre de l'Herbier (acquises puis non acquises, par nom latin) et onglet Progrès. |
 | `controle_niveaux.js` | Passages de niveaux (étape 6). |

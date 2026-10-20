@@ -1290,7 +1290,7 @@ small,.na,.hd,.fm{font-weight:400}
 #q-form .tyq{font:400 13px var(--fx)!important;color:var(--mu)}
 
 /* début de séance (téléphone) : photo réduite de la hauteur des modes */
-body.deb #qc:not(.typing) .pic{height:max(150px,calc(var(--picH) - var(--chh,0px)))}
+body.deb #qc:not(.typing) .pic{height:max(140px,calc(var(--picH) - var(--chh,0px)))}
 body.deb #qc{min-height:calc(var(--fh) - var(--chh,0px))}
 /* ===== Ordinateur : barre latérale, séance pleine hauteur, herbier en onglets ===== */
 html.dk body{min-height:100vh}
@@ -1432,7 +1432,7 @@ body.pvdo #veil{opacity:0}
 <nav class="tabs"><button data-t="quiz" aria-current="true"><span data-ic="quiz"></span>Quiz</button><button data-t="herb" aria-current="false"><span data-ic="herbier"></span>Herbier</button><button data-t="pro" aria-current="false"><span data-ic="progres"></span>Progrès</button></nav>
 <section id="quiz">
 <div class="trn" id="trn" hidden><div><b id="trl"></b><small id="trs"></small></div><button class="mini" id="trq">Quitter</button></div>
-<div id="chips"><button class="call" id="cAll"></button><div class="cats" id="cats"></div><div class="acts"><button class="act" id="fday"></button><button class="act df" id="defi"></button><button class="act" id="rplay" hidden></button></div></div>
+<div id="chips"><button class="call" id="cAll"></button><div class="cats" id="cats"></div><div class="acts"><button class="act" id="fday"></button><button class="act df" id="defi"></button></div></div>
 <div class="card" id="qc"><div class="pic" id="pic"></div><div id="q"></div><div class="opts" id="opts"></div><div id="fb" aria-live="polite"></div></div>
 <div class="card" id="ex" hidden></div><div class="card dfr" id="dfr" hidden></div>
 <button id="next" hidden>Plante suivante <span class="ic-in" data-ic="arrow"></span></button>
@@ -3833,8 +3833,9 @@ function buildCar(s,im,one){
   if(!one)media(s,x=>{if(cur!==s)return;add(x);dots();paintCredits(s)});
 }
 let firstQ=true;
-// début de séance sur téléphone : les modes sont visibles au-dessus de la carte ; la photo cède leur hauteur pour que les 4 réponses tiennent dans l'écran
-function debut(){const c=$('chips'),on=firstQ&&innerWidth<760&&c&&!c.hidden&&getComputedStyle(c).display!=='none';document.body.classList.toggle('deb',!!on);document.documentElement.style.setProperty('--chh',on?(c.offsetHeight+12)+'px':'0px')}
+// début de séance sur téléphone et tablette (tout sauf la mise en page ordinateur, html.dk) : les modes sont visibles au-dessus de la carte ;
+// la photo cède leur hauteur (140 px au moins) pour que les 4 réponses tiennent dans l'écran
+function debut(){const c=$('chips'),on=firstQ&&!document.documentElement.classList.contains('dk')&&c&&!c.hidden&&getComputedStyle(c).display!=='none';document.body.classList.toggle('deb',!!on);document.documentElement.style.setProperty('--chh',on?(c.offsetHeight+12)+'px':'0px')}
 const focusCard=()=>{const e=$('qc');if(!e)return;debut();if(firstQ){window.scrollTo(0,0);return}const h=($('top')&&$('top').offsetHeight)||56;document.documentElement.style.setProperty('--hh',h+'px');window.scrollTo(0,Math.max(0,e.getBoundingClientRect().top+(window.pageYOffset||0)-h-4))};
 async function next(){
   const kbd=!!(document.activeElement&&document.activeElement.closest&&document.activeElement.closest('#sh'));const tk=++nxt;shTok++;$('sh').hidden=true;document.body.classList.remove('hs');hsUpd();if($('fch').open)closeSheet();$('pic').style.height='';
@@ -4077,7 +4078,7 @@ function stats(){
   $('medal').style.setProperty('--p',p+'%');$('medal').style.setProperty('--hu',rankHue(i));$('pg').style.width=p+'%';
   if(lastKn>=0&&kn>lastKn){const m=$('medal');m.classList.remove('pls');void m.offsetWidth;m.classList.add('pls')}lastKn=kn;
   {const g=$('gn');if(g.textContent!==String(h.n)){g.textContent=h.n;g.classList.remove('bump');void g.offsetWidth;g.classList.add('bump')}const sk=$('stk');if(streak>=3){sk.hidden=false;sk.innerHTML='<svg viewBox="0 0 16 20" width="10" height="13"><path d="M8 1c1 4 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-5 1-9z" fill="#f08a2d"/></svg>'+streak}else sk.hidden=true}$('ring').style.setProperty('--g',Math.min(100,100*h.n/goal())+'%');$('ring').classList.toggle('done',h.n>=goal());$('gt').textContent='/ '+goal();$('ring').setAttribute('aria-label','Objectif du jour : '+h.n+' sur '+goal()+'. Ouvrir les réglages');
-  const l=st.tm.d===today()?st.tm.l:[];$('rplay').hidden=!l.length||curTrain;$('rplay').innerHTML='<span class="tgi">'+TARGET+'</span>Rejouer mes erreurs ('+l.length+')';
+  // les erreurs du jour ne sont pas proposées pendant le jeu : seulement à l'objectif atteint (goalAnim) et dans Progrès
   $('fday').innerHTML='<span class="tgi">'+BULB+'</span>Famille du jour'+(st.fd.d===today()?'':'<i class="nd"></i>');
   {const e=dfEtat(),n=e?e.r.length:0;$('defi').innerHTML='<span class="tgi">'+DEFI+'</span>'+(n>=10?'Défi du jour · <b>'+dfScore(e)+'/10</b>':n?'Défi du jour · '+n+'/10':'Défi du jour<i class="nd"></i>');
    $('defi').setAttribute('aria-label',n>=10?'Défi du jour : '+dfScore(e)+' sur 10, voir le résultat':n?'Défi du jour : '+n+' questions sur 10, reprendre':'Défi du jour : 10 questions, les mêmes pour tous')}
@@ -4799,7 +4800,6 @@ $('shg').onclick=()=>setSh(shS()==='full'?'mid':'full');
 document.addEventListener('click',e=>{const x=e.target.closest&&e.target.closest('[data-sp],.pk[data-l]');if(!x)return;const s=S.find(y=>y[0]===(x.dataset.sp||x.dataset.l));if(s){const q=$('herb-search');
   if(q&&document.activeElement===q){q.blur();setTimeout(()=>{window.scrollTo(0,window.scrollY);openSheet(s,null,{})},350)}   // iPhone : on attend la fin de l'animation du clavier (zone visible encore réduite), sinon la fiche reste coincée en bas de page
   else openSheet(s,null,{})}});
-$('rplay').onclick=()=>startReplay(st.tm.l.slice(),'Mes erreurs du jour');
 $('fday').onclick=()=>openFamily(famDay());$('defi').onclick=dfLancer;
 $('trq').onclick=()=>{if(dfOn){dfQuitter();return}replay=null;pre=preN;preN=null;wasTrain=false;curTrain=false;famFocus=null;trUI();next()};
 $('help').onclick=()=>{usage('aide');$('dbody').innerHTML=helpHtml();const d=$('dlg');d.showModal?d.showModal():d.setAttribute('open','');d.scrollTop=0;$('dbody').scrollTop=0;const h=d.querySelector('h2');if(h)h.focus({preventScroll:true})};

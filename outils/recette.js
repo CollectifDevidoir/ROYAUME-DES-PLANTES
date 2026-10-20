@@ -17,7 +17,7 @@ const TAILLES=[[360,640],[375,667],[390,844],[412,915],[768,1024],[1366,800],[19
 let echecs=0;
 const ok=(c,m)=>{if(!c)echecs++;console.log((c?'OK   ':'ÉCHEC ')+m)};
 // Défauts connus, déjà présents et prévus au lot 3 de conception-cible.md : signalés à chaque passage, sans faire échouer la recette
-const CONNUS={'360x640 accueil':'D-09','768x1024 accueil':'D-09'};
+const CONNUS={};   // vide depuis le lot 3 (D-09 corrigé)
 const okc=(c,cle,m)=>{if(!c&&CONNUS[cle])console.log('CONNU ('+CONNUS[cle]+') '+m);else ok(c,m)};
 (async()=>{
 const b=await chromium.launch({executablePath:process.env.CHROMIUM||'/opt/pw-browsers/chromium'});

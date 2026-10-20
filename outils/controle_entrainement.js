@@ -10,7 +10,7 @@ for(const [w,h,t] of [[1440,900,false],[390,844,true]]){const {ctx,p}=await open
   for(const [k,cas] of [[0,'question en cours'],[1,'après une réponse d\'entraînement'],[2,'pendant la correction d\'une question normale']]){
     if(k===2){await p.evaluate(()=>{const b=document.querySelector('#opts button');if(b)b.click();else{$('q-input').value='x';$('q-form').requestSubmit()}});await p.waitForTimeout(400)}
     const avant=await p.evaluate(()=>cur[0]);
-    await p.evaluate(k=>{st.tm={d:today(),l:S.slice(40+k*3,43+k*3).map(s=>s[0])};save();stats();$('rplay').click()},k);
+    await p.evaluate(k=>{st.tm={d:today(),l:S.slice(40+k*3,43+k*3).map(s=>s[0])};save();stats();tabTo('pro');$('pro-errs').click()},k);
     ok(await pret(p)&&await p.evaluate(()=>curTrain),`${tag} ${cas} : entraînement lancé`);
     if(k===1){await p.evaluate(()=>{const b=document.querySelector('#opts button');if(b)b.click();else{$('q-input').value='x';$('q-form').requestSubmit()}});await p.waitForTimeout(400)}
     const t0=Date.now();await p.evaluate(()=>$('trq').click());const r=await pret(p),dt=Date.now()-t0;
