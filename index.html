@@ -28,6 +28,9 @@
 @font-face{font-family:"Atkinson Hyperlegible Next";src:url(polices/atkinson-next-i.woff2) format("woff2");font-weight:200 800;font-style:italic;font-display:swap}
 :root{--ft:"Newsreader",Georgia,serif;--fx:"Atkinson Hyperlegible Next",system-ui,sans-serif}
 :root{--bg1:#d3e3c2;--bg2:#eaf2df;--t1:#3d5c3a;--t2:#4f7d47;--ry:.6;--fg:#14281a;--card:#fbfdf9;--ac:#2f6b3f;--ac2:#8ab77a;--ok:#1f7a45;--ko:#b3392e;--mu:#5b6d5f;--bd:#c9dbc4;--vt:#fff}
+/* verdicts et tampon « Acquise » : une couleur par sens, contraste d'au moins 4,5:1 avec leur texte, en clair et en sombre (outils/controle_couleurs.js) */
+:root{--v-juste:var(--ok);--v-presque:#6a7a14;--v-genre:#946510;--v-rate:var(--ko);--tampon:#946510}
+@media(prefers-color-scheme:dark){:root{--v-presque:#cfd873;--v-genre:#e0b04a;--tampon:#e0b04a}}
 @media(prefers-color-scheme:dark){:root{--bg1:#0a140d;--bg2:#15261b;--t1:#050b06;--t2:#1c3a24;--ry:.15;--fg:#e3eee4;--card:#1a2a1e;--ac:#8fcf9f;--ac2:#3d6b48;--ok:#7bd192;--ko:#f09a90;--mu:#98ab9c;--bd:#2c4132;--vt:#0b1a10}}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -77,8 +80,8 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--ac);outline-off
 #fb{margin-top:10px;min-height:2em}
 #next{margin-top:8px}
 .v{display:inline-block;border-radius:99px;font-weight:600;color:var(--vt)}
-.v.y{background:var(--ok)}
-.v.n{background:var(--ko)}
+.v.y{background:var(--v-juste)}
+.v.n{background:var(--v-rate)}
 #ex h3{font:600 .85rem var(--fx);color:var(--ac);margin:12px 0 2px}
 #ex h3:first-child{margin-top:0}
 #ex p{margin:0 0 6px;font-size:.92rem}
@@ -650,7 +653,7 @@ dialog::backdrop,.fch::backdrop{background:rgba(6,16,10,.3);-webkit-backdrop-fil
 .fwd{margin:-6px 0 12px;font-size:.84rem;color:var(--mu)}.fwd b{color:var(--ac);font-weight:600}
 .acc .na{color:var(--fg);font-size:.88rem}.acc .cmp td .na{color:var(--mu)}
 .fds{font-size:.92rem;margin:4px 0 8px;color:var(--fg)}
-.v.y.ty{background:#6f7f19}
+.v.y.ty{background:var(--v-presque)}
 .idc{display:flex;gap:12px;align-items:center;margin:2px 0 12px}
 .idc .idp{width:64px;height:64px;border-radius:14px;object-fit:cover;cursor:zoom-in;flex:none}
 .idc b{display:block;font:600 1.15rem var(--ft);color:var(--fg)}
@@ -668,7 +671,7 @@ dialog::backdrop,.fch::backdrop{background:rgba(6,16,10,.3);-webkit-backdrop-fil
 #splash .sp-ui h1{animation:rise .9s .15s ease-out both}
 #splash .sp-ui p{animation:rise .9s .35s ease-out both}
 @media (prefers-reduced-motion:reduce){#splash .sp-ui h1,#splash .sp-ui p,.sp-ico,.sp-eb,#spb{animation:none}}
-@media (prefers-color-scheme:dark){.v.y.ty{background:#cfd873}}
+
 .dtw{margin-top:4px}
 .dtb{display:flex;gap:6px;overflow-x:auto;padding:2px 0 10px;scrollbar-width:none}
 .dtb::-webkit-scrollbar{display:none}
@@ -1186,9 +1189,9 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
 .tgi .gi{width:100%;height:100%;display:block;fill:none;stroke:currentColor;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}@media(prefers-color-scheme:dark){}.ri .sb1,.ri .sb2,.ri .sb3,.ri .sc3,.ri .sg1,.ri .sg3,.ri .sg4,.ri .so2,.ri .ss2,.ri .st3,.ri .su2,.ri .su3,.ri .sw3,.ri .sy1,.ri .kok,.tabs button[aria-current=true] .tgi,#chips .cats button[aria-pressed=true] .cti{background:#fbfdf9;border-radius:50%;padding:2px;box-shadow:0 1px 3px rgba(10,40,20,.25)}
 /* ===== Embellissements (carnet de terrain) : étiquettes d'herbier, tampon, coccinelle, envol ===== */
 .sl .lb{display:none}
-.acq{background:none!important;border:2px solid #b8862b;color:#9a6e16!important;border-radius:6px;padding:1px 8px;font:700 .72rem ui-monospace,Menlo,monospace!important;letter-spacing:.08em;text-transform:uppercase;transform:rotate(-4deg);animation:tmp .5s cubic-bezier(.3,1.7,.5,1)!important}
+.acq{background:none!important;border:2px solid var(--tampon);color:var(--tampon)!important;border-radius:6px;padding:1px 8px;font:700 .72rem ui-monospace,Menlo,monospace!important;letter-spacing:.08em;text-transform:uppercase;transform:rotate(-4deg);animation:tmp .5s cubic-bezier(.3,1.7,.5,1)!important}
 @keyframes tmp{0%{transform:scale(1.9) rotate(-12deg);opacity:0}100%{transform:scale(1) rotate(-4deg);opacity:1}}
-.v.g{background:#b07d1c}
+.v.n.g{background:var(--v-genre)}
 #shr .sl2{display:block;margin-top:1px}
 #shr{position:relative}
 .cox{display:inline-block;vertical-align:-6px;width:24px;height:24px;margin:0 2px 0 4px;transform:rotate(-18deg);animation:cox 1.1s ease-out both;pointer-events:none}
