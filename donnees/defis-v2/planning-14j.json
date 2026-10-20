@@ -1,0 +1,5459 @@
+{
+ "_lisez_moi": "Proposition de planning (non publiée, ne remplace rien). Statut « validee » = relue et fait recoupé par recherche web ; les pages citées n'ont pas été ouvertes une à une.",
+ "debut": "2026-10-20",
+ "graine": 214,
+ "substitutions": [],
+ "controles": [
+  {
+   "controle": "14 jours de 10 questions",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "controle": "aucune question en double dans le planning, hors réutilisation espacée d'au moins 9 jours",
+   "ok": true,
+   "detail": "13 question(s) rejouée(s) après au moins 9 jours"
+  },
+  {
+   "controle": "aucune question « à vérifier » ou écartée",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "controle": "quatre choix distincts et bonne réponse valide",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "controle": "jamais deux fois la même plante cible dans un défi",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "controle": "aucun sujet répété dans un même défi",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "controle": "aucun sujet dans plus de 4 défis sur 14",
+   "ok": true,
+   "detail": "chêne ×4, pin ×4, jasmin ×4, frêne ×3, cyprès ×3, noisetier ×3"
+  },
+  {
+   "controle": "2 thèmes identiques au plus par défi",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "controle": "au moins 5 thèmes différents par défi",
+   "ok": true,
+   "detail": "min 6"
+  },
+  {
+   "controle": "un seul mode « anecdote », « famille » ou « origine » par défi",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "controle": "entre 2 et 5 questions en photos par défi",
+   "ok": true,
+   "detail": "[4, 5]"
+  },
+  {
+   "controle": "photos disponibles pour toutes les plantes affichées",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "controle": "aucune fuite forte du nom latin affiché (énoncé ou intrus évident)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "controle": "indice faible par l'épithète latine : au plus 1 question par défi",
+   "ok": true,
+   "detail": "7 question(s) concernée(s) sur 140"
+  },
+  {
+   "controle": "chaque question a au moins une source (citée ou issue du recoupement)",
+   "ok": true,
+   "detail": "12 sans source citée dans les données d'origine (recoupement seul)"
+  },
+  {
+   "controle": "explication ≤ 280 caractères",
+   "ok": true,
+   "detail": "max 243"
+  },
+  {
+   "controle": "bonne réponse jamais à la même place 6 fois dans un défi",
+   "ok": true,
+   "detail": "[3, 4]"
+  },
+  {
+   "controle": "au moins 2 pièges parmi les intermédiaires de chaque défi",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "controle": "format 4 faciles / 4 intermédiaires / 2 difficiles respecté",
+   "ok": true,
+   "detail": "0 substitution(s)"
+  },
+  {
+   "controle": "aucune question des séries jouées les 3 jours précédents",
+   "ok": true,
+   "detail": "0 reprise(s) ; séries [19, 20, 21]"
+  },
+  {
+   "controle": "information : questions déjà présentes dans les 300 séries en ligne (non rejouées avant le retour du cycle)",
+   "ok": true,
+   "detail": "83 sur 140"
+  }
+ ],
+ "jours": [
+  {
+   "date": "2026-10-20",
+   "questions": [
+    {
+     "position": 1,
+     "place": "facile",
+     "substitution": null,
+     "id": "E07",
+     "theme": "Vocabulaire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_vocabulaire",
+     "question": "Combien de pétales libres ont les fleurs d'un églantier, d'un pommier ou d'un cerisier ?",
+     "texte": null,
+     "choix": [
+      "Trois",
+      "Quatre",
+      "Cinq",
+      "Huit"
+     ],
+     "bonne": 2,
+     "explication": "Les Rosacées ont des fleurs régulières à cinq pétales libres et cinq sépales : un bon repère pour reconnaître la famille.",
+     "sources": [
+      "https://dictionnaire-academie.fr/article/A9R2949",
+      "https://www.techno-science.net/fr/definitions/rosaceae"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "cerisier"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Rosacées : fleurs régulières à cinq sépales et cinq pétales libres (Académie française) ; églantier et pommier cités, cerisier = Rosacées",
+      "sources_recoupement": [
+       "https://dictionnaire-academie.fr/article/A9R2949",
+       "https://www.techno-science.net/fr/definitions/rosaceae"
+      ]
+     }
+    },
+    {
+     "position": 2,
+     "place": "facile",
+     "substitution": null,
+     "id": "E11",
+     "theme": "Familles",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "famille",
+     "question": "L'olivier appartient à la famille…",
+     "texte": null,
+     "choix": [
+      "Des Rosacées, comme le pommier",
+      "Des Oléacées, comme le frêne et le lilas",
+      "Des Fagacées, comme le chêne",
+      "Des Lauracées, comme le laurier"
+     ],
+     "bonne": 1,
+     "explication": "Le nom de la famille vient de l'olivier (Olea). Elle compte aussi le frêne, le lilas, le jasmin et le forsythia.",
+     "sources": [
+      "https://franco.wiki/fr/Oleaceae.html",
+      "https://www.techno-science.net/fr/definitions/oleaceae"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "frêne",
+      "jasmin"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "olivier = Oléacées (comme le frêne, le lilas, le jasmin, le forsythia)",
+      "sources_recoupement": [
+       "https://franco.wiki/fr/Oleaceae.html",
+       "https://www.techno-science.net/fr/definitions/oleaceae"
+      ]
+     }
+    },
+    {
+     "position": 3,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "c62978dc02",
+     "theme": "Usages et histoire",
+     "niveau": "intermediaire",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Quel pin fut massivement gemmé pour sa résine dans la forêt des Landes ?",
+     "texte": null,
+     "choix": [
+      "Pinus sylvestris",
+      "Pinus nigra",
+      "Pinus pinea",
+      "Pinus pinaster"
+     ],
+     "bonne": 3,
+     "explication": "La forêt landaise, largement dominée par le pin maritime, a fait vivre des générations de résiniers jusqu'au déclin du gemmage au XXe siècle.",
+     "sources": [
+      "https://www.tourismelandes.com/?p=68",
+      "https://www.tourismelandes.com/?p=84965"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "pin"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "gemmage du pin maritime dans la forêt des Landes, déclin au XXe siècle",
+      "sources_recoupement": [
+       "https://www.tourismelandes.com/?p=68",
+       "https://archives.landes.fr/_recherche-ef-api/inventaire-pdf?idIR=245"
+      ]
+     }
+    },
+    {
+     "position": 4,
+     "place": "facile",
+     "substitution": null,
+     "id": "69524ea63d",
+     "theme": "Saisons",
+     "niveau": "facile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Quel arbuste se couvre de fleurs jaunes avant ses feuilles, à la sortie de l'hiver ?",
+     "texte": null,
+     "choix": [
+      "Hypericum calycinum",
+      "Forsythia × intermedia",
+      "Potentilla fruticosa",
+      "Rudbeckia fulgida"
+     ],
+     "bonne": 1,
+     "explication": "Le forsythia fleurit en mars sur rameaux nus, avant la sortie des feuilles. Millepertuis, potentille et rudbeckia fleurissent en été, feuillage déjà développé.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Forsythia"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "corrigee": true,
+     "sujets": [
+      "ortie"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "forsythia : floraison en mars-avril avant les feuilles (fiches de pépiniéristes) : « à la fin de l'hiver » corrigé en « à la sortie de l'hiver » ; floraison estivale des distracteurs non recoupée",
+      "sources_recoupement": [
+       "https://www.lalanguefrancaise.com/dictionnaire/definition/forsythia"
+      ]
+     }
+    },
+    {
+     "position": 5,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "N03",
+     "theme": "Fruits et toxicité",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_toxicite_fruit",
+     "question": "Pourquoi ne mange-t-on pas les haricots secs crus ?",
+     "texte": null,
+     "choix": [
+      "Ils contiennent des lectines toxiques, qu'une cuisson longue détruit",
+      "Ils sont simplement trop durs",
+      "Ils fermentent dans l'estomac",
+      "Ils contiennent beaucoup de caféine"
+     ],
+     "bonne": 0,
+     "explication": "Les haricots secs, surtout les rouges, contiennent des lectines toxiques : il faut les tremper, puis les faire bouillir à gros bouillons au moins 10 minutes (plus longtemps par prudence).",
+     "sources": [
+      "https://www.canada.ca/fr/sante-canada/services/aliments-nutrition/salubrite-aliments/contaminants-chimiques/toxines-naturelles/lectines-legumineuses.html",
+      "https://www.quechoisir.org/actualite-legumineuses-une-preparation-longue-mais-indispensable-n174746/"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "haricots rouges secs : lectines toxiques ; trempage (5 h au moins) puis ébullition à gros bouillons au moins 10 min (Santé Canada), 30 min ou plus selon l'EFSA",
+      "sources_recoupement": [
+       "https://www.canada.ca/fr/sante-canada/services/aliments-nutrition/salubrite-aliments/contaminants-chimiques/toxines-naturelles/lectines-legumineuses.html",
+       "https://www.quechoisir.org/actualite-legumineuses-une-preparation-longue-mais-indispensable-n174746/"
+      ]
+     }
+    },
+    {
+     "position": 6,
+     "place": "difficile",
+     "substitution": null,
+     "id": "N20",
+     "theme": "Écologie",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_ecologie",
+     "question": "À quoi servent les « genoux » qui sortent de l'eau autour du cyprès chauve ?",
+     "texte": null,
+     "choix": [
+      "À stocker l'eau",
+      "À ancrer l'arbre dans la vase",
+      "À apporter de l'air aux racines noyées",
+      "À attirer les insectes pollinisateurs"
+     ],
+     "bonne": 2,
+     "explication": "Ce sont des pneumatophores : des racines qui remontent à l'air libre pour apporter de l'oxygène aux racines immergées. Le cyprès chauve pousse naturellement dans des zones humides.",
+     "sources": [
+      "https://www.futura-sciences.com/planete/definitions/botanique-cypres-chauve-8503/",
+      "https://fr.vikidia.org/wiki/Cypr%C3%A8s_chauve"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "cyprès"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "cyprès chauve : pneumatophores (« genoux ») qui apportent de l'oxygène aux racines submergées",
+      "sources_recoupement": [
+       "https://www.futura-sciences.com/planete/definitions/botanique-cypres-chauve-8503/",
+       "https://fr.vikidia.org/wiki/Cypr%C3%A8s_chauve"
+      ]
+     }
+    },
+    {
+     "position": 7,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "N30",
+     "theme": "Idées reçues",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_idee_recue",
+     "question": "Quand le tournesol suit-il le soleil dans la journée ?",
+     "texte": null,
+     "choix": [
+      "Toute sa vie",
+      "Seulement quand il est jeune, avant la floraison",
+      "Seulement par temps nuageux",
+      "Jamais : c'est une légende"
+     ],
+     "bonne": 1,
+     "explication": "Les jeunes tournesols suivent le soleil d'est en ouest, grâce à une horloge interne. Adultes, ils cessent de bouger et restent tournés vers l'est.",
+     "sources": [
+      "https://www.futura-sciences.com/planete/definitions/botanique-heliotropisme-19421/",
+      "https://www.techno-science.net/fr/actualites/comment-les-tournesols-voient-le-soleil-24004"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "tournesol"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "tournesol : les jeunes plants suivent le soleil d'est en ouest (horloge interne, Science 2016) ; les plantes adultes restent tournées vers l'est",
+      "sources_recoupement": [
+       "https://www.futura-sciences.com/planete/definitions/botanique-heliotropisme-19421/",
+       "https://www.techno-science.net/fr/actualites/comment-les-tournesols-voient-le-soleil-24004"
+      ]
+     }
+    },
+    {
+     "position": 8,
+     "place": "facile",
+     "substitution": null,
+     "id": "f624dfa743",
+     "theme": "Fruits et toxicité",
+     "niveau": "facile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Lequel de ces arbres produit les glands ?",
+     "texte": null,
+     "choix": [
+      "Quercus robur",
+      "Fagus sylvatica",
+      "Castanea sativa",
+      "Corylus avellana"
+     ],
+     "bonne": 0,
+     "explication": "Le gland, fruit du chêne, est un akène posé dans une cupule écailleuse. Le hêtre donne des faînes, le châtaignier des châtaignes, le noisetier des noisettes.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Gland_(botanique)"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "chêne",
+      "hêtre",
+      "noisetier"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "gland = akène partiellement enveloppé d'une cupule",
+      "sources_recoupement": [
+       "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/17030679/gland",
+       "https://www.techno-science.net/fr/definitions/chene"
+      ]
+     }
+    },
+    {
+     "position": 9,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "5c495a012c",
+     "theme": "Écologie",
+     "niveau": "intermediaire",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_origine",
+     "question": "Laquelle de ces plantes est indigène en France ?",
+     "texte": null,
+     "choix": [
+      "Filipendula ulmaria",
+      "Brunnera macrophylla",
+      "Ligularia dentata",
+      "Actaea simplex"
+     ],
+     "bonne": 0,
+     "explication": "Reine-des-prés est indigène en France. Ligulaire : Chine, Japon ; Myosotis du Caucase : Caucase ; Cimicaire : Asie orientale (Russie orientale, Chine, Corée, Japon).",
+     "sources": [
+      "https://www.rhs.org.uk/plants/32871/wd/details"
+     ],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "reine-des-prés indigène en France (Chambre d'agriculture Hauts-de-France) ; autres plantes proposées non recoupées",
+      "sources_recoupement": [
+       "https://hautsdefrance.chambre-agriculture.fr/fileadmin/user_upload/National/FAL_commun/publications/Hauts-de-France/Fiche_reine_des_pres.pdf"
+      ]
+     }
+    },
+    {
+     "position": 10,
+     "place": "difficile",
+     "substitution": null,
+     "id": "f9a492e111",
+     "theme": "Usages et histoire",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_usage_histoire",
+     "question": "Quel médecin anglais publia en 1785 un traité sur l'usage de la digitale contre l'hydropisie ?",
+     "texte": null,
+     "choix": [
+      "Edward Jenner",
+      "Thomas Sydenham",
+      "William Harvey",
+      "William Withering"
+     ],
+     "bonne": 3,
+     "explication": "Parti d'un remède populaire, William Withering décrivit les effets et la toxicité de Digitalis purpurea. La plante est très toxique si ingérée.",
+     "sources": [
+      "https://en.wikipedia.org/wiki/William_Withering",
+      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5545334/"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "William Withering, An Account of the Fox Glove (Birmingham, 1785), digitale et hydropisie",
+      "sources_recoupement": [
+       "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5545334/",
+       "https://en.wikipedia.org/wiki/William_Withering"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "date": "2026-10-21",
+   "questions": [
+    {
+     "position": 1,
+     "place": "facile",
+     "substitution": null,
+     "id": "a2db60d4d4",
+     "theme": "Familles",
+     "niveau": "facile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "famille",
+     "question": "Laquelle de ces plantes appartient à la famille des Lamiacées ?",
+     "texte": null,
+     "choix": [
+      "Geranium × cantabrigiense",
+      "Euphorbia paralias",
+      "Persicaria amplexicaulis",
+      "Thymus vulgaris"
+     ],
+     "bonne": 3,
+     "explication": "Thym commun fait partie des Lamiacées. Traits fréquents dans la famille : tige carrée et feuilles opposées croisées.",
+     "sources": [],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Thymus vulgaris = Lamiacées ; les autres plantes proposées (géranium, euphorbe, renouée) sont d'autres familles",
+      "sources_recoupement": [
+       "https://iiim.res.in/wp-content/uploads/2018/04/European_Agency.pdf"
+      ]
+     }
+    },
+    {
+     "position": 2,
+     "place": "facile",
+     "substitution": null,
+     "id": "E04",
+     "theme": "Écologie",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_ecologie",
+     "question": "Pourquoi la drosera capture-t-elle des insectes ?",
+     "texte": null,
+     "choix": [
+      "Pour compléter son alimentation en azote, rare dans son sol",
+      "Pour s'en protéger",
+      "Pour attirer des pollinisateurs",
+      "Pour se reproduire"
+     ],
+     "bonne": 0,
+     "explication": "Elle pousse dans des tourbières pauvres en azote : ses poils collants piègent les insectes, qu'elle digère pour s'en nourrir.",
+     "sources": [
+      "https://www.techno-science.net/fr/definitions/drosera",
+      "https://www.futura-sciences.com/planete/dossiers/botanique-differents-mecanismes-intervenant-lors-capture-chez-drosera-capensis-172/"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "drosera : milieux humides et pauvres en azote minéral, azote tiré des insectes capturés par les poils collants",
+      "sources_recoupement": [
+       "https://www.techno-science.net/fr/definitions/drosera",
+       "https://www.futura-sciences.com/planete/dossiers/botanique-differents-mecanismes-intervenant-lors-capture-chez-drosera-capensis-172/"
+      ]
+     }
+    },
+    {
+     "position": 3,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "953a3b17d3",
+     "theme": "Saisons",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Laquelle de ces plantes est la « rose de Noël » ?",
+     "texte": null,
+     "choix": [
+      "Alcea rosea",
+      "Nerium oleander",
+      "Rosa canina",
+      "Helleborus niger"
+     ],
+     "bonne": 3,
+     "explication": "La rose de Noël n'est pas une rose : c'est l'hellébore noir, une Renonculacée à fleurs blanches qui fleurit en hiver. Rose trémière et laurier-rose ne sont pas non plus de vraies roses ; seul l'églantier est un Rosa. Plante toxique si ingérée.",
+     "sources": [
+      "https://www.techno-science.net/fr/definitions/rose-de-noel",
+      "https://www.jardinbotaniquedenancy.eu/fileadmin/CJBN/Plante_du_mois/03.25.Helleborus_1.pdf"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "corrigee": true,
+     "sujets": [
+      "laurier",
+      "rose"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "rose de Noël = Helleborus niger, Renonculacées, fleurit en hiver, très toxique",
+      "sources_recoupement": [
+       "https://www.larousse.fr/dictionnaires/francais/ellebore",
+       "https://www.jardiner-malin.fr/fiche/hellebore-noir.html"
+      ]
+     }
+    },
+    {
+     "position": 4,
+     "place": "facile",
+     "substitution": null,
+     "id": "E05",
+     "theme": "Fruits et toxicité",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_toxicite_fruit",
+     "question": "Que faut-il savoir sur le muguet du 1er mai ?",
+     "texte": null,
+     "choix": [
+      "Seules ses baies sont toxiques",
+      "Il est comestible une fois cuit",
+      "Toute la plante est toxique",
+      "Il n'est toxique que pour les animaux"
+     ],
+     "bonne": 2,
+     "explication": "Fleurs, feuilles et baies contiennent des glycosides qui agissent sur le cœur, comme ceux de la digitale. Dans le doute, ne rien consommer.",
+     "sources": [
+      "https://www.bfr.bund.de/en/risk-communication/dialog-formats/bfr-poisonous-plants-garden/lily-of-the-valley/",
+      "https://www.techno-science.net/fr/definitions/muguet-de-mai"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "muguet : toutes les parties contiennent des glycosides cardiotoniques (proches de ceux de la digitale), baies souvent citées comme les plus dangereuses",
+      "sources_recoupement": [
+       "https://www.bfr.bund.de/en/risk-communication/dialog-formats/bfr-poisonous-plants-garden/lily-of-the-valley/",
+       "https://www.techno-science.net/fr/definitions/muguet-de-mai"
+      ]
+     }
+    },
+    {
+     "position": 5,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "N08",
+     "theme": "Vocabulaire",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_vocabulaire",
+     "question": "Une marguerite est en réalité…",
+     "texte": null,
+     "choix": [
+      "Une grande fleur unique à nombreux pétales",
+      "Une inflorescence de nombreuses petites fleurs (un capitule)",
+      "Une fleur double obtenue par sélection",
+      "Une ombelle de fleurs soudées"
+     ],
+     "bonne": 1,
+     "explication": "Chaque « pétale » blanc est une petite fleur ligulée, et le disque jaune est formé de fleurons tubulés : la marguerite est un capitule, comme toutes les Astéracées.",
+     "sources": [
+      "https://www.techno-science.net/fr/definitions/capitule-botanique",
+      "https://areq.net/lang/fr/Capitule_(botanique).html"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "marguerite = capitule (inflorescence de nombreux fleurons ligulés et tubulés) des Astéracées",
+      "sources_recoupement": [
+       "https://www.techno-science.net/fr/definitions/capitule-botanique",
+       "https://areq.net/lang/fr/Capitule_(botanique).html"
+      ]
+     }
+    },
+    {
+     "position": 6,
+     "place": "difficile",
+     "substitution": null,
+     "id": "ccac3103b2",
+     "theme": "Anecdotes",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "anecdote",
+     "question": "De quelle plante parle-t-on ?",
+     "texte": "Des bourdons meurent sous cet arbre en été : on accusait son nectar d'être toxique, mais les études penchent pour la famine en fin de floraison.",
+     "choix": [
+      "Quercus suber",
+      "Tilia tomentosa",
+      "Ulmus laevis",
+      "Chamaecyparis pisifera"
+     ],
+     "bonne": 1,
+     "explication": "C'est : Tilleul argenté. Dessous des feuilles blanc ; supporte mieux la chaleur et la sécheresse.",
+     "sources": [
+      "https://vkm.no/english/riskassessments/allpublications/isthereaconnectionbetweenlindentreesandbumblebeedeath.4.2375207615dac0245aee1696.html"
+     ],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [
+      "tilleul"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "mortalité de bourdons sous le tilleul argenté : toxicité du nectar non prouvée, famine en fin de floraison hypothèse la plus probable",
+      "sources_recoupement": [
+       "https://core.ac.uk/works/8100252",
+       "https://orbi.uliege.be/bitstream/2268/345845/1/JB2024_p40-47_Demoulin.pdf"
+      ]
+     }
+    },
+    {
+     "position": 7,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "N09",
+     "theme": "Idées reçues",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_idee_recue",
+     "question": "La tulipe, symbole des Pays-Bas, est originaire…",
+     "texte": null,
+     "choix": [
+      "Des Pays-Bas",
+      "D'Asie centrale",
+      "D'Amérique du Sud",
+      "D'Afrique du Nord"
+     ],
+     "bonne": 1,
+     "explication": "La tulipe sauvage vient d'Asie centrale. Elle a gagné l'Europe par la Perse et l'Empire ottoman (vers 1550), bien avant la « tulipomanie » néerlandaise de 1636-1637.",
+     "sources": [
+      "https://m.gardensbythebay.com.sg/content/dam/gbb-2021/documents/media-room/2016/FOR-WEBSITE-APPENDIX-A-Rediscover-the-Origins-of-the-Tulip.pdf",
+      "https://www.sarahraven.com/articles/the-history-of-the-tulip"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "tulipe"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "tulipe sauvage originaire d'Asie centrale (Tian Shan), diffusée par la Perse et l'Empire ottoman, introduite en Europe vers 1550 (Busbecq, Clusius), tulipomanie néerlandaise en 1636-1637 ; « Pamir » non retrouvé : retiré",
+      "sources_recoupement": [
+       "https://m.gardensbythebay.com.sg/content/dam/gbb-2021/documents/media-room/2016/FOR-WEBSITE-APPENDIX-A-Rediscover-the-Origins-of-the-Tulip.pdf",
+       "https://www.sarahraven.com/articles/the-history-of-the-tulip"
+      ]
+     }
+    },
+    {
+     "position": 8,
+     "place": "facile",
+     "substitution": null,
+     "id": "E01",
+     "theme": "Usages et histoire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_usage_histoire",
+     "question": "Quelle partie de l'érable à sucre récolte-t-on au printemps pour faire du sirop ?",
+     "texte": null,
+     "choix": [
+      "La sève",
+      "Les fleurs",
+      "Les samares",
+      "L'écorce"
+     ],
+     "bonne": 0,
+     "explication": "On entaille le tronc au début du printemps, quand les nuits gèlent et les jours dégèlent. La sève, très peu sucrée, est concentrée par évaporation : il en faut environ 40 litres pour 1 litre de sirop.",
+     "sources": [
+      "https://www.thecanadianencyclopedia.ca/fr/article/acericulture",
+      "https://fr.vikidia.org/wiki/Sirop_d'%C3%A9rable"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "érable"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "érable à sucre (Acer saccharum) : sève récoltée au début du printemps (nuits de gel, jours de dégel), très peu sucrée (2-3 %), concentrée par évaporation (environ 40 L pour 1 L de sirop)",
+      "sources_recoupement": [
+       "https://www.thecanadianencyclopedia.ca/fr/article/acericulture",
+       "https://fr.vikidia.org/wiki/Sirop_d'%C3%A9rable"
+      ]
+     }
+    },
+    {
+     "position": 9,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "41fbd02898",
+     "theme": "Vocabulaire",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Chez laquelle de ces plantes les parties colorées ne sont-elles pas des pétales mais des bractées ?",
+     "texte": null,
+     "choix": [
+      "Hibiscus syriacus",
+      "Nerium oleander",
+      "Lagerstroemia indica",
+      "Bougainvillea glabra"
+     ],
+     "bonne": 3,
+     "explication": "Chez le bougainvillier, les « fleurs » colorées sont des bractées, feuilles modifiées entourant de petites vraies fleurs blanchâtres.",
+     "sources": [
+      "https://www.techno-science.net/fr/definitions/bougainvillee"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "bougainvillier : parties colorées = bractées entourant de petites fleurs blanches",
+      "sources_recoupement": [
+       "https://www.lalanguefrancaise.com/dictionnaire/definition/bougainvillea",
+       "https://areq.net/lang/fr/Bougainvillea.html"
+      ]
+     }
+    },
+    {
+     "position": 10,
+     "place": "difficile",
+     "substitution": null,
+     "id": "26865f64ba",
+     "theme": "Saisons",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Lequel de ces arbres fleurit au printemps avant ses feuilles, jusque sur le tronc ?",
+     "texte": null,
+     "choix": [
+      "Robinia pseudoacacia",
+      "Catalpa bignonioides",
+      "Laburnum anagyroides",
+      "Cercis siliquastrum"
+     ],
+     "bonne": 3,
+     "explication": "L'arbre de Judée se couvre de fleurs roses avant la feuillaison, sur les rameaux et même sur le tronc (cauliflorie). Les trois autres fleurissent feuillés.",
+     "sources": [
+      "https://www.futura-sciences.com/planete/definitions/botanique-arbre-judee-11815/",
+      "https://fr.wikipedia.org/wiki/Arbre_de_Jud%C3%A9e"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "arbre de Judée : cauliflorie, fleurs sur branches et tronc avant les feuilles",
+      "sources_recoupement": [
+       "https://www.lapetiteloiterie.fr/lpl/wp-content/uploads/cercis-siliquastrum.pdf",
+       "https://franco.wiki/fr/Cauliflore.html"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "date": "2026-10-22",
+   "questions": [
+    {
+     "position": 1,
+     "place": "facile",
+     "substitution": null,
+     "id": "N17",
+     "theme": "Vocabulaire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_vocabulaire",
+     "question": "Comment s'appelle le « parachute » du fruit du pissenlit ?",
+     "texte": null,
+     "choix": [
+      "La cupule",
+      "L'aigrette",
+      "La samare",
+      "Le calice"
+     ],
+     "bonne": 1,
+     "explication": "L'aigrette (ou pappus) est une touffe de poils soyeux au sommet de l'akène : elle le porte au vent, comme un parachute.",
+     "sources": [
+      "https://www.lequotidiendupharmacien.fr/pappus",
+      "https://www.futura-sciences.com/planete/definitions/botanique-akene-9544/"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "pissenlit"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "aigrette (pappus) du pissenlit : parachute de l'akène, dispersion par le vent",
+      "sources_recoupement": [
+       "https://www.lequotidiendupharmacien.fr/pappus",
+       "https://www.futura-sciences.com/planete/definitions/botanique-akene-9544/"
+      ]
+     }
+    },
+    {
+     "position": 2,
+     "place": "facile",
+     "substitution": null,
+     "id": "N01",
+     "theme": "Fruits et toxicité",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_toxicite_fruit",
+     "question": "Quelle partie de la rhubarbe se mange ?",
+     "texte": null,
+     "choix": [
+      "Les feuilles",
+      "Les fleurs",
+      "Les graines",
+      "Les côtes (pétioles)"
+     ],
+     "bonne": 3,
+     "explication": "On ne mange que les côtes (pétioles), de préférence cuites. Les feuilles contiennent beaucoup d'acide oxalique et sont toxiques : dans le doute, ne rien consommer.",
+     "sources": [
+      "https://www.futura-sciences.com/planete/definitions/botanique-rhubarbe-19382/",
+      "https://www.aroma-zone.com/page/rhubarbe-definitions-bienfaits"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "rhubarbe"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "rhubarbe : seuls les pétioles (côtes) se mangent ; feuilles toxiques (acide oxalique)",
+      "sources_recoupement": [
+       "https://www.futura-sciences.com/planete/definitions/botanique-rhubarbe-19382/",
+       "https://www.aroma-zone.com/page/rhubarbe-definitions-bienfaits"
+      ]
+     }
+    },
+    {
+     "position": 3,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "2773be02fd",
+     "theme": "Écologie",
+     "niveau": "intermediaire",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Lequel de ces arbres fleurit dès la fin de l'hiver, offrant un pollen précoce aux abeilles ?",
+     "texte": null,
+     "choix": [
+      "Tilia platyphyllos",
+      "Castanea sativa",
+      "Salix caprea",
+      "Catalpa bignonioides"
+     ],
+     "bonne": 2,
+     "explication": "Les chatons du saule marsault s'ouvrent dès mars, parfois fin février : c'est l'une des premières sources de pollen et de nectar pour les abeilles et les bourdons au sortir de l'hiver.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Saule_marsault"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "abeille",
+      "saule"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "saule marsault : floraison précoce (février-mars selon les régions), pollen et nectar pour abeilles et autres insectes",
+      "sources_recoupement": [
+       "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/vegetation-au-sol/les-saules-salix",
+       "https://areq.net/lang/fr/Saule_marsault.html"
+      ]
+     }
+    },
+    {
+     "position": 4,
+     "place": "facile",
+     "substitution": null,
+     "id": "3ee234debe",
+     "theme": "Saisons",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_saison",
+     "question": "Quel pigment vert, dégradé à l'automne, laisse apparaître les autres couleurs des feuilles ?",
+     "texte": null,
+     "choix": [
+      "Le carotène",
+      "L'anthocyane",
+      "La xanthophylle",
+      "La chlorophylle"
+     ],
+     "bonne": 3,
+     "explication": "En automne, l'arbre dégrade sa chlorophylle et en récupère les éléments. Les pigments jaunes et orangés qu'elle masquait deviennent alors visibles.",
+     "sources": [
+      "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/le-mystere-des-couleurs-du-feuillage-en-automne",
+      "https://espacepourlavie.ca/les-couleurs-dautomne-des-arbres"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "la chlorophylle dégradée à l'automne révèle les pigments jaunes (caroténoïdes, xanthophylles)",
+      "sources_recoupement": [
+       "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/le-mystere-des-couleurs-du-feuillage-en-automne",
+       "https://espacepourlavie.ca/les-couleurs-dautomne-des-arbres"
+      ]
+     }
+    },
+    {
+     "position": 5,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "N06",
+     "theme": "Idées reçues",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_idee_recue",
+     "question": "Le gui que l'on voit dans les peupliers est…",
+     "texte": null,
+     "choix": [
+      "Un parasite complet, sans chlorophylle",
+      "Un hémiparasite : il fait sa photosynthèse mais puise l'eau et les sels de l'arbre",
+      "Un épiphyte inoffensif, comme une mousse",
+      "Un champignon des branches"
+     ],
+     "bonne": 1,
+     "explication": "Le gui garde ses feuilles vertes et fait sa photosynthèse, mais ses suçoirs pompent l'eau et les sels minéraux de l'arbre : c'est un hémiparasite.",
+     "sources": [
+      "https://www.techno-science.net/fr/definitions/gui-plante",
+      "https://www.humanite-biodiversite.fr/articles/70190-au-gui-l-an-neuf"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "gui"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "gui (Viscum album) hémiparasite : puise eau et sels minéraux de l'hôte (peuplier, pommier, tilleul, saule) mais fait sa photosynthèse",
+      "sources_recoupement": [
+       "https://www.techno-science.net/fr/definitions/gui-plante",
+       "https://www.humanite-biodiversite.fr/articles/70190-au-gui-l-an-neuf"
+      ]
+     }
+    },
+    {
+     "position": 6,
+     "place": "difficile",
+     "substitution": null,
+     "id": "ff0ead9d93",
+     "theme": "Anecdotes",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "anecdote",
+     "question": "De quelle plante parle-t-on ?",
+     "texte": "Record du monde : une baie de 65,59 g, pesée en 2025 au concours d'Egton Bridge (Yorkshire), organisé chaque année depuis 1800.",
+     "choix": [
+      "Ribes uva-crispa",
+      "Pieris japonica",
+      "Ribes nigrum",
+      "Frangula alnus"
+     ],
+     "bonne": 0,
+     "explication": "C'est : Groseillier à maquereau. Tiges épineuses et baies velues ou lisses, vertes à rouges.",
+     "sources": [
+      "https://www.guinnessworldrecords.com/world-records/heaviest-gooseberry/"
+     ],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "record Guinness : groseille à maquereau de 65,59 g, Egton Bridge, 5 août 2025 ; concours depuis au moins 1800",
+      "sources_recoupement": [
+       "https://www.guinnessworldrecords.com/world-records/heaviest-gooseberry/",
+       "https://egtongooseberryshow.org.uk/about-us/"
+      ]
+     }
+    },
+    {
+     "position": 7,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "N12",
+     "theme": "Usages et histoire",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_usage_histoire",
+     "question": "Le poivre vert, le noir et le blanc viennent…",
+     "texte": null,
+     "choix": [
+      "De trois plantes différentes",
+      "Du même poivrier, selon la maturité et la préparation des baies",
+      "Du poivrier, du piment et du genévrier",
+      "De trois parties de la même fleur"
+     ],
+     "bonne": 1,
+     "explication": "Tous trois viennent de Piper nigrum : le vert est cueilli avant maturité, le noir séché presque mûr, le blanc débarrassé de son enveloppe.",
+     "sources": [
+      "https://www.quechoisir.org/decryptage-poivre-decryptage-n5231/",
+      "https://www.techno-science.net/fr/definitions/poivre"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "poivre"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "poivres vert, noir et blanc : même plante Piper nigrum, selon le stade de récolte et le traitement (le stade du poivre blanc varie selon les sources)",
+      "sources_recoupement": [
+       "https://www.quechoisir.org/decryptage-poivre-decryptage-n5231/",
+       "https://www.techno-science.net/fr/definitions/poivre"
+      ]
+     }
+    },
+    {
+     "position": 8,
+     "place": "facile",
+     "substitution": null,
+     "id": "d85f3dce13",
+     "theme": "Saisons",
+     "niveau": "facile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Laquelle de ces plantes fleurit en plein hiver, parfois à travers la neige ?",
+     "texte": null,
+     "choix": [
+      "Paeonia lactiflora",
+      "Lilium martagon",
+      "Galanthus nivalis",
+      "Echinacea purpurea"
+     ],
+     "bonne": 2,
+     "explication": "Le perce-neige ouvre ses clochettes blanches dès janvier-février. Pivoine, lis martagon et échinacée fleurissent, eux, à la fin du printemps ou en été.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Perce-neige"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "perce-neige"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "perce-neige : floraison janvier-mars ; galantamine isolée des bulbes (Galanthus), médicament contre Alzheimer",
+      "sources_recoupement": [
+       "https://www.futura-sciences.com/planete/definitions/fleurs-perce-neige-17048/",
+       "https://mediplantepirus.med.uoi.gr/pharmacology_en/plant_details.php?id=26"
+      ]
+     }
+    },
+    {
+     "position": 9,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "38af785086",
+     "theme": "Idées reçues",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Lequel de ces végétaux n'est PAS un vrai bambou ?",
+     "texte": null,
+     "choix": [
+      "Nandina domestica",
+      "Phyllostachys nigra",
+      "Fargesia murielae",
+      "Pseudosasa japonica"
+     ],
+     "bonne": 0,
+     "explication": "Le nandina, dit « bambou sacré », n'a de bambou que l'allure : c'est un arbuste de la famille de l'épine-vinette (Berbéridacées), pas une graminée.",
+     "sources": [
+      "https://en.wikipedia.org/wiki/Nandina",
+      "https://animals.sandiegozoo.org/node/470"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "bambou"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Nandina domestica = Berbéridacées (famille de l'épine-vinette), seul rapport avec le bambou : le port",
+      "sources_recoupement": [
+       "https://www.rhs.org.uk/plants/11327/wd/details",
+       "https://species.wikimedia.org/wiki/Nandina_domestica"
+      ]
+     }
+    },
+    {
+     "position": 10,
+     "place": "difficile",
+     "substitution": null,
+     "id": "6d01562d16",
+     "theme": "Familles",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "famille",
+     "question": "Laquelle de ces plantes appartient à la famille des Fabacées ?",
+     "texte": null,
+     "choix": [
+      "Magnolia kobus",
+      "Cupressus × leylandii",
+      "Gymnocladus dioicus",
+      "Populus × canadensis"
+     ],
+     "bonne": 2,
+     "explication": "Chicot du Canada fait partie des Fabacées. Traits fréquents dans la famille : fleur papilionacée et fruit en gousse.",
+     "sources": [],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Chicot du Canada (Gymnocladus dioicus) = Fabacées, fruits en gousses",
+      "sources_recoupement": [
+       "https://www.saint-cyr-sur-loire.com/content/download/16741/262586/version/2/file/FICHES_BOTANIQUES_Chicot-du-Canada.pdf"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "date": "2026-10-23",
+   "questions": [
+    {
+     "position": 1,
+     "place": "facile",
+     "substitution": null,
+     "id": "64f661c618",
+     "theme": "Fruits et toxicité",
+     "niveau": "facile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Quelle liane de nos haies se couvre en hiver de touffes de fruits plumeux blancs ?",
+     "texte": null,
+     "choix": [
+      "Hedera helix",
+      "Clematis vitalba",
+      "Lonicera periclymenum",
+      "Humulus lupulus"
+     ],
+     "bonne": 1,
+     "explication": "La clématite des haies porte des akènes prolongés d'une longue plume soyeuse qui persiste tout l'hiver et les aide à voyager au vent.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Cl%C3%A9matite_des_haies"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "corrigee": true,
+     "sujets": [
+      "clématite"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "akènes plumeux persistants en hiver : confirmé ; le surnom « barbe de vieillard » n'a pas été retrouvé : retiré de l'explication",
+      "sources_recoupement": [
+       "https://inpn.mnhn.fr/espece/cd_nom/91886?lg=en"
+      ]
+     }
+    },
+    {
+     "position": 2,
+     "place": "facile",
+     "substitution": null,
+     "id": "9faa771a96",
+     "theme": "Écologie",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_ecologie",
+     "question": "Comment le trèfle enrichit-il le sol en azote ?",
+     "texte": null,
+     "choix": [
+      "Grâce à des bactéries de ses racines",
+      "Grâce à des champignons de ses feuilles",
+      "Grâce aux fourmis qui l'habitent",
+      "Grâce aux vers de terre qu'il attire"
+     ],
+     "bonne": 0,
+     "explication": "Comme les autres Fabacées, le trèfle abrite dans des nodosités de ses racines des bactéries (rhizobiums) qui fixent l'azote de l'air. Un engrais vert gratuit !",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Rhizobium",
+      "https://fr.wikipedia.org/wiki/Trèfle_blanc"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "trèfle (Fabacées) : bactéries (rhizobiums) dans les nodosités des racines fixent l'azote de l'air",
+      "sources_recoupement": [
+       "https://extranet-drome.chambres-agriculture.fr/fileadmin/user_upload/Auvergne-Rhone-Alpes/118_Extr-Drome_img/Publications/PDF/OBJECTIFSEAU_80_JUIN_2022.pdf",
+       "https://hal.inrae.fr/hal-02733997/document"
+      ]
+     }
+    },
+    {
+     "position": 3,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "N21",
+     "theme": "Milieux",
+     "niveau": "intermediaire",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_milieu",
+     "question": "Pourquoi les jeunes feuilles d'un rhododendron jaunissent-elles en sol calcaire ?",
+     "texte": null,
+     "choix": [
+      "Il y manque de lumière",
+      "Le calcaire empêche d'absorber le fer : c'est la chlorose ferrique",
+      "Il y a trop d'eau",
+      "Le calcaire brûle les racines"
+     ],
+     "bonne": 1,
+     "explication": "Le fer est présent mais mal absorbé en sol alcalin ou calcaire : les feuilles jaunissent entre les nervures. D'où la terre de bruyère et l'eau de pluie.",
+     "sources": [
+      "https://agriculture.canada.ca/fr/production-agricole/protection-cultures/maladies-ravageurs-agroforesterie/chlorose-ferrique-arbres-arbustes",
+      "https://www.jardiner-malin.fr/fiche/rhododendron.html"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "jaunissement des jeunes feuilles de rhododendron entre les nervures = chlorose ferrique en sol calcaire (fer mal assimilé en sol alcalin)",
+      "sources_recoupement": [
+       "https://agriculture.canada.ca/fr/production-agricole/protection-cultures/maladies-ravageurs-agroforesterie/chlorose-ferrique-arbres-arbustes",
+       "https://www.jardiner-malin.fr/fiche/rhododendron.html"
+      ]
+     }
+    },
+    {
+     "position": 4,
+     "place": "facile",
+     "substitution": null,
+     "id": "E02",
+     "theme": "Usages et histoire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_usage_histoire",
+     "question": "Le chocolat est fabriqué à partir de quelle partie du cacaoyer ?",
+     "texte": null,
+     "choix": [
+      "Les feuilles",
+      "Les racines",
+      "Les graines (les fèves)",
+      "L'écorce"
+     ],
+     "bonne": 2,
+     "explication": "Les fèves sont les graines contenues dans la cabosse, le fruit du cacaoyer. Elles sont fermentées, séchées, torréfiées puis broyées.",
+     "sources": [
+      "https://www.alimentarium.org/fr/savoir/cacaoyer",
+      "https://www.lalanguefrancaise.com/dictionnaire/definition/cacaoyer"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "cacaoyer (Theobroma cacao) : les fèves sont les graines contenues dans la cabosse, fermentées, séchées puis transformées",
+      "sources_recoupement": [
+       "https://www.alimentarium.org/fr/savoir/cacaoyer",
+       "https://www.lalanguefrancaise.com/dictionnaire/definition/cacaoyer"
+      ]
+     }
+    },
+    {
+     "position": 5,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "N10",
+     "theme": "Vocabulaire",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_vocabulaire",
+     "question": "La partie que l'on mange chez la pomme de terre est…",
+     "texte": null,
+     "choix": [
+      "Une racine renflée",
+      "Un bulbe",
+      "Un tubercule : une tige souterraine renflée",
+      "Un fruit"
+     ],
+     "bonne": 2,
+     "explication": "C'est une tige souterraine gonflée de réserves, portée par des stolons : pas une racine.",
+     "sources": [
+      "https://www.futura-sciences.com/planete/definitions/botanique-tubercule-2422/",
+      "https://areq.net/lang/fr/Pomme_de_terre.html"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "pomme de terre"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "pomme de terre = tubercule caulinaire : tige souterraine renflée portée par des stolons, pas une racine",
+      "sources_recoupement": [
+       "https://www.futura-sciences.com/planete/definitions/botanique-tubercule-2422/",
+       "https://areq.net/lang/fr/Pomme_de_terre.html"
+      ]
+     }
+    },
+    {
+     "position": 6,
+     "place": "difficile",
+     "substitution": null,
+     "id": "7a0eeff2de",
+     "theme": "Anecdotes",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "anecdote",
+     "question": "Laquelle de ces plantes cache cette histoire ?",
+     "texte": "Créée vers 1890 par l'Américain Luther Burbank, elle doit son nom anglais au mont Shasta, dont ses pétales évoquent la neige.",
+     "choix": [
+      "Heuchera sanguinea",
+      "Hypericum perforatum",
+      "Anemone × hybrida",
+      "Leucanthemum × superbum"
+     ],
+     "bonne": 3,
+     "explication": "C'est : Marguerite d'été. Grandes marguerites blanches tout l'été, bonne fleur à couper ; massifs ensoleillés.",
+     "sources": [
+      "https://en.wikipedia.org/wiki/Leucanthemum_%C3%97_superbum"
+     ],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Leucanthemum × superbum : hybride de Luther Burbank (1890), nommé d'après le mont Shasta",
+      "sources_recoupement": [
+       "https://en.wikipedia.org/wiki/Leucanthemum_%C3%97_superbum"
+      ]
+     }
+    },
+    {
+     "position": 7,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "N26",
+     "theme": "Usages et histoire",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_usage_histoire",
+     "question": "Le safran est fait avec…",
+     "texte": null,
+     "choix": [
+      "Les pétales d'un souci",
+      "Les stigmates d'un crocus",
+      "Les étamines d'un lis",
+      "Les graines d'un carthame"
+     ],
+     "bonne": 1,
+     "explication": "Ce sont les trois stigmates rouges de la fleur de Crocus sativus, récoltés un par un à la main puis séchés.",
+     "sources": [
+      "https://www.futura-sciences.com/planete/definitions/botanique-crocus-safran-9645/",
+      "https://agriculture.ec.europa.eu/farming/geographical-indications-and-quality-schemes/geographical-indications-food-and-drink/krokos-kozanis-pdo_fr"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "safran/crocus"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "safran = stigmates séchés (3 par fleur) de Crocus sativus, récoltés à la main",
+      "sources_recoupement": [
+       "https://www.futura-sciences.com/planete/definitions/botanique-crocus-safran-9645/",
+       "https://agriculture.ec.europa.eu/farming/geographical-indications-and-quality-schemes/geographical-indications-food-and-drink/krokos-kozanis-pdo_fr"
+      ]
+     }
+    },
+    {
+     "position": 8,
+     "place": "facile",
+     "substitution": null,
+     "id": "9f8125659c",
+     "theme": "Fruits et toxicité",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_toxicite_fruit",
+     "question": "Comment nomme-t-on le fruit rouge de l'églantier ?",
+     "texte": null,
+     "choix": [
+      "La cenelle",
+      "La prunelle",
+      "La sorbe",
+      "Le cynorrhodon"
+     ],
+     "bonne": 3,
+     "explication": "Le cynorrhodon est un faux-fruit : son enveloppe charnue renferme les vrais fruits, des akènes couverts de poils irritants, d'où le surnom de « gratte-cul ».",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Cynorhodon"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "cynorrhodon = faux-fruit, akènes poilus, « gratte-cul »",
+      "sources_recoupement": [
+       "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/2082837/cynorrhodon",
+       "https://www.techno-science.net/fr/definitions/cynorrhodon"
+      ]
+     }
+    },
+    {
+     "position": 9,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "e80c01b28a",
+     "theme": "Idées reçues",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Lequel de ces végétaux n'est PAS un palmier ?",
+     "texte": null,
+     "choix": [
+      "Trachycarpus fortunei",
+      "Chamaerops humilis",
+      "Phoenix canariensis",
+      "Cycas revoluta"
+     ],
+     "bonne": 3,
+     "explication": "Le cycas, parfois vendu comme « palmier », est une gymnosperme : il ne fleurit pas et porte des cônes, comme les conifères. Les trois autres sont de vrais palmiers.",
+     "sources": [
+      "https://plants.ces.ncsu.edu/plants/cycas-revoluta",
+      "https://blogs.ifas.ufl.edu/nassauco/?p=680"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "cycas = gymnosperme (cônes), pas un palmier",
+      "sources_recoupement": [
+       "https://www.techno-science.net/fr/definitions/cycas-du-japon",
+       "https://edis.ifas.ufl.edu/publication/FR316/pdf"
+      ]
+     }
+    },
+    {
+     "position": 10,
+     "place": "difficile",
+     "substitution": null,
+     "id": "770f05969a",
+     "theme": "Familles",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "famille",
+     "question": "Laquelle de ces plantes appartient à la famille des Lamiacées ?",
+     "texte": null,
+     "choix": [
+      "Westringia fruticosa",
+      "Rhododendron ponticum",
+      "Laurus nobilis",
+      "Bupleurum fruticosum"
+     ],
+     "bonne": 0,
+     "explication": "Romarin d'Australie fait partie des Lamiacées. Traits fréquents dans la famille : tige carrée et feuilles opposées croisées.",
+     "sources": [],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Westringia fruticosa (romarin d'Australie) = Lamiacées",
+      "sources_recoupement": [
+       "https://gd.eppo.int/taxon/WESRO",
+       "https://en.wikipedia.org/wiki/Westringia_fruticosa"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "date": "2026-10-24",
+   "questions": [
+    {
+     "position": 1,
+     "place": "facile",
+     "substitution": null,
+     "id": "86aaad2946",
+     "theme": "Saisons",
+     "niveau": "facile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Quel arbre couvre de pompons jaunes les collines du Midi en plein hiver ?",
+     "texte": null,
+     "choix": [
+      "Laburnum anagyroides",
+      "Koelreuteria paniculata",
+      "Spartium junceum",
+      "Acacia dealbata"
+     ],
+     "bonne": 3,
+     "explication": "Le mimosa argenté fleurit de janvier à mars, avec un pic en février sur la Côte d'Azur. Cytise, savonnier et spartier fleurissent de la fin du printemps à l'été.",
+     "sources": [
+      "https://www.techno-science.net/fr/definitions/acacia-dealbata",
+      "https://fr.wikipedia.org/wiki/Acacia_dealbata"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "mimosa"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "mimosa argenté (Acacia dealbata) : floraison janvier-mars, origine Australie, introduit sur la Côte d'Azur au XIXe, envahissant",
+      "sources_recoupement": [
+       "https://www.techno-science.net/fr/definitions/acacia-dealbata",
+       "https://areq.net/lang/fr/Acacia_dealbata.html"
+      ]
+     }
+    },
+    {
+     "position": 2,
+     "place": "facile",
+     "substitution": null,
+     "id": "46eb3b8168",
+     "theme": "Vocabulaire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Lequel de ces chênes garde un feuillage vert toute l'année ?",
+     "texte": null,
+     "choix": [
+      "Quercus robur",
+      "Quercus ilex",
+      "Quercus rubra",
+      "Quercus petraea"
+     ],
+     "bonne": 1,
+     "explication": "Le chêne vert est persistant : ses feuilles coriaces vivent plusieurs années, adaptation au climat méditerranéen.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Ch%C3%AAne_vert"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "chêne"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "chêne vert (Quercus ilex) : feuilles persistantes coriaces, renouvelées tous les 2-3 ans",
+      "sources_recoupement": [
+       "https://www.futura-sciences.com/planete/definitions/botanique-feuille-persistante-15188/",
+       "https://oneaction.ch/wp-content/uploads/2024/03/Reunis-sous-la-canopee-2024-Quercus-ilex.pdf"
+      ]
+     }
+    },
+    {
+     "position": 3,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "N24",
+     "theme": "Fruits et toxicité",
+     "niveau": "intermediaire",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_toxicite_fruit",
+     "question": "Pourquoi l'Anses déconseille-t-elle de croquer des amandes de noyaux d'abricot ?",
+     "texte": null,
+     "choix": [
+      "Elles contiennent de la nicotine",
+      "Elles contiennent de l'amygdaline, qui libère du cyanure à la digestion",
+      "Elles sont très riches en sucre",
+      "Elles sont trop dures pour les dents"
+     ],
+     "bonne": 1,
+     "explication": "Ces amandes amères contiennent de l'amygdaline : à la digestion, elle libère du cyanure. Le risque vient surtout de celles que l'on croque en grande quantité.",
+     "sources": [
+      "https://www.anses.fr/fr/content/amandes-dabricots-un-risque-dintoxication-au-cyanure",
+      "https://www.vidal.fr/actualites/22811-les-amandes-de-noyaux-d-abricots-ne-sont-pas-anti-cancer-et-peuvent-etre-toxiques.html"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "amandier/abricot"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "amandes de noyaux d'abricot : amygdaline transformée en cyanure à la digestion, risque d'intoxication (Anses, 154 cas en 5 ans)",
+      "sources_recoupement": [
+       "https://www.anses.fr/fr/content/amandes-dabricots-un-risque-dintoxication-au-cyanure",
+       "https://www.vidal.fr/actualites/22811-les-amandes-de-noyaux-d-abricots-ne-sont-pas-anti-cancer-et-peuvent-etre-toxiques.html"
+      ]
+     }
+    },
+    {
+     "position": 4,
+     "place": "facile",
+     "substitution": null,
+     "id": "E06",
+     "theme": "Usages et histoire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_usage_histoire",
+     "question": "D'où vient la fibre de coton ?",
+     "texte": null,
+     "choix": [
+      "Des poils qui entourent les graines du cotonnier",
+      "De l'écorce du cotonnier",
+      "De la tige d'un arbuste",
+      "Des pétales du cotonnier"
+     ],
+     "bonne": 0,
+     "explication": "Le coton est formé de poils fixés sur les graines du cotonnier ; ils sortent de la capsule mûre sous forme de touffe duveteuse.",
+     "sources": [
+      "https://www.larousse.fr/dictionnaires/francais/coton",
+      "https://www.marques-de-france.fr/definition/coton/"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "coton = poils séminaux des graines du cotonnier, qui sortent de la capsule mûre",
+      "sources_recoupement": [
+       "https://www.larousse.fr/dictionnaires/francais/coton",
+       "https://www.marques-de-france.fr/definition/coton/"
+      ]
+     }
+    },
+    {
+     "position": 5,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "29b6e315ea",
+     "theme": "Familles",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "famille",
+     "question": "Forsythia : à quelle famille appartient cette plante ?",
+     "texte": null,
+     "choix": [
+      "Oléacées",
+      "Cornacées",
+      "Malvacées",
+      "Rutacées"
+     ],
+     "bonne": 0,
+     "explication": "Forsythia fait partie des Oléacées. Traits fréquents dans la famille : feuilles opposées, fleur à 4 lobes et 2 étamines seulement.",
+     "sources": [],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Forsythia = Oléacées (famille de l'olivier, du frêne, du lilas, du jasmin)",
+      "sources_recoupement": [
+       "https://franco.wiki/fr/Oleaceae.html",
+       "https://www.techno-science.net/fr/definitions/oleaceae"
+      ]
+     }
+    },
+    {
+     "position": 6,
+     "place": "difficile",
+     "substitution": null,
+     "id": "191ce27869",
+     "theme": "Anecdotes",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "anecdote",
+     "question": "De quelle plante parle-t-on ?",
+     "texte": "En Afrique du Sud, son pays d'origine, on l'appelle « pig lily » (« varkblom », le lis à cochons) : les cochons sauvages et les porcs-épics déterrent son rhizome pour le manger.",
+     "choix": [
+      "Artemisia absinthium",
+      "Knautia macedonica",
+      "Zantedeschia aethiopica",
+      "Salvia pratensis"
+     ],
+     "bonne": 2,
+     "explication": "C'est : Arum d'Éthiopie. Spathe blanche, plante de bord de bassin ; toxique.",
+     "sources": [
+      "https://pza.sanbi.org/node/11125"
+     ],
+     "statut": "validee",
+     "origine": "générée",
+     "corrigee": true,
+     "sujets": [
+      "arum"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "Zantedeschia aethiopica : « pig lily » / « varkblom » en Afrique du Sud, rhizome mangé par les cochons sauvages et les porcs-épics (SANBI) ; « lis à cochon » est une traduction : à mettre entre guillemets",
+      "sources_recoupement": [
+       "https://pza.sanbi.org/node/11125",
+       "https://dsae.co.za/entry/piglily/e05631"
+      ]
+     }
+    },
+    {
+     "position": 7,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "N29",
+     "theme": "Idées reçues",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_idee_recue",
+     "question": "Le vrai jasmin (genre Jasminum) est de la même famille que…",
+     "texte": null,
+     "choix": [
+      "La pervenche",
+      "La pomme de terre",
+      "L'olivier",
+      "La menthe"
+     ],
+     "bonne": 2,
+     "explication": "Le vrai jasmin est une Oléacée, comme l'olivier, le frêne et le lilas. Le « jasmin étoilé » n'en est pas un : c'est une Apocynacée, comme la pervenche.",
+     "sources": [
+      "https://plants.ces.ncsu.edu/plants/jasminum-officinale/common-name/true-jasmine/",
+      "https://franco.wiki/fr/Oleaceae.html"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "frêne",
+      "jasmin"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Jasminum officinale = Oléacées (comme l'olivier, le frêne, le lilas) ; Trachelospermum jasminoides = Apocynacées (une source) ; Solanum jasminoides non recoupé : retiré",
+      "sources_recoupement": [
+       "https://plants.ces.ncsu.edu/plants/jasminum-officinale/common-name/true-jasmine/",
+       "https://franco.wiki/fr/Oleaceae.html"
+      ]
+     }
+    },
+    {
+     "position": 8,
+     "place": "facile",
+     "substitution": null,
+     "id": "3247581064",
+     "theme": "Vocabulaire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Laquelle de ces plantes pousse à partir d'un bulbe ?",
+     "texte": null,
+     "choix": [
+      "Iris germanica",
+      "Convallaria majalis",
+      "Narcissus pseudonarcissus",
+      "Paeonia lactiflora"
+     ],
+     "bonne": 2,
+     "explication": "La jonquille forme un bulbe, bourgeon souterrain entouré d'écailles charnues ; l'iris et le muguet ont un rhizome, tige souterraine.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Narcissus_pseudonarcissus"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "narcisse/jonquille : plante bulbeuse (confirmé) ; les rhizomes de l'iris et du muguet n'ont pas été recoupés ici (fait élémentaire) ; Narcissus pseudonarcissus est le narcisse jaune, la « vraie jonquille » étant N. jonquilla",
+      "sources_recoupement": [
+       "https://fr.vikidia.org/wiki/Narcisse_(fleur)",
+       "https://www.techno-science.net/glossaire-definition/Narcisse-jaune.html"
+      ]
+     }
+    },
+    {
+     "position": 9,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "15559d5b90",
+     "theme": "Idées reçues",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_idee_recue",
+     "question": "Le lierre qui grimpe le long d'un tronc d'arbre…",
+     "texte": null,
+     "choix": [
+      "Pompe la sève de l'arbre",
+      "Vit en symbiose avec ses racines",
+      "Se nourrit de son écorce",
+      "S'en sert seulement de support"
+     ],
+     "bonne": 3,
+     "explication": "Le lierre n'est pas un parasite : ses crampons servent à s'accrocher, sans rien absorber. Il puise eau et sels minéraux par ses racines dans le sol.",
+     "sources": [
+      "https://www.provincedeliege.be:443/sites/default/files/media/10952/Lierre%20grimpant%20%28Hedera%20helix%29.pdf",
+      "https://www.futura-sciences.com/planete/definitions/botanique-lierre-10291/"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "lierre"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "le lierre ne puise ni sève ni nutriments dans l'arbre : crampons = racines adventives de fixation, eau et minéraux par les racines du sol",
+      "sources_recoupement": [
+       "https://areq.net/lang/fr/Lierre_grimpant.html",
+       "https://www.futura-sciences.com/planete/definitions/botanique-lierre-10291/"
+      ]
+     }
+    },
+    {
+     "position": 10,
+     "place": "difficile",
+     "substitution": null,
+     "id": "81fc36853a",
+     "theme": "Écologie",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Laquelle de ces fleurs des prés humides est une plante hôte majeure du papillon Aurore ?",
+     "texte": null,
+     "choix": [
+      "Ranunculus repens",
+      "Cardamine pratensis",
+      "Caltha palustris",
+      "Lychnis flos-cuculi"
+     ],
+     "bonne": 1,
+     "explication": "L'Aurore pond sur des Brassicacées : la cardamine des prés, mais aussi l'alliaire, tout aussi prisée. Ses chenilles mangent surtout fleurs et siliques.",
+     "sources": [
+      "https://ressources.shna-ofab.fr/fichiers/bnhs13-cahiers-ld-p192-193-aurore_1455631211.pdf",
+      "https://www.picardie-nature.org/IMG/pdf/picnat2021_enquete_fiche04_aurore.pdf"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "corrigee": true,
+     "sujets": [],
+     "indice_epithete": "épithète « pratensis » traduisible dans l'énoncé",
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "Aurore : Brassicacées, alliaire citée en priorité, cardamine des prés fréquemment ; chenilles mangent fleurs et siliques : « plante hôte majeure » correct ; l'alliaire est au moins aussi importante",
+      "sources_recoupement": [
+       "https://www.techno-science.net/fr/definitions/aurore-papillon",
+       "https://www.european-lepidopteres.fr/Anthocharis-cardamines.html"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "date": "2026-10-25",
+   "questions": [
+    {
+     "position": 1,
+     "place": "facile",
+     "substitution": null,
+     "id": "E09",
+     "theme": "Usages et histoire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_usage_histoire",
+     "question": "Quel arbre fournit les pignons de pin ?",
+     "texte": null,
+     "choix": [
+      "Le pin sylvestre",
+      "Le pin parasol",
+      "Le pin noir",
+      "Le pin maritime"
+     ],
+     "bonne": 1,
+     "explication": "Les pignons sont les graines comestibles du pin parasol, que l'on libère en ouvrant ses grosses pommes de pin mûres.",
+     "sources": [
+      "https://www.techno-science.net/fr/definitions/pin-parasol",
+      "https://fr.vikidia.org/wiki/Pin_parasol"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "pin"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "pignons = graines comestibles du pin parasol (Pinus pinea), libérées par les cônes (pignes) mûrs",
+      "sources_recoupement": [
+       "https://www.techno-science.net/fr/definitions/pin-parasol",
+       "https://fr.vikidia.org/wiki/Pin_parasol"
+      ]
+     }
+    },
+    {
+     "position": 2,
+     "place": "facile",
+     "substitution": null,
+     "id": "d364e84a1f",
+     "theme": "Écologie",
+     "niveau": "facile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_origine",
+     "question": "Lequel de ces arbres est indigène en France ?",
+     "texte": null,
+     "choix": [
+      "Liriodendron tulipifera",
+      "Fagus sylvatica",
+      "Liquidambar styraciflua",
+      "Ginkgo biloba"
+     ],
+     "bonne": 1,
+     "explication": "Le hêtre est un grand arbre spontané des forêts françaises. Le tulipier et le copalme viennent d'Amérique du Nord, le ginkgo de Chine.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Hêtre_commun"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "ginkgo",
+      "hêtre"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "hêtre classé indigène en France métropolitaine (TAXREF) ; origine américaine du tulipier et du copalme, chinoise du ginkgo non recoupées ici (faits élémentaires)",
+      "sources_recoupement": [
+       "https://taxref.mnhn.fr/taxref-web/taxa/613817",
+       "https://inpn.mnhn.fr/espece/cd_nom/97947"
+      ]
+     }
+    },
+    {
+     "position": 3,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "317f55dbfe",
+     "theme": "Idées reçues",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_idee_recue",
+     "question": "Les « géraniums » rouges des balcons, gélifs, appartiennent au genre…",
+     "texte": null,
+     "choix": [
+      "Pelargonium",
+      "Geranium",
+      "Begonia",
+      "Impatiens"
+     ],
+     "bonne": 0,
+     "explication": "Ce sont des pélargoniums, sensibles au gel. Les vrais Geranium, comme le géranium sanguin, sont surtout des vivaces rustiques aux fleurs régulières.",
+     "sources": [
+      "https://franco.wiki/fr/Geranium.html",
+      "https://seedsandplants.co.za/gardening-tips/the-differences-between-pelargonium-and-geranium"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "les « géraniums » des balcons sont des Pelargonium ; fleurs régulières chez Geranium, zygomorphes chez Pelargonium ; pélargoniums frileux",
+      "sources_recoupement": [
+       "https://franco.wiki/fr/Geranium.html",
+       "https://laidbackgardener.blog/geranium-or-pelargonium-lets-stop-the-confusion/"
+      ]
+     }
+    },
+    {
+     "position": 4,
+     "place": "facile",
+     "substitution": null,
+     "id": "43f4df5447",
+     "theme": "Vocabulaire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Laquelle de ces plantes produit des samares ?",
+     "texte": null,
+     "choix": [
+      "Quercus robur",
+      "Castanea sativa",
+      "Corylus avellana",
+      "Acer pseudoplatanus"
+     ],
+     "bonne": 3,
+     "explication": "La samare est un fruit sec muni d'une aile. Chez l'érable sycomore, elles vont par deux et tournoient comme des hélices en tombant.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/%C3%89rable_sycomore"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "érable"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "érable sycomore : fruit = deux samares ailées",
+      "sources_recoupement": [
+       "https://fr.vikidia.org/wiki/%C3%89rable_sycomore",
+       "https://www.unifr.ch/jardin-botanique/fr/assets/public/files/publications/brochure_erables_jbf_francais_basse_resolution.pdf"
+      ]
+     }
+    },
+    {
+     "position": 5,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "ab9c412508",
+     "theme": "Familles",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "famille",
+     "question": "Tilleul à grandes feuilles : à quelle famille appartient cette plante ?",
+     "texte": null,
+     "choix": [
+      "Malvacées",
+      "Cornacées",
+      "Sapindacées",
+      "Ulmacées"
+     ],
+     "bonne": 0,
+     "explication": "Tilleul à grandes feuilles fait partie des Malvacées. Traits fréquents dans la famille : étamines soudées en colonne, feuilles alternes palmées ou en cœur.",
+     "sources": [],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [
+      "tilleul"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Tilia = Malvacées (APG III/IV), ancienne famille des Tiliacées rattachée aux Malvacées",
+      "sources_recoupement": [
+       "https://en.wikipedia.org/wiki/Tilioideae",
+       "https://plantaedb.com/taxa/phylum/angiosperms/order/malvales/family/malvaceae/genus/tilia"
+      ]
+     }
+    },
+    {
+     "position": 6,
+     "place": "difficile",
+     "substitution": null,
+     "id": "f3780e0991",
+     "theme": "Anecdotes",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "anecdote",
+     "question": "De quelle plante parle-t-on ?",
+     "texte": "Ses haies rouges ont fait de cet arbuste l'emblème du West Cork, en Irlande ; elles viennent surtout d'un cultivar stérile apparu en Écosse.",
+     "choix": [
+      "Hydrangea paniculata",
+      "Amelanchier ovalis",
+      "Fuchsia magellanica",
+      "Hamamelis mollis"
+     ],
+     "bonne": 2,
+     "explication": "C'est : Fuchsia de Magellan. Fleurs rouge pourpre pendantes, rustique et florifère de l'été aux gelées.",
+     "sources": [
+      "https://en.wikipedia.org/wiki/Fuchsia_magellanica"
+     ],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Fuchsia magellanica 'Riccartonii' : cultivar stérile apparu en Écosse, haies emblématiques de West Cork",
+      "sources_recoupement": [
+       "https://en.wikipedia.org/wiki/Fuchsia_magellanica",
+       "https://bsbi.org/in-your-area/local-botany/co-fermanagh/fermanagh-species-accounts/fuchsia-magellanica-lam"
+      ]
+     }
+    },
+    {
+     "position": 7,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "c75254c813",
+     "theme": "Saisons",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Laquelle de ces plantes fleurit dès la fin de l'hiver ?",
+     "texte": null,
+     "choix": [
+      "Corylus colurna",
+      "Tetradium daniellii",
+      "Tilia cordata",
+      "Rosa multiflora"
+     ],
+     "bonne": 0,
+     "explication": "Le noisetier de Byzance fleurit de février à mars, en chatons. Les trois autres fleurissent plus tard, de la fin du printemps à l'été.",
+     "sources": [
+      "https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2021.813902/pdf"
+     ],
+     "statut": "validee",
+     "origine": "générée",
+     "corrigee": true,
+     "sujets": [
+      "noisetier"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "Corylus colurna : floraison en chatons de février à mars ; énoncé « plein hiver » corrigé en « dès la fin de l'hiver », distracteurs « en été » corrigés en « plus tard »",
+      "sources_recoupement": [
+       "https://www.saint-cyr-sur-loire.com/content/download/16749/262650/version/2/file/FICHES_BOTANIQUES_Noisetier-de-Byzance.pdf"
+      ]
+     }
+    },
+    {
+     "position": 8,
+     "place": "facile",
+     "substitution": null,
+     "id": "4d3eeb72ef",
+     "theme": "Fruits et toxicité",
+     "niveau": "facile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Quel arbuste épineux de nos haies donne les prunelles, petits fruits bleu-noir ?",
+     "texte": null,
+     "choix": [
+      "Crataegus monogyna",
+      "Rosa canina",
+      "Prunus spinosa",
+      "Sambucus nigra"
+     ],
+     "bonne": 2,
+     "explication": "La prunelle est la petite drupe très âpre du prunellier. Dans les mêmes haies, l'aubépine donne des cenelles, l'églantier des cynorrhodons et le sureau des baies noires.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Prunellier"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "prunellier"
+     ],
+     "indice_epithete": "épithète « spinosa » traduisible dans l'énoncé",
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "prunelle = drupe bleu-noir du prunellier, âpre avant les gelées ; les autres fruits cités (cenelle, cynorrhodon) non recherchés ici, cynorrhodon confirmé par ailleurs",
+      "sources_recoupement": [
+       "https://fr.vikidia.org/wiki/Prunellier",
+       "https://www.lalanguefrancaise.com/dictionnaire/definition/prunelle"
+      ]
+     }
+    },
+    {
+     "position": 9,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "c6e58fef03",
+     "theme": "Saisons",
+     "niveau": "intermediaire",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Laquelle de ces plantes fleurit en plein hiver ?",
+     "texte": null,
+     "choix": [
+      "Vitex agnus-castus",
+      "Euonymus japonicus",
+      "Genista tinctoria",
+      "Hamamelis mollis"
+     ],
+     "bonne": 3,
+     "explication": "Le hamamélis de Chine fleurit de janvier à mars (parfois dès décembre). Les trois autres fleurissent plus tard, de la fin du printemps à l'été.",
+     "sources": [
+      "https://www.treesandshrubsonline.org/articles/hamamelis/hamamelis-mollis/"
+     ],
+     "statut": "validee",
+     "origine": "générée",
+     "corrigee": true,
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "Hamamelis mollis : floraison surtout janvier-février (parfois décembre) ; énoncé et explication ajustés comme ci-dessus",
+      "sources_recoupement": [
+       "https://www.ebben.nl/fr/treeebb/hamollis-hamamelis-mollis/pdf"
+      ]
+     }
+    },
+    {
+     "position": 10,
+     "place": "difficile",
+     "substitution": null,
+     "id": "9e2834e6d3",
+     "theme": "Écologie",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_ecologie",
+     "question": "Chez la sauge des prés, comment le pollen se dépose-t-il sur le bourdon ?",
+     "texte": null,
+     "choix": [
+      "Par une explosion de la fleur",
+      "Par un levier formé par les étamines",
+      "Par la vibration des ailes du bourdon",
+      "Par une pluie de pollen au vent"
+     ],
+     "bonne": 1,
+     "explication": "Quand le bourdon pousse sa tête vers le nectar, il appuie sur une plaque qui fait basculer les étamines : elles s'abaissent et frottent leur pollen sur son corps.",
+     "sources": [
+      "https://pubmed.ncbi.nlm.nih.gov/17522077",
+      "https://doaj.org/article/d68d39f84110466695cb11fbf1cbcdb2"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "corrigee": true,
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "mécanisme à levier des étamines de Salvia pratensis confirmé (Annals of Botany) ; les sources décrivent un dépôt sur le corps/l'abdomen, pas précisément « le dos » : « sur le dos » adouci en « sur le corps »",
+      "sources_recoupement": [
+       "https://pmc.ncbi.nlm.nih.gov/articles/PMC2735310/",
+       "https://openscience.ub.uni-mainz.de/handle/20.500.12030/2224"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "date": "2026-10-26",
+   "questions": [
+    {
+     "position": 1,
+     "place": "facile",
+     "substitution": null,
+     "id": "5deb6c01e4",
+     "theme": "Familles",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "famille",
+     "question": "Échinacée pourpre : à quelle famille appartient cette plante ?",
+     "texte": null,
+     "choix": [
+      "Astéracées (composées)",
+      "Renonculacées",
+      "Papavéracées",
+      "Ulmacées"
+     ],
+     "bonne": 0,
+     "explication": "Échinacée pourpre fait partie des Astéracées. Traits fréquents dans la famille : la « fleur » est un capitule de petits fleurons entourés de bractées.",
+     "sources": [],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Echinacea purpurea = Astéracées",
+      "sources_recoupement": [
+       "https://en.wikipedia.org/wiki/Echinacea_purpurea"
+      ]
+     }
+    },
+    {
+     "position": 2,
+     "place": "facile",
+     "substitution": null,
+     "id": "41510a4f99",
+     "theme": "Idées reçues",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_idee_recue",
+     "question": "Pourquoi le cyprès chauve (Taxodium) est-il dit « chauve » ?",
+     "texte": null,
+     "choix": [
+      "Son tronc perd son écorce",
+      "Sa cime meurt avec l'âge",
+      "Il pousse sur sol nu",
+      "Il perd ses aiguilles en hiver"
+     ],
+     "bonne": 3,
+     "explication": "Contrairement à presque tous les conifères, le cyprès chauve est caduc : ses aiguilles roussissent à l'automne puis tombent, laissant l'arbre nu.",
+     "sources": [
+      "https://fr.vikidia.org/wiki/Cypr%C3%A8s_chauve",
+      "https://www.futura-sciences.com/planete/definitions/botanique-cypres-chauve-8503/"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "cyprès"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "cyprès chauve : conifère caduc, perd ses aiguilles à l'automne (le seul Cupressacée caduc)",
+      "sources_recoupement": [
+       "https://fr.vikidia.org/wiki/Cypr%C3%A8s_chauve",
+       "https://www.futura-sciences.com/planete/definitions/botanique-cypres-chauve-8503/"
+      ]
+     }
+    },
+    {
+     "position": 3,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "79920157d8",
+     "theme": "Fruits et toxicité",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Lequel de ces cornouillers donne les cornouilles, drupes rouges acidulées ?",
+     "texte": null,
+     "choix": [
+      "Cornus sanguinea",
+      "Cornus alba",
+      "Cornus sericea",
+      "Cornus mas"
+     ],
+     "bonne": 3,
+     "explication": "Malgré son nom, le cornouiller mâle porte bien des fruits : les cornouilles, rouges, utilisées en confiture. Le cornouiller sanguin a des fruits noirs non comestibles.",
+     "sources": [
+      "https://botanique.vd.ch/fileadmin/groups/11/images/Animations/Plante_du_mois/Plante_du_mois_Cornus_-_mai.pdf",
+      "https://www.techno-science.net/fr/definitions/cornouiller-male"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "cornouiller"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "cornouilles rouges acidulées en confiture ; baies noires du sanguin non comestibles (sources concordantes)",
+      "sources_recoupement": [
+       "https://www.techno-science.net/fr/definitions/cornouiller-male",
+       "https://fr.vikidia.org/wiki/Cornouiller_m%C3%A2le"
+      ]
+     }
+    },
+    {
+     "position": 4,
+     "place": "facile",
+     "substitution": null,
+     "id": "da9fe18921",
+     "theme": "Écologie",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_ecologie",
+     "question": "Sur quelle plante la femelle du Paon-du-jour pond-elle surtout ses œufs ?",
+     "texte": null,
+     "choix": [
+      "Ortie dioïque",
+      "Lavande vraie",
+      "Arbre aux papillons",
+      "Trèfle blanc"
+     ],
+     "bonne": 0,
+     "explication": "Les chenilles noires et épineuses du Paon-du-jour vivent en groupe sur la grande ortie. Laisser un coin d'orties au jardin, c'est offrir une nurserie aux papillons.",
+     "sources": [
+      "https://www.techno-science.net/fr/definitions/paon-du-jour",
+      "https://occitanie.lpo.fr/wp-content/uploads/2026/07/plantes-hotes-et-plantes-nourricieres-chenilles-et-papillons.pdf"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "ortie"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "chenilles du Paon-du-jour sur la grande ortie (Urtica dioica)",
+      "sources_recoupement": [
+       "https://www.techno-science.net/fr/definitions/grande-ortie",
+       "https://www.consoglobe.com/?p=380796"
+      ]
+     }
+    },
+    {
+     "position": 5,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "N11",
+     "theme": "Usages et histoire",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_usage_histoire",
+     "question": "La gousse de vanille est le fruit…",
+     "texte": null,
+     "choix": [
+      "D'un haricot tropical",
+      "D'un palmier",
+      "D'une orchidée grimpante",
+      "D'un arbre proche du cacaoyer"
+     ],
+     "bonne": 2,
+     "explication": "La vanille vient d'une orchidée lianescente (Vanilla planifolia). Hors de son pays d'origine, ses fleurs sont fécondées à la main, une à une.",
+     "sources": [
+      "https://www.techno-science.net/fr/definitions/vanille",
+      "https://planet-vie.ens.fr/node/1399/download/pdf"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "vanille"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "vanille = fruit (gousse) d'une orchidée lianescente (Vanilla planifolia, Orchidacées) ; fécondation manuelle hors de l'aire d'origine",
+      "sources_recoupement": [
+       "https://www.techno-science.net/fr/definitions/vanille",
+       "https://planet-vie.ens.fr/node/1399/download/pdf"
+      ]
+     }
+    },
+    {
+     "position": 6,
+     "place": "difficile",
+     "substitution": null,
+     "id": "427531b8cd",
+     "theme": "Anecdotes",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "anecdote",
+     "question": "Laquelle de ces plantes cache cette histoire ?",
+     "texte": "À Taïwan, les graines d'une de ses variétés, frottées dans l'eau, libèrent une substance qui la gélifie : c'est la gelée d'aiyu, dessert rafraîchissant.",
+     "choix": [
+      "Clematis flammula",
+      "Ficus pumila",
+      "Schizophragma hydrangeoides",
+      "Lonicera caprifolium"
+     ],
+     "bonne": 1,
+     "explication": "C'est : Figuier rampant. Forme des feuilles minuscules sur les murs et de grandes feuilles quand il fructifie.",
+     "sources": [
+      "https://en.wikipedia.org/wiki/Ficus_pumila_var._awkeotsang"
+     ],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [
+      "figue"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "gelée d'aiyu : graines de Ficus pumila var. awkeotsang frottées dans l'eau, pectine gélifiante à froid, Taïwan",
+      "sources_recoupement": [
+       "https://en.wikipedia.org/wiki/Ficus_pumila_var._awkeotsang",
+       "https://www.eattheweeds.com/tag/jello/"
+      ]
+     }
+    },
+    {
+     "position": 7,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "b364643f76",
+     "theme": "Fruits et toxicité",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_toxicite_fruit",
+     "question": "L'oranger des Osages (Maclura pomifera) est de la même famille que…",
+     "texte": null,
+     "choix": [
+      "Les agrumes",
+      "Les pommiers",
+      "Les mûriers",
+      "Les courges"
+     ],
+     "bonne": 2,
+     "explication": "Sa grosse boule verte n'est pas une orange : c'est une infrutescence de Moracée, née de nombreuses fleurs comme la mûre du mûrier. Elle est jugée non comestible.",
+     "sources": [
+      "https://www.techno-science.net/fr/definitions/oranger-des-osages",
+      "https://gobotany.nativeplanttrust.org/species/maclura/pomifera/"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Moracées, infrutescence, fruit non comestible ; nuance : graines discutées selon les sources",
+      "sources_recoupement": [
+       "https://www.techno-science.net/fr/definitions/oranger-des-osages",
+       "https://gobotany.nativeplanttrust.org/species/Maclura/pomifera/"
+      ]
+     }
+    },
+    {
+     "position": 8,
+     "place": "facile",
+     "substitution": null,
+     "id": "84476223b0",
+     "theme": "Vocabulaire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_vocabulaire",
+     "question": "Pourquoi plante-t-on souvent un kiwi « mâle » près des kiwis femelles ?",
+     "texte": null,
+     "choix": [
+      "Pour éloigner les insectes",
+      "Pour polliniser les fleurs",
+      "Pour servir de support",
+      "Pour protéger du gel"
+     ],
+     "bonne": 1,
+     "explication": "Le kiwi (Actinidia deliciosa) est dioïque : sans pollen d'un pied mâle, les pieds femelles ne donnent pas de fruits (sauf variétés autofertiles).",
+     "sources": [
+      "https://www.infoflora.ch/assets/content/documents/neophytes/inva_acti_chi_f.pdf"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "kiwi dioïque : pied mâle nécessaire (sauf variétés autofertiles, moins productives)",
+      "sources_recoupement": [
+       "https://www.jardiner-malin.fr/fiche/kiwi.html",
+       "https://www.hornbach.ch/projets/planter-et-entretenir-des-kiwis/"
+      ]
+     }
+    },
+    {
+     "position": 9,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "776dd0b699",
+     "theme": "Idées reçues",
+     "niveau": "intermediaire",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Lequel de ces arbres appartient à la famille des magnolias ?",
+     "texte": null,
+     "choix": [
+      "Catalpa bignonioides",
+      "Paulownia tomentosa",
+      "Aesculus × carnea",
+      "Liriodendron tulipifera"
+     ],
+     "bonne": 3,
+     "explication": "Le tulipier de Virginie, aux fleurs en forme de tulipe, est une Magnoliacée. Son nom vient seulement de la forme de ses fleurs.",
+     "sources": [
+      "https://www.futura-sciences.com/planete/definitions/botanique-tulipier-virginie-8670/",
+      "https://www.saint-cyr-sur-loire.com/content/download/16757/262714/version/2/file/FICHES_BOTANIQUES_Tulipier-de-Virginie.pdf"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "tulipe"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "tulipier de Virginie = Magnoliacées, nom dû à la forme de la feuille et de la fleur",
+      "sources_recoupement": [
+       "https://www.futura-sciences.com/planete/definitions/botanique-tulipier-virginie-8670/",
+       "https://www.techno-science.net/fr/definitions/tulipier-de-virginie"
+      ]
+     }
+    },
+    {
+     "position": 10,
+     "place": "difficile",
+     "substitution": null,
+     "id": "a4818d9dbb",
+     "theme": "Saisons",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Les feuilles tombées de quel arbre sentent le caramel à l'automne ?",
+     "texte": null,
+     "choix": [
+      "Parrotia persica",
+      "Cercidiphyllum japonicum",
+      "Liquidambar styraciflua",
+      "Nyssa sylvatica"
+     ],
+     "bonne": 1,
+     "explication": "Les feuilles d'automne de l'arbre à caramel (katsura) dégagent une odeur de sucre brûlé ou de caramel, surtout par temps humide ; on l'attribue au maltol.",
+     "sources": [
+      "https://en.wikipedia.org/wiki/Cercidiphyllum_japonicum",
+      "https://www.rhs.org.uk/plants/343130/cercidiphyllum-japonicum-glowball-jww4-pbr/details"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "corrigee": true,
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "odeur de caramel à la chute des feuilles confirmée ; l'attribution au maltol ne repose que sur un site commercial : formulation adoucie (« attribuée au maltol »)",
+      "sources_recoupement": [
+       "https://espacepourlavie.ca/carnet-horticole/katsura"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "date": "2026-10-27",
+   "questions": [
+    {
+     "position": 1,
+     "place": "facile",
+     "substitution": null,
+     "id": "676d78cbbe",
+     "theme": "Familles",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "famille",
+     "question": "Églantier : à quelle famille appartient cette plante ?",
+     "texte": null,
+     "choix": [
+      "Arécacées (palmiers)",
+      "Rosacées",
+      "Cypéracées",
+      "Cupressacées"
+     ],
+     "bonne": 1,
+     "explication": "Églantier fait partie des Rosacées. Traits fréquents dans la famille : 5 pétales libres autour de nombreuses étamines, feuilles alternes à stipules.",
+     "sources": [],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "églantier = Rosacées (l'Académie cite l'aubépine et l'églantier)",
+      "sources_recoupement": [
+       "https://dictionnaire-academie.fr/article/A9R2949"
+      ]
+     }
+    },
+    {
+     "position": 2,
+     "place": "facile",
+     "substitution": null,
+     "id": "N25",
+     "theme": "Usages et histoire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_usage_histoire",
+     "question": "Quel arbre fournit le latex du caoutchouc naturel ?",
+     "texte": null,
+     "choix": [
+      "Le teck",
+      "L'eucalyptus",
+      "Le cacaoyer",
+      "L'hévéa"
+     ],
+     "bonne": 3,
+     "explication": "L'hévéa (Hevea brasiliensis), originaire d'Amazonie, donne un latex blanc récolté par saignée de l'écorce : plus de 90 % du caoutchouc naturel.",
+     "sources": [
+      "https://www.techno-science.net/fr/definitions/hevea",
+      "https://www.futura-sciences.com/planete/definitions/botanique-hevea-12053/"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "hévéa (Hevea brasiliensis, Euphorbiacées) : latex récolté par saignée de l'écorce, plus de 90 % du caoutchouc naturel",
+      "sources_recoupement": [
+       "https://www.techno-science.net/fr/definitions/hevea",
+       "https://www.futura-sciences.com/planete/definitions/botanique-hevea-12053/"
+      ]
+     }
+    },
+    {
+     "position": 3,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "75bc628b1e",
+     "theme": "Fruits et toxicité",
+     "niveau": "intermediaire",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Lequel porte des baies orange serrées sur des rameaux épineux, aux feuilles étroites argentées ?",
+     "texte": null,
+     "choix": [
+      "Pyracantha coccinea",
+      "Sorbus aucuparia",
+      "Berberis vulgaris",
+      "Hippophae rhamnoides"
+     ],
+     "bonne": 3,
+     "explication": "L'argousier, arbuste dioïque des dunes et des torrents de montagne, porte des baies acidulées serrées sur les rameaux. Le buisson ardent a des feuilles vertes.",
+     "sources": [
+      "https://uses.plantnet-project.org/fr/Hippophae_rhamnoides",
+      "https://ecophytopic.fr/sites/default/files/2024-11/Fiche_technique_Argousier.pdf"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "argousier"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "baies orange, rameaux épineux, feuilles étroites argentées, dioïque",
+      "sources_recoupement": [
+       "https://uses.plantnet-project.org/fr/Hippophae_rhamnoides",
+       "https://ecophytopic.fr/sites/default/files/2024-11/Fiche_technique_Argousier.pdf"
+      ]
+     }
+    },
+    {
+     "position": 4,
+     "place": "facile",
+     "substitution": null,
+     "id": "68935fdac5",
+     "theme": "Saisons",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_saison",
+     "question": "Une plante bisannuelle est une plante qui…",
+     "texte": null,
+     "choix": [
+      "Fleurit une année sur deux",
+      "Fleurit deux fois par an",
+      "Fleurit la 2e année puis meurt",
+      "Vit deux ans sans jamais fleurir"
+     ],
+     "bonne": 2,
+     "explication": "La bisannuelle accomplit son cycle en deux ans : rosette de feuilles la 1re année, floraison et graines la 2e, puis elle meurt. Ex. : molène bouillon-blanc.",
+     "sources": [
+      "https://www.ontario.ca/fr/document/guide-dindentification-des-mauvaises-herbes-agricoles-de-lontario/grande-molene",
+      "https://fr.wikipedia.org/wiki/Plante_bisannuelle"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "bisannuelle : 1re année végétative, 2e année floraison et mort (OQLF) ; molène = exemple",
+      "sources_recoupement": [
+       "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/26544618/plante-bisannuelle",
+       "https://www.techno-science.net/fr/definitions/molene-thapsus"
+      ]
+     }
+    },
+    {
+     "position": 5,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "cbd72d2ba1",
+     "theme": "Saisons",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_saison",
+     "question": "Malgré son nom, la Lunaire annuelle (monnaie-du-pape) se comporte le plus souvent comme une plante…",
+     "texte": null,
+     "choix": [
+      "Bisannuelle",
+      "Vivace à rhizome",
+      "Arbustive",
+      "Bulbeuse"
+     ],
+     "bonne": 0,
+     "explication": "Semée au printemps, la lunaire forme des feuilles la 1re année et fleurit la 2e, puis meurt après ses « écus » argentés. Son synonyme Lunaria biennis le rappelle.",
+     "sources": [
+      "https://en.wikipedia.org/wiki/Lunaria_annua",
+      "https://www.techno-science.net/fr/definitions/lunaire"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Lunaria annua souvent bisannuelle, synonyme Lunaria biennis",
+      "sources_recoupement": [
+       "https://www.rhs.org.uk/plants/98034/lunaria-annua/details",
+       "https://franco.wiki/fr/Lunaire.html"
+      ]
+     }
+    },
+    {
+     "position": 6,
+     "place": "difficile",
+     "substitution": null,
+     "id": "ae82e7682f",
+     "theme": "Écologie",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Laquelle de ces plantes épineuses pousse naturellement sur le sable des dunes ?",
+     "texte": null,
+     "choix": [
+      "Eryngium maritimum",
+      "Eryngium planum",
+      "Eryngium bourgatii",
+      "Echinops ritro"
+     ],
+     "bonne": 0,
+     "explication": "Le panicaut maritime, bleuté et coriace, résiste au sel et au vent des dunes de sable.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Panicaut_maritime"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "corrigee": true,
+     "sujets": [],
+     "indice_epithete": "épithète « maritimum » traduisible dans l'énoncé",
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "panicaut maritime : plante des dunes de sable (BSBI) ; l'origine pyrénéenne du panicaut de Bourgat et est-européenne du panicaut plane n'ont pas été recoupées : retirées de l'explication",
+      "sources_recoupement": [
+       "https://bsbi.org/taxa/2cd4p9h.f8s/eryngium-maritimum",
+       "https://www.rhs.org.uk/plants/6787/wd/details"
+      ]
+     }
+    },
+    {
+     "position": 7,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "05d8c9f88b",
+     "theme": "Vocabulaire",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_vocabulaire",
+     "question": "Un houx ne porte jamais de baies rouges, alors qu'un autre houx voisin en est couvert chaque hiver. Quelle en est l'explication la plus probable ?",
+     "texte": null,
+     "choix": [
+      "C'est un pied mâle",
+      "Il manque d'engrais",
+      "Il est trop à l'ombre",
+      "Il a été taillé trop court"
+     ],
+     "bonne": 0,
+     "explication": "Le houx est le plus souvent dioïque : seuls les pieds femelles portent des fruits, et seulement si un pied mâle pousse à proximité.",
+     "sources": [
+      "https://botanique.vd.ch/fileadmin/groups/11/images/Animations/Plante_du_mois/Plante_du_mois_houx.pdf"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "houx"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "houx le plus souvent dioïque : seuls les pieds femelles portent les fruits, avec un pied mâle à proximité",
+      "sources_recoupement": [
+       "https://botanique.vd.ch/fileadmin/groups/11/images/Animations/Plante_du_mois/Plante_du_mois_houx.pdf",
+       "https://www.humanite-biodiversite.fr/articles/167924-le-houx-commun-ilex-aquifolium"
+      ]
+     }
+    },
+    {
+     "position": 8,
+     "place": "facile",
+     "substitution": null,
+     "id": "955dcd0d69",
+     "theme": "Idées reçues",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_idee_recue",
+     "question": "À quelle famille botanique appartiennent les bambous ?",
+     "texte": null,
+     "choix": [
+      "Les Arécacées (palmiers)",
+      "Les Fabacées (légumineuses)",
+      "Les Poacées (graminées)",
+      "Les Berbéridacées"
+     ],
+     "bonne": 2,
+     "explication": "Les bambous sont des graminées géantes, de la même famille que le blé ou le gazon : les Poacées. Leurs tiges creuses à nœuds sont des chaumes.",
+     "sources": [
+      "https://animals.sandiegozoo.org/node/470"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "bambou"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "bambou = Poacées (graminées), chaume creux à nœuds",
+      "sources_recoupement": [
+       "https://www.techno-science.net/fr/definitions/bambou",
+       "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8407157/bambou"
+      ]
+     }
+    },
+    {
+     "position": 9,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "8c94b5b21e",
+     "theme": "Vocabulaire",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Laquelle de ces plantes produit de vraies gousses ?",
+     "texte": null,
+     "choix": [
+      "Catalpa bignonioides",
+      "Cercis siliquastrum",
+      "Paulownia tomentosa",
+      "Koelreuteria paniculata"
+     ],
+     "bonne": 1,
+     "explication": "L'arbre de Judée, une Fabacée, donne des gousses. Les longs « haricots » du catalpa sont en réalité des capsules qui s'ouvrent en deux valves.",
+     "sources": [
+      "https://en.wikipedia.org/wiki/Catalpa_bignonioides",
+      "https://www.futura-sciences.com/planete/definitions/botanique-catalpa-8937/"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "catalpa : fruit = longue capsule (Bignoniacées), pas une gousse ; gousses de l'arbre de Judée (Fabacée) non recherchées ici mais confirmées par la famille",
+      "sources_recoupement": [
+       "https://plants.ces.ncsu.edu/plants/catalpa-bignonioides/common-name/cigar-tree/",
+       "https://en.wikipedia.org/wiki/Catalpa_bignonioides"
+      ]
+     }
+    },
+    {
+     "position": 10,
+     "place": "difficile",
+     "substitution": null,
+     "id": "e36089f348",
+     "theme": "Usages et histoire",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "De quel conifère européen extrait-on le précurseur de l'anticancéreux docétaxel ?",
+     "texte": null,
+     "choix": [
+      "Abies alba",
+      "Juniperus communis",
+      "Thuja occidentalis",
+      "Taxus baccata"
+     ],
+     "bonne": 3,
+     "explication": "La 10-désacétylbaccatine III, extraite des aiguilles de l'if commun, sert de point de départ à l'hémisynthèse du docétaxel. L'if est très toxique si ingéré.",
+     "sources": [
+      "https://www.outsourcing-pharma.com/Article/2006/09/19/Bioxel-gears-up-for-supply-of-docetaxel-to-generic-drugmakers",
+      "https://fr.wikipedia.org/wiki/Doc%C3%A9taxel"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "if"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "10-désacétylbaccatine III extraite des aiguilles de Taxus baccata, précurseur semi-synthétique du docétaxel (équipe de Pierre Potier)",
+      "sources_recoupement": [
+       "https://indena.com/?p=1349",
+       "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6124482"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "date": "2026-10-28",
+   "questions": [
+    {
+     "position": 1,
+     "place": "facile",
+     "substitution": null,
+     "id": "ed9b6cfdb7",
+     "theme": "Familles",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "famille",
+     "question": "Chêne pédonculé : à quelle famille appartient cette plante ?",
+     "texte": null,
+     "choix": [
+      "Fagacées",
+      "Renonculacées",
+      "Sapindacées",
+      "Astéracées (composées)"
+     ],
+     "bonne": 0,
+     "explication": "Chêne pédonculé fait partie des Fagacées. Traits fréquents dans la famille : chatons mâles et fruit logé dans une cupule.",
+     "sources": [],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [
+      "chêne"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "chêne = Fagacées (comme le hêtre et le châtaignier)",
+      "sources_recoupement": [
+       "https://www.futura-sciences.com/planete/actualites/botanique-difference-marron-chataigne-92075/",
+       "https://www.techno-science.net/fr/definitions/chene"
+      ]
+     }
+    },
+    {
+     "position": 2,
+     "place": "facile",
+     "substitution": null,
+     "id": "N28",
+     "theme": "Usages et histoire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_usage_histoire",
+     "question": "Quelle plante rend de nombreux chats euphoriques grâce à la népétalactone ?",
+     "texte": null,
+     "choix": [
+      "La lavande",
+      "La cataire (herbe aux chats)",
+      "Le romarin",
+      "Le basilic"
+     ],
+     "bonne": 1,
+     "explication": "La népétalactone de la cataire excite ou apaise la plupart des chats (environ la moitié y sont sensibles). Les chiens et les rongeurs n'y réagissent pas.",
+     "sources": [
+      "https://espacepourlavie.ca/herbe-chat-utilisations-et-reactions-des-animaux",
+      "https://premierepeau.com/fr/pages/glossary-terms/catnip"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "cataire (Nepeta cataria) : népétalactone, effet excitant ou euphorisant chez la plupart des chats (environ la moitié sont sensibles)",
+      "sources_recoupement": [
+       "https://espacepourlavie.ca/herbe-chat-utilisations-et-reactions-des-animaux",
+       "https://premierepeau.com/fr/pages/glossary-terms/catnip"
+      ]
+     }
+    },
+    {
+     "position": 3,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "9dd5177900",
+     "theme": "Saisons",
+     "niveau": "intermediaire",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Laquelle de ces plantes fleurit dès la fin de l'hiver ?",
+     "texte": null,
+     "choix": [
+      "Achillea ptarmica",
+      "Astilbe × arendsii",
+      "Eranthis hyemalis",
+      "Nuphar lutea"
+     ],
+     "bonne": 2,
+     "explication": "L'éranthe d'hiver fleurit de janvier à mars, parfois dans la neige. Les trois autres fleurissent plus tard, en été.",
+     "sources": [
+      "https://rebus.us.edu.pl/bitstream/20.500.12128/15742/4/Hejnowicz_Temperature_dependent_changes.pdf"
+     ],
+     "statut": "validee",
+     "origine": "générée",
+     "corrigee": true,
+     "sujets": [],
+     "indice_epithete": "épithète « hyemalis » traduisible dans l'énoncé",
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "Eranthis hyemalis : floraison janvier-mars (sources) ; énoncé et explication ajustés comme ci-dessus",
+      "sources_recoupement": [
+       "https://www.jardiner-malin.fr/fiche/eranthis-hyemalis-aconith-hiver-helleborine.html",
+       "https://www.birminghambotanicalgardens.org.uk/?p=282"
+      ]
+     }
+    },
+    {
+     "position": 4,
+     "place": "facile",
+     "substitution": null,
+     "id": "a8a05f72c7",
+     "theme": "Vocabulaire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Laquelle de ces plantes a des feuilles composées pennées ?",
+     "texte": null,
+     "choix": [
+      "Fagus sylvatica",
+      "Tilia cordata",
+      "Fraxinus excelsior",
+      "Quercus robur"
+     ],
+     "bonne": 2,
+     "explication": "Le frêne porte de grandes feuilles composées de 7 à 15 folioles disposées de part et d'autre d'un axe, comme les barbes d'une plume.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Fraxinus_excelsior"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "frêne"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "frêne commun : feuilles composées de folioles opposées sur un axe central",
+      "sources_recoupement": [
+       "https://granville.circonscription.ac-normandie.fr/IMG/pdf/CLE_DE_DETERMINATION_DES_PRINCIPAUX_FEUILLUS.pdf"
+      ]
+     }
+    },
+    {
+     "position": 5,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "N04",
+     "theme": "Fruits et toxicité",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_toxicite_fruit",
+     "question": "Botaniquement, une tomate est…",
+     "texte": null,
+     "choix": [
+      "Un légume-feuille",
+      "Une baie",
+      "Une drupe",
+      "Une gousse"
+     ],
+     "bonne": 1,
+     "explication": "La tomate est une baie charnue ; « légume » est une catégorie de cuisine. C'est une Solanacée, comme la pomme de terre et l'aubergine.",
+     "sources": [
+      "https://www.alimentarium.org/fr/node/1223",
+      "https://www.jardiner-malin.fr/fiche/solanacees-famille.html"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "pomme de terre",
+      "tomate"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "tomate : baie charnue (Solanacées), « légume » est une catégorie culinaire",
+      "sources_recoupement": [
+       "https://www.alimentarium.org/fr/node/1223",
+       "https://www.jardiner-malin.fr/fiche/solanacees-famille.html"
+      ]
+     }
+    },
+    {
+     "position": 6,
+     "place": "difficile",
+     "substitution": null,
+     "id": "b5882d8a6c",
+     "theme": "Anecdotes",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "anecdote",
+     "question": "De quelle plante parle-t-on ?",
+     "texte": "Le botaniste écossais Robert Fortune l'a rapporté de Chine vers 1844 pour la Société d'horticulture de Londres, acheté dans une pépinière de Shanghai.",
+     "choix": [
+      "Jasminum nudiflorum",
+      "Ficus pumila",
+      "Fallopia baldschuanica",
+      "Dioscorea communis"
+     ],
+     "bonne": 0,
+     "explication": "C'est : Jasmin d'hiver. Fleurs jaunes sans parfum sur tiges vertes, en pleine saison froide.",
+     "sources": [
+      "https://beanstreesandshrubs.org/browse/jasminum/jasminum-nudiflorum-lindl/"
+     ],
+     "statut": "validee",
+     "origine": "générée",
+     "corrigee": true,
+     "sujets": [
+      "jasmin"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Fortune, collecteur de la Royal Horticultural Society en Chine (1843-46), a envoyé le jasmin d'hiver depuis un jardin/pépinière de Shanghai ; 1844 selon la plupart des sources",
+      "sources_recoupement": [
+       "https://congletonbhpg.co.uk/our-plants/winter-jasmine/",
+       "https://hortuscamden.com/plants/view/jasminum-nudiflorum-lindl"
+      ]
+     }
+    },
+    {
+     "position": 7,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "7be19a862c",
+     "theme": "Idées reçues",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_idee_recue",
+     "question": "Pour qu'un hortensia à fleurs roses devienne bleu, il faut surtout un sol…",
+     "texte": null,
+     "choix": [
+      "Calcaire et bien drainé",
+      "Très riche en azote",
+      "Enrichi de clous rouillés (fer)",
+      "Acide, avec de l'aluminium disponible"
+     ],
+     "bonne": 3,
+     "explication": "C'est l'aluminium, absorbé seulement en sol acide, qui bleuit les fleurs d'Hydrangea macrophylla. En sol calcaire, elles restent roses.",
+     "sources": [
+      "https://www.rhs.org.uk/plants/hydrangea/shrubby",
+      "https://rhs.org.uk/plants/hydrangea/shrubby/by-colour"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "hortensia"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "fleurs bleues en sol acide (aluminium disponible), roses en sol alcalin (RHS)",
+      "sources_recoupement": [
+       "https://www.rhs.org.uk/plants/hydrangea/shrubby",
+       "https://plantura.garden/uk/trees-shrubs/hydrangeas/blue-hydrangeas"
+      ]
+     }
+    },
+    {
+     "position": 8,
+     "place": "facile",
+     "substitution": null,
+     "id": "73c24fd1a4",
+     "theme": "Écologie",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_ecologie",
+     "question": "En quelle saison fleurit le lierre grimpant, ressource précieuse pour les insectes ?",
+     "texte": null,
+     "choix": [
+      "En automne",
+      "Au printemps",
+      "Au début de l'été",
+      "En plein hiver"
+     ],
+     "bonne": 0,
+     "explication": "Le lierre fleurit de septembre à novembre, quand les fleurs se font rares : abeilles, syrphes et papillons viennent y faire le plein de nectar avant l'hiver.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Lierre_grimpant"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "abeille",
+      "lierre"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "lierre : floraison septembre-octobre jusqu'aux premières gelées, ressource tardive pour les insectes",
+      "sources_recoupement": [
+       "https://www.provincedeliege.be:443/sites/default/files/media/10952/Lierre%20grimpant%20%28Hedera%20helix%29.pdf",
+       "https://occitanie.lpo.fr/wp-content/uploads/2020/04/ficherefugeslpo_lierre_br.pdf"
+      ]
+     }
+    },
+    {
+     "position": 9,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "3d8aaef9ea",
+     "theme": "Idées reçues",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Lequel est le vrai laurier, celui dont on met les feuilles dans la sauce ?",
+     "texte": null,
+     "choix": [
+      "Prunus laurocerasus",
+      "Viburnum tinus",
+      "Laurus nobilis",
+      "Prunus lusitanica"
+     ],
+     "bonne": 2,
+     "explication": "Seul Laurus nobilis est un vrai laurier (Lauracées). Le laurier-cerise et le laurier du Portugal sont des Prunus, toxiques si ingérés ; le laurier-tin est une viorne.",
+     "sources": [
+      "https://www.cap.chu-lille.fr/2021/01/26/laurier-cerise",
+      "https://www.infoflora.ch/assets/content/documents/neophytes/inva_prun_lau_f.pdf"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "laurier"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "seul Laurus nobilis est un vrai laurier (Lauracées) ; laurier du Portugal = Rosacées ; laurier-tin = viorne (Caprifoliaceae/Adoxaceae selon classification)",
+      "sources_recoupement": [
+       "https://www.futura-sciences.com/planete/definitions/plante-laurier-17801/",
+       "https://www.provence7.com/?p=6152"
+      ]
+     }
+    },
+    {
+     "position": 10,
+     "place": "difficile",
+     "substitution": null,
+     "id": "81dcc3ade9",
+     "theme": "Écologie",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Les chenilles du papillon Citron se nourrissent des feuilles de :",
+     "texte": null,
+     "choix": [
+      "Cornus sanguinea",
+      "Viburnum opulus",
+      "Ligustrum vulgare",
+      "Frangula alnus"
+     ],
+     "bonne": 3,
+     "explication": "Le Citron pond près des bourgeons de la bourdaine et des nerpruns, seules plantes hôtes de sa chenille. Planter une bourdaine dans une haie, c'est accueillir ce papillon.",
+     "sources": [
+      "https://www.techno-science.net/fr/definitions/citron-papillon",
+      "https://observatoire.shna-ofab.fr/fichiers/bnhs13-cahiers-ld-p168-169-citron_1456132391.pdf"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "chenille du Citron sur les Rhamnus (nerprun purgatif) et Frangula (bourdaine)",
+      "sources_recoupement": [
+       "https://www.techno-science.net/fr/definitions/citron-papillon",
+       "https://en.wikipedia.org/wiki/Gonepteryx_rhamni"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "date": "2026-10-29",
+   "questions": [
+    {
+     "position": 1,
+     "place": "facile",
+     "substitution": null,
+     "id": "N15",
+     "theme": "Usages et histoire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_usage_histoire",
+     "question": "Que met-on à infuser pour une tisane de tilleul ?",
+     "texte": null,
+     "choix": [
+      "Les feuilles",
+      "L'écorce",
+      "Les fruits",
+      "Les fleurs avec leur bractée"
+     ],
+     "bonne": 3,
+     "explication": "On infuse l'inflorescence avec sa grande bractée jaunâtre, souvent vendue sous le nom de « bractées de tilleul ».",
+     "sources": [
+      "https://www.pharma-gdd.com/fr/les-bienfaits-du-tilleul",
+      "https://ansm.sante.fr/uploads/2021/05/10/tilia-europaea-tilleul-pph.pdf"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "tilleul"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "tisane de tilleul = inflorescence avec sa bractée (« bractées » du commerce)",
+      "sources_recoupement": [
+       "https://www.pharma-gdd.com/fr/les-bienfaits-du-tilleul",
+       "https://ansm.sante.fr/uploads/2021/05/10/tilia-europaea-tilleul-pph.pdf"
+      ]
+     }
+    },
+    {
+     "position": 2,
+     "place": "facile",
+     "substitution": null,
+     "id": "1e445b086a",
+     "theme": "Saisons",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_saison",
+     "question": "Que sont les chatons jaunes qui pendent du noisetier dès janvier-février ?",
+     "texte": null,
+     "choix": [
+      "Des fruits encore immatures",
+      "Des bourgeons de feuilles",
+      "Des fleurs mâles",
+      "Des galles d'insectes"
+     ],
+     "bonne": 2,
+     "explication": "Les chatons sont des grappes de fleurs mâles qui libèrent leur pollen avant la feuillaison. Les fleurs femelles, minuscules, ont des stigmates rouges.",
+     "sources": [
+      "https://www.tela-botanica.org/wp-content/uploads/2026/02/Floraison-Noisetier-ODS.pdf",
+      "https://spot.creamontblanc.org/en/fiches-especes/noisetier"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "noisetier"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "noisetier monoïque ; chatons mâles jaunes pendants ; fleurs femelles discrètes à styles rouge carmin ; floraison surtout janvier-février",
+      "sources_recoupement": [
+       "https://inpn.mnhn.fr/espece/cd_nom/92608?lg=en",
+       "https://www.tela-botanica.org/wp-content/uploads/2026/02/Floraison-Noisetier-ODS.pdf"
+      ]
+     }
+    },
+    {
+     "position": 3,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "ac462f2087",
+     "theme": "Anecdotes",
+     "niveau": "intermediaire",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "anecdote",
+     "question": "De quelle plante parle-t-on ?",
+     "texte": "En 1890, à Saint-Rémy-de-Provence, Van Gogh peignit ses branches en fleurs sur fond bleu pour fêter la naissance de son neveu.",
+     "choix": [
+      "Acer palmatum",
+      "Celtis occidentalis",
+      "Prunus dulcis",
+      "Betula utilis"
+     ],
+     "bonne": 2,
+     "explication": "C'est : Amandier. Floraison très précoce, dès la fin de l'hiver, souvent atteinte par le gel.",
+     "sources": [
+      "https://artway.eu/posts/vincent-van-gogh-almond-blossom"
+     ],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [
+      "amandier/abricot"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Amandier en fleurs, peint par Van Gogh à Saint-Rémy en février 1890 pour la naissance de son neveu, fond bleu ciel",
+      "sources_recoupement": [
+       "https://en.wikipedia.org/wiki/Almond_Blossoms",
+       "https://artway.eu/posts/vincent-van-gogh-almond-blossom"
+      ]
+     }
+    },
+    {
+     "position": 4,
+     "place": "facile",
+     "substitution": null,
+     "id": "dff6c3e757",
+     "theme": "Fruits et toxicité",
+     "niveau": "facile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Quel arbuste garde en hiver des boules blanches, à ne pas manger ?",
+     "texte": null,
+     "choix": [
+      "Symphoricarpos albus",
+      "Ligustrum vulgare",
+      "Viburnum opulus",
+      "Sambucus nigra"
+     ],
+     "bonne": 0,
+     "explication": "La symphorine porte des baies blanches spongieuses qui éclatent sous le pied. Elles sont considérées comme toxiques (irritantes pour le tube digestif), même si elles sont peu dangereuses en petite quantité.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Symphoricarpos_albus",
+      "https://www.cap.chu-lille.fr/2021/01/05/symphorine"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "corrigee": true,
+     "sujets": [],
+     "indice_epithete": "épithète « albus » traduisible dans l'énoncé",
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "baies classées toxiques ; « faiblement toxique » défendable (saponines mal absorbées) mais d'autres sources citent la chélidonine : prudence, formulation à garder mesurée",
+      "sources_recoupement": [
+       "https://www.treesandshrubsonline.org/articles/symphoricarpos/",
+       "https://garden.rcplondon.ac.uk/Plant/Details/1814"
+      ]
+     }
+    },
+    {
+     "position": 5,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "96abd16e04",
+     "theme": "Usages et histoire",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "De quelle espèce est le plus vieil arbre de Paris, planté vers 1601 et visible square René-Viviani ?",
+     "texte": null,
+     "choix": [
+      "Robinia pseudoacacia",
+      "Platanus × hispanica",
+      "Aesculus hippocastanum",
+      "Tilia × europaea"
+     ],
+     "bonne": 0,
+     "explication": "Ni platane ni marronnier : c'est un robinier faux-acacia, arbre venu d'Amérique du Nord, planté selon la tradition par Jean Robin. Il est considéré comme le plus vieil arbre de Paris.",
+     "sources": [
+      "https://en.wikipedia.org/wiki/Locust_of_Square_Ren%C3%A9-Viviani",
+      "https://fr.wikipedia.org/wiki/Robinier_du_square_Ren%C3%A9-Viviani"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "marron",
+      "robinier"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "robinier du square Viviani considéré comme le plus vieil arbre de Paris, planté selon la tradition par Jean Robin vers 1601",
+      "sources_recoupement": [
+       "https://www.paris.fr/pages/si-le-plus-vieil-arbre-de-paris-le-robinier-du-square-viviani-nous-contait-son-histoire-6586",
+       "https://thetreeographer.com/2018/04/06/oldest-tree-in-paris-robinia-of-square-rene-viviani"
+      ]
+     }
+    },
+    {
+     "position": 6,
+     "place": "difficile",
+     "substitution": null,
+     "id": "6366f4ea71",
+     "theme": "Saisons",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Laquelle de ces viornes fleurit en hiver, parfumée, sur des rameaux nus ?",
+     "texte": null,
+     "choix": [
+      "Viburnum opulus",
+      "Viburnum × bodnantense",
+      "Viburnum plicatum",
+      "Viburnum lantana"
+     ],
+     "bonne": 1,
+     "explication": "La viorne de Bodnant ouvre ses bouquets roses parfumés de novembre à mars sur bois nu. Viorne obier, du Japon et mancienne fleurissent au printemps, feuillées.",
+     "sources": [
+      "https://www.rhs.org.uk/plants/trials-awards/using-award-winning-plants/10-award-winning-winter-flowering-shrubs",
+      "https://fr.wikipedia.org/wiki/Viorne_de_Bodnant"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "corrigee": true,
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "viorne de Bodnant : floraison parfumée sur bois nu surtout de novembre à mars (parfois dès octobre) : « d'octobre à mars » corrigé en « de novembre à mars »",
+      "sources_recoupement": [
+       "https://www.jardiner-malin.fr/fiche/la-viorne-de-bodnant-planter.html"
+      ]
+     }
+    },
+    {
+     "position": 7,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "7be20eddf6",
+     "theme": "Fruits et toxicité",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_toxicite_fruit",
+     "question": "Chez la fraise, où se trouvent les vrais fruits ?",
+     "texte": null,
+     "choix": [
+      "Dans la chair rouge",
+      "Les petits grains en surface",
+      "Dans la collerette verte",
+      "Au cœur blanc du fruit"
+     ],
+     "bonne": 1,
+     "explication": "La chair est le réceptacle floral gonflé : la fraise est un faux-fruit. Les vrais fruits sont les akènes, ces petits « grains » posés sur sa peau.",
+     "sources": [
+      "https://www.futura-sciences.com/planete/questions-reponses/botanique-fraise-nest-pas-fruit-14182/"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "fraise"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "fraise = faux-fruit, vrais fruits = akènes",
+      "sources_recoupement": [
+       "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8358058/fraise",
+       "https://www.techno-science.net/fr/definitions/fraise-fruit"
+      ]
+     }
+    },
+    {
+     "position": 8,
+     "place": "facile",
+     "substitution": null,
+     "id": "E07",
+     "theme": "Vocabulaire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_vocabulaire",
+     "question": "Combien de pétales libres ont les fleurs d'un églantier, d'un pommier ou d'un cerisier ?",
+     "texte": null,
+     "choix": [
+      "Trois",
+      "Quatre",
+      "Cinq",
+      "Huit"
+     ],
+     "bonne": 2,
+     "explication": "Les Rosacées ont des fleurs régulières à cinq pétales libres et cinq sépales : un bon repère pour reconnaître la famille.",
+     "sources": [
+      "https://dictionnaire-academie.fr/article/A9R2949",
+      "https://www.techno-science.net/fr/definitions/rosaceae"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "cerisier"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Rosacées : fleurs régulières à cinq sépales et cinq pétales libres (Académie française) ; églantier et pommier cités, cerisier = Rosacées",
+      "sources_recoupement": [
+       "https://dictionnaire-academie.fr/article/A9R2949",
+       "https://www.techno-science.net/fr/definitions/rosaceae"
+      ]
+     }
+    },
+    {
+     "position": 9,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "7f1e363c33",
+     "theme": "Familles",
+     "niveau": "intermediaire",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "famille",
+     "question": "Laquelle de ces plantes appartient à la famille des Bétulacées ?",
+     "texte": null,
+     "choix": [
+      "Pinus strobus",
+      "Alnus glutinosa",
+      "Chamaerops humilis",
+      "Quercus × hispanica"
+     ],
+     "bonne": 1,
+     "explication": "Aulne glutineux fait partie des Bétulacées. Traits fréquents dans la famille : chatons et feuille doublement dentée à nervures marquées.",
+     "sources": [],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Alnus glutinosa = Bétulacées (source de pharmacologie)",
+      "sources_recoupement": [
+       "https://mediplantepirus.med.uoi.gr/pharmacology_en/plant_details.php?id=213"
+      ]
+     }
+    },
+    {
+     "position": 10,
+     "place": "difficile",
+     "substitution": null,
+     "id": "f3bf2a1b16",
+     "theme": "Vocabulaire",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Lequel de ces conifères porte ses cônes dressés sur les rameaux ?",
+     "texte": null,
+     "choix": [
+      "Picea abies",
+      "Pseudotsuga menziesii",
+      "Pinus nigra",
+      "Abies nordmanniana"
+     ],
+     "bonne": 3,
+     "explication": "Les sapins (Abies) ont des cônes dressés qui se désagrègent sur l'arbre ; l'épicéa et le douglas ont des cônes pendants, le pin noir des cônes étalés, qui tombent entiers.",
+     "sources": [
+      "https://tela-botanica.org/sites/botanique/fr/documents/biblio/articles_en_ligne/abres_lozere/gymnospermes.pdf",
+      "https://www.newmexicoflora.polyploid.net/pages/Abies_conc.html"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "pin",
+      "sapin"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "cônes dressés du sapin (Abies) vs pendants de l'épicéa ; pin noir « étalés » et douglas non recoupés individuellement",
+      "sources_recoupement": [
+       "https://jardin-botanique.unistra.fr/websites/sciencesvie/EMB/jardin-botanique/Documents/Poster_conniferes-alsace-light.pdf"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "questions": [
+    {
+     "position": 1,
+     "place": "facile",
+     "substitution": null,
+     "id": "9897a76286",
+     "theme": "Usages et histoire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_usage_histoire",
+     "question": "Quelle plante a donné son nom à la « fée verte », boisson interdite en France en 1915 ?",
+     "texte": null,
+     "choix": [
+      "L'absinthe",
+      "L'anis vert",
+      "La menthe poivrée",
+      "La gentiane jaune"
+     ],
+     "bonne": 0,
+     "explication": "La grande absinthe (Artemisia absinthium) parfumait cette liqueur. Une loi de mars 1915 en interdit la fabrication et la vente en France.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Absinthe_(spiritueux)",
+      "https://tile.loc.gov/storage-services/service/ll/llglrd/2019670640/2019670640.pdf"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "corrigee": true,
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "absinthe interdite en France par une loi de mars 1915 (16 ou 17 mars selon les sources) : date resserrée en « mars 1915 »",
+      "sources_recoupement": [
+       "https://www.herodote.net/17_mars_1915-evenement-19150317.php",
+       "https://www.academie-medecine.fr/wp-content/uploads/2014/09/pages-de-515-522.pdf"
+      ]
+     }
+    },
+    {
+     "position": 2,
+     "place": "facile",
+     "substitution": null,
+     "id": "673651c50d",
+     "theme": "Usages et histoire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_usage_histoire",
+     "question": "Dans quel bois taille-t-on traditionnellement la table d'harmonie d'un violon ?",
+     "texte": null,
+     "choix": [
+      "Épicéa",
+      "Chêne",
+      "Noyer",
+      "Hêtre"
+     ],
+     "bonne": 0,
+     "explication": "L'épicéa allie légèreté, élasticité et résistance : il transmet bien les vibrations des cordes. Les épicéas choisis pour la lutherie sont dits « bois de résonance ».",
+     "sources": [
+      "https://www.waldwissen.net/fr/economie-forestiere/filiere-bois/transformation-du-bois/bois-de-resonance-depicea",
+      "https://fr.wikipedia.org/wiki/Table_d%27harmonie"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "table d'harmonie du violon en épicéa (élasticité et résistance), appelé bois de résonance",
+      "sources_recoupement": [
+       "https://www.waldwissen.net/fr/economie-forestiere/filiere-bois/transformation-du-bois/bois-de-resonance-depicea"
+      ]
+     }
+    },
+    {
+     "position": 3,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "3d5938c170",
+     "theme": "Vocabulaire",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Lequel de ces érables a des feuilles composées ?",
+     "texte": null,
+     "choix": [
+      "Acer palmatum",
+      "Acer platanoides",
+      "Acer negundo",
+      "Acer campestre"
+     ],
+     "bonne": 2,
+     "explication": "L'érable negundo a des feuilles composées de 3 à 7 folioles. Celles de l'érable du Japon, très découpées, restent des feuilles simples.",
+     "sources": [
+      "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/erable_negundo.pdf"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "érable"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Acer negundo : feuilles composées de 3 à 7 folioles (OQLF), atypique parmi les érables",
+      "sources_recoupement": [
+       "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/2090923/erable-negondo",
+       "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/erable_negundo.pdf"
+      ]
+     }
+    },
+    {
+     "position": 4,
+     "place": "facile",
+     "substitution": null,
+     "id": "a2db60d4d4",
+     "theme": "Familles",
+     "niveau": "facile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "famille",
+     "question": "Laquelle de ces plantes appartient à la famille des Lamiacées ?",
+     "texte": null,
+     "choix": [
+      "Geranium × cantabrigiense",
+      "Euphorbia paralias",
+      "Persicaria amplexicaulis",
+      "Thymus vulgaris"
+     ],
+     "bonne": 3,
+     "explication": "Thym commun fait partie des Lamiacées. Traits fréquents dans la famille : tige carrée et feuilles opposées croisées.",
+     "sources": [],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Thymus vulgaris = Lamiacées ; les autres plantes proposées (géranium, euphorbe, renouée) sont d'autres familles",
+      "sources_recoupement": [
+       "https://iiim.res.in/wp-content/uploads/2018/04/European_Agency.pdf"
+      ]
+     }
+    },
+    {
+     "position": 5,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "e1f48e0b43",
+     "theme": "Écologie",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "images",
+     "mecanisme": "photo_origine",
+     "question": "Laquelle de ces plantes aux fleurs spectaculaires est indigène en France ?",
+     "texte": null,
+     "choix": [
+      "Hemerocallis fulva",
+      "Crocosmia × crocosmiiflora",
+      "Kniphofia uvaria",
+      "Lilium martagon"
+     ],
+     "bonne": 3,
+     "explication": "Malgré son allure exotique, le lis martagon pousse spontanément dans les bois et prairies de montagne. Les trois autres ne sont pas indigènes en France.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Lis_martagon",
+      "https://en.wikipedia.org/wiki/Crocosmia_%C3%97_crocosmiiflora"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "corrigee": true,
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "lis martagon indigène (aire eurasiatique, présent dans une grande partie de la France) confirmé ; l'origine de l'hémérocalle, du tritome et du montbrétia n'a pas été recoupée",
+      "sources_recoupement": [
+       "https://www.techno-science.net/fr/definitions/lis-martagon",
+       "https://geonature2.vanoise-parcnational.fr/geonature/api/media/taxhub/105989_1842_Lilium_martagon.pdf"
+      ]
+     }
+    },
+    {
+     "position": 6,
+     "place": "difficile",
+     "substitution": null,
+     "id": "42dedd3336",
+     "theme": "Écologie",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_ecologie",
+     "question": "L'ailante libère dans le sol des substances qui freinent ses voisines. Ce phénomène est :",
+     "texte": null,
+     "choix": [
+      "Le commensalisme",
+      "L'allélopathie",
+      "Le phototropisme",
+      "Le mutualisme"
+     ],
+     "bonne": 1,
+     "explication": "L'écorce des racines d'ailante produit l'ailanthone, molécule herbicide qui freine la croissance des plantes voisines. Cette allélopathie aide cet arbre chinois à envahir les friches.",
+     "sources": [
+      "https://pure.psu.edu/en/publications/identification-of-an-allelopathic-compound-from-ailanthus-altissi/",
+      "https://www.rjas.ro/paper_detail/1698"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "ailante : ailanthone (quassinoïde de l'écorce des racines) inhibe la croissance d'autres plantes : allélopathie",
+      "sources_recoupement": [
+       "https://pure.psu.edu/en/publications/identification-of-an-allelopathic-compound-from-ailanthus-altissi/",
+       "https://www.savoie.fr/upload/docs/application/pdf/2021-02/ailante_glanduleux_fevrier2021.pdf"
+      ]
+     }
+    },
+    {
+     "position": 7,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "c0348fcfda",
+     "theme": "Idées reçues",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_idee_recue",
+     "question": "Le ginkgo, avec ses feuilles en éventail qui jaunissent à l'automne, est…",
+     "texte": null,
+     "choix": [
+      "Un feuillu proche des érables",
+      "Une fougère arborescente",
+      "Une gymnosperme, comme les conifères",
+      "Un palmier primitif"
+     ],
+     "bonne": 2,
+     "explication": "Malgré ses feuilles plates et caduques, le ginkgo est une gymnosperme. C'est le seul représentant vivant des Ginkgophytes.",
+     "sources": [
+      "https://espacepourlavie.ca/carnet-horticole/ginkgo",
+      "https://www.britannica.com/print/article/233931"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "corrigee": true,
+     "sujets": [
+      "ginkgo"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "ginkgo = gymnosperme, seul représentant vivant des Ginkgophytes, feuilles caduques ; l'expression « fossile vivant » est contestée : adoucie dans les textes concernés",
+      "sources_recoupement": [
+       "https://www.futura-sciences.com/planete/definitions/botanique-ginkgo-9538/",
+       "https://www.futura-sciences.com/planete/definitions/classification-vivant-ginkgophyte-14471/"
+      ]
+     }
+    },
+    {
+     "position": 8,
+     "place": "facile",
+     "substitution": null,
+     "id": "E05",
+     "theme": "Fruits et toxicité",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_toxicite_fruit",
+     "question": "Que faut-il savoir sur le muguet du 1er mai ?",
+     "texte": null,
+     "choix": [
+      "Seules ses baies sont toxiques",
+      "Il est comestible une fois cuit",
+      "Toute la plante est toxique",
+      "Il n'est toxique que pour les animaux"
+     ],
+     "bonne": 2,
+     "explication": "Fleurs, feuilles et baies contiennent des glycosides qui agissent sur le cœur, comme ceux de la digitale. Dans le doute, ne rien consommer.",
+     "sources": [
+      "https://www.bfr.bund.de/en/risk-communication/dialog-formats/bfr-poisonous-plants-garden/lily-of-the-valley/",
+      "https://www.techno-science.net/fr/definitions/muguet-de-mai"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "muguet : toutes les parties contiennent des glycosides cardiotoniques (proches de ceux de la digitale), baies souvent citées comme les plus dangereuses",
+      "sources_recoupement": [
+       "https://www.bfr.bund.de/en/risk-communication/dialog-formats/bfr-poisonous-plants-garden/lily-of-the-valley/",
+       "https://www.techno-science.net/fr/definitions/muguet-de-mai"
+      ]
+     }
+    },
+    {
+     "position": 9,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "ec73d07e26",
+     "theme": "Saisons",
+     "niveau": "intermediaire",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Lequel de ces magnolias garde ses feuilles en hiver ?",
+     "texte": null,
+     "choix": [
+      "Magnolia × soulangeana",
+      "Magnolia kobus",
+      "Magnolia stellata",
+      "Magnolia grandiflora"
+     ],
+     "bonne": 3,
+     "explication": "Le magnolia à grandes fleurs a des feuilles persistantes, coriaces et luisantes. Les magnolias de Soulange, kobus et étoilé sont caducs et fleurissent sur bois nu.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Magnolia_grandiflora",
+      "https://fr.wikipedia.org/wiki/Magnolia_stellata"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Magnolia grandiflora persistant ; M. soulangeana, kobus, stellata caducs à floraison avant les feuilles",
+      "sources_recoupement": [
+       "https://www.saint-cyr-sur-loire.com/content/download/16746/262626/version/3/file/FICHES_BOTANIQUES_Magnolia-a-grandes-fleurs.pdf",
+       "https://www.jardiner-malin.fr/fiche/magnolia-couleurs.html"
+      ]
+     }
+    },
+    {
+     "position": 10,
+     "place": "difficile",
+     "substitution": null,
+     "id": "4be509c398",
+     "theme": "Idées reçues",
+     "niveau": "difficile",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_idee_recue",
+     "question": "Les « saules » de Babylone cités dans le psaume 137 étaient, selon l'hypothèse la plus répandue…",
+     "texte": null,
+     "choix": [
+      "Des saules pleureurs",
+      "Des peupliers de l'Euphrate",
+      "Des saules blancs",
+      "Des tamaris"
+     ],
+     "bonne": 1,
+     "explication": "Linné a cru les reconnaître dans le saule pleureur, venu en fait de Chine. L'hypothèse la plus courante est que le psaume évoquait Populus euphratica, le peuplier de l'Euphrate, même si l'identification reste débattue.",
+     "sources": [
+      "https://www.techno-science.net/fr/definitions/saule-pleureur",
+      "https://areq.net/lang/fr/Saule_pleureur.html"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "corrigee": true,
+     "sujets": [
+      "saule"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "Linné a bien basé babylonica sur une erreur ; Populus euphratica est l'hypothèse la plus courante mais d'autres sources proposent Salix safsaf : « sans doute » remplacé par « selon l'hypothèse la plus répandue »",
+      "sources_recoupement": [
+       "https://www.techno-science.net/fr/definitions/saule-pleureur",
+       "https://landscapeplants.oregonstate.edu/plants/salix-babylonica"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "date": "2026-10-31",
+   "questions": [
+    {
+     "position": 1,
+     "place": "facile",
+     "substitution": null,
+     "id": "N17",
+     "theme": "Vocabulaire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_vocabulaire",
+     "question": "Comment s'appelle le « parachute » du fruit du pissenlit ?",
+     "texte": null,
+     "choix": [
+      "La cupule",
+      "Le calice",
+      "La samare",
+      "L'aigrette"
+     ],
+     "bonne": 3,
+     "explication": "L'aigrette (ou pappus) est une touffe de poils soyeux au sommet de l'akène : elle le porte au vent, comme un parachute.",
+     "sources": [
+      "https://www.lequotidiendupharmacien.fr/pappus",
+      "https://www.futura-sciences.com/planete/definitions/botanique-akene-9544/"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "pissenlit"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "aigrette (pappus) du pissenlit : parachute de l'akène, dispersion par le vent",
+      "sources_recoupement": [
+       "https://www.lequotidiendupharmacien.fr/pappus",
+       "https://www.futura-sciences.com/planete/definitions/botanique-akene-9544/"
+      ]
+     }
+    },
+    {
+     "position": 2,
+     "place": "facile",
+     "substitution": null,
+     "id": "d85f3dce13",
+     "theme": "Saisons",
+     "niveau": "facile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Laquelle de ces plantes fleurit en plein hiver, parfois à travers la neige ?",
+     "texte": null,
+     "choix": [
+      "Paeonia lactiflora",
+      "Lilium martagon",
+      "Galanthus nivalis",
+      "Echinacea purpurea"
+     ],
+     "bonne": 2,
+     "explication": "Le perce-neige ouvre ses clochettes blanches dès janvier-février. Pivoine, lis martagon et échinacée fleurissent, eux, à la fin du printemps ou en été.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Perce-neige"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "perce-neige"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "perce-neige : floraison janvier-mars ; galantamine isolée des bulbes (Galanthus), médicament contre Alzheimer",
+      "sources_recoupement": [
+       "https://www.futura-sciences.com/planete/definitions/fleurs-perce-neige-17048/",
+       "https://mediplantepirus.med.uoi.gr/pharmacology_en/plant_details.php?id=26"
+      ]
+     }
+    },
+    {
+     "position": 3,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "79daedab53",
+     "theme": "Usages et histoire",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Lequel de ces conifères détient le record du plus grand arbre du monde en hauteur ?",
+     "texte": null,
+     "choix": [
+      "Sequoiadendron giganteum",
+      "Sequoia sempervirens",
+      "Pseudotsuga menziesii",
+      "Cedrus libani"
+     ],
+     "bonne": 1,
+     "explication": "Le séquoia géant est le plus massif, mais le plus haut est un séquoia à feuilles d'if : Hyperion, découvert en 2006 en Californie, dépasse 115 m.",
+     "sources": [
+      "https://en.wikipedia.org/wiki/Hyperion_(tree)",
+      "https://fr.wikipedia.org/wiki/Sequoia_sempervirens"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "if",
+      "séquoia"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Hyperion, Sequoia sempervirens, découvert en 2006, 115,55 m (Guinness)",
+      "sources_recoupement": [
+       "https://www.guinnessworldrecords.com/world-records/tallest-tree-living",
+       "https://www.nbcnews.com/id/wbna15066332"
+      ]
+     }
+    },
+    {
+     "position": 4,
+     "place": "facile",
+     "substitution": null,
+     "id": "N01",
+     "theme": "Fruits et toxicité",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_toxicite_fruit",
+     "question": "Quelle partie de la rhubarbe se mange ?",
+     "texte": null,
+     "choix": [
+      "Les côtes (pétioles)",
+      "Les fleurs",
+      "Les feuilles",
+      "Les graines"
+     ],
+     "bonne": 0,
+     "explication": "On ne mange que les côtes (pétioles), de préférence cuites. Les feuilles contiennent beaucoup d'acide oxalique et sont toxiques : dans le doute, ne rien consommer.",
+     "sources": [
+      "https://www.futura-sciences.com/planete/definitions/botanique-rhubarbe-19382/",
+      "https://www.aroma-zone.com/page/rhubarbe-definitions-bienfaits"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "rhubarbe"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "rhubarbe : seuls les pétioles (côtes) se mangent ; feuilles toxiques (acide oxalique)",
+      "sources_recoupement": [
+       "https://www.futura-sciences.com/planete/definitions/botanique-rhubarbe-19382/",
+       "https://www.aroma-zone.com/page/rhubarbe-definitions-bienfaits"
+      ]
+     }
+    },
+    {
+     "position": 5,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "4762308b17",
+     "theme": "Idées reçues",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_idee_recue",
+     "question": "Le « tronc » d'un bananier est formé…",
+     "texte": null,
+     "choix": [
+      "De bois tendre et fibreux",
+      "De gaines de feuilles emboîtées",
+      "D'une tige creuse lignifiée",
+      "De racines aériennes soudées"
+     ],
+     "bonne": 1,
+     "explication": "Le bananier est une herbe géante, sans bois. Sa vraie tige est souterraine ; le « tronc » est un pseudo-tronc fait des bases de feuilles enroulées.",
+     "sources": [
+      "https://www.techno-science.net/fr/definitions/bananier",
+      "https://www.larousse.fr/encyclopedie/divers/bananier/25436"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "bananier : herbe géante ; pseudo-tronc = gaines foliaires emboîtées ; vraie tige souterraine (rhizome ou corme)",
+      "sources_recoupement": [
+       "https://planet-vie.ens.fr/node/1420/download/pdf",
+       "https://agritrop.cirad.fr/413914/1/413914.pdf"
+      ]
+     }
+    },
+    {
+     "position": 6,
+     "place": "difficile",
+     "substitution": null,
+     "id": "b418a15c5c",
+     "theme": "Écologie",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_ecologie",
+     "question": "Les graines de la chélidoine portent un appendice charnu. Qui les disperse ?",
+     "texte": null,
+     "choix": [
+      "Les merles",
+      "Les mulots",
+      "Les escargots",
+      "Les fourmis"
+     ],
+     "bonne": 3,
+     "explication": "Cet appendice, l'élaïosome, est riche en lipides : les fourmis emportent les graines au nid, mangent l'élaïosome puis rejettent la graine intacte, qui peut germer plus loin.",
+     "sources": [
+      "https://comptes-rendus.academie-sciences.fr/biologies/item/10.1016/j.crvi.2008.02.002.pdf",
+      "https://www.provincedeliege.be/sites/default/files/media/10952/Grande%20ch%C3%A9lidoine%20%28Ch%C3%A9lidonium%20majus%29.pdf"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "chélidoine : élaïosome charnu, fourmis emportent les graines, mangent l'élaïosome et rejettent la graine intacte",
+      "sources_recoupement": [
+       "https://comptes-rendus.academie-sciences.fr/biologies/item/10.1016/j.crvi.2008.02.002.pdf",
+       "https://link.springer.com/article/10.1007/s11829-009-9076-5"
+      ]
+     }
+    },
+    {
+     "position": 7,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "38c4e0d5fb",
+     "theme": "Écologie",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_ecologie",
+     "question": "À l'état naturel, le cyprès de Provence est originaire de :",
+     "texte": null,
+     "choix": [
+      "La Provence",
+      "La Méditerranée orientale",
+      "L'Amérique du Nord",
+      "L'Himalaya"
+     ],
+     "bonne": 1,
+     "explication": "Malgré son nom, Cupressus sempervirens vient de l'est méditerranéen (Turquie, Crète, Chypre, Iran). Le cyprès en colonne des paysages provençaux est une forme cultivée depuis l'Antiquité.",
+     "sources": [
+      "https://www.inaturalist.org/guide_taxa/495144",
+      "https://landscapeplants.oregonstate.edu/plants/cupressus-sempervirens"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "corrigee": true,
+     "sujets": [
+      "cyprès"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "cyprès de Provence : espèce d'origine Méditerranée orientale (Turquie, Crète, Chypre, Iran) ; la forme en colonne vient de la culture : explication à compléter",
+      "sources_recoupement": [
+       "https://landscapeplants.oregonstate.edu/node/1628",
+       "https://nzpcn.org.nz/flora/species/cupressus-sempervirens"
+      ]
+     }
+    },
+    {
+     "position": 8,
+     "place": "facile",
+     "substitution": null,
+     "id": "3ee234debe",
+     "theme": "Saisons",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_saison",
+     "question": "Quel pigment vert, dégradé à l'automne, laisse apparaître les autres couleurs des feuilles ?",
+     "texte": null,
+     "choix": [
+      "Le carotène",
+      "L'anthocyane",
+      "La chlorophylle",
+      "La xanthophylle"
+     ],
+     "bonne": 2,
+     "explication": "En automne, l'arbre dégrade sa chlorophylle et en récupère les éléments. Les pigments jaunes et orangés qu'elle masquait deviennent alors visibles.",
+     "sources": [
+      "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/le-mystere-des-couleurs-du-feuillage-en-automne",
+      "https://espacepourlavie.ca/les-couleurs-dautomne-des-arbres"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "la chlorophylle dégradée à l'automne révèle les pigments jaunes (caroténoïdes, xanthophylles)",
+      "sources_recoupement": [
+       "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/le-mystere-des-couleurs-du-feuillage-en-automne",
+       "https://espacepourlavie.ca/les-couleurs-dautomne-des-arbres"
+      ]
+     }
+    },
+    {
+     "position": 9,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "71aa47c25a",
+     "theme": "Usages et histoire",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Dans laquelle de ces « bruyères » taille-t-on les pipes dites en bruyère ?",
+     "texte": null,
+     "choix": [
+      "Calluna vulgaris",
+      "Erica cinerea",
+      "Erica arborea",
+      "Erica carnea"
+     ],
+     "bonne": 2,
+     "explication": "Les pipes sont taillées dans le broussin, renflement à la base de la bruyère arborescente, arbuste du maquis méditerranéen ; on le récolte sur des souches âgées de plusieurs décennies.",
+     "sources": [
+      "https://en.wikipedia.org/wiki/Erica_arborea",
+      "https://fr.wikipedia.org/wiki/Pipe_(tabac)"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "pipes taillées dans les souches (broussin) de la bruyère arborescente Erica arborea, bois très dur et résistant à la chaleur ; récolte de souches de 30 à 60 ans",
+      "sources_recoupement": [
+       "https://calanques-parcnational.fr/fr/bruyere-arborescente",
+       "https://waynesword.net/briarwd.htm"
+      ]
+     }
+    },
+    {
+     "position": 10,
+     "place": "difficile",
+     "substitution": null,
+     "id": "91a85ff031",
+     "theme": "Fruits et toxicité",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Lequel de ces arbustes porte des gousses gonflées comme de petites vessies ?",
+     "texte": null,
+     "choix": [
+      "Colutea arborescens",
+      "Laburnum anagyroides",
+      "Cytisus scoparius",
+      "Spartium junceum"
+     ],
+     "bonne": 0,
+     "explication": "Le baguenaudier, ou « arbre à vessies », doit son nom à ses gousses renflées et translucides à maturité.",
+     "sources": [
+      "https://nymf.bbg.org/genus/132",
+      "https://openobs.mnhn.fr/redirect/inpn/datasets/86010?view=mapr"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "corrigee": true,
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "gousses gonflées (arbre à vessies) confirmé ; toxicité des graines NON retrouvée dans les sources : affirmation retirée de l'explication",
+      "sources_recoupement": [
+       "https://openobs.mnhn.fr/redirect/inpn/datasets/86010?view=mapr"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "date": "2026-11-01",
+   "questions": [
+    {
+     "position": 1,
+     "place": "facile",
+     "substitution": null,
+     "id": "57b5401dbf",
+     "theme": "Familles",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "famille",
+     "question": "Hortensia : à quelle famille appartient cette plante ?",
+     "texte": null,
+     "choix": [
+      "Hydrangéacées",
+      "Apiacées (ombellifères)",
+      "Éricacées",
+      "Cupressacées"
+     ],
+     "bonne": 0,
+     "explication": "Hortensia fait partie des Hydrangéacées. Traits fréquents dans la famille : feuilles opposées, grandes inflorescences (hortensia) ou fleurs blanches (seringat, deutzia).",
+     "sources": [],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [
+      "hortensia"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "hortensia (Hydrangea) = Hydrangéacées (anciennement classé parmi les Saxifragacées)",
+      "sources_recoupement": [
+       "https://franco.wiki/fr/Hydrangea.html",
+       "https://www.gbif.org/taxon/B82"
+      ]
+     }
+    },
+    {
+     "position": 2,
+     "place": "facile",
+     "substitution": null,
+     "id": "E03",
+     "theme": "Écologie",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_ecologie",
+     "question": "Quel oiseau enterre des glands et fait ainsi pousser de jeunes chênes ?",
+     "texte": null,
+     "choix": [
+      "La pie",
+      "Le pigeon ramier",
+      "Le merle noir",
+      "Le geai des chênes"
+     ],
+     "bonne": 3,
+     "explication": "Le geai cache des milliers de glands en automne. Ceux qu'il oublie, enfouis à quelques mètres ou quelques centaines de mètres de l'arbre, peuvent germer au printemps.",
+     "sources": [
+      "https://luberon.fr/luberon/parc-naturel-regional/faune/annu+geai-des-chenes-dans-le-luberon+2274.html",
+      "https://www.waldwissen.net/fr/economie-forestiere/sylviculture/rajeunissement/semis-direct-une-option-pour-la-regeneration-des-forets"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "chêne"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "geai des chênes : cache jusqu'à 5 000 glands par hiver, dont une grande partie non consommée germe ; chiffres d'associations à prendre avec prudence",
+      "sources_recoupement": [
+       "https://luberon.fr/luberon/parc-naturel-regional/faune/annu+geai-des-chenes-dans-le-luberon+2274.html",
+       "https://www.waldwissen.net/fr/economie-forestiere/sylviculture/rajeunissement/semis-direct-une-option-pour-la-regeneration-des-forets"
+      ]
+     }
+    },
+    {
+     "position": 3,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "ebf00f5ab9",
+     "theme": "Anecdotes",
+     "niveau": "intermediaire",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "anecdote",
+     "question": "De quelle plante parle-t-on ?",
+     "texte": "Fleur officielle d'Hiroshima, cet arbuste compte parmi les premières plantes à avoir refleuri sur la ville dévastée par la bombe de 1945.",
+     "choix": [
+      "Camellia japonica",
+      "Syringa vulgaris",
+      "Nerium oleander",
+      "Berberis thunbergii"
+     ],
+     "bonne": 2,
+     "explication": "C'est : Laurier-rose. Floraison estivale rose ou blanche ; toutes ses parties sont très toxiques.",
+     "sources": [
+      "https://www.city.hiroshima.lg.jp/_res/projects/default_project/_page_/001/018/288/26827.pdf"
+     ],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [
+      "laurier",
+      "rose"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "laurier-rose, fleur officielle de la ville de Hiroshima, présenté par la ville comme la première fleur à éclore après la bombe",
+      "sources_recoupement": [
+       "https://www.city.hiroshima.lg.jp/english/peace/1029872/1009943.html"
+      ]
+     }
+    },
+    {
+     "position": 4,
+     "place": "facile",
+     "substitution": null,
+     "id": "E02",
+     "theme": "Usages et histoire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_usage_histoire",
+     "question": "Le chocolat est fabriqué à partir de quelle partie du cacaoyer ?",
+     "texte": null,
+     "choix": [
+      "Les feuilles",
+      "Les racines",
+      "Les graines (les fèves)",
+      "L'écorce"
+     ],
+     "bonne": 2,
+     "explication": "Les fèves sont les graines contenues dans la cabosse, le fruit du cacaoyer. Elles sont fermentées, séchées, torréfiées puis broyées.",
+     "sources": [
+      "https://www.alimentarium.org/fr/savoir/cacaoyer",
+      "https://www.lalanguefrancaise.com/dictionnaire/definition/cacaoyer"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "cacaoyer (Theobroma cacao) : les fèves sont les graines contenues dans la cabosse, fermentées, séchées puis transformées",
+      "sources_recoupement": [
+       "https://www.alimentarium.org/fr/savoir/cacaoyer",
+       "https://www.lalanguefrancaise.com/dictionnaire/definition/cacaoyer"
+      ]
+     }
+    },
+    {
+     "position": 5,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "N02",
+     "theme": "Fruits et toxicité",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_toxicite_fruit",
+     "question": "Pourquoi écarte-t-on les parties verdies d'une pomme de terre ?",
+     "texte": null,
+     "choix": [
+      "Elles sont trop dures à cuire",
+      "Elles ont attrapé le mildiou",
+      "Elles contiennent plus de solanine, une toxine",
+      "Elles sont déjà germées"
+     ],
+     "bonne": 2,
+     "explication": "Le vert vient de la chlorophylle, inoffensive, mais il signale souvent beaucoup de solanine, une toxine que la cuisson ne détruit pas : on épluche largement ou on jette.",
+     "sources": [
+      "https://www.larevuedupraticien.fr/article/intoxication-la-solanine",
+      "https://chimie-paris.org/docs/lapatate.pdf"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [
+      "pomme de terre"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "pomme de terre verdie à la lumière : chlorophylle inoffensive mais signe d'une teneur élevée en solanine, que la cuisson ne détruit pas ; il faut peler largement ou jeter",
+      "sources_recoupement": [
+       "https://www.larevuedupraticien.fr/article/intoxication-la-solanine",
+       "https://chimie-paris.org/docs/lapatate.pdf"
+      ]
+     }
+    },
+    {
+     "position": 6,
+     "place": "difficile",
+     "substitution": null,
+     "id": "22b729eea8",
+     "theme": "Écologie",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_ecologie",
+     "question": "Combien d'espèces d'abeilles vit-il en France métropolitaine ?",
+     "texte": null,
+     "choix": [
+      "Environ 100",
+      "Près de 1 000",
+      "Environ 5 000",
+      "Environ 20 000"
+     ],
+     "bonne": 1,
+     "explication": "La France métropolitaine compte près de 1 000 espèces d'abeilles (983 dans une liste récente), presque toutes sauvages. Environ 20 000, c'est le total mondial.",
+     "sources": [
+      "https://lasef.org/wp-content/uploads/BSEF/126-1/2176_Le-Divelec.pdf",
+      "https://www.humanite-biodiversite.fr/articles/177014-les-abeilles-sauvages-en-france"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "abeille"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "France métropolitaine : 983 espèces d'abeilles confirmées (mise à jour de la liste nationale), « près de 1 000 » selon d'autres sources",
+      "sources_recoupement": [
+       "https://integ04-cnspfv.archimed.fr/doc/OAI_1/oai-HAL-hal-04946909v1",
+       "https://pollinisateurs-ressources.insectes.org/uploads/files/opie-2026-liste-abeilles-idf-69c403904d07e887514295.pdf"
+      ]
+     }
+    },
+    {
+     "position": 7,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "d033556e39",
+     "theme": "Saisons",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Lequel de ces « jasmins » fleurit en plein hiver ?",
+     "texte": null,
+     "choix": [
+      "Jasminum officinale",
+      "Trachelospermum jasminoides",
+      "Solanum jasminoides",
+      "Jasminum nudiflorum"
+     ],
+     "bonne": 3,
+     "explication": "Le jasmin d'hiver ouvre ses fleurs jaunes, sans parfum, de décembre à mars sur rameaux nus. Les autres « jasmins » proposés fleurissent plus tard, en été.",
+     "sources": [
+      "https://www.infoflora.ch/en/flora/jasminum-nudiflorum.html",
+      "https://luberon.fr/luberon/parc-naturel-regional/flore/annu+jasmin-d-hiver+2332.html"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "corrigee": true,
+     "sujets": [
+      "jasmin"
+     ],
+     "indice_epithete": "épithète « nudiflorum » traduisible dans l'énoncé",
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "jasmin d'hiver : fleurit janvier-mars sur bois nu, sans parfum ; floraison estivale des autres « jasmins » non recoupée",
+      "sources_recoupement": [
+       "https://luberon.fr/luberon/parc-naturel-regional/flore/annu+jasmin-d-hiver+2332.html",
+       "https://www.jardiner-malin.fr/fiche/jasmin-hiver.html"
+      ]
+     }
+    },
+    {
+     "position": 8,
+     "place": "facile",
+     "substitution": null,
+     "id": "64f661c618",
+     "theme": "Fruits et toxicité",
+     "niveau": "facile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Quelle liane de nos haies se couvre en hiver de touffes de fruits plumeux blancs ?",
+     "texte": null,
+     "choix": [
+      "Hedera helix",
+      "Clematis vitalba",
+      "Lonicera periclymenum",
+      "Humulus lupulus"
+     ],
+     "bonne": 1,
+     "explication": "La clématite des haies porte des akènes prolongés d'une longue plume soyeuse qui persiste tout l'hiver et les aide à voyager au vent.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Cl%C3%A9matite_des_haies"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "corrigee": true,
+     "sujets": [
+      "clématite"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "akènes plumeux persistants en hiver : confirmé ; le surnom « barbe de vieillard » n'a pas été retrouvé : retiré de l'explication",
+      "sources_recoupement": [
+       "https://inpn.mnhn.fr/espece/cd_nom/91886?lg=en"
+      ]
+     }
+    },
+    {
+     "position": 9,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "e80c01b28a",
+     "theme": "Idées reçues",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Lequel de ces végétaux n'est PAS un palmier ?",
+     "texte": null,
+     "choix": [
+      "Trachycarpus fortunei",
+      "Chamaerops humilis",
+      "Phoenix canariensis",
+      "Cycas revoluta"
+     ],
+     "bonne": 3,
+     "explication": "Le cycas, parfois vendu comme « palmier », est une gymnosperme : il ne fleurit pas et porte des cônes, comme les conifères. Les trois autres sont de vrais palmiers.",
+     "sources": [
+      "https://plants.ces.ncsu.edu/plants/cycas-revoluta",
+      "https://blogs.ifas.ufl.edu/nassauco/?p=680"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "cycas = gymnosperme (cônes), pas un palmier",
+      "sources_recoupement": [
+       "https://www.techno-science.net/fr/definitions/cycas-du-japon",
+       "https://edis.ifas.ufl.edu/publication/FR316/pdf"
+      ]
+     }
+    },
+    {
+     "position": 10,
+     "place": "difficile",
+     "substitution": null,
+     "id": "62a82bde13",
+     "theme": "Vocabulaire",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Lequel de ces sorbiers a des feuilles composées pennées ?",
+     "texte": null,
+     "choix": [
+      "Sorbus aria",
+      "Sorbus aucuparia",
+      "Sorbus torminalis",
+      "Sorbus intermedia"
+     ],
+     "bonne": 1,
+     "explication": "Le sorbier des oiseleurs a des feuilles pennées à folioles dentées. L'alisier blanc, l'alisier torminal et le sorbier de Suède ont des feuilles simples.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Sorbier_des_oiseleurs"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "sorbier des oiseleurs : feuilles composées imparipennées ; alisier blanc et torminal : feuilles simples",
+      "sources_recoupement": [
+       "https://www.cap.chu-lille.fr/2021/01/20/sorbier",
+       "https://www.techno-science.net/fr/definitions/sorbus"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "date": "2026-11-02",
+   "questions": [
+    {
+     "position": 1,
+     "place": "facile",
+     "substitution": null,
+     "id": "7ae3ed3098",
+     "theme": "Saisons",
+     "niveau": "facile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Lequel de ces conifères perd ses aiguilles chaque automne ?",
+     "texte": null,
+     "choix": [
+      "Larix decidua",
+      "Picea abies",
+      "Pinus sylvestris",
+      "Abies alba"
+     ],
+     "bonne": 0,
+     "explication": "Le mélèze est un conifère caduc : ses aiguilles jaunissent puis tombent en automne. Épicéa, pin sylvestre et sapin pectiné gardent les leurs.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/M%C3%A9l%C3%A8ze_d%27Europe"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "pin",
+      "sapin"
+     ],
+     "indice_epithete": "épithète « decidua » traduisible dans l'énoncé",
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "mélèze d'Europe : seul conifère indigène à perdre ses aiguilles à l'automne (decidua) ; persistance des autres conifères non recoupée mais élémentaire",
+      "sources_recoupement": [
+       "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/resineux/le-meleze",
+       "https://www.ecrins-parcnational.fr/sites/ecrins-parcnational.com/files/page/15777/fiche-meleze-2007.pdf"
+      ]
+     }
+    },
+    {
+     "position": 2,
+     "place": "facile",
+     "substitution": null,
+     "id": "E04",
+     "theme": "Écologie",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_ecologie",
+     "question": "Pourquoi la drosera capture-t-elle des insectes ?",
+     "texte": null,
+     "choix": [
+      "Pour s'en protéger",
+      "Pour compléter son alimentation en azote, rare dans son sol",
+      "Pour attirer des pollinisateurs",
+      "Pour se reproduire"
+     ],
+     "bonne": 1,
+     "explication": "Elle pousse dans des tourbières pauvres en azote : ses poils collants piègent les insectes, qu'elle digère pour s'en nourrir.",
+     "sources": [
+      "https://www.techno-science.net/fr/definitions/drosera",
+      "https://www.futura-sciences.com/planete/dossiers/botanique-differents-mecanismes-intervenant-lors-capture-chez-drosera-capensis-172/"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "drosera : milieux humides et pauvres en azote minéral, azote tiré des insectes capturés par les poils collants",
+      "sources_recoupement": [
+       "https://www.techno-science.net/fr/definitions/drosera",
+       "https://www.futura-sciences.com/planete/dossiers/botanique-differents-mecanismes-intervenant-lors-capture-chez-drosera-capensis-172/"
+      ]
+     }
+    },
+    {
+     "position": 3,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "be9ad6f5fc",
+     "theme": "Familles",
+     "niveau": "intermediaire",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "famille",
+     "question": "Sophora du Japon : à quelle famille appartient cette plante ?",
+     "texte": null,
+     "choix": [
+      "Ulmacées",
+      "Sapindacées",
+      "Moracées",
+      "Fabacées (légumineuses)"
+     ],
+     "bonne": 3,
+     "explication": "Sophora du Japon fait partie des Fabacées. Traits fréquents dans la famille : fleur papilionacée et fruit en gousse.",
+     "sources": [],
+     "statut": "validee",
+     "origine": "générée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "Sophora du Japon (Styphnolobium japonicum) = Fabacées, fruits en gousses",
+      "sources_recoupement": [
+       "https://jardin-thuret.hub.inrae.fr/content/download/6735/55087?version=1",
+       "https://species.wikimedia.org/wiki/Styphnolobium_japonicum"
+      ]
+     }
+    },
+    {
+     "position": 4,
+     "place": "facile",
+     "substitution": null,
+     "id": "3247581064",
+     "theme": "Vocabulaire",
+     "niveau": "facile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Laquelle de ces plantes pousse à partir d'un bulbe ?",
+     "texte": null,
+     "choix": [
+      "Iris germanica",
+      "Convallaria majalis",
+      "Narcissus pseudonarcissus",
+      "Paeonia lactiflora"
+     ],
+     "bonne": 2,
+     "explication": "La jonquille forme un bulbe, bourgeon souterrain entouré d'écailles charnues ; l'iris et le muguet ont un rhizome, tige souterraine.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Narcissus_pseudonarcissus"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "nuancé",
+      "note": "narcisse/jonquille : plante bulbeuse (confirmé) ; les rhizomes de l'iris et du muguet n'ont pas été recoupés ici (fait élémentaire) ; Narcissus pseudonarcissus est le narcisse jaune, la « vraie jonquille » étant N. jonquilla",
+      "sources_recoupement": [
+       "https://fr.vikidia.org/wiki/Narcisse_(fleur)",
+       "https://www.techno-science.net/glossaire-definition/Narcisse-jaune.html"
+      ]
+     }
+    },
+    {
+     "position": 5,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "3de57f00c4",
+     "theme": "Fruits et toxicité",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_toxicite_fruit",
+     "question": "La « baie » de genièvre est en réalité…",
+     "texte": null,
+     "choix": [
+      "Une vraie baie",
+      "Une drupe",
+      "Un arille",
+      "Un cône à écailles charnues"
+     ],
+     "bonne": 3,
+     "explication": "Le genévrier est un conifère : ses écailles soudées forment une boule charnue, le galbule. Sans ovaire, pas de vrai fruit, donc pas de baie au sens strict.",
+     "sources": [
+      "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/17498896/baie-de-genievre",
+      "https://www.lequotidiendupharmacien.fr/archives/galbule-0"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "genévrier"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "galbule : cône à écailles charnues soudées, fausse « baie »",
+      "sources_recoupement": [
+       "https://www.lequotidiendupharmacien.fr/archives/galbule-0",
+       "https://www.techno-science.net/fr/definitions/genevrier"
+      ]
+     }
+    },
+    {
+     "position": 6,
+     "place": "difficile",
+     "substitution": null,
+     "id": "c1a9e6abef",
+     "theme": "Vocabulaire",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Laquelle a des feuilles à la fois composées pennées et opposées ?",
+     "texte": null,
+     "choix": [
+      "Sambucus nigra",
+      "Robinia pseudoacacia",
+      "Sorbus aucuparia",
+      "Juglans regia"
+     ],
+     "bonne": 0,
+     "explication": "Le sureau noir a des feuilles pennées opposées. Robinier, sorbier et noyer ont aussi des feuilles pennées, mais alternes.",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Sureau_noir"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "noyer",
+      "robinier"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "sureau noir : feuilles opposées imparipennées (5-7 folioles)",
+      "sources_recoupement": [
+       "https://www.cap.chu-lille.fr/2021/01/05/sureau-noir",
+       "https://www.techno-science.net/fr/definitions/sureau-noir"
+      ]
+     }
+    },
+    {
+     "position": 7,
+     "place": "intermediaire (piège)",
+     "substitution": null,
+     "id": "c8885b647b",
+     "theme": "Usages et histoire",
+     "niveau": "intermediaire",
+     "piege": true,
+     "format": "qcm",
+     "mecanisme": "qcm_usage_histoire",
+     "question": "D'où le marronnier d'Inde est-il originaire ?",
+     "texte": null,
+     "choix": [
+      "De l'Inde",
+      "Des Balkans",
+      "De Chine",
+      "D'Amérique du Nord"
+     ],
+     "bonne": 1,
+     "explication": "Il pousse à l'état sauvage dans les montagnes des Balkans (Grèce, Albanie). Le nom « d'Inde » est trompeur : l'arbre a gagné l'Europe de l'Ouest via Constantinople.",
+     "sources": [
+      "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/feuillus/le-marronnier-aesculus-hippocastanum",
+      "https://fr.wikipedia.org/wiki/Marronnier_commun"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [
+      "marron"
+     ],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "marronnier d'Inde originaire des Balkans (nord de la Grèce) ; arrivée à Constantinople au XVIe siècle puis en Europe occidentale au XVIIe",
+      "sources_recoupement": [
+       "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/feuillus/le-marronnier-aesculus-hippocastanum",
+       "https://areq.net/lang/fr/Aesculus_hippocastanum.html"
+      ]
+     }
+    },
+    {
+     "position": 8,
+     "place": "facile",
+     "substitution": null,
+     "id": "9faa771a96",
+     "theme": "Écologie",
+     "niveau": "facile",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_ecologie",
+     "question": "Comment le trèfle enrichit-il le sol en azote ?",
+     "texte": null,
+     "choix": [
+      "Grâce à des champignons de ses feuilles",
+      "Grâce à des bactéries de ses racines",
+      "Grâce aux fourmis qui l'habitent",
+      "Grâce aux vers de terre qu'il attire"
+     ],
+     "bonne": 1,
+     "explication": "Comme les autres Fabacées, le trèfle abrite dans des nodosités de ses racines des bactéries (rhizobiums) qui fixent l'azote de l'air. Un engrais vert gratuit !",
+     "sources": [
+      "https://fr.wikipedia.org/wiki/Rhizobium",
+      "https://fr.wikipedia.org/wiki/Trèfle_blanc"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "trèfle (Fabacées) : bactéries (rhizobiums) dans les nodosités des racines fixent l'azote de l'air",
+      "sources_recoupement": [
+       "https://extranet-drome.chambres-agriculture.fr/fileadmin/user_upload/Auvergne-Rhone-Alpes/118_Extr-Drome_img/Publications/PDF/OBJECTIFSEAU_80_JUIN_2022.pdf",
+       "https://hal.inrae.fr/hal-02733997/document"
+      ]
+     }
+    },
+    {
+     "position": 9,
+     "place": "intermediaire",
+     "substitution": null,
+     "id": "N27",
+     "theme": "Usages et histoire",
+     "niveau": "intermediaire",
+     "piege": false,
+     "format": "qcm",
+     "mecanisme": "qcm_usage_histoire",
+     "question": "Le clou de girofle est…",
+     "texte": null,
+     "choix": [
+      "Un fruit séché",
+      "Un morceau d'écorce",
+      "Un bouton floral séché",
+      "Une graine"
+     ],
+     "bonne": 2,
+     "explication": "C'est le bouton floral du giroflier (Syzygium aromaticum), cueilli avant de s'ouvrir, quand il passe du vert au rouge, puis séché.",
+     "sources": [
+      "https://www.pharma-gdd.com/fr/les-bienfaits-du-clou-de-girofle",
+      "https://premierepeau.com/fr/pages/glossary-terms/clove"
+     ],
+     "statut": "validee",
+     "origine": "nouvelle",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "clou de girofle = bouton floral séché du giroflier (Syzygium aromaticum, Myrtacées)",
+      "sources_recoupement": [
+       "https://www.pharma-gdd.com/fr/les-bienfaits-du-clou-de-girofle",
+       "https://premierepeau.com/fr/pages/glossary-terms/clove"
+      ]
+     }
+    },
+    {
+     "position": 10,
+     "place": "difficile",
+     "substitution": null,
+     "id": "94254219fb",
+     "theme": "Saisons",
+     "niveau": "difficile",
+     "piege": false,
+     "format": "images",
+     "mecanisme": "photo_critere",
+     "question": "Laquelle de ces plantes fleurit de la fin de l'été à l'automne, souvent avant ses feuilles ?",
+     "texte": null,
+     "choix": [
+      "Cyclamen hederifolium",
+      "Primula vulgaris",
+      "Pulmonaria officinalis",
+      "Convallaria majalis"
+     ],
+     "bonne": 0,
+     "explication": "Le cyclamen de Naples fleurit d'août à novembre, avant ou avec ses feuilles marbrées, qui tapissent le sol l'hiver puis disparaissent l'été.",
+     "sources": [
+      "https://www.rhs.org.uk/plants/5145/cyclamen-hederifolium/details",
+      "https://en.wikipedia.org/wiki/Cyclamen_hederifolium"
+     ],
+     "statut": "validee",
+     "origine": "rédigée",
+     "sujets": [],
+     "indice_epithete": null,
+     "verification": {
+      "recoupement": "confirmé",
+      "note": "cyclamen de Naples : fleurit de la fin de l'été à novembre avant les feuilles marbrées ; repos estival du tubercule (dates variables selon les sources)",
+      "sources_recoupement": [
+       "https://www.techno-science.net/fr/definitions/cyclamen-hederifolium",
+       "https://www.bulbargence.com/?p=29740"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

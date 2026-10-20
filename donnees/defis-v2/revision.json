@@ -1,0 +1,3362 @@
+{
+ "29ad963efb": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Rosacées et composés cyanogènes (feuilles, noyau) confirmés",
+   "sources_recoupement": [
+    "https://www.cap.chu-lille.fr/2021/01/26/laurier-cerise",
+    "https://neobiota.lu/wp/wp-content/uploads/Prunus_laurocerasus_Manuel_FR.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 0
+ },
+ "2ad9e1eb8e": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "même mécanisme que #20 (liane toxique + parent) : ne pas programmer à moins de 5 jours",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Dioscoréacées (famille des ignames), baies rouges toxiques, confusion bryone mentionnée",
+   "sources_recoupement": [
+    "https://www.cap.chu-lille.fr/2021/01/05/tamier"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 1
+ },
+ "2d3d0c1b66": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "baies orange-rouge fin d'été, feuilles apparaissent à l'automne et disparaissent l'été suivant ; toxicité de l'espèce confirmée par analogie avec l'arum tacheté (fiche RHS plante toxique)",
+   "sources_recoupement": [
+    "https://www.techno-science.net/fr/definitions/arum-italicum",
+    "https://www.rhs.org.uk/plants/1658/wd/details"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 2
+ },
+ "37bc96af2a": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "figue = sycone (inflorescence), vrais fruits = akènes",
+   "sources_recoupement": [
+    "https://espacepourlavie.ca/flore-biodome/figuier-maxima",
+    "https://www.techno-science.net/fr/definitions/figue"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 3
+ },
+ "3d27f94de7": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "chiffres Anses (28 intoxications, 2 décès) à recouper",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "28 intoxications dont 2 décès entre 2020 et 2022 (Centres antipoison, Anses), colchique confondu avec ail des ours",
+   "sources_recoupement": [
+    "https://www.anses.fr/fr/content/actu-confusion-colchique-ail-des-ours",
+    "https://www.ordre.pharmacien.fr/les-communications/focus-sur/les-actualites/confusion-entre-colchique-et-ail-des-ours-des-intoxications-parfois-mortelles"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 4
+ },
+ "3de57f00c4": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "galbule : cône à écailles charnues soudées, fausse « baie »",
+   "sources_recoupement": [
+    "https://www.lequotidiendupharmacien.fr/archives/galbule-0",
+    "https://www.techno-science.net/fr/definitions/genevrier"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 5
+ },
+ "4d3eeb72ef": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "prunelle = drupe bleu-noir du prunellier, âpre avant les gelées ; les autres fruits cités (cenelle, cynorrhodon) non recherchés ici, cynorrhodon confirmé par ailleurs",
+   "sources_recoupement": [
+    "https://fr.vikidia.org/wiki/Prunellier",
+    "https://www.lalanguefrancaise.com/dictionnaire/definition/prunelle"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 6
+ },
+ "558d0a8b9a": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "framboise = fruit agrégé de drupéoles issues d'une seule fleur, pas une baie",
+   "sources_recoupement": [
+    "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8357943/framboise",
+    "https://fr.wiktionary.org/wiki/framboise"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 7
+ },
+ "64f661c618": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "explication": "La clématite des haies porte des akènes prolongés d'une longue plume soyeuse qui persiste tout l'hiver et les aide à voyager au vent."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "akènes plumeux persistants en hiver : confirmé ; le surnom « barbe de vieillard » n'a pas été retrouvé : retiré de l'explication",
+   "sources_recoupement": [
+    "https://inpn.mnhn.fr/espece/cd_nom/91886?lg=en"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 8
+ },
+ "75bc628b1e": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "baies orange, rameaux épineux, feuilles étroites argentées, dioïque",
+   "sources_recoupement": [
+    "https://uses.plantnet-project.org/fr/Hippophae_rhamnoides",
+    "https://ecophytopic.fr/sites/default/files/2024-11/Fiche_technique_Argousier.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 9
+ },
+ "79920157d8": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "cornouilles rouges acidulées en confiture ; baies noires du sanguin non comestibles (sources concordantes)",
+   "sources_recoupement": [
+    "https://www.techno-science.net/fr/definitions/cornouiller-male",
+    "https://fr.vikidia.org/wiki/Cornouiller_m%C3%A2le"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 10
+ },
+ "7be20eddf6": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "fraise = faux-fruit, vrais fruits = akènes",
+   "sources_recoupement": [
+    "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8358058/fraise",
+    "https://www.techno-science.net/fr/definitions/fraise-fruit"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 11
+ },
+ "803a030023": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "vocabulaire dense mais clair",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "marron d'Inde = graine dans une capsule ; châtaigne dans une bogue (cupule)",
+   "sources_recoupement": [
+    "https://www.futura-sciences.com/planete/actualites/botanique-difference-marron-chataigne-92075/",
+    "https://www.larousse.fr/dictionnaires/francais/marrons"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 12
+ },
+ "813cd9374c": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "balauste = fruit de la grenade",
+   "sources_recoupement": [
+    "https://www.lalanguefrancaise.com/dictionnaire/definition/balauste"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 13
+ },
+ "91a85ff031": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "explication": "Le baguenaudier, ou « arbre à vessies », doit son nom à ses gousses renflées et translucides à maturité."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "gousses gonflées (arbre à vessies) confirmé ; toxicité des graines NON retrouvée dans les sources : affirmation retirée de l'explication",
+   "sources_recoupement": [
+    "https://openobs.mnhn.fr/redirect/inpn/datasets/86010?view=mapr"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 14
+ },
+ "9f8125659c": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "cynorrhodon = faux-fruit, akènes poilus, « gratte-cul »",
+   "sources_recoupement": [
+    "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/2082837/cynorrhodon",
+    "https://www.techno-science.net/fr/definitions/cynorrhodon"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 15
+ },
+ "a0da9dd7d9": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "floraison automne ; baies mûres fin d'hiver-printemps ; toxiques pour l'homme (LPO, Province de Liège)",
+   "sources_recoupement": [
+    "https://occitanie.lpo.fr/wp-content/uploads/2020/04/ficherefugeslpo_lierre_br.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 16
+ },
+ "b364643f76": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Moracées, infrutescence, fruit non comestible ; nuance : graines discutées selon les sources",
+   "sources_recoupement": [
+    "https://www.techno-science.net/fr/definitions/oranger-des-osages",
+    "https://gobotany.nativeplanttrust.org/species/Maclura/pomifera/"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 17
+ },
+ "c98ec072af": {
+  "statut": "ecartee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "fuite du nom latin affiché (Allium = ail) : la réponse se lit sous la photo",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "non recoupé",
+   "sources_recoupement": []
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 18
+ },
+ "dff6c3e757": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "latin « albus » = blanc, indice faible",
+  "correction": {
+   "explication": "La symphorine porte des baies blanches spongieuses qui éclatent sous le pied. Elles sont considérées comme toxiques (irritantes pour le tube digestif), même si elles sont peu dangereuses en petite quantité."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "baies classées toxiques ; « faiblement toxique » défendable (saponines mal absorbées) mais d'autres sources citent la chélidonine : prudence, formulation à garder mesurée",
+   "sources_recoupement": [
+    "https://www.treesandshrubsonline.org/articles/symphoricarpos/",
+    "https://garden.rcplondon.ac.uk/Plant/Details/1814"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 19
+ },
+ "e6c945dc63": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "voir #1",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Cucurbitacées, baies rouges et racine toxiques, « navet du diable »",
+   "sources_recoupement": [
+    "https://www.cap.chu-lille.fr/2021/01/26/bryone-dioique",
+    "https://www.techno-science.net/fr/definitions/bryone-dioique"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 20
+ },
+ "f624dfa743": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "gland = akène partiellement enveloppé d'une cupule",
+   "sources_recoupement": [
+    "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/17030679/gland",
+    "https://www.techno-science.net/fr/definitions/chene"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 21
+ },
+ "f7e64c71b3": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "arille formé à partir du funicule, graine hautement toxique, feuillage toxique ; pas un vrai fruit (gymnosperme)",
+   "sources_recoupement": [
+    "https://www.techno-science.net/fr/definitions/if-botanique",
+    "https://www.cap.chu-lille.fr/2021/01/26/if"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 22
+ },
+ "fa58b8e114": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "sources secondaires faibles : recoupement indispensable",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "la bractée membraneuse assure l'anémochorie ; les sources divergent sur le type de fruit (akène, noix), sans effet sur la question",
+   "sources_recoupement": [
+    "https://cahier-de-prepa.fr/bcpst2-lechesnoy/download?id=1247",
+    "https://www.universalis.fr/encyclopedie/anemochorie/"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 23
+ },
+ "fc918e4b03": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "rameaux aplatis (cladodes) portant fleurs puis baies rouges, baies toxiques",
+   "sources_recoupement": [
+    "https://www.calanques-parcnational.fr/fr/fragon-petit-houx",
+    "https://www.agglo-agen.net/fileadmin/user_upload_agglo/pdf/06-Mes_loisirs/Trotte_lapin/fiches-nature/FICHE_ESPECE_FLORE_FRAGON_PIQUANT.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 24
+ },
+ "fe0c5f6303": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "mûre du mûrier : drupéoles issues de fleurs différentes ; mûre de ronce : une seule fleur",
+   "sources_recoupement": [
+    "https://letribunaldunet.fr/le-saviez-vous/pourquoi-framboise-mure-pas-baie-banane.html"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 25
+ },
+ "0a9839ee06": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": true,
+  "note": "",
+  "correction": {
+   "explication": "Shigeru Miki l'a décrit en 1941 d'après des fossiles, en le croyant éteint. Des arbres vivants ont ensuite été trouvés en Chine (récoltés en 1944) : un arbre souvent qualifié de « fossile vivant »."
+  },
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Miki 1941, Metasequoia d'après des fossiles ; arbres vivants récoltés en Chine en 1944, décrits en 1948",
+   "sources_recoupement": [
+    "https://arboretum.harvard.edu/stories/how-metasequoia-the-living-fossil-was-discovered-in-China/",
+    "https://www.britannica.com/plant/dawn-redwood"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 26
+ },
+ "15559d5b90": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "le lierre ne puise ni sève ni nutriments dans l'arbre : crampons = racines adventives de fixation, eau et minéraux par les racines du sol",
+   "sources_recoupement": [
+    "https://areq.net/lang/fr/Lierre_grimpant.html",
+    "https://www.futura-sciences.com/planete/definitions/botanique-lierre-10291/"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 27
+ },
+ "18c0b6233d": {
+  "statut": "ecartee",
+  "niveau": "difficile",
+  "piege": true,
+  "note": "doublon de #74 (métaséquoia caduc) et #60 ; « sempervirens » visible sous la photo du séquoia",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "non recoupé",
+   "sources_recoupement": []
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 28
+ },
+ "317f55dbfe": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "les « géraniums » des balcons sont des Pelargonium ; fleurs régulières chez Geranium, zygomorphes chez Pelargonium ; pélargoniums frileux",
+   "sources_recoupement": [
+    "https://franco.wiki/fr/Geranium.html",
+    "https://laidbackgardener.blog/geranium-or-pelargonium-lets-stop-the-confusion/"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 29
+ },
+ "3287d78698": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Schinus molle = Anacardiacées (famille de la mangue, de la noix de cajou, du pistachier), pas du poivre (Pipéracées)",
+   "sources_recoupement": [
+    "https://jardin-thuret.hub.inrae.fr/content/download/6704/54892?version=1",
+    "https://premierepeau.com/fr/pages/glossary-terms/pink-pepper-schinus-molle"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 30
+ },
+ "38af785086": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Nandina domestica = Berbéridacées (famille de l'épine-vinette), seul rapport avec le bambou : le port",
+   "sources_recoupement": [
+    "https://www.rhs.org.uk/plants/11327/wd/details",
+    "https://species.wikimedia.org/wiki/Nandina_domestica"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 31
+ },
+ "3d8aaef9ea": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "nom latin Laurus nobilis affiché : indice (laur- ≈ laurier) ; acceptable, ne pas placer avec un autre « vrai genre »",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "seul Laurus nobilis est un vrai laurier (Lauracées) ; laurier du Portugal = Rosacées ; laurier-tin = viorne (Caprifoliaceae/Adoxaceae selon classification)",
+   "sources_recoupement": [
+    "https://www.futura-sciences.com/planete/definitions/plante-laurier-17801/",
+    "https://www.provence7.com/?p=6152"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 32
+ },
+ "41510a4f99": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "cyprès chauve : conifère caduc, perd ses aiguilles à l'automne (le seul Cupressacée caduc)",
+   "sources_recoupement": [
+    "https://fr.vikidia.org/wiki/Cypr%C3%A8s_chauve",
+    "https://www.futura-sciences.com/planete/definitions/botanique-cypres-chauve-8503/"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 33
+ },
+ "4762308b17": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "bananier : herbe géante ; pseudo-tronc = gaines foliaires emboîtées ; vraie tige souterraine (rhizome ou corme)",
+   "sources_recoupement": [
+    "https://planet-vie.ens.fr/node/1420/download/pdf",
+    "https://agritrop.cirad.fr/413914/1/413914.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 34
+ },
+ "4be509c398": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": true,
+  "note": "",
+  "correction": {
+   "question": "Les « saules » de Babylone cités dans le psaume 137 étaient, selon l'hypothèse la plus répandue…",
+   "explication": "Linné a cru les reconnaître dans le saule pleureur, venu en fait de Chine. L'hypothèse la plus courante est que le psaume évoquait Populus euphratica, le peuplier de l'Euphrate, même si l'identification reste débattue."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "Linné a bien basé babylonica sur une erreur ; Populus euphratica est l'hypothèse la plus courante mais d'autres sources proposent Salix safsaf : « sans doute » remplacé par « selon l'hypothèse la plus répandue »",
+   "sources_recoupement": [
+    "https://www.techno-science.net/fr/definitions/saule-pleureur",
+    "https://landscapeplants.oregonstate.edu/plants/salix-babylonica"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 35
+ },
+ "63def6029e": {
+  "statut": "ecartee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "fuite totale : « genre Acacia » et nom latin Acacia dealbata affiché ; remplacée par une question sur l'origine du robinier (lot de nouvelles questions)",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "non recoupé",
+   "sources_recoupement": []
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 36
+ },
+ "776dd0b699": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "tulipier de Virginie = Magnoliacées, nom dû à la forme de la feuille et de la fleur",
+   "sources_recoupement": [
+    "https://www.futura-sciences.com/planete/definitions/botanique-tulipier-virginie-8670/",
+    "https://www.techno-science.net/fr/definitions/tulipier-de-virginie"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 37
+ },
+ "7be19a862c": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "fleurs bleues en sol acide (aluminium disponible), roses en sol alcalin (RHS)",
+   "sources_recoupement": [
+    "https://www.rhs.org.uk/plants/hydrangea/shrubby",
+    "https://plantura.garden/uk/trees-shrubs/hydrangeas/blue-hydrangeas"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 38
+ },
+ "8c0f13e0c0": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "marron d'Inde (Aesculus) toxique ≠ châtaigne (Castanea, Fagacées) ; « marron » commerce = grosse châtaigne",
+   "sources_recoupement": [
+    "https://www.quechoisir.org/actualite-marron-chataigne-ou-marron-d-inde-gare-aux-confusions-n71287/",
+    "https://www.larousse.fr/dictionnaires/francais/marrons"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 39
+ },
+ "955dcd0d69": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "bambou = Poacées (graminées), chaume creux à nœuds",
+   "sources_recoupement": [
+    "https://www.techno-science.net/fr/definitions/bambou",
+    "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8407157/bambou"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 40
+ },
+ "9efc846bb9": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "sycomore biblique = Ficus sycomorus ; érable sycomore = Acer pseudoplatanus ; sycamore américain = platane",
+   "sources_recoupement": [
+    "https://uses.plantnet-project.org/fr/Sycomore",
+    "https://www.biblicaltraining.org/library/sycamore"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 41
+ },
+ "c0348fcfda": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": {
+   "explication": "Malgré ses feuilles plates et caduques, le ginkgo est une gymnosperme. C'est le seul représentant vivant des Ginkgophytes."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "ginkgo = gymnosperme, seul représentant vivant des Ginkgophytes, feuilles caduques ; l'expression « fossile vivant » est contestée : adoucie dans les textes concernés",
+   "sources_recoupement": [
+    "https://www.futura-sciences.com/planete/definitions/botanique-ginkgo-9538/",
+    "https://www.futura-sciences.com/planete/definitions/classification-vivant-ginkgophyte-14471/"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 42
+ },
+ "c33413e5b9": {
+  "statut": "ecartee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "fuite : « genre Syringa » dans l'énoncé et Syringa vulgaris affiché sous la photo",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "non recoupé",
+   "sources_recoupement": []
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 43
+ },
+ "cca02bacb7": {
+  "statut": "ecartee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "fuite : Jasminum affiché sous la photo ; remplacée par la question N29 sans nom latin",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "non recoupé",
+   "sources_recoupement": []
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 44
+ },
+ "e80c01b28a": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "cycas = gymnosperme (cônes), pas un palmier",
+   "sources_recoupement": [
+    "https://www.techno-science.net/fr/definitions/cycas-du-japon",
+    "https://edis.ifas.ufl.edu/publication/FR316/pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 45
+ },
+ "ea08e174f8": {
+  "statut": "ecartee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "trois Acer + un Platanus affichés : l'intrus se voit sans connaître les érables",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "non recoupé",
+   "sources_recoupement": []
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 46
+ },
+ "eeda23eedd": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "même mécanisme que #35 (Salix babylonica) : espacer",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Salix babylonica originaire de Chine ; Linné l'a nommé d'après le psaume 137",
+   "sources_recoupement": [
+    "https://www.techno-science.net/fr/definitions/saule-pleureur",
+    "https://www.larousse.fr/encyclopedie/divers/saule/90246"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 47
+ },
+ "fd4c512be5": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Glechoma hederacea = Lamiacées (menthe, lavande), tige carrée, feuilles opposées, odeur aromatique",
+   "sources_recoupement": [
+    "https://gentiana.org/wp-content/uploads/Glechoma-hederacea.pdf",
+    "https://www.techno-science.net/fr/definitions/lierre-terrestre"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 48
+ },
+ "ff4be104f9": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "sapin : cônes dressés qui se désarticulent sur l'arbre, seul l'axe reste ; épicéa : cônes pendants tombant entiers",
+   "sources_recoupement": [
+    "https://arboretum-roure.org/wp-content/uploads/2019/07/Les-essences-forestie╠Çres-de-lArboretum-de-Roure-Par-Henri-SANDOZ.pdf",
+    "https://tela-botanica.org/sites/botanique/fr/documents/biblio/articles_en_ligne/abres_lozere/gymnospermes.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 49
+ },
+ "1e445b086a": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "noisetier monoïque ; chatons mâles jaunes pendants ; fleurs femelles discrètes à styles rouge carmin ; floraison surtout janvier-février",
+   "sources_recoupement": [
+    "https://inpn.mnhn.fr/espece/cd_nom/92608?lg=en",
+    "https://www.tela-botanica.org/wp-content/uploads/2026/02/Floraison-Noisetier-ODS.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 50
+ },
+ "26865f64ba": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "arbre de Judée : cauliflorie, fleurs sur branches et tronc avant les feuilles",
+   "sources_recoupement": [
+    "https://www.lapetiteloiterie.fr/lpl/wp-content/uploads/cercis-siliquastrum.pdf",
+    "https://franco.wiki/fr/Cauliflore.html"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 51
+ },
+ "3003059d80": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "marcescence : feuilles sèches retenues tout l'hiver, hêtre (surtout jeunes sujets), charme, chênes ; arbre caduc",
+   "sources_recoupement": [
+    "https://www.futura-sciences.com/planete/definitions/botanique-marcescence-6289/",
+    "https://www.consoglobe.com/marcescence-jardin-feuilles-hiver-cg?amp"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 52
+ },
+ "35ead9485b": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": {
+   "explication": "Le prunellier fleurit en mars-avril sur bois nu. Les trois autres fleurissent avec ou après leurs feuilles."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "prunellier : floraison en mars-avril avant les feuilles (Province de Liège) ; la floraison de l'aubépine en avril-mai n'a pas été recoupée par cette recherche",
+   "sources_recoupement": [
+    "https://www.provincedeliege.be:443/sites/default/files/media/10952/Prunellier%20%28Prunus%20spinosa%29.pdf",
+    "https://www.techno-science.net/fr/definitions/prunellier"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 53
+ },
+ "3ee234debe": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "proche de #70 (pigments) : espacer",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "la chlorophylle dégradée à l'automne révèle les pigments jaunes (caroténoïdes, xanthophylles)",
+   "sources_recoupement": [
+    "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/le-mystere-des-couleurs-du-feuillage-en-automne",
+    "https://espacepourlavie.ca/les-couleurs-dautomne-des-arbres"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 54
+ },
+ "49564a9c4d": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "feuillage persistant : renouvellement progressif ; durée de vie 2-3 ans du chêne vert donnée par une seule fiche",
+   "sources_recoupement": [
+    "https://www.futura-sciences.com/planete/definitions/botanique-feuille-persistante-15188/",
+    "https://oneaction.ch/wp-content/uploads/2024/03/Reunis-sous-la-canopee-2024-Quercus-ilex.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 55
+ },
+ "6366f4ea71": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "explication": "La viorne de Bodnant ouvre ses bouquets roses parfumés de novembre à mars sur bois nu. Viorne obier, du Japon et mancienne fleurissent au printemps, feuillées."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "viorne de Bodnant : floraison parfumée sur bois nu surtout de novembre à mars (parfois dès octobre) : « d'octobre à mars » corrigé en « de novembre à mars »",
+   "sources_recoupement": [
+    "https://www.jardiner-malin.fr/fiche/la-viorne-de-bodnant-planter.html"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 56
+ },
+ "68935fdac5": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "bisannuelle : 1re année végétative, 2e année floraison et mort (OQLF) ; molène = exemple",
+   "sources_recoupement": [
+    "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/26544618/plante-bisannuelle",
+    "https://www.techno-science.net/fr/definitions/molene-thapsus"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 57
+ },
+ "69524ea63d": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "question": "Quel arbuste se couvre de fleurs jaunes avant ses feuilles, à la sortie de l'hiver ?"
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "forsythia : floraison en mars-avril avant les feuilles (fiches de pépiniéristes) : « à la fin de l'hiver » corrigé en « à la sortie de l'hiver » ; floraison estivale des distracteurs non recoupée",
+   "sources_recoupement": [
+    "https://www.lalanguefrancaise.com/dictionnaire/definition/forsythia"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 58
+ },
+ "706b0a715c": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "tussilage : fleurit de février à avril avant les feuilles ; « filius ante patrem » (fils avant le père)",
+   "sources_recoupement": [
+    "https://www.techno-science.net/fr/definitions/tussilage",
+    "https://areq.net/lang/fr/Tussilage.html"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 59
+ },
+ "7ae3ed3098": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "epithète « decidua » visible : indice faible",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "mélèze d'Europe : seul conifère indigène à perdre ses aiguilles à l'automne (decidua) ; persistance des autres conifères non recoupée mais élémentaire",
+   "sources_recoupement": [
+    "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/resineux/le-meleze",
+    "https://www.ecrins-parcnational.fr/sites/ecrins-parcnational.com/files/page/15777/fiche-meleze-2007.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 60
+ },
+ "7d94b8729f": {
+  "statut": "ecartee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "définition triviale (aucun apprentissage au-delà du vocabulaire)",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "non recoupé",
+   "sources_recoupement": []
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 61
+ },
+ "86aaad2946": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "mimosa argenté (Acacia dealbata) : floraison janvier-mars, origine Australie, introduit sur la Côte d'Azur au XIXe, envahissant",
+   "sources_recoupement": [
+    "https://www.techno-science.net/fr/definitions/acacia-dealbata",
+    "https://areq.net/lang/fr/Acacia_dealbata.html"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 62
+ },
+ "8b504b5493": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "jargon (Raunkiær) mais bien expliqué",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Raunkiær : géophytes = bourgeons enterrés (bulbes, tubercules, rhizomes) ; thérophytes = annuelles survivant en graines",
+   "sources_recoupement": [
+    "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8413042/type-biologique",
+    "https://www.pacificbulbsociety.org/pbswiki/index.php/Geophyte"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 63
+ },
+ "8e30be2dbf": {
+  "statut": "ecartee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "définition triviale",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "non recoupé",
+   "sources_recoupement": []
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 64
+ },
+ "94254219fb": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "cyclamen de Naples : fleurit de la fin de l'été à novembre avant les feuilles marbrées ; repos estival du tubercule (dates variables selon les sources)",
+   "sources_recoupement": [
+    "https://www.techno-science.net/fr/definitions/cyclamen-hederifolium",
+    "https://www.bulbargence.com/?p=29740"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 65
+ },
+ "9430c5ee47": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "stratification = graines humides au froid ; scarification = entamer l'enveloppe ; la vernalisation (distracteur) n'a pas été définie par cette recherche mais est correcte (froid sur la plante)",
+   "sources_recoupement": [
+    "https://espacepourlavie.ca/traitements-pour-stimuler-la-germination-des-semences",
+    "https://www.universalis.fr/encyclopedie/dormances-vegetales/"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 66
+ },
+ "953a3b17d3": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "trois Rosa + un Helleborus affichés : l'intrus se voit ; distracteurs remplacés par des « roses » qui n'en sont pas Rosa",
+  "correction": {
+   "choix": [
+    "Alcea rosea",
+    "Nerium oleander",
+    "Rosa canina",
+    "Helleborus niger"
+   ],
+   "bonne": 3,
+   "explication": "La rose de Noël n'est pas une rose : c'est l'hellébore noir, une Renonculacée à fleurs blanches qui fleurit en hiver. Rose trémière et laurier-rose ne sont pas non plus de vraies roses ; seul l'églantier est un Rosa. Plante toxique si ingérée."
+  },
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "rose de Noël = Helleborus niger, Renonculacées, fleurit en hiver, très toxique",
+   "sources_recoupement": [
+    "https://www.larousse.fr/dictionnaires/francais/ellebore",
+    "https://www.jardiner-malin.fr/fiche/hellebore-noir.html"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 67
+ },
+ "a4818d9dbb": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "odeur invérifiable sur photo mais anecdote marquante",
+  "correction": {
+   "explication": "Les feuilles d'automne de l'arbre à caramel (katsura) dégagent une odeur de sucre brûlé ou de caramel, surtout par temps humide ; on l'attribue au maltol."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "odeur de caramel à la chute des feuilles confirmée ; l'attribution au maltol ne repose que sur un site commercial : formulation adoucie (« attribuée au maltol »)",
+   "sources_recoupement": [
+    "https://espacepourlavie.ca/carnet-horticole/katsura"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 68
+ },
+ "ad5c31f104": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "explication": "Le copalme d'Amérique est planté pour ses couleurs d'automne, du jaune orangé au rouge pourpre."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "liquidambar : teintes d'automne du jaune au rouge-pourpre selon les cultivars (sources de pépiniéristes) ; la couleur jaune du ginkgo, du bouleau et du peuplier n'a pas été recoupée ici",
+   "sources_recoupement": [
+    "https://www.techno-science.net/fr/definitions/liquidambar",
+    "https://www.jardiner-malin.fr/fiche/liquidambar-copalme.html"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 69
+ },
+ "c4664a0c43": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "anthocyanes : rouges produites pendant la transition automnale à partir des sucres (érables)",
+   "sources_recoupement": [
+    "https://espacepourlavie.ca/les-couleurs-dautomne-des-arbres",
+    "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/le-mystere-des-couleurs-du-feuillage-en-automne"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 70
+ },
+ "cbd72d2ba1": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Lunaria annua souvent bisannuelle, synonyme Lunaria biennis",
+   "sources_recoupement": [
+    "https://www.rhs.org.uk/plants/98034/lunaria-annua/details",
+    "https://franco.wiki/fr/Lunaire.html"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 71
+ },
+ "d033556e39": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "proche de #44/#72 « jasmin » : espacer",
+  "correction": {
+   "explication": "Le jasmin d'hiver ouvre ses fleurs jaunes, sans parfum, de décembre à mars sur rameaux nus. Les autres « jasmins » proposés fleurissent plus tard, en été."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "jasmin d'hiver : fleurit janvier-mars sur bois nu, sans parfum ; floraison estivale des autres « jasmins » non recoupée",
+   "sources_recoupement": [
+    "https://luberon.fr/luberon/parc-naturel-regional/flore/annu+jasmin-d-hiver+2332.html",
+    "https://www.jardiner-malin.fr/fiche/jasmin-hiver.html"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 72
+ },
+ "d85f3dce13": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "facile et classique",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "perce-neige : floraison janvier-mars ; galantamine isolée des bulbes (Galanthus), médicament contre Alzheimer",
+   "sources_recoupement": [
+    "https://www.futura-sciences.com/planete/definitions/fleurs-perce-neige-17048/",
+    "https://mediplantepirus.med.uoi.gr/pharmacology_en/plant_details.php?id=26"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 73
+ },
+ "de9a46b16f": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": true,
+  "note": "retenue à la place de #28 (même mécanisme)",
+  "correction": {
+   "explication": "Le métaséquoia, décrit d'abord à partir de fossiles puis retrouvé vivant en Chine dans les années 1940, est caduc : ses aiguilles prennent une teinte fauve puis tombent en automne."
+  },
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "métaséquoia : conifère caduc (RHS), comme le mélèze et le cyprès chauve ; persistance des séquoias non recherchée ici (fait élémentaire)",
+   "sources_recoupement": [
+    "https://www.rhs.org.uk/plants/11093/wd/details",
+    "https://www.techno-science.net/fr/definitions/metasequoia-glyptostroboides"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 74
+ },
+ "eae414b593": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "même plante que #10, autre propriété : espacer",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "cornouiller mâle : floraison jaune dès fin février-mars sur rameaux nus ; fleurs du sanguin non recherchées",
+   "sources_recoupement": [
+    "https://environnement.wallonie.be/files/Images/Loisirs/Ev%c3%a8nements/Semaine%20de%20l'arbre/Archives/2019_brochure_cornouiller.pdf",
+    "https://www.techno-science.net/fr/definitions/cornouiller-male"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 75
+ },
+ "ec73d07e26": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Magnolia grandiflora persistant ; M. soulangeana, kobus, stellata caducs à floraison avant les feuilles",
+   "sources_recoupement": [
+    "https://www.saint-cyr-sur-loire.com/content/download/16746/262626/version/3/file/FICHES_BOTANIQUES_Magnolia-a-grandes-fleurs.pdf",
+    "https://www.jardiner-malin.fr/fiche/magnolia-couleurs.html"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 76
+ },
+ "0d40b08d11": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Jean Robin, jardinier de Henri III, Henri IV et Louis XIII ; Linné a dédié Robinia à lui (et à son fils Vespasien) ; Vespasien a planté un robinier au Jardin du roi en 1636",
+   "sources_recoupement": [
+    "https://en.wikipedia.org/wiki/Jean_Robin_(botanist)",
+    "https://www.paris.fr/pages/si-le-plus-vieil-arbre-de-paris-le-robinier-du-square-viviani-nous-contait-son-histoire-6586"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 77
+ },
+ "106c2e38e1": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "quercitron = écorce interne de Quercus velutina (chêne noir), teinture jaune utilisée jusqu'au XXe siècle ; Chevreul décrit la quercitrine en 1830",
+   "sources_recoupement": [
+    "https://www.lalanguefrancaise.com/dictionnaire/definition/quercitron",
+    "https://cameo.mfa.org/wiki/Black_oak"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 78
+ },
+ "21d56d289a": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "violon : fond, éclisses et manche souvent en érable (érable ondé), table en épicéa",
+   "sources_recoupement": [
+    "https://www.waldwissen.net/fr/economie-forestiere/filiere-bois/transformation-du-bois/bois-de-resonance-depicea",
+    "https://www.universalis.fr/encyclopedie/violon/4-problemes-technologiques-de-construction/"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 79
+ },
+ "3a6a4f206a": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Philémon et Baucis changés en chêne et tilleul (Ovide, Métamorphoses VIII, v. 712)",
+   "sources_recoupement": [
+    "https://finto.fi/ic/en/page/97A?clang=fr",
+    "https://bibliotheques.paris.fr/jeunesse/doc/SYRACUSE/1186369/philemon-et-baucis-une-metamorphose-d-ovide"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 80
+ },
+ "4b486a3086": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Attis changé en pin (Ovide, Métamorphoses X, v. 104) ; numéros de vers issus de notices secondaires",
+   "sources_recoupement": [
+    "https://finto.fi/ic/en/page/97A4?clang=fr",
+    "https://www.theatre-classique.fr/pages/pdf/OVIDE_METAMORPHOSES_10.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 81
+ },
+ "4ea41c844c": {
+  "statut": "ecartee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "porte sur une ville du Jura, pas sur la plante ; la bruyère est couverte par #85",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "non recoupé",
+   "sources_recoupement": []
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 82
+ },
+ "5384bfc1be": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "explication": "Il vient du couvent de Minimes de Sainte-Lucie, en Lorraine (près de Sampigny, dans la Meuse, selon Techno-science), où l'on façonnait au XVIIe siècle des objets dans ce bois odorant."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "nom issu du couvent de Minimes Sainte-Lucie (Sampigny, Meuse selon Techno-science ; une fiche horticole le place dans les Vosges) : « Lorraine » reste valable ; localisation précise à adoucir",
+   "sources_recoupement": [
+    "https://www.techno-science.net/fr/definitions/bois-de-sainte-lucie"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 83
+ },
+ "673651c50d": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "même sujet que #79 : espacer",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "table d'harmonie du violon en épicéa (élasticité et résistance), appelé bois de résonance",
+   "sources_recoupement": [
+    "https://www.waldwissen.net/fr/economie-forestiere/filiere-bois/transformation-du-bois/bois-de-resonance-depicea"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 84
+ },
+ "71aa47c25a": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "pipes taillées dans les souches (broussin) de la bruyère arborescente Erica arborea, bois très dur et résistant à la chaleur ; récolte de souches de 30 à 60 ans",
+   "sources_recoupement": [
+    "https://calanques-parcnational.fr/fr/bruyere-arborescente",
+    "https://waynesword.net/briarwd.htm"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 85
+ },
+ "79daedab53": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Hyperion, Sequoia sempervirens, découvert en 2006, 115,55 m (Guinness)",
+   "sources_recoupement": [
+    "https://www.guinnessworldrecords.com/world-records/tallest-tree-living",
+    "https://www.nbcnews.com/id/wbna15066332"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 86
+ },
+ "81a5a79203": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "explication": "Selon l'anecdote, un riche amateur aurait payé 40 écus un jeune ginkgo à Montpellier en 1788, l'un des premiers cultivés en France."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "« arbre aux quarante écus » : achat à Montpellier en 1788 attesté ; le nom de Pétigny et l'origine anglaise ne reposent que sur une source (lesarbres.fr) : formulation à resserrer",
+   "sources_recoupement": [
+    "https://www.futura-sciences.com/planete/definitions/botanique-ginkgo-9538/",
+    "https://lesarbres.fr/en/ginkgo.html"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 87
+ },
+ "83674efd58": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "« aspirine » = a (acétyle) + spir (acide spirique tiré de Spiraea ulmaria, aujourd'hui Filipendula ulmaria) ; Bayer 1899 ; l'acide salicylique vient aussi du saule, d'où l'intérêt de la nuance donnée",
+   "sources_recoupement": [
+    "https://www.etudes-touloises.fr/archives/137/art1.pdf",
+    "https://www.techno-science.net/glossaire-definition/Acide-acetylsalicylique.html"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 88
+ },
+ "850a17152e": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "explication": "Du grec géranos, la grue : le fruit allongé et pointu évoque son bec."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "Geranium < grec geranion, diminutif de geranos (grue), fruit en forme de bec ; la mention « Linné reprit ce nom en 1753 » n'a pas été retrouvée : retirée ; le surnom « bec-de-grue » est attribué par certains auteurs aux Erodium",
+   "sources_recoupement": [
+    "https://www.etymonline.com/fr/word/geranium",
+    "https://www.lalanguefrancaise.com/dictionnaire/definition/geranium"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 89
+ },
+ "91d85f6519": {
+  "statut": "ecartee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "fait réglementaire très précis (référentiel PEFC 2025), fragile et peu botanique",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "non recoupé",
+   "sources_recoupement": []
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 90
+ },
+ "96abd16e04": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "robinier du square Viviani considéré comme le plus vieil arbre de Paris, planté selon la tradition par Jean Robin vers 1601",
+   "sources_recoupement": [
+    "https://www.paris.fr/pages/si-le-plus-vieil-arbre-de-paris-le-robinier-du-square-viviani-nous-contait-son-histoire-6586",
+    "https://thetreeographer.com/2018/04/06/oldest-tree-in-paris-robinia-of-square-rene-viviani"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 91
+ },
+ "96e24bcf5c": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "millepertuis : « mille trous » = glandes translucides à huile essentielle vues à contre-jour",
+   "sources_recoupement": [
+    "https://www.techno-science.net/fr/definitions/millepertuis-perfore",
+    "https://fr.wiktionary.org/wiki/millepertuis"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 92
+ },
+ "9897a76286": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "explication": "La grande absinthe (Artemisia absinthium) parfumait cette liqueur. Une loi de mars 1915 en interdit la fabrication et la vente en France."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "absinthe interdite en France par une loi de mars 1915 (16 ou 17 mars selon les sources) : date resserrée en « mars 1915 »",
+   "sources_recoupement": [
+    "https://www.herodote.net/17_mars_1915-evenement-19150317.php",
+    "https://www.academie-medecine.fr/wp-content/uploads/2014/09/pages-de-515-522.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 93
+ },
+ "9eb4b2cf76": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "chêne-liège : liège levé sans abattre l'arbre et qui se reconstitue ; première levée = démasclage",
+   "sources_recoupement": [
+    "https://ofme.org/documents/Sylvi/Subericulture_ASL.pdf",
+    "https://www.tourismelandes.com/?p=85961"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 94
+ },
+ "a050d7f61d": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "galantamine = alcaloïde du bulbe de perce-neige (Galanthus), utilisée dans le traitement de la maladie d'Alzheimer",
+   "sources_recoupement": [
+    "https://mediplantepirus.med.uoi.gr/pharmacology_en/plant_details.php?id=26",
+    "https://springermedizin.at/the-snowdrop-wellspring-of-galanthamine/18806032"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 95
+ },
+ "b4e80ab0c4": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "même mécanisme que #86 : espacer",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "General Sherman : plus gros arbre vivant en volume (1 487 m³ selon Futura ; Guinness donne d'autres chiffres selon la méthode), 83-84 m de haut",
+   "sources_recoupement": [
+    "https://www.guinnessworldrecords.com/world-records/largest-living-tree",
+    "https://www.futura-sciences.com/planete/definitions/botanique-sequoia-geant-8669/"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 96
+ },
+ "bc38ec277a": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "même sujet que #98 : espacer",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "gemmage = récolte de la résine du pin par incision ; résine pour colles, vernis, pharmacie",
+   "sources_recoupement": [
+    "https://www.tourismelandes.com/?p=68",
+    "https://www.biodiversite-nouvelle-aquitaine.fr/wp-content/uploads/2022/06/VF_Fiche_forêt_Landes-Gascogne_rvb_bdef.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 97
+ },
+ "c62978dc02": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "gemmage du pin maritime dans la forêt des Landes, déclin au XXe siècle",
+   "sources_recoupement": [
+    "https://www.tourismelandes.com/?p=68",
+    "https://archives.landes.fr/_recherche-ef-api/inventaire-pdf?idIR=245"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 98
+ },
+ "c8885b647b": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "marronnier d'Inde originaire des Balkans (nord de la Grèce) ; arrivée à Constantinople au XVIe siècle puis en Europe occidentale au XVIIe",
+   "sources_recoupement": [
+    "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/feuillus/le-marronnier-aesculus-hippocastanum",
+    "https://areq.net/lang/fr/Aesculus_hippocastanum.html"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 99
+ },
+ "cbd6b62f84": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "kermès = colorant rouge tiré de la cochenille Kermes vermilio vivant sur le chêne kermès ; déclin après l'arrivée de la cochenille du Mexique",
+   "sources_recoupement": [
+    "https://en.wikipedia.org/wiki/Kermes_(dye)",
+    "https://cameo.mfa.org/wiki/Kermes"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 100
+ },
+ "e36089f348": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "10-désacétylbaccatine III extraite des aiguilles de Taxus baccata, précurseur semi-synthétique du docétaxel (équipe de Pierre Potier)",
+   "sources_recoupement": [
+    "https://indena.com/?p=1349",
+    "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6124482"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 101
+ },
+ "ecbb84449b": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "trois questions Ovide (#80, #81, #102) : espacer",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Cyparissus changé en cyprès (Ovide, Métamorphoses X, v. 106)",
+   "sources_recoupement": [
+    "https://finto.fi/ic/en/page/97A?clang=fr"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 102
+ },
+ "ee8367776a": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "thuyone de l'absinthe accusée d'effets convulsivants ; toxicité réelle seulement à très fortes doses : le lien avec la folie est jugé mal fondé",
+   "sources_recoupement": [
+    "https://www.academie-medecine.fr/wp-content/uploads/2014/09/pages-de-515-522.pdf",
+    "https://www.allodocteurs.fr/maladies/drogues-et-addictions/alcool-alcoolisme/l-absinthe-l-alcool-qui-rend-fou_16391.html"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 103
+ },
+ "f9a492e111": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "William Withering, An Account of the Fox Glove (Birmingham, 1785), digitale et hydropisie",
+   "sources_recoupement": [
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5545334/",
+    "https://en.wikipedia.org/wiki/William_Withering"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 104
+ },
+ "05d8c9f88b": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "houx le plus souvent dioïque : seuls les pieds femelles portent les fruits, avec un pied mâle à proximité",
+   "sources_recoupement": [
+    "https://botanique.vd.ch/fileadmin/groups/11/images/Animations/Plante_du_mois/Plante_du_mois_houx.pdf",
+    "https://www.humanite-biodiversite.fr/articles/167924-le-houx-commun-ilex-aquifolium"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 105
+ },
+ "0d07aac00e": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "epithète « quinquefolia » visible : indice faible",
+  "correction": null,
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "vigne vierge à cinq folioles : feuilles composées (3 à 5 folioles selon les variétés) ; « lierre à feuilles simples » non recherché mais élémentaire",
+   "sources_recoupement": [
+    "https://espacepourlavie.ca/carnet-horticole/vigne-vierge",
+    "https://biodiv-occitanie.fr/espece/112465"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 106
+ },
+ "295d966a04": {
+  "statut": "ecartee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "doublon de #49 (cônes de sapin)",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "non recoupé",
+   "sources_recoupement": []
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 107
+ },
+ "3247581064": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "narcisse/jonquille : plante bulbeuse (confirmé) ; les rhizomes de l'iris et du muguet n'ont pas été recoupés ici (fait élémentaire) ; Narcissus pseudonarcissus est le narcisse jaune, la « vraie jonquille » étant N. jonquilla",
+   "sources_recoupement": [
+    "https://fr.vikidia.org/wiki/Narcisse_(fleur)",
+    "https://www.techno-science.net/glossaire-definition/Narcisse-jaune.html"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 108
+ },
+ "3d5938c170": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Acer negundo : feuilles composées de 3 à 7 folioles (OQLF), atypique parmi les érables",
+   "sources_recoupement": [
+    "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/2090923/erable-negondo",
+    "https://especes-exotiques-envahissantes.fr/wp-content/uploads/2023/07/erable_negundo.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 109
+ },
+ "3fc593fc2e": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "ginkgo dioïque ; pieds femelles seuls à porter des graines à sarcotesta malodorante (acide butyrique)",
+   "sources_recoupement": [
+    "https://fr.vikidia.org/wiki/Ginkgo",
+    "https://www.techno-science.net/fr/definitions/ginkgo-biloba"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 110
+ },
+ "41fbd02898": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "bougainvillier : parties colorées = bractées entourant de petites fleurs blanches",
+   "sources_recoupement": [
+    "https://www.lalanguefrancaise.com/dictionnaire/definition/bougainvillea",
+    "https://areq.net/lang/fr/Bougainvillea.html"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 111
+ },
+ "43f4df5447": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "même mécanisme que #117 : espacer",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "érable sycomore : fruit = deux samares ailées",
+   "sources_recoupement": [
+    "https://fr.vikidia.org/wiki/%C3%89rable_sycomore",
+    "https://www.unifr.ch/jardin-botanique/fr/assets/public/files/publications/brochure_erables_jbf_francais_basse_resolution.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 112
+ },
+ "46eb3b8168": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "chêne vert (Quercus ilex) : feuilles persistantes coriaces, renouvelées tous les 2-3 ans",
+   "sources_recoupement": [
+    "https://www.futura-sciences.com/planete/definitions/botanique-feuille-persistante-15188/",
+    "https://oneaction.ch/wp-content/uploads/2024/03/Reunis-sous-la-canopee-2024-Quercus-ilex.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 113
+ },
+ "575f0f9108": {
+  "statut": "ecartee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "doublon de #24 (cladodes du fragon)",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "non recoupé",
+   "sources_recoupement": []
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 114
+ },
+ "5bd2eb3407": {
+  "statut": "ecartee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "doublon de #74 (métaséquoia caduc)",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "non recoupé",
+   "sources_recoupement": []
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 115
+ },
+ "62a82bde13": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "sorbier des oiseleurs : feuilles composées imparipennées ; alisier blanc et torminal : feuilles simples",
+   "sources_recoupement": [
+    "https://www.cap.chu-lille.fr/2021/01/20/sorbier",
+    "https://www.techno-science.net/fr/definitions/sorbus"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 116
+ },
+ "62ef716f5b": {
+  "statut": "a_verifier",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "samares de l'orme : non recoupées dans cette recherche (fait classique) ; bractée du tilleul confirmée par ailleurs (#23)",
+   "sources_recoupement": [
+    "https://www.ville-boussy.fr/botanique/GROUPE A/planche a9.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 117
+ },
+ "7b4dc17511": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "rosier : aiguillons (excroissances de l'épiderme qui se détachent) et non épines (rameau ou feuille modifiés)",
+   "sources_recoupement": [
+    "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/17067689/aiguillon",
+    "https://www.techno-science.net/fr/actualites/pourquoi-les-roses-ont-elles-des-epines-25474"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 118
+ },
+ "84476223b0": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "kiwi dioïque : pied mâle nécessaire (sauf variétés autofertiles, moins productives)",
+   "sources_recoupement": [
+    "https://www.jardiner-malin.fr/fiche/kiwi.html",
+    "https://www.hornbach.ch/projets/planter-et-entretenir-des-kiwis/"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 119
+ },
+ "87915f8977": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "érable : feuilles opposées ; tilleul, hêtre, charme : feuilles alternes",
+   "sources_recoupement": [
+    "https://granville.circonscription.ac-normandie.fr/IMG/pdf/CLE_DE_DETERMINATION_DES_PRINCIPAUX_FEUILLUS.pdf",
+    "https://www.tela-botanica.org/wp-content/uploads/2025/08/Bingos-botaniques-les-arbres-communs-en-France.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 120
+ },
+ "8c94b5b21e": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "catalpa : fruit = longue capsule (Bignoniacées), pas une gousse ; gousses de l'arbre de Judée (Fabacée) non recherchées ici mais confirmées par la famille",
+   "sources_recoupement": [
+    "https://plants.ces.ncsu.edu/plants/catalpa-bignonioides/common-name/cigar-tree/",
+    "https://en.wikipedia.org/wiki/Catalpa_bignonioides"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 121
+ },
+ "995b601dde": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "la « boule » du ginkgo est une graine entourée d'un sarcotesta charnu, odeur de beurre rance (acide butyrique)",
+   "sources_recoupement": [
+    "https://fr.vikidia.org/wiki/Ginkgo",
+    "https://www.techno-science.net/fr/definitions/ginkgo-biloba"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 122
+ },
+ "a8a05f72c7": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "frêne commun : feuilles composées de folioles opposées sur un axe central",
+   "sources_recoupement": [
+    "https://granville.circonscription.ac-normandie.fr/IMG/pdf/CLE_DE_DETERMINATION_DES_PRINCIPAUX_FEUILLUS.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 123
+ },
+ "aea8257d45": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "marronnier d'Inde : feuilles composées de 5-7 folioles palmées ; érable : feuille simple lobée",
+   "sources_recoupement": [
+    "https://www.anses.fr/fr/content/marrons-et-chataignes-comment-eviter-les-confusions",
+    "https://www.humanite-biodiversite.fr/articles/119550-le-marronnier-d-inde-aesculus-hippocastanum"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 124
+ },
+ "b6b16f22bf": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "explication": "Presque tous les cornouillers cultivés ont des feuilles opposées. Le cornouiller des pagodes (C. controversa), aux rameaux étagés, fait partie des rares à feuilles alternes."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "Cornus controversa à feuilles alternes confirmé ; d'autres cornouillers (ex. C. alternifolia) sont aussi à feuilles alternes : la question compare seulement les quatre cornouillers proposés, mais « fait exception » à nuancer",
+   "sources_recoupement": [
+    "https://www.ebben.nl/fr/treeebb/cocontro-cornus-controversa/pdf/"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 125
+ },
+ "c1a9e6abef": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "sureau noir : feuilles opposées imparipennées (5-7 folioles)",
+   "sources_recoupement": [
+    "https://www.cap.chu-lille.fr/2021/01/05/sureau-noir",
+    "https://www.techno-science.net/fr/definitions/sureau-noir"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 126
+ },
+ "cda325a25b": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "chêne pubescent marcescent : feuilles sèches gardées jusqu'au printemps",
+   "sources_recoupement": [
+    "https://calanques-parcnational.fr/fr/chene-pubescent",
+    "https://www.techno-science.net/fr/definitions/chene-pubescent"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 127
+ },
+ "d70bb8df6a": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "hortensia : grandes fleurs décoratives à sépales pétaloïdes agrandis ; petites fleurs fertiles au centre des lacecaps",
+   "sources_recoupement": [
+    "https://franco.wiki/fr/Hydrangea.html",
+    "https://rhs.org.uk/plants/40792/hydrangea-macrophylla-(h)/details"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 128
+ },
+ "f3bf2a1b16": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "proche de #49 : espacer",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "cônes dressés du sapin (Abies) vs pendants de l'épicéa ; pin noir « étalés » et douglas non recoupés individuellement",
+   "sources_recoupement": [
+    "https://jardin-botanique.unistra.fr/websites/sciencesvie/EMB/jardin-botanique/Documents/Poster_conniferes-alsace-light.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 129
+ },
+ "15e53eafb9": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "explication": "Le pin cembro, aux aiguilles groupées par cinq, peuple l'étage subalpin jusqu'à environ 2 500 m, en limite supérieure des forêts. Le casse-noix moucheté dissémine ses graines."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "pin cembro : étage subalpin, limite supérieure de la forêt avec le mélèze, aiguilles par cinq, casse-noix ; bornes d'altitude variables (1 400-2 500 m selon l'État, 1 700-2 400 m ailleurs) : « 1 800 à 2 500 m » à adoucir en « environ 1 700 à 2 500 m »",
+   "sources_recoupement": [
+    "https://agriculture.gouv.fr/sites/minagri/files/documents/pin_cembro-2.pdf",
+    "https://www.techno-science.net/fr/definitions/pin-cembro"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 130
+ },
+ "18ee1266e9": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "robinier déjà dans #77, #91 : espacer",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "miel d'acacia = miel de robinier (Robinia pseudoacacia, Fabacées, Amérique du Nord), pas du genre Acacia",
+   "sources_recoupement": [
+    "https://www.jardinbotaniquedenancy.eu/fileadmin/CJBN/Plante_du_mois/07.26.robinia_pseudoacacia.pdf",
+    "https://www.infoflora.ch/assets/content/documents/neophytes/inva_robi_pse_f.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 131
+ },
+ "1c4a034550": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "explication": "L'if est l'arbre le plus longévif d'Europe : celui de Fortingall (Écosse) est estimé à au moins 2 000 ans, mais son cœur creux rend la datation incertaine."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "if : arbre européen le plus longévif (2 000 ans et plus pour les plus anciens) ; âge de Fortingall incertain (2 000 à 5 000 ans selon les estimations) car le cœur creux interdit le comptage des cernes",
+   "sources_recoupement": [
+    "https://www.guinnessworldrecords.com/world-records/93355-oldest-yew",
+    "https://www.Wikipedia.com/wiki/Fortingall_Yew"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 132
+ },
+ "22b729eea8": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "chiffre à recouper",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "France métropolitaine : 983 espèces d'abeilles confirmées (mise à jour de la liste nationale), « près de 1 000 » selon d'autres sources",
+   "sources_recoupement": [
+    "https://integ04-cnspfv.archimed.fr/doc/OAI_1/oai-HAL-hal-04946909v1",
+    "https://pollinisateurs-ressources.insectes.org/uploads/files/opie-2026-liste-abeilles-idf-69c403904d07e887514295.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 133
+ },
+ "2773be02fd": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "saule marsault : floraison précoce (février-mars selon les régions), pollen et nectar pour abeilles et autres insectes",
+   "sources_recoupement": [
+    "https://www.waldwissen.net/fr/habitat-forestier/arbres-et-arbustes/vegetation-au-sol/les-saules-salix",
+    "https://areq.net/lang/fr/Saule_marsault.html"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 134
+ },
+ "38c4e0d5fb": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": {
+   "explication": "Malgré son nom, Cupressus sempervirens vient de l'est méditerranéen (Turquie, Crète, Chypre, Iran). Le cyprès en colonne des paysages provençaux est une forme cultivée depuis l'Antiquité."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "cyprès de Provence : espèce d'origine Méditerranée orientale (Turquie, Crète, Chypre, Iran) ; la forme en colonne vient de la culture : explication à compléter",
+   "sources_recoupement": [
+    "https://landscapeplants.oregonstate.edu/node/1628",
+    "https://nzpcn.org.nz/flora/species/cupressus-sempervirens"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 135
+ },
+ "42dedd3336": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "espacer de #138 (allélopathie)",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "ailante : ailanthone (quassinoïde de l'écorce des racines) inhibe la croissance d'autres plantes : allélopathie",
+   "sources_recoupement": [
+    "https://pure.psu.edu/en/publications/identification-of-an-allelopathic-compound-from-ailanthus-altissi/",
+    "https://www.savoie.fr/upload/docs/application/pdf/2021-02/ailante_glanduleux_fevrier2021.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 136
+ },
+ "4d3ab806a1": {
+  "statut": "a_verifier",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "piège à mouches psychodes retenues environ 24 h puis libérées couvertes de pollen : sources sur Arum maculatum (genre Arum) ; extrapolé au gouet d'Italie",
+   "sources_recoupement": [
+    "https://florapix.nl/Arisaema-L/secure/Literature/Gibernau%20et%20al.%202004%20-%20Pollination%20in%20the%20Genus%20Arum%20-%20a%20Review.pdf",
+    "https://en.wikipedia.org/wiki/Pollination_trap"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 137
+ },
+ "542cff937f": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "hydrojuglone des feuilles, brous, écorce et racines du noyer s'oxyde en juglone, allélopathe qui inhibe la germination",
+   "sources_recoupement": [
+    "https://journals.ukim.mk/index.php/jafes/article/view/1420",
+    "https://www.cal-ipc.org/wp-content/uploads/2017/12/Lauman.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 138
+ },
+ "638b39c07c": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "truffe noire : champignon ectomycorhizien ; échange eau et minéraux contre sucres photosynthétiques ; chênes hôtes",
+   "sources_recoupement": [
+    "https://planet-vie.ens.fr/node/1510/download/pdf",
+    "https://ofme.org/documents/Sylvi/FicheTK_CRPF-LR_Sylviculture-truffiere.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 139
+ },
+ "6faa3bc87a": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "argousier : fixe l'azote avec Frankia, tolère sel et sols pauvres, utilisé et parfois envahissant sur les dunes",
+   "sources_recoupement": [
+    "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Hippophae_rhamnoides.PDF",
+    "https://oro.open.ac.uk/63802"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 140
+ },
+ "707d9476c3": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "date d'introduction (XIXe) à recouper",
+  "correction": {
+   "explication": "Planté à Compiègne au XIXe siècle selon l'EPPO, le cerisier tardif en occupe aujourd'hui une grande partie, où il concurrence chênes et hêtres. Les trois autres sont indigènes."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "cerisier tardif envahit la forêt de Compiègne (près d'un tiers de la forêt, repéré en 1971) ; introduction au XIXe siècle selon l'EPPO, scénarios multiples et date précise inconnue : « Introduit au XIXe siècle » à nuancer",
+   "sources_recoupement": [
+    "https://gd.eppo.int/reporting/article-70",
+    "https://hal.inrae.fr/hal-02665393"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 141
+ },
+ "73c24fd1a4": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "lierre : floraison septembre-octobre jusqu'aux premières gelées, ressource tardive pour les insectes",
+   "sources_recoupement": [
+    "https://www.provincedeliege.be:443/sites/default/files/media/10952/Lierre%20grimpant%20%28Hedera%20helix%29.pdf",
+    "https://occitanie.lpo.fr/wp-content/uploads/2020/04/ficherefugeslpo_lierre_br.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 142
+ },
+ "7daa4ce7ba": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "oyat : rhizomes et racines adventives fixant le sable, planté pour stabiliser les dunes (Landes, Nord)",
+   "sources_recoupement": [
+    "https://www.futura-sciences.com/planete/actualites/botanique-oyat-graminee-stabilise-dunes-littoral-90538/",
+    "https://www.techno-science.net/fr/definitions/oyat"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 143
+ },
+ "81dcc3ade9": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "chenille du Citron sur les Rhamnus (nerprun purgatif) et Frangula (bourdaine)",
+   "sources_recoupement": [
+    "https://www.techno-science.net/fr/definitions/citron-papillon",
+    "https://en.wikipedia.org/wiki/Gonepteryx_rhamni"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 144
+ },
+ "81fc36853a": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "explication": "L'Aurore pond sur des Brassicacées : la cardamine des prés, mais aussi l'alliaire, tout aussi prisée. Ses chenilles mangent surtout fleurs et siliques."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "Aurore : Brassicacées, alliaire citée en priorité, cardamine des prés fréquemment ; chenilles mangent fleurs et siliques : « plante hôte majeure » correct ; l'alliaire est au moins aussi importante",
+   "sources_recoupement": [
+    "https://www.techno-science.net/fr/definitions/aurore-papillon",
+    "https://www.european-lepidopteres.fr/Anthocharis-cardamines.html"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 145
+ },
+ "9e2834e6d3": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "question": "Chez la sauge des prés, comment le pollen se dépose-t-il sur le bourdon ?",
+   "explication": "Quand le bourdon pousse sa tête vers le nectar, il appuie sur une plaque qui fait basculer les étamines : elles s'abaissent et frottent leur pollen sur son corps."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "mécanisme à levier des étamines de Salvia pratensis confirmé (Annals of Botany) ; les sources décrivent un dépôt sur le corps/l'abdomen, pas précisément « le dos » : « sur le dos » adouci en « sur le corps »",
+   "sources_recoupement": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC2735310/",
+    "https://openscience.ub.uni-mainz.de/handle/20.500.12030/2224"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 146
+ },
+ "9faa771a96": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "trèfle (Fabacées) : bactéries (rhizobiums) dans les nodosités des racines fixent l'azote de l'air",
+   "sources_recoupement": [
+    "https://extranet-drome.chambres-agriculture.fr/fileadmin/user_upload/Auvergne-Rhone-Alpes/118_Extr-Drome_img/Publications/PDF/OBJECTIFSEAU_80_JUIN_2022.pdf",
+    "https://hal.inrae.fr/hal-02733997/document"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 147
+ },
+ "a04a4cc913": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "mimosa argenté originaire d'Australie, introduit en Côte d'Azur au XIXe siècle, envahissant ; la mention de l'Esterel comme zone d'invasion n'a pas été recoupée précisément",
+   "sources_recoupement": [
+    "https://www.techno-science.net/fr/definitions/acacia-dealbata",
+    "https://asnatnic.fr/wp-content/uploads/2020/09/RapportPlateaud_Antheor.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 148
+ },
+ "ae82e7682f": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "explication": "Le panicaut maritime, bleuté et coriace, résiste au sel et au vent des dunes de sable."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "panicaut maritime : plante des dunes de sable (BSBI) ; l'origine pyrénéenne du panicaut de Bourgat et est-européenne du panicaut plane n'ont pas été recoupées : retirées de l'explication",
+   "sources_recoupement": [
+    "https://bsbi.org/taxa/2cd4p9h.f8s/eryngium-maritimum",
+    "https://www.rhs.org.uk/plants/6787/wd/details"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 149
+ },
+ "b22952ae87": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "aulne : symbiose avec la bactérie Frankia dans des nodosités racinaires (fixe l'azote), colonise sols pauvres ; sources surtout sur d'autres aulnes mais souches isolées d'Alnus glutinosa",
+   "sources_recoupement": [
+    "https://www.universalis.fr/encyclopedie/aulnaies/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC92913/"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 150
+ },
+ "b418a15c5c": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "chélidoine : élaïosome charnu, fourmis emportent les graines, mangent l'élaïosome et rejettent la graine intacte",
+   "sources_recoupement": [
+    "https://comptes-rendus.academie-sciences.fr/biologies/item/10.1016/j.crvi.2008.02.002.pdf",
+    "https://link.springer.com/article/10.1007/s11829-009-9076-5"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 151
+ },
+ "bcebe6b45a": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "abeille domestique trichromate ultraviolet-bleu-vert (pics 344, 436, 544 nm), ne perçoit pas le rouge",
+   "sources_recoupement": [
+    "https://sites.science.oregonstate.edu/~ostroveo/publications/papers/JCPA2018_OO.pdf",
+    "https://www.futura-sciences.com/planete/actualites/botanique-fleurs-ultraviolettes-abeilles-26618/"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 152
+ },
+ "ccd8093549": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "explication": "Chez les fleurs doubles, les étamines sont en grande partie transformées en pétales : peu de pollen. Une fleur simple, comme celle de l'églantier, nourrit bien mieux les abeilles."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "fleurs simples plus riches en pollen/nectar que les doubles : confirmé ; le mécanisme (étamines transformées en pétales) et « presque pas de nectar » du rosier ne sont pas détaillés par les sources",
+   "sources_recoupement": [
+    "https://www.consoglobe.com/pour-sauver-la-biodiversite-demain-plantez-des-fleurs-pour-les-abeilles-cg",
+    "https://www.futura-sciences.com/planete/questions-reponses/fleurs-10-fleurs-ideales-attirer-abeilles-faire-miel-9747/"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 153
+ },
+ "d364e84a1f": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "faible intérêt, échauffement",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "hêtre classé indigène en France métropolitaine (TAXREF) ; origine américaine du tulipier et du copalme, chinoise du ginkgo non recoupées ici (faits élémentaires)",
+   "sources_recoupement": [
+    "https://taxref.mnhn.fr/taxref-web/taxa/613817",
+    "https://inpn.mnhn.fr/espece/cd_nom/97947"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 154
+ },
+ "da9fe18921": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "chenilles du Paon-du-jour sur la grande ortie (Urtica dioica)",
+   "sources_recoupement": [
+    "https://www.techno-science.net/fr/definitions/grande-ortie",
+    "https://www.consoglobe.com/?p=380796"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 155
+ },
+ "e1f48e0b43": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": {
+   "explication": "Malgré son allure exotique, le lis martagon pousse spontanément dans les bois et prairies de montagne. Les trois autres ne sont pas indigènes en France."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "lis martagon indigène (aire eurasiatique, présent dans une grande partie de la France) confirmé ; l'origine de l'hémérocalle, du tritome et du montbrétia n'a pas été recoupée",
+   "sources_recoupement": [
+    "https://www.techno-science.net/fr/definitions/lis-martagon",
+    "https://geonature2.vanoise-parcnational.fr/geonature/api/media/taxhub/105989_1842_Lilium_martagon.pdf"
+   ]
+  },
+  "origine_revue": "rédigée",
+  "rang_revue": 156
+ },
+ "ac462f2087": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Amandier en fleurs, peint par Van Gogh à Saint-Rémy en février 1890 pour la naissance de son neveu, fond bleu ciel",
+   "sources_recoupement": [
+    "https://en.wikipedia.org/wiki/Almond_Blossoms",
+    "https://artway.eu/posts/vincent-van-gogh-almond-blossom"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "ff0ead9d93": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "record Guinness : groseille à maquereau de 65,59 g, Egton Bridge, 5 août 2025 ; concours depuis au moins 1800",
+   "sources_recoupement": [
+    "https://www.guinnessworldrecords.com/world-records/heaviest-gooseberry/",
+    "https://egtongooseberryshow.org.uk/about-us/"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "f3780e0991": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Fuchsia magellanica 'Riccartonii' : cultivar stérile apparu en Écosse, haies emblématiques de West Cork",
+   "sources_recoupement": [
+    "https://en.wikipedia.org/wiki/Fuchsia_magellanica",
+    "https://bsbi.org/in-your-area/local-botany/co-fermanagh/fermanagh-species-accounts/fuchsia-magellanica-lam"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "4ea55c4925": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "texte": "Planté dans des jardins du monde entier, cet arbuste ne pousse à l'état sauvage que dans quelques bois et ravins du sud-est des États-Unis, surtout en Alabama."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "Aesculus parviflora : Alabama au cœur de l'aire, mais aussi Géorgie, Caroline du Sud et nord de la Floride selon les sources : « Alabama et Géorgie » corrigé en « sud-est des États-Unis, surtout en Alabama »",
+   "sources_recoupement": [
+    "https://bcarboretum.org/plants/genus/Aesculus/species/parviflora",
+    "https://ask.ifas.ufl.edu/publication/FP017/pdf"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "191ce27869": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "texte": "En Afrique du Sud, son pays d'origine, on l'appelle « pig lily » (« varkblom », le lis à cochons) : les cochons sauvages et les porcs-épics déterrent son rhizome pour le manger."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "Zantedeschia aethiopica : « pig lily » / « varkblom » en Afrique du Sud, rhizome mangé par les cochons sauvages et les porcs-épics (SANBI) ; « lis à cochon » est une traduction : à mettre entre guillemets",
+   "sources_recoupement": [
+    "https://pza.sanbi.org/node/11125",
+    "https://dsae.co.za/entry/piglily/e05631"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "ebf00f5ab9": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "laurier-rose, fleur officielle de la ville de Hiroshima, présenté par la ville comme la première fleur à éclore après la bombe",
+   "sources_recoupement": [
+    "https://www.city.hiroshima.lg.jp/english/peace/1029872/1009943.html"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "b5882d8a6c": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "texte": "Le botaniste écossais Robert Fortune l'a rapporté de Chine vers 1844 pour la Société d'horticulture de Londres, acheté dans une pépinière de Shanghai."
+  },
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Fortune, collecteur de la Royal Horticultural Society en Chine (1843-46), a envoyé le jasmin d'hiver depuis un jardin/pépinière de Shanghai ; 1844 selon la plupart des sources",
+   "sources_recoupement": [
+    "https://congletonbhpg.co.uk/our-plants/winter-jasmine/",
+    "https://hortuscamden.com/plants/view/jasminum-nudiflorum-lindl"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "ea221f1139": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Teucrium chamaedrys : hépatites graves liées aux produits amaigrissants, interdit en France depuis 1992 (sources secondaires)",
+   "sources_recoupement": [
+    "https://pubmed.ncbi.nlm.nih.gov/1605427/",
+    "https://www.ncbi.nlm.nih.gov/books/NBK548282/"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "ccac3103b2": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "mortalité de bourdons sous le tilleul argenté : toxicité du nectar non prouvée, famine en fin de floraison hypothèse la plus probable",
+   "sources_recoupement": [
+    "https://core.ac.uk/works/8100252",
+    "https://orbi.uliege.be/bitstream/2268/345845/1/JB2024_p40-47_Demoulin.pdf"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "7a0eeff2de": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Leucanthemum × superbum : hybride de Luther Burbank (1890), nommé d'après le mont Shasta",
+   "sources_recoupement": [
+    "https://en.wikipedia.org/wiki/Leucanthemum_%C3%97_superbum"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "427531b8cd": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "gelée d'aiyu : graines de Ficus pumila var. awkeotsang frottées dans l'eau, pectine gélifiante à froid, Taïwan",
+   "sources_recoupement": [
+    "https://en.wikipedia.org/wiki/Ficus_pumila_var._awkeotsang",
+    "https://www.eattheweeds.com/tag/jello/"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "676d78cbbe": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "églantier = Rosacées (l'Académie cite l'aubépine et l'églantier)",
+   "sources_recoupement": [
+    "https://dictionnaire-academie.fr/article/A9R2949"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "5deb6c01e4": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Echinacea purpurea = Astéracées",
+   "sources_recoupement": [
+    "https://en.wikipedia.org/wiki/Echinacea_purpurea"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "a2db60d4d4": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Thymus vulgaris = Lamiacées ; les autres plantes proposées (géranium, euphorbe, renouée) sont d'autres familles",
+   "sources_recoupement": [
+    "https://iiim.res.in/wp-content/uploads/2018/04/European_Agency.pdf"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "7f1e363c33": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Alnus glutinosa = Bétulacées (source de pharmacologie)",
+   "sources_recoupement": [
+    "https://mediplantepirus.med.uoi.gr/pharmacology_en/plant_details.php?id=213"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "c75254c813": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": {
+   "question": "Laquelle de ces plantes fleurit dès la fin de l'hiver ?",
+   "explication": "Le noisetier de Byzance fleurit de février à mars, en chatons. Les trois autres fleurissent plus tard, de la fin du printemps à l'été."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "Corylus colurna : floraison en chatons de février à mars ; énoncé « plein hiver » corrigé en « dès la fin de l'hiver », distracteurs « en été » corrigés en « plus tard »",
+   "sources_recoupement": [
+    "https://www.saint-cyr-sur-loire.com/content/download/16749/262650/version/2/file/FICHES_BOTANIQUES_Noisetier-de-Byzance.pdf"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "9dd5177900": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "question": "Laquelle de ces plantes fleurit dès la fin de l'hiver ?",
+   "explication": "L'éranthe d'hiver fleurit de janvier à mars, parfois dans la neige. Les trois autres fleurissent plus tard, en été."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "Eranthis hyemalis : floraison janvier-mars (sources) ; énoncé et explication ajustés comme ci-dessus",
+   "sources_recoupement": [
+    "https://www.jardiner-malin.fr/fiche/eranthis-hyemalis-aconith-hiver-helleborine.html",
+    "https://www.birminghambotanicalgardens.org.uk/?p=282"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "c6e58fef03": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": {
+   "explication": "Le hamamélis de Chine fleurit de janvier à mars (parfois dès décembre). Les trois autres fleurissent plus tard, de la fin du printemps à l'été."
+  },
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "Hamamelis mollis : floraison surtout janvier-février (parfois décembre) ; énoncé et explication ajustés comme ci-dessus",
+   "sources_recoupement": [
+    "https://www.ebben.nl/fr/treeebb/hamollis-hamamelis-mollis/pdf"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "ed9b6cfdb7": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "chêne = Fagacées (comme le hêtre et le châtaignier)",
+   "sources_recoupement": [
+    "https://www.futura-sciences.com/planete/actualites/botanique-difference-marron-chataigne-92075/",
+    "https://www.techno-science.net/fr/definitions/chene"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "be9ad6f5fc": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Sophora du Japon (Styphnolobium japonicum) = Fabacées, fruits en gousses",
+   "sources_recoupement": [
+    "https://jardin-thuret.hub.inrae.fr/content/download/6735/55087?version=1",
+    "https://species.wikimedia.org/wiki/Styphnolobium_japonicum"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "29b6e315ea": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Forsythia = Oléacées (famille de l'olivier, du frêne, du lilas, du jasmin)",
+   "sources_recoupement": [
+    "https://franco.wiki/fr/Oleaceae.html",
+    "https://www.techno-science.net/fr/definitions/oleaceae"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "dd9fd476a3": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Arbutus unedo = Éricacées (comme la bruyère, la myrtille, le rhododendron)",
+   "sources_recoupement": [
+    "https://inpn.mnhn.fr/espece/cd_nom/143753",
+    "https://fr.vikidia.org/wiki/Arbousier"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "ce445998be": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Photinia = Rosacées",
+   "sources_recoupement": [
+    "https://en.wikipedia.org/wiki/Photinia_%C3%97_fraseri",
+    "https://gd.eppo.int/taxon/PHNFR"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "57b5401dbf": {
+  "statut": "validee",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "hortensia (Hydrangea) = Hydrangéacées (anciennement classé parmi les Saxifragacées)",
+   "sources_recoupement": [
+    "https://franco.wiki/fr/Hydrangea.html",
+    "https://www.gbif.org/taxon/B82"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "6d01562d16": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Chicot du Canada (Gymnocladus dioicus) = Fabacées, fruits en gousses",
+   "sources_recoupement": [
+    "https://www.saint-cyr-sur-loire.com/content/download/16741/262586/version/2/file/FICHES_BOTANIQUES_Chicot-du-Canada.pdf"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "770f05969a": {
+  "statut": "validee",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Westringia fruticosa (romarin d'Australie) = Lamiacées",
+   "sources_recoupement": [
+    "https://gd.eppo.int/taxon/WESRO",
+    "https://en.wikipedia.org/wiki/Westringia_fruticosa"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "04330c96ff": {
+  "statut": "a_verifier",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "nuancé",
+   "note": "Ulmus laevis peu attaqué par les scolytes vecteurs de la graphiose (WSL, ministère de l'Agriculture) ; la phrase sur les « survivants crus d'une espèce voisine résistante » n'a pas été retrouvée dans ces sources",
+   "sources_recoupement": [
+    "https://waldschutz.wsl.ch/fileadmin/user_upload/WSL/Microsite/Waldschutz-Schweiz/Diagnose_online/fr/Graphiose_de_lorme_ou_3.pdf",
+    "https://resistantelms.co.uk/elms/ulmus-laevis/"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "80d6dc8d65": {
+  "statut": "a_verifier",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "a_verifier",
+   "note": "goudron de bouleau néandertalien : les sources trouvées (Königsaue, Gibraltar, Campitello) ne confirment ni l'âge de 200 000 ans pour le bouleau, ni la préparation « à l'abri de l'air » (contestée par des expériences récentes) : à vérifier avant tout usage",
+   "sources_recoupement": [
+    "https://www.colorado.edu/today/2019/06/26/neanderthals-used-resin-glue-craft-their-stone-tools"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "afdccbad67": {
+  "statut": "a_verifier",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "a_verifier",
+   "note": "Yponomeuta evonymella (putiet) sur Prunus padus, défoliation et repousse confirmées ; le distracteur Prunus cerasifera pourrait aussi héberger des hyponomeutes : risque de deux réponses possibles",
+   "sources_recoupement": [
+    "https://repfocus.dk/natureswindow/Invertebrata/Yponomeuta_evonymella.html",
+    "https://www.techno-science.net/fr/definitions/yponomeuta-padella"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "cc70f01281": {
+  "statut": "a_verifier",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "fait issu des tables internes de l'appli ; non recoupé par recherche web",
+   "sources_recoupement": []
+  },
+  "origine_revue": "générée"
+ },
+ "75d75a09c1": {
+  "statut": "a_verifier",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "fait issu des tables internes de l'appli ; non recoupé par recherche web",
+   "sources_recoupement": []
+  },
+  "origine_revue": "générée"
+ },
+ "a681567722": {
+  "statut": "a_verifier",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "fait issu des tables internes de l'appli ; non recoupé par recherche web",
+   "sources_recoupement": []
+  },
+  "origine_revue": "générée"
+ },
+ "9b0b988dc3": {
+  "statut": "a_verifier",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "fait issu des tables internes de l'appli ; non recoupé par recherche web",
+   "sources_recoupement": []
+  },
+  "origine_revue": "générée"
+ },
+ "ec9b29d135": {
+  "statut": "a_verifier",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "a_verifier",
+   "note": "Acer saccharinum : floraison hivernale non recoupée par la recherche : à vérifier",
+   "sources_recoupement": []
+  },
+  "origine_revue": "générée"
+ },
+ "ab9c412508": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "Tilia = Malvacées (APG III/IV), ancienne famille des Tiliacées rattachée aux Malvacées",
+   "sources_recoupement": [
+    "https://en.wikipedia.org/wiki/Tilioideae",
+    "https://plantaedb.com/taxa/phylum/angiosperms/order/malvales/family/malvaceae/genus/tilia"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "5c495a012c": {
+  "statut": "validee",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "confirmé",
+   "note": "reine-des-prés indigène en France (Chambre d'agriculture Hauts-de-France) ; autres plantes proposées non recoupées",
+   "sources_recoupement": [
+    "https://hautsdefrance.chambre-agriculture.fr/fileadmin/user_upload/National/FAL_commun/publications/Hauts-de-France/Fiche_reine_des_pres.pdf"
+   ]
+  },
+  "origine_revue": "générée"
+ },
+ "c3e2c692d4": {
+  "statut": "a_verifier",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "fait issu des tables internes de l'appli ; non recoupé par recherche web",
+   "sources_recoupement": []
+  },
+  "origine_revue": "générée"
+ },
+ "291e385386": {
+  "statut": "a_verifier",
+  "niveau": "intermediaire",
+  "piege": true,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "fait issu des tables internes de l'appli ; non recoupé par recherche web",
+   "sources_recoupement": []
+  },
+  "origine_revue": "générée"
+ },
+ "28050da4f5": {
+  "statut": "a_verifier",
+  "niveau": "difficile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "fait issu des tables internes de l'appli ; non recoupé par recherche web",
+   "sources_recoupement": []
+  },
+  "origine_revue": "générée"
+ },
+ "a707fe668b": {
+  "statut": "a_verifier",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "fait issu des tables internes de l'appli ; non recoupé par recherche web",
+   "sources_recoupement": []
+  },
+  "origine_revue": "générée"
+ },
+ "9e20d2466f": {
+  "statut": "a_verifier",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "fait issu des tables internes de l'appli ; non recoupé par recherche web",
+   "sources_recoupement": []
+  },
+  "origine_revue": "générée"
+ },
+ "6e21443e62": {
+  "statut": "a_verifier",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "fait issu des tables internes de l'appli ; non recoupé par recherche web",
+   "sources_recoupement": []
+  },
+  "origine_revue": "générée"
+ },
+ "30d68a94bd": {
+  "statut": "a_verifier",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "fait issu des tables internes de l'appli ; non recoupé par recherche web",
+   "sources_recoupement": []
+  },
+  "origine_revue": "générée"
+ },
+ "52be43f96b": {
+  "statut": "a_verifier",
+  "niveau": "facile",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "fait issu des tables internes de l'appli ; non recoupé par recherche web",
+   "sources_recoupement": []
+  },
+  "origine_revue": "générée"
+ },
+ "94c2ef077d": {
+  "statut": "a_verifier",
+  "niveau": "intermediaire",
+  "piege": false,
+  "note": "",
+  "correction": null,
+  "verification": {
+   "recoupement": "non",
+   "note": "fait issu des tables internes de l'appli ; non recoupé par recherche web",
+   "sources_recoupement": []
+  },
+  "origine_revue": "générée"
+ }
+}

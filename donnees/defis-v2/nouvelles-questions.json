@@ -1,0 +1,1055 @@
+{
+ "_lisez_moi": "Premier lot de 35 nouvelles questions (QCM sans nom latin affiché), rédigées pour les thèmes sous-représentés : Fruits et toxicité, Idées reçues, Vocabulaire, Usages et histoire, Écologie, Milieux. Chaque fait a été recoupé par recherche web (résultats de recherche synthétisés ; les pages citées n'ont pas été ouvertes une à une). Aucune n'est en ligne.",
+ "questions": [
+  {
+   "id": "N01",
+   "theme": "Fruits et toxicité",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quelle partie de la rhubarbe se mange ?",
+   "choix": [
+    "Les feuilles",
+    "Les fleurs",
+    "Les côtes (pétioles)",
+    "Les graines"
+   ],
+   "bonne": 2,
+   "explication": "On ne mange que les côtes (pétioles), de préférence cuites. Les feuilles contiennent beaucoup d'acide oxalique et sont toxiques : dans le doute, ne rien consommer.",
+   "sources": [
+    "https://www.futura-sciences.com/planete/definitions/botanique-rhubarbe-19382/",
+    "https://www.aroma-zone.com/page/rhubarbe-definitions-bienfaits"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "rhubarbe : seuls les pétioles (côtes) se mangent ; feuilles toxiques (acide oxalique)",
+    "sources_recoupement": [
+     "https://www.futura-sciences.com/planete/definitions/botanique-rhubarbe-19382/",
+     "https://www.aroma-zone.com/page/rhubarbe-definitions-bienfaits"
+    ]
+   }
+  },
+  {
+   "id": "N02",
+   "theme": "Fruits et toxicité",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Pourquoi écarte-t-on les parties verdies d'une pomme de terre ?",
+   "choix": [
+    "Elles sont trop dures à cuire",
+    "Elles ont attrapé le mildiou",
+    "Elles contiennent plus de solanine, une toxine",
+    "Elles sont déjà germées"
+   ],
+   "bonne": 2,
+   "explication": "Le vert vient de la chlorophylle, inoffensive, mais il signale souvent beaucoup de solanine, une toxine que la cuisson ne détruit pas : on épluche largement ou on jette.",
+   "sources": [
+    "https://www.larevuedupraticien.fr/article/intoxication-la-solanine",
+    "https://chimie-paris.org/docs/lapatate.pdf"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "pomme de terre verdie à la lumière : chlorophylle inoffensive mais signe d'une teneur élevée en solanine, que la cuisson ne détruit pas ; il faut peler largement ou jeter",
+    "sources_recoupement": [
+     "https://www.larevuedupraticien.fr/article/intoxication-la-solanine",
+     "https://chimie-paris.org/docs/lapatate.pdf"
+    ]
+   }
+  },
+  {
+   "id": "N03",
+   "theme": "Fruits et toxicité",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Pourquoi ne mange-t-on pas les haricots secs crus ?",
+   "choix": [
+    "Ils contiennent des lectines toxiques, qu'une cuisson longue détruit",
+    "Ils sont simplement trop durs",
+    "Ils fermentent dans l'estomac",
+    "Ils contiennent beaucoup de caféine"
+   ],
+   "bonne": 0,
+   "explication": "Les haricots secs, surtout les rouges, contiennent des lectines toxiques : il faut les tremper, puis les faire bouillir à gros bouillons au moins 10 minutes (plus longtemps par prudence).",
+   "sources": [
+    "https://www.canada.ca/fr/sante-canada/services/aliments-nutrition/salubrite-aliments/contaminants-chimiques/toxines-naturelles/lectines-legumineuses.html",
+    "https://www.quechoisir.org/actualite-legumineuses-une-preparation-longue-mais-indispensable-n174746/"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "haricots rouges secs : lectines toxiques ; trempage (5 h au moins) puis ébullition à gros bouillons au moins 10 min (Santé Canada), 30 min ou plus selon l'EFSA",
+    "sources_recoupement": [
+     "https://www.canada.ca/fr/sante-canada/services/aliments-nutrition/salubrite-aliments/contaminants-chimiques/toxines-naturelles/lectines-legumineuses.html",
+     "https://www.quechoisir.org/actualite-legumineuses-une-preparation-longue-mais-indispensable-n174746/"
+    ]
+   }
+  },
+  {
+   "id": "N04",
+   "theme": "Fruits et toxicité",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Botaniquement, une tomate est…",
+   "choix": [
+    "Un légume-feuille",
+    "Une baie",
+    "Une drupe",
+    "Une gousse"
+   ],
+   "bonne": 1,
+   "explication": "La tomate est une baie charnue ; « légume » est une catégorie de cuisine. C'est une Solanacée, comme la pomme de terre et l'aubergine.",
+   "sources": [
+    "https://www.alimentarium.org/fr/node/1223",
+    "https://www.jardiner-malin.fr/fiche/solanacees-famille.html"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "tomate : baie charnue (Solanacées), « légume » est une catégorie culinaire",
+    "sources_recoupement": [
+     "https://www.alimentarium.org/fr/node/1223",
+     "https://www.jardiner-malin.fr/fiche/solanacees-famille.html"
+    ]
+   }
+  },
+  {
+   "id": "N24",
+   "theme": "Fruits et toxicité",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "Pourquoi l'Anses déconseille-t-elle de croquer des amandes de noyaux d'abricot ?",
+   "choix": [
+    "Elles contiennent de la nicotine",
+    "Elles contiennent de l'amygdaline, qui libère du cyanure à la digestion",
+    "Elles sont très riches en sucre",
+    "Elles sont trop dures pour les dents"
+   ],
+   "bonne": 1,
+   "explication": "Ces amandes amères contiennent de l'amygdaline : à la digestion, elle libère du cyanure. Le risque vient surtout de celles que l'on croque en grande quantité.",
+   "sources": [
+    "https://www.anses.fr/fr/content/amandes-dabricots-un-risque-dintoxication-au-cyanure",
+    "https://www.vidal.fr/actualites/22811-les-amandes-de-noyaux-d-abricots-ne-sont-pas-anti-cancer-et-peuvent-etre-toxiques.html"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "amandes de noyaux d'abricot : amygdaline transformée en cyanure à la digestion, risque d'intoxication (Anses, 154 cas en 5 ans)",
+    "sources_recoupement": [
+     "https://www.anses.fr/fr/content/amandes-dabricots-un-risque-dintoxication-au-cyanure",
+     "https://www.vidal.fr/actualites/22811-les-amandes-de-noyaux-d-abricots-ne-sont-pas-anti-cancer-et-peuvent-etre-toxiques.html"
+    ]
+   }
+  },
+  {
+   "id": "N06",
+   "theme": "Idées reçues",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Le gui que l'on voit dans les peupliers est…",
+   "choix": [
+    "Un parasite complet, sans chlorophylle",
+    "Un hémiparasite : il fait sa photosynthèse mais puise l'eau et les sels de l'arbre",
+    "Un épiphyte inoffensif, comme une mousse",
+    "Un champignon des branches"
+   ],
+   "bonne": 1,
+   "explication": "Le gui garde ses feuilles vertes et fait sa photosynthèse, mais ses suçoirs pompent l'eau et les sels minéraux de l'arbre : c'est un hémiparasite.",
+   "sources": [
+    "https://www.techno-science.net/fr/definitions/gui-plante",
+    "https://www.humanite-biodiversite.fr/articles/70190-au-gui-l-an-neuf"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "gui (Viscum album) hémiparasite : puise eau et sels minéraux de l'hôte (peuplier, pommier, tilleul, saule) mais fait sa photosynthèse",
+    "sources_recoupement": [
+     "https://www.techno-science.net/fr/definitions/gui-plante",
+     "https://www.humanite-biodiversite.fr/articles/70190-au-gui-l-an-neuf"
+    ]
+   }
+  },
+  {
+   "id": "N09",
+   "theme": "Idées reçues",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "La tulipe, symbole des Pays-Bas, est originaire…",
+   "choix": [
+    "Des Pays-Bas",
+    "D'Asie centrale",
+    "D'Amérique du Sud",
+    "D'Afrique du Nord"
+   ],
+   "bonne": 1,
+   "explication": "La tulipe sauvage vient d'Asie centrale. Elle a gagné l'Europe par la Perse et l'Empire ottoman (vers 1550), bien avant la « tulipomanie » néerlandaise de 1636-1637.",
+   "sources": [
+    "https://m.gardensbythebay.com.sg/content/dam/gbb-2021/documents/media-room/2016/FOR-WEBSITE-APPENDIX-A-Rediscover-the-Origins-of-the-Tulip.pdf",
+    "https://www.sarahraven.com/articles/the-history-of-the-tulip"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "nuancé",
+    "note": "tulipe sauvage originaire d'Asie centrale (Tian Shan), diffusée par la Perse et l'Empire ottoman, introduite en Europe vers 1550 (Busbecq, Clusius), tulipomanie néerlandaise en 1636-1637 ; « Pamir » non retrouvé : retiré",
+    "sources_recoupement": [
+     "https://m.gardensbythebay.com.sg/content/dam/gbb-2021/documents/media-room/2016/FOR-WEBSITE-APPENDIX-A-Rediscover-the-Origins-of-the-Tulip.pdf",
+     "https://www.sarahraven.com/articles/the-history-of-the-tulip"
+    ]
+   }
+  },
+  {
+   "id": "N30",
+   "theme": "Idées reçues",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Quand le tournesol suit-il le soleil dans la journée ?",
+   "choix": [
+    "Toute sa vie",
+    "Seulement quand il est jeune, avant la floraison",
+    "Seulement par temps nuageux",
+    "Jamais : c'est une légende"
+   ],
+   "bonne": 1,
+   "explication": "Les jeunes tournesols suivent le soleil d'est en ouest, grâce à une horloge interne. Adultes, ils cessent de bouger et restent tournés vers l'est.",
+   "sources": [
+    "https://www.futura-sciences.com/planete/definitions/botanique-heliotropisme-19421/",
+    "https://www.techno-science.net/fr/actualites/comment-les-tournesols-voient-le-soleil-24004"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "tournesol : les jeunes plants suivent le soleil d'est en ouest (horloge interne, Science 2016) ; les plantes adultes restent tournées vers l'est",
+    "sources_recoupement": [
+     "https://www.futura-sciences.com/planete/definitions/botanique-heliotropisme-19421/",
+     "https://www.techno-science.net/fr/actualites/comment-les-tournesols-voient-le-soleil-24004"
+    ]
+   }
+  },
+  {
+   "id": "N29",
+   "theme": "Idées reçues",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Le vrai jasmin (genre Jasminum) est de la même famille que…",
+   "choix": [
+    "La pervenche",
+    "La pomme de terre",
+    "L'olivier",
+    "La menthe"
+   ],
+   "bonne": 2,
+   "explication": "Le vrai jasmin est une Oléacée, comme l'olivier, le frêne et le lilas. Le « jasmin étoilé » n'en est pas un : c'est une Apocynacée, comme la pervenche.",
+   "sources": [
+    "https://plants.ces.ncsu.edu/plants/jasminum-officinale/common-name/true-jasmine/",
+    "https://franco.wiki/fr/Oleaceae.html"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Jasminum officinale = Oléacées (comme l'olivier, le frêne, le lilas) ; Trachelospermum jasminoides = Apocynacées (une source) ; Solanum jasminoides non recoupé : retiré",
+    "sources_recoupement": [
+     "https://plants.ces.ncsu.edu/plants/jasminum-officinale/common-name/true-jasmine/",
+     "https://franco.wiki/fr/Oleaceae.html"
+    ]
+   }
+  },
+  {
+   "id": "N08",
+   "theme": "Vocabulaire",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Une marguerite est en réalité…",
+   "choix": [
+    "Une grande fleur unique à nombreux pétales",
+    "Une inflorescence de nombreuses petites fleurs (un capitule)",
+    "Une fleur double obtenue par sélection",
+    "Une ombelle de fleurs soudées"
+   ],
+   "bonne": 1,
+   "explication": "Chaque « pétale » blanc est une petite fleur ligulée, et le disque jaune est formé de fleurons tubulés : la marguerite est un capitule, comme toutes les Astéracées.",
+   "sources": [
+    "https://www.techno-science.net/fr/definitions/capitule-botanique",
+    "https://areq.net/lang/fr/Capitule_(botanique).html"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "marguerite = capitule (inflorescence de nombreux fleurons ligulés et tubulés) des Astéracées",
+    "sources_recoupement": [
+     "https://www.techno-science.net/fr/definitions/capitule-botanique",
+     "https://areq.net/lang/fr/Capitule_(botanique).html"
+    ]
+   }
+  },
+  {
+   "id": "N10",
+   "theme": "Vocabulaire",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "La partie que l'on mange chez la pomme de terre est…",
+   "choix": [
+    "Une racine renflée",
+    "Un bulbe",
+    "Un tubercule : une tige souterraine renflée",
+    "Un fruit"
+   ],
+   "bonne": 2,
+   "explication": "C'est une tige souterraine gonflée de réserves, portée par des stolons : pas une racine.",
+   "sources": [
+    "https://www.futura-sciences.com/planete/definitions/botanique-tubercule-2422/",
+    "https://areq.net/lang/fr/Pomme_de_terre.html"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "pomme de terre = tubercule caulinaire : tige souterraine renflée portée par des stolons, pas une racine",
+    "sources_recoupement": [
+     "https://www.futura-sciences.com/planete/definitions/botanique-tubercule-2422/",
+     "https://areq.net/lang/fr/Pomme_de_terre.html"
+    ]
+   }
+  },
+  {
+   "id": "N17",
+   "theme": "Vocabulaire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Comment s'appelle le « parachute » du fruit du pissenlit ?",
+   "choix": [
+    "La cupule",
+    "L'aigrette",
+    "La samare",
+    "Le calice"
+   ],
+   "bonne": 1,
+   "explication": "L'aigrette (ou pappus) est une touffe de poils soyeux au sommet de l'akène : elle le porte au vent, comme un parachute.",
+   "sources": [
+    "https://www.lequotidiendupharmacien.fr/pappus",
+    "https://www.futura-sciences.com/planete/definitions/botanique-akene-9544/"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "aigrette (pappus) du pissenlit : parachute de l'akène, dispersion par le vent",
+    "sources_recoupement": [
+     "https://www.lequotidiendupharmacien.fr/pappus",
+     "https://www.futura-sciences.com/planete/definitions/botanique-akene-9544/"
+    ]
+   }
+  },
+  {
+   "id": "N18",
+   "theme": "Vocabulaire",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "Les « coulants » du fraisier, qui forment de nouveaux plants, sont des…",
+   "choix": [
+    "Rhizomes",
+    "Stolons",
+    "Bulbilles",
+    "Tubercules"
+   ],
+   "bonne": 1,
+   "explication": "Les stolons sont des tiges rampantes qui s'enracinent : chaque nouveau plant se détache ensuite de la plante mère. Un rhizome, lui, est souterrain.",
+   "sources": [
+    "https://www.futura-sciences.com/planete/definitions/botanique-stolon-5183/",
+    "https://wwf.fr/sites/default/files/doc-2020-12/20211130_Fiche-pratique_04-Reproduction-vegetative_Veni-verdi-WWF.pdf"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "fraisier : stolons (tiges rampantes) qui s'enracinent et forment de nouveaux plants ; rhizome = tige souterraine",
+    "sources_recoupement": [
+     "https://www.futura-sciences.com/planete/definitions/botanique-stolon-5183/",
+     "https://wwf.fr/sites/default/files/doc-2020-12/20211130_Fiche-pratique_04-Reproduction-vegetative_Veni-verdi-WWF.pdf"
+    ]
+   }
+  },
+  {
+   "id": "N19",
+   "theme": "Vocabulaire",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "Le noisetier porte ses chatons mâles et ses fleurs femelles sur le même arbre : il est…",
+   "choix": [
+    "Dioïque",
+    "Monoïque",
+    "Stérile",
+    "Hermaphrodite"
+   ],
+   "bonne": 1,
+   "explication": "Monoïque : fleurs mâles (chatons) et fleurs femelles séparées, mais sur le même pied. Chez un arbre dioïque, comme le houx ou le ginkgo, les sexes sont portés par des pieds différents.",
+   "sources": [
+    "https://inpn.mnhn.fr/espece/cd_nom/92608?lg=en",
+    "https://www.tela-botanica.org/wp-content/uploads/2026/02/Floraison-Noisetier-ODS.pdf"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "noisetier monoïque : chatons mâles et fleurs femelles sur le même arbre",
+    "sources_recoupement": [
+     "https://inpn.mnhn.fr/espece/cd_nom/92608?lg=en",
+     "https://www.tela-botanica.org/wp-content/uploads/2026/02/Floraison-Noisetier-ODS.pdf"
+    ]
+   }
+  },
+  {
+   "id": "N11",
+   "theme": "Usages et histoire",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "La gousse de vanille est le fruit…",
+   "choix": [
+    "D'un haricot tropical",
+    "D'une orchidée grimpante",
+    "D'un palmier",
+    "D'un arbre proche du cacaoyer"
+   ],
+   "bonne": 1,
+   "explication": "La vanille vient d'une orchidée lianescente (Vanilla planifolia). Hors de son pays d'origine, ses fleurs sont fécondées à la main, une à une.",
+   "sources": [
+    "https://www.techno-science.net/fr/definitions/vanille",
+    "https://planet-vie.ens.fr/node/1399/download/pdf"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "vanille = fruit (gousse) d'une orchidée lianescente (Vanilla planifolia, Orchidacées) ; fécondation manuelle hors de l'aire d'origine",
+    "sources_recoupement": [
+     "https://www.techno-science.net/fr/definitions/vanille",
+     "https://planet-vie.ens.fr/node/1399/download/pdf"
+    ]
+   }
+  },
+  {
+   "id": "N12",
+   "theme": "Usages et histoire",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Le poivre vert, le noir et le blanc viennent…",
+   "choix": [
+    "De trois plantes différentes",
+    "Du même poivrier, selon la maturité et la préparation des baies",
+    "Du poivrier, du piment et du genévrier",
+    "De trois parties de la même fleur"
+   ],
+   "bonne": 1,
+   "explication": "Tous trois viennent de Piper nigrum : le vert est cueilli avant maturité, le noir séché presque mûr, le blanc débarrassé de son enveloppe.",
+   "sources": [
+    "https://www.quechoisir.org/decryptage-poivre-decryptage-n5231/",
+    "https://www.techno-science.net/fr/definitions/poivre"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "poivres vert, noir et blanc : même plante Piper nigrum, selon le stade de récolte et le traitement (le stade du poivre blanc varie selon les sources)",
+    "sources_recoupement": [
+     "https://www.quechoisir.org/decryptage-poivre-decryptage-n5231/",
+     "https://www.techno-science.net/fr/definitions/poivre"
+    ]
+   }
+  },
+  {
+   "id": "N13",
+   "theme": "Usages et histoire",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "De l'écorce de quel arbre a-t-on isolé la quinine, contre le paludisme ?",
+   "choix": [
+    "Du saule",
+    "Du quinquina",
+    "De l'eucalyptus",
+    "Du baobab"
+   ],
+   "bonne": 1,
+   "explication": "Les Andins connaissaient déjà les vertus de l'écorce du quinquina (Cinchona) ; Pelletier et Caventou en ont isolé la quinine en 1820. Le saule, lui, a inspiré l'aspirine.",
+   "sources": [
+    "https://www.techno-science.net/fr/definitions/cinchona",
+    "https://www.vidal.fr/actualites/24569/chloroquine_une_histoire_d_avenir/"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "quinine isolée en 1820 par Pelletier et Caventou de l'écorce du quinquina (Cinchona), antipaludique connu dès le XVIe siècle",
+    "sources_recoupement": [
+     "https://www.techno-science.net/fr/definitions/cinchona",
+     "https://www.vidal.fr/actualites/24569/chloroquine_une_histoire_d_avenir/"
+    ]
+   }
+  },
+  {
+   "id": "N14",
+   "theme": "Usages et histoire",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quelle plante est associée à la mort de Socrate, en 399 av. J.-C. ?",
+   "choix": [
+    "L'if",
+    "La belladone",
+    "La grande ciguë",
+    "Le colchique"
+   ],
+   "bonne": 2,
+   "explication": "Selon la plupart des historiens, Socrate a bu un poison à base de grande ciguë (Conium maculatum), une Apiacée riche en coniine. La composition exacte reste discutée.",
+   "sources": [
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6150177/",
+    "https://fr.vikidia.org/wiki/Grande_cigu%C3%AB"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Socrate condamné en 399 av. J.-C. : poison à base de grande ciguë (Conium maculatum, Apiacées, coniine) selon la plupart des chercheurs ; composition exacte débattue",
+    "sources_recoupement": [
+     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6150177/",
+     "https://fr.vikidia.org/wiki/Grande_cigu%C3%AB"
+    ]
+   }
+  },
+  {
+   "id": "N15",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Que met-on à infuser pour une tisane de tilleul ?",
+   "choix": [
+    "Les feuilles",
+    "L'écorce",
+    "Les fruits",
+    "Les fleurs avec leur bractée"
+   ],
+   "bonne": 3,
+   "explication": "On infuse l'inflorescence avec sa grande bractée jaunâtre, souvent vendue sous le nom de « bractées de tilleul ».",
+   "sources": [
+    "https://www.pharma-gdd.com/fr/les-bienfaits-du-tilleul",
+    "https://ansm.sante.fr/uploads/2021/05/10/tilia-europaea-tilleul-pph.pdf"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "tisane de tilleul = inflorescence avec sa bractée (« bractées » du commerce)",
+    "sources_recoupement": [
+     "https://www.pharma-gdd.com/fr/les-bienfaits-du-tilleul",
+     "https://ansm.sante.fr/uploads/2021/05/10/tilia-europaea-tilleul-pph.pdf"
+    ]
+   }
+  },
+  {
+   "id": "N16",
+   "theme": "Usages et histoire",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "En 1753, Linné publie Species plantarum. Que fixe-t-il pour nommer les plantes ?",
+   "choix": [
+    "Un numéro pour chaque espèce",
+    "Le nom de son découvreur",
+    "Un nom français officiel pour chaque plante",
+    "Un nom de genre suivi d'un nom d'espèce"
+   ],
+   "bonne": 3,
+   "explication": "C'est la nomenclature binominale : Quercus robur, Fagus sylvatica… Le 1er mai 1753 est la date retenue comme point de départ de la nomenclature botanique moderne.",
+   "sources": [
+    "https://www.universalis.fr/encyclopedie/linne-reperes-chronologiques/",
+    "https://tela-botanica.org/wp-content/uploads/2019/01/Tiré-à-part-Bulletin-SFOLA-2017-3-13-Linné.pdf"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Species Plantarum (1753) : point de départ de la nomenclature botanique moderne, nom de genre + épithète spécifique",
+    "sources_recoupement": [
+     "https://www.universalis.fr/encyclopedie/linne-reperes-chronologiques/",
+     "https://tela-botanica.org/wp-content/uploads/2019/01/Tiré-à-part-Bulletin-SFOLA-2017-3-13-Linné.pdf"
+    ]
+   }
+  },
+  {
+   "id": "N25",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quel arbre fournit le latex du caoutchouc naturel ?",
+   "choix": [
+    "Le teck",
+    "L'eucalyptus",
+    "Le cacaoyer",
+    "L'hévéa"
+   ],
+   "bonne": 3,
+   "explication": "L'hévéa (Hevea brasiliensis), originaire d'Amazonie, donne un latex blanc récolté par saignée de l'écorce : plus de 90 % du caoutchouc naturel.",
+   "sources": [
+    "https://www.techno-science.net/fr/definitions/hevea",
+    "https://www.futura-sciences.com/planete/definitions/botanique-hevea-12053/"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "hévéa (Hevea brasiliensis, Euphorbiacées) : latex récolté par saignée de l'écorce, plus de 90 % du caoutchouc naturel",
+    "sources_recoupement": [
+     "https://www.techno-science.net/fr/definitions/hevea",
+     "https://www.futura-sciences.com/planete/definitions/botanique-hevea-12053/"
+    ]
+   }
+  },
+  {
+   "id": "N26",
+   "theme": "Usages et histoire",
+   "niveau": "intermediaire",
+   "piege": true,
+   "format": "qcm",
+   "question": "Le safran est fait avec…",
+   "choix": [
+    "Les pétales d'un souci",
+    "Les stigmates d'un crocus",
+    "Les étamines d'un lis",
+    "Les graines d'un carthame"
+   ],
+   "bonne": 1,
+   "explication": "Ce sont les trois stigmates rouges de la fleur de Crocus sativus, récoltés un par un à la main puis séchés.",
+   "sources": [
+    "https://www.futura-sciences.com/planete/definitions/botanique-crocus-safran-9645/",
+    "https://agriculture.ec.europa.eu/farming/geographical-indications-and-quality-schemes/geographical-indications-food-and-drink/krokos-kozanis-pdo_fr"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "safran = stigmates séchés (3 par fleur) de Crocus sativus, récoltés à la main",
+    "sources_recoupement": [
+     "https://www.futura-sciences.com/planete/definitions/botanique-crocus-safran-9645/",
+     "https://agriculture.ec.europa.eu/farming/geographical-indications-and-quality-schemes/geographical-indications-food-and-drink/krokos-kozanis-pdo_fr"
+    ]
+   }
+  },
+  {
+   "id": "N27",
+   "theme": "Usages et histoire",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "Le clou de girofle est…",
+   "choix": [
+    "Un fruit séché",
+    "Un morceau d'écorce",
+    "Un bouton floral séché",
+    "Une graine"
+   ],
+   "bonne": 2,
+   "explication": "C'est le bouton floral du giroflier (Syzygium aromaticum), cueilli avant de s'ouvrir, quand il passe du vert au rouge, puis séché.",
+   "sources": [
+    "https://www.pharma-gdd.com/fr/les-bienfaits-du-clou-de-girofle",
+    "https://premierepeau.com/fr/pages/glossary-terms/clove"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "clou de girofle = bouton floral séché du giroflier (Syzygium aromaticum, Myrtacées)",
+    "sources_recoupement": [
+     "https://www.pharma-gdd.com/fr/les-bienfaits-du-clou-de-girofle",
+     "https://premierepeau.com/fr/pages/glossary-terms/clove"
+    ]
+   }
+  },
+  {
+   "id": "N28",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quelle plante rend de nombreux chats euphoriques grâce à la népétalactone ?",
+   "choix": [
+    "La lavande",
+    "La cataire (herbe aux chats)",
+    "Le romarin",
+    "Le basilic"
+   ],
+   "bonne": 1,
+   "explication": "La népétalactone de la cataire excite ou apaise la plupart des chats (environ la moitié y sont sensibles). Les chiens et les rongeurs n'y réagissent pas.",
+   "sources": [
+    "https://espacepourlavie.ca/herbe-chat-utilisations-et-reactions-des-animaux",
+    "https://premierepeau.com/fr/pages/glossary-terms/catnip"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "cataire (Nepeta cataria) : népétalactone, effet excitant ou euphorisant chez la plupart des chats (environ la moitié sont sensibles)",
+    "sources_recoupement": [
+     "https://espacepourlavie.ca/herbe-chat-utilisations-et-reactions-des-animaux",
+     "https://premierepeau.com/fr/pages/glossary-terms/catnip"
+    ]
+   }
+  },
+  {
+   "id": "N20",
+   "theme": "Écologie",
+   "niveau": "difficile",
+   "piege": false,
+   "format": "qcm",
+   "question": "À quoi servent les « genoux » qui sortent de l'eau autour du cyprès chauve ?",
+   "choix": [
+    "À stocker l'eau",
+    "À ancrer l'arbre dans la vase",
+    "À apporter de l'air aux racines noyées",
+    "À attirer les insectes pollinisateurs"
+   ],
+   "bonne": 2,
+   "explication": "Ce sont des pneumatophores : des racines qui remontent à l'air libre pour apporter de l'oxygène aux racines immergées. Le cyprès chauve pousse naturellement dans des zones humides.",
+   "sources": [
+    "https://www.futura-sciences.com/planete/definitions/botanique-cypres-chauve-8503/",
+    "https://fr.vikidia.org/wiki/Cypr%C3%A8s_chauve"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "cyprès chauve : pneumatophores (« genoux ») qui apportent de l'oxygène aux racines submergées",
+    "sources_recoupement": [
+     "https://www.futura-sciences.com/planete/definitions/botanique-cypres-chauve-8503/",
+     "https://fr.vikidia.org/wiki/Cypr%C3%A8s_chauve"
+    ]
+   }
+  },
+  {
+   "id": "N21",
+   "theme": "Milieux",
+   "niveau": "intermediaire",
+   "piege": false,
+   "format": "qcm",
+   "question": "Pourquoi les jeunes feuilles d'un rhododendron jaunissent-elles en sol calcaire ?",
+   "choix": [
+    "Il y manque de lumière",
+    "Le calcaire empêche d'absorber le fer : c'est la chlorose ferrique",
+    "Il y a trop d'eau",
+    "Le calcaire brûle les racines"
+   ],
+   "bonne": 1,
+   "explication": "Le fer est présent mais mal absorbé en sol alcalin ou calcaire : les feuilles jaunissent entre les nervures. D'où la terre de bruyère et l'eau de pluie.",
+   "sources": [
+    "https://agriculture.canada.ca/fr/production-agricole/protection-cultures/maladies-ravageurs-agroforesterie/chlorose-ferrique-arbres-arbustes",
+    "https://www.jardiner-malin.fr/fiche/rhododendron.html"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "jaunissement des jeunes feuilles de rhododendron entre les nervures = chlorose ferrique en sol calcaire (fer mal assimilé en sol alcalin)",
+    "sources_recoupement": [
+     "https://agriculture.canada.ca/fr/production-agricole/protection-cultures/maladies-ravageurs-agroforesterie/chlorose-ferrique-arbres-arbustes",
+     "https://www.jardiner-malin.fr/fiche/rhododendron.html"
+    ]
+   }
+  },
+  {
+   "id": "E01",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quelle partie de l'érable à sucre récolte-t-on au printemps pour faire du sirop ?",
+   "choix": [
+    "La sève",
+    "Les fleurs",
+    "Les samares",
+    "L'écorce"
+   ],
+   "bonne": 0,
+   "explication": "On entaille le tronc au début du printemps, quand les nuits gèlent et les jours dégèlent. La sève, très peu sucrée, est concentrée par évaporation : il en faut environ 40 litres pour 1 litre de sirop.",
+   "sources": [
+    "https://www.thecanadianencyclopedia.ca/fr/article/acericulture",
+    "https://fr.vikidia.org/wiki/Sirop_d'%C3%A9rable"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "érable à sucre (Acer saccharum) : sève récoltée au début du printemps (nuits de gel, jours de dégel), très peu sucrée (2-3 %), concentrée par évaporation (environ 40 L pour 1 L de sirop)",
+    "sources_recoupement": [
+     "https://www.thecanadianencyclopedia.ca/fr/article/acericulture",
+     "https://fr.vikidia.org/wiki/Sirop_d'%C3%A9rable"
+    ]
+   }
+  },
+  {
+   "id": "E02",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Le chocolat est fabriqué à partir de quelle partie du cacaoyer ?",
+   "choix": [
+    "Les feuilles",
+    "Les racines",
+    "Les graines (les fèves)",
+    "L'écorce"
+   ],
+   "bonne": 2,
+   "explication": "Les fèves sont les graines contenues dans la cabosse, le fruit du cacaoyer. Elles sont fermentées, séchées, torréfiées puis broyées.",
+   "sources": [
+    "https://www.alimentarium.org/fr/savoir/cacaoyer",
+    "https://www.lalanguefrancaise.com/dictionnaire/definition/cacaoyer"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "cacaoyer (Theobroma cacao) : les fèves sont les graines contenues dans la cabosse, fermentées, séchées puis transformées",
+    "sources_recoupement": [
+     "https://www.alimentarium.org/fr/savoir/cacaoyer",
+     "https://www.lalanguefrancaise.com/dictionnaire/definition/cacaoyer"
+    ]
+   }
+  },
+  {
+   "id": "E03",
+   "theme": "Écologie",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quel oiseau enterre des glands et fait ainsi pousser de jeunes chênes ?",
+   "choix": [
+    "La pie",
+    "Le pigeon ramier",
+    "Le merle noir",
+    "Le geai des chênes"
+   ],
+   "bonne": 3,
+   "explication": "Le geai cache des milliers de glands en automne. Ceux qu'il oublie, enfouis à quelques mètres ou quelques centaines de mètres de l'arbre, peuvent germer au printemps.",
+   "sources": [
+    "https://luberon.fr/luberon/parc-naturel-regional/faune/annu+geai-des-chenes-dans-le-luberon+2274.html",
+    "https://www.waldwissen.net/fr/economie-forestiere/sylviculture/rajeunissement/semis-direct-une-option-pour-la-regeneration-des-forets"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "geai des chênes : cache jusqu'à 5 000 glands par hiver, dont une grande partie non consommée germe ; chiffres d'associations à prendre avec prudence",
+    "sources_recoupement": [
+     "https://luberon.fr/luberon/parc-naturel-regional/faune/annu+geai-des-chenes-dans-le-luberon+2274.html",
+     "https://www.waldwissen.net/fr/economie-forestiere/sylviculture/rajeunissement/semis-direct-une-option-pour-la-regeneration-des-forets"
+    ]
+   }
+  },
+  {
+   "id": "E04",
+   "theme": "Écologie",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Pourquoi la drosera capture-t-elle des insectes ?",
+   "choix": [
+    "Pour s'en protéger",
+    "Pour compléter son alimentation en azote, rare dans son sol",
+    "Pour attirer des pollinisateurs",
+    "Pour se reproduire"
+   ],
+   "bonne": 1,
+   "explication": "Elle pousse dans des tourbières pauvres en azote : ses poils collants piègent les insectes, qu'elle digère pour s'en nourrir.",
+   "sources": [
+    "https://www.techno-science.net/fr/definitions/drosera",
+    "https://www.futura-sciences.com/planete/dossiers/botanique-differents-mecanismes-intervenant-lors-capture-chez-drosera-capensis-172/"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "drosera : milieux humides et pauvres en azote minéral, azote tiré des insectes capturés par les poils collants",
+    "sources_recoupement": [
+     "https://www.techno-science.net/fr/definitions/drosera",
+     "https://www.futura-sciences.com/planete/dossiers/botanique-differents-mecanismes-intervenant-lors-capture-chez-drosera-capensis-172/"
+    ]
+   }
+  },
+  {
+   "id": "E05",
+   "theme": "Fruits et toxicité",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Que faut-il savoir sur le muguet du 1er mai ?",
+   "choix": [
+    "Seules ses baies sont toxiques",
+    "Il est comestible une fois cuit",
+    "Toute la plante est toxique",
+    "Il n'est toxique que pour les animaux"
+   ],
+   "bonne": 2,
+   "explication": "Fleurs, feuilles et baies contiennent des glycosides qui agissent sur le cœur, comme ceux de la digitale. Dans le doute, ne rien consommer.",
+   "sources": [
+    "https://www.bfr.bund.de/en/risk-communication/dialog-formats/bfr-poisonous-plants-garden/lily-of-the-valley/",
+    "https://www.techno-science.net/fr/definitions/muguet-de-mai"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "muguet : toutes les parties contiennent des glycosides cardiotoniques (proches de ceux de la digitale), baies souvent citées comme les plus dangereuses",
+    "sources_recoupement": [
+     "https://www.bfr.bund.de/en/risk-communication/dialog-formats/bfr-poisonous-plants-garden/lily-of-the-valley/",
+     "https://www.techno-science.net/fr/definitions/muguet-de-mai"
+    ]
+   }
+  },
+  {
+   "id": "E06",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "D'où vient la fibre de coton ?",
+   "choix": [
+    "De la tige d'un arbuste",
+    "De l'écorce du cotonnier",
+    "Des poils qui entourent les graines du cotonnier",
+    "Des pétales du cotonnier"
+   ],
+   "bonne": 2,
+   "explication": "Le coton est formé de poils fixés sur les graines du cotonnier ; ils sortent de la capsule mûre sous forme de touffe duveteuse.",
+   "sources": [
+    "https://www.larousse.fr/dictionnaires/francais/coton",
+    "https://www.marques-de-france.fr/definition/coton/"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "coton = poils séminaux des graines du cotonnier, qui sortent de la capsule mûre",
+    "sources_recoupement": [
+     "https://www.larousse.fr/dictionnaires/francais/coton",
+     "https://www.marques-de-france.fr/definition/coton/"
+    ]
+   }
+  },
+  {
+   "id": "E07",
+   "theme": "Vocabulaire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Combien de pétales libres ont les fleurs d'un églantier, d'un pommier ou d'un cerisier ?",
+   "choix": [
+    "Trois",
+    "Quatre",
+    "Cinq",
+    "Huit"
+   ],
+   "bonne": 2,
+   "explication": "Les Rosacées ont des fleurs régulières à cinq pétales libres et cinq sépales : un bon repère pour reconnaître la famille.",
+   "sources": [
+    "https://dictionnaire-academie.fr/article/A9R2949",
+    "https://www.techno-science.net/fr/definitions/rosaceae"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "Rosacées : fleurs régulières à cinq sépales et cinq pétales libres (Académie française) ; églantier et pommier cités, cerisier = Rosacées",
+    "sources_recoupement": [
+     "https://dictionnaire-academie.fr/article/A9R2949",
+     "https://www.techno-science.net/fr/definitions/rosaceae"
+    ]
+   }
+  },
+  {
+   "id": "E09",
+   "theme": "Usages et histoire",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "Quel arbre fournit les pignons de pin ?",
+   "choix": [
+    "Le pin sylvestre",
+    "Le pin parasol",
+    "Le pin noir",
+    "Le pin maritime"
+   ],
+   "bonne": 1,
+   "explication": "Les pignons sont les graines comestibles du pin parasol, que l'on libère en ouvrant ses grosses pommes de pin mûres.",
+   "sources": [
+    "https://www.techno-science.net/fr/definitions/pin-parasol",
+    "https://fr.vikidia.org/wiki/Pin_parasol"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "pignons = graines comestibles du pin parasol (Pinus pinea), libérées par les cônes (pignes) mûrs",
+    "sources_recoupement": [
+     "https://www.techno-science.net/fr/definitions/pin-parasol",
+     "https://fr.vikidia.org/wiki/Pin_parasol"
+    ]
+   }
+  },
+  {
+   "id": "E11",
+   "theme": "Familles",
+   "niveau": "facile",
+   "piege": false,
+   "format": "qcm",
+   "question": "L'olivier appartient à la famille…",
+   "choix": [
+    "Des Rosacées, comme le pommier",
+    "Des Oléacées, comme le frêne et le lilas",
+    "Des Fagacées, comme le chêne",
+    "Des Lauracées, comme le laurier"
+   ],
+   "bonne": 1,
+   "explication": "Le nom de la famille vient de l'olivier (Olea). Elle compte aussi le frêne, le lilas, le jasmin et le forsythia.",
+   "sources": [
+    "https://franco.wiki/fr/Oleaceae.html",
+    "https://www.techno-science.net/fr/definitions/oleaceae"
+   ],
+   "origine": "nouvelle",
+   "statut": "validee",
+   "verification": {
+    "recoupement": "confirmé",
+    "note": "olivier = Oléacées (comme le frêne, le lilas, le jasmin, le forsythia)",
+    "sources_recoupement": [
+     "https://franco.wiki/fr/Oleaceae.html",
+     "https://www.techno-science.net/fr/definitions/oleaceae"
+    ]
+   }
+  }
+ ]
+}
