@@ -4532,7 +4532,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)jeuEnvoi()}
 const APP_V='2026.10.20';   // version de l'appli (AAAA.MM.JJ), à changer à chaque publication
 const ecranType=()=>{try{const m=Math.min(screen.width,screen.height);return !matchMedia('(pointer:coarse)').matches?'ordi':m<600?'telephone':'tablette'}catch(e){return'ordi'}};
 const installee=()=>{try{return matchMedia('(display-mode: standalone)').matches||navigator.standalone===true}catch(e){return false}};
-function mesLire(){try{const o=JSON.parse(localStorage.getItem('qp.mes')||'{}');return{u:o.u||{},s:o.s||{},p:o.p||{},g:o.g||{},e:o.e||{},r:o.r||''}}catch(e){return{u:{},s:{},p:{},g:{},e:{},r:''}}}
+function mesLire(){try{const o=JSON.parse(localStorage.getItem('qp.mes')||'{}');return{u:o.u||{},s:o.s||{},p:o.p||{},g:o.g||{},e:o.e||{},r:o.r||'',rg:o.rg===undefined?-1:o.rg}}catch(e){return{u:{},s:{},p:{},g:{},e:{},r:'',rg:-1}}}
 function mesEcrire(b){try{localStorage.setItem('qp.mes',JSON.stringify(b))}catch(e){}}
 function usage(q){if(sbOn()){const b=mesLire(),k=today()+'|'+q;b.u[k]=(b.u[k]||0)+1;mesEcrire(b)}}
 function mesPhoto(e,ph,good){const b=mesLire(),k=today()+'|'+e+'|'+ph,x=b.p[k]||(b.p[k]={v:0,ok:0});x.v++;if(good)x.ok++;mesEcrire(b)}
@@ -4554,7 +4554,7 @@ function zmSignal(im){const bt=$('zms'),ph=im.closest('#pic')&&cur&&+(String(im.
   bt.onclick=e=>{e.stopPropagation();const b=mesLire();b.g[k]=1;mesEcrire(b);bt.disabled=true;bt.textContent='Photo signalée, merci'}}
 function mesEnvoi(){
   if(!sbOn())return;const id=appId();if(!id)return;sesNote();
-  const b=mesLire(),j=today(),cles=(o,n)=>Object.keys(o).slice(0,n),U=cles(b.u,200),Ss=cles(b.s,50),P=cles(b.p,400),G=cles(b.g,50),E=cles(b.e,20),R=b.r!==j;
+  const b=mesLire(),j=today(),cles=(o,n)=>Object.keys(o).slice(0,n),U=cles(b.u,200),Ss=cles(b.s,50),P=cles(b.p,400),G=cles(b.g,50),E=cles(b.e,20),R=b.r!==j||b.rg!==rk();   // réglages et rang : une fois par jour, et de nouveau si le rang change
   if(!U.length&&!Ss.length&&!P.length&&!G.length&&!E.length&&!R)return;
   const m={v:APP_V,t:ecranType(),
     u:U.map(k=>{const[d,q]=k.split('|');return{j:d,q,n:b.u[k]}}),
@@ -4562,12 +4562,12 @@ function mesEnvoi(){
     p:P.map(k=>{const[d,e,ph]=k.split('|');return{j:d,e,ph:+ph,v:b.p[k].v,ok:b.p[k].ok}}),
     g:G.map(k=>{const[d,e,ph]=k.split('|');return{j:d,e,ph:+ph}}),
     e:E.map(k=>({j:k.slice(0,10),m:k.slice(11),n:b.e[k]}))};
-  if(R)m.r={j,goal:goal(),vib:!!st.set.vib,mode,sombre:matchMedia('(prefers-color-scheme: dark)').matches};
+  if(R)m.r={j,goal:goal(),vib:!!st.set.vib,mode,sombre:matchMedia('(prefers-color-scheme: dark)').matches,rang:rk()};
   // retirés de l'appareil avant l'envoi, remis si le réseau est coupé
   const L={u:{},p:{},g:{},e:{},s:{}};U.forEach(k=>{L.u[k]=b.u[k];delete b.u[k]});P.forEach(k=>{L.p[k]=b.p[k];delete b.p[k]});G.forEach(k=>{L.g[k]=1;delete b.g[k]});
-  E.forEach(k=>{L.e[k]=b.e[k];delete b.e[k]});Ss.forEach(k=>{L.s[k]=b.s[k];delete b.s[k]});if(R)b.r=j;mesEcrire(b);
+  E.forEach(k=>{L.e[k]=b.e[k];delete b.e[k]});Ss.forEach(k=>{L.s[k]=b.s[k];delete b.s[k]});if(R){b.r=j;b.rg=rk()}mesEcrire(b);
   const remettre=()=>{const c=mesLire();for(const k in L.u)c.u[k]=(c.u[k]||0)+L.u[k];for(const k in L.e)c.e[k]=(c.e[k]||0)+L.e[k];for(const k in L.g)c.g[k]=1;
-    for(const k in L.s)if(!c.s[k])c.s[k]=L.s[k];for(const k in L.p){const x=c.p[k]||(c.p[k]={v:0,ok:0});x.v+=L.p[k].v;x.ok+=L.p[k].ok}if(R)c.r='';mesEcrire(c)};
+    for(const k in L.s)if(!c.s[k])c.s[k]=L.s[k];for(const k in L.p){const x=c.p[k]||(c.p[k]={v:0,ok:0});x.v+=L.p[k].v;x.ok+=L.p[k].ok}if(R){c.r='';c.rg=-1}mesEcrire(c)};
   fetch(SBU+'/rest/v1/rpc/envoyer_mesures',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json',apikey:SB_KEY,Authorization:'Bearer '+SB_KEY},
     body:JSON.stringify({p_appareil:id,p_mesures:m})}).then(r=>{if(r.status>=500||r.status===429)throw 0}).catch(remettre);   // refus 4xx : paquet abandonné
 }

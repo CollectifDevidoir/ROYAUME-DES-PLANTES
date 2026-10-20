@@ -222,7 +222,7 @@ Pour retirer un accès : `delete from public.admins where user_id = (select id f
 | `photos_jeu` | réussite par photo montrée (numéro de photo iNaturalist) |
 | `signalements` | photos signalées avec « Photo douteuse ? » dans l'agrandissement de la photo du quiz |
 | `erreurs` | erreurs techniques : message sans adresse ni nombre, version et type d'écran, sans identifiant d'appareil |
-| `reglages` | objectif du jour, vibrations, mode de jeu, appareil en mode sombre, une fois par jour |
+| `reglages` | objectif du jour, vibrations, mode de jeu, appareil en mode sombre, une fois par jour ; **rang du joueur** (0 = Graine … 14 = Maître du royaume), avec ou sans compte, renvoyé s'il change dans la journée. Coulisses : carte « Joueurs par rang » (dernier rang connu de chaque appareil sur la période) |
 
 La fidélité se calcule à partir des visites : le premier jour où un appareil apparaît, puis ses retours.
 
