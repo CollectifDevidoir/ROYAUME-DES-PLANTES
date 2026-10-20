@@ -29,6 +29,7 @@ Les contrôles des comptes demandent en plus `npm i -g @electric-sql/pglite @sup
 | `controle_synonymes.js` | Noms acceptés en plus du nom affiché (`SYN`) : juste, « Presque », recherche de l'herbier. |
 | `controle_jokers.js` | Jokers : 5 par jour, même après rechargement, deuxième onglet ou fusion avec le compte. |
 | `controle_volets.js` | Mêmes gestes de fermeture pour tous les volets. |
+| `controle_familles_completes.js` | « Famille complète » : célébration à la dernière espèce acquise d'une famille du jeu (3 espèces ou plus), une seule fois (pas après une rechute, une restauration ou une synchronisation), carte « Ta collection » de la Famille du jour. |
 | `controle_familles.js`, `controle_famille_ordi.js` | Famille du jour : contenu, cartes sur petit téléphone, chiffres ; feuilletage sur ordinateur. |
 | `controle_jeu.js` | Statistiques de jeu anonymes de bout en bout (faux Supabase) : tables `jeu` et `jeu_confusions`. |
 | `controle_cache.js` | File d'attente des photos et plafond du cache (étape 8). |

@@ -3456,7 +3456,12 @@ const K='quizplantes.v1',INT=[0,0,0,0,864e5,2592e5,6048e5],GOALS=[10,20,30,40,50
 const IMAX=60*864e5,ivl=p=>p.b>=6?Math.min(INT[6]*2**(p.k||0),IMAX):INT[p.b];
 let st={sp:{},day:{},m:{}};
 try{st=JSON.parse(localStorage.getItem(K))||st}catch(e){}
+// familles du jeu d'au moins 3 espèces, et celles que le joueur a complètes (toutes leurs espèces acquises)
+const FAMSP={};S.forEach(s=>{const f=FAM[s[0].split(' ')[0]];if(f)(FAMSP[f]=FAMSP[f]||[]).push(s)});for(const f in FAMSP)if(FAMSP[f].length<3)delete FAMSP[f];
+const famComplete=f=>FAMSP[f].every(s=>((st.sp||{})[s[0]]||{b:0}).b>=4);
 const fix=()=>{st.m=st.m||{};st.hist=st.hist||{};st.cf=st.cf||{};st.ses=st.ses||[];st.best=st.best||0;st.tm=st.tm||{d:'',l:[]};st.ho=st.ho||{};st.fd=st.fd||{};st.set=st.set&&typeof st.set==='object'?st.set:{};if(!GOALS.includes(st.set.goal))st.set.goal=40;if(typeof st.set.vib!=='boolean')st.set.vib=true;
+  // familles complètes (date de la célébration) ; celles déjà complètes avant cette version, ou venues d'une sauvegarde, sont notées sans célébration
+  st.fc=st.fc&&typeof st.fc==='object'&&!Array.isArray(st.fc)?st.fc:{};for(const f in FAMSP)if(!st.fc[f]&&famComplete(f))st.fc[f]='avant';
   for(const h of Object.values(st.hist))if(h&&h.dn){h.n=Math.max(0,h.n-h.dn);h.ok=Math.max(0,(h.ok||0)-(h.dok||0));delete h.dn;delete h.dok}   // réponses au défi retirées de l'historique (version précédente)
   Object.values(st.sp||{}).forEach(p=>{if(p.b<=3&&p.d>Date.now())p.d=0;else if(p.b>=4&&p.d>Date.now()+ivl(p))p.d=Date.now()+ivl(p)})};fix();
 const save=()=>{try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}sbDirty()};
@@ -3489,6 +3494,9 @@ function celNext(){
   document.body.append(el);vib([40,60,40,60,120]);
   let gone=false;const x=()=>{if(gone)return;gone=true;el.remove();setTimeout(celNext,250)};el.onclick=e=>{const b=e.target.closest&&e.target.closest('.cel-a button');x();if(b)o.acts[+b.dataset.i].f()};setTimeout(x,acts?12000:5600)}
 function rankAnim(){const i=rk();celebrate({html:rIcon(i),title:'Nouveau rang !',sub:R[i][1],hu:rankHue(i),n:12+i*3})}
+// dernière espèce d'une famille acquise : une seule célébration par famille, jamais rejouée (st.fc)
+function famAnim(s){const f=FAM[gen(s[0])];if(!f||!FAMSP[f]||st.fc[f]||!famComplete(f))return;st.fc[f]=today();save();
+  celebrate({html:BULB,title:'Famille complète !',sub:(frFam(f)||f)+' : '+FAMSP[f].length+' espèces acquises',hu:famHue(f),n:24})}
 function goalAnim(){const er=st.tm.d===today()?st.tm.l.length:0;celebrate({html:TROPHY,title:'Objectif atteint !',sub:goal()+" exercices aujourd'hui",hu:46,n:36,
   acts:[{t:'Continuer la séance',f:()=>{}}].concat(er?[{t:'Revoir mes '+er+' erreur'+(er>1?'s':''),f:()=>startReplay(st.tm.l.slice(),'Mes erreurs du jour')}]:[])})}
 function toast(m){const e=document.createElement('div');e.className='toast';e.textContent=m;document.body.append(e);setTimeout(()=>e.remove(),3200)}
@@ -3893,7 +3901,7 @@ function answer(v){
   if(!curTrain&&good)document.querySelectorAll('.opts>button').forEach(b=>{const L=b.dataset.l;if(!L||L===cur[0])return;const k=[cur[0],L].sort().join('|');if(st.cf[k]){st.cf[k]=+(st.cf[k]-.5).toFixed(1);if(st.cf[k]<=0)delete st.cf[k]}});
   if(!curTrain&&!good&&w){const k=[cur[0],w[0]].sort().join('|');st.cf[k]=(st.cf[k]||0)+1}
   save();last=cur[0];
-  if(rk()>r0)rankAnim(R[rk()][1]);if(!curTrain&&h.n===goal())goalAnim();
+  if(rk()>r0)rankAnim(R[rk()][1]);if(acqNow&&!curTrain)famAnim(cur);if(!curTrain&&h.n===goal())goalAnim();
   if(typed){$('q-input').blur();$('q-input').disabled=true;if($('jk'))$('jk').disabled=true;$('qc').classList.remove('typing');$('pic').style.height=''}
   document.querySelectorAll('.opts>button').forEach(b=>{b.disabled=true;
     if(b.dataset.l===cur[0])b.classList.add('ok');else if(b.dataset.l===v)b.classList.add('ko')});
@@ -4148,7 +4156,7 @@ function checkBackup(o){
     if(!obj(p)||!Number.isInteger(p.b)||p.b<0||p.b>6||!num(p.s)||p.s<0||!num(p.e)||p.e<0||(p.d!==undefined&&!num(p.d))||(p.k!==undefined&&!(Number.isInteger(p.k)&&p.k>=0)))return 'Sauvegarde abîmée : données incorrectes pour « '+k.slice(0,40)+' ».';
   }
   if(o.hist!==undefined){if(!obj(o.hist))return "Sauvegarde abîmée : l'historique est illisible.";for(const h of Object.values(o.hist))if(!obj(h)||!num(h.n)||!num(h.ok))return "Sauvegarde abîmée : l'historique est illisible."}
-  for(const k of['m','cf','ho','fd','day','set'])if(o[k]!==undefined&&!obj(o[k]))return 'Sauvegarde abîmée : la rubrique « '+k+' » est illisible.';
+  for(const k of['m','cf','ho','fd','day','set','fc'])if(o[k]!==undefined&&!obj(o[k]))return 'Sauvegarde abîmée : la rubrique « '+k+' » est illisible.';
   if(o.tm!==undefined&&!(obj(o.tm)&&Array.isArray(o.tm.l)&&o.tm.l.every(x=>typeof x==='string')))return 'Sauvegarde abîmée : la liste des erreurs est illisible.';
   if(o.ses!==undefined&&!Array.isArray(o.ses))return 'Sauvegarde abîmée : les séances sont illisibles.';
   for(const k of['best','streak'])if(o[k]!==undefined&&!num(o[k]))return 'Sauvegarde abîmée : la valeur « '+k+' » est illisible.';
@@ -4394,7 +4402,7 @@ function openFamily(f){usage('famille_jour');
      `<ul class="fgn">${gt.map(([g,a])=>`<li><span class="fgp" data-l="${a[0][0]}"></span><b${g.length>10?' class="fgl"':''}><em>${g}</em></b><small>${pl(a.length,'espèce')}</small></li>`).join('')}</ul>`+
      `${gr.length?`<p class="fgr">Et ${gr.length} ${gr.length>1?'autres genres':'autre genre'} : ${gr.slice(0,6).map(([g])=>`<em>${g}</em>`).join(', ')}${gr.length>6?'…':''}</p>`:''}`+
      `${sv}${nx}</section>`:'')+
-   `<section class="fcard fc4">${gl.length>1?'':sv}<small>Ta collection</small><h3>${got} / ${sp.length}<span>${got>1?'acquises':'acquise'} ${ico('coche','ic-in')}</span></h3><div class="fpr" role="progressbar" aria-label="Espèces acquises" aria-valuemin="0" aria-valuemax="${sp.length}" aria-valuenow="${got}"><i style="width:${Math.round(got/sp.length*100)}%"></i></div>`+
+   `<section class="fcard fc4">${gl.length>1?'':sv}<small>Ta collection</small><h3>${got} / ${sp.length}<span>${FAMSP[f]&&got===sp.length?'famille complète':got>1?'acquises':'acquise'} ${ico('coche','ic-in')}</span></h3><div class="fpr" role="progressbar" aria-label="Espèces acquises" aria-valuemin="0" aria-valuemax="${sp.length}" aria-valuenow="${got}"><i style="width:${Math.round(got/sp.length*100)}%"></i></div>`+
      `<div class="fgrid" id="fam-grid">${ty.length>1?ty.map(([k,a])=>`<p class="fgh">${T[k]} · ${a.length}</p>${a.map(tile).join('')}`).join(''):sp.map(tile).join('')}</div><button class="big" id="fam-go" type="button">S'exercer sur cette famille</button></section>`;
   $('fdots').innerHTML=[...z.children].map((_,i)=>i?'<i></i>':'<i class="on"></i>').join('');
   if(d.showModal){if(!d.open)d.showModal()}else d.setAttribute('open','');
@@ -4590,6 +4598,7 @@ function fusion(a,b){
   // défi du jour : le plus récent, et pour un même jour la tentative la plus avancée (jouée sur un autre appareil du compte)
   if(b.df&&b.df.d&&Array.isArray(b.df.r)){const x=r.df,nb=b.df.r.length;
     if(!x||!x.d||x.d<b.df.d||(x.d===b.df.d&&nb>(x.r||[]).length))r.df={...b.df,r:[...b.df.r],v:[...(b.df.v||[])],pub:(x&&x.d===b.df.d&&x.pub)||b.df.pub}}
+  r.fc={...(b.fc||{}),...(r.fc||{})};   // familles complètes : celles des deux appareils
   r.best=Math.max(r.best||0,b.best||0);return r;
 }
 // Autre onglet, ou appli de l'écran d'accueil restée ouverte à côté : on reprend ce qu'il a enregistré avant de continuer,
