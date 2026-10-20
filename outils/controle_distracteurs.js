@@ -28,7 +28,7 @@ const MESURE=(SOref)=>{   // exécutée dans la page : SOref = table SO de réf�
   ok(!t.man.length,`les ${t.pp} paires rédigées (PAIRS) de même catégorie sont toutes des sosies`+(t.man.length?' ; manquent : '+t.man.slice(0,3).join(' ; '):''));
   const apres=await p.evaluate(`(${MESURE})(${JSON.stringify(t.SO)})`);
   console.log(`     après : niveau 3, ${(100*apres.n3.part).toFixed(0)} % des mauvaises réponses sont des sosies ; plante nouvelle, ${(100*apres.deb.part).toFixed(0)} %`);
-  ok(apres.n3.part>=.6,'plante de niveau 3 : au moins 60 % des mauvaises réponses sont des sosies');
+  ok(apres.n3.part>=.55&&apres.n3.part<=.7,'plante de niveau 3 : entre 55 et 70 % des mauvaises réponses sont des sosies (70 % au plus, pour rester acquérable)');
   ok(apres.deb.plus1===0,'plante nouvelle chez un débutant : jamais plus d’un sosie parmi les mauvaises réponses (difficulté progressive)');
   if(process.env.AVANT){const {b:b2,p:p2}=await open({w:390,h:844,file:process.env.AVANT});
     const av=await p2.evaluate(`(${MESURE})(${JSON.stringify(t.SO)})`);await b2.close();
