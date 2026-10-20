@@ -1,0 +1,33 @@
+# Recette automatique : à chaque envoi et à chaque demande de fusion, la recette complète et les contrôles principaux
+# (outils/recette_rapide.sh) tournent dans Chromium, sans réseau extérieur pour l'appli (iNaturalist et Supabase sont simulés).
+name: Recette
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+concurrency:
+  group: recette-${{ github.ref }}
+  cancel-in-progress: true
+permissions:
+  contents: read
+jobs:
+  recette:
+    name: Recette (${{ matrix.groupe }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        groupe: [recette, comptes, gestes, moteur]   # groupes de outils/recette_rapide.sh, en parallèle
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Outils de test (Playwright, base PostgreSQL embarquée, supabase-js à la version de l'appli)
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1 @electric-sql/pglite@0.5.10 @supabase/supabase-js@2.117.3
+          npx playwright install --with-deps chromium
+          echo "CHROMIUM=$(node -e "console.log(require('playwright').chromium.executablePath())")" >> "$GITHUB_ENV"
+      - name: Contrôles du groupe
+        run: bash outils/recette_rapide.sh ${{ matrix.groupe }}

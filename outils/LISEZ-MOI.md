@@ -3,22 +3,40 @@
 Tous les scripts Node s'appuient sur Playwright et Chromium. Lancement depuis la racine du dépôt, par exemple :
 `NODE_PATH=$(npm root -g) node outils/recette.js`.
 Le réseau n'est pas nécessaire : `banc_essai.js` simule iNaturalist et génère des photos.
-Les contrôles des comptes demandent en plus `npm i -g @electric-sql/pglite @supabase/supabase-js` (voir `supabase/LISEZ-MOI.md`).
+Les contrôles des comptes demandent en plus `npm i -g @electric-sql/pglite @supabase/supabase-js@2.117.3` (voir `supabase/LISEZ-MOI.md`). La version de supabase-js doit être celle de `SB_LIB` dans `index.html`, sinon l'empreinte d'intégrité (SRI) refuse la bibliothèque et les contrôles des comptes échouent.
+
+**Recette automatique.** `recette_rapide.sh` enchaîne la recette et les contrôles principaux. Il échoue si un contrôle sort en erreur ou affiche une ligne « ÉCHEC ». Le workflow GitHub « Recette » (`.github/workflows/recette.yml`) lance ses quatre groupes en parallèle à chaque envoi et à chaque demande de fusion. Un défaut connu et déjà planifié s'affiche « CONNU (identifiant) » sans faire échouer la recette (liste `CONNUS` dans `recette.js`, identifiants de `conception-cible.md`).
 
 ## Recette et contrôles
 
 | Outil | Rôle |
 |---|---|
-| `recette.js [fichier] [dossier]` | Recette complète sur les 7 tailles de référence (360×640 à 1920×1080) : tous les écrans, aucune erreur JavaScript, aucun défilement horizontal, boutons dans l'écran. Avec un dossier, enregistre les captures. Le hasard est figé pour pouvoir comparer deux passages. |
+| `recette_rapide.sh [groupe… ou contrôle…]` | Recette et contrôles, l'un après l'autre, en quatre groupes : `recette` (recette, ordinateur, clavier sur ordinateur), `comptes` (comptes, défi avec compte, SQL, statistiques, mesures, Coulisses), `gestes` (défi, planning, fiche figée, fluidité, entraînement, premier lancement, modes, volets, clavier) et `moteur` (mémoire, niveaux, saisie, couleurs, sources, sosies, réglages, herbier, rangs, familles, synonymes, anecdotes, confusion, équilibre, illustrations, motifs noirs). Sans argument : tous. Le workflow « Recette » lance les quatre groupes en parallèle. |
+| `recette.js [fichier] [dossier]` | Recette complète sur les 7 tailles de référence (360×640 à 1920×1080) : accueil d'un habitué (les 4 réponses au-dessus de la barre d'onglets), tous les écrans, aucune erreur JavaScript, aucun défilement horizontal, boutons dans l'écran. Avec un dossier, enregistre les captures. Le hasard est figé pour pouvoir comparer deux passages. |
 | `controle_fige.js [largeur hauteur]` | Fiche de réponse : fond figé et flouté, photo jamais recouverte, la fiche défile mais pas le fond. Variable `F` : autre fichier HTML. |
-| `controle_clavier.js`, `controle_clavier_ordi.js` | Saisie sur mobile, raccourcis clavier sur ordinateur. |
+| `controle_clavier.js`, `controle_clavier_ordi.js` | Saisie sur mobile ; parcours au clavier sur ordinateur (mis à jour le 20/10/2026 pour la mise en page actuelle : quiz centré à droite du menu latéral, Herbier à onglets ; la mise en page est vérifiée en détail par `controle_ordinateur.js`). |
 | `controle_reglages.js` | Volet Réglages : objectif, vibration, sauvegarde, réinitialisation. |
 | `controle_herbier.js` | Ordre de l'Herbier (acquises puis non acquises, par nom latin) et onglet Progrès. |
 | `controle_niveaux.js` | Passages de niveaux (étape 6). |
+| `controle_memoire.js` | Révisions des plantes acquises (conception cible, lot 1) : toute bonne réponse sur une plante due la replanifie ; au niveau 6, délai de 7 j doublé à chaque entretien réussi en écrivant le nom (14, 28, 56 puis 60 j au plus) ; une erreur renvoie au niveau 3 et remet le délai à zéro ; chargement, restauration et fusion de deux appareils gardent le compteur. Échoue sur la version d'avant (13 échecs). |
+| `controle_couleurs.js` | Couleurs des verdicts (Juste, Presque, Même genre / Bon genre, Raté) et du tampon « Acquise » : une variable chacune (`--v-juste`, `--v-presque`, `--v-genre`, `--v-rate`, `--tampon`), contraste d'au moins 4,5:1 mesuré sur les couleurs calculées, en clair et en sombre, 4 verdicts distincts. |
+| `controle_distracteurs.js` | Sosies et mauvaises réponses proposées : table `SO` alignée sur les espèces, au moins 600 espèces avec un sosie de leur catégorie, paires rédigées toutes présentes ; sur des milliers de tirages, part des mauvaises réponses qui sont des sosies (niveau 3 : entre 55 et 70 %, plafond voulu par le concepteur) et jamais plus d'un sosie pour une plante nouvelle chez un débutant. `AVANT=fichier` : même mesure sur une autre version. |
+| `controle_fluidite.js` | Gestes au doigt simulé : sous l'accueil, la page ne défile pas ; la première question s'affiche sans animation d'entrée ; Famille du jour : glissements franc, long, petit et vers la droite, carte d'arrivée et aucun retour en arrière (relevé image par image). Sur la version d'avant : 132 px de défilement sous l'accueil et 50 px de recul. |
+| `controle_sources_cles.js` | Sources des clés « À retenir » : les 768 espèces ont leurs sources affichées dans « Sources et crédits », exactement celles de `donnees/cles-revues.csv`. |
+| `controle_rangs.js` | Les 15 rangs : seuils, icônes, animation de passage, frise du profil. |
+| `controle_premier.js` | Tout premier lancement : la première plante et ses 4 réponses tiennent à l'écran ; les modes n'apparaissent qu'après la première réponse. |
+| `controle_entrainement.js` | Sortie du mode entraînement : la question laissée en cours revient aussitôt. |
+| `controle_equilibre_modes.js` | Équilibre des catégories au retour en mode Classique après un long travail sur une seule. |
+| `controle_synonymes.js` | Noms acceptés en plus du nom affiché (`SYN`) : juste, « Presque », recherche de l'herbier. |
+| `controle_jokers.js` | Jokers : 5 par jour, même après rechargement, deuxième onglet ou fusion avec le compte. |
+| `controle_volets.js` | Mêmes gestes de fermeture pour tous les volets. |
+| `controle_familles_completes.js` | « Famille complète » : célébration à la dernière espèce acquise d'une famille du jeu (3 espèces ou plus), une seule fois (pas après une rechute, une restauration ou une synchronisation), carte « Ta collection » de la Famille du jour. |
+| `controle_familles.js`, `controle_famille_ordi.js` | Famille du jour : contenu, cartes sur petit téléphone, chiffres ; feuilletage sur ordinateur. |
+| `controle_jeu.js` | Statistiques de jeu anonymes de bout en bout (faux Supabase) : tables `jeu` et `jeu_confusions`. |
 | `controle_cache.js` | File d'attente des photos et plafond du cache (étape 8). |
 | `mesure_photos.js [secondes] [wiki] [bloque]` | Mesure des requêtes photos en usage rapide, avec la limite d'iNaturalist (étape 8). |
 | `controle_noir.js [fichier] [dossier]` | Aucune zone noire en haut de l'écran (décor), 10 formats, clair et sombre. |
-| `controle_saisie.js [largeur hauteur]` | Joker (initiales dans le champ) et validation d'une réponse vide. |
+| `controle_saisie.js [largeur hauteur]` | Joker (initiales dans le champ), validation d'une réponse vide, verdicts « Juste », « Presque », « Raté » et « Bon genre » (genre juste, espèce absente de la liste ou genre seul : compté faux). |
 | `controle_regularite.js [largeur hauteur]` | Graphique de régularité : ligne de l'objectif et initiales des jours. |
 | `controle_categories.js [dossier]` | Ligne de tuiles des catégories : une ligne, aucun libellé coupé, tuile active, illustration dans chaque tuile (7 tailles). Variable `F` : autre fichier HTML. |
 | `controle_confusion.js [fichier]` | Mode confusion : duel des deux espèces (photos côte à côte, médaillon centré), puis points à comparer, puis exercice. |
@@ -30,9 +48,10 @@ Les contrôles des comptes demandent en plus `npm i -g @electric-sql/pglite @sup
 | `controle_defi_compte.js` | Défi du jour et compte (faux Supabase) : les réponses au défi ne comptent ni pour l'objectif du jour, ni pour Progrès, ni pour le classement d'Assiduité (jour, jours passés, période) ; défi terminé sur ordinateur → téléphone du même compte : pas de seconde partie, résultat de la première, y compris si la progression du compte n'a pas encore le défi et si l'on touche « Défi du jour » dès l'ouverture. |
 | `controle_milieux.js` | Chaque espèce a son propre milieu dans le vocabulaire de l'appli ; `donnees/milieux-especes.json` (sourcé) est bien reporté par `outils/milieux_vers_appli.py`. |
 | `controle_anecdotes.js` | Phrases « À découvrir » corrigées reportées ; curiosités sourcées affichées dans la fiche à la suite de « À découvrir », avec leur source, jamais celles en réserve ; aucune ne nomme sa plante. Données : `donnees/anecdotes-especes.json`, reportées par `outils/anecdotes_vers_appli.py`. |
-| `controle_coulisses.js [dossier]` | Page `coulisses.html` : connexion, accès réservé aux administrateurs, chiffres sur données d'exemple, périodes, téléphone et ordinateur, thème sombre. Avec un dossier : captures. |
+| `controle_coulisses.js [dossier]` | Page `coulisses.html` : connexion, accès réservé aux administrateurs, chiffres sur données d'exemple, joueurs par rang (15 rangs de l'appli, total égal aux appareils au rang connu), périodes, téléphone et ordinateur, thème sombre. Avec un dossier : captures. |
 | `controle_comptes.js [fichier] [dossier]` | Comptes de bout en bout : vraie bibliothèque supabase-js, faux Supabase local (`supabase/faux_supabase.js`), deux appareils, amis, tableau du jour, reprise de la progression. |
-| `simulation_memoire.js [jours] [graines]` | Simulation de progression avec le vrai code de l'appli (étape 6). |
+| `simulation_memoire.js [jours] [graines]` | Simulation de progression avec le vrai code de l'appli (étape 6), comparée à des variantes (dont `avant_lot1`) : questions pour acquérir, acquises, rétention et plantes retenues une semaine après, part d'entretien. |
+| `simulation_beta.js` | Parcours simulés d'un débutant et d'un professionnel. |
 
 Fichiers d'appui : `banc_essai.js` (ouverture de l'appli avec un faux iNaturalist ; option `seed` pour figer le hasard ; option `http` pour servir la page par un petit serveur local, comme GitHub Pages : à utiliser dès qu'un test recharge la page, car ouverte comme un fichier, Chromium perd parfois tout le stockage local au rechargement ; `adresse(fichier)` donne l'adresse locale d'un fichier) et `lance_exercice.js` (affiche un exercice d'un type donné).
 
@@ -40,14 +59,18 @@ Fichiers d'appui : `banc_essai.js` (ouverture de l'appli avec un faux iNaturalis
 
 | Outil | Rôle |
 |---|---|
-| `cles_vers_appli.py` | Vérifie les clés de `donnees/cles-revues.csv` (3 à 5 clés, 55 caractères au plus, source présente) et régénère la table `Q` de `index.html`. |
+| `cles_vers_appli.py` | Vérifie les clés de `donnees/cles-revues.csv` (3 à 5 clés, 55 caractères au plus, au moins une source en http) et régénère dans `index.html` la table `Q` et la liste `QS` de leurs sources (dans l'ordre de `Q` ; débuts d'adresse fréquents abrégés en « ^a », « ^b »… d'après `QP`, environ 53 Ko). Relancé deux fois, il redonne le même fichier. |
 | `illustrations.py [--ecrire] [--json fichier]` | Dessine les illustrations « vignettes ludiques » (icônes, catégories, rangs), le décor de fond et la page d'ouverture et leur CSS. Avec `--ecrire`, les remplace dans `index.html`. |
 | `icone.py [dossier]` | Dessine l'icône d'écran d'accueil (arbre doré dans une trouée de forêt, halo de lumière) : `icones/icone.svg` et `icone-masquable.svg` (motif réduit pour les masques ronds d'Android). Les PNG de `icones/` (512, 192 et 180 pour l'iPhone) en sont exportés ; changer `?v=` dans `index.html` et `manifest.webmanifest` après un nouvel export. |
 | `construire_photos.js [n]` | Construit `donnees/photos.json` : pour chaque espèce, photos iNaturalist libres déjà choisies (principale, feuillage, fleurs, fruits, photos du taxon), famille, genre, crédits. L'appli le lit au démarrage et n'interroge plus l'API iNaturalist. Lancé chaque mois (et à la demande) par la tâche GitHub « Index des photos » (`.github/workflows/photos.yml`), à 1 requête par seconde, environ 1 h. |
 | `controle_photos_index.js` | Avec l'index : aucune requête à l'API iNaturalist ; sans lui : comportement d'avant. |
 | `defis_extraire.js app.json`, `defis_questions.py app.json [--ecrire]` | Défi du jour : extrait les tables de l'appli, génère des questions à partir des données déjà sourcées (curiosités, milieux, feuillage, toxicité, origine, familles, floraisons, noms, ressemblances), y ajoute les questions rédigées et relues de `donnees/defis-redigees.json`, retire celles de `donnees/defis-exclues.json`, puis répartit 30 séries de 10 (simple, piège, difficile ; thèmes alternés ; QCM ou 4 photos). Avec `--ecrire` : `donnees/defis-questions.json` et la table `DQ` de `index.html`. |
 | `defis_controle.py`, `defis_calibrage.py` | Défi du jour : contrôle automatique de la banque de questions candidates (alertes, verdicts) ; calibrage des niveaux à partir des réponses réelles (export CSV, voir l'en-tête du script). |
+| `sosies.js [--ecrire]` | Sosies de chaque espèce, pour les mauvaises réponses proposées (QCM et 4 photos), au plus 6, du plus sûr au moins sûr : observés (`donnees/confusions-observees.csv`, export de la vue `confusions` de Supabase, à partir de 3 joueurs et 5 fois ; synonymes reconnus), rédigés (`PAIRS`, `C`, `NP`, `MN`, confusions des fiches `SD`), cousins (même genre et catégorie), proches (même famille et catégorie, clés « À retenir » ressemblantes). Aucun texte affiché n'en dépend. Sans option : bilan seulement ; avec `--ecrire` : `donnees/sosies.json` et la table `SO` de `index.html`. Reproductible. |
+| `ajout_especes.py` | Ajoute à l'appli les nouvelles espèces préparées (`donnees/nouvelles-especes.json`), avec genres, familles, photos et rangs. |
+| `defis_v2.py`, `defis_v3_lecture.py` | Défi du jour : banque révisée v2 (sans toucher au jeu) ; fichiers de lecture de la banque et du planning v3. |
+| `faune.py` | Petite faune et fougères du décor de fond (proposition). |
 | `defis_v3.py [AAAA-MM-JJ]`, `defis_v3_bilan.py` | Défi du jour : assemble la banque v3 (`donnees/defis-v3/`) et construit un planning de 90 jours sans toucher à la production (contrôles, `planning-90j.json`, version au format de `const DQ`, `.md` lisible, bilan chiffré). |
-| `defis_integrer.py [--ecrire]` | Intègre le planning dans `index.html` par une table à part (`const DQP`) et la lecture de `dfSerie` ; sans option, essai à blanc. Procédure : `donnees/defis-v3/integration.md`. |
-| `controle_defi_planning.js` | Avec `F=fichier.html` : les 90 séries du planning sont bien formées, chaque jour lit sa série, les jours hors planning gardent le cycle de 30, un défi planifié se joue de bout en bout. |
+| `defis_integrer.py [--ecrire]` | Publie le planning du Défi du jour : `donnees/defis.json` (chargé par l'appli à l'ouverture du défi, ou 5 s après le démarrage si le défi du jour n'est pas fini) et la ligne `const DQPI={debut,n}` de `index.html`, qui sert à refuser un fichier qui ne correspond pas. Sans option, essai à blanc. Procédure : `donnees/defis-v3/integration.md`. |
+| `controle_defi_planning.js` | Les 90 séries du planning (`donnees/defis.json`) sont bien formées, chaque jour lit sa série, les jours hors planning gardent le cycle de 30, un défi planifié se joue de bout en bout ; fichier qui ne correspond pas refusé ; sans connexion, « Défi indisponible : vérifie la connexion » plutôt qu'une autre série. |
 | `nettoie_css.py [--ecrire]` | Repère les classes CSS que l'appli n'utilise plus et les retire avec `--ecrire`. Sans option, il affiche seulement ce qu'il retirerait. |

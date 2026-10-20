@@ -80,16 +80,19 @@ C'est courant avec une adresse Gmail toute neuve qui envoie des e-mails automati
 
 ## Mettre l'appli en ligne et recevoir les mises à jour
 
-Je travaille sur la branche `claude/improve-html-app-e7b6o4` du dépôt. Le plus simple est de publier l'appli **directement depuis cette branche** : chaque modification que je pousse est alors en ligne une minute plus tard, sans rien faire. Ta configuration Supabase étant dans `index.html` sur cette branche, elle est conservée à chaque mise à jour.
+**Depuis le 20 octobre 2026, l'appli est publiée depuis la branche `main`** (avant : `claude/improve-html-app-e7b6o4`). Je travaille sur une autre branche et propose chaque lot par une **demande de fusion** (pull request) vers `main` ; le workflow « Recette » la teste automatiquement. **Rien n'est en ligne tant que tu n'as pas fusionné.** Une fois fusionnée, la nouvelle version est en ligne une à deux minutes plus tard. Ta configuration Supabase étant dans `index.html`, elle est conservée à chaque mise à jour. La tâche mensuelle « Index des photos » publie elle aussi sur `main`.
 
 Le dépôt est **public** et appartient à l'organisation GitHub **collectifdevidoir** (il a été transféré depuis le compte `antoinestager-cell`). Il ne contient rien de secret : la clé Supabase est publique par conception.
 
 L'appli est publiée par **GitHub Pages** à l'adresse **`https://collectifdevidoir.github.io/ROYAUME-DES-PLANTES/`**.
 
-Réglage en place, à vérifier si l'appli n'est plus en ligne :
-1. Sur GitHub, dans le dépôt `collectifdevidoir/ROYAUME-DES-PLANTES` : **Settings > Pages**.
-2. « Build and deployment » > Source : **Deploy from a branch** > Branch : `claude/improve-html-app-e7b6o4`, dossier `/ (root)` > **Save**.
-3. Une à deux minutes après chaque modification poussée, la nouvelle version est en ligne. L'adresse s'affiche en haut de la page Settings > Pages.
+Réglages, à faire une fois au passage sur `main` (puis à vérifier si l'appli n'est plus en ligne) :
+1. Sur GitHub, dans le dépôt `collectifdevidoir/ROYAUME-DES-PLANTES` : **Settings > General > Default branch** : choisir `main` (les tâches programmées, comme l'index des photos, partent de la branche par défaut).
+2. **Settings > Pages** > « Build and deployment » > Source : **Deploy from a branch** > Branch : `main`, dossier `/ (root)` > **Save**.
+3. Une à deux minutes après chaque fusion dans `main`, la nouvelle version est en ligne. L'adresse s'affiche en haut de la page Settings > Pages.
+4. Facultatif, conseillé : **Settings > Branches > Add branch ruleset** sur `main`, « Require status checks to pass » avec les quatre contrôles « Recette » : une demande de fusion rouge ne pourra pas être fusionnée par erreur.
+
+Avant de fusionner une demande qui touche `supabase/schema.sql`, relance d'abord ce fichier dans Supabase (SQL Editor) : l'appli reste compatible avec une base pas à jour, mais les nouvelles mesures seraient perdues.
 
 Les anciennes adresses en `antoinestager-cell.github.io` ne fonctionnent plus. Dans Supabase, **Authentication > URL Configuration**, « Site URL » et « Redirect URLs » doivent contenir la nouvelle adresse, sinon les liens reçus par e-mail renvoient vers une page introuvable.
 
@@ -188,6 +191,11 @@ select heure, sum(vues) exercices, count(distinct appareil) joueurs from jeu whe
 
 Le résultat d'une requête peut être exporté en CSV (bouton d'export au-dessus du résultat) pour l'ouvrir dans un tableur.
 
+**Confusions réelles → sosies du jeu.** Les mauvaises réponses proposées s'appuient en premier sur les confusions des joueurs. Pour les mettre à jour :
+lancer `select plante_montree, reponse_donnee, fois, joueurs from confusions where joueurs >= 2 order by fois desc;`,
+exporter le résultat en CSV sous le nom `donnees/confusions-observees.csv`, puis `node outils/sosies.js --ecrire`.
+Le fichier ne contient que des totaux, sans identifiant d'appareil ; seules les paires vues par au moins 3 joueurs et 5 fois sont retenues.
+
 ## Coulisses : tous les chiffres sur une page
 
 `coulisses.html` affiche, sans écrire de SQL, la fréquentation, la fidélité, les fonctions utilisées, les sessions,
@@ -217,7 +225,7 @@ Pour retirer un accès : `delete from public.admins where user_id = (select id f
 | `photos_jeu` | réussite par photo montrée (numéro de photo iNaturalist) |
 | `signalements` | photos signalées avec « Photo douteuse ? » dans l'agrandissement de la photo du quiz |
 | `erreurs` | erreurs techniques : message sans adresse ni nombre, version et type d'écran, sans identifiant d'appareil |
-| `reglages` | objectif du jour, vibrations, mode de jeu, appareil en mode sombre, une fois par jour |
+| `reglages` | objectif du jour, vibrations, mode de jeu, appareil en mode sombre, une fois par jour ; **rang du joueur** (0 = Graine … 14 = Maître du royaume), avec ou sans compte, renvoyé s'il change dans la journée. Coulisses : carte « Joueurs par rang » (dernier rang connu de chaque appareil sur la période) |
 
 La fidélité se calcule à partir des visites : le premier jour où un appareil apparaît, puis ses retours.
 

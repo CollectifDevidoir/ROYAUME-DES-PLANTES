@@ -123,6 +123,8 @@ let sb=null,per=(()=>{try{return +localStorage.getItem('qp.coul.per')||30}catch(
 // noms communs et photos de l'index de l'appli (facultatif : la page marche sans)
 const index=fetch('donnees/photos.json').then(r=>r.json()).then(j=>{for(const[l,e]of Object.entries(j.especes||{})){noms[l]=e[1];for(const p of e[5]||[]){const m=String(p[0]).match(/^(\d+)\.(\w+)$/);if(m)photos[m[1]]='https://inaturalist-open-data.s3.amazonaws.com/photos/'+m[1]+'/square.'+m[2]}}}).catch(()=>{});
 const nomL=l=>`<i>${esc(l)}</i>${noms[l]?` <small>${esc(noms[l])}</small>`:''}`;
+// les 15 rangs de l'appli (const R de index.html : seuil d'espèces acquises, nom) ; vérifié par outils/controle_coulisses.js
+const RANGS=[[0, "Graine"], [4, "Germe"], [10, "Pousse"], [20, "Jeune plant"], [35, "Arbrisseau"], [55, "Baliveau"], [85, "Jeune arbre"], [125, "Arbre"], [175, "Grand chêne"], [230, "Arbre remarquable"], [290, "Bosquet"], [370, "Forêt"], [470, "Gardien de la forêt"], [580, "Esprit sylvestre"], [700, "Maître du royaume"]];
 const NOMS={herbier:'Herbier',progres:'Progrès',profil:'Profil et amis',reglages:'Réglages',aide:'Aide',fiche:'Fiches des plantes',famille_jour:'Famille du jour',entrainement:'Entraînement',joker:'Jokers',zoom:'Photo agrandie',defi:'Défi du jour',defi_partage:'Partage du défi',
   quiz:'Quiz',fenetre:'Une fenêtre (aide, famille…)',telephone:'Téléphone',tablette:'Tablette',ordi:'Ordinateur',inconnu:'Inconnu',
   qcm:'QCM',saisie:'Nom à écrire',photos:'4 photos',plante:'Plante entière',feuillage:'Feuillage',fleurs:'Fleurs',fruits:'Fruits',autre:'Autre photo',
@@ -179,12 +181,16 @@ ${kp(R.comptes===undefined?'–':nb(R.comptes),'comptes utilisateurs',R.comptes=
   const sig=(d.signalements||[]).length?`<div class="ph">${d.signalements.map(x=>phc(x,`Signalée ${x.fois} fois`)+`<span><span class="ko">signalée ${nb(x.fois)}×</span>${x.vues?` · ${pc(x.reussite)} sur ${nb(x.vues)} vues`:''}</span></a>`).join('')}</div>`:'<p class="vide">Aucune photo signalée.</p>';
   const err=tableau([['Message'],['Version'],['Appareil'],['Fois',1],['Dernière fois',1]],(d.erreurs||[]).map(x=>[esc(x.message),esc(x.version),esc(nom(x.ecran)),nb(x.fois),jcourt(x.dernier)]));
   const rg=d.reglages||{};
+  // joueurs par rang, avec ou sans compte : dernier rang connu de chaque appareil sur la période (les 15 rangs, même vides)
+  const rgs=rg.rangs||[],nRg=rgs.reduce((a,x)=>a+x.appareils,0);
+  const parRang=nRg?hbar(RANGS.map(([seuil,n],i)=>{const v=(rgs.find(x=>x.rang===i)||{}).appareils||0;return{l:esc(n),v,txt:`${nb(v)} <small>· ${pc(Math.round(100*v/nRg))}</small>`,tip:`<b>${esc(n)}</b> (${seuil} espèce${seuil>1?'s':''} acquise${seuil>1?'s':''} ou plus)<br>${nb(v)} appareil${v>1?'s':''} sur ${nb(nRg)}`}})):'<p class="vide">Pas encore de données : le rang est envoyé par l\'appli depuis la version du 20 octobre 2026.</p>';
   const obj=hbar((rg.objectifs||[]).map(x=>({l:x.objectif+' par jour',v:x.appareils,tip:`${nb(x.appareils)} appareils`})));
   const mod=hbar((rg.modes||[]).map(x=>({l:esc(nom(x.mode)),v:x.appareils,tip:`${nb(x.appareils)} appareils`})));
   vue.innerHTML=`${kpis}<div class="grid" style="margin-top:16px">
 ${carte('Fréquentation',jours,'large','Appareils différents par jour. Survolez ou touchez une barre pour le détail.')}
 ${carte('Exercices par jour',exos,'large')}
 ${carte('Fidélité',`<div class="duo"><div><b>${pc(d.retours&&d.retours.j1)}</b><span>reviennent après 1 jour</span></div><div><b>${pc(d.retours&&d.retours.j7)}</b><span>après 7 jours</span></div><div><b>${pc(d.retours&&d.retours.j30)}</b><span>après 30 jours</span></div></div>${cohT}`,'large','Semaine d\'arrivée des appareils, puis part de ceux qui sont revenus 1, 2, 3 ou 4 semaines plus tard ; « – » : semaine pas encore terminée.')}
+${carte('Joueurs par rang',parRang,'','Dernier rang connu de chaque appareil sur la période, avec ou sans compte. Un joueur qui utilise deux appareils compte deux fois.')}
 ${carte('Fonctions utilisées',usages,'','Part des appareils de la période qui ont ouvert chaque écran, et nombre d\'ouvertures.')}
 ${carte('Sessions',`<h3>Durée d'activité</h3>${dur}<h3>Dernier écran avant de partir</h3>${dep}`,'','Une session s\'arrête après 30 min sans action.')}
 ${carte('Appareils',`<h3>Type d'écran</h3>${ecr}<h3>Largeur de fenêtre</h3>${larg}<h3>Versions de l'appli</h3>${vers}`)}

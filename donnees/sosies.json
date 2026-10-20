@@ -1,0 +1,10851 @@
+{
+ "regle": "o observé (≥ 3 joueurs, ≥ 5 fois), r rédigé, c cousin (même genre et catégorie), p proche (même famille et catégorie, clés ressemblantes)",
+ "especes": {
+  "Acer campestre": [
+   {
+    "espece": "Acer monspessulanum",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Acer saccharum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer pseudoplatanus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer platanoides",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer opalus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer tataricum",
+    "origine": "cousin"
+   }
+  ],
+  "Acer platanoides": [
+   {
+    "espece": "Acer pseudoplatanus",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Acer saccharum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer opalus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer campestre",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer × freemanii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer rubrum",
+    "origine": "cousin"
+   }
+  ],
+  "Acer pseudoplatanus": [
+   {
+    "espece": "Acer platanoides",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Platanus × hispanica",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Acer opalus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer campestre",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer saccharinum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer saccharum",
+    "origine": "cousin"
+   }
+  ],
+  "Acer negundo": [
+   {
+    "espece": "Fraxinus excelsior",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Acer × freemanii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer griseum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer campestre",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer davidii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer pensylvanicum",
+    "origine": "cousin"
+   }
+  ],
+  "Aesculus hippocastanum": [
+   {
+    "espece": "Aesculus × carnea",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Aesculus flava",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer griseum",
+    "origine": "proche"
+   }
+  ],
+  "Alnus glutinosa": [
+   {
+    "espece": "Alnus cordata",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Alnus × spaethii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Alnus incana",
+    "origine": "cousin"
+   }
+  ],
+  "Betula pendula": [
+   {
+    "espece": "Betula pubescens",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Betula nigra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Betula utilis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Betula papyrifera",
+    "origine": "cousin"
+   }
+  ],
+  "Carpinus betulus": [
+   {
+    "espece": "Fagus sylvatica",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Alnus incana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Betula pendula",
+    "origine": "proche"
+   }
+  ],
+  "Castanea sativa": [
+   {
+    "espece": "Quercus × hispanica",
+    "origine": "proche"
+   },
+   {
+    "espece": "Quercus castaneifolia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Quercus phellos",
+    "origine": "proche"
+   }
+  ],
+  "Celtis australis": [
+   {
+    "espece": "Celtis occidentalis",
+    "origine": "cousin"
+   }
+  ],
+  "Cercis siliquastrum": [
+   {
+    "espece": "Cercis canadensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ceratonia siliqua",
+    "origine": "proche"
+   },
+   {
+    "espece": "Gleditsia triacanthos",
+    "origine": "proche"
+   }
+  ],
+  "Fagus sylvatica": [
+   {
+    "espece": "Carpinus betulus",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Quercus ilex",
+    "origine": "proche"
+   },
+   {
+    "espece": "Quercus velutina",
+    "origine": "proche"
+   }
+  ],
+  "Fraxinus excelsior": [
+   {
+    "espece": "Acer negundo",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Fraxinus ornus",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Fraxinus angustifolia",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Fraxinus americana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Fraxinus pennsylvanica",
+    "origine": "cousin"
+   }
+  ],
+  "Ginkgo biloba": [],
+  "Gleditsia triacanthos": [
+   {
+    "espece": "Acacia dealbata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cercis siliquastrum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Ceratonia siliqua",
+    "origine": "proche"
+   }
+  ],
+  "Juglans regia": [
+   {
+    "espece": "Juglans nigra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carya illinoinensis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pterocarya fraxinifolia",
+    "origine": "proche"
+   }
+  ],
+  "Liquidambar styraciflua": [],
+  "Liriodendron tulipifera": [
+   {
+    "espece": "Magnolia × soulangeana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Magnolia kobus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Magnolia grandiflora",
+    "origine": "proche"
+   }
+  ],
+  "Magnolia grandiflora": [
+   {
+    "espece": "Magnolia × soulangeana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Magnolia kobus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Liriodendron tulipifera",
+    "origine": "proche"
+   }
+  ],
+  "Platanus × hispanica": [
+   {
+    "espece": "Acer pseudoplatanus",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Platanus orientalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Platanus occidentalis",
+    "origine": "cousin"
+   }
+  ],
+  "Populus nigra": [
+   {
+    "espece": "Populus alba",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Populus tremula",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus deltoides",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus × canescens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus × canadensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus balsamifera",
+    "origine": "cousin"
+   }
+  ],
+  "Prunus avium": [
+   {
+    "espece": "Prunus cerasifera",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Prunus sargentii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus armeniaca",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus mahaleb",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus × yedoensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus padus",
+    "origine": "cousin"
+   }
+  ],
+  "Quercus robur": [
+   {
+    "espece": "Quercus petraea",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Quercus rubra",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Quercus pubescens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus frainetto",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus phellos",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus castaneifolia",
+    "origine": "cousin"
+   }
+  ],
+  "Quercus petraea": [
+   {
+    "espece": "Quercus robur",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Quercus pubescens",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Quercus frainetto",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus castaneifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus phellos",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus ilex",
+    "origine": "cousin"
+   }
+  ],
+  "Quercus ilex": [
+   {
+    "espece": "Quercus suber",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus pyrenaica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus × hispanica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus canariensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus pubescens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus velutina",
+    "origine": "cousin"
+   }
+  ],
+  "Quercus rubra": [
+   {
+    "espece": "Quercus robur",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Quercus palustris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus phellos",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus coccinea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus macrocarpa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus velutina",
+    "origine": "cousin"
+   }
+  ],
+  "Robinia pseudoacacia": [
+   {
+    "espece": "Sophora japonica",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Laburnum anagyroides",
+    "origine": "proche"
+   },
+   {
+    "espece": "Erythrina crista-galli",
+    "origine": "proche"
+   }
+  ],
+  "Salix alba": [
+   {
+    "espece": "Salix babylonica",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Salix fragilis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Salix caprea",
+    "origine": "cousin"
+   }
+  ],
+  "Sophora japonica": [
+   {
+    "espece": "Robinia pseudoacacia",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Acacia dealbata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Gleditsia triacanthos",
+    "origine": "proche"
+   }
+  ],
+  "Sorbus aucuparia": [
+   {
+    "espece": "Sorbus × thuringiaca",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus domestica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus aria",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus intermedia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus torminalis",
+    "origine": "cousin"
+   }
+  ],
+  "Tilia cordata": [
+   {
+    "espece": "Tilia platyphyllos",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Tilia × europaea",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Tilia × euchlora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia americana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia tomentosa",
+    "origine": "cousin"
+   }
+  ],
+  "Tilia platyphyllos": [
+   {
+    "espece": "Tilia cordata",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Tilia × europaea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia × euchlora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia tomentosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia americana",
+    "origine": "cousin"
+   }
+  ],
+  "Ulmus minor": [
+   {
+    "espece": "Ulmus glabra",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Zelkova serrata",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Ulmus × hollandica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus pumila",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus parvifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus laevis",
+    "origine": "cousin"
+   }
+  ],
+  "Cedrus atlantica": [
+   {
+    "espece": "Cedrus deodara",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Cedrus libani",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea pungens",
+    "origine": "proche"
+   }
+  ],
+  "Pinus pinea": [
+   {
+    "espece": "Pinus pinaster",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Pinus nigra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus halepensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus ponderosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus parviflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus strobus",
+    "origine": "cousin"
+   }
+  ],
+  "Pinus sylvestris": [
+   {
+    "espece": "Pinus nigra",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Pinus parviflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus halepensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus mugo",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus strobus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus pinea",
+    "origine": "cousin"
+   }
+  ],
+  "Pinus nigra": [
+   {
+    "espece": "Pinus sylvestris",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Pinus ponderosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus pinea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus halepensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus cembra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus pinaster",
+    "origine": "cousin"
+   }
+  ],
+  "Taxus baccata": [
+   {
+    "espece": "Taxus × media",
+    "origine": "cousin"
+   }
+  ],
+  "Cupressus sempervirens": [
+   {
+    "espece": "Cupressus arizonica",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Cupressus × leylandii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cupressus macrocarpa",
+    "origine": "cousin"
+   }
+  ],
+  "Sequoiadendron giganteum": [
+   {
+    "espece": "Sequoia sempervirens",
+    "origine": "proche"
+   },
+   {
+    "espece": "Juniperus virginiana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Taxodium distichum",
+    "origine": "proche"
+   }
+  ],
+  "Cornus sanguinea": [
+   {
+    "espece": "Cornus alba",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Cornus mas",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cornus sericea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cornus kousa",
+    "origine": "cousin"
+   }
+  ],
+  "Corylus avellana": [],
+  "Crataegus monogyna": [
+   {
+    "espece": "Prunus spinosa",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Crataegus laevigata",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Rosa multiflora",
+    "origine": "proche"
+   }
+  ],
+  "Euonymus europaeus": [
+   {
+    "espece": "Euonymus alatus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euonymus japonicus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euonymus fortunei",
+    "origine": "cousin"
+   }
+  ],
+  "Ligustrum vulgare": [
+   {
+    "espece": "Ligustrum ovalifolium",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ligustrum lucidum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ligustrum japonicum",
+    "origine": "cousin"
+   }
+  ],
+  "Viburnum tinus": [
+   {
+    "espece": "Viburnum davidii",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Viburnum × burkwoodii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum carlesii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum × bodnantense",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum lantana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum odoratissimum",
+    "origine": "cousin"
+   }
+  ],
+  "Buxus sempervirens": [
+   {
+    "espece": "Ilex crenata",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Sarcococca confusa",
+    "origine": "proche"
+   }
+  ],
+  "Sambucus nigra": [
+   {
+    "espece": "Sambucus racemosa",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Viburnum lantana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Viburnum tinus",
+    "origine": "proche"
+   }
+  ],
+  "Laurus nobilis": [
+   {
+    "espece": "Prunus laurocerasus",
+    "origine": "rédigé"
+   }
+  ],
+  "Nerium oleander": [],
+  "Prunus laurocerasus": [
+   {
+    "espece": "Laurus nobilis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Prunus lusitanica",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Prunus spinosa",
+    "origine": "cousin"
+   }
+  ],
+  "Ilex aquifolium": [
+   {
+    "espece": "Mahonia aquifolium",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Ilex crenata",
+    "origine": "cousin"
+   }
+  ],
+  "Hydrangea macrophylla": [
+   {
+    "espece": "Hydrangea paniculata",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Hydrangea arborescens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Hydrangea serrata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Hydrangea quercifolia",
+    "origine": "cousin"
+   }
+  ],
+  "Choisya ternata": [
+   {
+    "espece": "Skimmia japonica",
+    "origine": "proche"
+   }
+  ],
+  "Lavandula angustifolia": [
+   {
+    "espece": "Lavandula stoechas",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Lavandula × intermedia",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Lavandula dentata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lavandula latifolia",
+    "origine": "cousin"
+   }
+  ],
+  "Rosmarinus officinalis": [
+   {
+    "espece": "Teucrium fruticans",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lavandula angustifolia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Westringia fruticosa",
+    "origine": "proche"
+   }
+  ],
+  "Hedera helix": [
+   {
+    "espece": "Hedera colchica",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Hedera hibernica",
+    "origine": "cousin"
+   }
+  ],
+  "Wisteria sinensis": [
+   {
+    "espece": "Wisteria floribunda",
+    "origine": "rédigé"
+   }
+  ],
+  "Clematis vitalba": [
+   {
+    "espece": "Clematis viticella",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis armandii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis montana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis alpina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis flammula",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis cirrhosa",
+    "origine": "cousin"
+   }
+  ],
+  "Miscanthus sinensis": [
+   {
+    "espece": "Cortaderia selloana",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Miscanthus × giganteus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Phalaris arundinacea",
+    "origine": "proche"
+   }
+  ],
+  "Stipa tenuissima": [
+   {
+    "espece": "Stipa gigantea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Stipa calamagrostis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pennisetum setaceum",
+    "origine": "proche"
+   }
+  ],
+  "Achillea millefolium": [
+   {
+    "espece": "Achillea filipendulina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Achillea ptarmica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tanacetum vulgare",
+    "origine": "proche"
+   }
+  ],
+  "Acer griseum": [
+   {
+    "espece": "Acer buergerianum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer opalus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer negundo",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer palmatum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer tataricum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer pseudoplatanus",
+    "origine": "cousin"
+   }
+  ],
+  "Acer palmatum": [
+   {
+    "espece": "Acer tataricum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer cappadocicum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer opalus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer buergerianum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer saccharinum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer griseum",
+    "origine": "cousin"
+   }
+  ],
+  "Acer saccharinum": [
+   {
+    "espece": "Acer rubrum",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Acer pseudoplatanus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer palmatum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer buergerianum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer × freemanii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer campestre",
+    "origine": "cousin"
+   }
+  ],
+  "Acer saccharum": [
+   {
+    "espece": "Acer campestre",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer platanoides",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer × freemanii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer cappadocicum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer monspessulanum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer pseudoplatanus",
+    "origine": "cousin"
+   }
+  ],
+  "Acer rubrum": [
+   {
+    "espece": "Acer saccharinum",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Acer pseudoplatanus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer opalus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer × freemanii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer cappadocicum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer tataricum",
+    "origine": "cousin"
+   }
+  ],
+  "Acer monspessulanum": [
+   {
+    "espece": "Acer campestre",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Acer buergerianum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer tataricum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer saccharum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer opalus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer cappadocicum",
+    "origine": "cousin"
+   }
+  ],
+  "Acer opalus": [
+   {
+    "espece": "Acer buergerianum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer pseudoplatanus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer tataricum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer saccharum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer × freemanii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer platanoides",
+    "origine": "cousin"
+   }
+  ],
+  "Acer cappadocicum": [
+   {
+    "espece": "Acer saccharum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer tataricum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer palmatum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer monspessulanum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer rubrum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer davidii",
+    "origine": "cousin"
+   }
+  ],
+  "Aesculus × carnea": [
+   {
+    "espece": "Aesculus hippocastanum",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Aesculus flava",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Koelreuteria paniculata",
+    "origine": "proche"
+   }
+  ],
+  "Ailanthus altissima": [],
+  "Albizia julibrissin": [
+   {
+    "espece": "Gymnocladus dioicus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Acacia dealbata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cercis siliquastrum",
+    "origine": "proche"
+   }
+  ],
+  "Alnus cordata": [
+   {
+    "espece": "Alnus glutinosa",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Alnus × spaethii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Alnus incana",
+    "origine": "cousin"
+   }
+  ],
+  "Amelanchier lamarckii": [
+   {
+    "espece": "Prunus mahaleb",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pyrus communis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Prunus sargentii",
+    "origine": "proche"
+   }
+  ],
+  "Betula utilis": [
+   {
+    "espece": "Betula papyrifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Betula nigra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Betula pendula",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Betula pubescens",
+    "origine": "cousin"
+   }
+  ],
+  "Betula papyrifera": [
+   {
+    "espece": "Betula utilis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Betula nigra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Betula pubescens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Betula pendula",
+    "origine": "cousin"
+   }
+  ],
+  "Broussonetia papyrifera": [
+   {
+    "espece": "Morus nigra",
+    "origine": "proche"
+   },
+   {
+    "espece": "Morus alba",
+    "origine": "proche"
+   },
+   {
+    "espece": "Ficus carica",
+    "origine": "proche"
+   }
+  ],
+  "Carya illinoinensis": [
+   {
+    "espece": "Juglans regia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Juglans nigra",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pterocarya fraxinifolia",
+    "origine": "proche"
+   }
+  ],
+  "Catalpa bignonioides": [
+   {
+    "espece": "Catalpa speciosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Jacaranda mimosifolia",
+    "origine": "proche"
+   }
+  ],
+  "Cedrus deodara": [
+   {
+    "espece": "Cedrus atlantica",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Cedrus libani",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Picea omorika",
+    "origine": "proche"
+   }
+  ],
+  "Cedrus libani": [
+   {
+    "espece": "Cedrus atlantica",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Cedrus deodara",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus radiata",
+    "origine": "proche"
+   }
+  ],
+  "Cercidiphyllum japonicum": [],
+  "Chamaecyparis lawsoniana": [
+   {
+    "espece": "Thuja plicata",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Chamaecyparis pisifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Chamaecyparis obtusa",
+    "origine": "cousin"
+   }
+  ],
+  "Corylus colurna": [
+   {
+    "espece": "Carpinus betulus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Betula pendula",
+    "origine": "proche"
+   },
+   {
+    "espece": "Betula nigra",
+    "origine": "proche"
+   }
+  ],
+  "Cupressus arizonica": [
+   {
+    "espece": "Cupressus sempervirens",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Cupressus macrocarpa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cupressus × leylandii",
+    "origine": "cousin"
+   }
+  ],
+  "Cupressus × leylandii": [
+   {
+    "espece": "Cupressus sempervirens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cupressus macrocarpa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cupressus arizonica",
+    "origine": "cousin"
+   }
+  ],
+  "Davidia involucrata": [
+   {
+    "espece": "Cornus florida",
+    "origine": "proche"
+   },
+   {
+    "espece": "Nyssa sylvatica",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cornus controversa",
+    "origine": "proche"
+   }
+  ],
+  "Diospyros kaki": [],
+  "Eucalyptus gunnii": [],
+  "Ficus carica": [
+   {
+    "espece": "Broussonetia papyrifera",
+    "origine": "proche"
+   },
+   {
+    "espece": "Morus nigra",
+    "origine": "proche"
+   },
+   {
+    "espece": "Morus alba",
+    "origine": "proche"
+   }
+  ],
+  "Fraxinus ornus": [
+   {
+    "espece": "Fraxinus excelsior",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Fraxinus angustifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Fraxinus americana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Fraxinus pennsylvanica",
+    "origine": "cousin"
+   }
+  ],
+  "Fraxinus angustifolia": [
+   {
+    "espece": "Fraxinus excelsior",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Fraxinus ornus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Fraxinus americana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Fraxinus pennsylvanica",
+    "origine": "cousin"
+   }
+  ],
+  "Gymnocladus dioicus": [
+   {
+    "espece": "Ceratonia siliqua",
+    "origine": "proche"
+   },
+   {
+    "espece": "Albizia julibrissin",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cercis siliquastrum",
+    "origine": "proche"
+   }
+  ],
+  "Juglans nigra": [
+   {
+    "espece": "Juglans regia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carya illinoinensis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pterocarya fraxinifolia",
+    "origine": "proche"
+   }
+  ],
+  "Juniperus communis": [
+   {
+    "espece": "Juniperus virginiana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus squamata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus oxycedrus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus chinensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus horizontalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus thurifera",
+    "origine": "cousin"
+   }
+  ],
+  "Koelreuteria paniculata": [
+   {
+    "espece": "Aesculus flava",
+    "origine": "proche"
+   },
+   {
+    "espece": "Acer griseum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Aesculus × carnea",
+    "origine": "proche"
+   }
+  ],
+  "Lagerstroemia indica": [
+   {
+    "espece": "Punica granatum",
+    "origine": "proche"
+   }
+  ],
+  "Larix decidua": [
+   {
+    "espece": "Larix kaempferi",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Picea pungens",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pinus strobus",
+    "origine": "proche"
+   }
+  ],
+  "Malus domestica": [
+   {
+    "espece": "Malus sylvestris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Malus trilobata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Malus floribunda",
+    "origine": "cousin"
+   }
+  ],
+  "Malus floribunda": [
+   {
+    "espece": "Malus trilobata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Malus domestica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Malus sylvestris",
+    "origine": "cousin"
+   }
+  ],
+  "Magnolia × soulangeana": [
+   {
+    "espece": "Magnolia kobus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Magnolia grandiflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Liriodendron tulipifera",
+    "origine": "proche"
+   }
+  ],
+  "Magnolia kobus": [
+   {
+    "espece": "Magnolia × soulangeana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Magnolia grandiflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Liriodendron tulipifera",
+    "origine": "proche"
+   }
+  ],
+  "Metasequoia glyptostroboides": [
+   {
+    "espece": "Taxodium distichum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cupressus sempervirens",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sequoia sempervirens",
+    "origine": "proche"
+   }
+  ],
+  "Morus alba": [
+   {
+    "espece": "Morus nigra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Broussonetia papyrifera",
+    "origine": "proche"
+   },
+   {
+    "espece": "Maclura pomifera",
+    "origine": "proche"
+   }
+  ],
+  "Morus nigra": [
+   {
+    "espece": "Morus alba",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Broussonetia papyrifera",
+    "origine": "proche"
+   },
+   {
+    "espece": "Ficus carica",
+    "origine": "proche"
+   }
+  ],
+  "Olea europaea": [
+   {
+    "espece": "Fraxinus americana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Syringa reticulata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Fraxinus angustifolia",
+    "origine": "proche"
+   }
+  ],
+  "Ostrya carpinifolia": [
+   {
+    "espece": "Carpinus betulus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Betula pendula",
+    "origine": "proche"
+   },
+   {
+    "espece": "Betula utilis",
+    "origine": "proche"
+   }
+  ],
+  "Paulownia tomentosa": [],
+  "Phoenix canariensis": [
+   {
+    "espece": "Butia capitata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Washingtonia filifera",
+    "origine": "proche"
+   },
+   {
+    "espece": "Chamaerops humilis",
+    "origine": "proche"
+   }
+  ],
+  "Picea abies": [
+   {
+    "espece": "Picea pungens",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies alba",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies nordmanniana",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies grandis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies concolor",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea orientalis",
+    "origine": "cousin"
+   }
+  ],
+  "Picea pungens": [
+   {
+    "espece": "Picea abies",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies alba",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies nordmanniana",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies grandis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies concolor",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea sitchensis",
+    "origine": "cousin"
+   }
+  ],
+  "Pinus halepensis": [
+   {
+    "espece": "Pinus pinaster",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Pinus strobus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus mugo",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus sylvestris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus parviflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus nigra",
+    "origine": "cousin"
+   }
+  ],
+  "Pinus strobus": [
+   {
+    "espece": "Pinus halepensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus wallichiana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus parviflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus pinaster",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus pinea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus nigra",
+    "origine": "cousin"
+   }
+  ],
+  "Pinus pinaster": [
+   {
+    "espece": "Pinus pinea",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Pinus halepensis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Pinus parviflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus strobus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus mugo",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus nigra",
+    "origine": "cousin"
+   }
+  ],
+  "Platanus orientalis": [
+   {
+    "espece": "Platanus × hispanica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Platanus occidentalis",
+    "origine": "cousin"
+   }
+  ],
+  "Populus alba": [
+   {
+    "espece": "Populus nigra",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Populus tremula",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Populus × canescens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus × canadensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus balsamifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus deltoides",
+    "origine": "cousin"
+   }
+  ],
+  "Populus tremula": [
+   {
+    "espece": "Populus alba",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Populus deltoides",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus nigra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus × canescens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus × canadensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus balsamifera",
+    "origine": "cousin"
+   }
+  ],
+  "Prunus cerasifera": [
+   {
+    "espece": "Prunus avium",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Prunus armeniaca",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus domestica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus × yedoensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus dulcis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus serrulata",
+    "origine": "cousin"
+   }
+  ],
+  "Prunus padus": [
+   {
+    "espece": "Prunus serotina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus sargentii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus cerasifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus armeniaca",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus avium",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus × yedoensis",
+    "origine": "cousin"
+   }
+  ],
+  "Prunus serrulata": [
+   {
+    "espece": "Prunus mahaleb",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus sargentii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus dulcis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus persica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus cerasifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus × yedoensis",
+    "origine": "cousin"
+   }
+  ],
+  "Prunus × yedoensis": [
+   {
+    "espece": "Prunus armeniaca",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus mahaleb",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus persica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus sargentii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus cerasifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus dulcis",
+    "origine": "cousin"
+   }
+  ],
+  "Prunus dulcis": [
+   {
+    "espece": "Prunus persica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus mahaleb",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus cerasus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus serrulata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus cerasifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus × yedoensis",
+    "origine": "cousin"
+   }
+  ],
+  "Pyrus calleryana": [
+   {
+    "espece": "Pyrus cordata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pyrus communis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pyrus pyraster",
+    "origine": "cousin"
+   }
+  ],
+  "Pyrus communis": [
+   {
+    "espece": "Pyrus pyraster",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Pyrus calleryana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pyrus cordata",
+    "origine": "cousin"
+   }
+  ],
+  "Quercus cerris": [
+   {
+    "espece": "Quercus castaneifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus × hispanica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus pyrenaica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus phellos",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus velutina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus rubra",
+    "origine": "cousin"
+   }
+  ],
+  "Quercus pubescens": [
+   {
+    "espece": "Quercus petraea",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Quercus robur",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus phellos",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus frainetto",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus castaneifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus ilex",
+    "origine": "cousin"
+   }
+  ],
+  "Quercus suber": [
+   {
+    "espece": "Quercus ilex",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus velutina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus × hispanica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus frainetto",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus macrocarpa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus cerris",
+    "origine": "cousin"
+   }
+  ],
+  "Quercus palustris": [
+   {
+    "espece": "Quercus rubra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus coccinea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus phellos",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus macrocarpa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus cerris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus pyrenaica",
+    "origine": "cousin"
+   }
+  ],
+  "Quercus coccinea": [
+   {
+    "espece": "Quercus palustris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus macrocarpa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus rubra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus phellos",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus cerris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus pyrenaica",
+    "origine": "cousin"
+   }
+  ],
+  "Salix babylonica": [
+   {
+    "espece": "Salix alba",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Salix fragilis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Salix caprea",
+    "origine": "cousin"
+   }
+  ],
+  "Salix caprea": [
+   {
+    "espece": "Salix fragilis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Salix babylonica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Salix alba",
+    "origine": "cousin"
+   }
+  ],
+  "Sequoia sempervirens": [
+   {
+    "espece": "Cryptomeria japonica",
+    "origine": "proche"
+   },
+   {
+    "espece": "Juniperus virginiana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sequoiadendron giganteum",
+    "origine": "proche"
+   }
+  ],
+  "Sorbus aria": [
+   {
+    "espece": "Sorbus intermedia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus × thuringiaca",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus aucuparia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus torminalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus domestica",
+    "origine": "cousin"
+   }
+  ],
+  "Sorbus torminalis": [
+   {
+    "espece": "Sorbus domestica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus × thuringiaca",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus aria",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus intermedia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus aucuparia",
+    "origine": "cousin"
+   }
+  ],
+  "Sorbus domestica": [
+   {
+    "espece": "Sorbus aucuparia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus torminalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus aria",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus × thuringiaca",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus intermedia",
+    "origine": "cousin"
+   }
+  ],
+  "Taxodium distichum": [
+   {
+    "espece": "Metasequoia glyptostroboides",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sequoiadendron giganteum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cupressus sempervirens",
+    "origine": "proche"
+   }
+  ],
+  "Thuja plicata": [
+   {
+    "espece": "Chamaecyparis lawsoniana",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Thuja occidentalis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Chamaecyparis obtusa",
+    "origine": "proche"
+   }
+  ],
+  "Tilia tomentosa": [
+   {
+    "espece": "Tilia platyphyllos",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia cordata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia americana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia × europaea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia × euchlora",
+    "origine": "cousin"
+   }
+  ],
+  "Tilia × europaea": [
+   {
+    "espece": "Tilia cordata",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Tilia platyphyllos",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia × euchlora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia tomentosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia americana",
+    "origine": "cousin"
+   }
+  ],
+  "Trachycarpus fortunei": [
+   {
+    "espece": "Chamaerops humilis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Washingtonia filifera",
+    "origine": "proche"
+   },
+   {
+    "espece": "Phoenix canariensis",
+    "origine": "proche"
+   }
+  ],
+  "Ulmus glabra": [
+   {
+    "espece": "Ulmus minor",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Ulmus × hollandica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus parvifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus pumila",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus laevis",
+    "origine": "cousin"
+   }
+  ],
+  "Zelkova serrata": [
+   {
+    "espece": "Ulmus minor",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Ulmus parvifolia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Ulmus × hollandica",
+    "origine": "proche"
+   }
+  ],
+  "Abelia × grandiflora": [
+   {
+    "espece": "Kolkwitzia amabilis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Symphoricarpos albus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lonicera pileata",
+    "origine": "proche"
+   }
+  ],
+  "Aucuba japonica": [],
+  "Berberis thunbergii": [
+   {
+    "espece": "Berberis vulgaris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Berberis darwinii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Nandina domestica",
+    "origine": "proche"
+   }
+  ],
+  "Berberis vulgaris": [
+   {
+    "espece": "Berberis thunbergii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Berberis darwinii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Nandina domestica",
+    "origine": "proche"
+   }
+  ],
+  "Buddleja davidii": [],
+  "Callicarpa bodinieri": [
+   {
+    "espece": "Lavandula stoechas",
+    "origine": "proche"
+   },
+   {
+    "espece": "Caryopteris × clandonensis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Westringia fruticosa",
+    "origine": "proche"
+   }
+  ],
+  "Calluna vulgaris": [
+   {
+    "espece": "Rhododendron ponticum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Erica cinerea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Kalmia latifolia",
+    "origine": "proche"
+   }
+  ],
+  "Camellia japonica": [
+   {
+    "espece": "Camellia sasanqua",
+    "origine": "rédigé"
+   }
+  ],
+  "Caryopteris × clandonensis": [
+   {
+    "espece": "Westringia fruticosa",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lavandula angustifolia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lavandula × intermedia",
+    "origine": "proche"
+   }
+  ],
+  "Ceanothus thyrsiflorus": [
+   {
+    "espece": "Frangula alnus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Rhamnus cathartica",
+    "origine": "proche"
+   },
+   {
+    "espece": "Rhamnus alaternus",
+    "origine": "proche"
+   }
+  ],
+  "Chaenomeles japonica": [
+   {
+    "espece": "Potentilla fruticosa",
+    "origine": "proche"
+   },
+   {
+    "espece": "Prunus spinosa",
+    "origine": "proche"
+   },
+   {
+    "espece": "Spiraea thunbergii",
+    "origine": "proche"
+   }
+  ],
+  "Chimonanthus praecox": [],
+  "Cistus ladanifer": [
+   {
+    "espece": "Cistus monspeliensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cistus albidus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cistus salviifolius",
+    "origine": "cousin"
+   }
+  ],
+  "Cistus albidus": [
+   {
+    "espece": "Cistus salviifolius",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cistus monspeliensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cistus ladanifer",
+    "origine": "cousin"
+   }
+  ],
+  "Cornus alba": [
+   {
+    "espece": "Cornus sanguinea",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Cornus sericea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cornus mas",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cornus kousa",
+    "origine": "cousin"
+   }
+  ],
+  "Cornus mas": [
+   {
+    "espece": "Forsythia × intermedia",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Cornus alba",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cornus sanguinea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cornus sericea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cornus kousa",
+    "origine": "cousin"
+   }
+  ],
+  "Cornus kousa": [
+   {
+    "espece": "Cornus sericea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cornus alba",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cornus mas",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cornus sanguinea",
+    "origine": "cousin"
+   }
+  ],
+  "Cornus sericea": [
+   {
+    "espece": "Cornus alba",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cornus kousa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cornus mas",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cornus sanguinea",
+    "origine": "cousin"
+   }
+  ],
+  "Cotinus coggygria": [
+   {
+    "espece": "Rhus typhina",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pistacia terebinthus",
+    "origine": "proche"
+   }
+  ],
+  "Cotoneaster horizontalis": [
+   {
+    "espece": "Cotoneaster dammeri",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cotoneaster salicifolius",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cotoneaster lacteus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cotoneaster franchetii",
+    "origine": "cousin"
+   }
+  ],
+  "Cotoneaster franchetii": [
+   {
+    "espece": "Cotoneaster salicifolius",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cotoneaster lacteus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cotoneaster horizontalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cotoneaster dammeri",
+    "origine": "cousin"
+   }
+  ],
+  "Cytisus scoparius": [
+   {
+    "espece": "Hippocrepis emerus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Genista tinctoria",
+    "origine": "proche"
+   },
+   {
+    "espece": "Genista hispanica",
+    "origine": "proche"
+   }
+  ],
+  "Daphne odora": [
+   {
+    "espece": "Daphne laureola",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Daphne mezereum",
+    "origine": "cousin"
+   }
+  ],
+  "Deutzia scabra": [
+   {
+    "espece": "Deutzia gracilis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Hydrangea paniculata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Hydrangea quercifolia",
+    "origine": "proche"
+   }
+  ],
+  "Elaeagnus × submacrophylla": [
+   {
+    "espece": "Pittosporum tobira",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Elaeagnus pungens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Elaeagnus angustifolia",
+    "origine": "cousin"
+   }
+  ],
+  "Erica carnea": [
+   {
+    "espece": "Erica cinerea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Erica arborea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Vaccinium vitis-idaea",
+    "origine": "proche"
+   }
+  ],
+  "Escallonia rubra": [],
+  "Euonymus japonicus": [
+   {
+    "espece": "Euonymus fortunei",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euonymus europaeus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euonymus alatus",
+    "origine": "cousin"
+   }
+  ],
+  "Forsythia × intermedia": [
+   {
+    "espece": "Cornus mas",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Phillyrea latifolia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Osmanthus × burkwoodii",
+    "origine": "proche"
+   }
+  ],
+  "Frangula alnus": [
+   {
+    "espece": "Rhamnus cathartica",
+    "origine": "proche"
+   },
+   {
+    "espece": "Rhamnus alaternus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Ceanothus thyrsiflorus",
+    "origine": "proche"
+   }
+  ],
+  "Fuchsia magellanica": [],
+  "Hamamelis mollis": [
+   {
+    "espece": "Hamamelis × intermedia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Loropetalum chinense",
+    "origine": "proche"
+   }
+  ],
+  "Hibiscus syriacus": [],
+  "Hippophae rhamnoides": [
+   {
+    "espece": "Elaeagnus angustifolia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Elaeagnus pungens",
+    "origine": "proche"
+   },
+   {
+    "espece": "Elaeagnus × submacrophylla",
+    "origine": "proche"
+   }
+  ],
+  "Hydrangea paniculata": [
+   {
+    "espece": "Hydrangea macrophylla",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Hydrangea arborescens",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Hydrangea quercifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Hydrangea serrata",
+    "origine": "cousin"
+   }
+  ],
+  "Hydrangea quercifolia": [
+   {
+    "espece": "Hydrangea paniculata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Hydrangea serrata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Hydrangea arborescens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Hydrangea macrophylla",
+    "origine": "cousin"
+   }
+  ],
+  "Hydrangea arborescens": [
+   {
+    "espece": "Hydrangea paniculata",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Hydrangea macrophylla",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Hydrangea serrata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Hydrangea quercifolia",
+    "origine": "cousin"
+   }
+  ],
+  "Hypericum calycinum": [
+   {
+    "espece": "Hypericum androsaemum",
+    "origine": "cousin"
+   }
+  ],
+  "Kerria japonica": [
+   {
+    "espece": "Spiraea × vanhouttei",
+    "origine": "proche"
+   },
+   {
+    "espece": "Rosa arvensis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Rosa canina",
+    "origine": "proche"
+   }
+  ],
+  "Kolkwitzia amabilis": [
+   {
+    "espece": "Abelia × grandiflora",
+    "origine": "proche"
+   },
+   {
+    "espece": "Symphoricarpos albus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lonicera fragrantissima",
+    "origine": "proche"
+   }
+  ],
+  "Lavandula stoechas": [
+   {
+    "espece": "Lavandula angustifolia",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Lavandula × intermedia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lavandula latifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lavandula dentata",
+    "origine": "cousin"
+   }
+  ],
+  "Lavandula × intermedia": [
+   {
+    "espece": "Lavandula angustifolia",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Lavandula dentata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lavandula stoechas",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lavandula latifolia",
+    "origine": "cousin"
+   }
+  ],
+  "Leycesteria formosa": [
+   {
+    "espece": "Symphoricarpos albus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lonicera nitida",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lonicera xylosteum",
+    "origine": "proche"
+   }
+  ],
+  "Lonicera nitida": [
+   {
+    "espece": "Lonicera xylosteum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lonicera pileata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lonicera fragrantissima",
+    "origine": "cousin"
+   }
+  ],
+  "Lonicera fragrantissima": [
+   {
+    "espece": "Lonicera pileata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lonicera xylosteum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lonicera nitida",
+    "origine": "cousin"
+   }
+  ],
+  "Mahonia aquifolium": [
+   {
+    "espece": "Ilex aquifolium",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Mahonia japonica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Nandina domestica",
+    "origine": "proche"
+   }
+  ],
+  "Myrtus communis": [
+   {
+    "espece": "Acca sellowiana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Callistemon citrinus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Leptospermum scoparium",
+    "origine": "proche"
+   }
+  ],
+  "Nandina domestica": [
+   {
+    "espece": "Mahonia aquifolium",
+    "origine": "proche"
+   },
+   {
+    "espece": "Berberis vulgaris",
+    "origine": "proche"
+   },
+   {
+    "espece": "Mahonia japonica",
+    "origine": "proche"
+   }
+  ],
+  "Osmanthus heterophyllus": [
+   {
+    "espece": "Osmanthus × burkwoodii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ligustrum ovalifolium",
+    "origine": "proche"
+   },
+   {
+    "espece": "Ligustrum japonicum",
+    "origine": "proche"
+   }
+  ],
+  "Perovskia atriplicifolia": [
+   {
+    "espece": "Lavandula latifolia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Teucrium fruticans",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lavandula stoechas",
+    "origine": "proche"
+   }
+  ],
+  "Philadelphus coronarius": [
+   {
+    "espece": "Hydrangea arborescens",
+    "origine": "proche"
+   },
+   {
+    "espece": "Hydrangea macrophylla",
+    "origine": "proche"
+   },
+   {
+    "espece": "Hydrangea paniculata",
+    "origine": "proche"
+   }
+  ],
+  "Photinia × fraseri": [
+   {
+    "espece": "Cotoneaster lacteus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Spiraea japonica",
+    "origine": "proche"
+   },
+   {
+    "espece": "Prunus lusitanica",
+    "origine": "proche"
+   }
+  ],
+  "Physocarpus opulifolius": [
+   {
+    "espece": "Photinia × fraseri",
+    "origine": "proche"
+   },
+   {
+    "espece": "Spiraea japonica",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cotoneaster lacteus",
+    "origine": "proche"
+   }
+  ],
+  "Pittosporum tobira": [
+   {
+    "espece": "Elaeagnus × submacrophylla",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Pittosporum tenuifolium",
+    "origine": "cousin"
+   }
+  ],
+  "Potentilla fruticosa": [
+   {
+    "espece": "Rosa canina",
+    "origine": "proche"
+   },
+   {
+    "espece": "Spiraea thunbergii",
+    "origine": "proche"
+   },
+   {
+    "espece": "Chaenomeles japonica",
+    "origine": "proche"
+   }
+  ],
+  "Prunus spinosa": [
+   {
+    "espece": "Crataegus monogyna",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Prunus lusitanica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus laurocerasus",
+    "origine": "cousin"
+   }
+  ],
+  "Prunus lusitanica": [
+   {
+    "espece": "Prunus laurocerasus",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Prunus spinosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Photinia × fraseri",
+    "origine": "proche"
+   }
+  ],
+  "Pyracantha coccinea": [
+   {
+    "espece": "Prunus lusitanica",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cotoneaster franchetii",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cotoneaster horizontalis",
+    "origine": "proche"
+   }
+  ],
+  "Rhododendron ponticum": [
+   {
+    "espece": "Rhododendron luteum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Kalmia latifolia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Calluna vulgaris",
+    "origine": "proche"
+   }
+  ],
+  "Rhus typhina": [
+   {
+    "espece": "Pistacia lentiscus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cotinus coggygria",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pistacia terebinthus",
+    "origine": "proche"
+   }
+  ],
+  "Ribes sanguineum": [
+   {
+    "espece": "Ribes rubrum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ribes nigrum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ribes alpinum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ribes uva-crispa",
+    "origine": "cousin"
+   }
+  ],
+  "Rosa canina": [
+   {
+    "espece": "Rosa gallica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa pimpinellifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa rugosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa multiflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa arvensis",
+    "origine": "cousin"
+   }
+  ],
+  "Rosa rugosa": [
+   {
+    "espece": "Rosa pimpinellifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa gallica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa canina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa multiflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa arvensis",
+    "origine": "cousin"
+   }
+  ],
+  "Ruscus aculeatus": [],
+  "Salix purpurea": [
+   {
+    "espece": "Salix viminalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Salix repens",
+    "origine": "cousin"
+   }
+  ],
+  "Santolina chamaecyparissus": [
+   {
+    "espece": "Helichrysum italicum",
+    "origine": "proche"
+   }
+  ],
+  "Sarcococca confusa": [
+   {
+    "espece": "Buxus sempervirens",
+    "origine": "proche"
+   }
+  ],
+  "Skimmia japonica": [
+   {
+    "espece": "Choisya ternata",
+    "origine": "proche"
+   }
+  ],
+  "Spartium junceum": [
+   {
+    "espece": "Ulex europaeus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cytisus scoparius",
+    "origine": "proche"
+   },
+   {
+    "espece": "Colutea arborescens",
+    "origine": "proche"
+   }
+  ],
+  "Spiraea japonica": [
+   {
+    "espece": "Spiraea × vanhouttei",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Spiraea thunbergii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Photinia × fraseri",
+    "origine": "proche"
+   }
+  ],
+  "Spiraea × vanhouttei": [
+   {
+    "espece": "Spiraea japonica",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Spiraea thunbergii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Kerria japonica",
+    "origine": "proche"
+   }
+  ],
+  "Symphoricarpos albus": [
+   {
+    "espece": "Lonicera pileata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Abelia × grandiflora",
+    "origine": "proche"
+   },
+   {
+    "espece": "Kolkwitzia amabilis",
+    "origine": "proche"
+   }
+  ],
+  "Syringa vulgaris": [
+   {
+    "espece": "Osmanthus × burkwoodii",
+    "origine": "proche"
+   },
+   {
+    "espece": "Ligustrum ovalifolium",
+    "origine": "proche"
+   },
+   {
+    "espece": "Ligustrum lucidum",
+    "origine": "proche"
+   }
+  ],
+  "Tamarix gallica": [],
+  "Viburnum opulus": [
+   {
+    "espece": "Viburnum lantana",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Viburnum plicatum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum odoratissimum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum davidii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum tinus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum carlesii",
+    "origine": "cousin"
+   }
+  ],
+  "Viburnum lantana": [
+   {
+    "espece": "Viburnum opulus",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Viburnum × burkwoodii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum rhytidophyllum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum tinus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum odoratissimum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum carlesii",
+    "origine": "cousin"
+   }
+  ],
+  "Viburnum × bodnantense": [
+   {
+    "espece": "Viburnum tinus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum carlesii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum × burkwoodii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum lantana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum odoratissimum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum opulus",
+    "origine": "cousin"
+   }
+  ],
+  "Viburnum davidii": [
+   {
+    "espece": "Viburnum tinus",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Viburnum opulus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum lantana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum odoratissimum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum carlesii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum plicatum",
+    "origine": "cousin"
+   }
+  ],
+  "Vitex agnus-castus": [
+   {
+    "espece": "Lavandula angustifolia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lavandula stoechas",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lavandula × intermedia",
+    "origine": "proche"
+   }
+  ],
+  "Weigela florida": [
+   {
+    "espece": "Abelia × grandiflora",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lonicera nitida",
+    "origine": "proche"
+   },
+   {
+    "espece": "Symphoricarpos albus",
+    "origine": "proche"
+   }
+  ],
+  "Arbutus unedo": [
+   {
+    "espece": "Arbutus andrachne",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Arbutus × andrachnoides",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pieris japonica",
+    "origine": "proche"
+   }
+  ],
+  "Acanthus mollis": [],
+  "Agapanthus praecox": [
+   {
+    "espece": "Allium giganteum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Tulbaghia violacea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Narcissus pseudonarcissus",
+    "origine": "proche"
+   }
+  ],
+  "Alchemilla mollis": [
+   {
+    "espece": "Fragaria vesca",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sanguisorba officinalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Geum urbanum",
+    "origine": "proche"
+   }
+  ],
+  "Allium giganteum": [
+   {
+    "espece": "Allium ursinum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Allium schoenoprasum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Agapanthus praecox",
+    "origine": "proche"
+   }
+  ],
+  "Anemone × hybrida": [
+   {
+    "espece": "Caltha palustris",
+    "origine": "proche"
+   },
+   {
+    "espece": "Trollius europaeus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Helleborus orientalis",
+    "origine": "proche"
+   }
+  ],
+  "Aquilegia vulgaris": [
+   {
+    "espece": "Aconitum napellus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Helleborus orientalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Helleborus niger",
+    "origine": "proche"
+   }
+  ],
+  "Artemisia absinthium": [
+   {
+    "espece": "Achillea filipendulina",
+    "origine": "proche"
+   },
+   {
+    "espece": "Helichrysum stoechas",
+    "origine": "proche"
+   },
+   {
+    "espece": "Gaillardia × grandiflora",
+    "origine": "proche"
+   }
+  ],
+  "Symphyotrichum novi-belgii": [
+   {
+    "espece": "Buphthalmum salicifolium",
+    "origine": "proche"
+   },
+   {
+    "espece": "Leucanthemum × superbum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Leucanthemum vulgare",
+    "origine": "proche"
+   }
+  ],
+  "Astilbe × arendsii": [
+   {
+    "espece": "Rodgersia pinnata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Bergenia cordifolia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Tiarella cordifolia",
+    "origine": "proche"
+   }
+  ],
+  "Astrantia major": [
+   {
+    "espece": "Anthriscus sylvestris",
+    "origine": "proche"
+   },
+   {
+    "espece": "Eryngium planum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Eryngium bourgatii",
+    "origine": "proche"
+   }
+  ],
+  "Bergenia cordifolia": [
+   {
+    "espece": "Heuchera sanguinea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Astilbe × arendsii",
+    "origine": "proche"
+   },
+   {
+    "espece": "Rodgersia pinnata",
+    "origine": "proche"
+   }
+  ],
+  "Brunnera macrophylla": [
+   {
+    "espece": "Pulmonaria longifolia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pulmonaria officinalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lithodora diffusa",
+    "origine": "proche"
+   }
+  ],
+  "Campanula persicifolia": [
+   {
+    "espece": "Campanula portenschlagiana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Campanula glomerata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Campanula poscharskyana",
+    "origine": "cousin"
+   }
+  ],
+  "Centranthus ruber": [
+   {
+    "espece": "Knautia arvensis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Scabiosa columbaria",
+    "origine": "proche"
+   },
+   {
+    "espece": "Valeriana officinalis",
+    "origine": "proche"
+   }
+  ],
+  "Cerastium tomentosum": [
+   {
+    "espece": "Lychnis coronaria",
+    "origine": "proche"
+   },
+   {
+    "espece": "Saponaria officinalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Silene dioica",
+    "origine": "proche"
+   }
+  ],
+  "Crocosmia × crocosmiiflora": [
+   {
+    "espece": "Iris foetidissima",
+    "origine": "proche"
+   },
+   {
+    "espece": "Libertia grandiflora",
+    "origine": "proche"
+   },
+   {
+    "espece": "Iris germanica",
+    "origine": "proche"
+   }
+  ],
+  "Delphinium elatum": [
+   {
+    "espece": "Actaea simplex",
+    "origine": "proche"
+   },
+   {
+    "espece": "Aconitum napellus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Trollius europaeus",
+    "origine": "proche"
+   }
+  ],
+  "Dicentra spectabilis": [
+   {
+    "espece": "Papaver orientale",
+    "origine": "proche"
+   }
+  ],
+  "Digitalis purpurea": [
+   {
+    "espece": "Digitalis grandiflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Veronica spicata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Veronica chamaedrys",
+    "origine": "proche"
+   }
+  ],
+  "Echinacea purpurea": [
+   {
+    "espece": "Rudbeckia fulgida",
+    "origine": "proche"
+   },
+   {
+    "espece": "Aster amellus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Achillea filipendulina",
+    "origine": "proche"
+   }
+  ],
+  "Echinops ritro": [
+   {
+    "espece": "Tussilago farfara",
+    "origine": "proche"
+   },
+   {
+    "espece": "Artemisia absinthium",
+    "origine": "proche"
+   },
+   {
+    "espece": "Centaurea montana",
+    "origine": "proche"
+   }
+  ],
+  "Epimedium alpinum": [],
+  "Erigeron karvinskianus": [
+   {
+    "espece": "Bellis perennis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Coreopsis verticillata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Achillea millefolium",
+    "origine": "proche"
+   }
+  ],
+  "Eryngium bourgatii": [
+   {
+    "espece": "Eryngium maritimum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Eryngium planum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Anthriscus sylvestris",
+    "origine": "proche"
+   }
+  ],
+  "Euphorbia characias": [
+   {
+    "espece": "Euphorbia paralias",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euphorbia cyparissias",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euphorbia polychroma",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euphorbia amygdaloides",
+    "origine": "cousin"
+   }
+  ],
+  "Euphorbia polychroma": [
+   {
+    "espece": "Euphorbia cyparissias",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euphorbia amygdaloides",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euphorbia characias",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euphorbia paralias",
+    "origine": "cousin"
+   }
+  ],
+  "Geranium sanguineum": [
+   {
+    "espece": "Geranium macrorrhizum",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Geranium pratense",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium phaeum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium robertianum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium × cantabrigiense",
+    "origine": "cousin"
+   }
+  ],
+  "Geranium macrorrhizum": [
+   {
+    "espece": "Geranium sanguineum",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Geranium × cantabrigiense",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium pratense",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium robertianum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium phaeum",
+    "origine": "cousin"
+   }
+  ],
+  "Helleborus orientalis": [
+   {
+    "espece": "Helleborus niger",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Helleborus foetidus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Aquilegia vulgaris",
+    "origine": "proche"
+   }
+  ],
+  "Helleborus foetidus": [
+   {
+    "espece": "Helleborus orientalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Helleborus niger",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Trollius europaeus",
+    "origine": "proche"
+   }
+  ],
+  "Hemerocallis fulva": [
+   {
+    "espece": "Asphodelus albus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Phormium tenax",
+    "origine": "proche"
+   },
+   {
+    "espece": "Kniphofia uvaria",
+    "origine": "proche"
+   }
+  ],
+  "Heuchera sanguinea": [
+   {
+    "espece": "Bergenia cordifolia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Tiarella cordifolia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Astilbe × arendsii",
+    "origine": "proche"
+   }
+  ],
+  "Hosta sieboldiana": [
+   {
+    "espece": "Ophiopogon japonicus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Polygonatum multiflorum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Convallaria majalis",
+    "origine": "proche"
+   }
+  ],
+  "Iberis sempervirens": [
+   {
+    "espece": "Aubrieta deltoidea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Arabis alpina",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cardamine pratensis",
+    "origine": "proche"
+   }
+  ],
+  "Iris germanica": [
+   {
+    "espece": "Iris pseudacorus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Iris sibirica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Iris foetidissima",
+    "origine": "cousin"
+   }
+  ],
+  "Iris pseudacorus": [
+   {
+    "espece": "Iris sibirica",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Acorus calamus",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Iris germanica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Iris foetidissima",
+    "origine": "cousin"
+   }
+  ],
+  "Kniphofia uvaria": [
+   {
+    "espece": "Phormium tenax",
+    "origine": "proche"
+   },
+   {
+    "espece": "Hemerocallis fulva",
+    "origine": "proche"
+   },
+   {
+    "espece": "Asphodelus albus",
+    "origine": "proche"
+   }
+  ],
+  "Leucanthemum vulgare": [
+   {
+    "espece": "Leucanthemum × superbum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Symphyotrichum novi-belgii",
+    "origine": "proche"
+   },
+   {
+    "espece": "Buphthalmum salicifolium",
+    "origine": "proche"
+   }
+  ],
+  "Liriope muscari": [
+   {
+    "espece": "Ophiopogon japonicus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Polygonatum multiflorum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Convallaria majalis",
+    "origine": "proche"
+   }
+  ],
+  "Lychnis coronaria": [
+   {
+    "espece": "Lychnis flos-cuculi",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cerastium tomentosum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Gypsophila paniculata",
+    "origine": "proche"
+   }
+  ],
+  "Nepeta × faassenii": [
+   {
+    "espece": "Calamintha nepeta",
+    "origine": "proche"
+   },
+   {
+    "espece": "Glechoma hederacea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Mentha × piperita",
+    "origine": "proche"
+   }
+  ],
+  "Ophiopogon japonicus": [
+   {
+    "espece": "Liriope muscari",
+    "origine": "proche"
+   },
+   {
+    "espece": "Hosta sieboldiana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Polygonatum multiflorum",
+    "origine": "proche"
+   }
+  ],
+  "Origanum vulgare": [
+   {
+    "espece": "Teucrium chamaedrys",
+    "origine": "proche"
+   },
+   {
+    "espece": "Salvia nemorosa",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lamium maculatum",
+    "origine": "proche"
+   }
+  ],
+  "Paeonia lactiflora": [],
+  "Papaver orientale": [
+   {
+    "espece": "Chelidonium majus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Dicentra spectabilis",
+    "origine": "proche"
+   }
+  ],
+  "Persicaria amplexicaulis": [],
+  "Phlox paniculata": [],
+  "Pulmonaria officinalis": [
+   {
+    "espece": "Pulmonaria longifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Brunnera macrophylla",
+    "origine": "proche"
+   },
+   {
+    "espece": "Echium vulgare",
+    "origine": "proche"
+   }
+  ],
+  "Polygonatum multiflorum": [
+   {
+    "espece": "Hyacinthoides non-scripta",
+    "origine": "proche"
+   },
+   {
+    "espece": "Convallaria majalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Ophiopogon japonicus",
+    "origine": "proche"
+   }
+  ],
+  "Rudbeckia fulgida": [
+   {
+    "espece": "Echinacea purpurea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Gaillardia × grandiflora",
+    "origine": "proche"
+   },
+   {
+    "espece": "Aster amellus",
+    "origine": "proche"
+   }
+  ],
+  "Salvia nemorosa": [
+   {
+    "espece": "Salvia officinalis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Salvia sclarea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Salvia pratensis",
+    "origine": "cousin"
+   }
+  ],
+  "Salvia officinalis": [
+   {
+    "espece": "Salvia nemorosa",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Salvia pratensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Salvia sclarea",
+    "origine": "cousin"
+   }
+  ],
+  "Sedum spectabile": [
+   {
+    "espece": "Sedum telephium",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sedum album",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sedum acre",
+    "origine": "cousin"
+   }
+  ],
+  "Sedum acre": [
+   {
+    "espece": "Sedum album",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Sedum spectabile",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sedum telephium",
+    "origine": "cousin"
+   }
+  ],
+  "Sempervivum tectorum": [
+   {
+    "espece": "Sedum spectabile",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sedum album",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sedum telephium",
+    "origine": "proche"
+   }
+  ],
+  "Stachys byzantina": [
+   {
+    "espece": "Stachys officinalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Physostegia virginiana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Salvia officinalis",
+    "origine": "proche"
+   }
+  ],
+  "Thymus vulgaris": [
+   {
+    "espece": "Thymus serpyllum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Salvia sclarea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Calamintha nepeta",
+    "origine": "proche"
+   }
+  ],
+  "Verbascum thapsus": [],
+  "Verbena bonariensis": [
+   {
+    "espece": "Verbena officinalis",
+    "origine": "cousin"
+   }
+  ],
+  "Veronica spicata": [
+   {
+    "espece": "Veronica chamaedrys",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Veronicastrum virginicum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Digitalis purpurea",
+    "origine": "proche"
+   }
+  ],
+  "Vinca minor": [
+   {
+    "espece": "Vinca major",
+    "origine": "cousin"
+   }
+  ],
+  "Polystichum setiferum": [
+   {
+    "espece": "Dryopteris filix-mas",
+    "origine": "proche"
+   }
+  ],
+  "Dryopteris filix-mas": [
+   {
+    "espece": "Polystichum setiferum",
+    "origine": "proche"
+   }
+  ],
+  "Athyrium filix-femina": [
+   {
+    "espece": "Asplenium scolopendrium",
+    "origine": "proche"
+   }
+  ],
+  "Actinidia deliciosa": [
+   {
+    "espece": "Actinidia arguta",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Actinidia kolomikta",
+    "origine": "cousin"
+   }
+  ],
+  "Akebia quinata": [],
+  "Aristolochia macrophylla": [],
+  "Campsis radicans": [
+   {
+    "espece": "Campsis grandiflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Bignonia capreolata",
+    "origine": "proche"
+   }
+  ],
+  "Clematis montana": [
+   {
+    "espece": "Clematis alpina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis vitalba",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis armandii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis viticella",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis flammula",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis cirrhosa",
+    "origine": "cousin"
+   }
+  ],
+  "Clematis armandii": [
+   {
+    "espece": "Clematis vitalba",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis cirrhosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis montana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis alpina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis flammula",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis viticella",
+    "origine": "cousin"
+   }
+  ],
+  "Fallopia baldschuanica": [
+   {
+    "espece": "Muehlenbeckia complexa",
+    "origine": "proche"
+   }
+  ],
+  "Hedera colchica": [
+   {
+    "espece": "Hedera helix",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Hedera hibernica",
+    "origine": "cousin"
+   }
+  ],
+  "Humulus lupulus": [],
+  "Hydrangea petiolaris": [
+   {
+    "espece": "Schizophragma hydrangeoides",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pileostegia viburnoides",
+    "origine": "proche"
+   }
+  ],
+  "Jasminum nudiflorum": [
+   {
+    "espece": "Jasminum officinale",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Jasminum polyanthum",
+    "origine": "cousin"
+   }
+  ],
+  "Jasminum officinale": [
+   {
+    "espece": "Jasminum polyanthum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Jasminum nudiflorum",
+    "origine": "cousin"
+   }
+  ],
+  "Lonicera periclymenum": [
+   {
+    "espece": "Lonicera caprifolium",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lonicera henryi",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lonicera japonica",
+    "origine": "cousin"
+   }
+  ],
+  "Lonicera japonica": [
+   {
+    "espece": "Lonicera henryi",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lonicera caprifolium",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lonicera periclymenum",
+    "origine": "cousin"
+   }
+  ],
+  "Parthenocissus quinquefolia": [
+   {
+    "espece": "Parthenocissus tricuspidata",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Vitis coignetiae",
+    "origine": "proche"
+   },
+   {
+    "espece": "Vitis vinifera",
+    "origine": "proche"
+   }
+  ],
+  "Parthenocissus tricuspidata": [
+   {
+    "espece": "Parthenocissus quinquefolia",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Vitis vinifera",
+    "origine": "proche"
+   },
+   {
+    "espece": "Vitis coignetiae",
+    "origine": "proche"
+   }
+  ],
+  "Passiflora caerulea": [],
+  "Rosa banksiae": [
+   {
+    "espece": "Rosa sempervirens",
+    "origine": "cousin"
+   }
+  ],
+  "Trachelospermum jasminoides": [],
+  "Vitis vinifera": [
+   {
+    "espece": "Vitis coignetiae",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Parthenocissus tricuspidata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Parthenocissus quinquefolia",
+    "origine": "proche"
+   }
+  ],
+  "Wisteria floribunda": [
+   {
+    "espece": "Wisteria sinensis",
+    "origine": "rédigé"
+   }
+  ],
+  "Arundo donax": [
+   {
+    "espece": "Miscanthus × giganteus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Fargesia murielae",
+    "origine": "proche"
+   },
+   {
+    "espece": "Chasmanthium latifolium",
+    "origine": "proche"
+   }
+  ],
+  "Calamagrostis × acutiflora": [
+   {
+    "espece": "Calamagrostis brachytricha",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Stipa gigantea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Festuca ovina",
+    "origine": "proche"
+   }
+  ],
+  "Carex pendula": [
+   {
+    "espece": "Carex elata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex flacca",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex sylvatica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex oshimensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex arenaria",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex testacea",
+    "origine": "cousin"
+   }
+  ],
+  "Carex oshimensis": [
+   {
+    "espece": "Carex testacea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex elata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex sylvatica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex pendula",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex flacca",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex arenaria",
+    "origine": "cousin"
+   }
+  ],
+  "Cortaderia selloana": [
+   {
+    "espece": "Miscanthus sinensis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Fargesia murielae",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sporobolus heterolepis",
+    "origine": "proche"
+   }
+  ],
+  "Deschampsia cespitosa": [
+   {
+    "espece": "Muhlenbergia capillaris",
+    "origine": "proche"
+   },
+   {
+    "espece": "Agrostis curtisii",
+    "origine": "proche"
+   },
+   {
+    "espece": "Festuca ovina",
+    "origine": "proche"
+   }
+  ],
+  "Elymus magellanicus": [
+   {
+    "espece": "Leymus arenarius",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Elymus repens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Festuca ovina",
+    "origine": "proche"
+   }
+  ],
+  "Fargesia murielae": [
+   {
+    "espece": "Arundo donax",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pennisetum orientale",
+    "origine": "proche"
+   },
+   {
+    "espece": "Miscanthus × giganteus",
+    "origine": "proche"
+   }
+  ],
+  "Festuca glauca": [
+   {
+    "espece": "Festuca ovina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Festuca rubra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Festuca arundinacea",
+    "origine": "cousin"
+   }
+  ],
+  "Hakonechloa macra": [
+   {
+    "espece": "Miscanthus sinensis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sporobolus heterolepis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Panicum virgatum",
+    "origine": "proche"
+   }
+  ],
+  "Imperata cylindrica": [
+   {
+    "espece": "Sesleria caerulea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Elymus magellanicus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pennisetum orientale",
+    "origine": "proche"
+   }
+  ],
+  "Juncus effusus": [
+   {
+    "espece": "Juncus inflexus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Luzula nivea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Luzula sylvatica",
+    "origine": "proche"
+   }
+  ],
+  "Luzula sylvatica": [
+   {
+    "espece": "Luzula nivea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juncus effusus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Juncus inflexus",
+    "origine": "proche"
+   }
+  ],
+  "Melica ciliata": [
+   {
+    "espece": "Melica uniflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Corynephorus canescens",
+    "origine": "proche"
+   },
+   {
+    "espece": "Helictotrichon sempervirens",
+    "origine": "proche"
+   }
+  ],
+  "Molinia caerulea": [
+   {
+    "espece": "Sporobolus heterolepis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Koeleria glauca",
+    "origine": "proche"
+   },
+   {
+    "espece": "Arrhenatherum elatius",
+    "origine": "proche"
+   }
+  ],
+  "Panicum virgatum": [
+   {
+    "espece": "Muhlenbergia capillaris",
+    "origine": "proche"
+   },
+   {
+    "espece": "Schizachyrium scoparium",
+    "origine": "proche"
+   },
+   {
+    "espece": "Molinia caerulea",
+    "origine": "proche"
+   }
+  ],
+  "Pennisetum alopecuroides": [
+   {
+    "espece": "Pennisetum setaceum",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Pennisetum orientale",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Festuca glauca",
+    "origine": "proche"
+   }
+  ],
+  "Pennisetum setaceum": [
+   {
+    "espece": "Pennisetum alopecuroides",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Pennisetum orientale",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Stipa tenuissima",
+    "origine": "proche"
+   }
+  ],
+  "Phragmites australis": [
+   {
+    "espece": "Phalaris arundinacea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Arundo donax",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sesleria autumnalis",
+    "origine": "proche"
+   }
+  ],
+  "Phyllostachys aurea": [
+   {
+    "espece": "Phyllostachys nigra",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Fargesia murielae",
+    "origine": "proche"
+   },
+   {
+    "espece": "Elymus repens",
+    "origine": "proche"
+   }
+  ],
+  "Phyllostachys nigra": [
+   {
+    "espece": "Phyllostachys aurea",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Arundo donax",
+    "origine": "proche"
+   },
+   {
+    "espece": "Fargesia murielae",
+    "origine": "proche"
+   }
+  ],
+  "Schizachyrium scoparium": [
+   {
+    "espece": "Panicum virgatum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Elymus repens",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pennisetum setaceum",
+    "origine": "proche"
+   }
+  ],
+  "Sesleria autumnalis": [
+   {
+    "espece": "Sesleria caerulea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Calamagrostis brachytricha",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pennisetum orientale",
+    "origine": "proche"
+   }
+  ],
+  "Sorghastrum nutans": [
+   {
+    "espece": "Stipa calamagrostis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Phalaris arundinacea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Ammophila arenaria",
+    "origine": "proche"
+   }
+  ],
+  "Sporobolus heterolepis": [
+   {
+    "espece": "Anemanthele lessoniana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Molinia caerulea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Festuca glauca",
+    "origine": "proche"
+   }
+  ],
+  "Stipa gigantea": [
+   {
+    "espece": "Stipa calamagrostis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Stipa tenuissima",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Calamagrostis × acutiflora",
+    "origine": "proche"
+   }
+  ],
+  "Typha latifolia": [],
+  "Abies alba": [
+   {
+    "espece": "Picea abies",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea pungens",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea omorika",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea orientalis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea sitchensis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies grandis",
+    "origine": "cousin"
+   }
+  ],
+  "Abies nordmanniana": [
+   {
+    "espece": "Picea abies",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea pungens",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea omorika",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea orientalis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea sitchensis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies grandis",
+    "origine": "cousin"
+   }
+  ],
+  "Araucaria araucana": [],
+  "Pseudotsuga menziesii": [
+   {
+    "espece": "Pinus strobus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pinus pinaster",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pinus parviflora",
+    "origine": "proche"
+   }
+  ],
+  "Thuja occidentalis": [
+   {
+    "espece": "Thuja plicata",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Platycladus orientalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Chamaecyparis obtusa",
+    "origine": "proche"
+   }
+  ],
+  "Sciadopitys verticillata": [],
+  "Alnus incana": [
+   {
+    "espece": "Alnus glutinosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Alnus cordata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Alnus × spaethii",
+    "origine": "cousin"
+   }
+  ],
+  "Betula nigra": [
+   {
+    "espece": "Betula pendula",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Betula papyrifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Betula utilis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Betula pubescens",
+    "origine": "cousin"
+   }
+  ],
+  "Cercis canadensis": [
+   {
+    "espece": "Cercis siliquastrum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Erythrina crista-galli",
+    "origine": "proche"
+   },
+   {
+    "espece": "Gymnocladus dioicus",
+    "origine": "proche"
+   }
+  ],
+  "Cydonia oblonga": [
+   {
+    "espece": "Malus domestica",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pyrus communis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Prunus armeniaca",
+    "origine": "proche"
+   }
+  ],
+  "Laburnum anagyroides": [
+   {
+    "espece": "Robinia pseudoacacia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Erythrina crista-galli",
+    "origine": "proche"
+   },
+   {
+    "espece": "Gymnocladus dioicus",
+    "origine": "proche"
+   }
+  ],
+  "Mespilus germanica": [
+   {
+    "espece": "Pyrus calleryana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Prunus armeniaca",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sorbus torminalis",
+    "origine": "proche"
+   }
+  ],
+  "Nyssa sylvatica": [
+   {
+    "espece": "Davidia involucrata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cornus controversa",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cornus florida",
+    "origine": "proche"
+   }
+  ],
+  "Parrotia persica": [],
+  "Pterocarya fraxinifolia": [
+   {
+    "espece": "Juglans regia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Carya illinoinensis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Juglans nigra",
+    "origine": "proche"
+   }
+  ],
+  "Quercus frainetto": [
+   {
+    "espece": "Quercus pubescens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus petraea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus robur",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus suber",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus phellos",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus velutina",
+    "origine": "cousin"
+   }
+  ],
+  "Sorbus intermedia": [
+   {
+    "espece": "Sorbus × thuringiaca",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus aria",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus aucuparia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus torminalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus domestica",
+    "origine": "cousin"
+   }
+  ],
+  "Prunus mahaleb": [
+   {
+    "espece": "Prunus serrulata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus dulcis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus × yedoensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus avium",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus persica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus cerasus",
+    "origine": "cousin"
+   }
+  ],
+  "Populus × canadensis": [
+   {
+    "espece": "Populus tremula",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus balsamifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus deltoides",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus alba",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus nigra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus × canescens",
+    "origine": "cousin"
+   }
+  ],
+  "Celtis occidentalis": [
+   {
+    "espece": "Celtis australis",
+    "origine": "cousin"
+   }
+  ],
+  "Cornus controversa": [
+   {
+    "espece": "Cornus florida",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Davidia involucrata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Nyssa sylvatica",
+    "origine": "proche"
+   }
+  ],
+  "Aronia melanocarpa": [
+   {
+    "espece": "Cotoneaster lacteus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Prunus laurocerasus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Prunus spinosa",
+    "origine": "proche"
+   }
+  ],
+  "Rhododendron luteum": [
+   {
+    "espece": "Rhododendron ponticum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pieris japonica",
+    "origine": "proche"
+   },
+   {
+    "espece": "Arbutus × andrachnoides",
+    "origine": "proche"
+   }
+  ],
+  "Elaeagnus angustifolia": [
+   {
+    "espece": "Elaeagnus pungens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Elaeagnus × submacrophylla",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Hippophae rhamnoides",
+    "origine": "proche"
+   }
+  ],
+  "Euonymus alatus": [
+   {
+    "espece": "Euonymus europaeus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euonymus japonicus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euonymus fortunei",
+    "origine": "cousin"
+   }
+  ],
+  "Ilex crenata": [
+   {
+    "espece": "Buxus sempervirens",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Ilex aquifolium",
+    "origine": "cousin"
+   }
+  ],
+  "Ligustrum ovalifolium": [
+   {
+    "espece": "Ligustrum japonicum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ligustrum lucidum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ligustrum vulgare",
+    "origine": "cousin"
+   }
+  ],
+  "Pieris japonica": [
+   {
+    "espece": "Arbutus unedo",
+    "origine": "proche"
+   },
+   {
+    "espece": "Vaccinium corymbosum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Erica arborea",
+    "origine": "proche"
+   }
+  ],
+  "Rhamnus alaternus": [
+   {
+    "espece": "Rhamnus cathartica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Frangula alnus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Ceanothus thyrsiflorus",
+    "origine": "proche"
+   }
+  ],
+  "Sambucus racemosa": [
+   {
+    "espece": "Sambucus nigra",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Viburnum odoratissimum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Viburnum opulus",
+    "origine": "proche"
+   }
+  ],
+  "Spiraea thunbergii": [
+   {
+    "espece": "Spiraea japonica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Spiraea × vanhouttei",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus spinosa",
+    "origine": "proche"
+   }
+  ],
+  "Stephanandra incisa": [
+   {
+    "espece": "Cotoneaster dammeri",
+    "origine": "proche"
+   },
+   {
+    "espece": "Spiraea thunbergii",
+    "origine": "proche"
+   },
+   {
+    "espece": "Kerria japonica",
+    "origine": "proche"
+   }
+  ],
+  "Ulex europaeus": [
+   {
+    "espece": "Ulex minor",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Hippocrepis emerus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Spartium junceum",
+    "origine": "proche"
+   }
+  ],
+  "Vaccinium corymbosum": [
+   {
+    "espece": "Vaccinium vitis-idaea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Vaccinium myrtillus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pieris japonica",
+    "origine": "proche"
+   }
+  ],
+  "Viburnum plicatum": [
+   {
+    "espece": "Viburnum opulus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum davidii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum tinus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum carlesii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum × burkwoodii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum odoratissimum",
+    "origine": "cousin"
+   }
+  ],
+  "Hydrangea serrata": [
+   {
+    "espece": "Hydrangea quercifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Hydrangea macrophylla",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Hydrangea arborescens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Hydrangea paniculata",
+    "origine": "cousin"
+   }
+  ],
+  "Kalmia latifolia": [
+   {
+    "espece": "Rhododendron ponticum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Vaccinium vitis-idaea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pieris japonica",
+    "origine": "proche"
+   }
+  ],
+  "Pittosporum tenuifolium": [
+   {
+    "espece": "Pittosporum tobira",
+    "origine": "cousin"
+   }
+  ],
+  "Griselinia littoralis": [],
+  "Sorbaria sorbifolia": [
+   {
+    "espece": "Rosa gallica",
+    "origine": "proche"
+   },
+   {
+    "espece": "Prunus laurocerasus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Prunus spinosa",
+    "origine": "proche"
+   }
+  ],
+  "Aconitum napellus": [
+   {
+    "espece": "Trollius europaeus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Aquilegia vulgaris",
+    "origine": "proche"
+   },
+   {
+    "espece": "Helleborus orientalis",
+    "origine": "proche"
+   }
+  ],
+  "Anthemis tinctoria": [
+   {
+    "espece": "Tanacetum parthenium",
+    "origine": "proche"
+   },
+   {
+    "espece": "Coreopsis verticillata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Achillea filipendulina",
+    "origine": "proche"
+   }
+  ],
+  "Aruncus dioicus": [
+   {
+    "espece": "Filipendula ulmaria",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sanguisorba officinalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Alchemilla mollis",
+    "origine": "proche"
+   }
+  ],
+  "Calamintha nepeta": [
+   {
+    "espece": "Nepeta × faassenii",
+    "origine": "proche"
+   },
+   {
+    "espece": "Glechoma hederacea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Mentha aquatica",
+    "origine": "proche"
+   }
+  ],
+  "Coreopsis verticillata": [
+   {
+    "espece": "Tanacetum parthenium",
+    "origine": "proche"
+   },
+   {
+    "espece": "Anthemis tinctoria",
+    "origine": "proche"
+   },
+   {
+    "espece": "Erigeron karvinskianus",
+    "origine": "proche"
+   }
+  ],
+  "Dianthus deltoides": [
+   {
+    "espece": "Dianthus gallicus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Dianthus carthusianorum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Dianthus barbatus",
+    "origine": "cousin"
+   }
+  ],
+  "Dictamnus albus": [],
+  "Doronicum orientale": [
+   {
+    "espece": "Buphthalmum salicifolium",
+    "origine": "proche"
+   },
+   {
+    "espece": "Symphyotrichum novi-belgii",
+    "origine": "proche"
+   },
+   {
+    "espece": "Achillea filipendulina",
+    "origine": "proche"
+   }
+  ],
+  "Eupatorium cannabinum": [
+   {
+    "espece": "Achillea filipendulina",
+    "origine": "proche"
+   },
+   {
+    "espece": "Petasites hybridus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Symphyotrichum novi-belgii",
+    "origine": "proche"
+   }
+  ],
+  "Filipendula ulmaria": [
+   {
+    "espece": "Aruncus dioicus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sanguisorba officinalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Alchemilla mollis",
+    "origine": "proche"
+   }
+  ],
+  "Gaura lindheimeri": [
+   {
+    "espece": "Oenothera speciosa",
+    "origine": "proche"
+   },
+   {
+    "espece": "Oenothera biennis",
+    "origine": "proche"
+   }
+  ],
+  "Gypsophila paniculata": [
+   {
+    "espece": "Lychnis coronaria",
+    "origine": "proche"
+   },
+   {
+    "espece": "Dianthus deltoides",
+    "origine": "proche"
+   },
+   {
+    "espece": "Dianthus carthusianorum",
+    "origine": "proche"
+   }
+  ],
+  "Helenium autumnale": [
+   {
+    "espece": "Tanacetum vulgare",
+    "origine": "proche"
+   },
+   {
+    "espece": "Gaillardia × grandiflora",
+    "origine": "proche"
+   },
+   {
+    "espece": "Artemisia absinthium",
+    "origine": "proche"
+   }
+  ],
+  "Knautia macedonica": [
+   {
+    "espece": "Knautia arvensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Scabiosa columbaria",
+    "origine": "proche"
+   },
+   {
+    "espece": "Centranthus ruber",
+    "origine": "proche"
+   }
+  ],
+  "Ligularia dentata": [
+   {
+    "espece": "Gaillardia × grandiflora",
+    "origine": "proche"
+   },
+   {
+    "espece": "Helichrysum stoechas",
+    "origine": "proche"
+   },
+   {
+    "espece": "Echinacea purpurea",
+    "origine": "proche"
+   }
+  ],
+  "Lupinus polyphyllus": [
+   {
+    "espece": "Lotus corniculatus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lathyrus latifolius",
+    "origine": "proche"
+   },
+   {
+    "espece": "Trifolium repens",
+    "origine": "proche"
+   }
+  ],
+  "Lysimachia punctata": [
+   {
+    "espece": "Lysimachia nummularia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Primula veris",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cyclamen hederifolium",
+    "origine": "proche"
+   }
+  ],
+  "Monarda didyma": [
+   {
+    "espece": "Origanum vulgare",
+    "origine": "proche"
+   },
+   {
+    "espece": "Calamintha nepeta",
+    "origine": "proche"
+   },
+   {
+    "espece": "Mentha aquatica",
+    "origine": "proche"
+   }
+  ],
+  "Oenothera speciosa": [
+   {
+    "espece": "Oenothera biennis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Gaura lindheimeri",
+    "origine": "proche"
+   }
+  ],
+  "Phormium tenax": [
+   {
+    "espece": "Kniphofia uvaria",
+    "origine": "proche"
+   },
+   {
+    "espece": "Hemerocallis fulva",
+    "origine": "proche"
+   },
+   {
+    "espece": "Asphodelus albus",
+    "origine": "proche"
+   }
+  ],
+  "Rodgersia pinnata": [
+   {
+    "espece": "Astilbe × arendsii",
+    "origine": "proche"
+   },
+   {
+    "espece": "Bergenia cordifolia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Heuchera sanguinea",
+    "origine": "proche"
+   }
+  ],
+  "Saponaria officinalis": [
+   {
+    "espece": "Silene dioica",
+    "origine": "proche"
+   },
+   {
+    "espece": "Dianthus gallicus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lychnis flos-cuculi",
+    "origine": "proche"
+   }
+  ],
+  "Scabiosa columbaria": [
+   {
+    "espece": "Knautia arvensis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Knautia macedonica",
+    "origine": "proche"
+   },
+   {
+    "espece": "Centranthus ruber",
+    "origine": "proche"
+   }
+  ],
+  "Solidago canadensis": [
+   {
+    "espece": "Symphyotrichum novi-belgii",
+    "origine": "proche"
+   },
+   {
+    "espece": "Rudbeckia fulgida",
+    "origine": "proche"
+   },
+   {
+    "espece": "Leucanthemum vulgare",
+    "origine": "proche"
+   }
+  ],
+  "Tradescantia virginiana": [],
+  "Trollius europaeus": [
+   {
+    "espece": "Aconitum napellus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Helleborus orientalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Anemone × hybrida",
+    "origine": "proche"
+   }
+  ],
+  "Yucca filamentosa": [
+   {
+    "espece": "Agave americana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Polygonatum multiflorum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Convallaria majalis",
+    "origine": "proche"
+   }
+  ],
+  "Sanguisorba officinalis": [
+   {
+    "espece": "Filipendula ulmaria",
+    "origine": "proche"
+   },
+   {
+    "espece": "Fragaria vesca",
+    "origine": "proche"
+   },
+   {
+    "espece": "Aruncus dioicus",
+    "origine": "proche"
+   }
+  ],
+  "Tiarella cordifolia": [
+   {
+    "espece": "Heuchera sanguinea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Astilbe × arendsii",
+    "origine": "proche"
+   },
+   {
+    "espece": "Bergenia cordifolia",
+    "origine": "proche"
+   }
+  ],
+  "Acer tataricum": [
+   {
+    "espece": "Acer pensylvanicum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer opalus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer monspessulanum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer buergerianum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer palmatum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer davidii",
+    "origine": "cousin"
+   }
+  ],
+  "Acer buergerianum": [
+   {
+    "espece": "Acer opalus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer monspessulanum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer pensylvanicum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer tataricum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer griseum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer palmatum",
+    "origine": "cousin"
+   }
+  ],
+  "Acer davidii": [
+   {
+    "espece": "Acer pensylvanicum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer tataricum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer buergerianum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer rubrum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer cappadocicum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer × freemanii",
+    "origine": "cousin"
+   }
+  ],
+  "Acer pensylvanicum": [
+   {
+    "espece": "Acer davidii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer tataricum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer buergerianum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer rubrum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer cappadocicum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer opalus",
+    "origine": "cousin"
+   }
+  ],
+  "Betula pubescens": [
+   {
+    "espece": "Betula pendula",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Betula papyrifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Betula utilis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Betula nigra",
+    "origine": "cousin"
+   }
+  ],
+  "Catalpa speciosa": [
+   {
+    "espece": "Catalpa bignonioides",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Jacaranda mimosifolia",
+    "origine": "proche"
+   }
+  ],
+  "Chamaecyparis obtusa": [
+   {
+    "espece": "Chamaecyparis pisifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Chamaecyparis lawsoniana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Thuja plicata",
+    "origine": "proche"
+   }
+  ],
+  "Chamaecyparis pisifera": [
+   {
+    "espece": "Chamaecyparis obtusa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Chamaecyparis lawsoniana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Thuja plicata",
+    "origine": "proche"
+   }
+  ],
+  "Cryptomeria japonica": [
+   {
+    "espece": "Juniperus virginiana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sequoia sempervirens",
+    "origine": "proche"
+   },
+   {
+    "espece": "Juniperus squamata",
+    "origine": "proche"
+   }
+  ],
+  "Cupressus macrocarpa": [
+   {
+    "espece": "Cupressus arizonica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cupressus × leylandii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cupressus sempervirens",
+    "origine": "cousin"
+   }
+  ],
+  "Fraxinus americana": [
+   {
+    "espece": "Fraxinus excelsior",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Fraxinus ornus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Fraxinus pennsylvanica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Fraxinus angustifolia",
+    "origine": "cousin"
+   }
+  ],
+  "Fraxinus pennsylvanica": [
+   {
+    "espece": "Fraxinus americana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Fraxinus excelsior",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Fraxinus ornus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Fraxinus angustifolia",
+    "origine": "cousin"
+   }
+  ],
+  "Juniperus virginiana": [
+   {
+    "espece": "Juniperus communis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus oxycedrus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus squamata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus horizontalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus chinensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus thurifera",
+    "origine": "cousin"
+   }
+  ],
+  "Juniperus oxycedrus": [
+   {
+    "espece": "Juniperus chinensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus virginiana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus communis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus squamata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus thurifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus horizontalis",
+    "origine": "cousin"
+   }
+  ],
+  "Juniperus thurifera": [
+   {
+    "espece": "Juniperus virginiana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus chinensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus communis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus oxycedrus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus horizontalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus squamata",
+    "origine": "cousin"
+   }
+  ],
+  "Larix kaempferi": [
+   {
+    "espece": "Larix decidua",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus pinaster",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pinus pinea",
+    "origine": "proche"
+   }
+  ],
+  "Maclura pomifera": [
+   {
+    "espece": "Broussonetia papyrifera",
+    "origine": "proche"
+   },
+   {
+    "espece": "Morus alba",
+    "origine": "proche"
+   },
+   {
+    "espece": "Ficus carica",
+    "origine": "proche"
+   }
+  ],
+  "Malus sylvestris": [
+   {
+    "espece": "Malus domestica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Malus trilobata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Malus floribunda",
+    "origine": "cousin"
+   }
+  ],
+  "Picea omorika": [
+   {
+    "espece": "Abies alba",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies nordmanniana",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies grandis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies concolor",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea pungens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Picea sitchensis",
+    "origine": "cousin"
+   }
+  ],
+  "Picea orientalis": [
+   {
+    "espece": "Abies alba",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies nordmanniana",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies grandis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies concolor",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea abies",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Picea pungens",
+    "origine": "cousin"
+   }
+  ],
+  "Pinus cembra": [
+   {
+    "espece": "Pinus parviflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus wallichiana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus nigra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus ponderosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus halepensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus strobus",
+    "origine": "cousin"
+   }
+  ],
+  "Pinus mugo": [
+   {
+    "espece": "Pinus parviflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus halepensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus sylvestris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus pinaster",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus nigra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus radiata",
+    "origine": "cousin"
+   }
+  ],
+  "Pinus wallichiana": [
+   {
+    "espece": "Pinus strobus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus cembra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus parviflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus nigra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus halepensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus pinaster",
+    "origine": "cousin"
+   }
+  ],
+  "Pinus radiata": [
+   {
+    "espece": "Pinus parviflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus nigra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus halepensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus mugo",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus strobus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus pinaster",
+    "origine": "cousin"
+   }
+  ],
+  "Pinus ponderosa": [
+   {
+    "espece": "Pinus nigra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus parviflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus pinea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus cembra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus halepensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus pinaster",
+    "origine": "cousin"
+   }
+  ],
+  "Platanus occidentalis": [
+   {
+    "espece": "Platanus × hispanica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Platanus orientalis",
+    "origine": "cousin"
+   }
+  ],
+  "Populus deltoides": [
+   {
+    "espece": "Populus tremula",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus nigra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus × canadensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus alba",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus balsamifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus × canescens",
+    "origine": "cousin"
+   }
+  ],
+  "Populus balsamifera": [
+   {
+    "espece": "Populus × canadensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus alba",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus nigra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus tremula",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus × canescens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus deltoides",
+    "origine": "cousin"
+   }
+  ],
+  "Prunus serotina": [
+   {
+    "espece": "Rhamnus cathartica",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Prunus padus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus dulcis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus cerasus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus cerasifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus × yedoensis",
+    "origine": "cousin"
+   }
+  ],
+  "Prunus persica": [
+   {
+    "espece": "Prunus dulcis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus × yedoensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus mahaleb",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus serrulata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus cerasifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus armeniaca",
+    "origine": "cousin"
+   }
+  ],
+  "Prunus armeniaca": [
+   {
+    "espece": "Prunus × yedoensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus avium",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus cerasifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus padus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus mahaleb",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus cerasus",
+    "origine": "cousin"
+   }
+  ],
+  "Prunus domestica": [
+   {
+    "espece": "Prunus cerasifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus mahaleb",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus × yedoensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus padus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus serrulata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus dulcis",
+    "origine": "cousin"
+   }
+  ],
+  "Prunus cerasus": [
+   {
+    "espece": "Prunus dulcis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus mahaleb",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus serotina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus cerasifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus armeniaca",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus sargentii",
+    "origine": "cousin"
+   }
+  ],
+  "Pyrus pyraster": [
+   {
+    "espece": "Pyrus communis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Pyrus cordata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pyrus calleryana",
+    "origine": "cousin"
+   }
+  ],
+  "Quercus macrocarpa": [
+   {
+    "espece": "Quercus coccinea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus palustris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus × hispanica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus rubra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus velutina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus phellos",
+    "origine": "cousin"
+   }
+  ],
+  "Quercus velutina": [
+   {
+    "espece": "Quercus suber",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus phellos",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus macrocarpa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus rubra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus cerris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus × hispanica",
+    "origine": "cousin"
+   }
+  ],
+  "Quercus canariensis": [
+   {
+    "espece": "Quercus ilex",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus × hispanica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus pyrenaica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus pubescens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus robur",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus cerris",
+    "origine": "cousin"
+   }
+  ],
+  "Quercus pyrenaica": [
+   {
+    "espece": "Quercus ilex",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus phellos",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus cerris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus canariensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus pubescens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus rubra",
+    "origine": "cousin"
+   }
+  ],
+  "Salix fragilis": [
+   {
+    "espece": "Salix alba",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Salix caprea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Salix babylonica",
+    "origine": "cousin"
+   }
+  ],
+  "Syringa reticulata": [
+   {
+    "espece": "Olea europaea",
+    "origine": "proche"
+   }
+  ],
+  "Tilia americana": [
+   {
+    "espece": "Tilia cordata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia × euchlora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia tomentosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia platyphyllos",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia × europaea",
+    "origine": "cousin"
+   }
+  ],
+  "Tsuga canadensis": [
+   {
+    "espece": "Tsuga heterophylla",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Abies grandis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Abies koreana",
+    "origine": "proche"
+   }
+  ],
+  "Tsuga heterophylla": [
+   {
+    "espece": "Tsuga canadensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Abies grandis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Picea abies",
+    "origine": "proche"
+   }
+  ],
+  "Ulmus laevis": [
+   {
+    "espece": "Ulmus pumila",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus parvifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus minor",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus glabra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus × hollandica",
+    "origine": "cousin"
+   }
+  ],
+  "Ulmus pumila": [
+   {
+    "espece": "Ulmus minor",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus × hollandica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus parvifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus laevis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus glabra",
+    "origine": "cousin"
+   }
+  ],
+  "Cornus florida": [
+   {
+    "espece": "Cornus controversa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Davidia involucrata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Nyssa sylvatica",
+    "origine": "proche"
+   }
+  ],
+  "Phellodendron amurense": [
+   {
+    "espece": "Tetradium daniellii",
+    "origine": "proche"
+   }
+  ],
+  "Sassafras albidum": [],
+  "Acacia dealbata": [
+   {
+    "espece": "Gleditsia triacanthos",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sophora japonica",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cercis siliquastrum",
+    "origine": "proche"
+   }
+  ],
+  "Eriobotrya japonica": [
+   {
+    "espece": "Sorbus × thuringiaca",
+    "origine": "proche"
+   },
+   {
+    "espece": "Prunus serotina",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sorbus aria",
+    "origine": "proche"
+   }
+  ],
+  "Ceratonia siliqua": [
+   {
+    "espece": "Cercis siliquastrum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Gleditsia triacanthos",
+    "origine": "proche"
+   },
+   {
+    "espece": "Gymnocladus dioicus",
+    "origine": "proche"
+   }
+  ],
+  "Schinus molle": [],
+  "Chamaerops humilis": [
+   {
+    "espece": "Butia capitata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Trachycarpus fortunei",
+    "origine": "proche"
+   },
+   {
+    "espece": "Washingtonia filifera",
+    "origine": "proche"
+   }
+  ],
+  "Cordyline australis": [],
+  "Washingtonia filifera": [
+   {
+    "espece": "Phoenix canariensis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Butia capitata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Trachycarpus fortunei",
+    "origine": "proche"
+   }
+  ],
+  "Punica granatum": [
+   {
+    "espece": "Lagerstroemia indica",
+    "origine": "proche"
+   }
+  ],
+  "Abies grandis": [
+   {
+    "espece": "Picea abies",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea pungens",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea omorika",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea orientalis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea sitchensis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies nordmanniana",
+    "origine": "cousin"
+   }
+  ],
+  "Abies concolor": [
+   {
+    "espece": "Picea abies",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea pungens",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea omorika",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea orientalis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea sitchensis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies nordmanniana",
+    "origine": "cousin"
+   }
+  ],
+  "Picea sitchensis": [
+   {
+    "espece": "Abies alba",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies nordmanniana",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies grandis",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Abies concolor",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Picea pungens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Picea omorika",
+    "origine": "cousin"
+   }
+  ],
+  "Calocedrus decurrens": [
+   {
+    "espece": "Platycladus orientalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Chamaecyparis lawsoniana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Thuja plicata",
+    "origine": "proche"
+   }
+  ],
+  "Berberis darwinii": [
+   {
+    "espece": "Berberis vulgaris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Berberis thunbergii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Mahonia japonica",
+    "origine": "proche"
+   }
+  ],
+  "Cistus salviifolius": [
+   {
+    "espece": "Cistus albidus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cistus ladanifer",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cistus monspeliensis",
+    "origine": "cousin"
+   }
+  ],
+  "Cistus monspeliensis": [
+   {
+    "espece": "Cistus ladanifer",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cistus albidus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cistus salviifolius",
+    "origine": "cousin"
+   }
+  ],
+  "Colutea arborescens": [
+   {
+    "espece": "Cytisus scoparius",
+    "origine": "proche"
+   },
+   {
+    "espece": "Spartium junceum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Genista tinctoria",
+    "origine": "proche"
+   }
+  ],
+  "Cotoneaster dammeri": [
+   {
+    "espece": "Cotoneaster horizontalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cotoneaster salicifolius",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cotoneaster lacteus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cotoneaster franchetii",
+    "origine": "cousin"
+   }
+  ],
+  "Cotoneaster salicifolius": [
+   {
+    "espece": "Cotoneaster franchetii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cotoneaster lacteus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cotoneaster horizontalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cotoneaster dammeri",
+    "origine": "cousin"
+   }
+  ],
+  "Crataegus laevigata": [
+   {
+    "espece": "Crataegus monogyna",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Rosa arvensis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Photinia × fraseri",
+    "origine": "proche"
+   }
+  ],
+  "Daphne mezereum": [
+   {
+    "espece": "Daphne laureola",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Daphne odora",
+    "origine": "cousin"
+   }
+  ],
+  "Daphne laureola": [
+   {
+    "espece": "Daphne odora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Daphne mezereum",
+    "origine": "cousin"
+   }
+  ],
+  "Deutzia gracilis": [
+   {
+    "espece": "Deutzia scabra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Hydrangea arborescens",
+    "origine": "proche"
+   },
+   {
+    "espece": "Hydrangea paniculata",
+    "origine": "proche"
+   }
+  ],
+  "Elaeagnus pungens": [
+   {
+    "espece": "Elaeagnus × submacrophylla",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Elaeagnus angustifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Hippophae rhamnoides",
+    "origine": "proche"
+   }
+  ],
+  "Erica arborea": [
+   {
+    "espece": "Erica carnea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Erica cinerea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Vaccinium corymbosum",
+    "origine": "proche"
+   }
+  ],
+  "Erica cinerea": [
+   {
+    "espece": "Erica carnea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Erica arborea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Vaccinium vitis-idaea",
+    "origine": "proche"
+   }
+  ],
+  "Euonymus fortunei": [
+   {
+    "espece": "Euonymus japonicus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euonymus europaeus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euonymus alatus",
+    "origine": "cousin"
+   }
+  ],
+  "Fatsia japonica": [],
+  "Genista tinctoria": [
+   {
+    "espece": "Genista hispanica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulex minor",
+    "origine": "proche"
+   },
+   {
+    "espece": "Hippocrepis emerus",
+    "origine": "proche"
+   }
+  ],
+  "Genista hispanica": [
+   {
+    "espece": "Genista tinctoria",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulex minor",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cytisus scoparius",
+    "origine": "proche"
+   }
+  ],
+  "Hypericum androsaemum": [
+   {
+    "espece": "Hypericum calycinum",
+    "origine": "cousin"
+   }
+  ],
+  "Juniperus sabina": [],
+  "Lonicera xylosteum": [
+   {
+    "espece": "Lonicera pileata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lonicera nitida",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lonicera fragrantissima",
+    "origine": "cousin"
+   }
+  ],
+  "Mahonia japonica": [
+   {
+    "espece": "Mahonia aquifolium",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Berberis darwinii",
+    "origine": "proche"
+   },
+   {
+    "espece": "Nandina domestica",
+    "origine": "proche"
+   }
+  ],
+  "Paeonia suffruticosa": [],
+  "Rhamnus cathartica": [
+   {
+    "espece": "Prunus serotina",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Rhamnus alaternus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Frangula alnus",
+    "origine": "proche"
+   }
+  ],
+  "Ribes uva-crispa": [
+   {
+    "espece": "Ribes rubrum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ribes nigrum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ribes alpinum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ribes sanguineum",
+    "origine": "cousin"
+   }
+  ],
+  "Ribes rubrum": [
+   {
+    "espece": "Ribes alpinum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ribes nigrum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ribes sanguineum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ribes uva-crispa",
+    "origine": "cousin"
+   }
+  ],
+  "Ribes nigrum": [
+   {
+    "espece": "Ribes rubrum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ribes sanguineum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ribes alpinum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ribes uva-crispa",
+    "origine": "cousin"
+   }
+  ],
+  "Ribes alpinum": [
+   {
+    "espece": "Ribes rubrum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ribes nigrum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ribes sanguineum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ribes uva-crispa",
+    "origine": "cousin"
+   }
+  ],
+  "Rosa gallica": [
+   {
+    "espece": "Rosa canina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa rugosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa pimpinellifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa multiflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa arvensis",
+    "origine": "cousin"
+   }
+  ],
+  "Rosa pimpinellifolia": [
+   {
+    "espece": "Rosa rugosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa canina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa gallica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa multiflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa arvensis",
+    "origine": "cousin"
+   }
+  ],
+  "Rosa multiflora": [
+   {
+    "espece": "Rosa pimpinellifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa canina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa rugosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa arvensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa gallica",
+    "origine": "cousin"
+   }
+  ],
+  "Rosa arvensis": [
+   {
+    "espece": "Rosa canina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa pimpinellifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa multiflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa rugosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rosa gallica",
+    "origine": "cousin"
+   }
+  ],
+  "Rubus idaeus": [
+   {
+    "espece": "Rosa rugosa",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cotoneaster lacteus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Rosa pimpinellifolia",
+    "origine": "proche"
+   }
+  ],
+  "Staphylea pinnata": [],
+  "Teucrium fruticans": [
+   {
+    "espece": "Rosmarinus officinalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Phlomis fruticosa",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lavandula angustifolia",
+    "origine": "proche"
+   }
+  ],
+  "Viburnum rhytidophyllum": [
+   {
+    "espece": "Viburnum lantana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum carlesii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum tinus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum opulus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum davidii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum plicatum",
+    "origine": "cousin"
+   }
+  ],
+  "Viburnum carlesii": [
+   {
+    "espece": "Viburnum tinus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum × burkwoodii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum odoratissimum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum × bodnantense",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum rhytidophyllum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum lantana",
+    "origine": "cousin"
+   }
+  ],
+  "Vaccinium myrtillus": [
+   {
+    "espece": "Vaccinium vitis-idaea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Vaccinium corymbosum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Calluna vulgaris",
+    "origine": "proche"
+   }
+  ],
+  "Vaccinium vitis-idaea": [
+   {
+    "espece": "Vaccinium corymbosum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Vaccinium myrtillus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pieris japonica",
+    "origine": "proche"
+   }
+  ],
+  "Cephalotaxus harringtonia": [],
+  "Ligustrum lucidum": [
+   {
+    "espece": "Ligustrum ovalifolium",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ligustrum japonicum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ligustrum vulgare",
+    "origine": "cousin"
+   }
+  ],
+  "Acca sellowiana": [
+   {
+    "espece": "Myrtus communis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Leptospermum scoparium",
+    "origine": "proche"
+   },
+   {
+    "espece": "Callistemon citrinus",
+    "origine": "proche"
+   }
+  ],
+  "Phillyrea angustifolia": [
+   {
+    "espece": "Phillyrea latifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ligustrum vulgare",
+    "origine": "proche"
+   },
+   {
+    "espece": "Forsythia × intermedia",
+    "origine": "proche"
+   }
+  ],
+  "Phillyrea latifolia": [
+   {
+    "espece": "Phillyrea angustifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ligustrum japonicum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Osmanthus × burkwoodii",
+    "origine": "proche"
+   }
+  ],
+  "Pistacia lentiscus": [
+   {
+    "espece": "Pistacia terebinthus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rhus typhina",
+    "origine": "proche"
+   }
+  ],
+  "Pistacia terebinthus": [
+   {
+    "espece": "Pistacia lentiscus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rhus typhina",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cotinus coggygria",
+    "origine": "proche"
+   }
+  ],
+  "Quercus coccifera": [],
+  "Lavandula dentata": [
+   {
+    "espece": "Lavandula angustifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lavandula × intermedia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lavandula stoechas",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lavandula latifolia",
+    "origine": "cousin"
+   }
+  ],
+  "Lavandula latifolia": [
+   {
+    "espece": "Lavandula stoechas",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lavandula × intermedia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lavandula angustifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lavandula dentata",
+    "origine": "cousin"
+   }
+  ],
+  "Helichrysum italicum": [
+   {
+    "espece": "Santolina chamaecyparissus",
+    "origine": "proche"
+   }
+  ],
+  "Phlomis fruticosa": [
+   {
+    "espece": "Teucrium fruticans",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lavandula angustifolia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Caryopteris × clandonensis",
+    "origine": "proche"
+   }
+  ],
+  "Aesculus parviflora": [],
+  "Magnolia stellata": [],
+  "Camellia sasanqua": [
+   {
+    "espece": "Camellia japonica",
+    "origine": "rédigé"
+   }
+  ],
+  "Achillea ptarmica": [
+   {
+    "espece": "Achillea millefolium",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Achillea filipendulina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Leucanthemum × superbum",
+    "origine": "proche"
+   }
+  ],
+  "Actaea simplex": [
+   {
+    "espece": "Delphinium elatum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Helleborus foetidus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Aconitum napellus",
+    "origine": "proche"
+   }
+  ],
+  "Ajuga reptans": [
+   {
+    "espece": "Phlomis russeliana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Stachys byzantina",
+    "origine": "proche"
+   },
+   {
+    "espece": "Physostegia virginiana",
+    "origine": "proche"
+   }
+  ],
+  "Alcea rosea": [
+   {
+    "espece": "Malva moschata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Malva sylvestris",
+    "origine": "proche"
+   }
+  ],
+  "Allium schoenoprasum": [
+   {
+    "espece": "Allium giganteum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Allium ursinum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Agapanthus praecox",
+    "origine": "proche"
+   }
+  ],
+  "Allium ursinum": [
+   {
+    "espece": "Allium giganteum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Allium schoenoprasum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Narcissus pseudonarcissus",
+    "origine": "proche"
+   }
+  ],
+  "Anthriscus sylvestris": [
+   {
+    "espece": "Astrantia major",
+    "origine": "proche"
+   },
+   {
+    "espece": "Eryngium bourgatii",
+    "origine": "proche"
+   },
+   {
+    "espece": "Eryngium planum",
+    "origine": "proche"
+   }
+  ],
+  "Arabis alpina": [
+   {
+    "espece": "Aubrieta deltoidea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Hesperis matronalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cardamine pratensis",
+    "origine": "proche"
+   }
+  ],
+  "Armeria maritima": [
+   {
+    "espece": "Ceratostigma plumbaginoides",
+    "origine": "proche"
+   }
+  ],
+  "Arum italicum": [
+   {
+    "espece": "Zantedeschia aethiopica",
+    "origine": "proche"
+   }
+  ],
+  "Asarum europaeum": [],
+  "Aubrieta deltoidea": [
+   {
+    "espece": "Hesperis matronalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Arabis alpina",
+    "origine": "proche"
+   },
+   {
+    "espece": "Iberis sempervirens",
+    "origine": "proche"
+   }
+  ],
+  "Bellis perennis": [
+   {
+    "espece": "Erigeron karvinskianus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Leucanthemum vulgare",
+    "origine": "proche"
+   },
+   {
+    "espece": "Centaurea montana",
+    "origine": "proche"
+   }
+  ],
+  "Campanula glomerata": [
+   {
+    "espece": "Campanula persicifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Campanula portenschlagiana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Campanula poscharskyana",
+    "origine": "cousin"
+   }
+  ],
+  "Campanula portenschlagiana": [
+   {
+    "espece": "Campanula poscharskyana",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Campanula persicifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Campanula glomerata",
+    "origine": "cousin"
+   }
+  ],
+  "Campanula poscharskyana": [
+   {
+    "espece": "Campanula portenschlagiana",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Campanula persicifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Campanula glomerata",
+    "origine": "cousin"
+   }
+  ],
+  "Caltha palustris": [
+   {
+    "espece": "Anemone × hybrida",
+    "origine": "proche"
+   },
+   {
+    "espece": "Helleborus orientalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Ficaria verna",
+    "origine": "proche"
+   }
+  ],
+  "Cardamine pratensis": [
+   {
+    "espece": "Arabis alpina",
+    "origine": "proche"
+   },
+   {
+    "espece": "Aubrieta deltoidea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Hesperis matronalis",
+    "origine": "proche"
+   }
+  ],
+  "Ceratostigma plumbaginoides": [
+   {
+    "espece": "Armeria maritima",
+    "origine": "proche"
+   }
+  ],
+  "Chelidonium majus": [
+   {
+    "espece": "Papaver orientale",
+    "origine": "proche"
+   }
+  ],
+  "Convallaria majalis": [
+   {
+    "espece": "Hyacinthoides non-scripta",
+    "origine": "proche"
+   },
+   {
+    "espece": "Polygonatum multiflorum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Hosta sieboldiana",
+    "origine": "proche"
+   }
+  ],
+  "Cyclamen hederifolium": [
+   {
+    "espece": "Lysimachia punctata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lysimachia nummularia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Primula vulgaris",
+    "origine": "proche"
+   }
+  ],
+  "Dianthus barbatus": [
+   {
+    "espece": "Dianthus deltoides",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Dianthus carthusianorum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Dianthus gallicus",
+    "origine": "cousin"
+   }
+  ],
+  "Dianthus carthusianorum": [
+   {
+    "espece": "Dianthus deltoides",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Dianthus barbatus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Dianthus gallicus",
+    "origine": "cousin"
+   }
+  ],
+  "Echium vulgare": [
+   {
+    "espece": "Pulmonaria officinalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pulmonaria longifolia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Brunnera macrophylla",
+    "origine": "proche"
+   }
+  ],
+  "Eranthis hyemalis": [
+   {
+    "espece": "Ficaria verna",
+    "origine": "proche"
+   },
+   {
+    "espece": "Helleborus niger",
+    "origine": "proche"
+   },
+   {
+    "espece": "Anemone × hybrida",
+    "origine": "proche"
+   }
+  ],
+  "Euphorbia amygdaloides": [
+   {
+    "espece": "Euphorbia cyparissias",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euphorbia paralias",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euphorbia polychroma",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euphorbia characias",
+    "origine": "cousin"
+   }
+  ],
+  "Euphorbia cyparissias": [
+   {
+    "espece": "Euphorbia polychroma",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euphorbia amygdaloides",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euphorbia characias",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euphorbia paralias",
+    "origine": "cousin"
+   }
+  ],
+  "Fragaria vesca": [
+   {
+    "espece": "Alchemilla mollis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sanguisorba officinalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Geum urbanum",
+    "origine": "proche"
+   }
+  ],
+  "Galium odoratum": [],
+  "Geranium phaeum": [
+   {
+    "espece": "Geranium sanguineum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium macrorrhizum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium pratense",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium robertianum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium × cantabrigiense",
+    "origine": "cousin"
+   }
+  ],
+  "Geranium pratense": [
+   {
+    "espece": "Geranium sanguineum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium robertianum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium macrorrhizum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium × cantabrigiense",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium phaeum",
+    "origine": "cousin"
+   }
+  ],
+  "Geranium robertianum": [
+   {
+    "espece": "Geranium pratense",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium sanguineum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium macrorrhizum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium × cantabrigiense",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium phaeum",
+    "origine": "cousin"
+   }
+  ],
+  "Geum urbanum": [
+   {
+    "espece": "Fragaria vesca",
+    "origine": "proche"
+   },
+   {
+    "espece": "Alchemilla mollis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Aruncus dioicus",
+    "origine": "proche"
+   }
+  ],
+  "Glechoma hederacea": [
+   {
+    "espece": "Nepeta × faassenii",
+    "origine": "proche"
+   },
+   {
+    "espece": "Calamintha nepeta",
+    "origine": "proche"
+   },
+   {
+    "espece": "Origanum vulgare",
+    "origine": "proche"
+   }
+  ],
+  "Helianthemum nummularium": [],
+  "Helleborus niger": [
+   {
+    "espece": "Helleborus orientalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Helleborus foetidus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Aquilegia vulgaris",
+    "origine": "proche"
+   }
+  ],
+  "Hesperis matronalis": [
+   {
+    "espece": "Aubrieta deltoidea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Arabis alpina",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lunaria annua",
+    "origine": "proche"
+   }
+  ],
+  "Hypericum perforatum": [],
+  "Inula helenium": [
+   {
+    "espece": "Leucanthemum × superbum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Gaillardia × grandiflora",
+    "origine": "proche"
+   },
+   {
+    "espece": "Tussilago farfara",
+    "origine": "proche"
+   }
+  ],
+  "Iris sibirica": [
+   {
+    "espece": "Iris pseudacorus",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Iris germanica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Iris foetidissima",
+    "origine": "cousin"
+   }
+  ],
+  "Iris foetidissima": [
+   {
+    "espece": "Iris pseudacorus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Iris germanica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Iris sibirica",
+    "origine": "cousin"
+   }
+  ],
+  "Lamium maculatum": [
+   {
+    "espece": "Origanum vulgare",
+    "origine": "proche"
+   },
+   {
+    "espece": "Physostegia virginiana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Calamintha nepeta",
+    "origine": "proche"
+   }
+  ],
+  "Lathyrus latifolius": [
+   {
+    "espece": "Lotus corniculatus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Trifolium repens",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lupinus polyphyllus",
+    "origine": "proche"
+   }
+  ],
+  "Lobelia cardinalis": [
+   {
+    "espece": "Campanula portenschlagiana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Campanula poscharskyana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Campanula persicifolia",
+    "origine": "proche"
+   }
+  ],
+  "Lunaria annua": [
+   {
+    "espece": "Arabis alpina",
+    "origine": "proche"
+   },
+   {
+    "espece": "Aubrieta deltoidea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Hesperis matronalis",
+    "origine": "proche"
+   }
+  ],
+  "Lysimachia nummularia": [
+   {
+    "espece": "Lysimachia punctata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Primula vulgaris",
+    "origine": "proche"
+   },
+   {
+    "espece": "Primula veris",
+    "origine": "proche"
+   }
+  ],
+  "Lythrum salicaria": [],
+  "Malva moschata": [
+   {
+    "espece": "Malva sylvestris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Alcea rosea",
+    "origine": "proche"
+   }
+  ],
+  "Mentha × piperita": [
+   {
+    "espece": "Mentha aquatica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Physostegia virginiana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Calamintha nepeta",
+    "origine": "proche"
+   }
+  ],
+  "Nymphaea alba": [
+   {
+    "espece": "Nuphar lutea",
+    "origine": "rédigé"
+   }
+  ],
+  "Nuphar lutea": [
+   {
+    "espece": "Nymphaea alba",
+    "origine": "rédigé"
+   }
+  ],
+  "Oenothera biennis": [
+   {
+    "espece": "Oenothera speciosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Gaura lindheimeri",
+    "origine": "proche"
+   }
+  ],
+  "Oxalis acetosella": [],
+  "Pachysandra terminalis": [],
+  "Petasites hybridus": [
+   {
+    "espece": "Tussilago farfara",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Achillea filipendulina",
+    "origine": "proche"
+   },
+   {
+    "espece": "Eupatorium cannabinum",
+    "origine": "proche"
+   }
+  ],
+  "Primula vulgaris": [
+   {
+    "espece": "Primula veris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lysimachia nummularia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lysimachia punctata",
+    "origine": "proche"
+   }
+  ],
+  "Primula veris": [
+   {
+    "espece": "Primula vulgaris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lysimachia punctata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lysimachia nummularia",
+    "origine": "proche"
+   }
+  ],
+  "Ranunculus repens": [
+   {
+    "espece": "Anemone × hybrida",
+    "origine": "proche"
+   },
+   {
+    "espece": "Aquilegia vulgaris",
+    "origine": "proche"
+   },
+   {
+    "espece": "Helleborus niger",
+    "origine": "proche"
+   }
+  ],
+  "Ficaria verna": [
+   {
+    "espece": "Eranthis hyemalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Trollius europaeus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Ranunculus repens",
+    "origine": "proche"
+   }
+  ],
+  "Salvia pratensis": [
+   {
+    "espece": "Salvia officinalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Salvia sclarea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Salvia nemorosa",
+    "origine": "cousin"
+   }
+  ],
+  "Salvia sclarea": [
+   {
+    "espece": "Salvia nemorosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Salvia officinalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Salvia pratensis",
+    "origine": "cousin"
+   }
+  ],
+  "Narcissus pseudonarcissus": [
+   {
+    "espece": "Allium ursinum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Agapanthus praecox",
+    "origine": "proche"
+   },
+   {
+    "espece": "Galanthus nivalis",
+    "origine": "proche"
+   }
+  ],
+  "Galanthus nivalis": [
+   {
+    "espece": "Leucojum vernum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Narcissus pseudonarcissus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Tulbaghia violacea",
+    "origine": "proche"
+   }
+  ],
+  "Hyacinthoides non-scripta": [
+   {
+    "espece": "Convallaria majalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Polygonatum multiflorum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Muscari armeniacum",
+    "origine": "proche"
+   }
+  ],
+  "Muscari armeniacum": [
+   {
+    "espece": "Hyacinthoides non-scripta",
+    "origine": "proche"
+   },
+   {
+    "espece": "Agave americana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Hosta sieboldiana",
+    "origine": "proche"
+   }
+  ],
+  "Leucojum vernum": [
+   {
+    "espece": "Galanthus nivalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Allium ursinum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Allium giganteum",
+    "origine": "proche"
+   }
+  ],
+  "Lilium martagon": [
+   {
+    "espece": "Fritillaria meleagris",
+    "origine": "proche"
+   }
+  ],
+  "Fritillaria meleagris": [
+   {
+    "espece": "Lilium martagon",
+    "origine": "proche"
+   }
+  ],
+  "Scilla siberica": [
+   {
+    "espece": "Hyacinthoides non-scripta",
+    "origine": "proche"
+   },
+   {
+    "espece": "Ophiopogon japonicus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Polygonatum multiflorum",
+    "origine": "proche"
+   }
+  ],
+  "Sedum album": [
+   {
+    "espece": "Sedum acre",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Sedum spectabile",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sedum telephium",
+    "origine": "cousin"
+   }
+  ],
+  "Sedum telephium": [
+   {
+    "espece": "Sedum spectabile",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sedum album",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sedum acre",
+    "origine": "cousin"
+   }
+  ],
+  "Silene dioica": [
+   {
+    "espece": "Saponaria officinalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cerastium tomentosum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lychnis flos-cuculi",
+    "origine": "proche"
+   }
+  ],
+  "Symphytum officinale": [
+   {
+    "espece": "Lithodora diffusa",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pulmonaria officinalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Echium vulgare",
+    "origine": "proche"
+   }
+  ],
+  "Tanacetum vulgare": [
+   {
+    "espece": "Tanacetum parthenium",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Achillea millefolium",
+    "origine": "proche"
+   },
+   {
+    "espece": "Inula helenium",
+    "origine": "proche"
+   }
+  ],
+  "Tanacetum parthenium": [
+   {
+    "espece": "Tanacetum vulgare",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Anthemis tinctoria",
+    "origine": "proche"
+   },
+   {
+    "espece": "Coreopsis verticillata",
+    "origine": "proche"
+   }
+  ],
+  "Thalictrum aquilegiifolium": [
+   {
+    "espece": "Anemone × hybrida",
+    "origine": "proche"
+   },
+   {
+    "espece": "Aquilegia vulgaris",
+    "origine": "proche"
+   },
+   {
+    "espece": "Delphinium elatum",
+    "origine": "proche"
+   }
+  ],
+  "Trifolium repens": [
+   {
+    "espece": "Lathyrus latifolius",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lupinus polyphyllus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lotus corniculatus",
+    "origine": "proche"
+   }
+  ],
+  "Tussilago farfara": [
+   {
+    "espece": "Petasites hybridus",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Echinops ritro",
+    "origine": "proche"
+   },
+   {
+    "espece": "Inula helenium",
+    "origine": "proche"
+   }
+  ],
+  "Urtica dioica": [],
+  "Valeriana officinalis": [
+   {
+    "espece": "Knautia arvensis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Centranthus ruber",
+    "origine": "proche"
+   },
+   {
+    "espece": "Scabiosa columbaria",
+    "origine": "proche"
+   }
+  ],
+  "Verbena officinalis": [
+   {
+    "espece": "Verbena bonariensis",
+    "origine": "cousin"
+   }
+  ],
+  "Veronica chamaedrys": [
+   {
+    "espece": "Veronica spicata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Digitalis grandiflora",
+    "origine": "proche"
+   },
+   {
+    "espece": "Veronicastrum virginicum",
+    "origine": "proche"
+   }
+  ],
+  "Vinca major": [
+   {
+    "espece": "Vinca minor",
+    "origine": "cousin"
+   }
+  ],
+  "Viola odorata": [],
+  "Zantedeschia aethiopica": [
+   {
+    "espece": "Arum italicum",
+    "origine": "proche"
+   }
+  ],
+  "Asplenium scolopendrium": [
+   {
+    "espece": "Athyrium filix-femina",
+    "origine": "proche"
+   }
+  ],
+  "Pteridium aquilinum": [],
+  "Osmunda regalis": [],
+  "Matteuccia struthiopteris": [],
+  "Blechnum spicant": [],
+  "Polypodium vulgare": [],
+  "Agave americana": [
+   {
+    "espece": "Yucca filamentosa",
+    "origine": "proche"
+   },
+   {
+    "espece": "Muscari armeniacum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Ophiopogon japonicus",
+    "origine": "proche"
+   }
+  ],
+  "Opuntia ficus-indica": [],
+  "Canna indica": [],
+  "Acorus calamus": [
+   {
+    "espece": "Iris pseudacorus",
+    "origine": "rédigé"
+   }
+  ],
+  "Butomus umbellatus": [],
+  "Centaurea montana": [
+   {
+    "espece": "Aster amellus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Helichrysum stoechas",
+    "origine": "proche"
+   },
+   {
+    "espece": "Bellis perennis",
+    "origine": "proche"
+   }
+  ],
+  "Buphthalmum salicifolium": [
+   {
+    "espece": "Doronicum orientale",
+    "origine": "proche"
+   },
+   {
+    "espece": "Symphyotrichum novi-belgii",
+    "origine": "proche"
+   },
+   {
+    "espece": "Leucanthemum × superbum",
+    "origine": "proche"
+   }
+  ],
+  "Aster amellus": [
+   {
+    "espece": "Helichrysum stoechas",
+    "origine": "proche"
+   },
+   {
+    "espece": "Achillea ptarmica",
+    "origine": "proche"
+   },
+   {
+    "espece": "Echinacea purpurea",
+    "origine": "proche"
+   }
+  ],
+  "Digitalis grandiflora": [
+   {
+    "espece": "Digitalis purpurea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Veronica chamaedrys",
+    "origine": "proche"
+   },
+   {
+    "espece": "Veronica spicata",
+    "origine": "proche"
+   }
+  ],
+  "Celastrus orbiculatus": [],
+  "Clematis alpina": [
+   {
+    "espece": "Clematis cirrhosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis montana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis vitalba",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis armandii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis viticella",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis flammula",
+    "origine": "cousin"
+   }
+  ],
+  "Clematis flammula": [
+   {
+    "espece": "Clematis vitalba",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis armandii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis montana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis alpina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis cirrhosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis viticella",
+    "origine": "cousin"
+   }
+  ],
+  "Clematis viticella": [
+   {
+    "espece": "Clematis vitalba",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis montana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis armandii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis alpina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis flammula",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis cirrhosa",
+    "origine": "cousin"
+   }
+  ],
+  "Lonicera caprifolium": [
+   {
+    "espece": "Lonicera periclymenum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lonicera japonica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lonicera henryi",
+    "origine": "cousin"
+   }
+  ],
+  "Muehlenbeckia complexa": [
+   {
+    "espece": "Fallopia baldschuanica",
+    "origine": "proche"
+   }
+  ],
+  "Schisandra chinensis": [],
+  "Solanum jasminoides": [],
+  "Dioscorea communis": [],
+  "Bryonia dioica": [],
+  "Calystegia sepium": [
+   {
+    "espece": "Convolvulus arvensis",
+    "origine": "proche"
+   }
+  ],
+  "Convolvulus arvensis": [
+   {
+    "espece": "Calystegia sepium",
+    "origine": "proche"
+   }
+  ],
+  "Vitis coignetiae": [
+   {
+    "espece": "Vitis vinifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Parthenocissus quinquefolia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Parthenocissus tricuspidata",
+    "origine": "proche"
+   }
+  ],
+  "Smilax aspera": [],
+  "Ficus pumila": [],
+  "Lonicera henryi": [
+   {
+    "espece": "Lonicera japonica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lonicera periclymenum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lonicera caprifolium",
+    "origine": "cousin"
+   }
+  ],
+  "Hedera hibernica": [
+   {
+    "espece": "Hedera helix",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Hedera colchica",
+    "origine": "cousin"
+   }
+  ],
+  "Briza media": [
+   {
+    "espece": "Chasmanthium latifolium",
+    "origine": "proche"
+   },
+   {
+    "espece": "Melica uniflora",
+    "origine": "proche"
+   },
+   {
+    "espece": "Arrhenatherum elatius",
+    "origine": "proche"
+   }
+  ],
+  "Carex elata": [
+   {
+    "espece": "Carex flacca",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex pendula",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex sylvatica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex oshimensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex arenaria",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex testacea",
+    "origine": "cousin"
+   }
+  ],
+  "Carex flacca": [
+   {
+    "espece": "Carex elata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex pendula",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex sylvatica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex oshimensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex arenaria",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex testacea",
+    "origine": "cousin"
+   }
+  ],
+  "Carex sylvatica": [
+   {
+    "espece": "Carex pendula",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex flacca",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex elata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex oshimensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex testacea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex arenaria",
+    "origine": "cousin"
+   }
+  ],
+  "Dactylis glomerata": [
+   {
+    "espece": "Stipa calamagrostis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Corynephorus canescens",
+    "origine": "proche"
+   },
+   {
+    "espece": "Festuca arundinacea",
+    "origine": "proche"
+   }
+  ],
+  "Festuca ovina": [
+   {
+    "espece": "Festuca glauca",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Festuca rubra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Festuca arundinacea",
+    "origine": "cousin"
+   }
+  ],
+  "Festuca rubra": [
+   {
+    "espece": "Festuca ovina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Festuca glauca",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Festuca arundinacea",
+    "origine": "cousin"
+   }
+  ],
+  "Helictotrichon sempervirens": [
+   {
+    "espece": "Corynephorus canescens",
+    "origine": "proche"
+   },
+   {
+    "espece": "Melica ciliata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Chasmanthium latifolium",
+    "origine": "proche"
+   }
+  ],
+  "Koeleria glauca": [
+   {
+    "espece": "Corynephorus canescens",
+    "origine": "proche"
+   },
+   {
+    "espece": "Agrostis curtisii",
+    "origine": "proche"
+   },
+   {
+    "espece": "Molinia caerulea",
+    "origine": "proche"
+   }
+  ],
+  "Leymus arenarius": [
+   {
+    "espece": "Elymus magellanicus",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Ammophila arenaria",
+    "origine": "proche"
+   },
+   {
+    "espece": "Festuca arundinacea",
+    "origine": "proche"
+   }
+  ],
+  "Lolium perenne": [
+   {
+    "espece": "Elymus repens",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Stipa gigantea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Muhlenbergia capillaris",
+    "origine": "proche"
+   }
+  ],
+  "Lagurus ovatus": [
+   {
+    "espece": "Pennisetum orientale",
+    "origine": "proche"
+   },
+   {
+    "espece": "Koeleria glauca",
+    "origine": "proche"
+   },
+   {
+    "espece": "Festuca arundinacea",
+    "origine": "proche"
+   }
+  ],
+  "Miscanthus × giganteus": [
+   {
+    "espece": "Miscanthus sinensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Arundo donax",
+    "origine": "proche"
+   },
+   {
+    "espece": "Fargesia murielae",
+    "origine": "proche"
+   }
+  ],
+  "Phalaris arundinacea": [
+   {
+    "espece": "Holcus lanatus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sorghastrum nutans",
+    "origine": "proche"
+   },
+   {
+    "espece": "Melica uniflora",
+    "origine": "proche"
+   }
+  ],
+  "Poa pratensis": [
+   {
+    "espece": "Muhlenbergia capillaris",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sesleria caerulea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Phalaris arundinacea",
+    "origine": "proche"
+   }
+  ],
+  "Pseudosasa japonica": [
+   {
+    "espece": "Arundo donax",
+    "origine": "proche"
+   },
+   {
+    "espece": "Fargesia murielae",
+    "origine": "proche"
+   },
+   {
+    "espece": "Miscanthus × giganteus",
+    "origine": "proche"
+   }
+  ],
+  "Elymus repens": [
+   {
+    "espece": "Lolium perenne",
+    "origine": "rédigé"
+   },
+   {
+    "espece": "Elymus magellanicus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Festuca ovina",
+    "origine": "proche"
+   }
+  ],
+  "Holcus lanatus": [
+   {
+    "espece": "Phalaris arundinacea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Corynephorus canescens",
+    "origine": "proche"
+   },
+   {
+    "espece": "Melica uniflora",
+    "origine": "proche"
+   }
+  ],
+  "Juncus inflexus": [
+   {
+    "espece": "Juncus effusus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Luzula nivea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Luzula sylvatica",
+    "origine": "proche"
+   }
+  ],
+  "Schoenoplectus lacustris": [
+   {
+    "espece": "Carex elata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Carex flacca",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cyperus longus",
+    "origine": "proche"
+   }
+  ],
+  "Cyperus longus": [
+   {
+    "espece": "Cladium mariscus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Carex pendula",
+    "origine": "proche"
+   },
+   {
+    "espece": "Schoenoplectus lacustris",
+    "origine": "proche"
+   }
+  ],
+  "Anthoxanthum odoratum": [
+   {
+    "espece": "Sesleria autumnalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Fargesia murielae",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pennisetum orientale",
+    "origine": "proche"
+   }
+  ],
+  "Arrhenatherum elatius": [
+   {
+    "espece": "Stipa calamagrostis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Corynephorus canescens",
+    "origine": "proche"
+   },
+   {
+    "espece": "Muhlenbergia capillaris",
+    "origine": "proche"
+   }
+  ],
+  "Bromus erectus": [
+   {
+    "espece": "Sorghastrum nutans",
+    "origine": "proche"
+   },
+   {
+    "espece": "Festuca glauca",
+    "origine": "proche"
+   },
+   {
+    "espece": "Festuca rubra",
+    "origine": "proche"
+   }
+  ],
+  "Cynodon dactylon": [
+   {
+    "espece": "Pennisetum orientale",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sesleria autumnalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Arundo donax",
+    "origine": "proche"
+   }
+  ],
+  "Sesleria caerulea": [
+   {
+    "espece": "Sesleria autumnalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pennisetum orientale",
+    "origine": "proche"
+   },
+   {
+    "espece": "Imperata cylindrica",
+    "origine": "proche"
+   }
+  ],
+  "Luzula nivea": [
+   {
+    "espece": "Luzula sylvatica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juncus effusus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Juncus inflexus",
+    "origine": "proche"
+   }
+  ],
+  "Acer × freemanii": [
+   {
+    "espece": "Acer negundo",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer saccharum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer opalus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer rubrum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer cappadocicum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Acer platanoides",
+    "origine": "cousin"
+   }
+  ],
+  "Aesculus flava": [
+   {
+    "espece": "Aesculus hippocastanum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Aesculus × carnea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Koelreuteria paniculata",
+    "origine": "proche"
+   }
+  ],
+  "Alnus × spaethii": [
+   {
+    "espece": "Alnus glutinosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Alnus cordata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Alnus incana",
+    "origine": "cousin"
+   }
+  ],
+  "Malus trilobata": [
+   {
+    "espece": "Malus floribunda",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Malus domestica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Malus sylvestris",
+    "origine": "cousin"
+   }
+  ],
+  "Melia azedarach": [],
+  "Populus × canescens": [
+   {
+    "espece": "Populus alba",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus tremula",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus nigra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus × canadensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus balsamifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Populus deltoides",
+    "origine": "cousin"
+   }
+  ],
+  "Prunus sargentii": [
+   {
+    "espece": "Prunus avium",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus padus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus serrulata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus × yedoensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus cerasifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Prunus armeniaca",
+    "origine": "cousin"
+   }
+  ],
+  "Pyrus cordata": [
+   {
+    "espece": "Pyrus pyraster",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pyrus calleryana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pyrus communis",
+    "origine": "cousin"
+   }
+  ],
+  "Quercus castaneifolia": [
+   {
+    "espece": "Quercus cerris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus × hispanica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus phellos",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus petraea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus robur",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus pubescens",
+    "origine": "cousin"
+   }
+  ],
+  "Quercus × hispanica": [
+   {
+    "espece": "Quercus castaneifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus cerris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus ilex",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus macrocarpa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus suber",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus canariensis",
+    "origine": "cousin"
+   }
+  ],
+  "Quercus phellos": [
+   {
+    "espece": "Quercus rubra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus palustris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus pubescens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus castaneifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus coccinea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Quercus velutina",
+    "origine": "cousin"
+   }
+  ],
+  "Sorbus × thuringiaca": [
+   {
+    "espece": "Sorbus intermedia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus aucuparia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus aria",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus torminalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Sorbus domestica",
+    "origine": "cousin"
+   }
+  ],
+  "Tetradium daniellii": [
+   {
+    "espece": "Phellodendron amurense",
+    "origine": "proche"
+   }
+  ],
+  "Tilia × euchlora": [
+   {
+    "espece": "Tilia cordata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia × europaea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia americana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia platyphyllos",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Tilia tomentosa",
+    "origine": "cousin"
+   }
+  ],
+  "Ulmus × hollandica": [
+   {
+    "espece": "Ulmus minor",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus glabra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus pumila",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus parvifolia",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus laevis",
+    "origine": "cousin"
+   }
+  ],
+  "Ulmus parvifolia": [
+   {
+    "espece": "Ulmus minor",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus glabra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus × hollandica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus pumila",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ulmus laevis",
+    "origine": "cousin"
+   }
+  ],
+  "Jacaranda mimosifolia": [
+   {
+    "espece": "Catalpa bignonioides",
+    "origine": "proche"
+   },
+   {
+    "espece": "Catalpa speciosa",
+    "origine": "proche"
+   }
+  ],
+  "Erythrina crista-galli": [
+   {
+    "espece": "Cercis canadensis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Robinia pseudoacacia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Laburnum anagyroides",
+    "origine": "proche"
+   }
+  ],
+  "Butia capitata": [
+   {
+    "espece": "Phoenix canariensis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Washingtonia filifera",
+    "origine": "proche"
+   },
+   {
+    "espece": "Chamaerops humilis",
+    "origine": "proche"
+   }
+  ],
+  "Abies koreana": [
+   {
+    "espece": "Abies pinsapo",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Abies grandis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Abies nordmanniana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Abies alba",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Abies concolor",
+    "origine": "cousin"
+   }
+  ],
+  "Abies pinsapo": [
+   {
+    "espece": "Abies koreana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Abies concolor",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Abies nordmanniana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Abies grandis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Abies alba",
+    "origine": "cousin"
+   }
+  ],
+  "Juniperus chinensis": [
+   {
+    "espece": "Juniperus oxycedrus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus horizontalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus squamata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus virginiana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus communis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus thurifera",
+    "origine": "cousin"
+   }
+  ],
+  "Juniperus horizontalis": [
+   {
+    "espece": "Juniperus chinensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus virginiana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus communis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus squamata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus thurifera",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus oxycedrus",
+    "origine": "cousin"
+   }
+  ],
+  "Juniperus squamata": [
+   {
+    "espece": "Juniperus communis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus virginiana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus chinensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus oxycedrus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus horizontalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Juniperus thurifera",
+    "origine": "cousin"
+   }
+  ],
+  "Pinus parviflora": [
+   {
+    "espece": "Pinus sylvestris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus cembra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus pinaster",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus mugo",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus radiata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pinus strobus",
+    "origine": "cousin"
+   }
+  ],
+  "Platycladus orientalis": [
+   {
+    "espece": "Juniperus chinensis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Thuja plicata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Cupressus × leylandii",
+    "origine": "proche"
+   }
+  ],
+  "Taxus × media": [
+   {
+    "espece": "Taxus baccata",
+    "origine": "cousin"
+   }
+  ],
+  "Salix viminalis": [
+   {
+    "espece": "Salix repens",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Salix purpurea",
+    "origine": "cousin"
+   }
+  ],
+  "Salix repens": [
+   {
+    "espece": "Salix viminalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Salix purpurea",
+    "origine": "cousin"
+   }
+  ],
+  "Ulex minor": [
+   {
+    "espece": "Ulex europaeus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Genista tinctoria",
+    "origine": "proche"
+   },
+   {
+    "espece": "Genista hispanica",
+    "origine": "proche"
+   }
+  ],
+  "Amelanchier ovalis": [
+   {
+    "espece": "Rosa pimpinellifolia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Prunus laurocerasus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Prunus spinosa",
+    "origine": "proche"
+   }
+  ],
+  "Hippocrepis emerus": [
+   {
+    "espece": "Cytisus scoparius",
+    "origine": "proche"
+   },
+   {
+    "espece": "Ulex europaeus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Genista tinctoria",
+    "origine": "proche"
+   }
+  ],
+  "Atriplex halimus": [],
+  "Bupleurum fruticosum": [],
+  "Arbutus andrachne": [
+   {
+    "espece": "Arbutus × andrachnoides",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Arbutus unedo",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Vaccinium vitis-idaea",
+    "origine": "proche"
+   }
+  ],
+  "Arbutus × andrachnoides": [
+   {
+    "espece": "Arbutus andrachne",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Arbutus unedo",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Rhododendron luteum",
+    "origine": "proche"
+   }
+  ],
+  "Cotoneaster lacteus": [
+   {
+    "espece": "Cotoneaster franchetii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cotoneaster salicifolius",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cotoneaster horizontalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Cotoneaster dammeri",
+    "origine": "cousin"
+   }
+  ],
+  "Lonicera pileata": [
+   {
+    "espece": "Lonicera xylosteum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lonicera fragrantissima",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Lonicera nitida",
+    "origine": "cousin"
+   }
+  ],
+  "Ligustrum japonicum": [
+   {
+    "espece": "Ligustrum ovalifolium",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ligustrum lucidum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ligustrum vulgare",
+    "origine": "cousin"
+   }
+  ],
+  "Loropetalum chinense": [
+   {
+    "espece": "Hamamelis × intermedia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Hamamelis mollis",
+    "origine": "proche"
+   }
+  ],
+  "Osmanthus × burkwoodii": [
+   {
+    "espece": "Osmanthus heterophyllus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Ligustrum japonicum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Ligustrum ovalifolium",
+    "origine": "proche"
+   }
+  ],
+  "Viburnum × burkwoodii": [
+   {
+    "espece": "Viburnum odoratissimum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum tinus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum carlesii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum × bodnantense",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum lantana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum opulus",
+    "origine": "cousin"
+   }
+  ],
+  "Hamamelis × intermedia": [
+   {
+    "espece": "Hamamelis mollis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Loropetalum chinense",
+    "origine": "proche"
+   }
+  ],
+  "Westringia fruticosa": [
+   {
+    "espece": "Salvia microphylla",
+    "origine": "proche"
+   },
+   {
+    "espece": "Caryopteris × clandonensis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Vitex agnus-castus",
+    "origine": "proche"
+   }
+  ],
+  "Polygala myrtifolia": [],
+  "Salvia microphylla": [
+   {
+    "espece": "Westringia fruticosa",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lavandula dentata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lavandula latifolia",
+    "origine": "proche"
+   }
+  ],
+  "Viburnum odoratissimum": [
+   {
+    "espece": "Viburnum × burkwoodii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum carlesii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum opulus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum lantana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum tinus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Viburnum davidii",
+    "origine": "cousin"
+   }
+  ],
+  "Callistemon citrinus": [
+   {
+    "espece": "Leptospermum scoparium",
+    "origine": "proche"
+   },
+   {
+    "espece": "Acca sellowiana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Myrtus communis",
+    "origine": "proche"
+   }
+  ],
+  "Echium candicans": [],
+  "Cycas revoluta": [],
+  "Leptospermum scoparium": [
+   {
+    "espece": "Callistemon citrinus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Acca sellowiana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Myrtus communis",
+    "origine": "proche"
+   }
+  ],
+  "Plumbago auriculata": [],
+  "Rosa sempervirens": [
+   {
+    "espece": "Rosa banksiae",
+    "origine": "cousin"
+   }
+  ],
+  "Rubia peregrina": [],
+  "Clematis cirrhosa": [
+   {
+    "espece": "Clematis alpina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis armandii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis vitalba",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis montana",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis flammula",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Clematis viticella",
+    "origine": "cousin"
+   }
+  ],
+  "Bignonia capreolata": [
+   {
+    "espece": "Campsis grandiflora",
+    "origine": "proche"
+   },
+   {
+    "espece": "Campsis radicans",
+    "origine": "proche"
+   }
+  ],
+  "Campsis grandiflora": [
+   {
+    "espece": "Campsis radicans",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Bignonia capreolata",
+    "origine": "proche"
+   }
+  ],
+  "Actinidia arguta": [
+   {
+    "espece": "Actinidia deliciosa",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Actinidia kolomikta",
+    "origine": "cousin"
+   }
+  ],
+  "Actinidia kolomikta": [
+   {
+    "espece": "Actinidia arguta",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Actinidia deliciosa",
+    "origine": "cousin"
+   }
+  ],
+  "Jasminum polyanthum": [
+   {
+    "espece": "Jasminum officinale",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Jasminum nudiflorum",
+    "origine": "cousin"
+   }
+  ],
+  "Pileostegia viburnoides": [
+   {
+    "espece": "Schizophragma hydrangeoides",
+    "origine": "proche"
+   },
+   {
+    "espece": "Hydrangea petiolaris",
+    "origine": "proche"
+   }
+  ],
+  "Schizophragma hydrangeoides": [
+   {
+    "espece": "Hydrangea petiolaris",
+    "origine": "proche"
+   },
+   {
+    "espece": "Pileostegia viburnoides",
+    "origine": "proche"
+   }
+  ],
+  "Bougainvillea glabra": [],
+  "Ammophila arenaria": [
+   {
+    "espece": "Corynephorus canescens",
+    "origine": "proche"
+   },
+   {
+    "espece": "Leymus arenarius",
+    "origine": "proche"
+   },
+   {
+    "espece": "Melica ciliata",
+    "origine": "proche"
+   }
+  ],
+  "Carex arenaria": [
+   {
+    "espece": "Carex testacea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex pendula",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex oshimensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex elata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex flacca",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex sylvatica",
+    "origine": "cousin"
+   }
+  ],
+  "Corynephorus canescens": [
+   {
+    "espece": "Ammophila arenaria",
+    "origine": "proche"
+   },
+   {
+    "espece": "Koeleria glauca",
+    "origine": "proche"
+   },
+   {
+    "espece": "Melica ciliata",
+    "origine": "proche"
+   }
+  ],
+  "Agrostis curtisii": [
+   {
+    "espece": "Corynephorus canescens",
+    "origine": "proche"
+   },
+   {
+    "espece": "Festuca ovina",
+    "origine": "proche"
+   },
+   {
+    "espece": "Muhlenbergia capillaris",
+    "origine": "proche"
+   }
+  ],
+  "Cladium mariscus": [
+   {
+    "espece": "Cyperus longus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Carex testacea",
+    "origine": "proche"
+   },
+   {
+    "espece": "Schoenoplectus lacustris",
+    "origine": "proche"
+   }
+  ],
+  "Festuca arundinacea": [
+   {
+    "espece": "Festuca rubra",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Festuca glauca",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Festuca ovina",
+    "origine": "cousin"
+   }
+  ],
+  "Melica uniflora": [
+   {
+    "espece": "Melica ciliata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Briza media",
+    "origine": "proche"
+   },
+   {
+    "espece": "Chasmanthium latifolium",
+    "origine": "proche"
+   }
+  ],
+  "Anemanthele lessoniana": [
+   {
+    "espece": "Sporobolus heterolepis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Stipa calamagrostis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Fargesia murielae",
+    "origine": "proche"
+   }
+  ],
+  "Calamagrostis brachytricha": [
+   {
+    "espece": "Calamagrostis × acutiflora",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pennisetum orientale",
+    "origine": "proche"
+   },
+   {
+    "espece": "Sesleria autumnalis",
+    "origine": "proche"
+   }
+  ],
+  "Chasmanthium latifolium": [
+   {
+    "espece": "Briza media",
+    "origine": "proche"
+   },
+   {
+    "espece": "Melica uniflora",
+    "origine": "proche"
+   },
+   {
+    "espece": "Arrhenatherum elatius",
+    "origine": "proche"
+   }
+  ],
+  "Muhlenbergia capillaris": [
+   {
+    "espece": "Deschampsia cespitosa",
+    "origine": "proche"
+   },
+   {
+    "espece": "Panicum virgatum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Agrostis curtisii",
+    "origine": "proche"
+   }
+  ],
+  "Pennisetum orientale": [
+   {
+    "espece": "Pennisetum setaceum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Pennisetum alopecuroides",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Calamagrostis brachytricha",
+    "origine": "proche"
+   }
+  ],
+  "Stipa calamagrostis": [
+   {
+    "espece": "Stipa gigantea",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Stipa tenuissima",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Arrhenatherum elatius",
+    "origine": "proche"
+   }
+  ],
+  "Carex testacea": [
+   {
+    "espece": "Carex oshimensis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex arenaria",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex sylvatica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex pendula",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex elata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Carex flacca",
+    "origine": "cousin"
+   }
+  ],
+  "Asphodelus albus": [
+   {
+    "espece": "Hemerocallis fulva",
+    "origine": "proche"
+   },
+   {
+    "espece": "Phormium tenax",
+    "origine": "proche"
+   },
+   {
+    "espece": "Kniphofia uvaria",
+    "origine": "proche"
+   }
+  ],
+  "Lithodora diffusa": [
+   {
+    "espece": "Pulmonaria longifolia",
+    "origine": "proche"
+   },
+   {
+    "espece": "Symphytum officinale",
+    "origine": "proche"
+   },
+   {
+    "espece": "Brunnera macrophylla",
+    "origine": "proche"
+   }
+  ],
+  "Dianthus gallicus": [
+   {
+    "espece": "Dianthus deltoides",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Dianthus barbatus",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Dianthus carthusianorum",
+    "origine": "cousin"
+   }
+  ],
+  "Eryngium maritimum": [
+   {
+    "espece": "Eryngium bourgatii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Eryngium planum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Anthriscus sylvestris",
+    "origine": "proche"
+   }
+  ],
+  "Euphorbia paralias": [
+   {
+    "espece": "Euphorbia characias",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euphorbia amygdaloides",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euphorbia cyparissias",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Euphorbia polychroma",
+    "origine": "cousin"
+   }
+  ],
+  "Helichrysum stoechas": [
+   {
+    "espece": "Achillea filipendulina",
+    "origine": "proche"
+   },
+   {
+    "espece": "Aster amellus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Artemisia absinthium",
+    "origine": "proche"
+   }
+  ],
+  "Teucrium chamaedrys": [
+   {
+    "espece": "Origanum vulgare",
+    "origine": "proche"
+   },
+   {
+    "espece": "Salvia officinalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Salvia nemorosa",
+    "origine": "proche"
+   }
+  ],
+  "Stachys officinalis": [
+   {
+    "espece": "Stachys byzantina",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Physostegia virginiana",
+    "origine": "proche"
+   },
+   {
+    "espece": "Teucrium chamaedrys",
+    "origine": "proche"
+   }
+  ],
+  "Knautia arvensis": [
+   {
+    "espece": "Knautia macedonica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Scabiosa columbaria",
+    "origine": "proche"
+   },
+   {
+    "espece": "Valeriana officinalis",
+    "origine": "proche"
+   }
+  ],
+  "Lychnis flos-cuculi": [
+   {
+    "espece": "Lychnis coronaria",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Dianthus gallicus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Saponaria officinalis",
+    "origine": "proche"
+   }
+  ],
+  "Pulmonaria longifolia": [
+   {
+    "espece": "Pulmonaria officinalis",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Brunnera macrophylla",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lithodora diffusa",
+    "origine": "proche"
+   }
+  ],
+  "Lotus corniculatus": [
+   {
+    "espece": "Lathyrus latifolius",
+    "origine": "proche"
+   },
+   {
+    "espece": "Lupinus polyphyllus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Trifolium repens",
+    "origine": "proche"
+   }
+  ],
+  "Malva sylvestris": [
+   {
+    "espece": "Malva moschata",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Alcea rosea",
+    "origine": "proche"
+   }
+  ],
+  "Mentha aquatica": [
+   {
+    "espece": "Mentha × piperita",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Calamintha nepeta",
+    "origine": "proche"
+   },
+   {
+    "espece": "Physostegia virginiana",
+    "origine": "proche"
+   }
+  ],
+  "Thymus serpyllum": [
+   {
+    "espece": "Thymus vulgaris",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Teucrium chamaedrys",
+    "origine": "proche"
+   },
+   {
+    "espece": "Salvia sclarea",
+    "origine": "proche"
+   }
+  ],
+  "Achillea filipendulina": [
+   {
+    "espece": "Achillea millefolium",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Achillea ptarmica",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Artemisia absinthium",
+    "origine": "proche"
+   }
+  ],
+  "Eryngium planum": [
+   {
+    "espece": "Eryngium maritimum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Eryngium bourgatii",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Astrantia major",
+    "origine": "proche"
+   }
+  ],
+  "Geranium × cantabrigiense": [
+   {
+    "espece": "Geranium macrorrhizum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium sanguineum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium pratense",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium robertianum",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Geranium phaeum",
+    "origine": "cousin"
+   }
+  ],
+  "Libertia grandiflora": [
+   {
+    "espece": "Iris foetidissima",
+    "origine": "proche"
+   },
+   {
+    "espece": "Iris pseudacorus",
+    "origine": "proche"
+   },
+   {
+    "espece": "Iris germanica",
+    "origine": "proche"
+   }
+  ],
+  "Phlomis russeliana": [
+   {
+    "espece": "Ajuga reptans",
+    "origine": "proche"
+   },
+   {
+    "espece": "Salvia officinalis",
+    "origine": "proche"
+   },
+   {
+    "espece": "Salvia pratensis",
+    "origine": "proche"
+   }
+  ],
+  "Tulbaghia violacea": [
+   {
+    "espece": "Allium giganteum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Agapanthus praecox",
+    "origine": "proche"
+   },
+   {
+    "espece": "Allium ursinum",
+    "origine": "proche"
+   }
+  ],
+  "Veronicastrum virginicum": [
+   {
+    "espece": "Veronica spicata",
+    "origine": "proche"
+   },
+   {
+    "espece": "Veronica chamaedrys",
+    "origine": "proche"
+   },
+   {
+    "espece": "Digitalis purpurea",
+    "origine": "proche"
+   }
+  ],
+  "Leucanthemum × superbum": [
+   {
+    "espece": "Leucanthemum vulgare",
+    "origine": "cousin"
+   },
+   {
+    "espece": "Gaillardia × grandiflora",
+    "origine": "proche"
+   },
+   {
+    "espece": "Achillea ptarmica",
+    "origine": "proche"
+   }
+  ],
+  "Physostegia virginiana": [
+   {
+    "espece": "Mentha × piperita",
+    "origine": "proche"
+   },
+   {
+    "espece": "Salvia nemorosa",
+    "origine": "proche"
+   },
+   {
+    "espece": "Calamintha nepeta",
+    "origine": "proche"
+   }
+  ],
+  "Gaillardia × grandiflora": [
+   {
+    "espece": "Leucanthemum × superbum",
+    "origine": "proche"
+   },
+   {
+    "espece": "Achillea ptarmica",
+    "origine": "proche"
+   },
+   {
+    "espece": "Inula helenium",
+    "origine": "proche"
+   }
+  ],
+  "Musa basjoo": [],
+  "Strelitzia reginae": [],
+  "Dicksonia antarctica": []
+ }
+}

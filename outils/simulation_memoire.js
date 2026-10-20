@@ -1,5 +1,5 @@
 // Étape 6 : simulation de la progression (vrai code de l'appli + joueur simulé qui apprend et oublie).
-// Compare la version actuelle et des variantes qui ne touchent qu'aux niveaux 1 à 3.
+// Compare la version actuelle et des variantes de srs() (niveaux 1 à 3 à l'étape 6 ; entretien des plantes acquises au lot 1 de la conception cible).
 // Usage : node outils/simulation_memoire.js [jours=30] [graines=8]
 const {chromium}=require('playwright');const {adresse,LOCAL}=require('./banc_essai.js');const path=require('path');
 const JOURS=+process.argv[2]||30,GRAINES=+process.argv[3]||8,PAR_JOUR=40;
@@ -7,6 +7,9 @@ const JOURS=+process.argv[2]||30,GRAINES=+process.argv[3]||8,PAR_JOUR=40;
 const VARIANTES={
   actuelle:[], // variante A retenue à l'étape 6 : niveau 2 → 3 en 3 QCM, ou 1 exercice difficile + 1 QCM
   avant_etape6:[["if(p.c>=3){p.b=3;p.c=0}","if(p.c>=2){p.b=3;p.c=0}"]],
+  // avant le lot 1 : une bonne réponse sur une plante due ne la replanifiait que si elle changeait de niveau, et le délai s'arrêtait à 7 j
+  avant_lot1:[["if(fmt==='typed'||(fmt==='pv'&&b0>=5)){if(b0<6)p.b=b0+1;else p.k=(p.k||0)+1;p.c=0}","if(fmt==='typed'||(fmt==='pv'&&b0>=5)){p.b=Math.min(b0+1,6);p.c=0}"],
+    ["p.d=now+ivl(p)}","}"]],
   A2_palier2_QCM:[["if(b0===2){p.c+=fmt==='mcq'?1:2;if(p.c>=3)","if(b0===2){p.c+=fmt==='mcq'?1:3;if(p.c>=3)"]],
 };
 const SIM=function(o){
@@ -26,7 +29,7 @@ const SIM=function(o){
     if(good){l.K=Math.min(1,l.K+(1-l.K)*(ty==='typed'?.45:ty==='pv'?.35:.3)*l.f);l.S*=1+(ty==='typed'?2.5:ty==='pv'?1.8:1.2)*Math.max(.1,1.1-r)}
     else{l.K=Math.min(1,l.K+(1-l.K)*.35*l.f);l.S=Math.max(.2,l.S*.5)}
     l.t=T};
-  const acqQ={},stats={q:0,ok:0,acq:0,chute:0};
+  const acqQ={},stats={q:0,ok:0,acq:0,chute:0,ent:0};
   for(let d=0;d<o.jours;d++){
     T=Date.parse('2026-01-05T08:00:00')+d*864e5;
     for(let k=0;k<o.parJour;k++){
@@ -34,7 +37,7 @@ const SIM=function(o){
       const s=pick();cur=s;const ty=exType(s);
       const l=L[s[0]]||(L[s[0]]={K:0,S:.3,t:T,f:1/(1+.2*lvl(s)),n:0});
       const good=Math.random()<pOK(l,ty);l.n++;
-      acqNow=false;const p=st.sp[s[0]]||(st.sp[s[0]]={b:1,s:0,e:0,d:0});const b0=p.b;
+      acqNow=false;const p=st.sp[s[0]]||(st.sp[s[0]]={b:1,s:0,e:0,d:0});const b0=p.b;if(b0>=4)stats.ent++;   // question d'entretien d'une plante acquise
       srs(p,good,ty);
       if(b0>=4&&p.b<4)stats.chute++;
       qN++;if(acqNow&&Math.random()<.7&&!soon.some(x=>x.n===s[0]))soon.push({n:s[0],q:qN+10+Math.floor(Math.random()*13)});
@@ -50,7 +53,7 @@ const SIM=function(o){
   const acq=Object.keys(st.sp).filter(n=>st.sp[n].b>=4);
   const ret=acq.length?acq.reduce((a,n)=>a+pOK(L[n],'typed'),0)/acq.length:0;
   const q=Object.values(acqQ);Date.now=realNow;
-  return {q:q.reduce((a,b)=>a+b,0)/q.length,acq:acq.length,ret,reussite:stats.ok/stats.q,chute:stats.chute,vues:Object.keys(st.sp).length};
+  return {q:q.reduce((a,b)=>a+b,0)/q.length,acq:acq.length,ret,ten:acq.length*ret,reussite:stats.ok/stats.q,chute:stats.chute,ent:stats.ent/stats.q,vues:Object.keys(st.sp).length};
 };
 (async()=>{
   const b=await chromium.launch({executablePath:process.env.CHROMIUM||'/opt/pw-browsers/chromium'});
@@ -60,11 +63,11 @@ const SIM=function(o){
   const res={};
   for(const[nom,rep]of Object.entries(VARIANTES)){
     const r=[];for(let g=1;g<=GRAINES;g++){await p.reload();await p.waitForTimeout(300);r.push(await p.evaluate(`(${SIM.toString()})(${JSON.stringify({graine:g,rep,jours:JOURS,parJour:PAR_JOUR})})`))}
-    const m=k=>r.reduce((a,x)=>a+x[k],0)/r.length;res[nom]={q:m('q'),acq:m('acq'),ret:m('ret'),reussite:m('reussite'),chute:m('chute'),vues:m('vues')};
+    const m=k=>r.reduce((a,x)=>a+x[k],0)/r.length;res[nom]={q:m('q'),acq:m('acq'),ret:m('ret'),ten:m('ten'),reussite:m('reussite'),chute:m('chute'),ent:m('ent'),vues:m('vues')};
   }
   const b0=res.actuelle,pc=(x,y)=>(x>=y?'+':'')+Math.round(100*(x-y)/y)+' %';
   console.log(`Simulation : ${JOURS} jours × ${PAR_JOUR} exercices, ${GRAINES} joueurs simulés par variante\n`);
-  console.log('variante      | questions pour acquérir | acquises au bout | rétention à +7 j | réussite en jeu | rechutes');
-  for(const[n,x]of Object.entries(res))console.log(`${n.padEnd(13)} | ${x.q.toFixed(2).padStart(5)} (${n==='actuelle'?'réf.':pc(x.q,b0.q)})`.padEnd(42)+`| ${x.acq.toFixed(1).padStart(5)} (${n==='actuelle'?'réf.':pc(x.acq,b0.acq)})`.padEnd(19)+`| ${(100*x.ret).toFixed(1)} %`.padEnd(19)+`| ${(100*x.reussite).toFixed(1)} %`.padEnd(18)+`| ${x.chute.toFixed(1)}`);
+  console.log('variante      | questions pour acquérir | acquises au bout | rétention à +7 j | retenues à +7 j | réussite en jeu | rechutes | part d\'entretien');
+  for(const[n,x]of Object.entries(res))console.log(`${n.padEnd(13)} | ${x.q.toFixed(2).padStart(5)} (${n==='actuelle'?'réf.':pc(x.q,b0.q)})`.padEnd(42)+`| ${x.acq.toFixed(1).padStart(5)} (${n==='actuelle'?'réf.':pc(x.acq,b0.acq)})`.padEnd(19)+`| ${(100*x.ret).toFixed(1)} %`.padEnd(19)+`| ${x.ten.toFixed(1)} (${n==='actuelle'?'réf.':pc(x.ten,b0.ten)})`.padEnd(18)+`| ${(100*x.reussite).toFixed(1)} %`.padEnd(18)+`| ${x.chute.toFixed(1)}`.padEnd(11)+`| ${(100*x.ent).toFixed(0)} %`);
   await b.close();
 })();

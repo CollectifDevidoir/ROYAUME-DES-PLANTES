@@ -419,6 +419,8 @@ create table if not exists public.reglages (
   sombre      boolean  not null,
   primary key (jour, appareil)
 );
+-- rang du joueur (0 = Graine … 14 = Maître du royaume), avec ou sans compte ; vide pour les versions qui ne l'envoient pas
+alter table public.reglages add column if not exists rang smallint;
 -- Comptes autorisés à lire les Coulisses (à remplir à la main dans le SQL Editor, voir LISEZ-MOI).
 create table if not exists public.admins (
   user_id uuid primary key references auth.users(id) on delete cascade
@@ -530,10 +532,12 @@ begin
   if jsonb_typeof(r) = 'object' and (r->>'j') ~ '^[0-9]{4}-[0-9]{2}-[0-9]{2}$' and (r->>'j')::date between current_date - 1 and current_date + 1
      and (r->>'goal') ~ '^[0-9]{1,3}$' and jsonb_typeof(r->'vib') = 'boolean' and jsonb_typeof(r->'sombre') = 'boolean'
      and r->>'mode' in ('tout', 'arbre', 'arbuste', 'vivace', 'grimpante', 'graminée') then
-    insert into reglages (jour, appareil, objectif, vibrations, mode, sombre)
-    values ((r->>'j')::date, p_appareil, least((r->>'goal')::int, 500), (r->>'vib')::boolean, r->>'mode', (r->>'sombre')::boolean)
+    insert into reglages (jour, appareil, objectif, vibrations, mode, sombre, rang)
+    values ((r->>'j')::date, p_appareil, least((r->>'goal')::int, 500), (r->>'vib')::boolean, r->>'mode', (r->>'sombre')::boolean,
+            case when (r->>'rang') ~ '^[0-9]{1,2}$' and (r->>'rang')::int <= 14 then (r->>'rang')::smallint end)
     on conflict (jour, appareil) do update
-      set objectif = excluded.objectif, vibrations = excluded.vibrations, mode = excluded.mode, sombre = excluded.sombre;
+      set objectif = excluded.objectif, vibrations = excluded.vibrations, mode = excluded.mode, sombre = excluded.sombre,
+          rang = coalesce(excluded.rang, reglages.rang);
   end if;
 end $$;
 
@@ -655,7 +659,12 @@ begin
       'vibrations', (select round(100.0 * count(*) filter (where vibrations) / nullif(count(*), 0)) from
         (select distinct on (appareil) vibrations from reglages where jour between d and f order by appareil, jour desc) r),
       'sombre', (select round(100.0 * count(*) filter (where sombre) / nullif(count(*), 0)) from
-        (select distinct on (appareil) sombre from reglages where jour between d and f order by appareil, jour desc) r)))
+        (select distinct on (appareil) sombre from reglages where jour between d and f order by appareil, jour desc) r),
+      -- joueurs par rang (avec ou sans compte) : dernier rang connu de chaque appareil sur la période
+      'rangs', (select coalesce(jsonb_agg(x order by x.rang), '[]') from (
+        select rang, count(*) as appareils from (select distinct on (appareil) appareil, rang from reglages
+          where jour between d and f and rang is not null order by appareil, jour desc) r
+        group by rang) x)))
   ) into res;
   return res;
 end $$;
