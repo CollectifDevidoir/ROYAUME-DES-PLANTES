@@ -1,4 +1,4 @@
-// Lot 2, points 1 et 2 : joker (initiales dans le champ) et validation d'une réponse vide.
+// Lot 2, points 1 et 2 : joker (initiales dans le champ) et validation d'une réponse vide. Conception cible, lot 1.4 : verdict « Bon genre ».
 // Usage : node outils/controle_saisie.js [largeur hauteur]   (variable F = autre fichier html)
 const {open}=require('./banc_essai.js');const lance=require('./lance_exercice.js');
 let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
@@ -33,10 +33,19 @@ ok(await p.evaluate(()=>/Pas de réponse/.test($('sh').textContent)&&!/« »/.te
 // --- juste, presque, raté ---
 const essai=async t=>{await lance(p,'typed');const nm=await p.evaluate(()=>cur[0]);await p.fill('#q-input',t(nm));await p.click('#q-form button:not(#jk)');await p.waitForTimeout(400);
   return p.evaluate(()=>{const v=document.querySelector('#shr .v');return{txt:v.textContent,cls:v.className,bg:getComputedStyle(v).backgroundColor,col:getComputedStyle(v).color,b:st.sp[cur[0]].b,tm:st.tm.l.includes(cur[0])}})};
-const J=await essai(n=>n),P=await essai(n=>n.slice(0,-2)+n.slice(-1)),X=await essai(()=>'Rosa nimportequoi');
+const J=await essai(n=>n),P=await essai(n=>n.slice(0,-2)+n.slice(-1)),X=await essai(n=>(/^Rosa /.test(n)?'Acer':'Rosa')+' nimportequoi');
 ok(J.txt==='Juste'&&!J.tm,'nom exact : « Juste »');
 ok(P.txt==='Presque'&&!P.tm,'une lettre oubliée : « Presque », compté juste (pas dans les erreurs du jour)');
 ok(P.bg!==J.bg||P.col!==J.col,'« Presque » se distingue visuellement de « Juste » ('+P.bg+' / '+J.bg+')');
 ok(X.txt==='Raté'&&X.tm,'nom faux : « Raté », dans les erreurs du jour');
+// --- bon genre : genre juste, espèce absente de la liste (ou genre seul) ---
+const G=await essai(n=>n.split(' ')[0]+' nimportequoi'),G1=await essai(n=>n.split(' ')[0]),
+  GT=await essai(n=>{const g=n.split(' ')[0];return g.slice(0,-2)+g.slice(-1)+' nimportequoi'});
+const Gm=await p.evaluate(()=>$('sh').textContent);
+ok(G.txt==='Bon genre'&&G.tm&&G.b===1,'genre juste + espèce inventée : « Bon genre », compté faux (erreurs du jour, retour au niveau 1)');
+ok(G1.txt==='Bon genre'&&G1.tm,'genre seul : « Bon genre »');
+ok(GT.txt==='Bon genre','genre avec une faute de frappe : « Bon genre »');
+ok(G.bg!==J.bg&&G.bg!==X.bg,'« Bon genre » se distingue de « Juste » et de « Raté » ('+G.bg+')');
+ok(/Le genre est juste/.test(Gm)&&!/n’est pas dans la liste|n'est pas dans la liste/.test(Gm),'message « Le genre est juste », pas « n’est pas dans la liste »');
 ok(p.errs.length===0,'aucune erreur JavaScript '+JSON.stringify(p.errs));
 await b.close();console.log(ech?ech+' ÉCHEC(S)':'SAISIE : tout est OK');process.exit(ech?1:0)})();
