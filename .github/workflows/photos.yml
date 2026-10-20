@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: claude/improve-html-app-e7b6o4
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -31,5 +31,5 @@ jobs:
           git add donnees/photos.json
           git diff --cached --quiet && { echo "Rien de nouveau"; exit 0; }
           git commit -m "Index des photos : mise à jour du $(date +%Y-%m-%d)"
-          git pull --rebase origin claude/improve-html-app-e7b6o4
-          git push origin HEAD:claude/improve-html-app-e7b6o4
+          git pull --rebase origin main
+          git push origin HEAD:main
