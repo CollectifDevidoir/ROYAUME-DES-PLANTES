@@ -1,6 +1,8 @@
 // Étape 7 : ordinateur (deux colonnes) et parcours complet au clavier. Usage : node outils/controle_clavier_ordi.js
+// Mise à jour du 20/10/2026 : la mise en page ordinateur a changé depuis l'étape 7 (colonne centrée, photo en grand, Herbier à onglets) ; la mise en page est
+// vérifiée en détail par controle_ordinateur.js, ce contrôle-ci garde le parcours au clavier.
 const {open}=require('./banc_essai.js');const lance=require('./lance_exercice.js');
-const ok=(c,m)=>console.log((c?'OK   ':'ÉCHEC ')+m);
+let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
 (async()=>{
 const {b,p}=await open({w:1366,h:800});
 const R=s=>p.evaluate(s=>{const r=document.querySelector(s).getBoundingClientRect();return {l:r.left,t:r.top,r:r.right,b:r.bottom}},s);
@@ -8,8 +10,7 @@ const fv=()=>p.evaluate(()=>{const e=document.activeElement;if(!e||e===document.
 // 7.1 / 7.2
 await lance(p,'mcq');let pic=await R('#pic'),op=await R('#opts'),m=await R('main');
 ok(op.l>pic.r,'7.1 : réponses à droite de la photo');
-ok(m.l<150&&1366-m.r<150,'7.1 : pas de grand vide latéral à 1366 px (marges '+Math.round(m.l)+' / '+Math.round(1366-m.r)+' px)');
-ok(pic.b-pic.t<=800*.5+1,'7.2 : photo ≤ 50 % de la hauteur ('+Math.round(pic.b-pic.t)+' px)');
+{const qz=await R('#quiz');ok(Math.abs((qz.l-m.l)-(m.r-qz.r))<=2,'7.1 : quiz centré dans la zone à droite du menu latéral (marges '+Math.round(qz.l-m.l)+' / '+Math.round(m.r-qz.r)+' px)')}
 ok(pic.b<=800&&op.b<=800,'7.2 : photo et 4 réponses visibles sans défilement (bas '+Math.round(Math.max(pic.b,op.b))+' px)');
 // 7.5 : touche 2 pour répondre, focus sur « Plante suivante »
 await p.keyboard.press('2');await p.waitForTimeout(900);
@@ -41,8 +42,8 @@ await p.evaluate(()=>{st.sp['Acer campestre']={b:2,s:2,e:0,d:0};st.ho.arbre=true
 let n=0;while(n<60){await p.keyboard.press('Tab');n++;const t=await p.evaluate(()=>document.activeElement&&document.activeElement.dataset&&document.activeElement.dataset.t);if(t==='herb')break}
 f=await fv();ok(f&&f.ring,'7.5 : onglet Herbier atteint au clavier ('+n+' tabulations), focus visible');
 await p.keyboard.press('Enter');await p.waitForTimeout(400);
-const tile=await p.$('.hc[open] .pk[data-l]');
+const tile=await p.$('#herb .pk[data-l]');   // Herbier à onglets sur ordinateur, à catégories dépliables ailleurs
 if(tile){await tile.focus();f=await fv();ok(f&&f.ring,'7.5 : vignette d\'Herbier atteignable, focus visible');await p.keyboard.press('Enter');await p.waitForTimeout(500);ok(await p.evaluate(()=>$('fch').open),'7.5 : Entrée ouvre la fiche');await p.keyboard.press('Escape');}
 else ok(false,'vignette d\'Herbier introuvable');
 ok(p.errs.length===0,'aucune erreur JavaScript '+p.errs.join(' | '));
-await b.close()})();
+await b.close();console.log(ech?ech+' ÉCHEC(S)':'CLAVIER (ORDINATEUR) : tout est OK');process.exit(ech?1:0)})();

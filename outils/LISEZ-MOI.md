@@ -5,16 +5,16 @@ Tous les scripts Node s'appuient sur Playwright et Chromium. Lancement depuis la
 Le réseau n'est pas nécessaire : `banc_essai.js` simule iNaturalist et génère des photos.
 Les contrôles des comptes demandent en plus `npm i -g @electric-sql/pglite @supabase/supabase-js@2.117.3` (voir `supabase/LISEZ-MOI.md`). La version de supabase-js doit être celle de `SB_LIB` dans `index.html`, sinon l'empreinte d'intégrité (SRI) refuse la bibliothèque et les contrôles des comptes échouent.
 
-**Recette automatique.** `recette_rapide.sh` enchaîne la recette et les contrôles principaux. Il échoue si un contrôle sort en erreur ou affiche une ligne « ÉCHEC ». Le workflow GitHub « Recette » (`.github/workflows/recette.yml`) le lance à chaque envoi et à chaque demande de fusion. Un défaut connu et déjà planifié s'affiche « CONNU (identifiant) » sans faire échouer la recette (liste `CONNUS` dans `recette.js`, identifiants de `conception-cible.md`).
+**Recette automatique.** `recette_rapide.sh` enchaîne la recette et les contrôles principaux. Il échoue si un contrôle sort en erreur ou affiche une ligne « ÉCHEC ». Le workflow GitHub « Recette » (`.github/workflows/recette.yml`) lance ses quatre groupes en parallèle à chaque envoi et à chaque demande de fusion. Un défaut connu et déjà planifié s'affiche « CONNU (identifiant) » sans faire échouer la recette (liste `CONNUS` dans `recette.js`, identifiants de `conception-cible.md`).
 
 ## Recette et contrôles
 
 | Outil | Rôle |
 |---|---|
-| `recette_rapide.sh` | Recette et contrôles principaux, l'un après l'autre (lancé aussi par le workflow « Recette »). |
+| `recette_rapide.sh [groupe… ou contrôle…]` | Recette et contrôles, l'un après l'autre, en quatre groupes : `recette` (recette, ordinateur, clavier sur ordinateur), `comptes` (comptes, défi avec compte, SQL, statistiques, mesures, Coulisses), `gestes` (défi, planning, fiche figée, fluidité, entraînement, premier lancement, modes, volets, clavier) et `moteur` (mémoire, niveaux, saisie, couleurs, sources, sosies, réglages, herbier, rangs, familles, synonymes, anecdotes, confusion, équilibre, illustrations, motifs noirs). Sans argument : tous. Le workflow « Recette » lance les quatre groupes en parallèle. |
 | `recette.js [fichier] [dossier]` | Recette complète sur les 7 tailles de référence (360×640 à 1920×1080) : accueil d'un habitué (les 4 réponses au-dessus de la barre d'onglets), tous les écrans, aucune erreur JavaScript, aucun défilement horizontal, boutons dans l'écran. Avec un dossier, enregistre les captures. Le hasard est figé pour pouvoir comparer deux passages. |
 | `controle_fige.js [largeur hauteur]` | Fiche de réponse : fond figé et flouté, photo jamais recouverte, la fiche défile mais pas le fond. Variable `F` : autre fichier HTML. |
-| `controle_clavier.js`, `controle_clavier_ordi.js` | Saisie sur mobile, raccourcis clavier sur ordinateur. `controle_clavier_ordi.js` est en partie périmé : 3 échecs, déjà présents sur la version publiée, qui décrivent l'ancienne mise en page ordinateur (voir `controle_ordinateur.js`). |
+| `controle_clavier.js`, `controle_clavier_ordi.js` | Saisie sur mobile ; parcours au clavier sur ordinateur (mis à jour le 20/10/2026 pour la mise en page actuelle : quiz centré à droite du menu latéral, Herbier à onglets ; la mise en page est vérifiée en détail par `controle_ordinateur.js`). |
 | `controle_reglages.js` | Volet Réglages : objectif, vibration, sauvegarde, réinitialisation. |
 | `controle_herbier.js` | Ordre de l'Herbier (acquises puis non acquises, par nom latin) et onglet Progrès. |
 | `controle_niveaux.js` | Passages de niveaux (étape 6). |
