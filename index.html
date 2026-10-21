@@ -3612,13 +3612,20 @@ const famDots=i=>{document.querySelectorAll('#fdots i').forEach((e,k)=>e.classLi
   addEventListener('pointermove',e=>{if(x0===null)return;const dx=e.clientX-x0;if(Math.abs(dx)>5)bouge=true;z.scrollLeft=s0-dx});
   addEventListener('pointerup',e=>{if(x0===null)return;const dx=e.clientX-x0,i0=Math.round(s0/W());x0=null;z.classList.remove('tire');z.style.scrollSnapType='';va(Math.abs(dx)>50?i0+(dx<0?1:-1):i0)});
   z.addEventListener('click',e=>{if(bouge){e.stopPropagation();e.preventDefault();bouge=false}},true);
-  // au doigt sur grand écran : un geste franc tourne la carte, même s'il ne dépasse pas la moitié de la carte
-  let t0=null;z.addEventListener('touchstart',e=>{const t=e.touches[0];t0=e.touches.length===1?{x:t.clientX,y:t.clientY,i:ici()}:null},{passive:true});
-  z.addEventListener('touchend',e=>{if(!t0)return;const t=e.changedTouches[0],dx=t.clientX-t0.x,dy=t.clientY-t0.y,i=t0.i;t0=null;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.5)setTimeout(()=>{if(ici()===i)va(i+(dx<0?1:-1))},60)},{passive:true});
+  // au doigt : la carte suit le doigt (aimantation suspendue tant qu'il est posé) ; au lâcher, la carte visée est choisie
+  // tout de suite (geste de plus de 40 px, ou vif) et atteinte en un seul mouvement, sans retour en arrière ;
+  // l'aimantation revient une fois la carte en place
+  let t0=null,fin=0;const aimante=()=>{clearTimeout(fin);z.style.scrollSnapType=''};
+  z.addEventListener('touchstart',e=>{const t=e.touches[0];clearTimeout(fin);t0=e.touches.length===1?{x:t.clientX,y:t.clientY,t:Date.now(),i:ici()}:null;if(t0)z.style.scrollSnapType='none'},{passive:true});
+  const lache=e=>{if(!t0)return;const t=e.changedTouches[0],dx=t.clientX-t0.x,dy=t.clientY-t0.y,v=Math.abs(dx)/Math.max(1,Date.now()-t0.t),i=t0.i;t0=null;
+    va(Math.abs(dx)>=8&&Math.abs(dx)>Math.abs(dy)&&(Math.abs(dx)>40||v>.3)?i+(dx<0?1:-1):i);
+    const ok=()=>{z.removeEventListener('scrollend',ok);aimante()};z.addEventListener('scrollend',ok);fin=setTimeout(ok,700)};
+  z.addEventListener('touchend',lache,{passive:true});z.addEventListener('touchcancel',lache,{passive:true});
   $('fam').addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();va(ici()+1)}else if(e.key==='ArrowLeft'){e.preventDefault();va(ici()-1)}});
   for(const [c,d,ic,lb] of [['fpv',-1,'chev-l','Carte précédente'],['fnv',1,'chev-r','Carte suivante']]){const b=document.createElement('button');b.type='button';b.className='fav '+c;b.setAttribute('aria-label',lb);b.innerHTML=ico(ic);b.onclick=()=>va(ici()+d);$('fam').append(b)}
 })();
-$('fz').onscroll=()=>{const z=$('fz');famDots(Math.round(z.scrollLeft/(z.clientWidth+10)))};
+// points et flèches mis à jour au plus une fois par image affichée pendant le glissement
+{let rq=0;$('fz').onscroll=()=>{if(rq)return;rq=requestAnimationFrame(()=>{rq=0;const z=$('fz');famDots(Math.round(z.scrollLeft/(z.clientWidth+10)))})}}
 $('fz').onclick=e=>{const z=$('fz');if(e.target.closest('.fnx'))z.scrollBy({left:z.clientWidth+10,behavior:'smooth'});else if(e.target.closest('#fam-go')){$('fam').close();startFamily(famCur)}};
 $('famx').onclick=()=>$('fam').close();
 function startFamily(f){
@@ -3715,7 +3722,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)jeuEnvoi()}
 // Mesures d'usage anonymes (supabase/schema.sql, « usages », « sessions », « photos_jeu », « signalements », « erreurs », « reglages ») :
 // même identifiant d'appareil tiré au hasard ; seulement des valeurs prises dans des listes fermées, jamais de texte saisi.
 // Gardées sur l'appareil et envoyées avec les statistiques de jeu ; une base pas encore mise à jour les refuse sans gêner l'appli.
-const APP_V='2026.10.19';   // version de l'appli (AAAA.MM.JJ), à changer à chaque publication
+const APP_V='2026.10.21';   // version de l'appli (AAAA.MM.JJ), à changer à chaque publication
 const ecranType=()=>{try{const m=Math.min(screen.width,screen.height);return !matchMedia('(pointer:coarse)').matches?'ordi':m<600?'telephone':'tablette'}catch(e){return'ordi'}};
 const installee=()=>{try{return matchMedia('(display-mode: standalone)').matches||navigator.standalone===true}catch(e){return false}};
 function mesLire(){try{const o=JSON.parse(localStorage.getItem('qp.mes')||'{}');return{u:o.u||{},s:o.s||{},p:o.p||{},g:o.g||{},e:o.e||{},r:o.r||''}}catch(e){return{u:{},s:{},p:{},g:{},e:{},r:''}}}
