@@ -715,6 +715,39 @@ body:not(.nostick) .rank::after{content:'';position:absolute;left:0;right:0;top:
 .pf dt:first-of-type,.pf dt:first-of-type+dd{border-top:0}
 .pf dt{font:600 .64rem var(--fx);letter-spacing:.08em;text-transform:uppercase;color:var(--mu);padding-top:10px}
 .pf dd{font-size:.9rem;line-height:1.4;color:var(--fg)}
+/* Milieux : même langage que le jeu — pastille ronde blanche cerclée (comme les icônes de la barre d'onglets), capsules, cartes à 20px ;
+   couleur de chaque territoire reprise de l'Excel */
+.mvg{--mz:30px;flex:none;display:inline-grid;place-items:center;width:var(--mz);height:var(--mz);box-sizing:border-box;border-radius:50%;background:#fff;border:max(2px,calc(var(--mz)*.08)) solid var(--mc);box-shadow:0 1px 3px rgba(20,60,30,.25)}
+.mvg{color:color-mix(in srgb,var(--mc) 72%,#14281a)}
+.mvg svg{width:72%;height:72%;display:block}
+.mvs{position:relative;appearance:none;font:inherit;display:inline-flex;align-items:center;gap:5px;margin:0;padding:0;background:none;border:0;cursor:pointer;flex:none}
+.mv1{display:inline-flex;align-items:center;gap:6px;padding:2px 11px 2px 2px;border-radius:99px;border:1px solid color-mix(in srgb,var(--mc) 45%,var(--bd));background:color-mix(in srgb,var(--mc) 13%,var(--card))}
+.mv1 .mvg{--mz:30px}
+.mv1.sec{background:var(--card)}
+.mv1 u{text-decoration:none;font:700 .7rem var(--fx);letter-spacing:.12em;color:color-mix(in srgb,var(--mc) 55%,var(--fg))}
+.mvn{font:700 .7rem var(--fx);color:var(--mu)}
+.mvs:after{content:"";position:absolute;inset:-7px -4px}
+.mvs:active{transform:scale(.96)}
+.dtabs button:focus-visible{outline:2px solid var(--ac);outline-offset:1px}
+.mvs:focus-visible{outline:2px solid var(--ac);outline-offset:3px;border-radius:99px}
+.labr{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:2px 0 4px}
+.labr .lab{margin:0;white-space:nowrap}
+.mvp{display:grid;gap:10px}
+.mvb{border-radius:20px;overflow:hidden;background:var(--card);border:1px solid color-mix(in srgb,var(--mc) 40%,var(--bd));box-shadow:0 6px 24px -14px rgba(20,60,30,.45)}
+.mvh{display:flex;gap:12px;align-items:center;padding:8px 14px 8px 8px;background:color-mix(in srgb,var(--mc) 15%,var(--card))}
+.mvh b{display:block;font:600 1.02rem/1.15 var(--ft);color:var(--fg)}
+.mvb ul{list-style:none;margin:0;padding:2px 14px 6px}
+.mvb li{padding:8px 0;border-top:1px solid var(--bd);font-size:.9rem;line-height:1.3;color:var(--fg)}
+.mvb li:first-child{border-top:0}
+.mvm{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+.mvm i{font:600 .68rem var(--fx);font-style:normal;padding:1px 9px;border-radius:99px;background:color-mix(in srgb,var(--mc) 16%,var(--card));color:color-mix(in srgb,var(--mc) 45%,var(--fg))}
+.mvm i+i{background:none;border:1px solid var(--bd);color:var(--mu)}
+/* onglets du détail : reprise de la barre d'onglets du jeu (capsule, onglet actif vert plein) */
+.dtabs{position:sticky;top:0;z-index:2;display:flex;gap:4px;padding:4px;margin:4px 0 10px;background:color-mix(in srgb,var(--card) 94%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid var(--bd);border-radius:26px;box-shadow:0 6px 18px -12px rgba(20,60,30,.5)}
+.dtabs button{flex:1;appearance:none;border:0;background:none;padding:10px 4px;border-radius:20px;font:600 .8rem var(--fx);color:var(--mu);cursor:pointer;transition:background .2s,color .2s,transform .15s}
+.dtabs button:active{transform:scale(.94)}
+.dtabs button[aria-selected=true]{background:var(--ac);color:var(--card)}
+.dtp>.det-h:first-child{margin-top:4px}
 .dnote{margin:10px 0 2px;padding:2px 0 2px 11px;border-left:3px solid #c4631a;font-size:.88rem;line-height:1.4;color:var(--fg)}
 .dnote b{display:block;font:600 .64rem var(--fx);letter-spacing:.08em;text-transform:uppercase;color:#a8541a;margin-bottom:1px}
 .cds{display:flex;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);margin:2px 0}
@@ -3977,8 +4010,10 @@ const qli=(a,big)=>big?'<ol class="qkn">'+a.map(x=>'<li><span>'+x+'</span></li>'
 const MN=[[["Carpinus betulus"],["Fagus sylvatica"],"Le charme d'Adam, c'est d'être à poil","Charme à dents, hêtre à poils : feuille du charme dentée, bord de celle du hêtre cilié (net sur les jeunes feuilles).","https://www.tela-botanica.org/2021/11/astuces-comment-differencier-ces-especes-sur-le-terrain/"],[["Picea abies","Picea pungens","Picea omorika","Picea orientalis","Picea sitchensis"],["Abies alba","Abies nordmanniana","Abies grandis","Abies concolor"],"Un épicéa, ça pisse en bas","Cônes de l'épicéa pendants ; ceux du sapin dressés vers le haut, comme des bougies.","https://www.tela-botanica.org/2021/11/astuces-comment-differencier-ces-especes-sur-le-terrain/"],[["Quercus petraea"],["Quercus robur"],"Sessile, c'est « assis » : gland sans queue","Chêne sessile : gland collé au rameau, feuille à pétiole net. Pédonculé : l'inverse, gland à long pédoncule.","https://podcast.ausha.co/nomen/s02e20-le-chene-sessile-ou-rouvre-de-l-art-de-bien-observer-la-queue-des-glands"]];
 const mnOf=(a,b)=>MN.find(m=>(m[0].includes(a)&&m[1].includes(b))||(m[0].includes(b)&&m[1].includes(a)))||null;
 const mnHtml=m=>m?`<p class="mnm"><span class="tgi">${HINT}</span><span><b>« ${esc(m[2])} »</b><small>${esc(m[3])}${m[4]?` · <a href="${esc(m[4])}" target="_blank" rel="noopener">source</a>`:''}</small></span></p>`:'';
+// « À retenir » avec, à droite, les sceaux des grands milieux (pastille + sigle) : un toucher ouvre l'onglet Habitat
+const labRow=s=>`<div class="labr"><p class="lab">À retenir</p>${mhChip(s)}</div>`;
 function cmpHtml(sp,tags){
-  if(sp.length===1)return '<p class="lab">À retenir</p>'+qli(q3(sp[0]),true);
+  if(sp.length===1)return labRow(sp[0])+qli(q3(sp[0]),true);
   return '<p class="lab">Points à comparer</p>'+`<div class="cmp2">${sp.map((s,i)=>`<div><b>${tags?ico(i?'croix':'coche','ic-in')+' ':''}${s[1]}</b><br><em>${s[0]}</em>${qli(q3(s))}</div>`).join('')}</div>`}
 const srcLinks=z=>z.split(' ; ').map(q=>{const m=q.match(/^(.*?) : (https?:\/\/\S+)$/);return m?`<a href="${m[2]}" target="_blank" rel="noopener">${esc(m[1])}</a>`:esc(q)}).join(' · ');
 // Sources des clés « À retenir » (QS, dans l'ordre des espèces de Q ; « ^a » = QP[0]…), affichées pour chaque espèce
@@ -3990,6 +4025,13 @@ const keySrc=s=>{if(!QSI){QSI={};Object.keys(Q).forEach((k,i)=>{QSI[k]=QS[i]})}
 const mhTxt=s=>{const e=typeof MH!=='undefined'&&MH.E[s[0]];if(!e)return'';const vu={};return e[0].filter(a=>!vu[a[0]]&&(vu[a[0]]=1)).map(a=>MH.L[a[0]]+(a[2]==='c'?' (cultivée)':a[2]==='p'?' (spontanée)':'')).join(' ; ')};
 const mhSrc=s=>{const e=typeof MH!=='undefined'&&MH.E[s[0]];if(!e)return'';const n={};
   return '<br><small>Milieux et habitats : '+[...new Set(e[0].map(a=>MH.U[a[4]]))].map(u=>{let d='';try{d=new URL(u).hostname.replace(/^www\./,'')}catch(x){return''}n[d]=(n[d]||0)+1;return `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(d)}${n[d]>1?' ('+n[d]+')':''}</a>`}).filter(Boolean).join(' · ')+(e[1]?' — '+esc(e[1]):'')+'</small>'};
+const MT={"FOR":{"n":"Forêts et sous-bois","c":"#456B45","g":"<path d=\"M12 3 7.500 10h9z\"/><path d=\"M12 9 6 17h12z\"/><path d=\"M12 17v4\"/>","t":"0 0"},"LIS":{"n":"Haies, lisières et fourrés","c":"#79864B","g":"<path d=\"M3.500 20v-6a4 4 0 0 1 4.500-3.800A4.500 4.500 0 0 1 16 10.200 4 4 0 0 1 20.500 14v6z\"/>","t":"0 -1.88"},"PRA":{"n":"Prairies et pelouses","c":"#C6A24D","g":"<path d=\"M7 20 8 10M12 20V5M17 20l-1-10\"/>","t":"0 -0.5"},"LAN":{"n":"Landes, bruyères et fourrés méditerranéens","c":"#96725B","g":"<path d=\"M12 21V4M12 9l4-3M12 14l-4-3M12 19l4-3\"/>","t":"0 -0.5"},"HUM":{"n":"Marais, prairies humides et tourbières","c":"#4D8B83","g":"<path d=\"M12 21V11M12 17c3 0 5-2 6-5\"/><ellipse cx=\"12\" cy=\"6.500\" rx=\"2.800\" ry=\"4.200\"/>","t":"-1.6 0.35"},"EAU":{"n":"Mares, rivières et berges","c":"#4C8FAF","g":"<path d=\"M12 3c3.500 4.500 5.500 7 5.500 9.500a5.500 5.500 0 0 1-11 0C6.500 10 8.500 7.500 12 3z\"/>","t":"0 1.5"},"ROC":{"n":"Rochers, éboulis et sols superficiels","c":"#8C877C","g":"<path d=\"M3 19 9.500 7 14 15l2.500-4L21 19z\"/>","t":"0 -1"},"LIT":{"n":"Littoral, dunes et rivages salés","c":"#D49A62","g":"<circle cx=\"12\" cy=\"8\" r=\"3.200\"/><path d=\"M3 14c3-2 6-2 9 0s6 2 9 0M3 19c3-2 6-2 9 0s6 2 9 0\"/>","t":"0 -0.65"},"HAB":{"n":"Jardins et paysages façonnés","c":"#B57F86","g":"<path d=\"M3.500 9.500h10.500l-1.300 10.500H4.800z\"/><path d=\"M6 9.500c0-5 5.500-5 5.500 0\"/><path d=\"M14 15.500 20.500 9M18.500 6l3.500 3.500\"/>","t":"-0.5 -0.2"}};
+const mhGly=(t,sz)=>{const m=MT[t];return `<i class="mvg" style="--mc:${m.c}${sz?';--mz:'+sz+'px':''}" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(${m.t||'0 0'})">${m.g}</g></svg></i>`};
+const mhTer=s=>{const e=MH.E[s[0]],R={h:0,p:1,c:2},F={t:0,f:1,p:2},k={};e[0].forEach((a,i)=>{const v=R[a[2]]*10+F[a[3]]+i/100;if(k[a[1]]===undefined||v<k[a[1]])k[a[1]]=v});return Object.keys(k).sort((a,b)=>k[a]-k[b])};
+const mhChip=s=>{if(!(typeof MH!=='undefined'&&MH.E[s[0]]))return'';const T=mhTer(s),L=T.map(t=>MT[t].n).join(' ; ');return `<button type="button" class="mvs" data-go="1" aria-label="Milieu${T.length>1?'x':''} : ${esc(L)}. Voir le détail" title="${esc(L)}">${T.slice(0,2).map((t,i)=>`<span class="mv1${i?' sec':''}" style="--mc:${MT[t].c}">${mhGly(t)}<u>${t}</u></span>`).join('')}${T.length>2?`<small class="mvn">+${T.length-2}</small>`:''}</button>`};
+const mhPanel=s=>{const e=typeof MH!=='undefined'&&MH.E[s[0]];if(!e)return'';const CX={h:'milieu naturel',p:'présence spontanée',c:'cultivée'},FO={t:'typique',f:'fréquent',p:'possible'};
+  return '<div class="mvp">'+mhTer(s).map(t=>{const m=MT[t],vu={},L=e[0].filter(a=>a[1]===t&&!vu[a[0]]&&(vu[a[0]]=1));
+    return `<section class="mvb" style="--mc:${m.c}"><header class="mvh">${mhGly(t,40)}<b>${esc(m.n)}</b></header><ul>${L.map(a=>`<li><span>${esc(MH.L[a[0]])}</span><span class="mvm"><i>${FO[a[3]]}</i><i>${CX[a[2]]}</i></span></li>`).join('')}</ul></section>`}).join('')+'</div>'};
 const srcBlock=s=>{const o=SD[s[0]];return o?(o.statut?`<br><small>${esc(o.statut)}</small>`:'')+(o.sources?`<br><small>Sources botaniques : ${srcLinks(o.sources)}</small>`:''):''};
 const EXM={'Soleil':[2],'Soleil à mi-ombre':[1,2],'Mi-ombre':[1],'Mi-ombre à ombre':[0,1],'Ombre':[0]},HUM={'Sec':[0],'Sec à frais':[0,1],'Frais':[1],'Frais à humide':[1,2],'Humide':[2],'Aquatique':[3]},PHM={'Acide':[0],'Acide à neutre':[0,1],'Neutre':[1],'Neutre à alcalin':[1,2],'Tous pH':[0,1,2]};
 const segs=(on,lb)=>on?'<span class="sc" aria-hidden="true">'+lb.map((l,i)=>'<i class="'+(on.includes(i)?'on':'')+'" title="'+l+'"></i>').join('')+'</span>':'<span></span>';
@@ -4005,6 +4047,7 @@ function detHtml(sp,P,D,two,_tg){
   const SDK={Port:'port',Feuilles:'feuilles','Écorce et rameaux':'ecorce',Fleurs:'fleurs',Fruits:'fruits',Floraison:'floraison',Milieu:'milieu'},sdv=(s,k)=>{const o=SD[s[0]]||{},d=DSC[s[0]]||{};return o[SDK[k]]||d[SDK[k]]||''};
   const GEN={Port:1,Feuilles:2,Floraison:3},val=(s,x,k)=>{if(k==='Habitats')return mhTxt(s);const v=sdv(s,k)||rtx(x,k)||(GEN[k]&&(GD[gen(s[0])]||[])[GEN[k]])||'';return k==='Floraison'?mois(v):v};
   const KEYS=['Port','Feuilles','Fleurs','Fruits','Écorce et rameaux','Floraison','Milieu','Habitats'];
+  const KS=two?KEYS:KEYS.filter(k=>k!=='Habitats');
   const gal=sp.map((s,i)=>{const L=(P[i]||[]).slice(0,6);return L.length?(sp.length>1?`<p class="czt"><em>${s[0]}</em></p>`:'')+'<div class="gal">'+L.map((x,j)=>`<img src="${x.src}" referrerpolicy="no-referrer" loading="lazy" alt="${esc(s[1])}, photo ${j+1}" tabindex="0" role="button" aria-label="Agrandir : ${esc(s[1])}, photo ${j+1}">`).join('')+'</div>':''}).join('');
   const nt=D.some(x=>x&&x.dl==='en')?'Une partie des descriptions vient de Wikipédia en anglais.':'';
   const src=(extra)=>`<details class="acc src"><summary>Sources et crédits</summary>${sp.map((s,i)=>{const a=cache[s[0]];return `<p><em>${s[0]}</em> : ${a&&a.page?`<a href="${a.page}" target="_blank" rel="noopener">Wikipédia</a>`:'Wikipédia'}${a&&a.inat?` · <a href="https://www.inaturalist.org/taxa/${a.inat.id}" target="_blank" rel="noopener">iNaturalist</a>`:''}<br><small>Photos : ${esc([...new Set((P[i]||[]).slice(0,6).map(x=>frLic(x.lic)||'Wikimedia Commons'))].join(' ; ')||'–')}</small>${keySrc(s)}${mhSrc(s)}${srcBlock(s)}</p>`}).join('')}${extra||''}${nt?`<p><small>${nt}</small></p>`:''}<p><small>Textes de genre et de famille : version bêta, à recouper.</small></p></details>`;
@@ -4014,18 +4057,30 @@ function detHtml(sp,P,D,two,_tg){
   const o=SD[s[0]]||{},hg=(H[gen(s[0])]||'').split('|');
   const rust=rustS(o.rusticite||(x.r.length?x.r.join(' '):(hg[0]&&!/selon l|\(/.test(hg[0])?hg[0]:''))||(/^Très variable/.test(g[11]||'')||!/\(/.test(g[11]||'')?g[11]:''));
   let h=gal;
-  const dl=KEYS.map(k=>{const v=brief(val(s,x,k),k==='Milieu'||k==='Floraison'?80:140);return v?`<dt>${k==='Écorce et rameaux'?'Écorce':k}</dt><dd>${esc(v)}</dd>`:''}).join('');
+  const dl=KS.map(k=>{const v=brief(val(s,x,k),k==='Milieu'||k==='Floraison'?80:140);return v?`<dt>${k==='Écorce et rameaux'?'Écorce':k}</dt><dd>${esc(v)}</dd>`:''}).join('');
   const cf=brief(confOf(s),210);
   if(dl)h+=`<p class="det-h">Portrait</p><dl class="pf">${dl}</dl>`;
   if(cf)h+=`<p class="dnote"><b>À ne pas confondre</b>${esc(cf)}</p>`;
+  const n1=h.length;h+=mhPanel(s);
   const R=[];if(g[7])R.push(c1(ico('soleil'),segs(EXM[g[7]],['','','']),g[7]));if(g[8])R.push(c1(ico('sol'),'',SOLS[g[8]]||g[8]));if(g[9])R.push(c1(ico('eau'),segs(HUM[g[9]],['','','','']),g[9]));if(g[10])R.push(c1(ico('ph'),segs(PHM[g[10]],['','','']),g[10]));if(rust)R.push(c1(ico('froid'),'',rust));
   if(R.length)h+=`<p class="det-h">Conditions</p><div class="cds">${R.join('')}</div>`;
+  const n2=h.length;
   // À découvrir : la phrase de présentation, suivie de la curiosité sourcée quand il y en a une (une seule rubrique)
   {const c=CU[s[0]];let d='';if(c)try{d=new URL(c[1]).hostname.replace(/^www\./,'')}catch(e){}
    if(AS[s[0]]||c)h+=`<p class="det-h">À découvrir</p><p class="disc">${esc(AS[s[0]]||'')}${c?`${AS[s[0]]?' ':''}${esc(c[0])} <a class="csrc" href="${esc(c[1])}" target="_blank" rel="noopener">Source : ${esc(d)}</a>`:''}</p>`}
   const gs=(!o.rusticite&&!o.usage&&(!x.r.length||!x.u.length)&&hg[3])?`<p><small>Repères de culture : ${esc(hg[3])}</small></p>`:'';
-  return h+src(gs);
+  // trois volets : Reconnaître (photos, portrait, confusions) · Habitat (milieu, conditions) · Savoir plus (anecdote, sources)
+  const T=[['Reconnaître',h.slice(0,n1),''],['Habitat',h.slice(n1,n2),''],['En savoir plus',h.slice(n2)+src(gs),'']].filter(t=>t[1]);
+  if(T.length<2)return h+src(gs);
+  return `<div class="dtabs" role="tablist">${T.map((t,i)=>`<button type="button" role="tab" aria-selected="${i?'false':'true'}" data-t="${i}">${t[0]}</button>`).join('')}</div>`+T.map((t,i)=>`<div class="dtp" role="tabpanel" data-t="${i}"${i?' hidden':''}>${t[1]}</div>`).join('');
 }
+document.addEventListener('click',e=>{const g=e.target.closest&&e.target.closest('.mvs[data-go]');if(g){
+  if(g.closest('#sh')){if(shS()!=='full')setSh('full')}else{const d=document.getElementById('fch-dt');if(d&&d.hidden)document.getElementById('fch-more').click()}
+  const q=(g.closest('#sh')?'#sh-dt':'#fch-dt')+' .dtabs button[data-t="1"]';let n=0;(function go(){const t=document.querySelector(q);if(t)t.click();else if(n++<25)setTimeout(go,120)})();return}
+  const b=e.target.closest&&e.target.closest('.dtabs button');if(!b)return;const w=b.parentNode.parentNode;
+  b.parentNode.querySelectorAll('button').forEach(x=>x.setAttribute('aria-selected',String(x===b)));
+  w.querySelectorAll(':scope>.dtp').forEach(p=>{p.hidden=p.dataset.t!==b.dataset.t});
+  const sc=w.closest('#shb,#fcb');if(sc&&sc.scrollTop>b.parentNode.offsetTop)sc.scrollTop=b.parentNode.offsetTop;if(typeof fitSh==='function')fitSh()});
 
 // Fiche d'entraînement (rappel des différences avant de s'exercer sur une confusion)
 async function openSheet(c,w,o){usage('fiche');
@@ -4080,7 +4135,7 @@ async function showSheet(good,w,v){
     const pk=Object.keys(C).find(k=>{const a=k.split('|');return a.includes(c[0])&&a.includes(w[0])}),y=whyHtml(c,w),rec=nc>=2?` · confondues ${Math.round(nc)} fois`:'';
     const dw=y||rec?`<p class="dwhy">${y?'On les confond : '+esc(y):''}${rec}</p>`:'',mn=mnHtml(mnOf(c[0],w[0]));
     cp=`<p class="lab">À retenir</p><div class="erw">${col(c,true)}${col(w,false)}</div>${pk||mn?`<div class="diff"><p class="lab">Pour ne pas les confondre</p>${pk?`<p>${esc(brief(C[pk],240))}</p>`:''}${mn}${dw}</div>`:dw?`<div class="diff">${dw}</div>`:''}`;
-  }else cp=(!good&&!w?`<div class="key"><b>${bg?`Le genre est juste : il manquait l'espèce, <em>${esc(c[0])}</em>`:v?`« ${esc(v)} » n'est pas dans la liste`:'Pas de réponse : voici comment la reconnaître'}</b></div>`:'')+'<p class="lab">À retenir</p>'+qli(q3(c),true);
+  }else cp=(!good&&!w?`<div class="key"><b>${bg?`Le genre est juste : il manquait l'espèce, <em>${esc(c[0])}</em>`:v?`« ${esc(v)} » n'est pas dans la liste`:'Pas de réponse : voici comment la reconnaître'}</b></div>`:'')+labRow(c)+qli(q3(c),true);
   $('shb').innerHTML=`<div class="cp">${cp}</div><button class="more" id="sh-more">${moreLbl(false)}</button><div class="dt" id="sh-dt"><p class="ld">Chargement…</p></div>`;
   $('shb').scrollTop=0;fitSh();setTimeout(fitSh,350);
   if(window.ResizeObserver){if(shRO)shRO.disconnect();shRO=new ResizeObserver(fitSh);const c0=document.querySelector('#shb .cp');if(c0)shRO.observe(c0)}

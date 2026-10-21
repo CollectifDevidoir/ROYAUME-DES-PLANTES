@@ -13,7 +13,7 @@ const py=a=>spawnSync('python3',[path.resolve(__dirname,'habitats_vers_appli.py'
       liens:S.filter(s=>!/Milieux et habitats : <a href="https?:/.test(mhSrc(s))).map(s=>s[0]),
       cult:ex.length&&ex.every(s=>/\(cultivée\)/.test(mhTxt(s))),
       fiche:(()=>{const s=S.find(s=>MH.E[s[0]]);const d=document.createElement('div');d.innerHTML=detHtml([s],[[]],[{r:[],rows:{}}],false);
-        return[...d.querySelectorAll('dt')].some(x=>x.textContent==='Habitats')&&/Milieux et habitats/.test(d.querySelector('details.src').textContent)})()}},T);
+        return !!d.querySelector('.mvp .mvb li')&&/Milieux et habitats/.test(d.querySelector('details.src').textContent)})()}},T);
   ok(r.maj,'table MH de l\'appli identique au fichier (relancer outils/habitats_vers_appli.py --ecrire sinon)');
   ok(!r.sans.length,'chaque espèce affiche au moins un habitat '+(r.sans.length?JSON.stringify(r.sans.slice(0,5)):''));
   ok(!r.liens.length,'chaque espèce a ses sources d\'habitat dans « Sources et crédits » '+(r.liens.length?JSON.stringify(r.liens.slice(0,5)):''));
