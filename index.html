@@ -732,8 +732,8 @@ body:not(.nostick) .rank::after{content:'';position:absolute;left:0;right:0;top:
 .mvs:focus-visible{outline:2px solid var(--ac);outline-offset:3px;border-radius:99px}
 .labr{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:2px 0 4px}
 .labr .lab{margin:0;white-space:nowrap}
-.mvp{display:grid;gap:10px}
-.mvb{border-radius:20px;overflow:hidden;background:var(--card);border:1px solid color-mix(in srgb,var(--mc) 40%,var(--bd));box-shadow:0 6px 24px -14px rgba(20,60,30,.45)}
+.mvp{display:grid;gap:8px;margin-bottom:4px}
+.mvb{border-radius:20px;overflow:hidden;background:var(--card);border:1px solid color-mix(in srgb,var(--mc) 40%,var(--bd))}
 .mvh{display:flex;gap:12px;align-items:center;padding:8px 14px 8px 8px;background:color-mix(in srgb,var(--mc) 15%,var(--card))}
 .mvh b{display:block;font:600 1.02rem/1.15 var(--ft);color:var(--fg)}
 .mvb ul{list-style:none;margin:0;padding:2px 14px 6px}
@@ -747,6 +747,10 @@ body:not(.nostick) .rank::after{content:'';position:absolute;left:0;right:0;top:
 .dtabs button{flex:1;appearance:none;border:0;background:none;padding:10px 4px;border-radius:20px;font:600 .8rem var(--fx);color:var(--mu);cursor:pointer;transition:background .2s,color .2s,transform .15s}
 .dtabs button:active{transform:scale(.94)}
 .dtabs button[aria-selected=true]{background:var(--ac);color:var(--card)}
+.dtps{display:grid}
+.dtp{grid-area:1/1;min-width:0;transition:opacity .18s}
+.dtp.off{visibility:hidden;opacity:0;pointer-events:none;transition:opacity .18s,visibility 0s .18s}
+@media(prefers-reduced-motion:reduce){.dtp,.dtp.off{transition:none}}
 .dtp>.det-h:first-child{margin-top:4px}
 .dnote{margin:10px 0 2px;padding:2px 0 2px 11px;border-left:3px solid #c4631a;font-size:.88rem;line-height:1.4;color:var(--fg)}
 .dnote b{display:block;font:600 .64rem var(--fx);letter-spacing:.08em;text-transform:uppercase;color:#a8541a;margin-bottom:1px}
@@ -4072,15 +4076,16 @@ function detHtml(sp,P,D,two,_tg){
   // trois volets : Reconnaître (photos, portrait, confusions) · Habitat (milieu, conditions) · Savoir plus (anecdote, sources)
   const T=[['Reconnaître',h.slice(0,n1),''],['Habitat',h.slice(n1,n2),''],['En savoir plus',h.slice(n2)+src(gs),'']].filter(t=>t[1]);
   if(T.length<2)return h+src(gs);
-  return `<div class="dtabs" role="tablist">${T.map((t,i)=>`<button type="button" role="tab" aria-selected="${i?'false':'true'}" data-t="${i}">${t[0]}</button>`).join('')}</div>`+T.map((t,i)=>`<div class="dtp" role="tabpanel" data-t="${i}"${i?' hidden':''}>${t[1]}</div>`).join('');
+  return `<div class="dtabs" role="tablist">${T.map((t,i)=>`<button type="button" role="tab" aria-selected="${i?'false':'true'}" data-t="${i}">${t[0]}</button>`).join('')}</div>`+'<div class="dtps">'+T.map((t,i)=>`<div class="dtp${i?' off':''}" role="tabpanel" data-t="${i}"${i?' aria-hidden="true"':''}>${t[1]}</div>`).join('')+'</div>';
 }
 document.addEventListener('click',e=>{const g=e.target.closest&&e.target.closest('.mvs[data-go]');if(g){
   if(g.closest('#sh')){if(shS()!=='full')setSh('full')}else{const d=document.getElementById('fch-dt');if(d&&d.hidden)document.getElementById('fch-more').click()}
   const q=(g.closest('#sh')?'#sh-dt':'#fch-dt')+' .dtabs button[data-t="1"]';let n=0;(function go(){const t=document.querySelector(q);if(t)t.click();else if(n++<25)setTimeout(go,120)})();return}
-  const b=e.target.closest&&e.target.closest('.dtabs button');if(!b)return;const w=b.parentNode.parentNode;
+  const b=e.target.closest&&e.target.closest('.dtabs button');if(!b||b.getAttribute('aria-selected')==='true')return;const w=b.parentNode.parentNode;
   b.parentNode.querySelectorAll('button').forEach(x=>x.setAttribute('aria-selected',String(x===b)));
-  w.querySelectorAll(':scope>.dtp').forEach(p=>{p.hidden=p.dataset.t!==b.dataset.t});
-  const sc=w.closest('#shb,#fcb');if(sc&&sc.scrollTop>b.parentNode.offsetTop)sc.scrollTop=b.parentNode.offsetTop;if(typeof fitSh==='function')fitSh()});
+  w.querySelectorAll('.dtp').forEach(p=>{const off=p.dataset.t!==b.dataset.t;p.classList.toggle('off',off);p.setAttribute('aria-hidden',String(off))});
+  // la hauteur ne change pas (panneaux empilés) : on ramène seulement le début du nouvel onglet sous la barre s'il était hors de vue
+  const sc=w.closest('#shb,#fcb');if(sc){const y=b.parentNode.offsetTop;if(sc.scrollTop>y)sc.scrollTop=y}});
 
 // Fiche d'entraînement (rappel des différences avant de s'exercer sur une confusion)
 async function openSheet(c,w,o){usage('fiche');
