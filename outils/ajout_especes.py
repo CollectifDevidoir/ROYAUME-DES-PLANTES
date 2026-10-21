@@ -2,7 +2,8 @@
 # (donnees/nouveaux-genres-familles.json), leurs photos (donnees/photos-nouvelles.json), les 3 rangs supplémentaires
 # (donnees/rangs.json) et les textes « Plus de 700 ».
 # Seules les espèces complètes entrent : 3 à 5 clés de 55 caractères au plus, 2 sources au moins, une phrase,
-# port et feuilles décrits, et au moins 3 photos libres trouvées sur iNaturalist. Les autres sont listées, avec la raison.
+# port et feuilles décrits, au moins 3 photos libres trouvées sur iNaturalist, et au moins un milieu et habitat vérifié et sourcé
+# dans donnees/milieux-habitats.csv (nomenclature v1.0, contrôlé par outils/habitats_vers_appli.py). Les autres sont listées, avec la raison.
 # Noms acceptés en plus du nom affiché (donnees/synonymes.json) et compléments de familles (donnees/familles-complements.json).
 # Usage : python3 outils/ajout_especes.py [--ecrire]   (sans option : bilan seulement, rien n'est modifié)
 import json,re,sys,csv,io,pathlib
@@ -12,6 +13,7 @@ GF=json.load(open(D/'nouveaux-genres-familles.json',encoding='utf-8'))
 PH=json.load(open(D/'photos-nouvelles.json',encoding='utf-8'))['especes'] if (D/'photos-nouvelles.json').exists() else {}
 s=(R/'index.html').read_text(encoding='utf-8')
 qa=s.index('const Q={');deja=set(re.findall(r'^"([^"]+)":',s[qa:s.index('\n};',qa)],re.M))
+MHV={r['Nom latin'] for r in csv.DictReader(open(D/'milieux-habitats.csv',encoding='utf-8',newline=''),delimiter=';') if r['Confiance']=='verified'}
 garde,refus=[],[]
 for x in E:
     k=x.get('cles') or [];why=[]
@@ -21,6 +23,7 @@ for x in E:
     if not x.get('phrase'):why.append('pas de phrase')
     d=x.get('description') or {}
     if not d.get('port') or not d.get('feuilles'):why.append('description incomplète')
+    if x['latin'] not in MHV:why.append('milieu et habitat non renseignés (donnees/milieux-habitats.csv)')
     p=PH.get(x['latin'])
     if not p:why.append('aucune photo libre trouvée' if PH else 'photos pas encore vérifiées')
     elif len(p[5])<3:why.append(f'{len(p[5])} photo(s) seulement')
