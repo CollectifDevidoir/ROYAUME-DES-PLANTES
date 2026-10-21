@@ -1,0 +1,452 @@
+{
+ "_lisez_moi": "Nomenclature pédagogique des milieux, version 1.0 du 20/10/2026, extraite de donnees/milieux/Nomenclature_milieux_Royaume_des_Plantes.xlsx (le classeur reste la référence). Utilisée par outils/milieux_habitats.py pour valider donnees/milieux-habitats.json.",
+ "version": "1.0",
+ "territoires": [
+  {
+   "id": "FOR",
+   "nom": "Forêts et sous-bois",
+   "sous_titre": "Sous la canopée",
+   "description": "Boisements de feuillus, de conifères ou mixtes, avec leur flore de sous-bois.",
+   "eunis": "G — Boisements, forêts et autres habitats boisés",
+   "couleur": "#456B45"
+  },
+  {
+   "id": "LIS",
+   "nom": "Haies, lisières et fourrés",
+   "sous_titre": "Entre deux milieux",
+   "description": "Haies, bordures de bois, fourrés et formations arbustives de transition.",
+   "eunis": "F — Landes, fourrés et toundras ; G — milieux boisés ; E — certains ourlets et clairières",
+   "couleur": "#79864B"
+  },
+  {
+   "id": "PRA",
+   "nom": "Prairies et pelouses",
+   "sous_titre": "Les milieux ouverts",
+   "description": "Prairies, pâtures et pelouses herbacées, des sols secs aux pelouses d'altitude.",
+   "eunis": "E — Prairies et terrains dominés par des herbacées non graminoïdes, des mousses ou des lichens",
+   "couleur": "#C6A24D"
+  },
+  {
+   "id": "LAN",
+   "nom": "Landes, bruyères et fourrés méditerranéens",
+   "sous_titre": "Les végétations de broussailles",
+   "description": "Landes à bruyères, maquis et garrigues : végétations basses ou arbustives liées à des conditions écologiques particulières.",
+   "eunis": "F — Landes, fourrés et toundras",
+   "couleur": "#96725B"
+  },
+  {
+   "id": "HUM",
+   "nom": "Marais, prairies humides et tourbières",
+   "sous_titre": "Là où le sol reste humide",
+   "description": "Milieux saturés en eau ou régulièrement inondés : marais, roselières, tourbières, bas-marais et prairies humides.",
+   "eunis": "D — Tourbières hautes et bas-marais ; E — prairies humides ; C — certaines végétations de bordure aquatique",
+   "couleur": "#4D8B83"
+  },
+  {
+   "id": "EAU",
+   "nom": "Mares, rivières et berges",
+   "sous_titre": "Les eaux douces",
+   "description": "Plans d'eau, cours d'eau et végétations qui bordent l'eau douce.",
+   "eunis": "C — Eaux de surface continentales",
+   "couleur": "#4C8FAF"
+  },
+  {
+   "id": "ROC",
+   "nom": "Rochers, éboulis et sols superficiels",
+   "sous_titre": "La vie sur peu de terre",
+   "description": "Falaises intérieures, affleurements, éboulis et surfaces où la végétation est clairsemée ou le sol très mince.",
+   "eunis": "H — Habitats continentaux sans végétation ou à végétation clairsemée ; E pour certaines pelouses rases",
+   "couleur": "#8C877C"
+  },
+  {
+   "id": "LIT",
+   "nom": "Littoral, dunes et rivages salés",
+   "sous_titre": "La rencontre de la terre et de la mer",
+   "description": "Dunes, sables littoraux, rivages rocheux et végétations soumises au sel, au vent ou aux embruns.",
+   "eunis": "B — Habitats côtiers",
+   "couleur": "#D49A62"
+  },
+  {
+   "id": "HAB",
+   "nom": "Jardins et paysages façonnés",
+   "sous_titre": "Les plantes auprès de nous",
+   "description": "Jardins, parcs, cultures, plantations et sous-zones urbaines : les milieux où les humains plantent, entretiennent ou transforment la végétation.",
+   "eunis": "I — Habitats agricoles, horticoles et domestiques régulièrement ou récemment cultivés ; J — Zones bâties, sites industriels et autres habitats artificiels",
+   "couleur": "#B57F86"
+  }
+ ],
+ "sous_milieux": [
+  {
+   "id": "FOR-01",
+   "libelle": "Forêts de feuillus caducs",
+   "territoires": [
+    "FOR"
+   ],
+   "eunis": "G1"
+  },
+  {
+   "id": "FOR-02",
+   "libelle": "Boisements de feuillus sempervirents",
+   "territoires": [
+    "FOR"
+   ],
+   "eunis": "G2"
+  },
+  {
+   "id": "FOR-03",
+   "libelle": "Forêts de conifères",
+   "territoires": [
+    "FOR"
+   ],
+   "eunis": "G3"
+  },
+  {
+   "id": "FOR-04",
+   "libelle": "Forêts mixtes",
+   "territoires": [
+    "FOR"
+   ],
+   "eunis": "G4"
+  },
+  {
+   "id": "LIS-01",
+   "libelle": "Haies et lignes d'arbres",
+   "territoires": [
+    "LIS"
+   ],
+   "eunis": "G5 (à préciser)"
+  },
+  {
+   "id": "LIS-02",
+   "libelle": "Lisières et clairières herbacées",
+   "territoires": [
+    "LIS"
+   ],
+   "eunis": "E5"
+  },
+  {
+   "id": "LIS-03",
+   "libelle": "Fourrés et manteaux arbustifs tempérés",
+   "territoires": [
+    "LIS"
+   ],
+   "eunis": "F3 (indicatif)"
+  },
+  {
+   "id": "PRA-01",
+   "libelle": "Pelouses et prairies sèches",
+   "territoires": [
+    "PRA"
+   ],
+   "eunis": "E1"
+  },
+  {
+   "id": "PRA-02",
+   "libelle": "Prairies mésophiles",
+   "territoires": [
+    "PRA"
+   ],
+   "eunis": "E2"
+  },
+  {
+   "id": "PRA-03",
+   "libelle": "Prairies humides",
+   "territoires": [
+    "PRA",
+    "HUM"
+   ],
+   "eunis": "E3"
+  },
+  {
+   "id": "PRA-04",
+   "libelle": "Pelouses alpines et subalpines",
+   "territoires": [
+    "PRA",
+    "ROC"
+   ],
+   "eunis": "E4"
+  },
+  {
+   "id": "PRA-05",
+   "libelle": "Ourlets herbacés",
+   "territoires": [
+    "LIS",
+    "PRA"
+   ],
+   "eunis": "E5 (selon contexte)"
+  },
+  {
+   "id": "LAN-01",
+   "libelle": "Landes tempérées à bruyères",
+   "territoires": [
+    "LAN"
+   ],
+   "eunis": "F4"
+  },
+  {
+   "id": "LAN-02",
+   "libelle": "Maquis et fourrés méditerranéens",
+   "territoires": [
+    "LAN"
+   ],
+   "eunis": "F5"
+  },
+  {
+   "id": "HUM-01",
+   "libelle": "Tourbières hautes et bombées",
+   "territoires": [
+    "HUM"
+   ],
+   "eunis": "D1"
+  },
+  {
+   "id": "HUM-02",
+   "libelle": "Bas-marais, tourbières de transition et marais tourbeux",
+   "territoires": [
+    "HUM"
+   ],
+   "eunis": "D2–D4 (selon habitat)"
+  },
+  {
+   "id": "HUM-03",
+   "libelle": "Prairies inondables ou longuement humides",
+   "territoires": [
+    "HUM",
+    "PRA"
+   ],
+   "eunis": "E3"
+  },
+  {
+   "id": "HUM-04",
+   "libelle": "Roselières et végétations palustres",
+   "territoires": [
+    "HUM",
+    "EAU"
+   ],
+   "eunis": "C3 / code précis à vérifier"
+  },
+  {
+   "id": "EAU-01",
+   "libelle": "Mares, étangs et plans d'eau",
+   "territoires": [
+    "EAU"
+   ],
+   "eunis": "C1"
+  },
+  {
+   "id": "EAU-02",
+   "libelle": "Rivières et cours d'eau",
+   "territoires": [
+    "EAU"
+   ],
+   "eunis": "C2"
+  },
+  {
+   "id": "EAU-03",
+   "libelle": "Berges et zones littorales d'eau douce",
+   "territoires": [
+    "EAU",
+    "HUM"
+   ],
+   "eunis": "C3"
+  },
+  {
+   "id": "ROC-01",
+   "libelle": "Éboulis et pierriers",
+   "territoires": [
+    "ROC"
+   ],
+   "eunis": "H2"
+  },
+  {
+   "id": "ROC-02",
+   "libelle": "Falaises intérieures et dalles rocheuses",
+   "territoires": [
+    "ROC"
+   ],
+   "eunis": "H3"
+  },
+  {
+   "id": "ROC-03",
+   "libelle": "Sols nus ou à végétation clairsemée",
+   "territoires": [
+    "ROC"
+   ],
+   "eunis": "H5 (à préciser)"
+  },
+  {
+   "id": "ROC-04",
+   "libelle": "Pelouses d'altitude et rochers en mosaïque",
+   "territoires": [
+    "ROC",
+    "PRA"
+   ],
+   "eunis": "E4 + H2/H3 selon la parcelle"
+  },
+  {
+   "id": "LIT-01",
+   "libelle": "Plages sableuses et dunes",
+   "territoires": [
+    "LIT"
+   ],
+   "eunis": "B1"
+  },
+  {
+   "id": "LIT-02",
+   "libelle": "Rivages de galets",
+   "territoires": [
+    "LIT"
+   ],
+   "eunis": "B2"
+  },
+  {
+   "id": "LIT-03",
+   "libelle": "Falaises et rivages rocheux côtiers",
+   "territoires": [
+    "LIT"
+   ],
+   "eunis": "B3"
+  },
+  {
+   "id": "LIT-04",
+   "libelle": "Prés salés et végétation de transition côtière",
+   "territoires": [
+    "LIT"
+   ],
+   "eunis": "B — sous-type à identifier"
+  },
+  {
+   "id": "HAB-01",
+   "libelle": "Jardins, parcs et plantes ornementales",
+   "territoires": [
+    "HAB"
+   ],
+   "eunis": "I2 (indicatif)"
+  },
+  {
+   "id": "HAB-02",
+   "libelle": "Cultures et jardins productifs",
+   "territoires": [
+    "HAB"
+   ],
+   "eunis": "I1 (indicatif)"
+  },
+  {
+   "id": "HAB-03",
+   "libelle": "Murs, friches et espaces très artificialisés",
+   "territoires": [
+    "HAB"
+   ],
+   "eunis": "J — sous-type à identifier"
+  }
+ ],
+ "contextes": [
+  "habitat_naturel",
+  "presence_spontanee_secondaire",
+  "cultive_ou_plante"
+ ],
+ "forces": [
+  "typique",
+  "frequent",
+  "possible"
+ ],
+ "confiances": [
+  "verified",
+  "needs_review"
+ ],
+ "regles": [
+  {
+   "id": "R01",
+   "principe": "Une espèce peut être reliée à plusieurs territoires",
+   "application": "Ne jamais imposer une unique catégorie principale si les données écologiques justifient plusieurs associations."
+  },
+  {
+   "id": "R02",
+   "principe": "Habitat naturel distinct du milieu de culture",
+   "application": "Utiliser un champ de contexte séparé : habitat naturel/semi-naturel, présence spontanée secondaire, plante cultivée/plantée."
+  },
+  {
+   "id": "R03",
+   "principe": "La présence n'égale pas la caractérisation",
+   "application": "Ne pas afficher une espèce comme emblématique ou caractéristique d'un habitat sans source appropriée."
+  },
+  {
+   "id": "R04",
+   "principe": "Le type de plante ne détermine pas son habitat",
+   "application": "Arbre, arbuste, vivace, grimpante, Poacée sont des propriétés de la plante, pas des milieux."
+  },
+  {
+   "id": "R05",
+   "principe": "Les codes fins sont dépendants du site",
+   "application": "Le niveau EUNIS 2/3 doit être retenu uniquement si les conditions du milieu sont connues ; à défaut conserver le rattachement de famille et un statut à vérifier."
+  },
+  {
+   "id": "R06",
+   "principe": "Montagne et exposition sont des contextes transversaux",
+   "application": "Ne pas créer un code EUNIS fictif « montagne » ; une montagne combine forêts, prairies, rochers, zones humides et autres habitats."
+  },
+  {
+   "id": "R07",
+   "principe": "Séparer EUNIS et classement pédagogique",
+   "application": "Les neuf territoires sont des regroupements éditoriaux. Ils ne sont pas des catégories officielles EUNIS."
+  },
+  {
+   "id": "R08",
+   "principe": "Conserver une traçabilité par association espèce-milieu",
+   "application": "Chaque couple taxon-milieu doit avoir sa propre source, sa date de vérification et un niveau de confiance."
+  },
+  {
+   "id": "R09",
+   "principe": "Ne pas afficher les associations non vérifiées comme faits établis",
+   "application": "Si la donnée manque, masquer la vignette ou indiquer « information écologique à compléter » dans l'outil d'administration."
+  },
+  {
+   "id": "R10",
+   "principe": "Prévoir les statuts biogéographiques",
+   "application": "Pour les plantes non indigènes, séparer leur milieu d'origine documenté de leur présence cultivée ou naturalisée dans la région présentée."
+  },
+  {
+   "id": "R11",
+   "principe": "Les exemples du classeur sont des candidats",
+   "application": "La feuille « Exemples candidats » vérifie seulement que les taxons sont nommés dans le catalogue consulté ; leur association finale avec un milieu reste à sourcer."
+  }
+ ],
+ "sources": [
+  {
+   "titre": "OFB — Guide EUNIS, édition janvier 2025",
+   "role": "Référence principale pour les intitulés de niveau 1, clés de détermination et descriptions illustrées jusqu'au niveau 3.",
+   "url": "https://ofb.gouv.fr/doc/guide-de-determination-des-habitats-terrestres-et-marins-de-la-typologie-eunis",
+   "consulte": "Consulté le 20/10/2026"
+  },
+  {
+   "titre": "EUNIS — fiche habitat de lande F4",
+   "role": "Exemple d'une sous-catégorie EUNIS de lande tempérée et lien avec Calluna/Erica.",
+   "url": "https://eunis.eea.europa.eu/habitats/3195",
+   "consulte": "Consulté le 20/10/2026"
+  },
+  {
+   "titre": "EUNIS — fiche habitat de maquis F5",
+   "role": "Exemple d'une sous-catégorie EUNIS de formation méditerranéenne.",
+   "url": "https://eunis.eea.europa.eu/habitats/3496",
+   "consulte": "Consulté le 20/10/2026"
+  },
+  {
+   "titre": "EUNIS — fiche habitat forestier G1",
+   "role": "Exemple d'un habitat de forêt feuillue à un niveau détaillé.",
+   "url": "https://eunis.eea.europa.eu/habitats/4301",
+   "consulte": "Consulté le 20/10/2026"
+  },
+  {
+   "titre": "EUNIS — fiche dune B1",
+   "role": "Exemple d'une sous-catégorie EUNIS pour les rivages sableux/dunes.",
+   "url": "https://eunis.eea.europa.eu/habitats/3040",
+   "consulte": "Consulté le 20/10/2026"
+  },
+  {
+   "titre": "Catalogue public du Royaume des Plantes",
+   "role": "Source de contrôle des noms botaniques et noms vernaculaires présents dans l'application ; les exemples sont à valider écologiquement ensuite.",
+   "url": "https://github.com/CollectifDevidoir/ROYAUME-DES-PLANTES/blob/claude/improve-html-app-e7b6o4/index.html",
+   "consulte": "Consulté le 20/10/2026"
+  }
+ ]
+}
