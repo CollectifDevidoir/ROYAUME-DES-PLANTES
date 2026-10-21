@@ -16,7 +16,7 @@ const svg=n=>`<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><
       await pg.context().route(/inaturalist-open-data\.s3\.amazonaws\.com\/photos\/(\d+)\//,rt=>rt.fulfill({contentType:'image/svg+xml',body:svg(+rt.request().url().match(/photos\/(\d+)\//)[1])}));
       if(o.avant2)await o.avant2(pg)}});
     await r.p.evaluate(()=>{navigator.share=undefined;window.__copie='';navigator.clipboard.writeText=async t=>{window.__copie=t}});return r};
-  const serie=p=>p.evaluate(()=>JSON.stringify(dfSerie(dfJour())));
+  const serie=p=>p.evaluate(async()=>{await dqpPret();return JSON.stringify(dfSerie(dfJour()))});   // jours planifiés : le planning se charge d'abord
   const A=await appareil({seed:true}),p=A.p;
   // un autre appareil, avec un autre hasard et une progression : même série
   const B=await appareil({state:JSON.stringify({sp:{'Quercus robur':{b:4,s:9,e:1,d:0}},set:{goal:20,vib:false}})});

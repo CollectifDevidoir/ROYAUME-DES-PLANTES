@@ -7,7 +7,9 @@ const path=require('path'),fs=require('fs'),http=require('http'),os=require('os'
 const RAC=[path.resolve(__dirname,'..'),fs.realpathSync(os.tmpdir())],TYPES={'.html':'text/html; charset=utf-8','.js':'text/javascript','.json':'application/json','.css':'text/css','.svg':'image/svg+xml','.png':'image/png','.woff2':'font/woff2','.webmanifest':'application/manifest+json'};
 const LOCAL=/^http:\/\/127\.0\.0\.1:\d+\//;let srv=null;
 async function adresse(f){
-  if(!srv){srv=http.createServer((rq,rs)=>{const x=path.resolve(decodeURIComponent(new URL(rq.url,'http://l').pathname));
+  if(!srv){srv=http.createServer((rq,rs)=>{let x=path.resolve(decodeURIComponent(new URL(rq.url,'http://l').pathname));
+      // page copiée dans le dossier temporaire : le planning du défi reste celui du dépôt
+      if(/[\/\\]donnees[\/\\]defis\.json$/.test(x)&&!fs.existsSync(x))x=path.join(RAC[0],'donnees','defis.json');
       if(!RAC.some(r=>x.startsWith(r+path.sep))||/[\/\\]donnees[\/\\]photos\.json$/.test(x)||!fs.existsSync(x)||fs.statSync(x).isDirectory()){rs.writeHead(404);return rs.end()}
       rs.writeHead(200,{'content-type':TYPES[path.extname(x)]||'application/octet-stream','cache-control':'no-store'});fs.createReadStream(x).pipe(rs)});
     await new Promise(r=>srv.listen(0,'127.0.0.1',r));srv.unref()}
