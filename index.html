@@ -2846,8 +2846,9 @@ const wS=p=>{if(!p)return 1;const n=Date.now();let w=1+6*(1-rate(p))+.3*p.e;if(p
 function cfN(n){let c=0;for(const k in st.cf){const q=k.split('|');if(q[0]===n||q[1]===n)c+=st.cf[k]}return c}
 const CN={};S.forEach(s=>{CN[s[2]]=(CN[s[2]]||0)+1});
 // en mode Classique, chaque catégorie pèse selon sa taille dans le catalogue (et non selon le nombre de plantes déjà travaillées) : une catégorie très jouée ne monopolise pas les révisions
-function wt(a){const cc={};if(mode==='tout')a.forEach(s=>{cc[s[2]]=(cc[s[2]]||0)+1});
-  const w=a.map(s=>wS(st.sp[s[0]])*(1+.45*Math.min(cfN(s[0]),4))*(mode==='tout'?CN[s[2]]/cc[s[2]]:1));let r=Math.random()*w.reduce((x,y)=>x+y,0);for(let i=0;i<a.length;i++){r-=w[i];if(r<=0)return a[i]}return a[0]}
+// old : parmi les plantes déjà vues, les moins récemment revues d'abord (poids ×1 à ×4, ×4 après 6 semaines ; neutre si aucune date connue)
+function wt(a,old){const cc={};const now=Date.now();const age=s=>{const p=st.sp[s[0]],r=Math.max(p.l||0,Math.min(p.d||0,now));return r>0?1+Math.min(3,(now-r)/(14*864e5)):1};if(mode==='tout')a.forEach(s=>{cc[s[2]]=(cc[s[2]]||0)+1});
+  const w=a.map(s=>wS(st.sp[s[0]])*(1+.45*Math.min(cfN(s[0]),4))*(mode==='tout'?CN[s[2]]/cc[s[2]]:1)*(old?age(s):1));let r=Math.random()*w.reduce((x,y)=>x+y,0);for(let i=0;i<a.length;i++){r-=w[i];if(r<=0)return a[i]}return a[0]}
 const CM=new Set('Quercus Acer Tilia Fagus Carpinus Betula Fraxinus Platanus Prunus Malus Pinus Cedrus Taxus Hedera Buxus Rosa Lavandula Viburnum Cornus Hydrangea Salvia Geranium Euphorbia Sedum Hosta Iris Clematis Wisteria Vitis Parthenocissus Miscanthus Stipa Carex Festuca Aesculus Populus Salix Alnus Corylus Sambucus Crataegus Ligustrum Forsythia Lonicera Spiraea Philadelphus Weigela Ilex Laurus Photinia Choisya Rhododendron Magnolia Robinia Sorbus Ulmus Thuja Juniperus Pyracantha Cotoneaster Berberis Buddleja Syringa Bellis Urtica Trifolium Primula Viola Narcissus Lavatera Rosmarinus Pittosporum Prunus Ceanothus Hibiscus Cercis Liquidambar Ginkgo Pyrus Castanea Juglans'.split(' ')),SJ={};
 const GC={};S.forEach(s=>{const g=gen(s[0]);GC[g]=(GC[g]||0)+1});
 const seenN=()=>Object.keys(st.sp).length;
@@ -2874,16 +2875,16 @@ function pick(){
   const di=soon.findIndex(x=>x.q<=qN&&P0.some(y=>y[0]===x.n)); // 1) ancrage : revoir une plante tout juste vue (ou ratée) 3 à 6 questions plus tard
   if(di>=0){const n=soon.splice(di,1)[0].n;s=P0.find(y=>y[0]===n)}
   const dueL=seen.filter(x=>{const p=st.sp[x[0]];return p.b>=3&&p.d<=now}); // validations et révisions arrivées à échéance
-  if(!s&&dueL.length&&Math.random()<Math.min(.65,.22+.02*dueL.length))s=wt(dueL); // 2) entretien d'une plante acquise arrivée à échéance
+  if(!s&&dueL.length&&Math.random()<Math.min(.73,.22+.02*dueL.length))s=wt(dueL,1); // 2) entretien d'une plante acquise arrivée à échéance
   const gaps=seen.filter(x=>{const p=st.sp[x[0]];return(p.e>0&&p.b<4)||(p.s>=2&&rate(p)<.7)});
   const nm=seen.filter(x=>st.sp[x[0]].b<=3),nmA=nm.filter(x=>{const p=st.sp[x[0]];return !(p.b===3&&p.d>now)}),cons=nm.filter(x=>st.sp[x[0]].d<=now); // 3) plantes non acquises : celles dont l'échéance est passée reviennent en priorité
-  if(!s&&cons.length&&Math.random()<Math.min(.5,.12+.03*cons.length))s=wt(cons);
+  if(!s&&cons.length&&Math.random()<Math.min(.5,.12+.03*cons.length))s=wt(cons,1);
   if(!s){ // 4) équilibre nouvelles espèces / révisions, selon le retard accumulé
     const ms=st.m[mode]||(st.m[mode]={n:0,g:7}),due=gaps.filter(x=>st.sp[x[0]].d<=now);
-    const pNew=nmA.length<4?.7:nmA.length<10?.5:nmA.length<20?.35:.22;
-    if(gaps.length&&(ms.n>=ms.g||!fresh.length)){s=wt(due.length?due:gaps);ms.n=0;ms.g=gapN(gaps.length)}
+    const pNew=1-1.12*(1-(nmA.length<4?.7:nmA.length<10?.5:nmA.length<20?.35:.22)); // +12 % (relatif) de chances de revoir une plante déjà connue plutôt qu'une nouvelle
+    if(gaps.length&&(ms.n>=ms.g||!fresh.length)){s=wt(due.length?due:gaps,1);ms.n=0;ms.g=gapN(gaps.length)}
     else if(fresh.length&&(Math.random()<pNew||!nmA.length)){ms.n++;s=wf(fresh)}
-    else if(nm.length)s=wt(nm);
+    else if(nm.length)s=wt(nm,1);
     else s=wt(P.length?P:S);
   }
   return s;
