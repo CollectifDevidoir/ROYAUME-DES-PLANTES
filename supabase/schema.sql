@@ -24,6 +24,9 @@ create table if not exists public.profils (
   maj       timestamptz not null default now()
 );
 
+-- Apparaître dans le classement général du défi (oui par défaut ; les amis voient toujours mes chiffres).
+alter table public.profils add column if not exists visible boolean not null default true;
+
 create table if not exists public.amities (
   user_id uuid not null references public.profils(id) on delete cascade,
   ami_id  uuid not null references public.profils(id) on delete cascade,
@@ -141,7 +144,7 @@ end $$;
 create or replace function public._profil_json(p profils) returns json
 language sql stable as $$
   select json_build_object('pseudo', p.pseudo, 'code_ami', p.code_ami, 'rang', p.rang,
-    'acquises', p.acquises, 'reussite', p.reussite, 'serie', p.serie)
+    'acquises', p.acquises, 'reussite', p.reussite, 'serie', p.serie, 'visible', p.visible)
 $$;
 
 -- ---------- Profil ----------
@@ -181,6 +184,16 @@ begin
   insert into jours (user_id, jour, exercices, justes, nouvelles)
   values (_moi(), p_jour, greatest(0, least(p_exercices, 5000)), greatest(0, least(p_justes, p_exercices, 5000)), greatest(0, least(p_nouvelles, 5000)))
   on conflict (user_id, jour) do update set exercices = excluded.exercices, justes = excluded.justes, nouvelles = excluded.nouvelles;
+end $$;
+
+-- Montre ou cache mon profil dans le classement général du défi.
+create or replace function public.choisir_visibilite(p_visible boolean) returns json
+language plpgsql volatile security definer set search_path = public as $$
+declare p profils;
+begin
+  update profils set visible = coalesce(p_visible, true) where id = _moi() returning * into p;
+  if not found then raise exception 'SANS_PROFIL'; end if;
+  return _profil_json(p);
 end $$;
 
 -- ---------- Amis ----------
@@ -228,7 +241,7 @@ language sql stable security definer set search_path = public as $$
 $$;
 
 -- Fiche d'un joueur : mêmes chiffres que ceux que voient ses amis, plus ma relation avec lui.
--- Réservée aux joueurs qui ont déjà joué un défi (ceux du classement général) ou qui ont un lien avec moi.
+-- Réservée aux joueurs visibles qui ont déjà joué un défi (ceux du classement général) ou qui ont un lien avec moi.
 create or replace function public.profil_joueur(p_pseudo text) returns json
 language plpgsql stable security definer set search_path = public as $$
 declare a profils; rel text;
@@ -237,7 +250,7 @@ begin
   select * into a from profils where pseudo = p_pseudo;
   if not found then return json_build_object('erreur', 'JOUEUR_INCONNU'); end if;
   rel := _relation(a.id);
-  if rel = 'aucune' and not exists (select 1 from defis where user_id = a.id) then
+  if rel = 'aucune' and (not a.visible or not exists (select 1 from defis where user_id = a.id)) then
     return json_build_object('erreur', 'JOUEUR_INCONNU');
   end if;
   return json_build_object('pseudo', a.pseudo, 'rang', a.rang, 'acquises', a.acquises, 'reussite', a.reussite,
@@ -809,21 +822,24 @@ begin
 end $$;
 
 -- Classement général du défi d'un jour : tous les joueurs qui l'ont joué (pas seulement mes amis), par score,
--- les 50 premiers et moi. « place » : rang avec ex æquo sur l'ensemble des joueurs ; « ami » : est-ce un ami.
+-- les 50 premiers et moi. Les joueurs qui ont choisi de se cacher n'y sont pas (sauf pour eux-mêmes, « cache »).
+-- « place » : rang avec ex æquo parmi les joueurs visibles ; « ami » : est-ce un ami.
 create or replace function public.tableau_defi_general(p_jour date) returns json
 language plpgsql stable security definer set search_path = public as $$
 begin
   return coalesce((
     select json_agg(json_build_object('pseudo', x.pseudo, 'moi', x.id = _moi(), 'rang', x.rang, 'score', x.score,
-      'reponses', x.reponses, 'place', x.place, 'ami', x.ami, 'total', x.total)
+      'reponses', x.reponses, 'place', x.place, 'ami', x.ami, 'total', x.total, 'cache', not x.visible)
       order by x.score desc, x.n)
     from (
-      select p.id, p.pseudo, p.rang, d.score, d.reponses,
-             rank() over (order by d.score desc) place,
+      select p.id, p.pseudo, p.rang, p.visible, d.score, d.reponses,
+             (select count(*) + 1 from defis d2 join profils p2 on p2.id = d2.user_id
+               where d2.jour = p_jour and p2.visible and d2.score > d.score) place,
              row_number() over (order by d.score desc, p.pseudo) n,
-             count(*) over () total,
+             count(*) filter (where p.visible) over () total,
              exists (select 1 from amities m where m.user_id = _moi() and m.ami_id = p.id) ami
       from profils p join defis d on d.user_id = p.id and d.jour = p_jour
+      where p.visible or p.id = _moi()
     ) x
     where x.n <= 50 or x.id = _moi()
   ), '[]'::json);
@@ -831,14 +847,14 @@ end $$;
 
 -- ---------- Droits : seules les fonctions publiques, et seulement une fois connecté ----------
 revoke all on function public._moi(), public._nouveau_code(), public._profil_json(profils) from public, anon, authenticated;
-revoke all on function public.mon_profil(), public.choisir_pseudo(text), public.publier(date, int, int, int, int, int, int, int),
+revoke all on function public.mon_profil(), public.choisir_pseudo(text), public.choisir_visibilite(boolean), public.publier(date, int, int, int, int, int, int, int),
   public.ajouter_ami(text), public.retirer_ami(text), public.tableau(date), public.tableau_periode(date, date), public.publier_jours(jsonb), public.sauver_progression(jsonb),
   public.lire_progression(), public.supprimer_compte() from public, anon;
 revoke all on function public.compter_visite(uuid, date, boolean) from public;
 grant execute on function public.compter_visite(uuid, date, boolean) to anon, authenticated;
 revoke all on function public.envoyer_jeu(uuid, jsonb, jsonb) from public;
 grant execute on function public.envoyer_jeu(uuid, jsonb, jsonb) to anon, authenticated;
-grant execute on function public.mon_profil(), public.choisir_pseudo(text), public.publier(date, int, int, int, int, int, int, int),
+grant execute on function public.mon_profil(), public.choisir_pseudo(text), public.choisir_visibilite(boolean), public.publier(date, int, int, int, int, int, int, int),
   public.ajouter_ami(text), public.retirer_ami(text), public.tableau(date), public.tableau_periode(date, date), public.publier_jours(jsonb), public.sauver_progression(jsonb),
   public.lire_progression(), public.supprimer_compte() to authenticated;
 revoke all on function public._purger() from public, anon, authenticated;

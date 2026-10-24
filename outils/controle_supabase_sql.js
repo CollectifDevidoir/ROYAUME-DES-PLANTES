@@ -147,6 +147,20 @@ const refus=async(p,m,motif)=>{try{await p;ok(false,m+' (accepté à tort)')}cat
   ok(lim&&envoyees===20,'demandes d\'ami : bloquées après 20 en une heure ('+envoyees+')');
   const g1=(await comme(db,U.antoine,'select tableau_defi_general($1::date) r',[JP])).rows[0].r,g2=(await comme(db,B[54],'select tableau_defi_general($1::date) r',[JP])).rows[0].r;
   ok(g1.length===50&&g1[0].total===58&&g2.length===51&&g2.at(-1).moi&&g2.at(-1).place===4,'classement général : 50 premiers + ma ligne si je suis plus loin, rang réel conservé ('+g1.length+', '+g2.length+')');
+  // visibilité : un joueur masqué sort du classement général (sauf pour lui), garde ses amis et peut faire des demandes
+  const H=B[30];
+  ok((await comme(db,H,'select mon_profil() r')).rows[0].r.visible===true,'visible par défaut');
+  ok((await comme(db,H,'select choisir_visibilite(false) r')).rows[0].r.visible===false,'visibilité : masqué');
+  const gv=(await comme(db,U.antoine,'select tableau_defi_general($1::date) r',[JP])).rows[0].r,gh=(await comme(db,H,'select tableau_defi_general($1::date) r',[JP])).rows[0].r;
+  ok(!gv.some(x=>x.pseudo==='Joueur30')&&gv[0].total===57&&gv.length===50,'masqué : absent du classement des autres, total réduit ('+gv.length+')');
+  ok(gh.find(x=>x.moi).cache===true&&gh.find(x=>x.moi).place===4&&gh[0].place===1,'masqué : il se voit lui-même, marqué « cache », avec sa vraie place');
+  ok((await comme(db,U.antoine,"select profil_joueur('Joueur30') r")).rows[0].r.erreur==='JOUEUR_INCONNU','masqué : sa fiche est introuvable pour un inconnu');
+  ok((await comme(db,H,"select demander_ami('Antoine_R') r")).rows[0].r.etat==='envoyee','masqué : il peut envoyer une demande');
+  ok((await comme(db,U.antoine,"select profil_joueur('Joueur30') r")).rows[0].r.relation==='recue','… et le destinataire peut alors voir sa fiche, accepter ou refuser');
+  ok((await comme(db,U.antoine,"select repondre_demande('Joueur30',true) r")).rows[0].r.etat==='ami','… et accepter');
+  ok((await comme(db,H,'select tableau_defi($1::date) r',[JP])).rows[0].r.some(x=>x.pseudo==='Antoine_R'),'masqué : le classement entre amis est inchangé');
+  await comme(db,H,'select choisir_visibilite(true)');
+  ok((await comme(db,U.antoine,'select tableau_defi_general($1::date) r',[JP])).rows[0].r.some(x=>x.pseudo==='Joueur30'),'de nouveau visible : réapparaît');
   // mesures d'usage anonymes et Coulisses
   const A3=require('crypto').randomUUID(),J=new Date().toISOString().slice(0,10);
   await comme(db,null,"select noter_visite($1,current_date,false,'telephone',394,true,'2026.10.14')",[A3]);

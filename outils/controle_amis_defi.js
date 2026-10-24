@@ -35,20 +35,23 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   let L=await lignes(A.p);
   ok(L.map(x=>x.n).join()==='Cleo,Antoine,Bea'&&L.map(x=>x.r).join()==='1,2,3','… classés par score : '+JSON.stringify(L.map(x=>[x.n,x.r])));
   ok(L.find(x=>x.moi).n==='Antoine'&&!L.find(x=>x.moi).clic&&L.filter(x=>!x.moi).every(x=>x.clic),'… sa ligne n\'est pas cliquable, celles des autres le sont');
-  ok(await A.p.evaluate(()=>/tous les joueurs/.test($('df-cl').textContent)),'… titre « tous les joueurs »');
+  ok(await A.p.evaluate(()=>/tous les joueurs/.test($('df-cl').textContent)&&!/Touche un joueur/.test($('df-cl').textContent)),'… titre « tous les joueurs », sans phrase d\'explication');
 
   // ---- fiche du joueur et demande d'ami
   await A.p.click('#df-cl li[data-jp="Bea"]');
   ok(await att(A.p,()=>$('jou').open&&!!document.querySelector('#jou-add')),'toucher Béa ouvre sa fiche avec « Proposer de devenir ami »');
   ok(await A.p.evaluate(()=>/Bea/.test($('jou-b').textContent)&&!/RPL-/.test($('jou-b').textContent)),'… la fiche montre son pseudo mais pas son code ami');
   await A.p.click('#jou-add');
-  ok(await att(A.p,()=>/Demande envoyée/.test($('jou-b').textContent)&&!document.querySelector('#jou-add')),'demande envoyée : plus de bouton, « en attente de sa réponse »');
+  ok(await att(A.p,()=>/Demande envoyée/.test($('jou-b').textContent)&&!document.querySelector('#jou-add')),'demande envoyée : plus de bouton, « Demande envoyée »');
   await A.p.evaluate(()=>$('jou').close());await A.p.click('#df-cl li[data-jp="Bea"]');
   ok(await att(A.p,()=>/Demande envoyée/.test($('jou-b').textContent)&&!document.querySelector('#jou-add')),'rouvrir la fiche : toujours « en attente », pas de nouvelle demande possible');
   ok((await db.query('select count(*)::int n from public.demandes_ami')).rows[0].n===1,'une seule demande enregistrée');
   await A.p.evaluate(()=>$('jou').close());
   ok(!(await lignes(A.p)).some(x=>x.ami),'… en attente : Béa n\'est pas encore marquée « ami »');
 
+  // ---- pastille : Béa a une demande en attente
+  ok(await att(B.p,()=>{sbDem();return $('medal').classList.contains('dm')},null,8000),'Béa : pastille sur le médaillon (demande reçue)');
+  ok(await A.p.evaluate(()=>!$('medal').classList.contains('dm')),'Antoine : pas de pastille');
   // ---- côté Béa : demande reçue, profil
   await B.p.click('#medal');
   ok(await att(B.p,()=>/Demandes d'ami \(1\)/.test($('ami').textContent)&&!!document.querySelector('[data-dok="Antoine"]')),'Béa : « Demandes d\'ami (1) » dans son profil, avec Accepter / Refuser');
@@ -63,6 +66,18 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   ok(await att(B.p,()=>[...document.querySelectorAll('#df-cl .tbl li')].some(li=>li.querySelector('.tbn').textContent==='Antoine'&&li.querySelector('.tbt.ami'))),'classement général de Béa : Antoine marqué « ami »');
   ok((await db.query('select count(*)::int n from public.demandes_ami')).rows[0].n===0&&(await db.query('select count(*)::int n from public.amities')).rows[0].n===2,'demande effacée, amitié dans les deux sens');
 
+  ok(await att(B.p,()=>!$('medal').classList.contains('dm')),'Béa : pastille disparue une fois la demande traitée');
+  // ---- masquer son profil : Cléo disparaît du classement d'Antoine mais se voit elle-même
+  await C.p.click('#medal');await att(C.p,()=>!!document.querySelector('#sb-vis'));
+  ok(await C.p.evaluate(()=>$('sb-vis').getAttribute('aria-checked')==='true'&&!$('ami').querySelector('.sbc small')),'profil : interrupteur « Classement général du défi » activé par défaut, sans phrase d\'explication');
+  await C.p.click('#sb-vis');await att(C.p,()=>document.querySelector('#sb-vis')&&$('sb-vis').getAttribute('aria-checked')==='false');
+  ok((await db.query("select visible from public.profils where pseudo='Cleo'")).rows[0].visible===false,'interrupteur désactivé : enregistré');
+  await fermer(C.p);
+  await A.p.evaluate(()=>dfClGeneral(dfJour()));await att(A.p,()=>document.querySelectorAll('#df-cl .tbl li').length===2);
+  ok((await lignes(A.p)).map(x=>x.n).join()==='Antoine,Bea','Antoine ne voit plus Cléo dans le classement général');
+  await C.p.evaluate(()=>dfResultat());await att(C.p,()=>document.querySelectorAll('#df-cl .tbl li').length>=3);
+  ok((await lignes(C.p)).some(x=>x.n==='Cleo'&&x.moi)&&await C.p.evaluate(()=>/masqué/.test($('df-cl').textContent)),'Cléo se voit toujours, marquée « masqué »');
+  await C.p.click('#medal');await att(C.p,()=>!!document.querySelector('#sb-vis'));await C.p.click('#sb-vis');await att(C.p,()=>document.querySelector('#sb-vis')&&$('sb-vis').getAttribute('aria-checked')==='true');await fermer(C.p);
   // ---- classements entre amis et d'Assiduité inchangés (amis seulement)
   const amisA=await A.p.evaluate(async()=>{sbTab=null;sbVue='d';const c=await sbCl();const d=document.createElement('div');d.innerHTML=c.h;return {n:[...d.querySelectorAll('.tbl li .tbn')].map(x=>x.textContent),t:d.textContent}});
   ok(amisA.n.sort().join()==='Antoine,Bea'&&/entre amis/.test(amisA.t),'Profil / Amis, Défi du jour : Antoine ne voit que lui et Béa (Cléo absente), titre « entre amis » '+JSON.stringify(amisA.n));

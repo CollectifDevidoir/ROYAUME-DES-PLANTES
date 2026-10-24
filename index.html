@@ -1443,6 +1443,7 @@ html.dk #side .rank .rs{white-space:normal!important}
 .tbt{flex:none;padding:1px 7px;border-radius:99px;background:var(--ac);color:var(--card);font:600 10px/1.5 var(--fx);font-style:normal;letter-spacing:.06em;text-transform:uppercase}
 .tbs{text-align:right}
 .tbl li[data-jp]{cursor:pointer}.tbl li[data-jp]:hover{background:color-mix(in srgb,var(--ac) 8%,var(--bg2))}.tbl li[data-jp]:focus-visible{outline:2px solid var(--ac);outline-offset:1px}
+.medal.dm::before{content:'';position:absolute;top:-1px;right:-1px;z-index:2;width:14px;height:14px;border-radius:50%;background:var(--ko);border:2px solid var(--card);pointer-events:none}
 .tbt.ami{background:none;border:1px solid var(--ac);color:var(--ac)}
 .jfi p{margin:8px 0 0}.jfi .row{display:flex;gap:8px;align-items:center;margin-top:12px}.jfi .big{margin-top:12px}
 .dmd{display:flex;align-items:center;gap:8px;padding:8px 0;border-top:1px solid var(--bd)}.dmd .tgi{width:28px;height:28px;margin:0;flex:none}.dmd b{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:600 .95rem var(--fx)}
@@ -3299,7 +3300,7 @@ async function dfClGeneral(jour){
   try{
     let L,gen=true;try{L=await sbRpc('tableau_defi_general',{p_jour:jour})}catch(x){if(!/tableau_defi_general|PGRST202|404/.test(String((x&&(x.message||x.code))||x)))throw x;gen=false;L=await sbRpc('tableau_defi',{p_jour:jour})}
     const tot=gen&&L.length?L[0].total:0;
-    h=`<p class="dfe">${gen?'Défi du jour, tous les joueurs':'Défi du jour, entre amis'}</p>${gen&&tot>L.length?`<p class="na tbh">${tot} joueurs · les 50 premiers et toi</p>`:''}${dfClasse(L,true,gen)}${gen?'<p class="na tbh">Touche un joueur pour voir son profil et lui proposer de devenir ami.</p>':''}`;
+    h=`<p class="dfe">${gen?'Défi du jour, tous les joueurs':'Défi du jour, entre amis'}</p>${dfClasse(L,true,gen)}`;
   }catch(x){h='<p class="na">Classement indisponible pour l\'instant : retrouve-le dans ton profil.</p>'}
   if($('df-cl'))$('df-cl').innerHTML=h;
 }
@@ -3307,9 +3308,9 @@ async function dfClGeneral(jour){
 function jouRendu(j){
   const r=R[Math.min(j.rang,R.length-1)],moi=j.relation==='moi';
   const act={aucune:'<button class="big" id="jou-add" type="button">Proposer de devenir ami</button>',
-   envoyee:'<p class="stm ok" role="status">Demande envoyée : en attente de sa réponse.</p>',
-   recue:`<p class="stm" role="status">${esc(j.pseudo)} te propose de devenir ami.</p><div class="row"><button class="big" id="jou-ok" type="button">Accepter</button><button class="mini" id="jou-no" type="button">Refuser</button></div>`,
-   ami:'<p class="stm ok" role="status">Vous êtes amis.</p>',moi:''}[j.relation]||'';
+   envoyee:'<p class="stm ok" role="status">Demande envoyée</p>',
+   recue:`<p class="stm" role="status">${esc(j.pseudo)} te propose de devenir ami</p><div class="row"><button class="big" id="jou-ok" type="button">Accepter</button><button class="mini" id="jou-no" type="button">Refuser</button></div>`,
+   ami:'<p class="stm ok" role="status">Vous êtes amis</p>',moi:''}[j.relation]||'';
   return `<div class="card prf jfi"><div class="prh"><span class="prm">${rIcon(j.rang)}</span><div><h2>${esc(j.pseudo)}</h2><p>${r[1]}</p></div></div>
 <p class="na">${j.acquises} espèce${j.acquises>1?'s':''} acquise${j.acquises>1?'s':''} · ${j.reussite} % de réussite${j.serie?` · série de ${j.serie} jour${j.serie>1?'s':''}`:''}</p>${moi?'':act}</div>`;
 }
@@ -3319,7 +3320,7 @@ async function joueurOuvre(ps){
   const montre=async()=>{
     let j;try{j=await sbRpc('profil_joueur',{p_pseudo:ps});if(j.erreur)throw new Error(j.erreur)}catch(x){b.innerHTML=`<div class="card"><p class="stm ko" role="alert">${esc(sbErr(x))}</p></div>`;return}
     b.innerHTML=jouRendu(j);
-    const agit=(id,msg,nom,arg)=>{const e=$(id);if(e)e.onclick=async()=>{e.disabled=true;try{const x=await sbRpc(nom,arg);if(x.erreur)throw new Error(x.erreur);sbTab=null;toast(msg(x));if($('df-cl'))dfClGeneral(dfJour());if($('prf').open)ami();montre()}catch(y){e.disabled=false;toast(sbErr(y))}}};
+    const agit=(id,msg,nom,arg)=>{const e=$(id);if(e)e.onclick=async()=>{e.disabled=true;try{const x=await sbRpc(nom,arg);if(x.erreur)throw new Error(x.erreur);sbTab=null;sbDem();toast(msg(x));if($('df-cl'))dfClGeneral(dfJour());if($('prf').open)ami();montre()}catch(y){e.disabled=false;toast(sbErr(y))}}};
     agit('jou-add',x=>x.etat==='ami'?ps+' est maintenant ton ami.':'Demande envoyée à '+ps+'.','demander_ami',{p_pseudo:ps});
     agit('jou-ok',()=>ps+' est maintenant ton ami.','repondre_demande',{p_pseudo:ps,p_accepter:true});
     agit('jou-no',()=>'Demande refusée.','repondre_demande',{p_pseudo:ps,p_accepter:false});
@@ -3336,7 +3337,7 @@ function dfClasse(L,court,gen){
   const a=(L||[]).filter(x=>x.score!==null&&x.score!==undefined).sort((x,y)=>y.score-x.score||(x.moi?-1:y.moi?1:x.pseudo.localeCompare(y.pseudo))),b=(L||[]).filter(x=>x.score===null||x.score===undefined);
   if(court&&!gen&&a.length<=1&&!b.length)return '<p class="na">Ajoute des amis avec leur code pour comparer vos scores du jour.</p>';
   let rg=0,prec=null;
-  const li=(x,r)=>`<li${x.moi?' class="moi"':gen?` data-jp="${esc(x.pseudo)}" tabindex="0" role="button" aria-label="Voir le profil de ${esc(x.pseudo)}"`:''}><span class="tbp">${r}</span><span class="tgi">${rIcon(x.rang)}</span><span class="tbx"><b><span class="tbn">${esc(x.pseudo)}</span>${x.moi?'<i class="tbt">toi</i>':gen&&x.ami?'<i class="tbt ami">ami</i>':''}</b><small>${x.score!=null?dfGrille(String(x.reponses||'').split('').map(Number),'dfg dfp'):'Pas encore joué'}</small></span><span class="tbs"><b>${x.score!=null?x.score:'–'}</b><small>${x.score!=null?'/ 10':''}</small></span></li>`;
+  const li=(x,r)=>`<li${x.moi?' class="moi"':gen?` data-jp="${esc(x.pseudo)}" tabindex="0" role="button" aria-label="Voir le profil de ${esc(x.pseudo)}"`:''}><span class="tbp">${r}</span><span class="tgi">${rIcon(x.rang)}</span><span class="tbx"><b><span class="tbn">${esc(x.pseudo)}</span>${x.moi?'<i class="tbt">toi</i>'+(gen&&x.cache?'<i class="tbt ami">masqué</i>':''):gen&&x.ami?'<i class="tbt ami">ami</i>':''}</b><small>${x.score!=null?dfGrille(String(x.reponses||'').split('').map(Number),'dfg dfp'):'Pas encore joué'}</small></span><span class="tbs"><b>${x.score!=null?x.score:'–'}</b><small>${x.score!=null?'/ 10':''}</small></span></li>`;
   return `<ol class="tbl">${a.map((x,i)=>{if(x.score!==prec){rg=i+1;prec=x.score}return li(x,gen&&x.place?x.place:rg)}).join('')}${b.map(x=>li(x,'·')).join('')}</ol>`;
 }
 const T={tout:'Tout',arbre:'Arbres',arbuste:'Arbustes',vivace:'Vivaces',grimpante:'Grimpantes',graminée:'Graminées'};
@@ -4282,7 +4283,7 @@ function setHtml(){
   const g=goal(),v=st.set.vib;
   const pnl=setPanel==='save'?`<div class="stp"><p>Copie ta progression pour la garder ou la passer sur un autre appareil, ou colle une sauvegarde pour la restaurer.</p><div class="row"><button class="mini" id="set-copy" type="button">Copier</button><button class="mini" id="set-paste" type="button">Restaurer</button></div><div id="set-out"></div></div>`
    :setPanel==='priv'?`<div class="stp prv"><p><b>Sur cet appareil</b> : ta progression et tes réglages, qui servent à choisir les plantes à revoir.</p>
-<p><b>Avec un compte</b> (facultatif) : ta progression est aussi sauvegardée en ligne. Tes amis voient ton pseudo et tes chiffres du jour ; le classement général du Défi du jour montre à tous les joueurs ton pseudo, ton rang et ton score, jamais ton e-mail.</p>
+<p><b>Avec un compte</b> (facultatif) : ta progression est aussi sauvegardée en ligne. Tes amis voient ton pseudo et tes chiffres du jour, jamais ton e-mail. Le classement général du Défi du jour montre aussi ton pseudo, ton rang et ton score, sauf si tu le désactives dans ton profil.</p>
 <p><b>Statistiques anonymes</b> : réponses du quiz, écrans ouverts, type d'appareil et erreurs techniques, liés à un numéro tiré au hasard, jamais à ton nom ni à ton adresse IP. Elles nous aident à améliorer l'appli et sont effacées après 13 mois.</p>
 <p><b>Tout effacer</b> : « Réinitialiser » ci-dessous, ou « Supprimer mon compte » dans ton profil. Pas de publicité, rien n'est revendu.</p></div>`
    :setPanel==='reset'?`<div class="stp"><p class="stm ko">${sbU&&sbP?'Effacer toute ta progression, sur cet appareil et dans ton compte ? Tes réglages et tes amis sont conservés.':'Effacer toute la progression sur cet appareil ? Tes réglages sont conservés.'}</p><div class="row"><button class="mini" id="set-no" type="button">Annuler</button><button class="mini ko full" id="set-yes" type="button">Tout effacer</button></div></div>`:'';
@@ -4736,7 +4737,7 @@ function sbConnecte(){const uid=sbU&&sbU.id||null;if(sbCx&&sbCxU===uid)return sb
       catch(e){sbMsg=sbErr(e);p=undefined}}   // undefined : profil inconnu (réseau), à ne pas confondre avec null (pas encore de pseudo)
     if((sbU&&sbU.id||null)!==uid)return;   // l'utilisateur a changé entre-temps : une autre connexion prend le relais
     if(uid){sbMode='in';try{localStorage.setItem('qp.sbm','in')}catch(e){}}
-    sbP=p;if(p){await sbEnvoi();dfCompte()}   // défi déjà joué sur un autre appareil : le bouton de l'accueil l'affiche
+    sbP=p;if(p){await sbEnvoi();dfCompte();sbDem()}   // défi déjà joué sur un autre appareil : le bouton de l'accueil l'affiche
     if(sbCx===run)sbCx=null;
     if($('prf').open)ami();
     else if(uid&&p===null&&sbRetour){sbRetour=false;openProfil()}   // retour d'un lien reçu par e-mail : choisir son pseudo
@@ -4746,7 +4747,11 @@ function sbConnecte(){const uid=sbU&&sbU.id||null;if(sbCx&&sbCxU===uid)return sb
 // Avant d'écrire, on relit la sauvegarde du compte et on la fusionne : ce qu'un autre appareil a appris entre-temps
 // n'est jamais écrasé. Exception : juste après « Réinitialiser » (sbRaz), l'appareil fait foi et vide aussi le compte.
 // Charge : au plus un envoi toutes les 30 s, et tout de suite quand on quitte l'appli (relecture avant chaque écriture : jamais d'écrasement)
-let sbEnv=null,sbEnc=false,sbRaz=false,sbJk='';
+let sbEnv=null,sbEnc=false,sbRaz=false,sbJk='',sbNd=0;
+// pastille sur le médaillon : demandes d'ami reçues et pas encore traitées
+function sbPastille(){const m=$('medal');if(!m)return;const n=sbU&&sbP?sbNd:0;m.classList.toggle('dm',n>0);m.setAttribute('aria-label','Mon profil et mes amis'+(n?` (${n} demande${n>1?'s':''} d'ami)`:''))}
+async function sbDem(){if(!(sbU&&sbP))return;try{sbNd=((await sbRpc('mes_demandes'))||[]).length}catch(e){return}sbPastille()}
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)sbDem()});
 async function sbEnvoi(){
   clearTimeout(sbT);sbT=null;if(!sb||!sbU||!sbP)return;
   if(sbEnv){sbEnc=true;return sbEnv}
@@ -4851,12 +4856,12 @@ async function ami(){
     $('sb-pf').onsubmit=async e=>{e.preventDefault();sbMsg='';try{sbP=await sbRpc('choisir_pseudo',{p_pseudo:$('sb-ps').value});await sbEnvoi()}catch(x){sbMsg=sbErr(x)}ami()};
     $('sb-out').onclick=sbSortie;return;
   }
-  const cl=await sbCl(),amis=cl.amis;let dem=[];try{dem=await sbRpc('mes_demandes')||[]}catch(e){}
+  const cl=await sbCl(),amis=cl.amis;let dem=[];try{dem=await sbRpc('mes_demandes')||[];sbNd=dem.length;sbPastille()}catch(e){}
   h+=cl.h+(dem.length?`<div class="card"><h3 class="hh hhi">${ico('profil')}Demandes d'ami (${dem.length})</h3>${dem.map(x=>`<div class="dmd"><span class="tgi">${rIcon(x.rang)}</span><b>${esc(x.pseudo)}</b><button class="mini" data-dok="${esc(x.pseudo)}" type="button">Accepter</button><button class="mini ko" data-dno="${esc(x.pseudo)}" type="button">Refuser</button></div>`).join('')}</div>`:'')+`
 <div class="card"><h3 class="hh hhi">${ico('profil')}Amis</h3><div class="cda"><span>Mon code ami</span><b id="sb-code">${esc(sbP.code_ami)}</b><button class="mini" id="sb-cp" type="button">Copier</button></div>
 <form id="sb-af" class="sbf sbi"><label><span class="vh">Code de ton ami</span><input id="sb-ac" placeholder="Code d'un ami : RPL-…" autocomplete="off" autocapitalize="characters" aria-label="Code de ton ami"></label><button class="big" type="submit">Ajouter</button></form>${msg}
 ${amis.length?`<details class="gam"><summary>Gérer mes amis (${amis.length})</summary>${amis.map(x=>`<div class="gar"><span>${esc(x.pseudo)}</span><button class="mini ko" data-rm="${esc(x.pseudo)}" type="button">Retirer</button></div>`).join('')}</details>`:''}</div>
-<div class="card sbc"><p class="na">${esc(sbU.email||'')}${sbSync?' · progression sauvegardée':''}</p><p class="sbl"><button class="lnkb" id="sb-out" type="button">Se déconnecter</button><span aria-hidden="true">·</span><button class="lnkb ko" id="sb-del" type="button">Supprimer mon compte</button></p></div>`;
+<div class="card sbc"><div class="str"><span><b id="sb-vl">Classement général du défi</b></span><button class="sw" id="sb-vis" type="button" role="switch" aria-checked="${sbP.visible!==false}" aria-labelledby="sb-vl"></button></div><p class="na">${esc(sbU.email||'')}${sbSync?' · progression sauvegardée':''}</p><p class="sbl"><button class="lnkb" id="sb-out" type="button">Se déconnecter</button><span aria-hidden="true">·</span><button class="lnkb ko" id="sb-del" type="button">Supprimer mon compte</button></p></div>`;
   el.innerHTML=h;
   sbClLie();
   $('sb-cp').onclick=async()=>{try{await navigator.clipboard.writeText(sbP.code_ami);toast('Code ami copié')}catch(e){const r=document.createRange();r.selectNodeContents($('sb-code'));getSelection().removeAllRanges();getSelection().addRange(r)}};
@@ -4865,6 +4870,8 @@ ${amis.length?`<details class="gam"><summary>Gérer mes amis (${amis.length})</s
   rpd('[data-dok]',true);rpd('[data-dno]',false);
   el.querySelectorAll('[data-rm]').forEach(bt=>bt.onclick=async()=>{if(!confirm('Retirer '+bt.dataset.rm+' de tes amis ?'))return;try{await sbRpc('retirer_ami',{p_pseudo:bt.dataset.rm})}catch(e){sbMsg=sbErr(e)}sbTab=null;ami()});
   $('sb-out').onclick=sbSortie;
+  $('sb-vis').onclick=async e=>{const bt=e.currentTarget,v=bt.getAttribute('aria-checked')!=='true';bt.disabled=true;
+    try{sbP=await sbRpc('choisir_visibilite',{p_visible:v});sbTab=null}catch(x){sbMsg=sbErr(x)}ami()};
   // changer de pseudo : même règle qu'au premier choix (2 à 20 caractères, unique), vérifiée par le serveur
   if(sbPe){const i=$('sb-ps2');i.focus();i.select();
     $('sb-pa').onclick=()=>{sbPe=false;sbPm='';ami()};
@@ -4876,7 +4883,7 @@ ${amis.length?`<details class="gam"><summary>Gérer mes amis (${amis.length})</s
     try{await sb.auth.signOut({scope:'local'})}catch(e){}sbVide();sbOk='Compte supprimé. Ta progression reste sur cet appareil.';ami()};
   sbMsg='';sbOk='';
 }
-function sbVide(){clearTimeout(sbT);sbT=null;sbU=null;sbP=null;sbTab=null;sbSync=0;sbRaz=false;sbMsg='';sbOk='';sbPe=false;sbPm=''}
+function sbVide(){clearTimeout(sbT);sbT=null;sbU=null;sbP=null;sbNd=0;sbPastille();sbTab=null;sbSync=0;sbRaz=false;sbMsg='';sbOk='';sbPe=false;sbPm=''}
 // Déconnexion de cet appareil seulement (les autres appareils restent connectés) ; la progression reste sur l'appareil
 async function sbSortie(){if(sbT)await sbEnvoi();try{await sb.auth.signOut({scope:'local'})}catch(e){}sbVide();ami()}
 // Au démarrage : seulement si une session est enregistrée ou si l'on revient d'un lien de connexion
