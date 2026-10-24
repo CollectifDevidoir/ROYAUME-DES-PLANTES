@@ -19,6 +19,8 @@ Rien de plus que le tableau prévu :
 
 Un ami s'ajoute avec son **code ami** (par exemple `RPL-K7Q2M`). L'amitié est réciproque : chacun voit l'autre. On peut retirer un ami à tout moment (« Gérer mes amis »).
 
+**Classement général du Défi du jour.** À la fin du défi, le classement montre tous les joueurs qui l'ont joué (les 50 premiers et toi) : pseudo, rang, score et grille des 10 réponses, rien d'autre. Le profil (onglet Profil / Amis) et l'Assiduité restent limités aux amis. En touchant un joueur, on voit sa fiche (rang, espèces acquises, réussite, série ; jamais son code ami ni son e-mail) et on peut lui **proposer de devenir ami** : la demande reste « en attente » jusqu'à ce qu'il l'accepte ou la refuse (carte « Demandes d'ami » de son profil). Pas de doublon : redemander ne crée rien, et une demande refusée ne peut pas être relancée. Si les deux se demandent, ils deviennent amis tout de suite. Limite : 20 demandes par heure. **Mise à jour d'une installation existante** : relancer `supabase/schema.sql` dans le SQL Editor (nouvelle table `demandes_ami`, sans toucher aux données).
+
 **Pourquoi pas « @Antoine » ?** Avec une recherche par pseudo, n'importe qui pourrait s'ajouter et voir tes chiffres. Le code ami, lui, se partage volontairement. Pour éviter qu'on devine les codes, chaque compte est limité à 20 essais par heure.
 
 ## Mise en route (une seule fois, environ 15 minutes)

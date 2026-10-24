@@ -103,6 +103,50 @@ const refus=async(p,m,motif)=>{try{await p;ok(false,m+' (accepté à tort)')}cat
   ok((await r('paul','select tableau_defi($1::date - 1) r',[JP])).every(x=>x.score===null),'défi : un autre jour, personne n\'a encore joué');
   await refus(comme(db,null,'select tableau_defi(current_date) r'),'défi : visiteur non connecté','permission denied');
   await refus(comme(db,U.antoine,'select * from public.defis'),'défi : la table n\'est pas lisible directement','permission denied');
+  // classement général du défi et demandes d'ami
+  U.lea=require('crypto').randomUUID();await db.query('insert into auth.users(id,email) values($1,$2)',[U.lea,'lea@test.fr']);await f('lea',"select choisir_pseudo('Lea')");await f('lea',`select ajouter_ami('${pa.code_ami}')`);
+  await f('intrus','select publier_defi($1::date,$2)',[JP,'1111100000']);   // Antoine (8) et Paul (8) ont déjà joué plus haut
+  const gen=await r('lea','select tableau_defi_general($1::date) r',[JP]);
+  ok(gen.map(x=>x.pseudo).join()==='Antoine_R,Paul,Intrus'&&gen.every(x=>!x.moi),'classement général : tous les joueurs qui ont joué (Lea n\'a pas joué et n\'y est pas)');
+  ok(gen.map(x=>x.place).join()==='1,1,3'&&gen.map(x=>x.ami).join()==='true,false,false'&&gen[0].total===3,'… rangs avec ex æquo, drapeau « ami » (Antoine oui, Paul et Intrus non) '+JSON.stringify(gen.map(x=>[x.pseudo,x.place,x.ami])));
+  ok((await r('lea','select tableau_defi($1::date) r',[JP])).map(x=>x.pseudo).join()==='Antoine_R,Lea','classement entre amis inchangé : Lea voit Antoine et elle (pas Paul ni Intrus)');
+  ok((await r('lea','select tableau(current_date) r')).map(x=>x.pseudo).join()==='Antoine_R,Lea','Assiduité inchangée : amis seulement');
+  ok((await r('lea','select tableau_periode(current_date - 6, current_date) r')).length===2,'Assiduité par période inchangée : amis seulement');
+  ok((await r('intrus','select tableau_defi_general($1::date) r',[JP])).find(x=>x.moi).pseudo==='Intrus','le classement général marque ma ligne');
+  await refus(comme(db,null,'select tableau_defi_general($1::date) r',[JP]),'classement général fermé aux visiteurs','permission denied');
+  // fiche et demandes : aucune demande tant que je n'ai pas cliqué
+  ok((await r('lea',"select profil_joueur('Paul') r")).relation==='aucune','fiche de Paul vue par Lea : aucune relation (Paul a joué le défi)');
+  ok((await r('lea',"select profil_joueur('Antoine_R') r")).relation==='ami'&&(await r('lea',"select profil_joueur('Lea') r")).relation==='moi','fiches : ami, et moi');
+  const fp=await r('lea',"select profil_joueur('Paul') r");ok(!('code_ami' in fp)&&!('email' in fp),'la fiche ne montre pas le code ami');
+  ok((await r('lea',"select profil_joueur('Fantome') r")).erreur==='JOUEUR_INCONNU','joueur inconnu');
+  ok((await r('lea',"select profil_joueur('Lea') r")).pseudo==='Lea'&&(await r('lea',"select demander_ami('Lea') r")).erreur==='SOI_MEME','demande à soi-même refusée');
+  ok((await r('lea',"select demander_ami('Fantome') r")).erreur==='JOUEUR_INCONNU','demande à un inconnu refusée');
+  ok((await r('lea',"select demander_ami('Antoine_R') r")).etat==='ami','demande à un ami : déjà amis, rien de créé');
+  ok((await r('lea',"select demander_ami('Paul') r")).etat==='envoyee','Lea demande Paul : demande envoyée');
+  ok((await r('lea',"select demander_ami('Paul') r")).etat==='envoyee'&&(await db.query("select count(*)::int n from public.demandes_ami")).rows[0].n===1,'demande répétée : aucun doublon');
+  ok((await r('lea',"select profil_joueur('Paul') r")).relation==='envoyee'&&(await r('paul',"select profil_joueur('Lea') r")).relation==='recue','états : envoyée côté Lea, reçue côté Paul');
+  ok((await r('lea','select tableau(current_date) r')).length===2&&!(await r('paul','select tableau(current_date) r')).some(x=>x.pseudo==='Lea'),'une demande en attente ne donne pas encore accès aux chiffres des amis');
+  ok(JSON.stringify((await r('paul','select mes_demandes() r')).map(x=>x.pseudo))==='["Lea"]'&&(await r('lea','select mes_demandes() r')).length===0,'Paul voit la demande de Lea, pas Lea');
+  ok((await r('paul',"select repondre_demande('Lea',false) r")).etat==='aucune'&&(await r('paul','select mes_demandes() r')).length===0,'Paul refuse : la demande disparaît de sa liste');
+  ok((await r('lea',"select demander_ami('Paul') r")).etat==='envoyee'&&(await r('lea',"select profil_joueur('Paul') r")).relation==='envoyee','après refus : Lea voit toujours « envoyée » et ne peut pas relancer');
+  ok((await r('paul',"select repondre_demande('Lea',true) r")).etat==='aucune','répondre à une demande refusée : sans effet');
+  ok((await r('paul',"select demander_ami('Lea') r")).etat==='ami','Paul se ravise et demande Lea : amis tout de suite (elle avait demandé)');
+  ok((await r('paul','select tableau(current_date) r')).some(x=>x.pseudo==='Lea'),'amitié réciproque : Paul voit Lea');
+  ok((await r('lea','select tableau(current_date) r')).some(x=>x.pseudo==='Paul'),'… et Lea voit Paul');
+  ok((await db.query("select count(*)::int n from public.demandes_ami")).rows[0].n===0,'demandes effacées une fois amis');
+  ok((await r('intrus',"select demander_ami('Lea') r")).etat==='envoyee'&&(await r('lea',"select demander_ami('Intrus') r")).etat==='ami','demandes croisées : la seconde vaut acceptation');
+  ok((await r('lea',"select profil_joueur('Intrus') r")).relation==='ami','… amis des deux côtés');
+  await f('lea',"select retirer_ami('Intrus')");ok((await r('lea',"select demander_ami('Intrus') r")).etat==='envoyee','ami retiré : on peut à nouveau lui proposer');
+  ok((await r('intrus',"select repondre_demande('Lea',true) r")).etat==='ami','acceptation d\'une demande reçue');
+  await refus(comme(db,U.antoine,'select * from public.demandes_ami'),'lecture directe des demandes','permission denied');
+  await refus(comme(db,U.antoine,'select _relation($1) r',[U.lea]),'fonction interne _relation','permission denied');
+  await refus(comme(db,null,"select demander_ami('Paul') r"),'visiteur non connecté : pas de demande','permission denied');
+  // limite de demandes : 20 par heure ; classement général plafonné aux 50 premiers et moi
+  const B=[];for(let i=0;i<55;i++){const id=require('crypto').randomUUID();B.push(id);await db.query('insert into auth.users(id,email) values($1,$2)',[id,'x'+i+'@test.fr']);await comme(db,id,`select choisir_pseudo('Joueur${String(i).padStart(2,'0')}')`);await comme(db,id,'select publier_defi($1::date,$2)',[JP,'1000000000'])}
+  let lim=false,envoyees=0;for(let i=0;i<24&&!lim;i++){try{await comme(db,U.antoine,`select demander_ami('Joueur${String(i).padStart(2,'0')}')`);envoyees++}catch(e){if(e.message.includes('TROP_DE_DEMANDES'))lim=true}}
+  ok(lim&&envoyees===20,'demandes d\'ami : bloquées après 20 en une heure ('+envoyees+')');
+  const g1=(await comme(db,U.antoine,'select tableau_defi_general($1::date) r',[JP])).rows[0].r,g2=(await comme(db,B[54],'select tableau_defi_general($1::date) r',[JP])).rows[0].r;
+  ok(g1.length===50&&g1[0].total===58&&g2.length===51&&g2.at(-1).moi&&g2.at(-1).place===4,'classement général : 50 premiers + ma ligne si je suis plus loin, rang réel conservé ('+g1.length+', '+g2.length+')');
   // mesures d'usage anonymes et Coulisses
   const A3=require('crypto').randomUUID(),J=new Date().toISOString().slice(0,10);
   await comme(db,null,"select noter_visite($1,current_date,false,'telephone',394,true,'2026.10.14')",[A3]);
