@@ -37,7 +37,7 @@ Un ami s'ajoute avec son **code ami** (par exemple `RPL-K7Q2M`). L'amitié est r
    - La clé est la clé **publique** (« publishable » ou « anon »), jamais la clé **secrète** (« secret » ou « service_role »). Si une clé secrète est collée, l'appli la refuse et n'envoie rien.
 6. **Tant que l'appli n'est pas en ligne** (ouverte en fichier sur ton ordinateur ou ton téléphone) :
    - désactive « Confirm email » (étape 3), sinon le lien de confirmation renverrait vers une adresse qui n'existe pas encore ;
-   - le lien de connexion par e-mail et le « mot de passe oublié » ne sont pas proposés (ils ont besoin d'une adresse web pour revenir dans l'appli). La connexion par mot de passe fonctionne.
+   - le « mot de passe oublié » n'est pas proposé (il a besoin d'une adresse web pour revenir dans l'appli). La connexion par mot de passe fonctionne.
 7. **Mettre l'appli en ligne** : voir la section suivante. Ensuite, réactive « Confirm email » si tu le souhaites, et renseigne l'adresse publiée à l'étape 4.
 
 ## Personnaliser l'e-mail de confirmation
@@ -69,8 +69,6 @@ Pour Gmail : sur le compte Google, active la **validation en deux étapes**, pui
 3. Dans « Message body », onglet **Source**, remplace tout le contenu par celui de `supabase/e-mails/confirmation.html` (du `<!doctype html>` au `</html>` final), puis **Save changes**.
 4. Garde tel quel `{{ .ConfirmationURL }}` : Supabase le remplace par le lien de confirmation de chaque compte.
 
-**Lien de connexion** (connexion sans mot de passe, bouton « Recevoir un lien de connexion par e-mail ») : même démarche avec le modèle **Magic Link**, le fichier `supabase/e-mails/lien-connexion.html` et l'objet `Ton lien pour entrer dans le royaume 🌿`.
-
 **Invitation** (Supabase > Authentication > Users > « Invite user », pour inviter quelqu'un par e-mail depuis le tableau de bord) : modèle **Invite user**, fichier `supabase/e-mails/invitation.html`, objet `Tu es invité(e) au royaume des plantes 🌿`. La personne invitée n'a pas de mot de passe : elle entre par le lien, choisit son pseudo, puis se crée un mot de passe avec « Mot de passe oublié ? » quand elle voudra se reconnecter.
 
 **Mot de passe oublié** (bouton « Mot de passe oublié ? Choisir un nouveau mot de passe ») : même démarche avec le modèle **Reset Password**, le fichier `supabase/e-mails/reinitialisation.html` et l'objet `Choisis ton nouveau mot de passe 🌿`. C'est un modèle distinct du lien de connexion : sans lui, l'e-mail de réinitialisation part avec le texte anglais par défaut de Supabase (il fonctionne quand même).
@@ -85,11 +83,13 @@ C'est courant avec une adresse Gmail toute neuve qui envoie des e-mails automati
 - **Avec le temps** : la réputation d'une adresse neuve s'améliore à mesure qu'elle envoie des e-mails qui sont ouverts et non signalés.
 - **Solution durable** : envoyer depuis une adresse sur un nom de domaine du collectif (par exemple `bonjour@devidoir.fr`) avec Brevo ou Resend, qui guident pour déclarer le domaine (enregistrements SPF, DKIM et DMARC). C'est ce qui donne la meilleure délivrabilité.
 
+**Limite côté Supabase.** Supabase garde de son côté la possibilité de demander un lien de connexion par son interface de programmation (le modèle « Magic Link »), et ne permet pas de la couper sans couper aussi les autres connexions par e-mail. L'appli ne l'utilise plus nulle part ; seul le propriétaire de l'adresse reçoit ce lien. Si ce point compte pour vous, ne personnalisez pas ce modèle et surveillez la rubrique Authentication > Logs.
+
 ## Mot de passe oublié : fonctionnement et recette manuelle
 
-**Dans l'appli.** Onglet Profil > « J'ai déjà un compte » > saisir son adresse > « Mot de passe oublié ? Choisir un nouveau mot de passe ». L'appli appelle `resetPasswordForEmail` avec, comme adresse de retour, la page ouverte. La réponse affichée est la même que l'adresse ait un compte ou non (on ne révèle pas qui est inscrit). Le lien reçu rouvre l'appli : le profil s'ouvre seul sur **« Nouveau mot de passe »** (champ et confirmation, règle de 8 caractères dont un spécial), puis `updateUser` enregistre le mot de passe. « Plus tard » ferme l'écran sans rien changer (la personne reste connectée par le lien). Un lien expiré ou déjà utilisé affiche « Ce lien a expiré ou a déjà servi… » avec le bouton pour en redemander un. Le bouton « Recevoir un lien de connexion par e-mail, sans mot de passe » reste une fonction distincte.
+**Dans l'appli.** Onglet Profil > « J'ai déjà un compte » > saisir son adresse > « Mot de passe oublié ? Choisir un nouveau mot de passe ». L'appli appelle `resetPasswordForEmail` avec, comme adresse de retour, la page ouverte. La réponse affichée est la même que l'adresse ait un compte ou non (on ne révèle pas qui est inscrit). Le lien reçu rouvre l'appli : le profil s'ouvre seul sur **« Nouveau mot de passe »** (champ et confirmation, règle de 8 caractères dont un spécial), puis `updateUser` enregistre le mot de passe. **Le lien n'est pas un moyen de se connecter** : il n'ouvre une session que le temps de changer le mot de passe. « Plus tard », la fermeture du volet, Échap, un rechargement ou un retour plus tard sans avoir fini **déconnectent** aussitôt, sans rien changer. Il n'existe plus aucune connexion par simple lien (ni dans l'appli, ni dans les Coulisses) : seul le mot de passe permet d'entrer. Un lien expiré ou déjà utilisé affiche « Ce lien a expiré ou a déjà servi… » avec le bouton pour en redemander un.
 
-**Ce que les tests automatiques prouvent** (`outils/controle_mdp_oublie.js`) : la demande part bien vers l'URL de réinitialisation avec la bonne adresse de retour, l'écran de nouveau mot de passe s'ouvre au retour du lien, les validations, l'appel qui change le mot de passe, l'ancien refusé et le nouveau accepté, le lien expiré. **Ils ne prouvent pas** l'envoi d'un vrai e-mail, ni le modèle, ni la liste d'adresses autorisées de Supabase : leur serveur est simulé. À vérifier une fois à la main :
+**Ce que les tests automatiques prouvent** (`outils/controle_mdp_oublie.js`) : la demande part bien vers l'URL de réinitialisation avec la bonne adresse de retour, l'écran de nouveau mot de passe s'ouvre au retour du lien, quitter l'écran sans finir déconnecte (Plus tard, fermeture, Échap, rechargement), les validations, l'appel qui change le mot de passe, l'ancien refusé et le nouveau accepté, le lien expiré. **Ils ne prouvent pas** l'envoi d'un vrai e-mail, ni le modèle, ni la liste d'adresses autorisées de Supabase : leur serveur est simulé. À vérifier une fois à la main :
 
 1. Supabase > **Authentication > URL Configuration** : « Site URL » = `https://collectifdevidoir.github.io/ROYAUME-DES-PLANTES/` ; « Redirect URLs » contient `https://collectifdevidoir.github.io/ROYAUME-DES-PLANTES/**`.
 2. **Authentication > Emails > Templates > Reset Password** : objet et corps de `supabase/e-mails/reinitialisation.html`, `{{ .ConfirmationURL }}` conservé.
@@ -153,7 +153,7 @@ La connexion par Google, Apple, etc. (OAuth) pourra s'ajouter plus tard. Elle de
   - suppression du compte avec toutes ses données.
 - `outils/controle_comptes.js` fait le test de bout en bout dans le navigateur, avec la **vraie bibliothèque supabase-js**. Elle parle à un faux Supabase (`outils/supabase/faux_supabase.js`) adossé à la même base PGlite. Il couvre :
   - deux appareils : création de compte, pseudo, ajout d'un ami, tableau du jour ;
-  - messages d'erreur, reprise de la progression sur un nouvel appareil, session gardée au rechargement, lien de connexion par e-mail (l'appli y est servie à une adresse https simulée) ;
+  - messages d'erreur, reprise de la progression sur un nouvel appareil, session gardée au rechargement, absence de tout lien de connexion sans mot de passe (l'appli est servie à une adresse https simulée) ;
   - réseau coupé, adresse du tableau de bord collée par erreur, clé secrète refusée ;
   - même compte sur plusieurs appareils : chacun apprend de son côté, rien n'est écrasé, un 3e appareil retrouve tout ; progression faite avant de créer le compte gardée ;
   - réinitialisation en étant connecté (le compte est aussi vidé), déconnexion de cet appareil seulement, suppression du compte.
@@ -236,7 +236,7 @@ Elle ne s'ouvre qu'avec un compte administrateur : la base vérifie le compte (f
    insert into public.admins select id from auth.users where email = 'ton-adresse@exemple.fr' on conflict do nothing;
    ```
 3. Ouvrir `https://<adresse de l'appli>/coulisses.html`. Si tu es déjà connecté dans l'appli sur cet appareil, la page s'ouvre directement ;
-   sinon, connecte-toi avec ton e-mail et ton mot de passe, ou demande un lien par e-mail.
+   sinon, connecte-toi avec ton e-mail et ton mot de passe.
 
 Pour retirer un accès : `delete from public.admins where user_id = (select id from auth.users where email = '…');`
 
