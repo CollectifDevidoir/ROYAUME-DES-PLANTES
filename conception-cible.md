@@ -25,7 +25,7 @@ Document de référence pour les prochaines interventions. **Aucun fichier du d�
 
 **Phase 1 (25/10/2026), état de référence et résultat**
 - **Référence (`main` au commit `6bc5a8a`, `APP_V='2026.10.21'`).** Recette rapide, 4 groupes : recette 239 OK, comptes 352 OK, gestes 233 OK, moteur 404 OK, 0 échec, 0 « CONNU ».
-- **Après (`APP_V='2026.10.25'`).** Mêmes groupes : 239, **383**, 233, 404 OK, 0 échec. Les 31 contrôles de plus sont ceux du nouveau `outils/controle_mdp_oublie.js` (groupe comptes).
+- **Après (`APP_V='2026.10.25'`).** Mêmes groupes : 239, **385**, 233, 404 OK, 0 échec (après suppression de la connexion par lien). Les contrôles de plus sont ceux du nouveau `outils/controle_mdp_oublie.js` (groupe comptes).
 - **Changé.** Bouton « Mot de passe oublié ? Choisir un nouveau mot de passe », la connexion par simple lien a été supprimée à la demande du concepteur (appli et Coulisses), et quitter l'écran sans finir déconnecte. Écran de nouveau mot de passe avec confirmation et la règle de la création (8 caractères dont un spécial). Lien expiré ou déjà utilisé : le message était effacé au chargement de la bibliothèque (défaut déjà présent), il s'affiche maintenant. `minlength` 6 > 8.
 - **Schéma Supabase, audité sur la base embarquée.** Aucune table lisible en direct, RLS partout, toute fonction `security definer` a un `search_path` fixé, `anon` n'exécute que les 4 fonctions de mesure. Aucune migration, `schema.sql` inchangé.
 - **Écarts documentation / code corrigés.** Le « mot de passe oublié » décrit dans `supabase/LISEZ-MOI.md` n'existait pas (c'était un lien de connexion) ; adresse de redirection à autoriser en `…/**` ; longueur minimale côté Supabase.

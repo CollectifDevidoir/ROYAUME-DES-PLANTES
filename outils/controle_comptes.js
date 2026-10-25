@@ -127,7 +127,6 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   await ouvre(SITE);await L.p.click('#medal');
   await L.p.click('#sb-tin');ok(await L.p.evaluate(()=>!document.querySelector('#sb-otp')&&!/lien de connexion|sans mot de passe/i.test($('ami').innerText))&&!!(await L.p.$('#sb-rec')),'appli en ligne (https) : plus aucun moyen de se connecter par un simple lien (seul « Mot de passe oublié ? » reste)');
   // e-mail de confirmation d'un nouveau compte : il doit ramener à l'adresse de l'appli (sinon : page 404)
-  await L.p.click('#sb-out');await att(L.p,()=>!!document.querySelector('#sb-f'));
   await L.p.fill('#sb-mail','zoe@test.fr');await L.p.fill('#sb-mdp','Secret-789');await L.p.click('#sb-tup');await L.p.click('#sb-go');await att(L.p,()=>!!document.querySelector('#sb-pf'));
   ok(jl.some(x=>x.startsWith('/auth/v1/signup')&&new URLSearchParams(x.split('?')[1]).get('redirect_to')===SITE),'création de compte : le lien de confirmation ramène à l\'adresse de l\'appli');
   // ---- même compte sur deux appareils : chacun apprend de son côté, rien n'est écrasé ; un 3e appareil retrouve tout
