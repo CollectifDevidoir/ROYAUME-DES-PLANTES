@@ -66,7 +66,7 @@ Le fichier final pèse un peu plus que l'état reçu. C'est attendu : les étape
 
 ### 10.4 — Recette complète
 
-Nouvel outil `outils/recette.js`. Il parcourt tous les écrans sur chaque taille : accueil, QCM, réponse et fiche de correction, saisie, 4 photos, Herbier, Progrès, Réglages, Aide. Le hasard est figé pour que deux passages soient comparables. Il vérifie :
+Nouvel outil `outils/controles/recette.js`. Il parcourt tous les écrans sur chaque taille : accueil, QCM, réponse et fiche de correction, saisie, 4 photos, Herbier, Progrès, Réglages, Aide. Le hasard est figé pour que deux passages soient comparables. Il vérifie :
 
 - aucune erreur JavaScript ;
 - aucun défilement horizontal de la page ;

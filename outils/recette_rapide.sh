@@ -15,7 +15,7 @@ else CONTROLES="$GROUPE_recette $GROUPE_comptes $GROUPE_gestes $GROUPE_moteur"; 
 ech=""
 for c in $CONTROLES; do
   echo "::group::$c"
-  sortie=$(node "outils/$c.js" 2>&1); code=$?
+  sortie=$(node "outils/controles/$c.js" 2>&1); code=$?
   echo "$sortie" | grep -v '^\[agent-proxy\]'
   echo "::endgroup::"
   if [ $code -ne 0 ] || echo "$sortie" | grep -q '^ÉCHEC'; then ech="$ech $c"; echo "ÉCHEC du contrôle $c"; else echo "OK   $c"; fi

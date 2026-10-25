@@ -1,7 +1,9 @@
 # Outils de contrôle et de données
 
+**Organisation.** `outils/controles/` : tout le code de test Node (contrôles `controle_*.js`, `recette.js`, simulations, aides `banc_essai.js` et `lance_exercice.js`, faux Supabase dans `controles/supabase/`) ; `outils/recette_rapide.sh` les enchaîne ; le reste de `outils/` (Python, `construire_photos.js`, `sosies.js`, `defis_extraire.js`) génère ou contrôle les données. Dans le tableau ci-dessous, les noms sans dossier désignent des fichiers de `outils/controles/`.
+
 Tous les scripts Node s'appuient sur Playwright et Chromium. Lancement depuis la racine du dépôt, par exemple :
-`NODE_PATH=$(npm root -g) node outils/recette.js`.
+`NODE_PATH=$(npm root -g) node outils/controles/recette.js`.
 Le réseau n'est pas nécessaire : `banc_essai.js` simule iNaturalist et génère des photos.
 Les contrôles des comptes demandent en plus `@electric-sql/pglite` et `@supabase/supabase-js` (voir `supabase/LISEZ-MOI.md`). **Les versions d'outils de test sont épinglées à un seul endroit : l'étape « Outils de test » de `.github/workflows/recette.yml`** ; pour un lancement local, installer les mêmes (`npm i -g playwright@… @electric-sql/pglite@… @supabase/supabase-js@…`). La version de supabase-js doit être celle de `SB_LIB` dans `index.html`, sinon l'empreinte d'intégrité (SRI) refuse la bibliothèque et les contrôles des comptes échouent.
 

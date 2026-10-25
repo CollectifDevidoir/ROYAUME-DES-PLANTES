@@ -19,8 +19,8 @@
 2. **Essai à blanc** : `python3 outils/defis_integrer.py` (affiche ce qui serait fait, n'écrit rien).
 3. **Écriture** : `python3 outils/defis_integrer.py --ecrire` (insère `const DQP` après `const DQ`, remplace `const dfSerie`).
 4. **Contrôles** (Playwright, voir `outils/LISEZ-MOI.md`) :
-   - `NODE_PATH=$(npm root -g) node outils/controle_defi_planning.js` : 90 séries bien formées, chaque jour lit sa série, jours avant/après = cycle de 30, un défi planifié joué de bout en bout (date simulée) ;
-   - `node outils/controle_defi.js` et `node outils/controle_defi_compte.js` : le défi actuel et les comptes fonctionnent toujours ; `node outils/recette.js` : recette générale.
+   - `NODE_PATH=$(npm root -g) node outils/controles/controle_defi_planning.js` : 90 séries bien formées, chaque jour lit sa série, jours avant/après = cycle de 30, un défi planifié joué de bout en bout (date simulée) ;
+   - `node outils/controles/controle_defi.js` et `node outils/controles/controle_defi_compte.js` : le défi actuel et les comptes fonctionnent toujours ; `node outils/controles/recette.js` : recette générale.
    (Ces contrôles ont été passés sur une copie d'`index.html` avec le planning intégré : tout est bon ; la copie n'est pas dans le dépôt.)
 5. **Mise en ligne** (GitHub Pages) **avant minuit, heure de Paris, la veille du premier jour du planning**.
 6. **Retour arrière** : annuler le commit d'intégration (`git revert`), ou retirer la ligne `const DQP=…` et remettre `const dfSerie=d=>DQ.length?DQ[dfNum(d)]:null;`. Les 30 séries d'origine reprennent aussitôt.

@@ -103,7 +103,7 @@ Résultat :
 - **4.6** : la carte « Sauvegarde » quitte Progrès. Dans le volet : « Sauvegarde » (Copier / Restaurer, dans le volet sans fenêtre du navigateur) et « Réinitialiser » avec confirmation dans le volet.
 - **4.7** : la restauration contrôle la forme des données (plantes, niveaux 0 à 6, compteurs, historique, listes) avant d'écrire ; un texte invalide est refusé avec un message précis et « Rien n'a été modifié ».
 
-Contrôle : `outils/controle_reglages.js` (26 vérifications dans Chromium, à 360×640 ; affichage vérifié à 320, 360 et 390 px, clair et sombre).
+Contrôle : `outils/controles/controle_reglages.js` (26 vérifications dans Chromium, à 360×640 ; affichage vérifié à 320, 360 et 390 px, clair et sombre).
 
 | ID | Tâche | Critère de réussite |
 |---|---|---|
@@ -128,13 +128,13 @@ Contrôle : `outils/controle_reglages.js` (26 vérifications dans Chromium, à 3
 | C4 | 4 photos : tout l'arrière-plan reste flouté à l'apparition de la fiche. | Fait. |
 | C5 | Fond entièrement flouté à l'ouverture des détails des fiches. | « Plus de détails » ferme le trou du flou ; les fenêtres de fiche étaient déjà entièrement floutées. |
 
-Contrôles : `outils/controle_fige.js` (29 vérifications ; échoue sur l'ancienne version), `outils/controle_clavier.js` (clavier simulé, 4 tailles d'écran), avec un banc d'essai qui simule iNaturalist et les photos (`outils/banc_essai.js`, `outils/lance_exercice.js`).
+Contrôles : `outils/controles/controle_fige.js` (29 vérifications ; échoue sur l'ancienne version), `outils/controles/controle_clavier.js` (clavier simulé, 4 tailles d'écran), avec un banc d'essai qui simule iNaturalist et les photos (`outils/controles/banc_essai.js`, `outils/controles/lance_exercice.js`).
 
 ---
 
 ## Étape 5 — Progrès et Herbier — TERMINÉE
 
-Résultat : carte « Collection » retirée de Progrès ; dans chaque catégorie de l'Herbier, les acquises d'abord puis les non acquises, chacune par ordre alphabétique du nom latin (nom vernaculaire toujours sur l'image, disposition et pastille « + N à découvrir » inchangées). Contrôle : `outils/controle_herbier.js`.
+Résultat : carte « Collection » retirée de Progrès ; dans chaque catégorie de l'Herbier, les acquises d'abord puis les non acquises, chacune par ordre alphabétique du nom latin (nom vernaculaire toujours sur l'image, disposition et pastille « + N à découvrir » inchangées). Contrôle : `outils/controles/controle_herbier.js`.
 
 Demandes ajoutées à cette étape :
 - **Objectif quotidien** : choix de 10 à 100 par pas de 10 (40 par défaut), en deux lignes de cinq dans le volet Réglages. Un objectif enregistré hors de cette liste repasse à 40.
@@ -149,7 +149,7 @@ Demandes ajoutées à cette étape :
 
 ## Étape 6 — Mémoire — TERMINÉE (variante A)
 
-Simulation (`outils/simulation_memoire.js`) : le vrai code de l'appli (choix de la plante, type d'exercice, niveaux) joue 30 jours × 40 exercices avec un joueur simulé qui apprend et oublie (courbe d'oubli de type FSRS) ; 8 joueurs par variante, mêmes tirages pour toutes. Les chiffres servent à **comparer** les variantes entre elles, pas à prédire un joueur réel.
+Simulation (`outils/controles/simulation_memoire.js`) : le vrai code de l'appli (choix de la plante, type d'exercice, niveaux) joue 30 jours × 40 exercices avec un joueur simulé qui apprend et oublie (courbe d'oubli de type FSRS) ; 8 joueurs par variante, mêmes tirages pour toutes. Les chiffres servent à **comparer** les variantes entre elles, pas à prédire un joueur réel.
 
 | Variante | Questions pour acquérir une plante | Plantes acquises en 30 jours | Rétention à +7 jours (écriture) | Réussite en jeu | Rechutes |
 |---|---|---|---|---|---|
@@ -162,7 +162,7 @@ Simulation (`outils/simulation_memoire.js`) : le vrai code de l'appli (choix de 
 
 Seul le passage du niveau 2 au niveau 3 change ; niveaux 4 à 6, intervalles, tirage et exercices intacts.
 
-**Choix : variante A, intégrée.** Sans erreur, une plante est croisée une fois de plus avant le niveau 3 : 3 QCM au lieu de 2, ou 1 exercice difficile + 1 QCM au lieu d'1 exercice difficile. Contrôle : `outils/controle_niveaux.js` (6 vérifications).
+**Choix : variante A, intégrée.** Sans erreur, une plante est croisée une fois de plus avant le niveau 3 : 3 QCM au lieu de 2, ou 1 exercice difficile + 1 QCM au lieu d'1 exercice difficile. Contrôle : `outils/controles/controle_niveaux.js` (6 vérifications).
 
 | ID | Tâche | Critère de réussite |
 |---|---|---|
@@ -179,7 +179,7 @@ Résultat (à partir de 900 px de large) :
 - **7.4** : dans « Plus de détails », galerie de 4 photos en grandes vignettes (2 × 2, ≈ 220-250 px de large), agrandissables au clic ou avec Entrée. Sur téléphone, la galerie reste comme avant.
 - **7.5** : focus visible sur tous les éléments ; touches 1 à 4 (QCM et 4 photos) ; Entrée valide la saisie ; après la réponse, le focus va sur « Question suivante » (Entrée ou Espace pour continuer) ; à la question suivante, il revient sur la saisie (écriture) ou sur le 1er choix (si l'on jouait au clavier) ; vignettes de l'Herbier, lignes « À revoir » et photos de la galerie atteignables au clavier ; Échap referme la photo agrandie, puis replie les détails ; correction annoncée par `aria-live`.
 
-Contrôle : `outils/controle_clavier_ordi.js` (22 vérifications à 1366×800, parcours complet sans souris). Contrôles téléphone relancés sans régression.
+Contrôle : `outils/controles/controle_clavier_ordi.js` (22 vérifications à 1366×800, parcours complet sans souris). Contrôles téléphone relancés sans régression.
 
 | ID | Tâche | Critère de réussite |
 |---|---|---|
@@ -212,7 +212,7 @@ Contrôle des réglages mis à jour (30 vérifications) ; autres contrôles rela
 - **Wikipédia en secours** : si iNaturalist tarde plus de 4 s, la photo de Wikipédia s'affiche ; la photo iNaturalist est récupérée en arrière-plan pour la suite.
 - **8.2 — cache plafonné** : 300 espèces et 600 Ko au plus ; les espèces utilisées le moins récemment sortent d'abord.
 
-**Mesures** (`outils/mesure_photos.js`, jeu très rapide, iNaturalist simulé avec sa limite de 60/min) :
+**Mesures** (`outils/controles/mesure_photos.js`, jeu très rapide, iNaturalist simulé avec sa limite de 60/min) :
 
 | Scénario | Avant : questions · pic req/min · attente moy./max · « Aucune image » | Après |
 |---|---|---|
@@ -220,7 +220,7 @@ Contrôle des réglages mis à jour (30 vérifications) ; autres contrôles rela
 | Service bloqué 30 s, Wikipédia disponible, 2 min | 70 · 43 · 0,2 s / 4,5 s · 0 | 45 · 36 · 0,6 s / 10 s · 0 |
 | Service bloqué 30 s, sans Wikipédia, 2 min | 22 · 55 · 1,1 s / 5,6 s · **42** | 32 · 36 · 2,4 s / 42 s · **0** |
 
-Le 2e scénario est moins rapide qu'avant : l'ancienne version gardait la photo Wikipédia pour toute la session, la nouvelle retourne chercher la photo iNaturalist après la pause. Contrôles : `outils/controle_cache.js` (6 vérifications), `outils/mesure_photos.js`.
+Le 2e scénario est moins rapide qu'avant : l'ancienne version gardait la photo Wikipédia pour toute la session, la nouvelle retourne chercher la photo iNaturalist après la pause. Contrôles : `outils/controles/controle_cache.js` (6 vérifications), `outils/controles/mesure_photos.js`.
 
 | ID | Tâche | Critère de réussite |
 |---|---|---|
@@ -285,7 +285,7 @@ Total revu : **663 espèces sur 663 — étape 9 terminée.** Quand les deux sou
 | 10.1 | **T3** : vérification finale. | 71 fiches sourcées + 592 descriptions = 663 espèces, **0 doublon**, 0 donnée orpheline, 0 espèce sans clés. |
 | 10.2 | **T4** : CSS inutile et constante inutilisée. | 27 classes jamais utilisées (77 sélecteurs) et 3 animations orphelines retirées, constante `ORD` retirée. CSS : **71,8 → 67,2 Ko**. Outil : `outils/nettoie_css.py`. |
 | 10.3 | **T10** : anciennes logiques. | Anciennes clés (663, en 5 blocs), champs `cles` des fiches sourcées (71) et table `ADD` retirés : `Q` contient directement les clés revues, **strictement identiques** à l'affichage. `outils/cles_vers_appli.py` régénère `Q`. Appli : **854 → 771 Ko**, 3 559 → 2 828 lignes. Les constantes restées dans le code sont à côté de leur seul usage : non déplacées, volontairement. |
-| 10.4 | Recette complète. | `outils/recette.js` : **133 contrôles OK sur 133**, 7 tailles × 9 écrans, 0 erreur JavaScript ; captures identiques au pixel près avant/après nettoyage (sauf l'animation de l'Aide). Tous les contrôles existants relancés : OK. Test instable de `controle_fige` (déjà présent avant) rendu fiable : 0 échec sur 12. |
+| 10.4 | Recette complète. | `outils/controles/recette.js` : **133 contrôles OK sur 133**, 7 tailles × 9 écrans, 0 erreur JavaScript ; captures identiques au pixel près avant/après nettoyage (sauf l'animation de l'Aide). Tous les contrôles existants relancés : OK. Test instable de `controle_fige` (déjà présent avant) rendu fiable : 0 échec sur 12. |
 | 10.5 | Rapport « avant / après ». | `rapport-de-cloture.md` (le rapport d'audit d'origine n'est pas dans le dépôt). |
 
 ---

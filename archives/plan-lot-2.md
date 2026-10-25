@@ -5,7 +5,7 @@
 Analyse d'impact faite **avant toute modification**, sur le code actuel et sur des captures de l'appli : téléphone 390×844, et fenêtres d'ordinateur de 860×900, 1024×700, 1280×650, 1440×780, 1920×960 et 2560×1080.
 Maquettes : `archives/maquettes/maquette-categories.png`, `archives/maquettes/maquette-illustrations.png`.
 
-Règles inchangées : une étape à la fois, validation avant la suivante, contrôles et recette à chaque étape. La recette (`outils/recette.js`) compare aussi les captures téléphone **avant / après** pour prouver que le mobile n'est pas dégradé.
+Règles inchangées : une étape à la fois, validation avant la suivante, contrôles et recette à chaque étape. La recette (`outils/controles/recette.js`) compare aussi les captures téléphone **avant / après** pour prouver que le mobile n'est pas dégradé.
 
 ---
 
@@ -153,10 +153,10 @@ Règles inchangées : une étape à la fois, validation avant la suivante, contr
 
 | Point | Résultat | Contrôle |
 |---|---|---|
-| 8. Motifs noirs | La canopée du décor a une couleur : deux couches de feuillage vert transparent, à bord festonné. Elle porte un nom de classe propre (`cn1`, `cn2`), sans conflit. | `outils/controle_noir.js` : 10 formats × clair/sombre × 2 écrans. **Avant : 33 échecs sur 40. Après : 0.** La tache était aussi visible en 1366×800, en haut à gauche. |
-| 2. Réponse vide | Acceptée et comptée comme une erreur normale. Ignorée pendant la 1re seconde (garde-fou du double « Entrée »). La correction dit « Pas de réponse : voici comment la reconnaître » au lieu de « « » n'est pas dans la liste ». | `outils/controle_saisie.js` |
-| 1. Joker | Bandeau séparé supprimé. Initiales « Q. r. » (« P. × h. » pour un hybride) fixées à droite **dans** le champ, visibles pendant la saisie. Le texte tapé s'arrête avant elles. Couleurs fixes, lisibles aussi en mode sombre (le champ reste blanc). | `outils/controle_saisie.js` (360×640 et 1440×780) |
-| 4. Régularité | Ligne pointillée « objectif N » à la hauteur exacte de `goal()`. Elle suit le curseur des Réglages en direct. Initiales L M M J V S D sous les 14 barres, aujourd'hui en gras. | `outils/controle_regularite.js` : écart de 0 px, objectif 40 → 70 → 10 |
+| 8. Motifs noirs | La canopée du décor a une couleur : deux couches de feuillage vert transparent, à bord festonné. Elle porte un nom de classe propre (`cn1`, `cn2`), sans conflit. | `outils/controles/controle_noir.js` : 10 formats × clair/sombre × 2 écrans. **Avant : 33 échecs sur 40. Après : 0.** La tache était aussi visible en 1366×800, en haut à gauche. |
+| 2. Réponse vide | Acceptée et comptée comme une erreur normale. Ignorée pendant la 1re seconde (garde-fou du double « Entrée »). La correction dit « Pas de réponse : voici comment la reconnaître » au lieu de « « » n'est pas dans la liste ». | `outils/controles/controle_saisie.js` |
+| 1. Joker | Bandeau séparé supprimé. Initiales « Q. r. » (« P. × h. » pour un hybride) fixées à droite **dans** le champ, visibles pendant la saisie. Le texte tapé s'arrête avant elles. Couleurs fixes, lisibles aussi en mode sombre (le champ reste blanc). | `outils/controles/controle_saisie.js` (360×640 et 1440×780) |
+| 4. Régularité | Ligne pointillée « objectif N » à la hauteur exacte de `goal()`. Elle suit le curseur des Réglages en direct. Initiales L M M J V S D sous les 14 barres, aujourd'hui en gras. | `outils/controles/controle_regularite.js` : écart de 0 px, objectif 40 → 70 → 10 |
 
 Non-régression : recette 133/133 et les 7 contrôles existants OK. Captures téléphone avant/après : les seules différences sont la bande du haut (canopée) et le graphique de Progrès.
 
@@ -164,8 +164,8 @@ Non-régression : recette 133/133 et les 7 contrôles existants OK. Captures té
 
 | Point | Résultat | Contrôle |
 |---|---|---|
-| 3. Catégories | Option B : une seule ligne de tuiles rectangulaires (coins de 10 px, fond carte, ombre légère). La tuile active a un dégradé vert et un texte blanc. Sur ordinateur (≥ 700 px), chaque tuile montre aussi l'icône de sa catégorie. Les zones tactiles restent à 44 px. L'ancien CSS des pastilles (grille, bulles, règles M2) est retiré. | `outils/controle_categories.js` : 7 tailles de 320 à 2560 px. Une ligne, aucun libellé coupé, tuile active lisible, icônes sur ordinateur. |
-| 5. Mode confusion | La fiche s'ouvre sur un **duel** : les deux photos côte à côte, à taille égale, avec les noms français et latins dessous. Un médaillon ⇄ au centre affiche « confondues N× ». Le duel apparaît tout de suite (les noms d'abord, les photos dès qu'elles arrivent). Viennent ensuite les « Points à comparer », alignés sous chaque photo, puis le bouton d'exercice. Sur ordinateur, la fiche devient une fenêtre centrée de 720 px. | `outils/controle_confusion.js` : 5 tailles, médaillon centré à 0 px près, ordre duel → points → exercice, pas de débordement. |
+| 3. Catégories | Option B : une seule ligne de tuiles rectangulaires (coins de 10 px, fond carte, ombre légère). La tuile active a un dégradé vert et un texte blanc. Sur ordinateur (≥ 700 px), chaque tuile montre aussi l'icône de sa catégorie. Les zones tactiles restent à 44 px. L'ancien CSS des pastilles (grille, bulles, règles M2) est retiré. | `outils/controles/controle_categories.js` : 7 tailles de 320 à 2560 px. Une ligne, aucun libellé coupé, tuile active lisible, icônes sur ordinateur. |
+| 5. Mode confusion | La fiche s'ouvre sur un **duel** : les deux photos côte à côte, à taille égale, avec les noms français et latins dessous. Un médaillon ⇄ au centre affiche « confondues N× ». Le duel apparaît tout de suite (les noms d'abord, les photos dès qu'elles arrivent). Viennent ensuite les « Points à comparer », alignés sous chaque photo, puis le bouton d'exercice. Sur ordinateur, la fiche devient une fenêtre centrée de 720 px. | `outils/controles/controle_confusion.js` : 5 tailles, médaillon centré à 0 px près, ordre duel → points → exercice, pas de débordement. |
 
 Non-régression : recette 133/133 et tous les contrôles existants OK. Captures téléphone avant/après : seules la ligne des catégories (et la mise en page qui la suit, à 4 px près) et la fiche de confusion changent.
 
@@ -200,7 +200,7 @@ Non-régression : recette 133/133 et tous les contrôles existants OK. Captures 
 
 **Outils.**
 - `outils/illustrations.py --ecrire` régénère les illustrations, leur CSS et le décor.
-- `outils/controle_illustrations.js` vérifie :
+- `outils/controles/controle_illustrations.js` vérifie :
   - chaque illustration s'affiche, sans ombre portée ni dégradé ;
   - chaque icône a au moins une forme qui contraste à 3:1 ou plus avec son fond réel, en clair et en sombre, sur téléphone et sur ordinateur. Ce contrôle a détecté le vert sur vert de l'onglet actif, d'où la pastille ;
   - les rangs ont au moins 6 couleurs dominantes différentes : il y en a 7.
@@ -235,7 +235,7 @@ Règles réservées à l'ordinateur (souris, à partir de 760 px de large). Le t
 - Tablette en portrait : la photo peut prendre jusqu'à 50 % de la hauteur, contre 38 % avant. Cela supprime le trou sous la photo, aussi visible en 768×1024.
 - Le « ? » des 4 photos (point 5).
 
-**Contrôle.** `outils/controle_ordinateur.js`, sur 4 formats (860×900, 1280×650, 1440×900, 1920×1080), vérifie :
+**Contrôle.** `outils/controles/controle_ordinateur.js`, sur 4 formats (860×900, 1280×650, 1440×900, 1920×1080), vérifie :
 - la largeur de la colonne et l'alignement de l'en-tête ;
 - le centrage du QCM et de la saisie face à la photo, la hauteur des réponses et l'absence de recouvrement par la barre d'onglets ;
 - le « ? » sur la ligne du nom ;

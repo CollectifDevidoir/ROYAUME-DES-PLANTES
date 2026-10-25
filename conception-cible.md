@@ -26,7 +26,7 @@ Audit initial (phase 1) : branche `claude/peaceful-maxwell-0sgajy`, commit `c681
 
 **Phase 1 (25/10/2026), état de référence et résultat**
 - **Référence (`main` au commit `6bc5a8a`, `APP_V='2026.10.21'`).** Recette rapide, 4 groupes : recette 239 OK, comptes 352 OK, gestes 233 OK, moteur 404 OK, 0 échec, 0 « CONNU ».
-- **Après (`APP_V='2026.10.25'`).** Mêmes groupes : 239, **385**, 233, 404 OK, 0 échec (après suppression de la connexion par lien). Les contrôles de plus sont ceux du nouveau `outils/controle_mdp_oublie.js` (groupe comptes).
+- **Après (`APP_V='2026.10.25'`).** Mêmes groupes : 239, **385**, 233, 404 OK, 0 échec (après suppression de la connexion par lien). Les contrôles de plus sont ceux du nouveau `outils/controles/controle_mdp_oublie.js` (groupe comptes).
 - **Changé.** Bouton « Mot de passe oublié ? Choisir un nouveau mot de passe », la connexion par simple lien a été supprimée à la demande du concepteur (appli et Coulisses), et quitter l'écran sans finir déconnecte. Écran de nouveau mot de passe avec confirmation et la règle de la création (8 caractères dont un spécial). Lien expiré ou déjà utilisé : le message était effacé au chargement de la bibliothèque (défaut déjà présent), il s'affiche maintenant. `minlength` 6 > 8.
 - **Schéma Supabase, audité sur la base embarquée.** Aucune table lisible en direct, RLS partout, toute fonction `security definer` a un `search_path` fixé, `anon` n'exécute que les 4 fonctions de mesure. Aucune migration, `schema.sql` inchangé.
 - **Écarts documentation / code corrigés.** Le « mot de passe oublié » décrit dans `supabase/LISEZ-MOI.md` n'existait pas (c'était un lien de connexion) ; adresse de redirection à autoriser en `…/**` ; longueur minimale côté Supabase.
@@ -61,7 +61,7 @@ Audit initial (phase 1) : branche `claude/peaceful-maxwell-0sgajy`, commit `c681
 - **À surveiller.** La simulation de mémoire ne tient pas compte de la ressemblance des mauvaises réponses : l'effet sur les vrais joueurs (réussite en QCM aux niveaux 3 et plus) se lira dans les Coulisses (`par_exercice`) après publication. Une baisse de quelques points de réussite au QCM est attendue et voulue.
 
 **Lot 1, résultats mesurés**
-- **1.1 et 1.2 (D-01, D-02).** Toute bonne réponse sur une plante due la replanifie. Au niveau 6, le délai est de 7 j, doublé à chaque entretien réussi en écrivant le nom (ou en retrouvant la photo) : 14, 28, 56, puis 60 j au plus. Le compteur `p.k` est remis à zéro par une erreur. Une bonne réponse en QCM replanifie au délai en cours, sans l'allonger. Contrôle : `outils/controle_memoire.js`, 20 vérifications ; il compte 13 échecs sur la version d'avant.
+- **1.1 et 1.2 (D-01, D-02).** Toute bonne réponse sur une plante due la replanifie. Au niveau 6, le délai est de 7 j, doublé à chaque entretien réussi en écrivant le nom (ou en retrouvant la photo) : 14, 28, 56, puis 60 j au plus. Le compteur `p.k` est remis à zéro par une erreur. Une bonne réponse en QCM replanifie au délai en cours, sans l'allonger. Contrôle : `outils/controles/controle_memoire.js`, 20 vérifications ; il compte 13 échecs sur la version d'avant.
 - **Simulation** (`simulation_memoire.js`, variante `avant_lot1` comparée sur les mêmes joueurs simulés) :
 
   | Mesure | 30 jours (8 joueurs) | 90 jours (6 joueurs) |
@@ -81,7 +81,7 @@ Audit initial (phase 1) : branche `claude/peaceful-maxwell-0sgajy`, commit `c681
 
 **Ce que j'ai fait réellement**
 - Lecture du code de `index.html` (4 095 lignes, 1,89 Mo, 560 Ko compressé) : moteur de tirage, mémoire, correction, fiches, herbier, progrès, réglages, défi, comptes ; `supabase/schema.sql` (23 fonctions, 16 tables) ; documents `archives/plan-de-modifications.md`, `archives/plan-lot-2.md`, `archives/rapport-de-cloture.md`, `archives/analyse-reglages-aide.md`, `outils/LISEZ-MOI.md`, `supabase/LISEZ-MOI.md`.
-- Exécution dans Chromium (Playwright, banc d'essai `outils/banc_essai.js`, réseau simulé) :
+- Exécution dans Chromium (Playwright, banc d'essai `outils/controles/banc_essai.js`, réseau simulé) :
   - `recette.js` : **133 / 133 OK** sur les 7 tailles (360×640 → 1920×1080), captures examinées à 375×667 ;
   - `controle_defi.js` : OK ;
   - `simulation_memoire.js` : voir D-02 ;
