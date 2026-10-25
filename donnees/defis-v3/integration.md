@@ -1,3 +1,5 @@
+> **Document historique.** Les étapes 2 à 5 ci-dessous décrivent l'intégration d'origine, déjà faite ; la mise à jour du 20/10/2026 juste au-dessus fait foi pour l'état actuel.
+
 > **Mise à jour du 20/10/2026.** Le planning n'est plus dans `index.html` : il est dans `donnees/defis.json`, chargé par l'appli à l'ouverture du défi ; `index.html` ne garde que `const DQPI={debut,n}`. `outils/defis_integrer.py --ecrire` écrit ces deux éléments. Le reste de ce document décrit l'intégration d'origine (`const DQP` dans le fichier).
 
 # Intégrer le planning de 90 jours en production (sans écraser le défi déjà publié)

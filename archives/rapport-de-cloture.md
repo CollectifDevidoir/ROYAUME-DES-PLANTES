@@ -1,6 +1,6 @@
 # Rapport de clôture — Le royaume des plantes
 
-> **Document daté (étape 10, octobre 2026).** Ses chiffres (663 espèces, 771 Ko, simulation de mémoire) ne décrivent plus l'appli actuelle : 768 espèces, environ 1,6 Mo (1 634 067 octets au 25/10/2026). L'état à jour et la suite du travail sont dans `conception-cible.md`.
+> **Document archivé et daté (étape 10, octobre 2026).** Ses chiffres (663 espèces, 771 Ko, simulation de mémoire) ne décrivent plus l'appli actuelle : 768 espèces, environ 1,6 Mo (1 634 067 octets au 25/10/2026). L'état à jour et la suite du travail sont dans `conception-cible.md`.
 
 Étape 10 du plan de modifications. Ce document fait le bilan « avant / après » des 10 étapes. Il remplace la mise à jour du rapport d'audit d'origine, qui n'est pas dans le dépôt.
 

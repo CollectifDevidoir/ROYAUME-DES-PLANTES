@@ -1,3 +1,5 @@
+> **Document archivé (rangement du dépôt, octobre 2026).** Plan ou analyse clos, conservé pour mémoire. Les outils `controle_ids.py`, `controle_parcours.py`, `export_donnees.py`, `controle_ecran_jeu.py` et `controle_zones_tactiles.py` qu'il cite ne sont pas dans le dépôt (les contrôles actuels sont `outils/controle_*.js`, lancés par `outils/recette_rapide.sh`). L'état à jour et la suite du travail sont dans `conception-cible.md`.
+
 # Plan de modifications — Le royaume des plantes
 
 Document de pilotage. **Plan validé.** État : **les 10 étapes sont terminées.** Bilan : `rapport-de-cloture.md`.

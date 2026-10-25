@@ -1,3 +1,5 @@
+> **Document archivé (rangement du dépôt, octobre 2026).** Plan ou analyse clos, conservé pour mémoire. Le fichier `maquettes-reglages-aide.png` qu'elle cite n'a pas été conservé. L'état à jour et la suite du travail sont dans `conception-cible.md`.
+
 # Où placer « Réglages » et « Comment ça marche » ?
 
 Analyse de l'étape 3.1. **Rien n'est construit** : les images de `maquettes-reglages-aide.png` sont faites à partir de l'appli réelle avec des éléments ajoutés à la main. Je construis (étape 4) l'option que tu choisis.

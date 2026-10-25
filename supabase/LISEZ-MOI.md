@@ -2,7 +2,7 @@
 
 L'onglet **Profil** de l'appli fonctionne en deux temps :
 
-- **Sans configuration** (état actuel) : il montre ton bilan, calculé sur l'appareil (rang, espèces acquises, réussite sur 14 jours, jours de suite). Rien n'est envoyé nulle part. Une ligne indique que les comptes ne sont pas encore activés.
+- **Sans configuration** (cas d'une installation neuve ; **l'appli publiée est branchée**, voir l'étape 5 plus bas) : il montre ton bilan, calculé sur l'appareil (rang, espèces acquises, réussite sur 14 jours, jours de suite). Rien n'est envoyé nulle part. Une ligne indique que les comptes ne sont pas encore activés.
 - **Une fois Supabase branché** : création de compte, pseudo, code ami, tableau du jour avec tes amis et sauvegarde de la progression en ligne.
 
 L'appli reste utilisable sans compte et sans connexion. La bibliothèque Supabase n'est téléchargée que si l'on ouvre l'onglet Profil ou si une session est déjà ouverte.

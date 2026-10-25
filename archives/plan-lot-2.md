@@ -1,7 +1,9 @@
+> **Document archivé (rangement du dépôt, octobre 2026).** Plan ou analyse clos, conservé pour mémoire. Les maquettes citées sont dans `archives/maquettes/`. L'état à jour et la suite du travail sont dans `conception-cible.md`.
+
 # Plan du lot 2 — Confort, identité visuelle, ordinateur
 
 Analyse d'impact faite **avant toute modification**, sur le code actuel et sur des captures de l'appli : téléphone 390×844, et fenêtres d'ordinateur de 860×900, 1024×700, 1280×650, 1440×780, 1920×960 et 2560×1080.
-Maquettes : `maquettes/maquette-categories.png`, `maquettes/maquette-illustrations.png`.
+Maquettes : `archives/maquettes/maquette-categories.png`, `archives/maquettes/maquette-illustrations.png`.
 
 Règles inchangées : une étape à la fois, validation avant la suivante, contrôles et recette à chaque étape. La recette (`outils/recette.js`) compare aussi les captures téléphone **avant / après** pour prouver que le mobile n'est pas dégradé.
 
@@ -245,7 +247,7 @@ Il vérifie aussi que le téléphone garde le volet Réglages en bas d'écran et
 
 **Non-régression visuelle.** J'ai comparé au pixel près les captures avant et après, sur les 7 tailles de la recette. Sur téléphone (360 à 412 px), seul l'écran 4 photos change (le « ? »). Réglages et Aide ne diffèrent que par le flou de l'écran situé derrière. En 768×1024, seule la hauteur de photo change.
 
-Aperçus : `maquettes/p-ordi-avant.png` et `maquettes/p-ordi-apres.png` (1440×900 : QCM, saisie, 4 photos, Herbier, Progrès, Réglages).
+Aperçus : `archives/maquettes/p-ordi-avant.png` et `archives/maquettes/p-ordi-apres.png` (1440×900 : QCM, saisie, 4 photos, Herbier, Progrès, Réglages).
 
 ## Ordre proposé
 

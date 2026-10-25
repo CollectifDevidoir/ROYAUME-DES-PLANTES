@@ -1,3 +1,5 @@
+> **Archive.** Le fichier `illustrations-royaume.html` cité plus bas n'a pas été conservé ; `planche-actuelle.png` est dans ce même dossier.
+
 # Prompt à donner à ChatGPT
 
 Joindre au message l'image `planche-actuelle.png` (les illustrations actuelles, avec le nom attendu sous chacune), puis coller tout le texte ci-dessous.
