@@ -30,13 +30,14 @@ Un ami s'ajoute avec son **code ami** (par exemple `RPL-K7Q2M`). L'amitié est r
 3. **Régler la connexion par e-mail.** Dans **Authentication > Sign In / Providers**, le fournisseur **Email** est activé par défaut.
    - « Confirm email » activé : chaque nouveau compte doit cliquer sur un lien reçu par e-mail. C'est plus sûr, et c'est le réglage conseillé si l'appli est en ligne.
    - Désactivé : le compte est utilisable tout de suite. C'est pratique entre amis, ou si l'appli est ouverte en fichier local.
-4. **Indiquer l'adresse de l'appli.** Dans **Authentication > URL Configuration**, mets dans « Site URL » l'adresse où l'appli est publiée, `https://collectifdevidoir.github.io/ROYAUME-DES-PLANTES/` (voir « Mettre l'appli en ligne »). Ajoute la même adresse dans « Redirect URLs ». Les liens reçus par e-mail renvoient vers cette adresse.
+4. **Indiquer l'adresse de l'appli.** Dans **Authentication > URL Configuration**, mets dans « Site URL » l'adresse où l'appli est publiée, `https://collectifdevidoir.github.io/ROYAUME-DES-PLANTES/` (voir « Mettre l'appli en ligne »). Dans « Redirect URLs », ajoute `https://collectifdevidoir.github.io/ROYAUME-DES-PLANTES/**` (avec les deux étoiles). L'appli demande à Supabase de renvoyer vers l'adresse exacte de la page ouverte (avec ou sans `index.html`) : sans cette entrée, les liens de confirmation, de connexion et de **mot de passe oublié** renvoient vers la « Site URL » au lieu de la page qui les a demandés. Les liens reçus par e-mail ne fonctionnent que sur une adresse web (`http` ou `https`), pas sur un fichier ouvert en local.
+   - **Longueur du mot de passe.** L'appli exige 8 caractères au moins, dont un caractère spécial, à la création du compte et au changement de mot de passe. Supabase, lui, n'impose par défaut que 6 caractères : dans **Authentication > Sign In / Providers** (fournisseur Email), si le tableau de bord propose une longueur minimale, mets 8, pour que la règle tienne aussi hors de l'appli.
 5. **Brancher l'appli.** C'est fait pour ton projet : `index.html` contient l'adresse `https://hcbzkpsxqxhmqcblfsnm.supabase.co` et ta clé publique (`sb_publishable_…`).
    - L'adresse à utiliser est **l'URL du projet**, de la forme `https://<identifiant>.supabase.co`. On la trouve dans **Project Settings > Data API** (ou en haut de **Project Settings > API Keys**). Ce n'est **pas** l'adresse de la page du tableau de bord affichée dans la barre du navigateur (`https://supabase.com/dashboard/project/…`). Si elle est collée par erreur, l'appli la corrige d'elle-même.
    - La clé est la clé **publique** (« publishable » ou « anon »), jamais la clé **secrète** (« secret » ou « service_role »). Si une clé secrète est collée, l'appli la refuse et n'envoie rien.
 6. **Tant que l'appli n'est pas en ligne** (ouverte en fichier sur ton ordinateur ou ton téléphone) :
    - désactive « Confirm email » (étape 3), sinon le lien de confirmation renverrait vers une adresse qui n'existe pas encore ;
-   - le lien de connexion par e-mail n'est pas proposé. La connexion par mot de passe fonctionne.
+   - le lien de connexion par e-mail et le « mot de passe oublié » ne sont pas proposés (ils ont besoin d'une adresse web pour revenir dans l'appli). La connexion par mot de passe fonctionne.
 7. **Mettre l'appli en ligne** : voir la section suivante. Ensuite, réactive « Confirm email » si tu le souhaites, et renseigne l'adresse publiée à l'étape 4.
 
 ## Personnaliser l'e-mail de confirmation
@@ -68,7 +69,11 @@ Pour Gmail : sur le compte Google, active la **validation en deux étapes**, pui
 3. Dans « Message body », onglet **Source**, remplace tout le contenu par celui de `supabase/e-mails/confirmation.html` (du `<!doctype html>` au `</html>` final), puis **Save changes**.
 4. Garde tel quel `{{ .ConfirmationURL }}` : Supabase le remplace par le lien de confirmation de chaque compte.
 
-**Lien de connexion** (sert aussi en cas de mot de passe oublié) : même démarche avec le modèle **Magic Link**, le fichier `supabase/e-mails/lien-connexion.html` et l'objet `Ton lien pour entrer dans le royaume 🌿`.
+**Lien de connexion** (connexion sans mot de passe, bouton « Recevoir un lien de connexion par e-mail ») : même démarche avec le modèle **Magic Link**, le fichier `supabase/e-mails/lien-connexion.html` et l'objet `Ton lien pour entrer dans le royaume 🌿`.
+
+**Invitation** (Supabase > Authentication > Users > « Invite user », pour inviter quelqu'un par e-mail depuis le tableau de bord) : modèle **Invite user**, fichier `supabase/e-mails/invitation.html`, objet `Tu es invité(e) au royaume des plantes 🌿`. La personne invitée n'a pas de mot de passe : elle entre par le lien, choisit son pseudo, puis se crée un mot de passe avec « Mot de passe oublié ? » quand elle voudra se reconnecter.
+
+**Mot de passe oublié** (bouton « Mot de passe oublié ? Choisir un nouveau mot de passe ») : même démarche avec le modèle **Reset Password**, le fichier `supabase/e-mails/reinitialisation.html` et l'objet `Choisis ton nouveau mot de passe 🌿`. C'est un modèle distinct du lien de connexion : sans lui, l'e-mail de réinitialisation part avec le texte anglais par défaut de Supabase (il fonctionne quand même).
 
 Pour vérifier, crée un compte de test avec une autre adresse : l'e-mail reçu doit afficher le nouveau texte et le bouton « Confirmer mon adresse e-mail ».
 
@@ -79,6 +84,21 @@ C'est courant avec une adresse Gmail toute neuve qui envoie des e-mails automati
 - **Tout de suite** : chaque destinataire peut cliquer sur « Non, ce n'est pas du spam » et ajouter l'adresse d'envoi à ses contacts. Les e-mails suivants arrivent alors dans la boîte de réception.
 - **Avec le temps** : la réputation d'une adresse neuve s'améliore à mesure qu'elle envoie des e-mails qui sont ouverts et non signalés.
 - **Solution durable** : envoyer depuis une adresse sur un nom de domaine du collectif (par exemple `bonjour@devidoir.fr`) avec Brevo ou Resend, qui guident pour déclarer le domaine (enregistrements SPF, DKIM et DMARC). C'est ce qui donne la meilleure délivrabilité.
+
+## Mot de passe oublié : fonctionnement et recette manuelle
+
+**Dans l'appli.** Onglet Profil > « J'ai déjà un compte » > saisir son adresse > « Mot de passe oublié ? Choisir un nouveau mot de passe ». L'appli appelle `resetPasswordForEmail` avec, comme adresse de retour, la page ouverte. La réponse affichée est la même que l'adresse ait un compte ou non (on ne révèle pas qui est inscrit). Le lien reçu rouvre l'appli : le profil s'ouvre seul sur **« Nouveau mot de passe »** (champ et confirmation, règle de 8 caractères dont un spécial), puis `updateUser` enregistre le mot de passe. « Plus tard » ferme l'écran sans rien changer (la personne reste connectée par le lien). Un lien expiré ou déjà utilisé affiche « Ce lien a expiré ou a déjà servi… » avec le bouton pour en redemander un. Le bouton « Recevoir un lien de connexion par e-mail, sans mot de passe » reste une fonction distincte.
+
+**Ce que les tests automatiques prouvent** (`outils/controle_mdp_oublie.js`) : la demande part bien vers l'URL de réinitialisation avec la bonne adresse de retour, l'écran de nouveau mot de passe s'ouvre au retour du lien, les validations, l'appel qui change le mot de passe, l'ancien refusé et le nouveau accepté, le lien expiré. **Ils ne prouvent pas** l'envoi d'un vrai e-mail, ni le modèle, ni la liste d'adresses autorisées de Supabase : leur serveur est simulé. À vérifier une fois à la main :
+
+1. Supabase > **Authentication > URL Configuration** : « Site URL » = `https://collectifdevidoir.github.io/ROYAUME-DES-PLANTES/` ; « Redirect URLs » contient `https://collectifdevidoir.github.io/ROYAUME-DES-PLANTES/**`.
+2. **Authentication > Emails > Templates > Reset Password** : objet et corps de `supabase/e-mails/reinitialisation.html`, `{{ .ConfirmationURL }}` conservé.
+3. (Conseillé) un serveur d'envoi à soi (SMTP, voir plus haut) : sans lui, 2 e-mails par heure au plus, en anglais, et souvent dans les indésirables.
+4. Avec un compte de test, sur l'appli publiée (pas en fichier local) : demander le lien > l'e-mail arrive (regarder les indésirables) avec le texte du modèle > ouvrir le lien **sur le même appareil** > l'écran « Nouveau mot de passe » s'affiche > saisir deux fois un mot de passe valide > « Mot de passe changé ».
+5. Se déconnecter, vérifier que l'ancien mot de passe est refusé et le nouveau accepté.
+6. Rouvrir le même lien de l'e-mail : « Ce lien a expiré ou a déjà servi ».
+7. Demander un lien pour une adresse inconnue : la même phrase s'affiche, aucun e-mail n'arrive.
+8. Si le lien arrive déjà « expiré » alors qu'il est neuf : certaines messageries ou antivirus ouvrent les liens à l'avance et les consomment. Redemander un lien et l'ouvrir tout de suite ; si cela se répète, le passage à un lien à jeton (`token_hash` + `verifyOtp`) sera à étudier.
 
 ## Mettre l'appli en ligne et recevoir les mises à jour
 
@@ -116,6 +136,7 @@ La clé publique peut figurer dans le fichier : elle est faite pour ça. La séc
 |---|---|
 | Première connexion sur un appareil | La progression du compte et celle de l'appareil sont **fusionnées**, sans rien perdre : pour chaque plante, la fiche la plus travaillée ; pour chaque jour, le plus rempli. |
 | Après chaque réponse | 4 secondes après la dernière réponse, l'appli relit la sauvegarde du compte, y fusionne la progression de l'appareil (rien de ce qu'un autre appareil a appris n'est perdu), puis envoie les chiffres du jour et la sauvegarde. Elle le fait aussi quand on quitte l'appli. |
+| Mot de passe oublié | Lien reçu par e-mail > écran « Nouveau mot de passe » dans le profil > `updateUser`. Voir la section « Mot de passe oublié ». |
 | Réinitialiser (Réglages), connecté | Vide l'appareil et la sauvegarde du compte. |
 | Se déconnecter | Seulement sur cet appareil ; la progression y reste. |
 | Onglet Profil | Tableau du jour : moi et mes amis, du plus actif au moins actif. Bouton « Actualiser ». |
@@ -136,6 +157,8 @@ La connexion par Google, Apple, etc. (OAuth) pourra s'ajouter plus tard. Elle de
   - réseau coupé, adresse du tableau de bord collée par erreur, clé secrète refusée ;
   - même compte sur plusieurs appareils : chacun apprend de son côté, rien n'est écrasé, un 3e appareil retrouve tout ; progression faite avant de créer le compte gardée ;
   - réinitialisation en étant connecté (le compte est aussi vidé), déconnexion de cet appareil seulement, suppression du compte.
+
+- `outils/controle_mdp_oublie.js` fait de même pour le parcours « Mot de passe oublié » (voir sa section) : demande de lien, nouveau mot de passe avec confirmation, lien expiré ou déjà utilisé.
 
 Ils demandent `@electric-sql/pglite` et `@supabase/supabase-js`, installés comme Playwright :
 `npm i -g @electric-sql/pglite @supabase/supabase-js`.

@@ -126,7 +126,7 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   const ouvre=async u=>{await L.p.goto(u);await L.p.waitForTimeout(400);await L.p.evaluate(()=>{const s=$('splash');if(s)s.click()});await L.p.waitForTimeout(1700)};
   await ouvre(SITE);await L.p.click('#medal');
   ok(await att(L.p,()=>!!document.querySelector('#sb-otp')),'appli en ligne (https) : bouton « lien par e-mail » proposé');
-  await L.p.fill('#sb-mail','lea@test.fr');await L.p.click('#sb-tin');ok(await L.p.isVisible('#sb-otp'),'« J\'ai déjà un compte » : lien « Mot de passe oublié ? » visible');await L.p.click('#sb-otp');
+  await L.p.fill('#sb-mail','lea@test.fr');await L.p.click('#sb-tin');ok(await L.p.isVisible('#sb-otp'),'« J\'ai déjà un compte » : boutons « Mot de passe oublié ? » et « lien de connexion » visibles');await L.p.click('#sb-otp');
   ok(await att(L.p,()=>/Lien envoyé/.test($('ami').innerText))&&jl.includes('lien:lea@test.fr')&&(jl.lien||'').startsWith(SITE+'#'),'lien demandé : « Lien envoyé », il renvoie vers l\'adresse de l\'appli');
   await L.p.goto('about:blank');await ouvre(jl.lien);
   ok(await att(L.p,()=>$('prf').open&&!!document.querySelector('#sb-pf'),null,15000),'lien ouvert : connectée, le profil s\'ouvre seul sur le choix du pseudo');
