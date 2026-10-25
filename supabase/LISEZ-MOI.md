@@ -160,8 +160,8 @@ La connexion par Google, Apple, etc. (OAuth) pourra s'ajouter plus tard. Elle de
 
 - `outils/controle_mdp_oublie.js` fait de même pour le parcours « Mot de passe oublié » (voir sa section) : demande de lien, nouveau mot de passe avec confirmation, lien expiré ou déjà utilisé.
 
-Ils demandent `@electric-sql/pglite` et `@supabase/supabase-js`, installés comme Playwright :
-`npm i -g @electric-sql/pglite @supabase/supabase-js`.
+Ils demandent `@electric-sql/pglite` et `@supabase/supabase-js`, installés comme Playwright, aux versions épinglées dans `.github/workflows/recette.yml` (source unique des versions de test) :
+`npm i -g @electric-sql/pglite @supabase/supabase-js@<version de SB_LIB>`.
 
 **Version de la bibliothèque.** L'appli charge `supabase-js` 2.117.3 depuis jsDelivr, avec une empreinte d'intégrité (SRI) : le navigateur refuse un fichier modifié. Pour changer de version, il faut mettre à jour `SB_LIB` et `SB_SRI` ensemble.
 

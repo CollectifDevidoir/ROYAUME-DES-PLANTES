@@ -3,7 +3,7 @@
 Tous les scripts Node s'appuient sur Playwright et Chromium. Lancement depuis la racine du dépôt, par exemple :
 `NODE_PATH=$(npm root -g) node outils/recette.js`.
 Le réseau n'est pas nécessaire : `banc_essai.js` simule iNaturalist et génère des photos.
-Les contrôles des comptes demandent en plus `npm i -g @electric-sql/pglite @supabase/supabase-js@2.117.3` (voir `supabase/LISEZ-MOI.md`). La version de supabase-js doit être celle de `SB_LIB` dans `index.html`, sinon l'empreinte d'intégrité (SRI) refuse la bibliothèque et les contrôles des comptes échouent.
+Les contrôles des comptes demandent en plus `@electric-sql/pglite` et `@supabase/supabase-js` (voir `supabase/LISEZ-MOI.md`). **Les versions d'outils de test sont épinglées à un seul endroit : l'étape « Outils de test » de `.github/workflows/recette.yml`** ; pour un lancement local, installer les mêmes (`npm i -g playwright@… @electric-sql/pglite@… @supabase/supabase-js@…`). La version de supabase-js doit être celle de `SB_LIB` dans `index.html`, sinon l'empreinte d'intégrité (SRI) refuse la bibliothèque et les contrôles des comptes échouent.
 
 **Recette automatique.** `recette_rapide.sh` enchaîne la recette et les contrôles principaux. Il échoue si un contrôle sort en erreur ou affiche une ligne « ÉCHEC ». Le workflow GitHub « Recette » (`.github/workflows/recette.yml`) lance ses quatre groupes en parallèle à chaque envoi et à chaque demande de fusion. Un défaut connu et déjà planifié s'affiche « CONNU (identifiant) » sans faire échouer la recette (liste `CONNUS` dans `recette.js`, identifiants de `conception-cible.md`).
 
