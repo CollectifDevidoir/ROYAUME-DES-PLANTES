@@ -71,6 +71,8 @@ Pour Gmail : sur le compte Google, active la **validation en deux étapes**, pui
 
 **Lien de connexion** (connexion sans mot de passe, bouton « Recevoir un lien de connexion par e-mail ») : même démarche avec le modèle **Magic Link**, le fichier `supabase/e-mails/lien-connexion.html` et l'objet `Ton lien pour entrer dans le royaume 🌿`.
 
+**Invitation** (Supabase > Authentication > Users > « Invite user », pour inviter quelqu'un par e-mail depuis le tableau de bord) : modèle **Invite user**, fichier `supabase/e-mails/invitation.html`, objet `Tu es invité(e) au royaume des plantes 🌿`. La personne invitée n'a pas de mot de passe : elle entre par le lien, choisit son pseudo, puis se crée un mot de passe avec « Mot de passe oublié ? » quand elle voudra se reconnecter.
+
 **Mot de passe oublié** (bouton « Mot de passe oublié ? Choisir un nouveau mot de passe ») : même démarche avec le modèle **Reset Password**, le fichier `supabase/e-mails/reinitialisation.html` et l'objet `Choisis ton nouveau mot de passe 🌿`. C'est un modèle distinct du lien de connexion : sans lui, l'e-mail de réinitialisation part avec le texte anglais par défaut de Supabase (il fonctionne quand même).
 
 Pour vérifier, crée un compte de test avec une autre adresse : l'e-mail reçu doit afficher le nouveau texte et le bouton « Confirmer mon adresse e-mail ».
