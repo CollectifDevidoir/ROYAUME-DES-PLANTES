@@ -4039,6 +4039,7 @@ let firstQ=true,dejaQ=false;
 function debut(){const c=$('chips'),on=firstQ&&!document.documentElement.classList.contains('dk')&&c&&!c.hidden&&getComputedStyle(c).display!=='none';document.body.classList.toggle('deb',!!on);document.documentElement.style.setProperty('--chh',on?(c.offsetHeight+12)+'px':'0px')}
 const focusCard=()=>{const e=$('qc');if(!e)return;debut();if(firstQ){window.scrollTo(0,0);return}const h=($('top')&&$('top').offsetHeight)||56;document.documentElement.style.setProperty('--hh',h+'px');window.scrollTo(0,Math.max(0,e.getBoundingClientRect().top+(window.pageYOffset||0)-h-4))};
 async function next(){
+  if(dfOn)return;   // le défi occupe l'écran : un nouvel exercice ne doit pas s'y superposer (dfQuitter relance le quiz)
   const kbd=!!(document.activeElement&&document.activeElement.closest&&document.activeElement.closest('#sh'));const tk=++nxt;shTok++;$('sh').hidden=true;document.body.classList.remove('hs');hsUpd();if($('fch').open)closeSheet();$('pic').style.height='';
   focusCard();
   if(seenN()>0)document.body.classList.remove('fresh');   // modes révélés à la 2e question (pas pendant la correction : la photo ne bouge pas)
@@ -4046,7 +4047,8 @@ async function next(){
   $('pic').className='pic sk';$('pic').textContent='Chargement…';done=false;
   const slow=setTimeout(()=>{if(tk===nxt&&$('pic').classList.contains('sk'))$('pic').textContent='Chargement de la photo… la connexion semble lente.'},5000);
   const q=await(pre||prepare());clearTimeout(slow);
-  if(tk!==nxt)return;pre=null;if(q&&!q.train&&!q.defi)qCur=q;
+  if(tk!==nxt)return;if(dfOn){if(q&&!q.train&&!q.defi)pre=q;return}   // défi ouvert pendant le chargement : on garde la question de côté
+  pre=null;if(q&&!q.train&&!q.defi)qCur=q;
   if(!q&&Date.now()<iOff){const w=()=>{const e=$('q-wait');if(e)e.textContent=Math.max(1,Math.ceil((iOff-Date.now())/1e3))};$('pic').innerHTML='<div style="padding:16px;text-align:center" role="status"><p>Le service de photos demande une courte pause.<br>Reprise dans <b id="q-wait"></b> s…</p></div>';w();const iv=setInterval(()=>{if(tk!==nxt||!$('q-wait')){clearInterval(iv);return}w()},1e3);setTimeout(()=>{clearInterval(iv);if(tk===nxt)next()},iOff-Date.now()+400);return}
   if(!q){$('pic').innerHTML='<div style="padding:16px"><p>Aucune image chargée. Vérifie la connexion.</p><button class="big" id="q-retry">Réessayer</button></div>';$('q-retry').onclick=()=>{bad.clear();next()};return}
   cur=q.s;typed=q.typed;curTrain=!!q.train;pvSet=q.pv||null;jeuQ={t:Date.now(),o:pvSet?'photos':!q.im.label?'plante':JEU_ORG[q.im.label]||'autre',ph:pvSet?0:+(String(q.im.src||'').match(/\/photos\/(\d+)\//)||[])[1]||0};$('qc').classList.toggle('ty',!!typed&&!pvSet);$('qc').classList.toggle('pvq',!!pvSet);$('qc').classList.remove('pvr');document.body.classList.remove('pvdo');if(typed&&!pvSet)firstQ=false;
