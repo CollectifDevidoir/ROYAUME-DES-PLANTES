@@ -1,7 +1,7 @@
 // Comptes (Supabase), de bout en bout, sans réseau : la vraie bibliothèque supabase-js parle à un faux
 // Supabase (outils/supabase/faux_supabase.js) adossé à une vraie base PostgreSQL (PGlite) qui exécute
 // supabase/schema.sql. Deux « appareils » : Antoine et Coline ; puis Antoine sur un nouvel appareil.
-// Ensuite : adresse du tableau de bord collée par erreur, clé secrète refusée, lien de connexion par e-mail
+// Ensuite : adresse du tableau de bord collée par erreur, clé secrète refusée, aucun lien de connexion sans mot de passe
 // (l'appli est alors servie à une adresse https simulée).
 // Usage : NODE_PATH=$(npm root -g) node outils/controle_comptes.js [index.html] [dossier_captures]
 const {chromium}=require('playwright');const path=require('path'),fs=require('fs'),os=require('os');
@@ -97,10 +97,10 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   // ---- Coline supprime son compte
   B.p.once('dialog',d=>d.accept());await B.p.click('#sb-del');ok(await att(B.p,()=>!!document.querySelector('#sb-f')),'compte supprimé : retour au formulaire');
   await A.p.click('#sb-maj');ok(await att(A.p,()=>!/Coline/.test($('ami').innerText)),'Coline a disparu du tableau d\'Antoine');
-  // ---- lien de connexion par e-mail : seulement si l'appli est servie en http(s)
-  await C.p.click('#sb-tin').catch(()=>{});ok(await C.p.evaluate(()=>!!document.querySelector('#sb-otp')),'adresse web : bouton « lien par e-mail » proposé');
+  // ---- aucun lien de connexion sans mot de passe, ni sur adresse web ni en fichier local
+  await C.p.click('#sb-tin').catch(()=>{});ok(await C.p.evaluate(()=>!document.querySelector('#sb-otp')&&!/sans mot de passe/i.test($('ami').innerText)),'adresse web : pas de bouton « lien de connexion par e-mail »');
   const Lf=await appareil(390,844,F,URL_SB,false);await Lf.p.click('#medal');await att(Lf.p,()=>!!document.querySelector("#sb-f"));await Lf.p.click("#sb-tin").catch(()=>{});
-  ok(await Lf.p.evaluate(()=>!document.querySelector("#sb-otp")),'fichier local : pas de bouton « lien par e-mail » (il exige une adresse web)');
+  ok(await Lf.p.evaluate(()=>!document.querySelector("#sb-otp")&&!document.querySelector("#sb-rec")),'fichier local : ni lien de connexion ni « mot de passe oublié » (il exige une adresse web)');
   // ---- adresse de la page du tableau de bord collée par erreur : l'appli en déduit l'URL du projet
   const ID='abcdefghijklmnopqrst',URL_D='https://'+ID+'.supabase.co';
   const D=await appareil(390,844,copie('tableau',`https://supabase.com/dashboard/project/${ID}/settings/api-keys`,'cle-anon-test'),URL_D);
@@ -117,7 +117,7 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   await E.p.waitForTimeout(500);ok(!E.j.length&&!sorties.length,'clé secrète : ni bibliothèque chargée ni requête vers Supabase');
   const jwt=r=>'eyJhbGciOiJIUzI1NiJ9.'+Buffer.from(JSON.stringify({role:r})).toString('base64url')+'.sig';
   ok(await E.p.evaluate(([s,a])=>sbSecret(s)&&!sbSecret(a)&&!sbSecret('sb_publishable_x'),[jwt('service_role'),jwt('anon')]),'ancienne clé « service_role » refusée ; clés « anon » et « publishable » acceptées');
-  // ---- lien de connexion par e-mail : appli servie à une adresse https simulée
+  // ---- appli servie à une adresse https simulée (liens des e-mails de confirmation et de réinitialisation)
   const SITE='https://royaume.test/',ctxL=await b.newContext({viewport:{width:390,height:844}});
   await ctxL.route(/^https?:/,r=>r.fulfill({status:404,body:''}));
   const L={p:await ctxL.newPage()},jl=[];L.p.errs=[];L.p.on('pageerror',e=>L.p.errs.push(e.message));
@@ -125,13 +125,7 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   await L.p.route(SITE+'**',r=>r.fulfill({status:200,contentType:'text/html; charset=utf-8',body:fs.readFileSync(F,'utf8')}));await brancher(L.p,db,URL_SB,jl);
   const ouvre=async u=>{await L.p.goto(u);await L.p.waitForTimeout(400);await L.p.evaluate(()=>{const s=$('splash');if(s)s.click()});await L.p.waitForTimeout(1700)};
   await ouvre(SITE);await L.p.click('#medal');
-  ok(await att(L.p,()=>!!document.querySelector('#sb-otp')),'appli en ligne (https) : bouton « lien par e-mail » proposé');
-  await L.p.fill('#sb-mail','lea@test.fr');await L.p.click('#sb-tin');ok(await L.p.isVisible('#sb-otp'),'« J\'ai déjà un compte » : boutons « Mot de passe oublié ? » et « lien de connexion » visibles');await L.p.click('#sb-otp');
-  ok(await att(L.p,()=>/Lien envoyé/.test($('ami').innerText))&&jl.includes('lien:lea@test.fr')&&(jl.lien||'').startsWith(SITE+'#'),'lien demandé : « Lien envoyé », il renvoie vers l\'adresse de l\'appli');
-  await L.p.goto('about:blank');await ouvre(jl.lien);
-  ok(await att(L.p,()=>$('prf').open&&!!document.querySelector('#sb-pf'),null,15000),'lien ouvert : connectée, le profil s\'ouvre seul sur le choix du pseudo');
-  ok(await L.p.evaluate(()=>!/access_token/.test(location.href)),'le jeton est retiré de la barre d\'adresse');
-  await L.p.fill('#sb-ps','Lea');await L.p.click('#sb-pf button');ok(await att(L.p,()=>!!document.querySelector('#sb-code')),'compte créé par le lien : profil et code ami');
+  await L.p.click('#sb-tin');ok(await L.p.evaluate(()=>!document.querySelector('#sb-otp')&&!/lien de connexion|sans mot de passe/i.test($('ami').innerText))&&!!(await L.p.$('#sb-rec')),'appli en ligne (https) : plus aucun moyen de se connecter par un simple lien (seul « Mot de passe oublié ? » reste)');
   // e-mail de confirmation d'un nouveau compte : il doit ramener à l'adresse de l'appli (sinon : page 404)
   await L.p.click('#sb-out');await att(L.p,()=>!!document.querySelector('#sb-f'));
   await L.p.fill('#sb-mail','zoe@test.fr');await L.p.fill('#sb-mdp','Secret-789');await L.p.click('#sb-tup');await L.p.click('#sb-go');await att(L.p,()=>!!document.querySelector('#sb-pf'));

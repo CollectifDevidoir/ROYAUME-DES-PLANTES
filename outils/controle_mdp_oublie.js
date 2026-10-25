@@ -2,7 +2,8 @@
 // (outils/supabase/faux_supabase.js : /auth/v1/recover et mise à jour du mot de passe), l'appli est servie à une adresse https simulée.
 // Couvre : demande de lien (resetPasswordForEmail, adresse de retour autorisée), réponse identique que le compte existe ou non,
 // écran « Nouveau mot de passe » avec confirmation, règle de 8 caractères + un spécial (même règle que la création de compte),
-// updateUser, ancien mot de passe refusé / nouveau accepté, lien expiré ou déjà utilisé, « Plus tard », pas de bouton hors adresse web.
+// updateUser, ancien mot de passe refusé / nouveau accepté, lien expiré ou déjà utilisé, pas de bouton hors adresse web, aucune connexion par simple lien :
+// quitter l'écran sans finir (Plus tard, fermeture, Échap, rechargement) déconnecte.
 // Ce que ce test ne prouve PAS : l'envoi réel de l'e-mail, le modèle e-mail et la liste d'adresses autorisées de Supabase
 // (à vérifier à la main : voir supabase/LISEZ-MOI.md, « Mot de passe oublié »).
 // Usage : NODE_PATH=$(npm root -g) node outils/controle_mdp_oublie.js [index.html]
@@ -38,9 +39,9 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   // ---- formulaire : règle de mot de passe alignée, bouton « mot de passe oublié » distinct du lien de connexion
   await p.click('#sb-tin');
   ok(await p.evaluate(()=>$('sb-mdp').minLength===8&&/8 caractères/.test($('sb-mh').textContent)),'règle du mot de passe : attribut minlength = 8, comme le texte affiché (8 caractères au moins, dont un spécial)');
-  ok(await p.isVisible('#sb-rec')&&await p.isVisible('#sb-otp')&&(await p.textContent('#sb-rec')).includes('Mot de passe oublié')&&!(await p.textContent('#sb-otp')).includes('Mot de passe oublié'),
-    '« J\'ai déjà un compte » : « Mot de passe oublié ? » (nouveau mot de passe) et « lien de connexion » sont deux boutons distincts');
-  await p.click('#sb-tup');ok(!(await p.isVisible('#sb-rec'))&&!(await p.isVisible('#sb-otp')),'« Créer un compte » : ni l\'un ni l\'autre');
+  ok(await p.isVisible('#sb-rec')&&(await p.textContent('#sb-rec')).includes('Mot de passe oublié')&&await p.evaluate(()=>!document.querySelector('#sb-otp')&&!/sans mot de passe|lien de connexion/i.test($('ami').innerText)),
+    '« J\'ai déjà un compte » : « Mot de passe oublié ? » est le seul lien par e-mail ; plus de connexion par simple lien');
+  await p.click('#sb-tup');ok(!(await p.isVisible('#sb-rec')),'« Créer un compte » : pas de « mot de passe oublié »');
   await p.click('#sb-tin');
 
   // ---- demande de lien
@@ -50,7 +51,7 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   ok(await att(p,()=>/Si un compte existe/.test($('ami').innerText)),'adresse indiquée : « Si un compte existe… un e-mail vient de partir »');
   const rec=j.find(x=>x.startsWith('/auth/v1/recover'));
   ok(!!rec&&j.includes('recover:'+MAIL)&&new URLSearchParams(rec.split('?')[1]).get('redirect_to')===SITE,'resetPasswordForEmail : requête /recover avec l\'adresse de l\'appli comme retour (celle à autoriser dans Supabase)');
-  ok(!j.some(x=>x.startsWith('/auth/v1/otp')),'le lien de connexion (otp) n\'est PAS utilisé pour le mot de passe oublié');
+  ok(!j.some(x=>x.startsWith('/auth/v1/otp')),'aucune demande de lien de connexion (otp) n\'est jamais envoyée');
   const lienA=j.recup;ok(/#access_token=.*type=recovery/.test(lienA||''),'lien reçu (simulé) : retour de type « recovery » vers l\'appli');
   // adresse inconnue : même réponse, aucun lien
   j.recup=null;const msgA=await p.evaluate(()=>document.querySelector('#ami .stm.ok').textContent);
@@ -94,16 +95,30 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   ok(await att(p,()=>$('prf').open&&/a expiré ou a déjà servi/.test($('ami').innerText)&&!!document.querySelector('#sb-rec')&&!document.querySelector('#sb-rf')),'lien expiré / déjà utilisé : message clair, pas d\'écran de mot de passe, « Mot de passe oublié ? » proposé pour en redemander un');
   ok(await p.evaluate(()=>!/error/.test(location.href)),'l\'erreur est retirée de la barre d\'adresse');
 
-  // ---- « Plus tard » : on quitte l'écran sans changer le mot de passe
-  await p.fill('#sb-mail',MAIL);await p.click('#sb-rec');await att(p,()=>/Si un compte existe/.test($('ami').innerText));
-  await p.goto('about:blank');await ouvre(j.recup);await att(p,()=>!!document.querySelector('#sb-rf'),null,15000);
-  const nPut2=nPut();await p.click('#sb-rx');
-  ok(await att(p,()=>!document.querySelector('#sb-rf')&&!!document.querySelector('#sb-code'))&&nPut()===nPut2&&await mdpBase()===NOUVEAU,'« Plus tard » : l\'écran se ferme, le mot de passe n\'a pas changé');
+  // ---- quitter l'écran sans changer le mot de passe ne doit JAMAIS laisser connecté (le lien n'est pas un moyen de connexion)
+  const ouvreLien=async()=>{await p.evaluate(()=>{if(!$('prf').open)openProfil()});await att(p,()=>!!document.querySelector('#sb-mail'));await p.fill('#sb-mail',MAIL);await p.click('#sb-rec');await att(p,()=>/Si un compte existe/.test($('ami').innerText));
+    await p.goto('about:blank');await ouvre(j.recup);return att(p,()=>!!document.querySelector('#sb-rf'),null,15000)};
+  const dehors=()=>att(p,()=>!document.querySelector('#sb-rf')&&!!document.querySelector('#sb-f')&&!sbU);
+  const nPut2=nPut();
+  await ouvreLien();await p.click('#sb-rx');
+  ok(await dehors()&&nPut()===nPut2&&await mdpBase()===NOUVEAU,'« Plus tard » : déconnecté, formulaire de connexion, mot de passe inchangé');
+  ok(await p.evaluate(()=>!localStorage.getItem('qp.sbrec')),'« Plus tard » : la marque de changement en cours est effacée');
+  await ouvreLien();await p.click('#prf-x');
+  ok(await att(p,()=>!sbU&&!sbRec)&&await p.evaluate(()=>!localStorage.getItem('qp.sb')||!JSON.parse(localStorage.getItem('qp.sb')||'null')),'fermer le volet sans finir : déconnecté, plus de session enregistrée');
+  await p.click('#medal');ok(await att(p,()=>!!document.querySelector('#sb-f')&&!document.querySelector('#sb-rf')),'on rouvre le profil : formulaire de connexion, pas connecté');
+  await ouvreLien();await p.keyboard.press('Escape');
+  ok(await att(p,()=>!sbU&&!sbRec),'Échap sans finir : déconnecté');
+  await ouvreLien();await ouvre(SITE);
+  ok(await att(p,()=>$('prf').open&&/n\'a pas été terminé/.test($('ami').innerText)&&!!document.querySelector('#sb-f')&&!sbU),'rechargement en cours de route : déconnecté, avec une explication');
+  await p.click('#prf-x');
+  await ouvreLien();await p.fill('#sb-np',NOUVEAU+'z!');await p.fill('#sb-np2',NOUVEAU+'z!');await p.click('#sb-rgo');
+  ok(await att(p,()=>/Mot de passe changé/.test($('ami').innerText)&&!!sbU)&&await p.evaluate(()=>!localStorage.getItem('qp.sbrec')),'changement terminé : connecté, marque effacée');
+  await db.query('update auth.users set mdp=$1 where email=$2',[NOUVEAU,MAIL]);
+  await p.click('#prf-x');ok(await p.evaluate(()=>!!sbU),'après un changement terminé, fermer le volet ne déconnecte pas');
+  await p.click('#medal');await att(p,()=>!!document.querySelector('#sb-out'));await p.click('#sb-out');await att(p,()=>!!document.querySelector('#sb-f'));
 
   // ---- session perdue pendant la saisie : message clair, retour à la connexion
-  await p.click('#sb-out');await att(p,()=>!!document.querySelector('#sb-f'));
-  await p.fill('#sb-mail',MAIL);await p.click('#sb-rec');await att(p,()=>/Si un compte existe/.test($('ami').innerText));
-  await p.goto('about:blank');await ouvre(j.recup);await att(p,()=>!!document.querySelector('#sb-rf'),null,15000);
+  await ouvreLien();
   await db.query('delete from auth.users where email=$1',[MAIL]);   // le serveur ne reconnaît plus la session (lien périmé entre-temps)
   await p.fill('#sb-np','Troisieme-789!');await p.fill('#sb-np2','Troisieme-789!');await p.click('#sb-rgo');
   ok(await att(p,()=>/a expiré ou a déjà servi|Redemande/.test($('ami').innerText)&&!document.querySelector('#sb-rf')),'session périmée pendant la saisie : message clair, plus d\'écran de mot de passe');
@@ -111,7 +126,7 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   // ---- appli ouverte comme un fichier (pas d'adresse web) : le lien ne pourrait pas revenir, le bouton n'est pas proposé
   const L=await open({browser:b,w:390,h:844,touch:true,seed:true,file:F,http:false});await brancher(L.p,db,URL_SB,[]);
   await L.p.click('#medal');await att(L.p,()=>!!document.querySelector('#sb-f'));await L.p.click('#sb-tin');
-  ok(await L.p.evaluate(()=>!document.querySelector('#sb-rec')&&!document.querySelector('#sb-otp')),'appli ouverte comme un fichier : pas de bouton « mot de passe oublié » (il exige une adresse web)');
+  ok(await L.p.evaluate(()=>!document.querySelector('#sb-rec')),'appli ouverte comme un fichier : pas de bouton « mot de passe oublié » (il exige une adresse web)');
   ok(p.errs.length===0&&L.p.errs.length===0,'aucune erreur JavaScript '+(p.errs.concat(L.p.errs)[0]||''));
   ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'390 px : pas de défilement horizontal');
   await b.close();fs.unlinkSync(F);

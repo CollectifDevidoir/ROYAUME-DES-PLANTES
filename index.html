@@ -4426,6 +4426,7 @@ $('ring').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open
 function openProfil(){usage('profil');const d=$('prf');ami();if(d.showModal){if(!d.open)d.showModal()}else d.setAttribute('open','');d.scrollTop=0;$('prf-t').focus({preventScroll:true});
   if($('medal').classList.contains('nv')){$('medal').classList.remove('nv');try{localStorage.setItem('qp.prf',today())}catch(e){}}}
 $('prf-x').onclick=()=>$('prf').close();
+$('prf').addEventListener('close',()=>{if(typeof sbRec!=='undefined'&&sbRec)sbRecAbandon()});
 $('prf').onclick=e=>{if(e.target===$('prf'))$('prf').close()};
 $('jou-x').onclick=()=>$('jou').close();
 $('jou').onclick=e=>{if(e.target===$('jou'))$('jou').close()};
@@ -4690,7 +4691,11 @@ $('next').onclick=next;
 // La clé « anon » est publique par conception : la sécurité vient des règles de la base (supabase/schema.sql).
 const SB_URL='https://hcbzkpsxqxhmqcblfsnm.supabase.co',SB_KEY='sb_publishable_rtqaluMAanjewYK2bvJ3Xw_zMampeYI';
 const SB_LIB='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.js',SB_SRI='sha384-BWcjm9OdFth9TbhCxZPdm+gAOUMAzQy9nmTs12ioXdCcbVnJaPMn+fMUoQCLt60R';
-var sbRec=false,sbMsgLien='';   // vrai quand on arrive par le lien « mot de passe oublié » : l'écran « Nouveau mot de passe » passe avant le reste
+var sbRec=false,sbMsgLien='';
+// Le lien « mot de passe oublié » ouvre une session pour pouvoir changer le mot de passe. Tant que le changement n'est pas fait, cette session ne doit pas servir à se connecter :
+// quitter l'écran (Plus tard, fermeture du volet, rechargement, retour plus tard) la ferme. La marque survit au rechargement.
+const sbRecMarque=v=>{try{v?localStorage.setItem('qp.sbrec','1'):localStorage.removeItem('qp.sbrec')}catch(e){}};
+async function sbRecAbandon(){if(!sbRec)return;sbRec=false;sbRecMarque(false);try{await sb.auth.signOut({scope:'local'})}catch(e){}sbVide()}   // vrai quand on arrive par le lien « mot de passe oublié » : l'écran « Nouveau mot de passe » passe avant le reste
 const SB_MDP='Mot de passe : 8 caractères au moins, dont un caractère spécial (! ? @ # …).',sbMdpOk=p=>p.length>=8&&/[^A-Za-z0-9]/.test(p);
 var sbMode=(()=>{try{return localStorage.getItem('qp.sbm')||'up'}catch(e){return'up'}})();
 var sbPer=(()=>{try{const v=localStorage.getItem('qp.per');return /^[jsm]$/.test(v)?v:'j'}catch(e){return'j'}})(),sbPe=false,sbPm='',sb=null,sbU=null,sbP=null,sbTab=null,sbT=null,sbLd=null,sbMsg='',sbOk='',sbBusy=false,sbSync=0,sbMail='';
@@ -4791,13 +4796,13 @@ function mesEnvoi(){
   fetch(SBU+'/rest/v1/rpc/envoyer_mesures',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json',apikey:SB_KEY,Authorization:'Bearer '+SB_KEY},
     body:JSON.stringify({p_appareil:id,p_mesures:m})}).then(r=>{if(r.status>=500||r.status===429)throw 0}).catch(remettre);   // refus 4xx : paquet abandonné
 }
-// La bibliothèque n'est chargée que si les comptes servent : onglet Profil ouvert, session enregistrée ou retour d'un lien de connexion.
+// La bibliothèque n'est chargée que si les comptes servent : onglet Profil ouvert, session enregistrée ou retour d'un lien reçu par e-mail.
 function sbLib(){
   if(sbLd)return sbLd;
   sbLd=new Promise((ok,ko)=>{const s=document.createElement('script');s.src=SB_LIB;s.integrity=SB_SRI;s.crossOrigin='anonymous';s.onload=ok;s.onerror=()=>{sbLd=null;s.remove();ko(new Error('MODULE'))};document.head.append(s)})
    .then(()=>{sb=supabase.createClient(SBU,SB_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true,storageKey:'qp.sb'}});
      // pas d'appel à Supabase directement dans ce rappel (recommandation de la bibliothèque) : on le diffère
-     sb.auth.onAuthStateChange((ev,s)=>{const u=s&&s.user||null,chg=(u&&u.id)!==(sbU&&sbU.id);sbU=u;if(ev==='PASSWORD_RECOVERY'&&u)sbRec=true;else if(!u)sbRec=false;if(chg)setTimeout(sbConnecte,0);else if(ev==='PASSWORD_RECOVERY')setTimeout(()=>openProfil(),0)});return sb});
+     sb.auth.onAuthStateChange((ev,s)=>{const u=s&&s.user||null,chg=(u&&u.id)!==(sbU&&sbU.id);sbU=u;if(ev==='PASSWORD_RECOVERY'&&u){sbRec=true;sbRecMarque(true)}else if(!u)sbRec=false;if(chg)setTimeout(sbConnecte,0);else if(ev==='PASSWORD_RECOVERY')setTimeout(()=>openProfil(),0)});return sb});
   return sbLd;
 }
 const SB_ERR={'Anonymous sign-ins':'Indique ton adresse e-mail.','Error sending':'L\'e-mail n\'a pas pu être envoyé. Réessaie dans quelques minutes ; si le problème continue, préviens l\'équipe du royaume.',PSEUDO_PRIS:'Ce pseudo est déjà pris.',PSEUDO_INVALIDE:'Pseudo : 2 à 20 caractères (lettres, chiffres, point, tiret, soulignement).',CODE_INCONNU:'Aucun ami avec ce code.',JOUEUR_INCONNU:'Ce joueur est introuvable.',TROP_DE_DEMANDES:'Trop de demandes envoyées : réessaie plus tard.',SOI_MEME:'C\'est ton propre code !',TROP_D_ESSAIS:'Trop d\'essais : réessaie dans une heure.',HORS_LIGNE:'Le serveur des comptes ne répond pas. Vérifie ta connexion internet ; si elle marche, le projet Supabase est peut-être en pause (à relancer depuis le tableau de bord Supabase) ou son adresse est incorrecte.',MODULE:'Le module de connexion n\'a pas pu être chargé : vérifie ta connexion internet.','Invalid API key':'Clé Supabase refusée : vérifie la clé publique (« publishable ») dans index.html.','No API key':'Clé Supabase absente : vérifie index.html.',SANS_PROFIL:'Choisis d\'abord ton pseudo.',
@@ -4836,9 +4841,9 @@ function sbFusionne(dist){if(!dist||!dist.sp)return false;const m=fusion(st,dist
 // de session peuvent la demander en même temps) ; le profil n'est remplacé qu'une fois connu.
 let sbCx=null,sbCxU=null;
 function sbConnecte(){const uid=sbU&&sbU.id||null;if(sbCx&&sbCxU===uid)return sbCx;sbCxU=uid;
-  const run=(async()=>{await null;sbMsg=sbMsgLien;sbMsgLien='';sbTab=null;let p=null;
+  const run=(async()=>{await null;sbMsg=uid?'':sbMsgLien;if(uid)sbMsgLien='';sbTab=null;let p=null;
     if(uid){try{p=await sbRpc('mon_profil');if(p&&sbFusionne(await sbRpc('lire_progression'))&&curTab==='herb')herb()}
-      catch(e){sbMsg=sbErr(e);p=undefined}}   // undefined : profil inconnu (réseau), à ne pas confondre avec null (pas encore de pseudo)
+      catch(e){if((sbU&&sbU.id||null)===uid)sbMsg=sbErr(e);p=undefined}}   // (erreur ignorée si la session a été fermée entre-temps) undefined : profil inconnu (réseau), à ne pas confondre avec null (pas encore de pseudo)
     if((sbU&&sbU.id||null)!==uid)return;   // l'utilisateur a changé entre-temps : une autre connexion prend le relais
     if(uid){sbMode='in';try{localStorage.setItem('qp.sbm','in')}catch(e){}}
     sbP=p;if(p){await sbEnvoi();dfCompte();sbDem()}   // défi déjà joué sur un autre appareil : le bouton de l'accueil l'affiche
@@ -4933,11 +4938,11 @@ async function ami(){
     $('sb-rf').onsubmit=async e=>{e.preventDefault();if(sbBusy)return;sbMsg='';sbOk='';const a=$('sb-np').value,c=$('sb-np2').value;
       if(!sbMdpOk(a))sbMsg=SB_MDP;else if(a!==c)sbMsg='Les deux mots de passe ne sont pas identiques.';
       if(!sbMsg){sbBusy=true;$('sb-rgo').disabled=true;
-        try{const {error}=await sb.auth.updateUser({password:a});if(error)throw error;sbRec=false;sbOk='Mot de passe changé. Tu pourras te connecter avec lui sur tous tes appareils.'}
-        catch(x){sbMsg=sbErr(x);if(/session missing|expired/i.test((x&&x.message)||''))sbRec=false}   // lien périmé entre-temps : retour à la connexion
+        try{const {error}=await sb.auth.updateUser({password:a});if(error)throw error;sbRec=false;sbRecMarque(false);sbOk='Mot de passe changé. Tu pourras te connecter avec lui sur tous tes appareils.'}
+        catch(x){sbMsg=sbErr(x);if(/session missing|expired/i.test((x&&x.message)||'')){sbRec=false;sbRecMarque(false)}}   // lien périmé entre-temps : retour à la connexion
         sbBusy=false}
       ami()};
-    $('sb-rx').onclick=()=>{sbRec=false;sbOk='';ami()};
+    $('sb-rx').onclick=async()=>{sbOk='';sbMsgLien='';await sbRecAbandon();ami()};
     return}
   if(sbU&&sbCx){el.innerHTML=h+'<div class="card"><p class="na">Connexion au compte…</p></div>';return}
   if(!sbU&&!sbBusy){let ss=null;try{ss=(await sb.auth.getSession()).data.session}catch(e){}if(ss&&ss.user&&!sbU){sbU=ss.user;el.innerHTML=h+'<div class="card"><p class="na">Connexion au compte…</p></div>';sbConnecte();return}}
@@ -4946,16 +4951,16 @@ async function ami(){
     h+=`<div class="card"><h3 class="hh">Mon compte</h3><p class="na">Facultatif : un compte sauvegarde ta progression et te permet de comparer ta journée avec tes amis.</p>
 <div class="sbt" role="tablist" aria-label="Compte"><button id="sb-tup" type="button" role="tab">Créer un compte</button><button id="sb-tin" type="button" role="tab">J'ai déjà un compte</button></div>
 <form id="sb-f" class="sbf" novalidate><label>E-mail<input id="sb-mail" type="email" inputmode="email" autocomplete="email" required value="${esc(sbMail)}"></label><label><span>Mot de passe <small id="sb-mh">8 caractères au moins, dont un spécial (! ? @ # …)</small></span><input id="sb-mdp" type="password" minlength="8"></label>${msg}
-<button class="big" id="sb-go" type="submit"></button><p class="na sbh" id="sb-ce">Tu recevras un e-mail pour confirmer ton adresse (regarde aussi dans les indésirables).</p>${sbLien()?'<button class="lnkb" id="sb-rec" type="button">Mot de passe oublié ? Choisir un nouveau mot de passe</button><button class="lnkb" id="sb-otp" type="button">Recevoir un lien de connexion par e-mail, sans mot de passe</button>':''}</form></div>`;
+<button class="big" id="sb-go" type="submit"></button><p class="na sbh" id="sb-ce">Tu recevras un e-mail pour confirmer ton adresse (regarde aussi dans les indésirables).</p>${sbLien()?'<button class="lnkb" id="sb-rec" type="button">Mot de passe oublié ? Choisir un nouveau mot de passe</button>':''}</form></div>`;
     el.innerHTML=h;
     const mode=m=>{sbMode=m;const up=m==='up';try{localStorage.setItem('qp.sbm',m)}catch(e){}
       $('sb-tup').setAttribute('aria-selected',up);$('sb-tin').setAttribute('aria-selected',!up);
       $('sb-go').textContent=up?'Créer mon compte':'Se connecter';$('sb-mdp').autocomplete=up?'new-password':'current-password';
-      $('sb-mh').hidden=!up;$('sb-ce').hidden=!up||sbAuto===true;if($('sb-otp'))$('sb-otp').hidden=$('sb-rec').hidden=up};
+      $('sb-mh').hidden=!up;$('sb-ce').hidden=!up||sbAuto===true;if($('sb-rec'))$('sb-rec').hidden=up};
     mode(sbMode);sbAutoP().then(()=>{if($('sb-ce'))$('sb-ce').hidden=sbMode!=='up'||sbAuto===true});
     $('sb-tup').onclick=()=>{mode('up');$('sb-mail').focus()};$('sb-tin').onclick=()=>{mode('in');$('sb-mail').focus()};
     // vérifié avant l'envoi : sans e-mail, Supabase croirait à une demande de compte anonyme ; l'adresse tapée est gardée
-    const go=async(fn,mdp=true)=>{if(sbBusy)return;sbMsg='';sbOk='';const m=$('sb-mail').value.trim(),p=$('sb-mdp').value;sbMail=m;
+    const go=async(fn,mdp=true)=>{if(sbBusy)return;sbMsg='';sbMsgLien='';sbOk='';const m=$('sb-mail').value.trim(),p=$('sb-mdp').value;sbMail=m;
       if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m))sbMsg=m?'Adresse e-mail invalide.':'Indique ton adresse e-mail.';else if(mdp&&sbMode==='up'&&!sbMdpOk(p))sbMsg=SB_MDP;else if(mdp&&!p)sbMsg='Indique ton mot de passe.';
       if(sbMsg){ami();return}
       sbBusy=true;$('sb-go').disabled=true;try{await fn(m,p)}catch(e){sbMsg=sbErr(e)}sbBusy=false;if(!sbU||sbMsg||sbOk)ami()};
@@ -4964,7 +4969,6 @@ async function ami(){
       if(!data.session){sbMode='in';sbOk='Compte créé : confirme ton adresse avec le lien reçu par e-mail (pense à regarder dans les indésirables), puis connecte-toi ici.'}});
     $('sb-f').onsubmit=e=>{e.preventDefault();(sbMode==='up'?creer:entrer)()};
     if($('sb-rec'))$('sb-rec').onclick=()=>go(async m=>{const {error}=await sb.auth.resetPasswordForEmail(m,{redirectTo:location.origin+location.pathname});if(error)throw error;sbOk='Si un compte existe avec cette adresse, un e-mail vient de partir avec un lien pour choisir un nouveau mot de passe (regarde aussi dans les indésirables). Le lien ne sert qu\'une fois et expire au bout d\'une heure ; ouvre-le sur cet appareil.'},false);
-    if($('sb-otp'))$('sb-otp').onclick=()=>go(async m=>{const {error}=await sb.auth.signInWithOtp({email:m,options:{emailRedirectTo:location.origin+location.pathname}});if(error)throw error;sbOk='Lien envoyé : ouvre-le depuis ta boîte mail sur cet appareil (regarde aussi dans les indésirables).'},false);
     return;
   }
   if(sbP===undefined){el.innerHTML=h+`<div class="card"><h3 class="hh">Mon compte</h3>${msg}<div class="row"><button class="mini" id="sb-re" type="button">Réessayer</button><button class="mini" id="sb-out" type="button">Se déconnecter</button></div></div>`;
@@ -5003,17 +5007,20 @@ ${amis.length?`<details class="gam"><summary>Gérer mes amis (${amis.length})</s
 }
 function sbVide(){clearTimeout(sbT);sbT=null;sbU=null;sbP=null;sbNd=0;sbPastille();sbTab=null;sbSync=0;sbRaz=false;sbMsg='';sbOk='';sbPe=false;sbPm=''}
 // Déconnexion de cet appareil seulement (les autres appareils restent connectés) ; la progression reste sur l'appareil
-async function sbSortie(){if(sbT)await sbEnvoi();sbRec=false;try{await sb.auth.signOut({scope:'local'})}catch(e){}sbVide();ami()}
+async function sbSortie(){if(sbT)await sbEnvoi();sbRec=false;sbRecMarque(false);try{await sb.auth.signOut({scope:'local'})}catch(e){}sbVide();ami()}
 // Au démarrage : seulement si une session est enregistrée ou si l'on revient d'un lien de connexion
 var sbRetour=false;
 if(sbOn()){let ses=false;try{ses=!!localStorage.getItem('qp.sb')}catch(e){}
   sbRetour=/access_token=|[?&]code=/.test(location.hash+location.search);
-  sbRec=/access_token=/.test(location.hash)&&/[#&]type=recovery(&|$)/.test(location.hash);
+  let rec0=false;try{rec0=!!localStorage.getItem('qp.sbrec')}catch(e){}   // un changement de mot de passe laissé en route
+  sbRec=/access_token=/.test(location.hash)&&/[#&]type=recovery(&|$)/.test(location.hash);if(sbRec)sbRecMarque(true);
   // lien expiré ou déjà utilisé : Supabase revient avec #error=… ; on l'explique dans le profil et on nettoie l'adresse
   const er=new URLSearchParams((location.hash||'').slice(1)+'&'+(location.search||'').slice(1));
   if(er.get('error')||er.get('error_code')){sbMsg=sbMsgLien=/expired|invalid/i.test(er.get('error_code')+' '+er.get('error_description'))?'Ce lien a expiré ou a déjà servi. Pour changer ton mot de passe, redemande un lien avec « Mot de passe oublié ? » ; sinon, connecte-toi avec ton mot de passe.':'Le lien n\'a pas abouti. Réessaie depuis le profil.';sbMode='in';
     try{history.replaceState(null,'',location.pathname)}catch(e){}setTimeout(()=>openProfil(),300)}
-  if(ses||sbRetour)(window.requestIdleCallback?f=>requestIdleCallback(f,{timeout:1500}):setTimeout)(()=>sbLib().then(async()=>{const {data}=await sb.auth.getSession();sbU=data.session&&data.session.user||null;if(!sbU)sbRec=false;await sbConnecte()}).catch(()=>{}))}
+  if(ses||sbRetour)(window.requestIdleCallback?f=>requestIdleCallback(f,{timeout:1500}):setTimeout)(()=>sbLib().then(async()=>{const {data}=await sb.auth.getSession();let avert=false;sbU=data.session&&data.session.user||null;if(!sbU){sbRec=false;sbRecMarque(false)}
+    else if(rec0&&!sbRec){sbRecMarque(false);try{await sb.auth.signOut({scope:'local'})}catch(e){}sbU=null;sbVide();sbMsgLien='Le changement de mot de passe n\'a pas été terminé : connecte-toi avec ton mot de passe, ou redemande un lien avec « Mot de passe oublié ? ».';avert=true}
+    await sbConnecte();if(avert)openProfil()}).catch(()=>{}))}
 let SHS=(()=>{try{return localStorage.getItem('qp.shs')||'mid'}catch(e){return'mid'}})();
 const shS=()=>{const s=$('sh');return s.classList.contains('full')?'full':s.classList.contains('peek')?'peek':'mid'};
 const hsUpd=()=>{const on=!$('sh').hidden&&!$('sh').classList.contains('off');document.body.classList.toggle('sho',on);document.body.classList.toggle('hs',on&&shS()!=='peek');try{veilSoon()}catch(e){}};

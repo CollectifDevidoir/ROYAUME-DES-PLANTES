@@ -213,12 +213,9 @@ function connexion(m){
   $('ctl').hidden=true;$('pied').hidden=true;
   vue.innerHTML=`<section class="card msg"><h2>Connexion</h2><p>Connecte-toi avec ton compte du royaume. Si tu es déjà connecté dans l'appli sur cet appareil, la page s'ouvre directement.</p>
 <form id="lg"><label>E-mail<input id="lg-m" type="email" autocomplete="username" required></label><label>Mot de passe<input id="lg-p" type="password" autocomplete="current-password"></label>
-<div class="bar"><button class="btn plein" type="submit">Se connecter</button><button class="btn" type="button" id="lg-l">Recevoir un lien par e-mail</button></div><p id="lg-e" class="${m&&m.ok?'note':'err'}" aria-live="polite">${esc(m&&m.t||'')}</p></form></section>`;
-  $('lg').onsubmit=async e=>{e.preventDefault();const p=$('lg-p').value;if(!p){$('lg-e').className='err';$('lg-e').textContent='Indique ton mot de passe, ou demande un lien par e-mail.';return}
+<div class="bar"><button class="btn plein" type="submit">Se connecter</button></div><p id="lg-e" class="${m&&m.ok?'note':'err'}" aria-live="polite">${esc(m&&m.t||'')}</p></form></section>`;
+  $('lg').onsubmit=async e=>{e.preventDefault();const p=$('lg-p').value;if(!p){$('lg-e').className='err';$('lg-e').textContent='Indique ton mot de passe.';return}
     const {error}=await sb.auth.signInWithPassword({email:$('lg-m').value.trim(),password:p});if(error){$('lg-e').className='err';$('lg-e').textContent=/Invalid login/.test(error.message)?'E-mail ou mot de passe incorrect.':'Connexion impossible : '+error.message;return}acces()};
-  $('lg-l').onclick=async()=>{const m=$('lg-m').value.trim();if(!m){$('lg-e').className='err';$('lg-e').textContent='Indique ton e-mail.';return}
-    const {error}=await sb.auth.signInWithOtp({email:m,options:{shouldCreateUser:false,emailRedirectTo:location.href.split('#')[0]}});
-    $('lg-e').className=error?'err':'note';$('lg-e').textContent=error?'Envoi impossible : '+error.message:'Lien envoyé : ouvre-le sur cet appareil.'};
 }
 function refus(mail){
   $('ctl').hidden=true;
