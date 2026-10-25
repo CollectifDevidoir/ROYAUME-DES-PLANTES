@@ -194,8 +194,9 @@ dialog p{margin:0 0 4px;font-size:.9rem}
 .pk img{width:100%;height:100%;object-fit:cover;display:block}
 .pk b{position:absolute;left:0;right:0;bottom:0;font:600 .58rem var(--fx);background:rgba(10,25,15,.78);color:#fff;padding:2px;text-align:center;line-height:1.15}
 .pk.no{display:flex;align-items:center;justify-content:center;color:#a3b09a;font-size:1.3rem;background:#e9eee3}
-.fch{width:min(640px,100vw);max-width:100vw;max-height:92vh;margin:auto auto 0;padding:0;border:0;border-radius:20px 20px 0 0;background:var(--card);color:var(--fg)}
+.fch{position:fixed;inset:auto 0 0 0;width:min(640px,100vw);max-width:100vw;max-height:92vh;margin:0 auto;padding:0;border:0;border-radius:20px 20px 0 0;background:var(--card);color:var(--fg)}
 .fch[open]{display:flex;flex-direction:column}
+@supports (height:100dvh){.fch{max-height:min(92vh,calc(100dvh - 12px))}}
 .fch::backdrop{background:rgba(10,30,15,.55);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
 .fhd{position:relative;display:flex;justify-content:space-between;align-items:center;gap:8px;padding:18px 14px 12px;border-bottom:1px solid var(--bd);font:600 1.1rem var(--ft)}
 .fhd button{flex:none;border:0;background:var(--bg1);border-radius:50%;width:34px;height:34px;font-size:1rem;cursor:pointer;color:var(--fg)}
@@ -895,7 +896,7 @@ main{overflow-x:clip}
 /* sous le duel, les colonnes de critères ne répètent pas les noms */
 .duel~.cmp2>div>b,.duel~.cmp2>div>br,.duel~.cmp2>div>em{display:none}
 .duel~.cmp2{column-gap:12px}
-@media (min-width:900px) and (pointer:fine){.fch{width:min(720px,92vw);margin:auto;border-radius:20px;max-height:86vh}}
+@media (min-width:900px) and (pointer:fine){.fch{inset:0;width:min(720px,92vw);margin:auto;border-radius:20px;max-height:86vh}}
 /* ===== M2 : textes importants à 12 px (validés) ===== */
 .tabs button{font-size:12px}
 .pk b{font-size:12px;line-height:1.15;padding:3px 4px}
@@ -4743,7 +4744,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)jeuEnvoi()}
 // Mesures d'usage anonymes (supabase/schema.sql, « usages », « sessions », « photos_jeu », « signalements », « erreurs », « reglages ») :
 // même identifiant d'appareil tiré au hasard ; seulement des valeurs prises dans des listes fermées, jamais de texte saisi.
 // Gardées sur l'appareil et envoyées avec les statistiques de jeu ; une base pas encore mise à jour les refuse sans gêner l'appli.
-const APP_V='2026.10.20';   // version de l'appli (AAAA.MM.JJ), à changer à chaque publication
+const APP_V='2026.10.21';   // version de l'appli (AAAA.MM.JJ), à changer à chaque publication
 const ecranType=()=>{try{const m=Math.min(screen.width,screen.height);return !matchMedia('(pointer:coarse)').matches?'ordi':m<600?'telephone':'tablette'}catch(e){return'ordi'}};
 const installee=()=>{try{return matchMedia('(display-mode: standalone)').matches||navigator.standalone===true}catch(e){return false}};
 function mesLire(){try{const o=JSON.parse(localStorage.getItem('qp.mes')||'{}');return{u:o.u||{},s:o.s||{},p:o.p||{},g:o.g||{},e:o.e||{},r:o.r||'',rg:o.rg===undefined?-1:o.rg}}catch(e){return{u:{},s:{},p:{},g:{},e:{},r:'',rg:-1}}}
@@ -5044,7 +5045,8 @@ $('shg').onclick=()=>setSh(shS()==='full'?'mid':'full');
   h.addEventListener('touchstart',e=>{y0=e.touches[0].clientY},{passive:true});
   h.addEventListener('touchend',e=>{const dy=e.changedTouches[0].clientY-y0;if(dy<-30)setSh(shS()==='peek'?'mid':'full');else if(dy>30)setSh(shS()==='full'?'mid':'peek')},{passive:true})})();
 document.addEventListener('click',e=>{const x=e.target.closest&&e.target.closest('[data-sp],.pk[data-l]');if(!x)return;const s=S.find(y=>y[0]===(x.dataset.sp||x.dataset.l));if(s){const q=$('herb-search');
-  if(q&&document.activeElement===q){q.blur();setTimeout(()=>{window.scrollTo(0,window.scrollY);openSheet(s,null,{})},350)}   // iPhone : on attend la fin de l'animation du clavier (zone visible encore réduite), sinon la fiche reste coincée en bas de page
+  if(q&&document.activeElement===q){q.blur();const vv=window.visualViewport;let n=0,h0=-1;const go=()=>{window.scrollTo(0,window.scrollY);openSheet(s,null,{})};   // iPhone : on attend que la zone visible cesse de bouger (clavier refermé), 1,2 s au plus
+    const t=setInterval(()=>{const h=vv?vv.height:innerHeight;if((h===h0&&n>1)||++n>12){clearInterval(t);go()}h0=h},100)}
   else openSheet(s,null,{})}});
 $('fday').onclick=()=>openFamily(famDay());$('defi').onclick=dfLancer;
 $('trq').onclick=()=>{if(dfOn){dfQuitter();return}replay=null;pre=preN;preN=null;wasTrain=false;curTrain=false;famFocus=null;trUI();next()};
