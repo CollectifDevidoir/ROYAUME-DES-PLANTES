@@ -17,6 +17,7 @@ Les contrôles des comptes demandent en plus `npm i -g @electric-sql/pglite @sup
 | `controle_clavier.js`, `controle_clavier_ordi.js` | Saisie sur mobile ; parcours au clavier sur ordinateur (mis à jour le 20/10/2026 pour la mise en page actuelle : quiz centré à droite du menu latéral, Herbier à onglets ; la mise en page est vérifiée en détail par `controle_ordinateur.js`). |
 | `controle_reglages.js` | Volet Réglages : objectif, vibration, sauvegarde, réinitialisation. |
 | `controle_herbier.js` | Ordre de l'Herbier (acquises puis non acquises, par nom latin) et onglet Progrès. |
+| `controle_carte_milieux.js` | Herbier, volet « Carte des milieux » (ordinateur et téléphone) : chaque milieu se sélectionne en touchant sa surface, avec son contour et son étiquette ; nombre d'espèces identique à `donnees/milieux-habitats.csv` (associations vérifiées) ; Échap, rangée d'étiquettes, sous-milieux, ouverture d'une fiche ; aucun identifiant en double, aucun défilement horizontal. |
 | `controle_niveaux.js` | Passages de niveaux (étape 6). |
 | `controle_memoire.js` | Révisions des plantes acquises (conception cible, lot 1) : toute bonne réponse sur une plante due la replanifie ; au niveau 6, délai de 7 j doublé à chaque entretien réussi en écrivant le nom (14, 28, 56 puis 60 j au plus) ; une erreur renvoie au niveau 3 et remet le délai à zéro ; chargement, restauration et fusion de deux appareils gardent le compteur. Échoue sur la version d'avant (13 échecs). |
 | `controle_couleurs.js` | Couleurs des verdicts (Juste, Presque, Même genre / Bon genre, Raté) et du tampon « Acquise » : une variable chacune (`--v-juste`, `--v-presque`, `--v-genre`, `--v-rate`, `--tampon`), contraste d'au moins 4,5:1 mesuré sur les couleurs calculées, en clair et en sombre, 4 verdicts distincts. |
@@ -55,6 +56,11 @@ Les contrôles des comptes demandent en plus `npm i -g @electric-sql/pglite @sup
 | `simulation_beta.js` | Parcours simulés d'un débutant et d'un professionnel. |
 
 Fichiers d'appui : `banc_essai.js` (ouverture de l'appli avec un faux iNaturalist ; option `seed` pour figer le hasard ; option `http` pour servir la page par un petit serveur local, comme GitHub Pages : à utiliser dès qu'un test recharge la page, car ouverte comme un fichier, Chromium perd parfois tout le stockage local au rechargement ; `adresse(fichier)` donne l'adresse locale d'un fichier) et `lance_exercice.js` (affiche un exercice d'un type donné).
+
+## Carte des milieux
+
+`carte/gen_carte.py` dessine la carte de l'Herbier (bloc-diagramme isométrique) et l'écrit dans `illustrations/carte-milieux.js`, chargé à la première ouverture du volet. Demande `pip install shapely`. Lancement : `python3 outils/carte/gen_carte.py` (`--art` : illustration seule, sans étiquettes, dans `outils/carte/carte-illustration.svg`).
+Tout le monde est conçu sur un plan, puis projeté : chaque milieu est un groupe SVG dont le tracé sert à la fois de sol, de découpe, de contour et de surface cliquable. Les objets sont placés sans chevauchement (ni sur les chemins, ni sur les bâtiments) et triés de l'arrière vers l'avant. Les éléments dessinés sont dans `carte/symbols.py` et `carte/elements.py` ; les pictogrammes des milieux viennent de la table `MT` de `index.html`. Les espèces affichées viennent toujours de la table `MH` : rien à saisir à la main pour une nouvelle espèce. Pour un nouveau milieu : sa forme dans `SEEDP`, sa place dans `ORDER`, ses couleurs, son décor et la position de son étiquette, puis son nom dans `TER` et `MSUB` (index.html).
 
 ## Données
 
