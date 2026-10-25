@@ -68,6 +68,19 @@ async function brancher(page,db,url,journal=[]){
       journal.lien=(u.searchParams.get('redirect_to')||'')+'#access_token='+s.access_token+'&refresh_token='+s.refresh_token+'&expires_in=3600&expires_at='+s.expires_at+'&token_type=bearer&type=magiclink';
       return js(200,{});
     }
+    // mot de passe oublié : comme GoTrue, la réponse est la même que l'adresse existe ou non ; le lien « reçu » est noté dans journal.recup
+    if(u.pathname==='/auth/v1/recover'){
+      const ex=(await db.query('select * from auth.users where email=$1',[corps.email])).rows[0];journal.push('recover:'+corps.email);
+      if(ex){const s=session(ex);journal.recup=(u.searchParams.get('redirect_to')||'')+'#access_token='+s.access_token+'&refresh_token='+s.refresh_token+'&expires_in=3600&expires_at='+s.expires_at+'&token_type=bearer&type=recovery'}
+      return js(200,{});
+    }
+    // nouveau mot de passe (updateUser) : réservé à une session ; refuse le même mot de passe, comme GoTrue
+    if(u.pathname==='/auth/v1/user'&&q.method()==='PUT'){
+      const id=sub(q.headers()['authorization']),ex=id&&(await db.query('select * from auth.users where id=$1',[id])).rows[0];
+      if(!ex)return js(401,{code:401,error_code:'session_not_found',msg:'Auth session missing!'});
+      if(corps.password===ex.mdp)return js(422,{code:422,error_code:'same_password',msg:'New password should be different from the old password.'});
+      await db.query('update auth.users set mdp=$1 where id=$2',[corps.password,id]);journal.push('mdp-change:'+ex.email);return js(200,session(ex).user);
+    }
     if(u.pathname==='/auth/v1/logout')return r.fulfill({status:204,headers:cors});
     if(u.pathname==='/auth/v1/user'){const id=sub(q.headers()['authorization']),ex=id&&(await db.query('select * from auth.users where id=$1',[id])).rows[0];return ex?js(200,session(ex).user):js(401,{code:401,msg:'invalid JWT'})}
     const m=u.pathname.match(/^\/rest\/v1\/rpc\/(\w+)$/);
