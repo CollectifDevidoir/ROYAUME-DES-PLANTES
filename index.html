@@ -1465,6 +1465,103 @@ html.dk #qc.pvq.pvr #opts.ph{width:56%}
 body.pvdo #veil{opacity:0}
 .sh.pvd{bottom:auto;margin:0;width:auto;border-radius:18px;border-bottom:1px solid var(--bd);box-shadow:0 18px 40px -16px rgba(10,40,20,.5)}
 .sh.pvd .grip{display:none}
+/* ===== Herbier : volets « Collection » et « Carte des milieux » (carte : illustrations/carte-milieux.js) ===== */
+:root{--veil:#fbfdf9}
+@media(prefers-color-scheme:dark){:root{--veil:#0f1c13}}
+.hvo{display:flex;gap:4px;padding:4px;margin:0 0 12px;background:var(--card);background:color-mix(in srgb,var(--card) 94%,transparent);border:1px solid var(--bd);border-radius:26px;box-shadow:0 6px 18px -12px rgba(20,60,30,.5)}
+.hvo button{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;border:0;background:none;padding:6px 8px;border-radius:20px;font:600 .9rem var(--fx);color:var(--mu);cursor:pointer;transition:background .2s,color .2s}
+.hvo button svg{width:22px;height:22px;flex:none}
+.hvo button[aria-selected=true]{background:var(--ac);color:var(--card)}
+#herb>.hvo,#herb>.mlay,#herb>.mload{grid-column:1/-1}
+html.dk .hvo{max-width:520px;margin:0 0 16px}
+.mload{padding:40px 0;text-align:center;color:var(--mu)}
+/* la carte : un groupe SVG par milieu ; les effets ne touchent que la zone concernée */
+.mstage{position:relative;margin:2px -10px 4px}
+.mwrap{--ss:1.7;position:relative;width:100%;user-select:none;-webkit-user-select:none;touch-action:manipulation}
+html.dk .mwrap{--ss:1.05}
+@media (min-width:600px){html:not(.dk) .mwrap{--ss:1.2}}
+.msvg{position:absolute;top:0;left:0;width:100%;height:100%;display:block;overflow:visible}
+.msvg .z{cursor:pointer;outline:none}
+.zdim,.zwash{opacity:0;pointer-events:none}
+.zin{fill:none;stroke:#fff;stroke-width:8;opacity:0;pointer-events:none;transition:opacity .25s ease}
+.z.on .zin,.z:focus-visible .zin{opacity:.9}
+.msvg .veil{fill:var(--veil);opacity:0;pointer-events:none;transition:opacity .3s ease}
+.has-sel .veil{opacity:.5}
+.decosel{pointer-events:none;animation:mvin .3s ease-out}
+@keyframes mvin{from{opacity:0}}
+.zl{fill:none;stroke:var(--mc);stroke-width:2.6;stroke-linejoin:round;opacity:0;pointer-events:none;transition:opacity .25s ease}
+.zl.on{opacity:1}
+.zl.mh{opacity:.9;stroke:#fff;stroke-width:2.2}
+.zsw{cursor:pointer;transition:opacity .3s}
+.zsi{transform-box:fill-box;transform-origin:center;transform:scale(var(--ss,1));transition:transform .25s cubic-bezier(.2,.9,.3,1.4)}
+.zsb,.zsg{transition:fill .2s,stroke .2s}
+.has-sel .zsw:not(.on){opacity:.6}
+.zsw.mh .zsi{transform:scale(calc(var(--ss,1)*1.1))}
+.zsw.on .zsi{transform:scale(calc(var(--ss,1)*1.22))}
+.zsw.on .zsb{fill:var(--mc);stroke:#fff}
+.zsw.on .zsg{stroke:#fff}
+.mlab{position:absolute;transform:translate(-50%,0);pointer-events:none;white-space:nowrap;padding:4px 11px;border-radius:99px;font:700 .78rem var(--fx);color:#fff;background:var(--mc);box-shadow:0 4px 12px -5px rgba(10,30,15,.55);opacity:0;transition:opacity .2s,transform .2s;z-index:2}
+.mlab.show{opacity:1;transform:translate(-50%,2px)}
+.mlab.hov{background:var(--card);color:var(--fg);border:1px solid color-mix(in srgb,var(--mc) 55%,var(--bd))}
+@media(prefers-color-scheme:dark){.msvg{filter:brightness(.86) saturate(.92)}}
+@media(prefers-reduced-motion:reduce){.zin,.zl,.zsi,.zsw,.mlab,.msvg .veil{transition:none}.decosel,.mpan .in.anim{animation:none}}
+/* panneau : vue générale, puis milieu choisi */
+.mpan{margin:0;padding:12px 14px 16px}
+.mpan .in.anim{animation:mpin .25s ease-out}
+@keyframes mpin{from{opacity:0;transform:translateY(6px)}}
+.mstrip{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));justify-items:center;padding:2px 0 8px}
+.mstrip button{border:0;background:none;padding:3px;border-radius:50%;cursor:pointer;opacity:.7;transition:opacity .15s,transform .15s}
+.mstrip button .mvg{--mz:28px}
+.mstrip button:hover{opacity:1}
+.mstrip button[aria-pressed=true]{opacity:1;transform:scale(1.12)}
+.mstrip button[aria-pressed=true] .mvg{background:var(--mc);color:#fff;border-color:#fff;box-shadow:0 0 0 2px var(--mc)}
+@media (max-width:370px){.mstrip button{padding:2px}.mstrip button .mvg{--mz:25px}.hvo button svg{display:none}}
+.ov-hint{margin:2px 4px 10px;color:var(--mu);font-size:.86rem;text-align:center}
+.ov-h h3{margin:2px 0 4px;font:600 1.3rem var(--ft)}.ov-h p{margin:0 0 12px;color:var(--mu);font-size:.85rem}
+.ov-l{display:grid;gap:2px}
+.ov-r{display:flex;align-items:center;gap:12px;width:100%;padding:7px 8px;border:0;border-radius:14px;background:none;color:var(--fg);text-align:left;cursor:pointer;transition:background .15s}
+.ov-r:hover{background:color-mix(in srgb,var(--mc) 12%,transparent)}
+.ov-r .mvg{--mz:34px}
+.ov-r b{display:block;font:600 .98rem/1.2 var(--ft)}.ov-r small{display:block;font-size:.78rem;color:var(--mu)}
+.mp-top{position:sticky;top:var(--rkH,0px);z-index:3;margin:-12px -14px 0;padding:10px 14px 4px;background:var(--card);border-radius:20px 20px 0 0;border-bottom:1px solid color-mix(in srgb,var(--bd) 70%,transparent)}
+.mp-h{display:flex;align-items:center;gap:12px;padding:4px 2px 10px}
+.mp-h .mvg{--mz:46px}
+.mp-h div{flex:1;min-width:0}
+.mp-h h3{margin:0;font:600 1.3rem/1.15 var(--ft)}
+.mp-h p{margin:2px 0 0;font:italic .95rem var(--ft);color:var(--mu)}
+.mp-x{flex:none;width:36px;height:36px;border-radius:50%;border:0;background:color-mix(in srgb,var(--fg) 8%,transparent);display:grid;place-items:center;cursor:pointer;color:var(--fg)}
+.mp-x .tgi{width:16px;height:16px}
+.mp-k{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 8px;margin-top:12px;padding:10px 12px;border-radius:14px;background:color-mix(in srgb,var(--mc) 10%,var(--card));border:1px solid color-mix(in srgb,var(--mc) 30%,var(--bd))}
+.mp-k b{font:600 1.5rem/1 var(--ft);color:color-mix(in srgb,var(--mc) 70%,var(--fg))}
+.mp-k span{font-size:.85rem;color:var(--mu)}
+.mp-k .mp-k2{flex-basis:100%;margin-top:-2px}
+.mp-k .bar{flex-basis:100%;height:5px;background:color-mix(in srgb,var(--mc) 18%,var(--bd))}.mp-k .bar i{background:var(--mc)}
+.mp-sm{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:12px 28px 2px 2px;margin:0 -2px;-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}
+.mp-sm::-webkit-scrollbar{display:none}
+.mp-sm button{flex:none;border:1px solid var(--bd);border-radius:99px;background:var(--card);padding:6px 12px;font:600 .78rem var(--fx);color:var(--fg);cursor:pointer;white-space:nowrap}
+.mp-sm button small{font-weight:400;color:var(--mu);margin-left:4px}
+.mp-sm button[aria-pressed=true]{background:var(--mc);border-color:var(--mc);color:#fff}
+.mp-sm button[aria-pressed=true] small{color:#fff;opacity:.85}
+.mp-g h4{display:flex;align-items:baseline;gap:6px;margin:16px 2px 8px;font:600 .85rem var(--fx);color:var(--ac)}
+.mp-g h4 small{font-weight:400;color:var(--mu)}
+.mp-g .pkg{grid-template-columns:repeat(auto-fill,minmax(88px,1fr));margin-top:0}
+.mp-e{margin:14px 0 0;padding:10px 12px;border:1px dashed var(--bd);border-radius:12px;color:var(--mu);font-size:.85rem}
+.mnote{margin:14px 2px 0;font-size:.78rem;color:var(--mu)}
+.mpan .pkn{cursor:pointer;font:600 .82rem var(--fx);color:var(--ac);background:none;width:100%}
+.pk.td{background:transparent;border:1.5px dashed color-mix(in srgb,var(--mc,#8fb77c) 45%,var(--bd))}
+.pk .pki{position:absolute;top:10%;left:20%;width:60%;height:60%;opacity:.45;filter:saturate(.5)}
+.pk .pki svg{width:100%;height:100%;display:block}
+.pk.td b{background:none;color:var(--mu)}
+.pk .od{position:absolute;left:5px;top:5px;display:flex;gap:2px;z-index:1}
+.pk .od i{width:9px;height:9px;border-radius:50%;background:var(--c);box-shadow:0 0 0 1.5px #fff}
+/* ordinateur : carte à gauche, panneau à droite (la carte ne bouge pas à la sélection) */
+html.dk .mlay{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:18px;align-items:start}
+html.dk .mstage{margin:0;position:sticky;top:20px}
+html.dk .mpan{position:sticky;top:20px;padding:0;height:calc(100vh - 112px);max-height:780px;overflow:hidden}
+html.dk .mpan>.in{height:100%;overflow:auto;padding:14px 18px 18px}
+html.dk .mp-top{top:-14px;margin:-14px -18px 0;padding:12px 18px 4px}
+html.dk .mp-g .pkg{grid-template-columns:repeat(auto-fill,minmax(96px,1fr))}
+@media (min-width:1500px){html.dk .mlay{grid-template-columns:minmax(0,1fr) 400px}}
 </style>
 </head>
 <body>
@@ -5032,6 +5129,91 @@ streak=+st.streak||0;stats();
     }else if(!on&&side){const m=document.querySelector('main');m.prepend($('top'));$('top').after(document.querySelector('.tabs'));side.remove();side=null}
     if(!$('herb').hidden)herb()};
   MQ.addEventListener?MQ.addEventListener('change',monte):MQ.addListener(monte);monte()})();
+// ===== Herbier : deux volets, « Collection » (l'herbier ci-dessus, inchangé) et « Carte des milieux » =====
+// La carte (illustrations/carte-milieux.js, produite par outils/carte/gen_carte.py) contient un groupe SVG par milieu :
+// son tracé sert à la fois de sol, de découpe, de contour et de surface cliquable. Les espèces viennent de la table MH
+// (associations vérifiées) : une espèce compte une fois dans chacun de ses milieux.
+(()=>{const coll=herb,TER=['FOR','LIS','PRA','LAN','HUM','EAU','ROC','LIT','HAB'];
+  const MSUB={FOR:'Sous la canopée',LIS:'Entre deux milieux',PRA:'Les milieux ouverts',LAN:'Les végétations de broussailles',HUM:'Là où le sol reste humide',EAU:'Les eaux douces',ROC:'La vie sur peu de terre',LIT:'La rencontre de la terre et de la mer',HAB:'Les plantes auprès de nous'};
+  const IC_COL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg>';
+  const IC_MAP='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18.5 7.5 9l3.2 5 2.3-3.4L21 18.5Z"/><circle cx="16.5" cy="6.5" r="2"/></svg>';
+  let vol=(()=>{try{return localStorage.getItem('qp.hv')==='map'?'map':'col'}catch(e){return'col'}})(),sel=null,sub='',all={},BY=null,SMN=null,loading=false;
+  const M=()=>window.CARTE_MILIEUX;
+  const own=l=>(st.sp[l]||{b:0}).b>=4,prg=l=>!!st.sp[l]&&!own(l);
+  const index=()=>{if(BY)return;BY={};SMN={};TER.forEach(t=>BY[t]=[]);
+    S.forEach(s=>{const e=MH.E[s[0]];if(!e)return;const vu={};e[0].forEach(a=>{let x=vu[a[1]];if(!x){x=vu[a[1]]={s,sm:new Set()};if(BY[a[1]])BY[a[1]].push(x)}x.sm.add(a[0])})});
+    TER.forEach(t=>{BY[t].sort((a,b)=>a.s[0].localeCompare(b.s[0],'fr'));const c={};BY[t].forEach(x=>x.sm.forEach(m=>c[m]=(c[m]||0)+1));SMN[t]=Object.keys(c).sort().map(m=>[m,c[m]])})};
+  const cnt=t=>{const a=BY[t];return{n:a.length,o:a.filter(x=>own(x.s[0])).length,p:a.filter(x=>prg(x.s[0])).length}};
+  const bar=()=>`<div class="hvo" role="tablist" aria-label="Herbier"><button type="button" role="tab" data-hv="col" aria-selected="${vol==='col'}">${IC_COL}Collection</button><button type="button" role="tab" data-hv="map" aria-selected="${vol==='map'}">${IC_MAP}Carte des milieux</button></div>`;
+  herb=()=>{const h=$('herb');
+    if(vol==='col'){coll();h.insertAdjacentHTML('afterbegin',bar())}
+    else{h.innerHTML=bar()+'<p class="mload">Chargement de la carte…</p>';carte()}
+    h.querySelectorAll('[data-hv]').forEach(b=>b.onclick=()=>{if(vol===b.dataset.hv)return;vol=b.dataset.hv;try{localStorage.setItem('qp.hv',vol)}catch(e){}herb()})};
+  // la carte n'est chargée qu'à la première ouverture du volet
+  function carte(){if(M()){mapv();return}if(loading)return;loading=true;
+    const sc=document.createElement('script');sc.src='illustrations/carte-milieux.js?v=1';
+    sc.onload=()=>{loading=false;if(vol==='map'&&!$('herb').hidden)mapv()};
+    sc.onerror=()=>{loading=false;const p=$('herb').querySelector('.mload');if(p)p.textContent='La carte n\'a pas pu être chargée.'};document.head.append(sc)}
+  const strip=t=>`<div class="mstrip" role="group" aria-label="Changer de milieu">${TER.map(k=>`<button type="button" style="--mc:${MT[k].c}" data-sw="${k}" aria-pressed="${k===t}" aria-label="${esc(MT[k].n)}" title="${esc(MT[k].n)}">${mhGly(k)}</button>`).join('')}</div>`;
+  function mapv(){index();const h=$('herb'),m=M(),ld=h.querySelector('.mload');if(!ld)return;
+    ld.outerHTML=`<div class="mlay"><div class="mstage"><div class="mwrap" style="aspect-ratio:${m.W}/${m.H}">${m.SVG}<span class="mlab" aria-hidden="true"></span></div></div><section class="card mpan" aria-live="polite" aria-label="Milieu"><div class="in"></div></section></div>`;
+    const svg=h.querySelector('.msvg');
+    svg.querySelectorAll('.z').forEach(z=>{const k=z.dataset.m;z.setAttribute('tabindex','0');z.setAttribute('role','button');z.setAttribute('aria-label',`${MT[k].n}, ${cnt(k).n} espèces`);
+      z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(k)}});
+      z.addEventListener('focus',()=>hover(k));z.addEventListener('blur',()=>hover(null))});
+    svg.addEventListener('click',e=>{const z=e.target.closest('[data-m]');if(z)select(z.dataset.m);else if(sel)select(null)});
+    if(matchMedia('(pointer:fine)').matches){svg.addEventListener('pointerover',e=>{const z=e.target.closest('[data-m]');hover(z&&z.dataset.m)});svg.addEventListener('pointerleave',()=>hover(null))}
+    const tp=$('top');document.documentElement.style.setProperty('--rkH',(getComputedStyle(tp).position==='sticky'?tp.offsetHeight:0)+'px');
+    paint(false)}
+  // nom du milieu, sous son étiquette (texte HTML, net à toutes les tailles)
+  function label(k,cls){const w=$('herb').querySelector('.mwrap');if(!w)return;const l=w.querySelector('.mlab');if(!k){l.className='mlab';return}
+    const m=M(),[x,y]=m.Z[k].a,s=w.clientWidth/m.W,ss=parseFloat(getComputedStyle(w).getPropertyValue('--ss'))||1;
+    l.textContent=MT[k].n;l.style.setProperty('--mc',MT[k].c);l.className='mlab show '+(cls||'');
+    const lw=l.offsetWidth;l.style.left=Math.min(Math.max(x*s,lw/2+4),w.clientWidth-lw/2-4)+'px';l.style.top=(y+22*ss*1.15)*s+'px'}
+  function hover(k){const svg=$('herb').querySelector('.msvg');if(!svg)return;
+    svg.querySelectorAll('.z,.zl,.zsw').forEach(e=>e.classList.toggle('mh',(e.dataset.m||e.dataset.for)===k&&k!==sel));
+    label(k&&k!==sel?k:sel,k&&k!==sel?'hov':'')}
+  function paint(anim){const h=$('herb'),svg=h.querySelector('.msvg');if(!svg)return;const t=sel;
+    svg.classList.toggle('has-sel',!!t);
+    svg.querySelector('.decosel').innerHTML=t?`<use href="#z-${t}"/>`+[...svg.querySelectorAll(`.flat .dz[data-m="${t}"],.deco .dz[data-m="${t}"]`)].map(e=>{if(!e.id)e.id=`dzf-${t}`;return `<use href="#${e.id}"/>`}).join(''):'';
+    svg.querySelectorAll('.z,.zl,.zsw').forEach(e=>e.classList.toggle('on',(e.dataset.m||e.dataset.for)===t));
+    svg.querySelectorAll('.z').forEach(z=>z.setAttribute('aria-pressed',z.dataset.m===t));
+    label(t);
+    const p=h.querySelector('.mpan .in');p.innerHTML=t?detail(t):overview();bind(p);photos(p);
+    if(anim!==false){p.classList.remove('anim');void p.offsetWidth;p.classList.add('anim')}
+    p.scrollTop=0}
+  function select(t){sel=t;sub='';all={};paint()}
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&sel&&vol==='map'&&!$('herb').hidden&&!document.querySelector('dialog[open]')&&$('sh').hidden)select(null)});
+  function overview(){const tot=S.filter(s=>MH.E[s[0]]).length;
+    if(!document.documentElement.classList.contains('dk'))return `<p class="ov-hint">Touche un milieu sur la carte pour découvrir ses plantes.</p>${strip(null)}`;
+    return `<div class="ov-h"><h3>Carte des milieux</h3><p>Neuf grands milieux, ${tot} espèces. Une plante peut vivre dans plusieurs milieux : elle compte alors dans chacun.</p></div>
+     <div class="ov-l">${TER.map(t=>{const c=cnt(t);return `<button type="button" class="ov-r" data-sw="${t}" style="--mc:${MT[t].c}">${mhGly(t)}<span><b>${esc(MT[t].n)}</b><small>${c.n} espèces · ${c.o} dans ton herbier</small></span></button>`}).join('')}</div>`}
+  const thumb=l=>{const a=cache[l];return a&&a.src||(IC[l]&&IC[l].imgs&&IC[l].imgs[0]&&IC[l].imgs[0].src)||''};
+  function tile(x,t){const s=x.s,l=s[0],o=mhTer(s).filter(k=>k!==t),d=!own(l)&&!prg(l),u=d?'':thumb(l);
+    const dots=o.length?`<span class="od" title="Aussi : ${esc(o.map(k=>MT[k].n).join(' ; '))}">${o.slice(0,3).map(k=>`<i style="--c:${MT[k].c}"></i>`).join('')}</span>`:'';
+    return `<div class="pk ${own(l)?'ok':prg(l)?'pr':'td'}" data-l="${l}" title="${l}" tabindex="0" role="button">${d?`<span class="pki">${catIcon(s[2])}</span>`:u?`<img src="${u}" referrerpolicy="no-referrer" loading="lazy" alt="">`:''}${dots}<b>${s[1]}</b></div>`}
+  function detail(t){const m=MT[t],c=cnt(t);let a=BY[t];
+    const subs=SMN[t].length>1?`<div class="mp-sm" role="group" aria-label="Sous-milieux"><button type="button" aria-pressed="${!sub}" data-sub="">Tous<small>${c.n}</small></button>${SMN[t].map(([s,n])=>`<button type="button" aria-pressed="${sub===s}" data-sub="${s}">${esc(MH.L[s])}<small>${n}</small></button>`).join('')}</div>`:'';
+    if(sub)a=a.filter(x=>x.sm.has(sub));
+    const A=a.filter(x=>own(x.s[0])),P=a.filter(x=>prg(x.s[0])),D=a.filter(x=>!own(x.s[0])&&!prg(x.s[0]));
+    const cap=document.documentElement.classList.contains('dk')?12:9,more=(k,L)=>{const ok=all[k]||L.length<=cap+3;return L.slice(0,ok?L.length:cap).map(x=>tile(x,t)).join('')+(ok?'':`<button type="button" class="pkn" data-more="${k}">Afficher les ${L.length-cap} autres</button>`)};
+    const g=(k,h,L)=>`<section class="mp-g"><h4>${h}<small>${L.length}</small></h4><div class="pkg">${more(k,L)}</div></section>`;
+    return `<div class="mp-top" style="--mc:${m.c}">${strip(t)}<div class="mp-h">${mhGly(t)}<div><h3>${esc(m.n)}</h3><p>${MSUB[t]||''}</p></div><button type="button" class="mp-x" data-back aria-label="Revenir à la vue générale" title="Vue générale">${ico('close')}</button></div></div>
+     <div style="--mc:${m.c}"><div class="mp-k"><b>${c.n}</b><span>espèces du jeu dans ce milieu</span><span class="mp-k2">${c.o} dans ton herbier${c.p?` · ${c.p} en cours`:''} · ${c.n-c.o-c.p} à découvrir</span><span class="bar"><i style="width:${c.n?100*c.o/c.n:0}%"></i></span></div>
+     ${subs}
+     ${!c.n?'<p class="mp-e">Aucune plante du jeu n\'est encore rattachée à ce milieu.</p>':!a.length?'<p class="mp-e">Aucune plante pour ce sous-milieu.</p>':
+       (A.length?g('o','Dans ton herbier',A):'<p class="mp-e">Aucune plante de ce milieu dans ton herbier pour l\'instant : elles s\'y rangeront dès que tu les auras acquises en jouant.</p>')+(P.length?g('p','En cours d\'apprentissage',P):'')+(D.length?g('t','À découvrir',D):'<p class="mp-e">Tu as acquis toutes les plantes de ce milieu.</p>')}
+     <p class="mnote">Une plante peut vivre dans plusieurs milieux : elle compte alors dans chacun${t==='HAB'?'. Ici, la plupart sont des plantes cultivées.':'.'}</p></div>`}
+  function bind(r){
+    r.querySelectorAll('[data-sw]').forEach(b=>b.onclick=()=>select(b.dataset.sw));
+    r.querySelectorAll('[data-back]').forEach(b=>b.onclick=()=>select(null));
+    r.querySelectorAll('[data-sub]').forEach(b=>b.onclick=()=>{sub=b.dataset.sub;all={};redraw()});
+    r.querySelectorAll('[data-more]').forEach(b=>b.onclick=()=>{all[b.dataset.more]=1;redraw(true)})}
+  function redraw(keep){const p=$('herb').querySelector('.mpan .in'),y=p.scrollTop,sy=scrollY;p.innerHTML=detail(sel);bind(p);photos(p);if(keep){p.scrollTop=y;scrollTo(0,sy)}}
+  // photos des plantes acquises ou en cours (comme dans la Collection)
+  function photos(r){[...r.querySelectorAll('.pk.ok[data-l],.pk.pr[data-l]')].filter(e=>!e.querySelector('img')).slice(0,40).forEach(async e=>{const s=S.find(x=>x[0]===e.dataset.l),im=s&&await getImg(s);if(im&&!e.querySelector('img')){const i=new Image();i.referrerPolicy='no-referrer';i.alt='';i.src=im.src;e.prepend(i)}})}
+  addEventListener('resize',()=>{if(sel&&vol==='map')label(sel)});
+})();
 </script>
 </body>
 </html>
