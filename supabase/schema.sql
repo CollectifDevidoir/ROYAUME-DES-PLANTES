@@ -24,6 +24,9 @@ create table if not exists public.profils (
   maj       timestamptz not null default now()
 );
 
+-- Apparaître dans le classement général du défi (oui par défaut ; les amis voient toujours mes chiffres).
+alter table public.profils add column if not exists visible boolean not null default true;
+
 create table if not exists public.amities (
   user_id uuid not null references public.profils(id) on delete cascade,
   ami_id  uuid not null references public.profils(id) on delete cascade,
@@ -31,6 +34,18 @@ create table if not exists public.amities (
   primary key (user_id, ami_id),
   check (user_id <> ami_id)
 );
+
+-- Demandes d'ami : une seule ligne par sens (de → vers), donc jamais de doublon. « refusee » reste en place :
+-- l'expéditeur la voit toujours « en attente » et ne peut pas relancer la même personne.
+create table if not exists public.demandes_ami (
+  de     uuid not null references public.profils(id) on delete cascade,
+  vers   uuid not null references public.profils(id) on delete cascade,
+  statut text not null default 'attente' check (statut in ('attente', 'refusee')),
+  cree   timestamptz not null default now(),
+  primary key (de, vers),
+  check (de <> vers)
+);
+create index if not exists demandes_ami_vers on public.demandes_ami (vers);
 
 create table if not exists public.jours (
   user_id   uuid not null references public.profils(id) on delete cascade,
@@ -95,13 +110,14 @@ create index if not exists amities_ami on public.amities (ami_id);
 -- Aucune lecture ni écriture directe : seules les fonctions y accèdent.
 alter table public.profils      enable row level security;
 alter table public.amities      enable row level security;
+alter table public.demandes_ami enable row level security;
 alter table public.jours        enable row level security;
 alter table public.progressions enable row level security;
 alter table public.essais_ami   enable row level security;
 alter table public.visites      enable row level security;
 alter table public.jeu          enable row level security;
 alter table public.jeu_confusions enable row level security;
-revoke all on public.profils, public.amities, public.jours, public.progressions, public.essais_ami, public.visites,
+revoke all on public.profils, public.amities, public.demandes_ami, public.jours, public.progressions, public.essais_ami, public.visites,
   public.jeu, public.jeu_confusions from anon, authenticated;
 
 -- ---------- Outils internes ----------
@@ -128,7 +144,7 @@ end $$;
 create or replace function public._profil_json(p profils) returns json
 language sql stable as $$
   select json_build_object('pseudo', p.pseudo, 'code_ami', p.code_ami, 'rang', p.rang,
-    'acquises', p.acquises, 'reussite', p.reussite, 'serie', p.serie)
+    'acquises', p.acquises, 'reussite', p.reussite, 'serie', p.serie, 'visible', p.visible)
 $$;
 
 -- ---------- Profil ----------
@@ -170,6 +186,16 @@ begin
   on conflict (user_id, jour) do update set exercices = excluded.exercices, justes = excluded.justes, nouvelles = excluded.nouvelles;
 end $$;
 
+-- Montre ou cache mon profil dans le classement général du défi.
+create or replace function public.choisir_visibilite(p_visible boolean) returns json
+language plpgsql volatile security definer set search_path = public as $$
+declare p profils;
+begin
+  update profils set visible = coalesce(p_visible, true) where id = _moi() returning * into p;
+  if not found then raise exception 'SANS_PROFIL'; end if;
+  return _profil_json(p);
+end $$;
+
 -- ---------- Amis ----------
 -- Ajoute un ami avec son code (dans les deux sens). 20 essais par heure au plus.
 -- Réponse : {pseudo} si c'est fait, {erreur: CODE_INCONNU | SOI_MEME} sinon.
@@ -202,7 +228,94 @@ begin
   delete from amities where (user_id = _moi() and ami_id = a) or (user_id = a and ami_id = _moi());
 end $$;
 
--- Tableau du jour : moi et mes amis, avec les chiffres du jour demandé.
+-- ---------- Demandes d'ami (depuis le classement général) ----------
+-- Relation entre moi et un autre joueur : moi, ami, envoyee (j'ai demandé), recue (il m'a demandé), aucune.
+create or replace function public._relation(a uuid) returns text
+language sql stable security definer set search_path = public as $$
+  select case
+    when a = _moi() then 'moi'
+    when exists (select 1 from amities where user_id = _moi() and ami_id = a) then 'ami'
+    when exists (select 1 from demandes_ami where de = _moi() and vers = a) then 'envoyee'
+    when exists (select 1 from demandes_ami where de = a and vers = _moi() and statut = 'attente') then 'recue'
+    else 'aucune' end
+$$;
+
+-- Fiche d'un joueur : mêmes chiffres que ceux que voient ses amis, plus ma relation avec lui.
+-- Réservée aux joueurs visibles qui ont déjà joué un défi (ceux du classement général) ou qui ont un lien avec moi.
+create or replace function public.profil_joueur(p_pseudo text) returns json
+language plpgsql stable security definer set search_path = public as $$
+declare a profils; rel text;
+begin
+  if not exists (select 1 from profils where id = _moi()) then raise exception 'SANS_PROFIL'; end if;
+  select * into a from profils where pseudo = p_pseudo;
+  if not found then return json_build_object('erreur', 'JOUEUR_INCONNU'); end if;
+  rel := _relation(a.id);
+  if rel = 'aucune' and (not a.visible or not exists (select 1 from defis where user_id = a.id)) then
+    return json_build_object('erreur', 'JOUEUR_INCONNU');
+  end if;
+  return json_build_object('pseudo', a.pseudo, 'rang', a.rang, 'acquises', a.acquises, 'reussite', a.reussite,
+    'serie', a.serie, 'relation', rel);
+end $$;
+
+-- Propose à un joueur de devenir ami. Réponse : {etat: envoyee | ami} ou {erreur}.
+--   déjà amis ou déjà demandé : rien de nouveau (pas de doublon) ;
+--   il m'avait déjà demandé : nous devenons amis tout de suite ;
+--   20 nouvelles demandes par heure et 50 en attente au plus.
+create or replace function public.demander_ami(p_pseudo text) returns json
+language plpgsql volatile security definer set search_path = public as $$
+declare a uuid; rel text;
+begin
+  if not exists (select 1 from profils where id = _moi()) then raise exception 'SANS_PROFIL'; end if;
+  select id into a from profils where pseudo = p_pseudo;
+  if a is null then return json_build_object('erreur', 'JOUEUR_INCONNU'); end if;
+  rel := _relation(a);
+  if rel = 'moi' then return json_build_object('erreur', 'SOI_MEME'); end if;
+  if rel in ('ami', 'envoyee') then return json_build_object('etat', rel); end if;
+  if rel = 'aucune' and exists (select 1 from demandes_ami where de = a and vers = _moi()) then rel := 'recue'; end if;   -- demande refusée par moi, mais c'est moi qui me ravise
+  if rel = 'recue' then
+    insert into amities (user_id, ami_id) values (_moi(), a), (a, _moi()) on conflict do nothing;
+    delete from demandes_ami where (de = _moi() and vers = a) or (de = a and vers = _moi());
+    return json_build_object('etat', 'ami');
+  end if;
+  if (select count(*) from demandes_ami where de = _moi() and cree > now() - interval '1 hour') >= 20
+     or (select count(*) from demandes_ami where de = _moi()) >= 50 then
+    raise exception 'TROP_DE_DEMANDES';
+  end if;
+  insert into demandes_ami (de, vers) values (_moi(), a) on conflict do nothing;
+  return json_build_object('etat', 'envoyee');
+end $$;
+
+-- Demandes d'ami que j'ai reçues et auxquelles je n'ai pas encore répondu (les plus récentes d'abord).
+create or replace function public.mes_demandes() returns json
+language plpgsql stable security definer set search_path = public as $$
+begin
+  return coalesce((
+    select json_agg(json_build_object('pseudo', p.pseudo, 'rang', p.rang) order by d.cree desc)
+    from demandes_ami d join profils p on p.id = d.de
+    where d.vers = _moi() and d.statut = 'attente'
+  ), '[]'::json);
+end $$;
+
+-- Accepte ou refuse une demande reçue. Réponse : {etat: ami | aucune} (ou ma relation actuelle s'il n'y a plus de demande).
+create or replace function public.repondre_demande(p_pseudo text, p_accepter boolean) returns json
+language plpgsql volatile security definer set search_path = public as $$
+declare a uuid;
+begin
+  select id into a from profils where pseudo = p_pseudo;
+  if a is null then return json_build_object('erreur', 'JOUEUR_INCONNU'); end if;
+  if not exists (select 1 from demandes_ami where de = a and vers = _moi() and statut = 'attente') then
+    return json_build_object('etat', _relation(a));
+  end if;
+  if p_accepter then
+    insert into amities (user_id, ami_id) values (_moi(), a), (a, _moi()) on conflict do nothing;
+    delete from demandes_ami where (de = _moi() and vers = a) or (de = a and vers = _moi());
+    return json_build_object('etat', 'ami');
+  end if;
+  update demandes_ami set statut = 'refusee' where de = a and vers = _moi();
+  return json_build_object('etat', 'aucune');
+end $$;
+
+-- Tableau du jour : moi et mes amis, avec les chiffres du jour demandé (Assiduité : amis seulement).
 create or replace function public.tableau(p_jour date) returns json
 language plpgsql stable security definer set search_path = public as $$
 begin
@@ -419,6 +532,8 @@ create table if not exists public.reglages (
   sombre      boolean  not null,
   primary key (jour, appareil)
 );
+-- rang du joueur (0 = Graine … 14 = Maître du royaume), avec ou sans compte ; vide pour les versions qui ne l'envoient pas
+alter table public.reglages add column if not exists rang smallint;
 -- Comptes autorisés à lire les Coulisses (à remplir à la main dans le SQL Editor, voir LISEZ-MOI).
 create table if not exists public.admins (
   user_id uuid primary key references auth.users(id) on delete cascade
@@ -530,10 +645,12 @@ begin
   if jsonb_typeof(r) = 'object' and (r->>'j') ~ '^[0-9]{4}-[0-9]{2}-[0-9]{2}$' and (r->>'j')::date between current_date - 1 and current_date + 1
      and (r->>'goal') ~ '^[0-9]{1,3}$' and jsonb_typeof(r->'vib') = 'boolean' and jsonb_typeof(r->'sombre') = 'boolean'
      and r->>'mode' in ('tout', 'arbre', 'arbuste', 'vivace', 'grimpante', 'graminée') then
-    insert into reglages (jour, appareil, objectif, vibrations, mode, sombre)
-    values ((r->>'j')::date, p_appareil, least((r->>'goal')::int, 500), (r->>'vib')::boolean, r->>'mode', (r->>'sombre')::boolean)
+    insert into reglages (jour, appareil, objectif, vibrations, mode, sombre, rang)
+    values ((r->>'j')::date, p_appareil, least((r->>'goal')::int, 500), (r->>'vib')::boolean, r->>'mode', (r->>'sombre')::boolean,
+            case when (r->>'rang') ~ '^[0-9]{1,2}$' and (r->>'rang')::int <= 14 then (r->>'rang')::smallint end)
     on conflict (jour, appareil) do update
-      set objectif = excluded.objectif, vibrations = excluded.vibrations, mode = excluded.mode, sombre = excluded.sombre;
+      set objectif = excluded.objectif, vibrations = excluded.vibrations, mode = excluded.mode, sombre = excluded.sombre,
+          rang = coalesce(excluded.rang, reglages.rang);
   end if;
 end $$;
 
@@ -655,7 +772,12 @@ begin
       'vibrations', (select round(100.0 * count(*) filter (where vibrations) / nullif(count(*), 0)) from
         (select distinct on (appareil) vibrations from reglages where jour between d and f order by appareil, jour desc) r),
       'sombre', (select round(100.0 * count(*) filter (where sombre) / nullif(count(*), 0)) from
-        (select distinct on (appareil) sombre from reglages where jour between d and f order by appareil, jour desc) r)))
+        (select distinct on (appareil) sombre from reglages where jour between d and f order by appareil, jour desc) r),
+      -- joueurs par rang (avec ou sans compte) : dernier rang connu de chaque appareil sur la période
+      'rangs', (select coalesce(jsonb_agg(x order by x.rang), '[]') from (
+        select rang, count(*) as appareils from (select distinct on (appareil) appareil, rang from reglages
+          where jour between d and f and rang is not null order by appareil, jour desc) r
+        group by rang) x)))
   ) into res;
   return res;
 end $$;
@@ -699,16 +821,40 @@ begin
   ), '[]'::json);
 end $$;
 
+-- Classement général du défi d'un jour : tous les joueurs qui l'ont joué (pas seulement mes amis), par score,
+-- les 50 premiers et moi. Les joueurs qui ont choisi de se cacher n'y sont pas (sauf pour eux-mêmes, « cache »).
+-- « place » : rang avec ex æquo parmi les joueurs visibles ; « ami » : est-ce un ami.
+create or replace function public.tableau_defi_general(p_jour date) returns json
+language plpgsql stable security definer set search_path = public as $$
+begin
+  return coalesce((
+    select json_agg(json_build_object('pseudo', x.pseudo, 'moi', x.id = _moi(), 'rang', x.rang, 'score', x.score,
+      'reponses', x.reponses, 'place', x.place, 'ami', x.ami, 'total', x.total, 'cache', not x.visible)
+      order by x.score desc, x.n)
+    from (
+      select p.id, p.pseudo, p.rang, p.visible, d.score, d.reponses,
+             (select count(*) + 1 from defis d2 join profils p2 on p2.id = d2.user_id
+               where d2.jour = p_jour and p2.visible and d2.score > d.score) place,
+             row_number() over (order by d.score desc, p.pseudo) n,
+             count(*) filter (where p.visible) over () total,
+             exists (select 1 from amities m where m.user_id = _moi() and m.ami_id = p.id) ami
+      from profils p join defis d on d.user_id = p.id and d.jour = p_jour
+      where p.visible or p.id = _moi()
+    ) x
+    where x.n <= 50 or x.id = _moi()
+  ), '[]'::json);
+end $$;
+
 -- ---------- Droits : seules les fonctions publiques, et seulement une fois connecté ----------
 revoke all on function public._moi(), public._nouveau_code(), public._profil_json(profils) from public, anon, authenticated;
-revoke all on function public.mon_profil(), public.choisir_pseudo(text), public.publier(date, int, int, int, int, int, int, int),
+revoke all on function public.mon_profil(), public.choisir_pseudo(text), public.choisir_visibilite(boolean), public.publier(date, int, int, int, int, int, int, int),
   public.ajouter_ami(text), public.retirer_ami(text), public.tableau(date), public.tableau_periode(date, date), public.publier_jours(jsonb), public.sauver_progression(jsonb),
   public.lire_progression(), public.supprimer_compte() from public, anon;
 revoke all on function public.compter_visite(uuid, date, boolean) from public;
 grant execute on function public.compter_visite(uuid, date, boolean) to anon, authenticated;
 revoke all on function public.envoyer_jeu(uuid, jsonb, jsonb) from public;
 grant execute on function public.envoyer_jeu(uuid, jsonb, jsonb) to anon, authenticated;
-grant execute on function public.mon_profil(), public.choisir_pseudo(text), public.publier(date, int, int, int, int, int, int, int),
+grant execute on function public.mon_profil(), public.choisir_pseudo(text), public.choisir_visibilite(boolean), public.publier(date, int, int, int, int, int, int, int),
   public.ajouter_ami(text), public.retirer_ami(text), public.tableau(date), public.tableau_periode(date, date), public.publier_jours(jsonb), public.sauver_progression(jsonb),
   public.lire_progression(), public.supprimer_compte() to authenticated;
 revoke all on function public._purger() from public, anon, authenticated;
@@ -716,5 +862,8 @@ revoke all on function public.noter_visite(uuid, date, boolean, text, int, boole
 grant execute on function public.noter_visite(uuid, date, boolean, text, int, boolean, text), public.envoyer_mesures(uuid, jsonb) to anon, authenticated;
 revoke all on function public.suis_admin(), public.coulisses(date, date) from public, anon;
 grant execute on function public.suis_admin(), public.coulisses(date, date) to authenticated;
-revoke all on function public.publier_defi(date, text), public.tableau_defi(date) from public, anon;
-grant execute on function public.publier_defi(date, text), public.tableau_defi(date) to authenticated;
+revoke all on function public.publier_defi(date, text), public.tableau_defi(date), public.tableau_defi_general(date) from public, anon;
+grant execute on function public.publier_defi(date, text), public.tableau_defi(date), public.tableau_defi_general(date) to authenticated;
+revoke all on function public._relation(uuid) from public, anon, authenticated;
+revoke all on function public.profil_joueur(text), public.demander_ami(text), public.mes_demandes(), public.repondre_demande(text, boolean) from public, anon;
+grant execute on function public.profil_joueur(text), public.demander_ami(text), public.mes_demandes(), public.repondre_demande(text, boolean) to authenticated;

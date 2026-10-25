@@ -51,6 +51,11 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   ok(er.length===1&&er[0].message==='Panne # de test'&&er[0].ecran==='telephone','erreur technique : message nettoyé '+JSON.stringify(er.map(x=>x.message)));
   const rg=await q('select * from public.reglages where appareil=$1',[ap]);
   ok(rg.length===1&&rg[0].objectif===40&&rg[0].mode==='tout','réglages du jour : objectif 40, mode Classique');
+  const rgA=await p.evaluate(()=>rk());ok(rg[0].rang===rgA,`rang du joueur envoyé avec les réglages, sans compte (${rg[0].rang}, attendu ${rgA})`);
+  // le rang change dans la journée : renvoyé au prochain envoi
+  await p.evaluate(()=>{S.slice(0,10).forEach(s=>{st.sp[s[0]]={b:4,s:5,e:0,c:0,d:Date.now()+864e5}});mesEnvoi()});await p.waitForTimeout(700);
+  const rg2=await q('select rang from public.reglages where appareil=$1',[ap]),rgB=await p.evaluate(()=>rk());
+  ok(rgB>rgA&&rg2[0].rang===rgB,`nouveau rang dans la journée : mis à jour (${rg2[0].rang}, attendu ${rgB})`);
   ok(await p.evaluate(()=>{const m=JSON.parse(localStorage.getItem('qp.mes'));return !Object.keys(m.u).length&&!Object.keys(m.p).length&&!Object.keys(m.g).length&&!Object.keys(m.e).length}),'paquet envoyé : retiré de l\'appareil');
   // hors ligne : les mesures restent sur l'appareil puis repartent, sans doublon
   await montrer(p);await p.route(URL_SB+'/rest/v1/rpc/envoyer_mesures',r=>r.abort());

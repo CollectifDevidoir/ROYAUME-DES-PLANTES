@@ -20,14 +20,14 @@ async function remplir(db){
         Jx.push(`(current_date - ${d},${8+Math.floor(rnd()*14)},'${id}','${p}','arbre','${rnd()<.75?'qcm':'saisie'}','${['plante','feuillage','fleurs','fruits'][Math.floor(rnd()*4)]}','${rnd()<.8?'classique':'erreurs'}',${v},${Math.round(v*dur*(.7+rnd()*.6))>v?v:Math.round(v*dur*(.7+rnd()*.6))},${rnd()<.2?1:0},${v*(4+Math.floor(rnd()*8))})`);
         Ph.push(`(current_date - ${d},'${id}','${p}',${p==='Tilia cordata'&&rnd()<.5?10778:100+P.indexOf(p)},${v},${p==='Tilia cordata'?0:v})`)}
       for(const q of ['herbier','progres','fiche','profil','aide','famille_jour','joker','zoom'])if(rnd()<({herbier:.6,progres:.4,fiche:.3,profil:.25,aide:.1,famille_jour:.35,joker:.2,zoom:.3})[q])Us.push(`(current_date - ${d},'${id}','${q}',${1+Math.floor(rnd()*3)})`);
-      Rg.push(`(current_date - ${d},'${id}',${[20,40,40,40,60,100][Math.floor(rnd()*6)]},${rnd()<.8},'${rnd()<.8?'tout':'arbre'}',${rnd()<.35})`);
+      Rg.push(`(current_date - ${d},'${id}',${[20,40,40,40,60,100][Math.floor(rnd()*6)]},${rnd()<.8},'${rnd()<.8?'tout':'arbre'}',${rnd()<.35},${d<3?'null':Math.floor(rnd()*rnd()*15)})`);   // rang : vide les derniers jours (ancienne version), sinon surtout les premiers rangs
     }
   }
   const ins=async(t,c,l)=>{for(let i=0;i<l.length;i+=500)await db.exec(`insert into public.${t} ${c} values ${l.slice(i,i+500).join(',')} on conflict do nothing`)};
   await ins('visites','(jour,appareil,ouvertures,compte,ecran,largeur,installee,version)',V);
   await ins('jeu','(jour,heure,appareil,espece,categorie,exercice,organe,mode,vues,justes,acquises,secondes)',Jx);
   await ins('sessions','(jour,appareil,sid,minutes,exercices,dernier)',Se);await ins('usages','(jour,appareil,quoi,fois)',Us);
-  await ins('photos_jeu','(jour,appareil,espece,photo,vues,justes)',Ph);await ins('reglages','(jour,appareil,objectif,vibrations,mode,sombre)',Rg);
+  await ins('photos_jeu','(jour,appareil,espece,photo,vues,justes)',Ph);await ins('reglages','(jour,appareil,objectif,vibrations,mode,sombre,rang)',Rg);
   await db.exec(`insert into public.jeu_confusions select current_date - 1, appareil, 'Carpinus betulus', 'Fagus sylvatica', 2 from (select distinct appareil from public.jeu limit 20) a on conflict do nothing;
     insert into public.signalements select current_date - 2, appareil, 'Tilia cordata', 10778 from (select distinct appareil from public.jeu limit 3) a on conflict do nothing;
     insert into public.erreurs values (current_date - 3, '2026.10.01', 'telephone', 'Cannot read properties of null (reading ''classList'')', 4)`);
@@ -60,6 +60,14 @@ async function remplir(db){
   const t=await p.textContent('#vue');
   for(const s of ['appareils différents','reviennent après 7 jours','Fréquentation','Fidélité','Fonctions utilisées','Sessions','Appareils','Heures de jeu','Plantes les plus ratées','Confusions','Photos qui piègent','Photos signalées','Erreurs techniques','Réglages choisis'])ok(t.includes(s),'section affichée : '+s);
   ok(await p.evaluate(()=>document.querySelector('#per button[aria-pressed="true"]').dataset.n==='30'),'période par défaut : 30 jours');
+  // joueurs par rang : les 15 rangs (mêmes noms que l'appli), total = appareils dont le rang est connu sur la période
+  {const R=JSON.parse(require('fs').readFileSync(require('path').resolve(__dirname,'..','index.html'),'utf8').match(/^const R=(\[\[.*?\]\]);/m)[1]);
+   const att=(await db.query("select count(*)::int n from (select distinct on (appareil) appareil,rang from public.reglages where jour between current_date-29 and current_date and rang is not null order by appareil,jour desc) r")).rows;
+   const c=await p.evaluate(()=>{const cs=[...document.querySelectorAll('.card')].find(x=>/Joueurs par rang/.test(x.textContent));if(!cs)return null;
+     return{noms:[...cs.querySelectorAll('.hb .l,.hbar .l,[class*=lab]')].map(e=>e.textContent.trim()),txt:cs.textContent}});
+   ok(c&&R.every(([,n])=>c.txt.includes(n)),'carte « Joueurs par rang » : les 15 rangs de l\'appli, avec leurs noms');
+   const tot=await p.evaluate(()=>{const cs=[...document.querySelectorAll('.card')].find(x=>/Joueurs par rang/.test(x.textContent));return [...cs.querySelectorAll('[data-tip]')].map(e=>+(e.getAttribute('data-tip').match(/(\d[\d\s ]*) appareils? sur/)||[0,'0'])[1].replace(/\D/g,'')).reduce((a,b)=>a+b,0)});
+   ok(att[0].n>0&&tot===att[0].n,`joueurs par rang : ${tot} appareils répartis, autant que d'appareils au rang connu dans la base (${att[0].n})`)}
   ok(await p.evaluate(()=>[...document.querySelectorAll('.kpi')].some(k=>/^2comptesutilisateurs/.test(k.textContent.replace(/\s/g,'')))),'indicateur : 2 comptes utilisateurs (les deux comptes de test)');
   ok(await p.evaluate(()=>{const g=document.querySelector('.vb svg').querySelectorAll('g[data-tip]'),r=g[g.length-1].getBoundingClientRect(),h=g[g.length-1].querySelector('rect.h').getBoundingClientRect();return Math.abs(r.width-h.width)<1}),'dernière barre : la zone de sélection (focus) a la largeur de la colonne, pas celle de l\'étiquette');
   ok(await p.evaluate(()=>document.querySelectorAll('.vb svg g[data-tip]').length)>=30+30+24,'graphiques : une barre par jour (deux graphiques) et par heure');

@@ -16,7 +16,7 @@ const svg=n=>`<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><
       await pg.context().route(/inaturalist-open-data\.s3\.amazonaws\.com\/photos\/(\d+)\//,rt=>rt.fulfill({contentType:'image/svg+xml',body:svg(+rt.request().url().match(/photos\/(\d+)\//)[1])}));
       if(o.avant2)await o.avant2(pg)}});
     await r.p.evaluate(()=>{navigator.share=undefined;window.__copie='';navigator.clipboard.writeText=async t=>{window.__copie=t}});return r};
-  const serie=p=>p.evaluate(()=>JSON.stringify(dfSerie(dfJour())));
+  const serie=p=>p.evaluate(async()=>{await dqpPret();return JSON.stringify(dfSerie(dfJour()))});   // jours planifiés : le planning se charge d'abord
   const A=await appareil({seed:true}),p=A.p;
   // un autre appareil, avec un autre hasard et une progression : même série
   const B=await appareil({state:JSON.stringify({sp:{'Quercus robur':{b:4,s:9,e:1,d:0}},set:{goal:20,vib:false}})});
@@ -87,7 +87,7 @@ const svg=n=>`<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><
   ok(pr.n===h0,'objectif du jour, Progrès, Régularité : les réponses du défi ne comptent pas ('+(pr.n-h0)+')');
   ok(pr.sp===sp0,'herbier : le défi ne fait ni avancer ni acquérir de plante');
   // classement du volet profil (données d'exemple) : défi du jour sans périodes, ex æquo, amis pas encore joué en bas
-  const cl=await p.evaluate(async()=>{sbU={id:'x'};sbP={pseudo:'moi'};sbRpc=async f=>f==='tableau_defi'?[{pseudo:'Lucie',moi:false,rang:7,score:9,reponses:'1111111110'},{pseudo:'moi',moi:true,rang:4,score:7,reponses:'1011011101'},{pseudo:'Paul',moi:false,rang:5,score:7,reponses:'1110111010'},{pseudo:'Marco',moi:false,rang:2,score:null,reponses:null}]:f==='tableau'?[{pseudo:'moi',moi:true,rang:4,exercices:10,justes:7},{pseudo:'Lucie',moi:false,rang:7,exercices:4,justes:3}]:f==='tableau_periode'?[]:null;
+  const cl=await p.evaluate(async()=>{sbU={id:'x'};sbP={pseudo:'moi'};sbRpc=async f=>f==='tableau_defi'?[{pseudo:'Lucie',moi:false,rang:7,score:9,reponses:'1111111110'},{pseudo:'moi',moi:true,rang:4,score:7,reponses:'1011011101'},{pseudo:'Paul',moi:false,rang:5,score:7,reponses:'1110111010'},{pseudo:'Marco',moi:false,rang:2,score:null,reponses:null}]:f==='tableau_defi_general'?[{pseudo:'Lucie',moi:false,rang:7,score:9,reponses:'1111111110',place:1,ami:true,total:4},{pseudo:'moi',moi:true,rang:4,score:7,reponses:'1011011101',place:2,ami:false,total:4},{pseudo:'Paul',moi:false,rang:5,score:7,reponses:'1110111010',place:2,ami:false,total:4},{pseudo:'Zoe',moi:false,rang:1,score:2,reponses:'1100000000',place:4,ami:false,total:4}]:f==='tableau'?[{pseudo:'moi',moi:true,rang:4,exercices:10,justes:7},{pseudo:'Lucie',moi:false,rang:7,exercices:4,justes:3}]:f==='tableau_periode'?[]:null;
     sbVue='';sbTab=null;const c=await sbCl();const d=document.createElement('div');d.id='tcl';d.innerHTML=c.h;document.body.append(d);
     const rangs=[...d.querySelectorAll('.tbl li')].map(li=>li.querySelector('.tbp').textContent+' '+li.querySelector('.tbn').textContent+' '+li.querySelector('.tbs b').textContent);
     const r={def:d.querySelector('[data-cv="d"]').getAttribute('aria-selected'),per:!!d.querySelector('[data-per]'),rangs,grille:d.querySelectorAll('.tbl li .dfg').length};
@@ -96,7 +96,7 @@ const svg=n=>`<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><
   ok(JSON.stringify(cl.rangs)===JSON.stringify(['1 Lucie 9','2 moi 7','2 Paul 7','· Marco –'])&&cl.grille===3,'classement du défi : par score, ex æquo au même rang, « pas encore joué » en bas '+JSON.stringify(cl.rangs));
   ok(cl.perA&&cl.selA==='true','profil : « Assiduité » garde aujourd\'hui, semaine et mois');
   if(CAPT){await p.evaluate(async()=>{const c=await (sbVue='',sbCl());const d=document.createElement('div');d.className='card';d.style.cssText='position:fixed;inset:60px 12px auto;z-index:999';d.innerHTML=c.h;document.body.append(d)});await p.screenshot({path:path.join(CAPT,'defi-4-classement.png')})}
-  ok(await p.evaluate(async()=>{await dfResultat();const c=$('df-cl'),r=!!c&&c.querySelectorAll('.tbl li').length===4&&/Lucie/.test(c.textContent)&&!$('dfr').querySelector('[data-cv],[data-per]');$('df-ret').click();return r}),'avec un compte : classement du défi du jour seulement (ni Assiduité, ni périodes)');
+  ok(await p.evaluate(async()=>{await dfResultat();const c=$('df-cl'),r=!!c&&c.querySelectorAll('.tbl li').length===4&&/Lucie/.test(c.textContent)&&/Zoe/.test(c.textContent)&&/tous les joueurs/.test(c.textContent)&&!$('dfr').querySelector('[data-cv],[data-per]');$('df-ret').click();return r}),'avec un compte : classement général du défi du jour, tous les joueurs (ni Assiduité, ni périodes)');
   await p.waitForTimeout(400);
   ok(p.errs.length===0&&B.p.errs.length===0,'aucune erreur de page '+JSON.stringify(p.errs.concat(B.p.errs)));
   await b.close();console.log(ech?ech+' ÉCHEC(S)':'DÉFI DU JOUR : tout est OK');process.exit(ech?1:0);
