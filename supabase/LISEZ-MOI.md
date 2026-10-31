@@ -2,7 +2,7 @@
 
 L'onglet **Profil** de l'appli fonctionne en deux temps :
 
-- **Sans configuration** (état actuel) : il montre ton bilan, calculé sur l'appareil (rang, espèces acquises, réussite sur 14 jours, jours de suite). Rien n'est envoyé nulle part. Une ligne indique que les comptes ne sont pas encore activés.
+- **Sans configuration** (cas d'une installation neuve ; **l'appli publiée est branchée**, voir l'étape 5 plus bas) : il montre ton bilan, calculé sur l'appareil (rang, espèces acquises, réussite sur 14 jours, jours de suite). Rien n'est envoyé nulle part. Une ligne indique que les comptes ne sont pas encore activés.
 - **Une fois Supabase branché** : création de compte, pseudo, code ami, tableau du jour avec tes amis et sauvegarde de la progression en ligne.
 
 L'appli reste utilisable sans compte et sans connexion. La bibliothèque Supabase n'est téléchargée que si l'on ouvre l'onglet Profil ou si une session est déjà ouverte.
@@ -89,7 +89,7 @@ C'est courant avec une adresse Gmail toute neuve qui envoie des e-mails automati
 
 **Dans l'appli.** Onglet Profil > « J'ai déjà un compte » > saisir son adresse > « Mot de passe oublié ? Choisir un nouveau mot de passe ». L'appli appelle `resetPasswordForEmail` avec, comme adresse de retour, la page ouverte. La réponse affichée est la même que l'adresse ait un compte ou non (on ne révèle pas qui est inscrit). Le lien reçu rouvre l'appli : le profil s'ouvre seul sur **« Nouveau mot de passe »** (champ et confirmation, règle de 8 caractères dont un spécial), puis `updateUser` enregistre le mot de passe. **Le lien n'est pas un moyen de se connecter** : il n'ouvre une session que le temps de changer le mot de passe. « Plus tard », la fermeture du volet, Échap, un rechargement ou un retour plus tard sans avoir fini **déconnectent** aussitôt, sans rien changer. Il n'existe plus aucune connexion par simple lien (ni dans l'appli, ni dans les Coulisses) : seul le mot de passe permet d'entrer. Un lien expiré ou déjà utilisé affiche « Ce lien a expiré ou a déjà servi… » avec le bouton pour en redemander un.
 
-**Ce que les tests automatiques prouvent** (`outils/controle_mdp_oublie.js`) : la demande part bien vers l'URL de réinitialisation avec la bonne adresse de retour, l'écran de nouveau mot de passe s'ouvre au retour du lien, quitter l'écran sans finir déconnecte (Plus tard, fermeture, Échap, rechargement), les validations, l'appel qui change le mot de passe, l'ancien refusé et le nouveau accepté, le lien expiré. **Ils ne prouvent pas** l'envoi d'un vrai e-mail, ni le modèle, ni la liste d'adresses autorisées de Supabase : leur serveur est simulé. À vérifier une fois à la main :
+**Ce que les tests automatiques prouvent** (`outils/controles/controle_mdp_oublie.js`) : la demande part bien vers l'URL de réinitialisation avec la bonne adresse de retour, l'écran de nouveau mot de passe s'ouvre au retour du lien, quitter l'écran sans finir déconnecte (Plus tard, fermeture, Échap, rechargement), les validations, l'appel qui change le mot de passe, l'ancien refusé et le nouveau accepté, le lien expiré. **Ils ne prouvent pas** l'envoi d'un vrai e-mail, ni le modèle, ni la liste d'adresses autorisées de Supabase : leur serveur est simulé. À vérifier une fois à la main :
 
 1. Supabase > **Authentication > URL Configuration** : « Site URL » = `https://collectifdevidoir.github.io/ROYAUME-DES-PLANTES/` ; « Redirect URLs » contient `https://collectifdevidoir.github.io/ROYAUME-DES-PLANTES/**`.
 2. **Authentication > Emails > Templates > Reset Password** : objet et corps de `supabase/e-mails/reinitialisation.html`, `{{ .ConfirmationURL }}` conservé.
@@ -146,22 +146,22 @@ La connexion par Google, Apple, etc. (OAuth) pourra s'ajouter plus tard. Elle de
 
 ## Contrôles automatiques (sans réseau, sans compte Supabase)
 
-- `outils/controle_supabase_sql.js` exécute `schema.sql` sur une vraie base PostgreSQL embarquée (PGlite). Il vérifie le parcours complet et la sécurité :
+- `outils/controles/controle_supabase_sql.js` exécute `schema.sql` sur une vraie base PostgreSQL embarquée (PGlite). Il vérifie le parcours complet et la sécurité :
   - tables inaccessibles en direct, visiteur non connecté refusé ;
   - un utilisateur ne voit que ses amis et ne modifie que ses propres données ;
   - limite d'essais de codes ;
   - suppression du compte avec toutes ses données.
-- `outils/controle_comptes.js` fait le test de bout en bout dans le navigateur, avec la **vraie bibliothèque supabase-js**. Elle parle à un faux Supabase (`outils/supabase/faux_supabase.js`) adossé à la même base PGlite. Il couvre :
+- `outils/controles/controle_comptes.js` fait le test de bout en bout dans le navigateur, avec la **vraie bibliothèque supabase-js**. Elle parle à un faux Supabase (`outils/controles/supabase/faux_supabase.js`) adossé à la même base PGlite. Il couvre :
   - deux appareils : création de compte, pseudo, ajout d'un ami, tableau du jour ;
   - messages d'erreur, reprise de la progression sur un nouvel appareil, session gardée au rechargement, absence de tout lien de connexion sans mot de passe (l'appli est servie à une adresse https simulée) ;
   - réseau coupé, adresse du tableau de bord collée par erreur, clé secrète refusée ;
   - même compte sur plusieurs appareils : chacun apprend de son côté, rien n'est écrasé, un 3e appareil retrouve tout ; progression faite avant de créer le compte gardée ;
   - réinitialisation en étant connecté (le compte est aussi vidé), déconnexion de cet appareil seulement, suppression du compte.
 
-- `outils/controle_mdp_oublie.js` fait de même pour le parcours « Mot de passe oublié » (voir sa section) : demande de lien, nouveau mot de passe avec confirmation, lien expiré ou déjà utilisé.
+- `outils/controles/controle_mdp_oublie.js` fait de même pour le parcours « Mot de passe oublié » (voir sa section) : demande de lien, nouveau mot de passe avec confirmation, lien expiré ou déjà utilisé.
 
-Ils demandent `@electric-sql/pglite` et `@supabase/supabase-js`, installés comme Playwright :
-`npm i -g @electric-sql/pglite @supabase/supabase-js`.
+Ils demandent `@electric-sql/pglite` et `@supabase/supabase-js`, installés comme Playwright, aux versions épinglées dans `.github/workflows/recette.yml` (source unique des versions de test) :
+`npm i -g @electric-sql/pglite @supabase/supabase-js@<version de SB_LIB>`.
 
 **Version de la bibliothèque.** L'appli charge `supabase-js` 2.117.3 depuis jsDelivr, avec une empreinte d'intégrité (SRI) : le navigateur refuse un fichier modifié. Pour changer de version, il faut mettre à jour `SB_LIB` et `SB_SRI` ensemble.
 
