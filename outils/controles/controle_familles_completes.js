@@ -19,7 +19,7 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
   ok(!a4.cel,'rechute puis nouvelle acquisition : pas de seconde célébration');
   // carte de la Famille du jour
   await p.evaluate(F=>openFamily(F),F);await p.waitForTimeout(300);
-  ok(await p.evaluate(()=>/famille complète/.test(document.querySelector('#fz .fc4 h3').textContent)),'Famille du jour : la carte « Ta collection » indique « famille complète »');
+  ok(await p.evaluate(()=>/famille complète/.test(document.querySelector('#fz .fc4 summary').textContent)),'Famille du jour : la carte « Ta collection » indique « famille complète »');
   await p.evaluate(()=>$('fam').close());
   // autre appareil : la fusion garde les familles des deux côtés
   const fu=await p.evaluate(()=>{const a={sp:{},fc:{Rosaceae:'2026-10-01'}},c={sp:{},fc:{Pinaceae:'avant'}};const m=fusion(a,c);return Object.keys(m.fc).sort().join(',')});

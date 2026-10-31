@@ -562,6 +562,7 @@ small.fm{color:var(--mu);font-size:.72rem}
 html:has(#fam[open]){overflow:hidden}
 #fam{position:fixed;top:0;left:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:calc(env(safe-area-inset-top,0px) + 12px) 14px calc(env(safe-area-inset-bottom,0px) + 12px);border:0;border-radius:0;background:transparent;overflow:hidden}
 #fam:not([open]){display:none}
+.fz,.fz *{touch-action:pan-y}
 .fz{display:flex;gap:10px;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
 .fz::-webkit-scrollbar{display:none}
 .fz:focus{outline:none}
@@ -581,7 +582,7 @@ html:has(#fam[open]){overflow:hidden}
 
 .fnx{margin-top:auto;align-self:center;padding:10px 18px;border:0;background:none;color:var(--mu);font:600 .85rem var(--fx);cursor:pointer}
 .f1 .fnx{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);margin:0;color:#14281a;opacity:.6}
-.fgrid{flex:1;min-height:0;overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:6px;align-content:start;margin-bottom:12px}
+.fgrid{flex:1;min-height:0;overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:6px;align-content:start;margin-bottom:12px}
 .fdots{position:absolute;top:calc(env(safe-area-inset-top,0px) + 26px);left:0;right:0;display:flex;justify-content:center;gap:6px;z-index:2;pointer-events:none}
 .fdots i{width:6px;height:6px;border-radius:3px;background:rgba(0,0,0,.22);transition:width .2s,background .2s}
 .fdots i.on{width:16px;background:var(--ac)}
@@ -1143,9 +1144,12 @@ html:has(body.hs),body.hs{overflow:hidden;overscroll-behavior:none}
 }
 .mdb{position:absolute;right:-3px;bottom:-3px;width:19px;height:19px;border-radius:50%;background:var(--ac);border:2px solid var(--card);display:grid;place-items:center;pointer-events:none}
 .mdb svg{width:11px;height:11px;fill:var(--card)}
-.medal.nv .mdb{animation:mdb 1.6s ease-in-out 1s 5}
+/* Profil et amis : tant qu'on n'a jamais ouvert ce volet sur cet appareil, le médaillon pulse (pastille et halo), pour qu'on le découvre */
+.medal.nv .mdb{animation:mdb 1.4s ease-in-out infinite}
+.medal.nv::after{content:"";position:absolute;inset:-3px;border-radius:50%;border:3px solid var(--ac);pointer-events:none;animation:mdh 1.4s ease-out infinite}
 @keyframes mdb{50%{transform:scale(1.4);box-shadow:0 0 0 4px rgba(126,200,140,.35),0 0 10px 2px rgba(126,200,140,.45)}}
-@media(prefers-reduced-motion:reduce){.medal.nv .mdb{animation:none}}
+@keyframes mdh{0%{transform:scale(.92);opacity:.95}100%{transform:scale(1.28);opacity:0}}
+@media(prefers-reduced-motion:reduce){.medal.nv .mdb{animation:none;box-shadow:0 0 0 4px rgba(126,200,140,.55)}.medal.nv::after{animation:none;opacity:.8}}
 .kp b .tgi{display:inline-block;width:.8em;height:.8em;margin-right:2px;vertical-align:-.05em}
 .pl2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-bottom:12px}.pl2>.card{margin:0}
 .pl2 .lk{gap:10px;padding:10px 12px;font-size:.95rem;white-space:nowrap}
@@ -1307,12 +1311,13 @@ dialog h4{font:600 1.2rem/1.2 var(--ft)!important;color:var(--fg)!important;marg
 /* grand écran tactile (tablette, ordinateur tactile) : même carte centrée qu'à la souris */
 @media (min-width:760px) and (min-height:600px){#fam{inset:0;margin:auto;width:min(600px,92vw);height:min(780px,90vh);padding:0}#fam .fdx{top:14px;right:14px}#fam .fdots{top:24px}}
 @media (pointer:fine){
-  .fav{display:inline-flex;position:absolute;top:50%;z-index:5;width:44px;height:44px;margin-top:-22px;align-items:center;justify-content:center;border:1px solid var(--bd);border-radius:50%;background:var(--card);color:var(--fg);cursor:pointer;box-shadow:0 4px 14px -6px rgba(10,30,15,.4);transition:opacity .2s}
+  .fav{display:none;position:absolute;top:50%;z-index:5;width:44px;height:44px;margin-top:-22px;align-items:center;justify-content:center;border:1px solid var(--bd);border-radius:50%;background:var(--card);color:var(--fg);cursor:pointer;box-shadow:0 4px 14px -6px rgba(10,30,15,.4);transition:opacity .2s}
   .fav .tgi{width:18px;height:18px}
   .fav.fpv{left:10px}.fav.fnv{right:10px}
   .fav[hidden]{display:none}
   /* carte centrée : les flèches passent hors de la carte pour ne pas couvrir le texte */
-  @media (min-width:760px) and (min-height:600px){#fam{overflow:visible}.fav.fpv{left:-58px}.fav.fnv{right:-58px}}
+  /* flèches seulement quand elles tiennent hors de la carte ; sinon elles recouvraient le texte (ex. « espèces dans le monde ») : on feuillette avec « Suivant », les points, le geste ou le clavier */
+  @media (min-width:760px) and (min-height:600px){#fam{overflow:visible}.fav:not([hidden]){display:inline-flex}.fav.fpv{left:-58px}.fav.fnv{right:-58px}}
   .fz{cursor:grab}.fz.tire{cursor:grabbing;user-select:none}
 }
 
@@ -1475,6 +1480,24 @@ body.pvdo #veil{opacity:0}
 .hvo button svg{width:22px;height:22px;flex:none}
 .hvo button[aria-selected=true]{background:var(--ac);color:var(--card)}
 #herb>.hvo,#herb>.mlay,#herb>.mload{grid-column:1/-1}
+/* trois volets sur un téléphone : l'icône passe au-dessus du libellé */
+@media(max-width:480px){.hvo button{flex-direction:column;gap:2px;padding:5px 2px;min-height:54px;font-size:.78rem;line-height:1.15;text-align:center}.hvo button svg{width:20px;height:20px}}
+/* volet Familles : mêmes lignes que les catégories de la Collection ; même symbole pour toutes les familles complètes, grisé tant qu'elle ne l'est pas */
+.hi.fi{position:relative}
+.hc>summary .hi.fi{border-radius:12px;background:rgba(47,107,63,.10)}
+.hc>summary .hi.fi.ok{background:rgba(212,167,44,.24)}
+.hc>summary .hi.fi svg{width:34px;height:34px;margin:3px}
+.hi.fi:not(.ok) svg{filter:grayscale(1);opacity:.8}
+.hi.fi.ok::after{content:"";position:absolute;right:-5px;bottom:-5px;width:18px;height:18px;border-radius:50%;background:#fcfbf6 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='8.3' fill='none' stroke='%23b8862b' stroke-width='1.4'/%3E%3Ccircle cx='10' cy='10' r='6.3' fill='none' stroke='%23b8862b' stroke-width='.7' stroke-dasharray='1.4 1.4'/%3E%3Cpath d='M6.4 10.3l2.4 2.4 4.8-5.2' fill='none' stroke='%23b8862b' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat;box-shadow:0 1px 2px rgba(0,0,0,.25)}
+.hm .hsub{display:block;margin:1px 0 0;font:400 .78rem var(--fx);color:var(--mu)}
+.hc.fix>summary{pointer-events:none;cursor:default}.hc.fix>summary::after{display:none}
+.fc4>.hc.fix{margin:0 0 6px}.fc4>.hc.fix>summary{padding:0 0 8px}
+.hfr{padding:0 12px 10px}
+.hfx{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:44px;padding:8px 12px;border:1.5px solid var(--ac);border-radius:12px;background:none;color:var(--ac);font:600 .9rem var(--fx);cursor:pointer}
+.hfx .tgi{width:24px;height:24px;margin:0}
+.fml{display:flex;flex-direction:column;gap:12px}.fml>.card{margin:0}
+html.dk .fml{display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));align-items:start;gap:14px}
+.pkf{margin:12px 0 0}.hfv{margin:8px 4px}
 html.dk .hvo{max-width:520px;margin:0 0 16px}
 .mload{padding:40px 0;text-align:center;color:var(--mu)}
 /* la carte : un groupe SVG par milieu ; les effets ne touchent que la zone concernée */
@@ -4315,6 +4338,9 @@ function stats(){
    $('defi').setAttribute('aria-label',n>=10?'Défi du jour : '+dfScore(e)+' sur 10, voir le résultat':n?'Défi du jour : '+n+' questions sur 10, reprendre':'Défi du jour : 10 questions, les mêmes pour tous')}
   fitRank();
 }
+// Tuile d'une espèce, la même partout : herbier (mobile et ordinateur), collection d'une famille. c : 'ok' acquise, 'pr' rencontrée
+const pkThumb=l=>{const a=cache[l];return a&&a.src||(IC[l]&&IC[l].imgs&&IC[l].imgs[0]&&IC[l].imgs[0].src)||''};
+const pkTile=(s,c)=>{const u=pkThumb(s[0]);return `<div class="pk ${c}" data-l="${s[0]}" title="${s[0]}" tabindex="0" role="button">${u?`<img src="${u}" referrerpolicy="no-referrer" loading="lazy" alt="">`:''}<b>${s[1]}</b></div>`};
 function herbSearch(){
   $('herb').insertAdjacentHTML('afterbegin','<div class="card"><input id="herb-search" type="search" placeholder="Chercher une plante" autocomplete="off" aria-label="Chercher une plante"><div id="herb-results"></div></div>');
   $('herb-search').oninput=()=>{const q=norm($('herb-search').value);$('herb-results').innerHTML=q.length<2?'':(S.filter(s=>noms(s).some(n=>norm(n).includes(q))||norm(s[1]).includes(q)).slice(0,10).map(s=>`<button class="sr" data-sp="${s[0]}"><em>${s[0]}</em><span>${s[1]}</span></button>`).join('')||'<p class="na">Aucune plante de ce nom dans l\'herbier.</p>')};
@@ -4330,9 +4356,7 @@ function proCols(){
 herbMQ.addEventListener('change',()=>{if(!$('pro').hidden)pro()});
 herbMQ.addEventListener('change',()=>{if(!$('herb').hidden)herb()});
 function herb(){
-  const thumb=l=>{const a=cache[l];return a&&a.src||(IC[l]&&IC[l].imgs&&IC[l].imgs[0]&&IC[l].imgs[0].src)||''};
-  const own=s=>(st.sp[s[0]]||{b:0}).b>=4,sn=s=>!!st.sp[s[0]];
-  const tile=(s,c)=>{const u=thumb(s[0]);return `<div class="pk ${c}" data-l="${s[0]}" title="${s[0]}" tabindex="0" role="button">${u?`<img src="${u}" referrerpolicy="no-referrer" loading="lazy" alt="">`:''}<b>${s[1]}</b></div>`};
+  const own=s=>(st.sp[s[0]]||{b:0}).b>=4,sn=s=>!!st.sp[s[0]],tile=pkTile;
   const cats=Object.keys(T).filter(k=>k!=='tout').map(k=>{
     const lat=(x,y)=>x[0].localeCompare(y[0],'fr'),a=S.filter(s=>s[2]===k),got=a.filter(own).sort(lat),pr=a.filter(s=>sn(s)&&!own(s)).sort(lat),left=a.length-got.length-pr.length;
     return `<details class="card hc" data-k="${k}"${st.ho[k]?' open':''}><summary><span class="hi">${catIcon(k)}</span><span class="hm"><b>${T[k]}</b><span class="bar"><i style="width:${100*got.length/a.length}%"></i></span></span><span class="hn">${got.length}<small>/${a.length}</small></span></summary><div class="pkg">${got.map(s=>tile(s,'ok')).join('')}${pr.map(s=>tile(s,'pr')).join('')}${left?`<div class="pkn">+ ${left} à découvrir</div>`:''}</div></details>`});
@@ -4432,8 +4456,8 @@ $('jou-x').onclick=()=>$('jou').close();
 $('jou').onclick=e=>{if(e.target===$('jou'))$('jou').close()};
 $('medal').onclick=openProfil;
 $('medal').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openProfil()}};
-// sans compte : à la première ouverture de chaque jour, la pastille du logo de rang scintille (jusqu'à l'ouverture du profil)
-try{if(!localStorage.getItem('qp.sb')&&localStorage.getItem('qp.prf')!==today())$('medal').classList.add('nv')}catch(e){}
+// à la première ouverture sur un appareil, le médaillon de rang pulse jusqu'à ce que le profil ait été ouvert une fois (avec ou sans compte)
+try{if(!localStorage.getItem('qp.prf'))$('medal').classList.add('nv')}catch(e){}
 // Même geste pour tous les volets : on glisse vers le bas pour fermer, depuis n'importe où quand le contenu est en haut.
 // Le volet suit le doigt ; relâché assez bas (ou d'un geste vif), il se ferme, sinon il revient en place.
 function swipeClose(d,close,scrollEl){let y0=null,x0=0,t0=0,dy=0,on=false;
@@ -4603,9 +4627,25 @@ const tileImg=async(e,k=0)=>{const s=S.find(x=>x[0]===e.dataset.l);if(!s||e.quer
   if(im&&im.src){e.classList.remove('no');const i=new Image();i.referrerPolicy='no-referrer';i.alt='';i.onerror=()=>{i.remove();e.classList.add('no')};i.src=im.src;e.prepend(i)}
   else{e.classList.add('no');if(k<3){if(cache[s[0]]===null)delete cache[s[0]];setTimeout(()=>{if(e.isConnected)tileImg(e,k+1)},3000*(k+1))}}};
 const cap=x=>{x=String(x||'').trim();return x?x[0].toUpperCase()+x.slice(1):x};
-function openFamily(f){usage('famille_jour');
-  const d=$('fam'),z=$('fz'),sp=S.filter(s=>FAM[gen(s[0])]===f),own=s=>(st.sp[s[0]]||{b:0}).b>=4,info=FI[f],got=sp.filter(own).length;
-  famCur=f;shTok++;st.fd={d:today()};save();stats();
+// Collection d'une famille : même présentation dans l'Herbier (volet Familles) et dans la fiche famille.
+// Comme partout dans l'herbier, seules les espèces rencontrées sont montrées (acquises, puis en cours), le reste est compté : « + N à découvrir ».
+const famSpecies=f=>S.filter(s=>FAM[gen(s[0])]===f);
+const famNom=f=>FI[f]?FI[f][0].split(' (')[0]:'';
+const famNb=f=>{const sp=famSpecies(f);return{n:sp.length,got:sp.filter(s=>(st.sp[s[0]]||{b:0}).b>=4).length,vu:sp.filter(s=>!!st.sp[s[0]]).length}};
+// ligne d'en-tête identique à celle des catégories de l'Herbier (icône, titre, barre, n/N) ; le même symbole pour toutes les familles complètes, grisé tant que la famille ne l'est pas
+const famHead=(f,titre,sous)=>{const c=famNb(f);return `<span class="hi fi${famComplete(f)?' ok':''}">${BULB}</span><span class="hm"><b>${titre}</b>${sous?`<small class="hsub">${sous}</small>`:''}<span class="bar"><i style="width:${c.n?100*c.got/c.n:0}%"></i></span></span><span class="hn">${c.got}<small>/${c.n}</small></span>`};
+const famColl=f=>{const sp=famSpecies(f),own=s=>(st.sp[s[0]]||{b:0}).b>=4,sn=s=>!!st.sp[s[0]],lat=(x,y)=>x[0].localeCompare(y[0],'fr'),
+    ty=Object.keys(T).filter(k=>k!=='tout').map(k=>[k,sp.filter(s=>s[2]===k)]).filter(x=>x[1].length);
+  let h='',vus=0;
+  ty.forEach(([k,a])=>{const g=a.filter(own).sort(lat),p=a.filter(s=>sn(s)&&!own(s)).sort(lat);if(!g.length&&!p.length)return;vus+=g.length+p.length;
+    if(ty.length>1)h+=`<p class="fgh">${T[k]} · ${g.length}/${a.length}</p>`;
+    h+=g.map(s=>pkTile(s,'ok')).join('')+p.map(s=>pkTile(s,'pr')).join('')});
+  return h+(sp.length>vus?`<div class="pkn">+ ${sp.length-vus} à découvrir</div>`:'')};
+function openFamily(f,hors){if(!hors)usage('famille_jour');   // ouverte depuis l'Herbier : pas de mesure, le serveur n'accepte que des noms d'écran connus
+ 
+  const d=$('fam'),z=$('fz'),sp=famSpecies(f),info=FI[f];
+  famCur=f;shTok++;if(!hors){st.fd={d:today()};save();stats()}   // seule la Famille du jour compte pour le point rouge du jour
+  d.setAttribute('aria-label',hors?'Fiche de la famille '+f:'Famille du jour');
   const nx='<button class="fnx" type="button">Suivant '+ico('chev-r','ic-in')+'</button>',pl=(n,m)=>n+' '+m+(n>1?'s':''),nb=x=>String(x).replace(/ /g,' ');
   // tout est compté sur la liste du jeu : types (arbre, arbuste…), genres, espèces acquises
   const ty=Object.keys(T).filter(k=>k!=='tout').map(k=>[k,sp.filter(s=>s[2]===k)]).filter(x=>x[1].length),
@@ -4613,8 +4653,7 @@ function openFamily(f){usage('famille_jour');
     gs={};sp.forEach(s=>{const g=gen(s[0]);(gs[g]=gs[g]||[]).push(s)});
   const gl=Object.entries(gs).sort((a,b)=>b[1].length-a[1].length||a[0].localeCompare(b[0])),gt=gl.slice(0,6),gr=gl.slice(6);
   const sv=FC[f]?`<div class="fsv"><b>Le saviez-vous ?</b><p class="fcu">${esc(FC[f][0])}</p><p class="fsrc">Source : <a href="${FC[f][2]}" target="_blank" rel="noopener">${esc(FC[f][1])}</a></p></div>`:'';
-  const tile=s=>`<div class="pk${own(s)?' ok':''}" data-l="${s[0]}" title="${s[0]}" tabindex="0" role="button"><b>${s[1]}</b></div>`;
-  z.innerHTML=`<section class="fcard f1" style="--h:${famHue(f)}"><span class="tgi">${BULB}</span><small>Famille du jour</small><h2>${f}</h2><p>${frFam(f)}</p>`+
+  z.innerHTML=`<section class="fcard f1" style="--h:${famHue(f)}"><span class="tgi">${BULB}</span><small>${hors?'Famille':'Famille du jour'}</small><h2>${f}</h2><p>${frFam(f)}</p>`+
      `<div class="fst"><div class="fst-a"><b>${sp.length}</b><span>espèces dans le jeu</span></div><div><b>${gl.length}</b><span>${gl.length>1?'genres':'genre'}</span></div>${FW[f]?`<div class="fst-w"><b>≈ ${nb(FW[f])}</b><span>espèces dans le monde</span></div>`:''}</div>`+
      `<div class="fty"><div class="fbar" aria-hidden="true">${ty.map(([k,a])=>`<i style="flex:${a.length}"></i>`).join('')}</div><ul>${ty.map(([k,a])=>`<li><i aria-hidden="true"></i><span class="tgi">${catIcon(k)}</span><b>${a.length}</b> ${tyl(k,a.length)}</li>`).join('')}</ul></div>`+
      `${FX[f]&&FX[f][0]?`<p class="fds">${esc(FX[f][0])}</p>`:''}${nx}</section>`+
@@ -4624,35 +4663,46 @@ function openFamily(f){usage('famille_jour');
      `<ul class="fgn">${gt.map(([g,a])=>`<li><span class="fgp" data-l="${a[0][0]}"></span><b${g.length>10?' class="fgl"':''}><em>${g}</em></b><small>${pl(a.length,'espèce')}</small></li>`).join('')}</ul>`+
      `${gr.length?`<p class="fgr">Et ${gr.length} ${gr.length>1?'autres genres':'autre genre'} : ${gr.slice(0,6).map(([g])=>`<em>${g}</em>`).join(', ')}${gr.length>6?'…':''}</p>`:''}`+
      `${sv}${nx}</section>`:'')+
-   `<section class="fcard fc4">${gl.length>1?'':sv}<small>Ta collection</small><h3>${got} / ${sp.length}<span>${FAMSP[f]&&got===sp.length?'famille complète':got>1?'acquises':'acquise'} ${ico('coche','ic-in')}</span></h3><div class="fpr" role="progressbar" aria-label="Espèces acquises" aria-valuemin="0" aria-valuemax="${sp.length}" aria-valuenow="${got}"><i style="width:${Math.round(got/sp.length*100)}%"></i></div>`+
-     `<div class="fgrid" id="fam-grid">${ty.length>1?ty.map(([k,a])=>`<p class="fgh">${T[k]} · ${a.length}</p>${a.map(tile).join('')}`).join(''):sp.map(tile).join('')}</div><button class="big" id="fam-go" type="button">S'exercer sur cette famille</button></section>`;
+   `<section class="fcard fc4">${gl.length>1?'':sv}<details class="hc fix" open><summary tabindex="-1">${famHead(f,'Ta collection',famComplete(f)?'famille complète':'')}</summary></details>`+
+     `<div class="fgrid" id="fam-grid">${famColl(f)}</div><button class="big" id="fam-go" type="button">S'exercer sur cette famille</button></section>`;
   $('fdots').innerHTML=[...z.children].map((_,i)=>i?'<i></i>':'<i class="on"></i>').join('');
   if(d.showModal){if(!d.open)d.showModal()}else d.setAttribute('open','');
   z.scrollLeft=0;fzI=0;famDots(0);
   [...document.querySelectorAll('#fz .fgp,#fam-grid .pk')].forEach((e,i)=>setTimeout(()=>tileImg(e),i*80));
 }
 const famDots=i=>{document.querySelectorAll('#fdots i').forEach((e,k)=>e.classList.toggle('on',k===i));const z=$('fz'),n=z.children.length,p=document.querySelector('#fam .fpv'),q=document.querySelector('#fam .fnv');if(p)p.hidden=i<=0;if(q)q.hidden=i>=n-1};
-// ordinateur : les cartes se feuillettent aussi en glissant à la souris, avec les flèches ‹ › ou celles du clavier
-(()=>{const z=$('fz'),W=()=>z.clientWidth+10,va=i=>z.scrollTo({left:Math.max(0,Math.min(z.children.length-1,i))*W(),behavior:'smooth'}),ici=()=>Math.round(z.scrollLeft/W());
-  let x0=null,s0=0,bouge=false;
-  z.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse'||e.button!==0||e.target.closest('button,a,input,.pk'))return;x0=e.clientX;s0=z.scrollLeft;bouge=false;z.style.scrollSnapType='none';z.classList.add('tire')});
-  addEventListener('pointermove',e=>{if(x0===null)return;const dx=e.clientX-x0;if(Math.abs(dx)>5)bouge=true;z.scrollLeft=s0-dx});
-  addEventListener('pointerup',e=>{if(x0===null)return;const dx=e.clientX-x0,i0=Math.round(s0/W());x0=null;z.classList.remove('tire');z.style.scrollSnapType='';va(Math.abs(dx)>50?i0+(dx<0?1:-1):i0)});
+// Défilement des cartes : un seul pilote pour le doigt, la souris, les flèches, « Suivant » et le clavier.
+// Le geste horizontal est suivi par le script (touch-action:pan-y laisse au navigateur le défilement vertical des cartes) :
+// la carte colle au doigt, puis, au lever, la carte visée est choisie selon la distance et la vitesse et le mouvement s'achève
+// par un seul glissement ralenti. L'aimantation native est suspendue pendant tout ce temps (elle se heurtait à l'élan natif
+// et au défilement lissé relancé au lever du doigt, d'où des à-coups) ; elle sert encore à la molette et au pavé tactile.
+const famVa=(()=>{const z=$('fz'),W=()=>z.clientWidth+10,ici=()=>Math.round(z.scrollLeft/W()),bor=i=>Math.max(0,Math.min(z.children.length-1,i));
+  let raf=0,d=null,bouge=false;
+  const fin=()=>{raf=0;z.style.scrollSnapType=''};
+  const va=i=>{cancelAnimationFrame(raf);const x0=z.scrollLeft,x1=bor(i)*W(),D=x1-x0;
+    if(Math.abs(D)<1||matchMedia('(prefers-reduced-motion:reduce)').matches){z.scrollLeft=x1;fin();return}
+    z.style.scrollSnapType='none';const t0=performance.now(),dur=200+160*Math.min(1,Math.abs(D)/W());
+    const f=t=>{const k=Math.max(0,Math.min(1,(t-t0)/dur));   // t, l'instant de l'image, peut précéder t0 : sans le plancher, la 1re image reculait
+      z.scrollLeft=x0+D*(1-Math.pow(1-k,3));if(k<1)raf=requestAnimationFrame(f);else{z.scrollLeft=x1;fin()}};raf=requestAnimationFrame(f)};
+  z.addEventListener('pointerdown',e=>{bouge=false;if((e.pointerType==='mouse'&&e.button!==0)||(d&&e.pointerId!==d.id))return;d={id:e.pointerId,x:e.clientX,y:e.clientY,h:null,pts:[]}});
+  addEventListener('pointermove',e=>{if(!d||e.pointerId!==d.id)return;const dx=e.clientX-d.x,dy=e.clientY-d.y;
+    if(d.h===null){if(Math.abs(dx)<6&&Math.abs(dy)<6)return;
+      if(Math.abs(dx)<=Math.abs(dy)*1.2){d=null;return}   // geste vertical : défilement de la carte, géré par le navigateur
+      d.h=true;cancelAnimationFrame(raf);z.style.scrollSnapType='none';z.classList.add('tire');d.s=z.scrollLeft;d.i=ici();d.x=e.clientX;bouge=true;
+      d.pts=[[e.timeStamp,e.clientX]];return}
+    z.scrollLeft=d.s-(e.clientX-d.x);d.pts.push([e.timeStamp,e.clientX]);while(d.pts.length>2&&e.timeStamp-d.pts[0][0]>100)d.pts.shift()});
+  const lache=e=>{if(!d||e.pointerId!==d.id)return;const g=d;d=null;if(!g.h)return;z.classList.remove('tire');
+    const dx=e.clientX-g.x,p=g.pts[0]||[e.timeStamp,e.clientX],v=(e.clientX-p[1])/Math.max(1,e.timeStamp-p[0]);   // v en px/ms, négative vers la gauche
+    const sens=e.type==='pointercancel'?0:Math.abs(v)>.4?-Math.sign(v):Math.abs(dx)>50?-Math.sign(dx):0;
+    va(g.i+sens)};
+  addEventListener('pointerup',lache);addEventListener('pointercancel',lache);
   z.addEventListener('click',e=>{if(bouge){e.stopPropagation();e.preventDefault();bouge=false}},true);
-  // au doigt sur grand écran : un geste franc tourne la carte, même s'il ne dépasse pas la moitié de la carte
-  // au doigt : comme à la souris, l'aimantation est suspendue pendant le geste et la carte est choisie au lever du doigt,
-  // puis l'aimantation revient une fois le défilement fini (sinon elle ramenait la carte en arrière avant de la laisser avancer)
-  let t0=null,tAim=0;const aimante=()=>{clearTimeout(tAim);z.style.scrollSnapType=''};
-  z.addEventListener('touchstart',e=>{const t=e.touches[0];t0=e.touches.length===1?{x:t.clientX,y:t.clientY,i:ici()}:null;if(t0){clearTimeout(tAim);z.style.scrollSnapType='none'}},{passive:true});
-  z.addEventListener('touchend',e=>{if(!t0)return;const t=e.changedTouches[0],dx=t.clientX-t0.x,dy=t.clientY-t0.y,i=t0.i;t0=null;
-    va(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.5?i+(dx<0?1:-1):ici());z.addEventListener('scrollend',aimante,{once:true});tAim=setTimeout(aimante,900)},{passive:true});
-  z.addEventListener('touchcancel',()=>{t0=null;aimante()},{passive:true});
   $('fam').addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();va(ici()+1)}else if(e.key==='ArrowLeft'){e.preventDefault();va(ici()-1)}});
-  for(const [c,d,ic,lb] of [['fpv',-1,'chev-l','Carte précédente'],['fnv',1,'chev-r','Carte suivante']]){const b=document.createElement('button');b.type='button';b.className='fav '+c;b.setAttribute('aria-label',lb);b.innerHTML=ico(ic);b.onclick=()=>va(ici()+d);$('fam').append(b)}
-})();
+  for(const [c,s,ic,lb] of [['fpv',-1,'chev-l','Carte précédente'],['fnv',1,'chev-r','Carte suivante']]){const b=document.createElement('button');b.type='button';b.className='fav '+c;b.setAttribute('aria-label',lb);b.innerHTML=ico(ic);b.onclick=()=>va(ici()+s);$('fam').append(b)}
+  return {va,ici}})();
 // points de pagination : recalculés une fois par image et seulement quand la carte affichée change (défilement fluide)
 let fzRaf=0,fzI=-1;$('fz').onscroll=()=>{if(fzRaf)return;fzRaf=requestAnimationFrame(()=>{fzRaf=0;const z=$('fz'),i=Math.round(z.scrollLeft/(z.clientWidth+10));if(i!==fzI){fzI=i;famDots(i)}})};
-$('fz').onclick=e=>{const z=$('fz');if(e.target.closest('.fnx'))z.scrollBy({left:z.clientWidth+10,behavior:'smooth'});else if(e.target.closest('#fam-go')){$('fam').close();startFamily(famCur)}};
+$('fz').onclick=e=>{const z=$('fz');if(e.target.closest('.fnx'))famVa.va(famVa.ici()+1);else if(e.target.closest('#fam-go')){$('fam').close();startFamily(famCur)}};
 $('famx').onclick=()=>$('fam').close();
 function startFamily(f){
   const own=s=>(st.sp[s[0]]||{b:0}).b>=4?1:0;
@@ -5136,8 +5186,7 @@ streak=+st.streak||0;stats();
 (()=>{const MQ=matchMedia('(min-width:1100px) and (pointer:fine)');let side=null,herbOrig=herb;
   const herbDk=()=>{if(!document.documentElement.classList.contains('dk'))return herbOrig();
     const own=s=>(st.sp[s[0]]||{b:0}).b>=4,sn=s=>!!st.sp[s[0]],lat=(x,y)=>x[0].localeCompare(y[0],'fr');
-    const thumb=l=>{const a=cache[l];return a&&a.src||(IC[l]&&IC[l].imgs&&IC[l].imgs[0]&&IC[l].imgs[0].src)||''};
-    const tile=(s,c)=>{const u=thumb(s[0]);return `<div class="pk ${c}" data-l="${s[0]}" title="${s[0]}" tabindex="0" role="button">${u?`<img src="${u}" referrerpolicy="no-referrer" loading="lazy" alt="">`:''}<b>${s[1]}</b></div>`};
+    const tile=pkTile;
     const K=Object.keys(T).filter(k=>k!=='tout');let k=st.hk&&K.includes(st.hk)?st.hk:K[0];
     const tabs=K.map(c=>{const a=S.filter(s=>s[2]===c),g=a.filter(own).length;return `<button type="button" data-hk="${c}" aria-pressed="${c===k}">${catIcon(c)}<b>${T[c]}</b><small>${g} / ${a.length} acquises</small><i><i style="width:${Math.max(2,100*g/a.length)}%"></i></i></button>`}).join('');
     const a=S.filter(s=>s[2]===k),got=a.filter(own).sort(lat),pr=a.filter(s=>sn(s)&&!own(s)).sort(lat),left=a.length-got.length-pr.length;
@@ -5158,7 +5207,7 @@ streak=+st.streak||0;stats();
     }else if(!on&&side){const m=document.querySelector('main');m.prepend($('top'));$('top').after(document.querySelector('.tabs'));side.remove();side=null}
     if(!$('herb').hidden)herb()};
   MQ.addEventListener?MQ.addEventListener('change',monte):MQ.addListener(monte);monte()})();
-// ===== Herbier : deux volets, « Collection » (l'herbier ci-dessus, inchangé) et « Carte des milieux » =====
+// ===== Herbier : trois volets, « Collection » (l'herbier ci-dessus, inchangé), « Familles » et « Carte des milieux » =====
 // La carte (illustrations/carte-milieux.js, produite par outils/carte/gen_carte.py) contient un groupe SVG par milieu :
 // son tracé sert à la fois de sol, de découpe, de contour et de surface cliquable. Les espèces viennent de la table MH
 // (associations vérifiées) : une espèce compte une fois dans chacun de ses milieux.
@@ -5166,18 +5215,28 @@ streak=+st.streak||0;stats();
   const MSUB={FOR:'Sous la canopée',LIS:'Entre deux milieux',PRA:'Les milieux ouverts',LAN:'Les végétations de broussailles',HUM:'Là où le sol reste humide',EAU:'Les eaux douces',ROC:'La vie sur peu de terre',LIT:'La rencontre de la terre et de la mer',HAB:'Les plantes auprès de nous'};
   const IC_COL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg>';
   const IC_MAP='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18.5 7.5 9l3.2 5 2.3-3.4L21 18.5Z"/><circle cx="16.5" cy="6.5" r="2"/></svg>';
-  let vol=(()=>{try{return localStorage.getItem('qp.hv')==='map'?'map':'col'}catch(e){return'col'}})(),sel=null,sub='',all={},BY=null,SMN=null,loading=false;
+  const IC_FAM='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5.5" r="2.5"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/><path d="M12 8v3.5M5.5 16V11.5h13V16"/></svg>';
+  let vol=(()=>{try{const v=localStorage.getItem('qp.hv');return v==='map'||v==='fam'?v:'col'}catch(e){return'col'}})(),sel=null,sub='',all={},BY=null,SMN=null,loading=false;
   const M=()=>window.CARTE_MILIEUX;
   const own=l=>(st.sp[l]||{b:0}).b>=4,prg=l=>!!st.sp[l]&&!own(l);
   const index=()=>{if(BY)return;BY={};SMN={};TER.forEach(t=>BY[t]=[]);
     S.forEach(s=>{const e=MH.E[s[0]];if(!e)return;const vu={};e[0].forEach(a=>{let x=vu[a[1]];if(!x){x=vu[a[1]]={s,sm:new Set()};if(BY[a[1]])BY[a[1]].push(x)}x.sm.add(a[0])})});
     TER.forEach(t=>{BY[t].sort((a,b)=>a.s[0].localeCompare(b.s[0],'fr'));const c={};BY[t].forEach(x=>x.sm.forEach(m=>c[m]=(c[m]||0)+1));SMN[t]=Object.keys(c).sort().map(m=>[m,c[m]])})};
   const cnt=t=>{const a=BY[t];return{n:a.length,o:a.filter(x=>own(x.s[0])).length,p:a.filter(x=>prg(x.s[0])).length}};
-  const bar=()=>`<div class="hvo" role="tablist" aria-label="Herbier"><button type="button" role="tab" data-hv="col" aria-selected="${vol==='col'}">${IC_COL}Collection</button><button type="button" role="tab" data-hv="map" aria-selected="${vol==='map'}">${IC_MAP}Carte des milieux</button></div>`;
+  const bar=()=>`<div class="hvo" role="tablist" aria-label="Herbier"><button type="button" role="tab" data-hv="col" aria-selected="${vol==='col'}">${IC_COL}Collection</button><button type="button" role="tab" data-hv="fam" aria-selected="${vol==='fam'}">${IC_FAM}Familles</button><button type="button" role="tab" data-hv="map" aria-selected="${vol==='map'}">${IC_MAP}Carte des milieux</button></div>`;
   herb=()=>{const h=$('herb');
     if(vol==='col'){coll();h.insertAdjacentHTML('afterbegin',bar())}
+    else if(vol==='fam'){h.innerHTML=bar();familles(h)}
     else{h.innerHTML=bar()+'<p class="mload">Chargement de la carte…</p>';carte()}
     h.querySelectorAll('[data-hv]').forEach(b=>b.onclick=()=>{if(vol===b.dataset.hv)return;vol=b.dataset.hv;try{localStorage.setItem('qp.hv',vol)}catch(e){}herb()})};
+  // Familles : une ligne par famille dont on a rencontré au moins une espèce (comme la Collection, on ne montre que ce qui a été rencontré) ;
+  // les familles complètes d'abord (même symbole), puis par avancement ; chaque famille s'ouvre sur sa collection et sur sa fiche
+  function familles(h){
+    const L=Object.keys(FAMSP).map(f=>[f,famNb(f)]),vues=L.filter(x=>x[1].vu>0).sort((a,b)=>famComplete(b[0])-famComplete(a[0])||b[1].got/b[1].n-a[1].got/a[1].n||a[0].localeCompare(b[0])),reste=L.length-vues.length;
+    h.insertAdjacentHTML('beforeend',vues.length?`<div class="fml">${vues.map(([f])=>`<details class="card hc" data-f="${f}"><summary>${famHead(f,f,famNom(f))}</summary><div class="hfr"><button type="button" class="hfx" data-fiche="${f}"><span class="tgi">${BULB}</span>Fiche de la famille</button></div><div class="pkg">${famColl(f)}</div></details>`).join('')}</div>`:'<p class="na hfv">Les familles apparaissent ici dès que tu rencontres une de leurs plantes.</p>');
+    if(reste)h.insertAdjacentHTML('beforeend',`<div class="pkn pkf">+ ${reste} ${reste>1?'familles':'famille'} à découvrir</div>`);
+    h.querySelectorAll('[data-fiche]').forEach(b=>b.onclick=()=>openFamily(b.dataset.fiche,true));
+    h.querySelectorAll('details.hc').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)[...d.querySelectorAll('.pk[data-l]')].filter(e=>!e.querySelector('img')).slice(0,40).forEach((e,i)=>setTimeout(()=>tileImg(e),i*60))}))}
   // la carte n'est chargée qu'à la première ouverture du volet
   function carte(){if(M()){mapv();return}if(loading)return;loading=true;
     const sc=document.createElement('script');sc.src='illustrations/carte-milieux.js?v=1';
