@@ -4628,18 +4628,19 @@ const tileImg=async(e,k=0)=>{const s=S.find(x=>x[0]===e.dataset.l);if(!s||e.quer
   else{e.classList.add('no');if(k<3){if(cache[s[0]]===null)delete cache[s[0]];setTimeout(()=>{if(e.isConnected)tileImg(e,k+1)},3000*(k+1))}}};
 const cap=x=>{x=String(x||'').trim();return x?x[0].toUpperCase()+x.slice(1):x};
 // Collection d'une famille : même présentation dans l'Herbier (volet Familles) et dans la fiche famille.
-// Comme partout dans l'herbier, seules les espèces rencontrées sont montrées (acquises, puis en cours), le reste est compté : « + N à découvrir ».
+// Dans l'Herbier, seules les espèces rencontrées sont montrées (acquises, puis en cours), le reste est compté : « + N à découvrir ».
+// Dans la fiche famille (tout = true), toutes les espèces de la famille sont montrées, même non rencontrées (tuile simple, sans pastille).
 const famSpecies=f=>S.filter(s=>FAM[gen(s[0])]===f);
 const famNom=f=>FI[f]?FI[f][0].split(' (')[0]:'';
 const famNb=f=>{const sp=famSpecies(f);return{n:sp.length,got:sp.filter(s=>(st.sp[s[0]]||{b:0}).b>=4).length,vu:sp.filter(s=>!!st.sp[s[0]]).length}};
 // ligne d'en-tête identique à celle des catégories de l'Herbier (icône, titre, barre, n/N) ; le même symbole pour toutes les familles complètes, grisé tant que la famille ne l'est pas
 const famHead=(f,titre,sous)=>{const c=famNb(f);return `<span class="hi fi${famComplete(f)?' ok':''}">${BULB}</span><span class="hm"><b>${titre}</b>${sous?`<small class="hsub">${sous}</small>`:''}<span class="bar"><i style="width:${c.n?100*c.got/c.n:0}%"></i></span></span><span class="hn">${c.got}<small>/${c.n}</small></span>`};
-const famColl=f=>{const sp=famSpecies(f),own=s=>(st.sp[s[0]]||{b:0}).b>=4,sn=s=>!!st.sp[s[0]],lat=(x,y)=>x[0].localeCompare(y[0],'fr'),
+const famColl=(f,tout)=>{const sp=famSpecies(f),own=s=>(st.sp[s[0]]||{b:0}).b>=4,sn=s=>!!st.sp[s[0]],lat=(x,y)=>x[0].localeCompare(y[0],'fr'),
     ty=Object.keys(T).filter(k=>k!=='tout').map(k=>[k,sp.filter(s=>s[2]===k)]).filter(x=>x[1].length);
   let h='',vus=0;
-  ty.forEach(([k,a])=>{const g=a.filter(own).sort(lat),p=a.filter(s=>sn(s)&&!own(s)).sort(lat);if(!g.length&&!p.length)return;vus+=g.length+p.length;
+  ty.forEach(([k,a])=>{const g=a.filter(own).sort(lat),p=a.filter(s=>sn(s)&&!own(s)).sort(lat),n=tout?a.filter(s=>!sn(s)).sort(lat):[];if(!g.length&&!p.length&&!n.length)return;vus+=g.length+p.length+n.length;
     if(ty.length>1)h+=`<p class="fgh">${T[k]} · ${g.length}/${a.length}</p>`;
-    h+=g.map(s=>pkTile(s,'ok')).join('')+p.map(s=>pkTile(s,'pr')).join('')});
+    h+=g.map(s=>pkTile(s,'ok')).join('')+p.map(s=>pkTile(s,'pr')).join('')+n.map(s=>pkTile(s,'')).join('')});
   return h+(sp.length>vus?`<div class="pkn">+ ${sp.length-vus} à découvrir</div>`:'')};
 function openFamily(f,hors){if(!hors)usage('famille_jour');   // ouverte depuis l'Herbier : pas de mesure, le serveur n'accepte que des noms d'écran connus
  
@@ -4664,7 +4665,7 @@ function openFamily(f,hors){if(!hors)usage('famille_jour');   // ouverte depuis 
      `${gr.length?`<p class="fgr">Et ${gr.length} ${gr.length>1?'autres genres':'autre genre'} : ${gr.slice(0,6).map(([g])=>`<em>${g}</em>`).join(', ')}${gr.length>6?'…':''}</p>`:''}`+
      `${sv}${nx}</section>`:'')+
    `<section class="fcard fc4">${gl.length>1?'':sv}<details class="hc fix" open><summary tabindex="-1">${famHead(f,'Ta collection',famComplete(f)?'famille complète':'')}</summary></details>`+
-     `<div class="fgrid" id="fam-grid">${famColl(f)}</div><button class="big" id="fam-go" type="button">S'exercer sur cette famille</button></section>`;
+     `<div class="fgrid" id="fam-grid">${famColl(f,true)}</div><button class="big" id="fam-go" type="button">S'exercer sur cette famille</button></section>`;
   $('fdots').innerHTML=[...z.children].map((_,i)=>i?'<i></i>':'<i class="on"></i>').join('');
   if(d.showModal){if(!d.open)d.showModal()}else d.setAttribute('open','');
   z.scrollLeft=0;fzI=0;famDots(0);

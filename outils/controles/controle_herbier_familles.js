@@ -31,9 +31,10 @@ let ech=0;const ok=(c,m)=>{if(!c)ech++;console.log((c?'OK   ':'ÉCHEC ')+m)};
     await p.click('#herb [data-fiche=Rosaceae]');await p.waitForTimeout(600);
     ok(await p.$eval('#fam',e=>e.open)&&await p.$eval('#fz .f1 small',e=>e.textContent)==='Famille',`${lbl} : « Fiche de la famille » ouvre la fiche, intitulée « Famille »`);
     ok(await p.evaluate(()=>st.fd.d||'')===fd0,`${lbl} : la Famille du jour n'est pas marquée comme vue`);
-    // même collection dans la fiche : mêmes tuiles, même en-tête
+    // même collection dans la fiche : mêmes tuiles pour les espèces rencontrées, dans le même ordre ; en plus, toutes les autres espèces de la famille
     const T2=await p.$$eval('#fam-grid .pk',e=>e.map(x=>x.dataset.l+':'+(x.classList.contains('ok')?'ok':x.classList.contains('pr')?'pr':'?')));
-    ok(JSON.stringify(T2)===JSON.stringify(T),`${lbl} : la collection de la fiche a les mêmes tuiles, dans le même ordre, que celle de l'Herbier`);
+    ok(JSON.stringify(T2.filter(x=>!/\?$/.test(x)))===JSON.stringify(T),`${lbl} : la collection de la fiche a les mêmes tuiles (acquises, rencontrées), dans le même ordre, que celle de l'Herbier`);
+    ok(T2.length===N.Rosaceae.length&&T2.filter(x=>/\?$/.test(x)).length===N.Rosaceae.length-8,`${lbl} : la fiche montre aussi les ${N.Rosaceae.length-8} espèces non rencontrées (${T2.length} tuiles)`);
     const h2=await p.$eval('#fz .fc4 .hc.fix .hn',e=>e.textContent);ok(h2===L[1].n,`${lbl} : même en-tête (${h2}) dans la fiche et dans l'Herbier`);
     ok(await p.$eval('#fz .fc4 .hc.fix .hi.fi',e=>!e.classList.contains('ok')),`${lbl} : symbole grisé dans la fiche tant que la famille n'est pas complète`);
     ok(await p.$eval('#fz .fc4 summary',e=>getComputedStyle(e).pointerEvents)==='none','en-tête de la fiche : non repliable');
